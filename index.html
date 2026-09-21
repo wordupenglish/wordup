@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+    <meta name="description" content="WordUp - Learn English through vocabulary, grammar, listening, writing and adaptive practice.">
+    <title>WordUp — English Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="toast" class="toast"></div>
+
+<div id="confetti" class="confetti-container"></div>
+
+<!-- INTRO -->
+<section id="introScreen" class="screen active">
+    <div class="intro-card">
+        <div class="brand-mark">📚</div>
+        <div class="brand-name">WordUp</div>
+        <p class="tagline">Learn English. Build Your Future.</p>
+
+        <p class="intro-description">
+            A complete English learning journey built around practice,
+            repetition, challenges and real progress.
+        </p>
+
+        <button class="primary-btn large" onclick="startNewJourney()">
+            Start Learning 🚀
+        </button>
+
+        <button id="introContinueBtn"
+                class="secondary-btn large hidden"
+                onclick="continueJourney()">
+            Continue Where I Left Off
+        </button>
+
+        <div class="creator-subtle">
+            Created by Mr. Suliman
+        </div>
+    </div>
+</section>
+
+
+<!-- HOME -->
+<section id="homeScreen" class="screen">
+
+    <header class="topbar">
+        <div class="brand-small">📚 WordUp</div>
+
+        <div class="top-actions">
+            <div class="xp-pill">⚡ <span id="topXP">0</span> XP</div>
+            <button class="icon-btn" onclick="toggleTheme()" title="Change theme">
+                <span id="themeIcon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="home-content">
+
+        <section class="welcome-section">
+            <div>
+                <span class="eyebrow">YOUR LEARNING JOURNEY</span>
+                <h1>Keep building your English.</h1>
+                <p id="welcomeText">Every session makes you stronger.</p>
+            </div>
+
+            <div class="level-badge">
+                <span>LEVEL</span>
+                <strong id="playerLevel">1</strong>
+            </div>
+        </section>
+
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <div>
+                    <strong id="streakValue">0</strong>
+                    <span>Day streak</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">⚡</span>
+                <div>
+                    <strong id="xpValue">0</strong>
+                    <span>Total XP</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🏆</span>
+                <div>
+                    <strong id="masteryValue">0%</strong>
+                    <span>Mastery</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🧠</span>
+                <div>
+                    <strong id="mistakeValue">0</strong>
+                    <span>Review items</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="daily-card">
+            <div class="daily-left">
+                <div class="daily-icon">🎯</div>
+                <div>
+                    <span class="eyebrow">DAILY CHALLENGE</span>
+                    <h2 id="dailyTitle">Ready for today's challenge?</h2>
+                    <p id="dailyDescription">
+                        Complete today's challenge and earn bonus XP.
+                    </p>
+                </div>
+            </div>
+
+            <button class="primary-btn" onclick="startDailyChallenge()">
+                Play
+            </button>
+        </section>
+
+
+        <section class="section-heading">
+            <div>
+                <span class="eyebrow">LEARNING MODES</span>
+                <h2>Choose your path</h2>
+            </div>
+        </section>
+
+
+        <section class="mode-grid">
+
+            <button class="mode-card vocabulary-card"
+                    onclick="openJourney('vocabulary')">
+                <div class="mode-icon">📚</div>
+                <div class="mode-info">
+                    <h3>Vocabulary</h3>
+                    <p>Words, meanings, context, listening and mastery.</p>
+                </div>
+                <span class="mode-arrow">→</span>
+            </button>
+
+
+            <button class="mode-card grammar-card"
+                    onclick="openJourney('grammar')">
+                <div class="mode-icon">📖</div>
+                <div class="mode-info">
+                    <h3>Grammar</h3>
+                    <p>Build accurate and natural English sentences.</p>
+                </div>
+                <span class="mode-arrow">→</span>
+            </button>
+
+
+            <button class="mode-card writing-card"
+                    onclick="openJourney('writing')">
+                <div class="mode-icon">✍️</div>
+                <div class="mode-info">
+                    <h3>Writing</h3>
+                    <p>Choose clearer, stronger and more professional English.</p>
+                </div>
+                <span class="mode-arrow">→</span>
+            </button>
+
+
+            <button class="mode-card mixed-card"
+                    onclick="openJourney('mixed')">
+                <div class="mode-icon">🎮</div>
+                <div class="mode-info">
+                    <h3>Mixed Practice</h3>
+                    <p>Vocabulary, grammar and writing in one challenge.</p>
+                </div>
+                <span class="mode-arrow">→</span>
+            </button>
+
+        </section>
+
+
+        <section id="continueBox" class="continue-box hidden">
+            <div>
+                <span class="eyebrow">CONTINUE</span>
+                <h3 id="continueTitle">Continue your journey</h3>
+                <p id="continueDescription"></p>
+            </div>
+
+            <button class="primary-btn" onclick="continueJourney()">
+                Continue →
+            </button>
+        </section>
+
+
+        <section id="reviewBox" class="review-card hidden">
+
+            <div class="review-icon">🧠</div>
+
+            <div class="review-info">
+                <span class="eyebrow">SMART REVIEW</span>
+                <h3>Your difficult words are waiting.</h3>
+                <p id="reviewDescription">
+                    Review mistakes and strengthen weak areas.
+                </p>
+            </div>
+
+            <button class="secondary-btn" onclick="startMistakeReview()">
+                Review
+            </button>
+
+        </section>
+
+
+        <section class="achievements-preview">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">ACHIEVEMENTS</span>
+                    <h2>Your milestones</h2>
+                </div>
+                <button class="text-btn" onclick="openAchievements()">
+                    View all →
+                </button>
+            </div>
+
+            <div id="achievementPreview" class="achievement-row"></div>
+        </section>
+
+
+        <footer class="creator-footer">
+            <span>WordUp English Learning</span>
+            <span>Built by Mr. Suliman</span>
+        </footer>
+
+    </main>
+</section>
+
+
+<!-- JOURNEY -->
+<section id="journeyScreen" class="screen">
+
+    <header class="topbar">
+        <button class="back-btn" onclick="showScreen('homeScreen'); updateHome();">
+            ← Home
+        </button>
+
+        <div class="brand-small">📚 WordUp</div>
+
+        <div class="xp-pill">⚡ <span id="journeyXP">0</span> XP</div>
+    </header>
+
+    <main class="journey-content">
+
+        <div class="journey-header">
+            <span class="eyebrow" id="journeyEyebrow">VOCABULARY</span>
+            <h1 id="journeyTitle">Vocabulary Journey</h1>
+            <p id="journeyDescription">
+                Build your vocabulary step by step.
+            </p>
+        </div>
+
+
+        <div class="level-tabs">
+            <button class="level-tab active"
+                    data-level="Beginner"
+                    onclick="selectLevel('Beginner')">
+                Beginner
+            </button>
+
+            <button class="level-tab"
+                    data-level="Intermediate"
+                    onclick="selectLevel('Intermediate')">
+                Intermediate
+            </button>
+
+            <button class="level-tab"
+                    data-level="Advanced"
+                    onclick="selectLevel('Advanced')">
+                Advanced
+            </button>
+        </div>
+
+
+        <div id="journeyMap" class="journey-map"></div>
+
+    </main>
+</section>
+
+
+<!-- QUIZ -->
+<section id="quizScreen" class="screen">
+
+    <header class="quiz-topbar">
+
+        <button class="back-btn" onclick="confirmExitQuiz()">
+            ✕ Exit
+        </button>
+
+        <div class="quiz-stat">
+            ⚡ <span id="quizXP">0</span>
+        </div>
+
+        <div class="quiz-stat hearts">
+            <span id="heartsDisplay">❤️❤️❤️❤️❤️</span>
+        </div>
+
+    </header>
+
+
+    <main class="quiz-content">
+
+        <div id="exitModal" class="modal-overlay hidden">
+            <div class="modal-card">
+
+                <div class="modal-icon">🚪</div>
+
+                <h2>Leave this challenge?</h2>
+
+                <p>
+                    Your completed stages and mistakes are saved.
+                </p>
+
+                <div class="modal-buttons">
+
+                    <button class="secondary-btn"
+                            onclick="closeExitModal()">
+                        Stay
+                    </button>
+
+                    <button class="primary-btn"
+                            onclick="leaveQuiz()">
+                        Leave Challenge
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="quiz-meta">
+
+            <div>
+                <span id="stageName">Challenge</span>
+                <small id="questionCounter">Question 1 of 10</small>
+            </div>
+
+            <div class="score-box">
+                Score <strong id="scoreValue">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="progress-track">
+            <div id="questionProgress" class="progress-fill"></div>
+        </div>
+
+
+        <div id="timerBox" class="timer-box hidden">
+            ⏱️ <span id="timerValue">30</span>s
+        </div>
+
+
+        <div class="question-card">
+
+            <span id="questionType" class="question-type">
+                QUESTION
+            </span>
+
+            <h1 id="questionText">
+                Loading...
+            </h1>
+
+            <button id="listenButton"
+                    class="listen-btn hidden"
+                    onclick="speakQuestion()">
+                🔊 Listen
+            </button>
+
+            <div id="answerGrid" class="answer-grid"></div>
+
+            <div id="feedback" class="feedback hidden"></div>
+
+            <button id="nextButton"
+                    class="primary-btn next-btn hidden"
+                    onclick="nextQuestion()">
+                Next →
+            </button>
+
+        </div>
+
+    </main>
+</section>
+
+
+<!-- CELEBRATION -->
+<section id="celebrationScreen" class="screen">
+
+    <div class="celebration-card">
+
+        <div id="confettiPlaceholder"></div>
+
+        <div class="celebration-icon">👏</div>
+
+        <div id="celebrationStars" class="stars">
+            ⭐⭐⭐⭐⭐
+        </div>
+
+        <span class="eyebrow">STAGE COMPLETE</span>
+
+        <h1 id="celebrationTitle">EXCELLENT!</h1>
+
+        <p id="celebrationMessage">
+            You completed the challenge.
+        </p>
+
+
+        <div class="reward-grid">
+
+            <div>
+                <strong id="earnedXP">+100</strong>
+                <span>XP earned</span>
+            </div>
+
+            <div>
+                <strong id="celebrationScore">10/10</strong>
+                <span>Correct</span>
+            </div>
+
+            <div>
+                <strong id="celebrationAccuracy">100%</strong>
+                <span>Accuracy</span>
+            </div>
+
+        </div>
+
+
+        <div class="unlock-box">
+            <span>🔓 NEXT</span>
+            <strong id="nextUnlock">
+                Your next challenge is ready.
+            </strong>
+        </div>
+
+
+        <button class="primary-btn large"
+                onclick="continueAfterCelebration()">
+            Continue Journey 🚀
+        </button>
+
+    </div>
+</section>
+
+
+<!-- RESULT -->
+<section id="resultScreen" class="screen">
+
+    <div class="result-card">
+
+        <div class="result-icon">🏆</div>
+
+        <span class="eyebrow">JOURNEY COMPLETE</span>
+
+        <h1 id="resultTitle">Amazing work!</h1>
+
+        <p id="resultDescription">
+            You completed this learning journey.
+        </p>
+
+
+        <div class="mastery-circle">
+            <span id="finalMastery">0%</span>
+            <small>MASTERY</small>
+        </div>
+
+
+        <div class="result-stats">
+
+            <div>
+                <strong id="finalCorrect">0</strong>
+                <span>Stages completed</span>
+            </div>
+
+            <div>
+                <strong id="finalXP">0</strong>
+                <span>XP earned</span>
+            </div>
+
+        </div>
+
+
+        <div class="result-buttons">
+
+            <button class="primary-btn"
+                    onclick="continueJourney()">
+                Continue
+            </button>
+
+            <button class="secondary-btn"
+                    onclick="showScreen('homeScreen'); updateHome();">
+                Home
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section id="achievementsScreen" class="screen">
+
+    <header class="topbar">
+        <button class="back-btn"
+                onclick="showScreen('homeScreen')">
+            ← Home
+        </button>
+
+        <div class="brand-small">🏆 Achievements</div>
+
+        <div></div>
+    </header>
+
+    <main class="achievements-content">
+
+        <div class="journey-header">
+            <span class="eyebrow">MILESTONES</span>
+            <h1>Achievements</h1>
+            <p>Keep learning and unlock them all.</p>
+        </div>
+
+        <div id="achievementGrid" class="achievement-grid"></div>
+
+    </main>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>

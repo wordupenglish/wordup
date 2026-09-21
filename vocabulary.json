@@ -1,0 +1,460 @@
+﻿{
+    "Beginner": [
+        {
+            "word": "Beautiful",
+            "meaning": "زیبا",
+            "example": "The garden is beautiful in spring."
+        },
+        {
+            "word": "Happy",
+            "meaning": "خوشحال",
+            "example": "She felt happy after hearing the good news."
+        },
+        {
+            "word": "Strong",
+            "meaning": "قوی",
+            "example": "Regular exercise can make your body strong."
+        },
+        {
+            "word": "Quick",
+            "meaning": "سریع",
+            "example": "He gave a quick answer."
+        },
+        {
+            "word": "Friendly",
+            "meaning": "دوستانه",
+            "example": "The teacher has a friendly personality."
+        },
+        {
+            "word": "Easy",
+            "meaning": "آسان",
+            "example": "This exercise is easy for beginners."
+        },
+        {
+            "word": "Difficult",
+            "meaning": "دشوار",
+            "example": "The final question was difficult."
+        },
+        {
+            "word": "Important",
+            "meaning": "مهم",
+            "example": "Education is important for every community."
+        },
+        {
+            "word": "Clean",
+            "meaning": "پاک",
+            "example": "Please keep the classroom clean."
+        },
+        {
+            "word": "Dangerous",
+            "meaning": "خطرناک",
+            "example": "Driving too fast can be dangerous."
+        },
+        {
+            "word": "Brave",
+            "meaning": "شجاع",
+            "example": "The brave student spoke in front of the class."
+        },
+        {
+            "word": "Careful",
+            "meaning": "محتاط",
+            "example": "Be careful when crossing the road."
+        },
+        {
+            "word": "Honest",
+            "meaning": "صادق",
+            "example": "An honest person tells the truth."
+        },
+        {
+            "word": "Useful",
+            "meaning": "مفید",
+            "example": "This dictionary is very useful."
+        },
+        {
+            "word": "Healthy",
+            "meaning": "سالم",
+            "example": "Eating vegetables is part of a healthy lifestyle."
+        },
+        {
+            "word": "Ready",
+            "meaning": "آماده",
+            "example": "Are you ready for the lesson?"
+        },
+        {
+            "word": "Quiet",
+            "meaning": "آرام",
+            "example": "The library is usually quiet."
+        },
+        {
+            "word": "Simple",
+            "meaning": "ساده",
+            "example": "The instructions are simple."
+        },
+        {
+            "word": "Famous",
+            "meaning": "مشهور",
+            "example": "The city is famous for its history."
+        },
+        {
+            "word": "Different",
+            "meaning": "متفاوت",
+            "example": "Everyone has a different learning style."
+        },
+        {
+            "word": "Common",
+            "meaning": "رایج",
+            "example": "This is a common English expression."
+        },
+        {
+            "word": "Busy",
+            "meaning": "مصروف",
+            "example": "I am busy with my university work."
+        },
+        {
+            "word": "Early",
+            "meaning": "زود",
+            "example": "She arrived early for the interview."
+        },
+        {
+            "word": "Late",
+            "meaning": "دیر",
+            "example": "He was late for class."
+        },
+        {
+            "word": "Ready",
+            "meaning": "آماده",
+            "example": "The students are ready to begin."
+        },
+        {
+            "word": "Helpful",
+            "meaning": "کمک‌کننده",
+            "example": "The feedback was helpful."
+        },
+        {
+            "word": "Strong",
+            "meaning": "نیرومند",
+            "example": "She has a strong interest in English."
+        },
+        {
+            "word": "Safe",
+            "meaning": "مصون",
+            "example": "This is a safe place to study."
+        },
+        {
+            "word": "Careful",
+            "meaning": "بااحتیاط",
+            "example": "Be careful with your pronunciation."
+        },
+        {
+            "word": "Kind",
+            "meaning": "مهربان",
+            "example": "A kind teacher can motivate students."
+        }
+    ],
+
+    "Intermediate": [
+        {
+            "word": "Accurate",
+            "meaning": "دقیق",
+            "example": "The report contains accurate information."
+        },
+        {
+            "word": "Reliable",
+            "meaning": "قابل اعتماد",
+            "example": "We need a reliable source of information."
+        },
+        {
+            "word": "Improve",
+            "meaning": "بهبود دادن",
+            "example": "Daily practice can improve your speaking skills."
+        },
+        {
+            "word": "Achieve",
+            "meaning": "دست یافتن",
+            "example": "Hard work can help students achieve their goals."
+        },
+        {
+            "word": "Challenge",
+            "meaning": "چالش",
+            "example": "Learning a language is a rewarding challenge."
+        },
+        {
+            "word": "Confident",
+            "meaning": "با اعتماد به نفس",
+            "example": "She became more confident after practicing."
+        },
+        {
+            "word": "Essential",
+            "meaning": "ضروری",
+            "example": "Good communication is essential in the workplace."
+        },
+        {
+            "word": "Opportunity",
+            "meaning": "فرصت",
+            "example": "The course gave him an opportunity to improve."
+        },
+        {
+            "word": "Generous",
+            "meaning": "سخاوتمند",
+            "example": "The organization made a generous contribution."
+        },
+        {
+            "word": "Efficient",
+            "meaning": "کارآمد",
+            "example": "The new system is more efficient."
+        },
+        {
+            "word": "Consider",
+            "meaning": "در نظر گرفتن",
+            "example": "Please consider all the available options."
+        },
+        {
+            "word": "Develop",
+            "meaning": "توسعه دادن",
+            "example": "Students should develop effective study habits."
+        },
+        {
+            "word": "Require",
+            "meaning": "نیاز داشتن",
+            "example": "This position requires strong communication skills."
+        },
+        {
+            "word": "Maintain",
+            "meaning": "حفظ کردن",
+            "example": "It is important to maintain a healthy routine."
+        },
+        {
+            "word": "Avoid",
+            "meaning": "اجتناب کردن",
+            "example": "Try to avoid unnecessary distractions."
+        },
+        {
+            "word": "Increase",
+            "meaning": "افزایش دادن",
+            "example": "Reading can increase your vocabulary."
+        },
+        {
+            "word": "Reduce",
+            "meaning": "کاهش دادن",
+            "example": "Planning can reduce unnecessary stress."
+        },
+        {
+            "word": "Purpose",
+            "meaning": "هدف",
+            "example": "The purpose of this lesson is to improve accuracy."
+        },
+        {
+            "word": "Evidence",
+            "meaning": "شواهد",
+            "example": "The researchers collected evidence from several sources."
+        },
+        {
+            "word": "Approach",
+            "meaning": "رویکرد",
+            "example": "We need a practical approach to learning."
+        },
+        {
+            "word": "Behavior",
+            "meaning": "رفتار",
+            "example": "Sleep can influence daily behavior."
+        },
+        {
+            "word": "Benefit",
+            "meaning": "فایده",
+            "example": "Regular reading has many benefits."
+        },
+        {
+            "word": "Specific",
+            "meaning": "مشخص",
+            "example": "Please give a specific example."
+        },
+        {
+            "word": "Flexible",
+            "meaning": "انعطاف‌پذیر",
+            "example": "The schedule is flexible."
+        },
+        {
+            "word": "Effective",
+            "meaning": "موثر",
+            "example": "This is an effective learning strategy."
+        },
+        {
+            "word": "Relevant",
+            "meaning": "مرتبط",
+            "example": "Use examples that are relevant to the topic."
+        },
+        {
+            "word": "Consistent",
+            "meaning": "منظم و ثابت",
+            "example": "Consistent practice produces better results."
+        },
+        {
+            "word": "Aware",
+            "meaning": "آگاه",
+            "example": "Students should be aware of their learning habits."
+        },
+        {
+            "word": "Analyze",
+            "meaning": "تحلیل کردن",
+            "example": "Students should analyze the information carefully."
+        },
+        {
+            "word": "Communicate",
+            "meaning": "ارتباط برقرار کردن",
+            "example": "Good teachers communicate clearly."
+        }
+    ],
+
+    "Advanced": [
+        {
+            "word": "Ambiguous",
+            "meaning": "مبهم",
+            "example": "The question was too ambiguous to answer confidently."
+        },
+        {
+            "word": "Compelling",
+            "meaning": "قانع‌کننده",
+            "example": "The researcher presented a compelling argument."
+        },
+        {
+            "word": "Controversial",
+            "meaning": "بحث‌برانگیز",
+            "example": "The proposal remains controversial."
+        },
+        {
+            "word": "Inevitable",
+            "meaning": "اجتناب‌ناپذیر",
+            "example": "Some changes are inevitable."
+        },
+        {
+            "word": "Sophisticated",
+            "meaning": "پیشرفته و پیچیده",
+            "example": "The software uses a sophisticated system."
+        },
+        {
+            "word": "Substantial",
+            "meaning": "قابل توجه",
+            "example": "The project requires a substantial investment of time."
+        },
+        {
+            "word": "Furthermore",
+            "meaning": "علاوه بر این",
+            "example": "Furthermore, the findings support the original argument."
+        },
+        {
+            "word": "Nevertheless",
+            "meaning": "با این حال",
+            "example": "The task was difficult; nevertheless, she completed it."
+        },
+        {
+            "word": "Significant",
+            "meaning": "مهم و قابل توجه",
+            "example": "The study found a significant difference."
+        },
+        {
+            "word": "Sustainable",
+            "meaning": "پایدار",
+            "example": "We need a sustainable approach to development."
+        },
+        {
+            "word": "Consequently",
+            "meaning": "در نتیجه",
+            "example": "The road was closed; consequently, traffic increased."
+        },
+        {
+            "word": "Nonetheless",
+            "meaning": "با وجود این",
+            "example": "The evidence was limited; nonetheless, it was useful."
+        },
+        {
+            "word": "Coherent",
+            "meaning": "منسجم",
+            "example": "The essay presents a coherent argument."
+        },
+        {
+            "word": "Subtle",
+            "meaning": "ظریف",
+            "example": "There is a subtle difference between the two expressions."
+        },
+        {
+            "word": "Versatile",
+            "meaning": "چندمنظوره",
+            "example": "English is a versatile tool for communication."
+        },
+        {
+            "word": "Predominantly",
+            "meaning": "عمدتاً",
+            "example": "The audience was predominantly made up of students."
+        },
+        {
+            "word": "Conventional",
+            "meaning": "مرسوم",
+            "example": "The study challenges conventional assumptions."
+        },
+        {
+            "word": "Fundamental",
+            "meaning": "بنیادی",
+            "example": "Critical thinking is fundamental to academic success."
+        },
+        {
+            "word": "Intricate",
+            "meaning": "پیچیده و ظریف",
+            "example": "The machine contains an intricate network of components."
+        },
+        {
+            "word": "Plausible",
+            "meaning": "قابل قبول",
+            "example": "The explanation is plausible but requires more evidence."
+        },
+        {
+            "word": "Reluctant",
+            "meaning": "بی‌میل",
+            "example": "He was reluctant to change his study routine."
+        },
+        {
+            "word": "Resilient",
+            "meaning": "تاب‌آور",
+            "example": "Resilient learners continue despite difficulties."
+        },
+        {
+            "word": "Meticulous",
+            "meaning": "دقیق و موشکاف",
+            "example": "The researcher was meticulous in recording the data."
+        },
+        {
+            "word": "Nuanced",
+            "meaning": "دارای ظرافت و تفاوت‌های دقیق",
+            "example": "The article offers a nuanced analysis of the issue."
+        },
+        {
+            "word": "Prevalent",
+            "meaning": "شایع",
+            "example": "The problem is prevalent among young learners."
+        },
+        {
+            "word": "Deteriorate",
+            "meaning": "بدتر شدن",
+            "example": "Without maintenance, the condition may deteriorate."
+        },
+        {
+            "word": "Convey",
+            "meaning": "انتقال دادن",
+            "example": "The speaker used examples to convey the main idea."
+        },
+        {
+            "word": "Infer",
+            "meaning": "استنباط کردن",
+            "example": "Readers can infer the author's position from the evidence."
+        },
+        {
+            "word": "Articulate",
+            "meaning": "واضح بیان کردن",
+            "example": "She was able to articulate her argument clearly."
+        },
+        {
+            "word": "Scrutinize",
+            "meaning": "موشکافانه بررسی کردن",
+            "example": "Researchers must scrutinize the available evidence."
+        }
+    ]
+}
