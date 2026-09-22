@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WordUp English Learning</title>
+<link rel="stylesheet" href="style.css?v=7.0">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- INTRO -->
+  <section id="intro" class="screen active">
+    <div class="intro-card">
+      <div class="logo">📚</div>
+      <h1>WordUp</h1>
+      <p class="tagline">Learn English. Build Your Future.</p>
+      <p class="intro-text">
+        Learn, practice, test, and master English step by step.
+      </p>
+      <button class="primary-btn" onclick="startApp()">Start Learning</button>
+      <button class="secondary-btn" onclick="continueLearning()">Continue Where I Left Off</button>
+      <div class="creator">
+        <strong>WordUp English</strong><br>
+        Created by Mr. Suliman
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME -->
+  <section id="home" class="screen">
+    <header class="topbar">
+      <button class="icon-btn" onclick="showHome()">🏠</button>
+      <div class="brand">📚 WordUp</div>
+      <button class="icon-btn" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <main class="container">
+      <div class="stats">
+        <div><strong id="xp">0</strong><span>XP</span></div>
+        <div><strong id="streak">0</strong><span>Streak</span></div>
+        <div><strong id="mastery">0%</strong><span>Mastery</span></div>
+        <div><strong id="mistakeCount">0</strong><span>Mistakes</span></div>
+      </div>
+
+      <div class="welcome">
+        <h2>Welcome back 👋</h2>
+        <p>Choose exactly what you want to do today.</p>
+      </div>
+
+      <div class="home-grid">
+        <button class="feature-card" onclick="openCurriculum('Vocabulary')">
+          <span>📚</span>
+          <h3>Vocabulary</h3>
+          <p>Learn and master useful English words.</p>
+        </button>
+
+        <button class="feature-card" onclick="openCurriculum('Grammar')">
+          <span>✏️</span>
+          <h3>Grammar</h3>
+          <p>Understand grammar before you practice it.</p>
+        </button>
+
+        <button class="feature-card" onclick="openCurriculum('Writing')">
+          <span>📝</span>
+          <h3>Writing</h3>
+          <p>Build stronger and clearer writing skills.</p>
+        </button>
+
+        <button class="feature-card" onclick="openCurriculum('Reading')">
+          <span>📖</span>
+          <h3>Reading</h3>
+          <p>Improve comprehension step by step.</p>
+        </button>
+
+        <button class="feature-card" onclick="openCurriculum('Listening')">
+          <span>🎧</span>
+          <h3>Listening</h3>
+          <p>Train your listening and understanding.</p>
+        </button>
+
+        <button class="feature-card" onclick="startMistakes()">
+          <span>🔄</span>
+          <h3>Mistake Review</h3>
+          <p>Review questions you previously missed.</p>
+        </button>
+      </div>
+
+      <button class="continue-card" onclick="continueLearning()">
+        ▶ Continue Learning
+      </button>
+    </main>
+
+    <footer>
+      Mr. Suliman · Sulimansurkhrody@yahoo.com · WhatsApp: +93785054012
+    </footer>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section id="curriculumScreen" class="screen">
+    <header class="topbar">
+      <button class="back-btn" onclick="showHome()">← Back</button>
+      <div class="brand" id="curriculumTitle">Vocabulary</div>
+      <button class="icon-btn" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <main class="container">
+      <div class="level-tabs">
+        <button onclick="setLevel('Beginner')" id="tabBeginner">Beginner</button>
+        <button onclick="setLevel('Intermediate')" id="tabIntermediate">Intermediate</button>
+        <button onclick="setLevel('Advanced')" id="tabAdvanced">Advanced</button>
+      </div>
+
+      <div id="lessonList"></div>
+    </main>
+  </section>
+
+  <!-- LESSON -->
+  <section id="lessonScreen" class="screen">
+    <header class="topbar">
+      <button class="back-btn" onclick="backToCurriculum()">← Back</button>
+      <div class="brand">Lesson</div>
+      <button class="icon-btn" onclick="showHome()">🏠</button>
+    </header>
+
+    <main class="container">
+      <div id="lessonContent"></div>
+    </main>
+  </section>
+
+  <!-- PRACTICE / TEST -->
+  <section id="quizScreen" class="screen">
+    <header class="topbar">
+      <button class="back-btn" onclick="quitActivity()">← Exit</button>
+      <div class="brand" id="activityTitle">Practice</div>
+      <button class="icon-btn" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <main class="container">
+      <div class="activity-badge" id="activityBadge"></div>
+
+      <div class="quiz-top">
+        <div>
+          <strong id="questionNumber">1 / 5</strong>
+        </div>
+        <div id="quizScore">Score: 0</div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quizProgress" class="progress-fill"></div>
+      </div>
+
+      <div class="hearts" id="hearts">❤️❤️❤️</div>
+
+      <div class="question-card">
+        <div id="questionInstruction" class="instruction"></div>
+        <h2 id="questionText"></h2>
+        <button id="listenBtn" class="listen-btn" onclick="speakCurrent()">🔊 Listen</button>
+        <div id="answers" class="answers"></div>
+      </div>
+
+      <div id="feedback" class="feedback hidden"></div>
+
+      <div class="quiz-actions">
+        <button class="secondary-btn" onclick="quitActivity()">Exit</button>
+        <button id="nextBtn" class="primary-btn hidden" onclick="nextQuestion()">Continue</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- RESULT -->
+  <section id="resultScreen" class="screen">
+    <header class="topbar">
+      <button class="back-btn" onclick="backToLessonFromResult()">← Back</button>
+      <div class="brand">Result</div>
+      <button class="icon-btn" onclick="showHome()">🏠</button>
+    </header>
+
+    <main class="container">
+      <div class="result-card">
+        <div id="resultIcon" class="result-icon">🎉</div>
+        <h1 id="resultTitle">Well done!</h1>
+        <p id="resultMessage"></p>
+
+        <div class="result-score">
+          <strong id="finalScore">0%</strong>
+          <span id="finalCorrect">0 / 0 correct</span>
+        </div>
+
+        <div id="resultActions"></div>
+      </div>
+    </main>
+  </section>
+
+  <!-- CHOICE -->
+  <div id="choiceModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeChoice()">×</button>
+      <div class="modal-icon">🎯</div>
+      <h2>What would you like to do?</h2>
+      <p id="choiceText"></p>
+
+      <button class="choice-btn practice-choice" onclick="choosePractice()">
+        🧠 Practice
+        <small>Practice without a score</small>
+      </button>
+
+      <button class="choice-btn test-choice" onclick="chooseTest()">
+        📝 Take the Test
+        <small>Scored assessment</small>
+      </button>
+
+      <button class="secondary-btn full" onclick="closeChoice()">Not now</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js?v=7.0"></script>
+</body>
+</html>
