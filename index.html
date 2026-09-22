@@ -1,244 +1,108 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#111827">
-    <meta name="description" content="WordUp English — interactive vocabulary, grammar, writing, listening and daily English practice.">
-    <title>WordUp English</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📚%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="WordUp English Learning">
+<title>WordUp English</title>
+<link rel="stylesheet" href="style.css?v=6.0">
 </head>
-
 <body>
-<div id="toast-container"></div>
-
-<header class="topbar">
-    <button class="brand" onclick="showScreen('homeScreen')">
-        <span class="brand-icon">📚</span>
-        <span>
-            <strong>WordUp</strong>
-            <small>English Learning</small>
-        </span>
-    </button>
-
-    <div class="top-actions">
-        <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Change theme">🌙</button>
-        <button class="profile-pill" onclick="showScreen('achievementsScreen')">
-            <span>⭐</span><b id="topXP">0</b>
-        </button>
-    </div>
+<header class="top">
+  <button class="brand" onclick="goHome()">📚 <span>WordUp</span></button>
+  <div class="top-right">
+    <span id="xp">⭐ 0 XP</span>
+    <button id="theme" onclick="toggleTheme()">🌙</button>
+  </div>
 </header>
 
 <main>
+<section id="home" class="screen active">
+  <div class="hero">
+    <p class="eyebrow">ENGLISH LEARNING</p>
+    <h1>Learn English.<br><span>Build Your Future.</span></h1>
+    <p>Learn first. Practice next. Master it.</p>
+    <button class="primary" onclick="startContinue()">▶ Continue Learning</button>
+  </div>
 
-<!-- INTRO -->
-<section id="introScreen" class="screen active">
-    <div class="hero-card">
-        <div class="hero-logo">📚</div>
-        <div class="eyebrow">YOUR ENGLISH JOURNEY</div>
-        <h1>WordUp</h1>
-        <h2>Learn English. Build Your Future.</h2>
-        <p>Build real vocabulary, improve grammar, sharpen your writing, and practice every day.</p>
-        <button class="primary-btn large" onclick="startApp()">Start Learning →</button>
-        <button class="text-btn" onclick="continueApp()">Continue Where I Left Off</button>
-        <div class="creator">Created by Mr. Suliman · WordUp English</div>
-    </div>
+  <div class="stats">
+    <div><b id="homeXP">0</b><small>XP</small></div>
+    <div><b id="streak">0</b><small>Day Streak</small></div>
+    <div><b id="mastery">0%</b><small>Mastery</small></div>
+    <div><b id="mistakes">0</b><small>Mistakes</small></div>
+  </div>
+
+  <h2>Choose your path</h2>
+  <div class="cards">
+    <button class="mode" onclick="openCurriculum('Vocabulary')"><span>🧠</span><b>Vocabulary</b><small>Words, pronunciation, meaning & usage</small></button>
+    <button class="mode" onclick="openCurriculum('Grammar')"><span>📘</span><b>Grammar</b><small>Learn grammar through examples</small></button>
+    <button class="mode" onclick="openCurriculum('Writing')"><span>✍️</span><b>Writing</b><small>Build better English writing</small></button>
+    <button class="mode" onclick="openCurriculum('Reading')"><span>📖</span><b>Reading</b><small>Read and understand real English</small></button>
+    <button class="mode" onclick="openCurriculum('Listening')"><span>🎧</span><b>Listening</b><small>Listen and understand English</small></button>
+  </div>
+
+  <button id="mistakeBtn" class="mistake" onclick="startMistakes()">🔁 Review My Mistakes</button>
 </section>
 
-<!-- HOME -->
-<section id="homeScreen" class="screen">
-    <div class="page-head">
-        <div>
-            <div class="eyebrow">WELCOME BACK</div>
-            <h1 id="welcomeTitle">Ready to learn?</h1>
-            <p id="streakMessage">Keep your learning streak alive.</p>
-        </div>
-        <div class="level-badge" id="levelBadge">Level 1</div>
+<section id="curriculum" class="screen">
+  <button class="back" onclick="goHome()">← Home</button>
+  <div class="section-head">
+    <p class="eyebrow" id="curriculumType"></p>
+    <h1>Your Learning Journey</h1>
+    <div class="levels">
+      <button onclick="selectLevel('Beginner')" id="Beginner">Beginner</button>
+      <button onclick="selectLevel('Intermediate')" id="Intermediate">Intermediate</button>
+      <button onclick="selectLevel('Advanced')" id="Advanced">Advanced</button>
     </div>
-
-    <div class="stats-grid">
-        <div class="stat-card"><span>⚡</span><b id="xpValue">0</b><small>XP</small></div>
-        <div class="stat-card"><span>🔥</span><b id="streakValue">0</b><small>Day Streak</small></div>
-        <div class="stat-card"><span>🎯</span><b id="masteryValue">0%</b><small>Mastery</small></div>
-        <div class="stat-card"><span>🧠</span><b id="mistakeValue">0</b><small>To Review</small></div>
-    </div>
-
-    <div class="daily-card" onclick="startDailyChallenge()">
-        <div class="daily-icon">⚡</div>
-        <div class="daily-content">
-            <span class="eyebrow">DAILY CHALLENGE</span>
-            <h2 id="dailyTitle">Today's English Challenge</h2>
-            <p id="dailyText">Complete today's challenge and earn bonus XP.</p>
-        </div>
-        <span class="arrow">→</span>
-    </div>
-
-    <h2 class="section-title">Practice</h2>
-
-    <div class="mode-grid">
-        <button class="mode-card" onclick="openJourney('Vocabulary')">
-            <span class="mode-icon">📖</span>
-            <b>Vocabulary</b>
-            <small>Words, meanings & context</small>
-            <span class="mode-arrow">→</span>
-        </button>
-
-        <button class="mode-card" onclick="openJourney('Grammar')">
-            <span class="mode-icon">✍️</span>
-            <b>Grammar</b>
-            <small>Accuracy & sentence structure</small>
-            <span class="mode-arrow">→</span>
-        </button>
-
-        <button class="mode-card" onclick="openJourney('Writing')">
-            <span class="mode-icon">📝</span>
-            <b>Writing</b>
-            <small>Clarity, tone & expression</small>
-            <span class="mode-arrow">→</span>
-        </button>
-
-        <button class="mode-card" onclick="openJourney('Mixed')">
-            <span class="mode-icon">🧩</span>
-            <b>Mixed Practice</b>
-            <small>A little bit of everything</small>
-            <span class="mode-arrow">→</span>
-        </button>
-    </div>
-
-    <button id="reviewCard" class="review-card hidden" onclick="startMistakeReview()">
-        <span>🔁</span>
-        <div><b>Review Your Mistakes</b><small id="reviewText">Practice the questions you missed.</small></div>
-        <strong>→</strong>
-    </button>
-
-    <div class="home-footer">WordUp English · Learn consistently. Improve confidently.</div>
+  </div>
+  <div id="lessons"></div>
 </section>
 
-<!-- JOURNEY -->
-<section id="journeyScreen" class="screen">
-    <button class="back-btn" onclick="showScreen('homeScreen')">← Home</button>
-
-    <div class="page-head compact">
-        <div>
-            <div class="eyebrow">YOUR JOURNEY</div>
-            <h1 id="journeyTitle">Vocabulary</h1>
-            <p>Choose your level and continue your progress.</p>
-        </div>
-    </div>
-
-    <div class="level-tabs">
-        <button onclick="setLevel('Beginner')" data-level="Beginner">Beginner</button>
-        <button onclick="setLevel('Intermediate')" data-level="Intermediate">Intermediate</button>
-        <button onclick="setLevel('Advanced')" data-level="Advanced">Advanced</button>
-    </div>
-
-    <div id="journeyMap" class="journey-map"></div>
+<section id="lesson" class="screen">
+  <button class="back" onclick="backToCurriculum()">← Lessons</button>
+  <div id="lessonContent"></div>
+  <button class="primary wide" onclick="beginPractice()">I'm Ready → Practice</button>
 </section>
 
-<!-- QUIZ -->
-<section id="quizScreen" class="screen quiz-screen">
-    <div class="quiz-top">
-        <button class="back-btn" onclick="confirmExitQuiz()">✕ Exit</button>
-        <div class="quiz-stage" id="quizStageTitle">Challenge</div>
-        <div class="quiz-xp">⚡ <span id="quizXP">0</span></div>
-    </div>
-
-    <div class="quiz-status">
-        <div class="hearts" id="hearts">❤️❤️❤️❤️❤️</div>
-        <div id="questionCounter">1 / 10</div>
-        <div class="score-pill">Score <b id="scoreValue">0</b></div>
-    </div>
-
-    <div class="progress-track"><div id="quizProgress" class="progress-fill"></div></div>
-
-    <div class="timer-box">
-        <span>⏱</span>
-        <b id="timer">30</b>
-    </div>
-
-    <div class="question-card">
-        <div class="question-type" id="questionType">VOCABULARY</div>
-        <h2 id="questionText">Question</h2>
-        <button id="listenBtn" class="listen-btn" onclick="speakQuestion()">🔊 Listen</button>
-    </div>
-
-    <div id="answerGrid" class="answer-grid"></div>
-
-    <div id="feedback" class="feedback hidden"></div>
-
-    <button id="nextBtn" class="primary-btn next-btn hidden" onclick="nextQuestion()">Continue →</button>
+<section id="practice" class="screen">
+  <div class="practice-head">
+    <span id="practiceLabel"></span>
+    <span id="practiceCount"></span>
+  </div>
+  <div id="practiceContent"></div>
+  <button class="primary wide" id="practiceNext" onclick="practiceNext()">Continue →</button>
 </section>
 
-<!-- CELEBRATION -->
-<section id="celebrationScreen" class="screen">
-    <div id="confetti"></div>
-    <div class="celebration-card">
-        <div id="celebrationIcon" class="celebration-icon">🎉</div>
-        <div class="eyebrow" id="celebrationEyebrow">CHALLENGE COMPLETE</div>
-        <h1 id="celebrationTitle">Excellent!</h1>
-        <p id="celebrationMessage">You completed the challenge.</p>
-        <div class="stars" id="stars">⭐⭐⭐⭐⭐</div>
-        <div class="reward-box">
-            <span>XP EARNED</span>
-            <b id="earnedXP">+0 XP</b>
-        </div>
-        <button class="primary-btn large" onclick="continueAfterCelebration()">Continue →</button>
-    </div>
+<section id="quiz" class="screen">
+  <div class="quiz-top">
+    <button class="back" onclick="quitQuiz()">✕ Exit</button>
+    <span id="quizProgress"></span>
+    <span id="quizXP">⭐ 0</span>
+  </div>
+  <div class="progress"><i id="bar"></i></div>
+  <div id="question"></div>
+  <div id="answers"></div>
+  <div id="feedback"></div>
 </section>
 
-<!-- RESULT -->
-<section id="resultScreen" class="screen">
-    <div class="result-card">
-        <div class="result-icon">🏆</div>
-        <div class="eyebrow">RESULT</div>
-        <h1 id="resultTitle">Challenge Complete</h1>
-        <div class="mastery-ring"><span id="resultMastery">0%</span></div>
-        <div class="result-grid">
-            <div><b id="resultScore">0</b><small>Correct</small></div>
-            <div><b id="resultXP">+0</b><small>XP Earned</small></div>
-            <div><b id="resultCompleted">0</b><small>Stages</small></div>
-        </div>
-        <div class="result-actions">
-            <button class="primary-btn" onclick="continueJourney()">Continue Journey</button>
-            <button class="secondary-btn" onclick="showScreen('homeScreen'); updateHome()">Home</button>
-        </div>
+<section id="result" class="screen">
+  <div class="result-box">
+    <div class="big-icon">🎉</div>
+    <h1 id="resultTitle">Lesson Complete!</h1>
+    <p id="resultText"></p>
+    <div class="result-stats">
+      <div><b id="resultScore">0%</b><small>Score</small></div>
+      <div><b id="resultEarned">0</b><small>XP</small></div>
     </div>
+    <button class="primary wide" onclick="finishResult()">Continue</button>
+  </div>
 </section>
-
-<!-- ACHIEVEMENTS -->
-<section id="achievementsScreen" class="screen">
-    <button class="back-btn" onclick="showScreen('homeScreen')">← Home</button>
-    <div class="page-head compact">
-        <div>
-            <div class="eyebrow">REWARDS</div>
-            <h1>Achievements</h1>
-            <p>Small wins become real progress.</p>
-        </div>
-    </div>
-    <div id="achievementsGrid" class="achievements-grid"></div>
-</section>
-
-<!-- EXIT MODAL -->
-<div id="exitModal" class="modal-overlay hidden">
-    <div class="modal-card">
-        <div class="modal-icon">🚪</div>
-        <h2>Leave this challenge?</h2>
-        <p>Your completed stages and mistakes are saved.</p>
-        <div class="modal-buttons">
-            <button class="secondary-btn" onclick="closeExitModal()">Stay</button>
-            <button class="primary-btn" onclick="leaveQuiz()">Leave Challenge</button>
-        </div>
-    </div>
-</div>
-
 </main>
 
-<footer class="site-footer">
-    <span>WordUp English</span>
-    <span>Learn · Practice · Improve</span>
+<footer>
+  WordUp English · Learn every day, grow every day.
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=6.0"></script>
 </body>
 </html>
