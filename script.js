@@ -1,2572 +1,781 @@
-﻿let vocabulary = {};
-
-const STORAGE_KEY = "wordUpFinalState";
+﻿const STORAGE_KEY = "wordUpV5State";
 const THEME_KEY = "wordUpTheme";
 
-let state = {
-    xp: 0,
-    streak: 0,
-    lastPracticeDate: "",
-    completed: {},
-    progress: null,
-    mistakes: [],
-    achievements: [],
-    daily: {
-        date: "",
-        completed: false
-    }
-};
-
-let currentSection = "vocabulary";
-let currentLevel = "Beginner";
-let currentStage = 0;
-
-let questions = [];
-let currentQuestion = 0;
-let score = 0;
-let hearts = 5;
-let timerInterval = null;
-let timeLeft = 30;
-
-let isMistakeReview = false;
-let isDailyChallenge = false;
-let answeredCurrent = false;
-
-
-/* =========================
-   DATA
-========================= */
-
 const stages = {
-
-    vocabulary: [
-        {
-            name: "Learn the Words",
-            icon: "🧠",
-            description: "Meet new words and connect English with Dari."
-        },
-        {
-            name: "Word Recognition",
-            icon: "👀",
-            description: "Recognize English words quickly."
-        },
-        {
-            name: "Meaning Challenge",
-            icon: "🎯",
-            description: "Choose the correct Dari meaning."
-        },
-        {
-            name: "Sentence Builder",
-            icon: "🧩",
-            description: "Understand vocabulary inside real sentences."
-        },
-        {
-            name: "Listen & Choose",
-            icon: "🎧",
-            description: "Listen and identify the word."
-        },
-        {
-            name: "Pronunciation",
-            icon: "🗣️",
-            description: "Build confidence with English pronunciation."
-        },
-        {
-            name: "Speed Challenge",
-            icon: "⚡",
-            description: "Think quickly under time pressure."
-        },
-        {
-            name: "Mastery Test",
-            icon: "🏆",
-            description: "Prove that you have mastered the level."
-        }
+    Vocabulary: [
+        ["Word Discovery","Learn new words and their meanings."],
+        ["Word Recognition","Recognize vocabulary quickly."],
+        ["Meaning Challenge","Choose the precise meaning."],
+        ["Context Mastery","Understand words in context."],
+        ["Listen & Choose","Connect sound with meaning."],
+        ["Speed Vocabulary","Think faster under pressure."],
+        ["Vocabulary Mastery","Prove what you know."]
     ],
-
-    grammar: [
-        {
-            name: "Grammar Foundations",
-            icon: "📖",
-            description: "Build a strong grammar foundation."
-        },
-        {
-            name: "Correct Form",
-            icon: "🎯",
-            description: "Choose the grammatically correct form."
-        },
-        {
-            name: "Context Challenge",
-            icon: "🧩",
-            description: "Apply grammar inside real sentences."
-        },
-        {
-            name: "Speed Grammar",
-            icon: "⚡",
-            description: "Make accurate decisions under pressure."
-        },
-        {
-            name: "Grammar Mastery",
-            icon: "🏆",
-            description: "Complete your grammar journey."
-        }
+    Grammar: [
+        ["Grammar Foundations","Build accurate sentence structures."],
+        ["Correct Form","Choose the grammatically correct form."],
+        ["Context Grammar","Apply grammar naturally."],
+        ["Grammar Sprint","Make accurate decisions quickly."],
+        ["Grammar Mastery","Demonstrate strong control."]
     ],
-
-    writing: [
-        {
-            name: "Sentence Foundations",
-            icon: "📝",
-            description: "Build clear and natural sentences."
-        },
-        {
-            name: "Sentence Improvement",
-            icon: "✍️",
-            description: "Choose stronger English."
-        },
-        {
-            name: "Meaning & Tone",
-            icon: "💡",
-            description: "Understand tone, clarity and context."
-        },
-        {
-            name: "Writing Challenge",
-            icon: "⚡",
-            description: "Make strong writing decisions quickly."
-        },
-        {
-            name: "Writing Mastery",
-            icon: "🏆",
-            description: "Complete your writing journey."
-        }
+    Writing: [
+        ["Sentence Foundations","Build clear and complete sentences."],
+        ["Sentence Improvement","Choose the clearest expression."],
+        ["Meaning & Tone","Understand purpose, tone and nuance."],
+        ["Writing Challenge","Make stronger writing choices."],
+        ["Writing Mastery","Demonstrate advanced written English."]
     ],
-
-    mixed: [
-        {
-            name: "Warm-Up",
-            icon: "🔥",
-            description: "Start with a mixture of English skills."
-        },
-        {
-            name: "Brain Challenge",
-            icon: "🧠",
-            description: "Mix vocabulary, grammar and writing."
-        },
-        {
-            name: "Challenge Mode",
-            icon: "🎮",
-            description: "A more demanding mixed challenge."
-        },
-        {
-            name: "Final Challenge",
-            icon: "🏆",
-            description: "Prove your overall English skills."
-        }
+    Mixed: [
+        ["Warm-Up","A balanced English challenge."],
+        ["Brain Challenge","Switch between different skills."],
+        ["Challenge Mode","Keep your accuracy under pressure."],
+        ["Final Challenge","The ultimate WordUp test."]
     ]
 };
 
+const achievementDefinitions = [
+    ["first-step","🌱","First Step","Complete your first stage.",s=>Object.keys(s.completed).length>=1],
+    ["word-hunter","📖","Word Hunter","Earn 100 XP.",s=>s.xp>=100],
+    ["streak-3","🔥","On Fire","Reach a 3-day streak.",s=>s.streak>=3],
+    ["streak-7","🚀","Week Warrior","Reach a 7-day streak.",s=>s.streak>=7],
+    ["century","💯","Century","Earn 500 XP.",s=>s.xp>=500],
+    ["mistake-master","🔁","Mistake Master","Successfully review 10 mistakes.",s=>s.reviewed>=10],
+    ["perfect","🎯","Perfect Round","Get 100% on a stage.",s=>s.perfectRounds>=1],
+    ["scholar","🎓","Scholar","Complete 10 stages.",s=>Object.keys(s.completed).length>=10],
+    ["wordup-legend","🏆","WordUp Legend","Complete 20 stages.",s=>Object.keys(s.completed).length>=20]
+];
+
+let state = {
+    xp:0,
+    streak:0,
+    lastPracticeDate:"",
+    completed:{},
+    mistakes:[],
+    reviewed:0,
+    perfectRounds:0,
+    daily:{date:"",completed:false},
+    level:"Beginner"
+};
+
+let vocabulary = {};
+let currentSection="Vocabulary";
+let currentLevel="Beginner";
+let currentStage=0;
+let questions=[];
+let currentQuestion=0;
+let score=0;
+let hearts=5;
+let timeLeft=30;
+let timerInterval=null;
+let answeredCurrent=false;
+let earnedThisRound=0;
+let isDailyChallenge=false;
+let isMistakeReview=false;
+let roundFailed=false;
 
 const grammarQuestions = [
-
-    {
-        q: "She ___ to school every day.",
-        a: ["go", "goes", "going", "gone"],
-        c: 1,
-        explanation: "With he, she or it in the simple present, the verb normally takes -s or -es."
-    },
-
-    {
-        q: "They ___ watching a movie right now.",
-        a: ["is", "are", "was", "be"],
-        c: 1,
-        explanation: "The present continuous uses am/is/are + verb-ing."
-    },
-
-    {
-        q: "I ___ my homework yesterday.",
-        a: ["finish", "finished", "have finished", "finishing"],
-        c: 1,
-        explanation: "Yesterday refers to a completed past action, so the simple past is appropriate."
-    },
-
-    {
-        q: "He has ___ his work.",
-        a: ["finish", "finished", "finishing", "finishes"],
-        c: 1,
-        explanation: "The present perfect uses have/has + past participle."
-    },
-
-    {
-        q: "If I had more time, I ___ another language.",
-        a: ["learn", "learned", "would learn", "will learn"],
-        c: 2,
-        explanation: "This is a second conditional sentence: if + past, would + base verb."
-    },
-
-    {
-        q: "There ___ many students in the classroom.",
-        a: ["is", "are", "was", "be"],
-        c: 1,
-        explanation: "Students is plural, so we use are."
-    },
-
-    {
-        q: "She is interested ___ learning English.",
-        a: ["at", "on", "in", "for"],
-        c: 2,
-        explanation: "The natural expression is interested in."
-    },
-
-    {
-        q: "This book is ___ than that one.",
-        a: ["interesting", "more interesting", "most interesting", "interest"],
-        c: 1,
-        explanation: "For this adjective, the comparative form is more interesting."
-    },
-
-    {
-        q: "You ___ wear a seatbelt while driving.",
-        a: ["should", "might", "couldn't", "would"],
-        c: 0,
-        explanation: "Should expresses advice or a recommended action."
-    },
-
-    {
-        q: "By next year, I ___ my degree.",
-        a: [
-            "complete",
-            "completed",
-            "will have completed",
-            "am completing"
-        ],
-        c: 2,
-        explanation: "The future perfect describes an action completed before a future point."
-    },
-
-    {
-        q: "Neither the teacher nor the students ___ ready.",
-        a: ["is", "was", "are", "be"],
-        c: 2,
-        explanation: "With neither...nor, the verb commonly agrees with the nearer subject: students."
-    },
-
-    {
-        q: "I have lived here ___ 2022.",
-        a: ["for", "since", "during", "from"],
-        c: 1,
-        explanation: "Since is used with a starting point in time."
-    },
-
-    {
-        q: "She suggested ___ earlier.",
-        a: ["leave", "to leave", "leaving", "left"],
-        c: 2,
-        explanation: "Suggest is normally followed by a gerund when expressing an activity."
-    },
-
-    {
-        q: "The report ___ by the research team last week.",
-        a: ["completed", "was completed", "has completed", "completing"],
-        c: 1,
-        explanation: "This is passive voice in the simple past."
-    },
-
-    {
-        q: "If I had known, I ___ you.",
-        a: ["would tell", "would have told", "will tell", "tell"],
-        c: 1,
-        explanation: "This is a third conditional structure: if + past perfect, would have + past participle."
-    }
-
+    {q:"If I ___ more time, I would study another language.",a:"had",o:["have","had","will have","am having"],e:"The second conditional uses past simple after 'if'."},
+    {q:"She has lived here ___ 2021.",a:"since",o:["for","since","during","from"],e:"Use 'since' with a starting point in time."},
+    {q:"Neither the teacher nor the students ___ ready.",a:"are",o:["is","are","was","be"],e:"The verb agrees with the nearer plural subject 'students'."},
+    {q:"By next year, they ___ the course.",a:"will have completed",o:["complete","completed","will complete","will have completed"],e:"Future perfect describes an action completed before a future point."},
+    {q:"I wish I ___ more confident when I was younger.",a:"had been",o:["am","was","had been","have been"],e:"Use past perfect for an unreal regret about an earlier time."},
+    {q:"The report ___ by the research team yesterday.",a:"was prepared",o:["prepared","was prepared","has prepared","is preparing"],e:"The passive voice is required."},
+    {q:"He suggested ___ the meeting until Friday.",a:"postponing",o:["postpone","to postpone","postponing","postponed"],e:"Suggest is normally followed by a gerund."},
+    {q:"Hardly ___ the room when the phone rang.",a:"had I entered",o:["I entered","did I enter","had I entered","I had entered"],e:"Negative adverbial inversion uses auxiliary + subject."},
+    {q:"The woman ___ car was stolen contacted the police.",a:"whose",o:["who","which","whose","whom"],e:"'Whose' expresses possession."},
+    {q:"You ___ have told me earlier; I could have helped.",a:"should",o:["must","should","can","may"],e:"'Should have' expresses criticism or regret about the past."},
+    {q:"Despite ___ tired, he continued working.",a:"being",o:["be","to be","being","been"],e:"Despite is followed by a noun or gerund."},
+    {q:"If she had left earlier, she ___ the train.",a:"would have caught",o:["will catch","would catch","would have caught","caught"],e:"Third conditional: if + past perfect, would have + past participle."},
+    {q:"This is the most interesting book I ___ this year.",a:"have read",o:["read","am reading","have read","had read"],e:"Present perfect connects past experience with the current year."},
+    {q:"He is used to ___ early.",a:"getting up",o:["get up","getting up","got up","to get up"],e:"'Be used to' is followed by a gerund."},
+    {q:"Not only ___ late, but he also forgot the documents.",a:"was he",o:["he was","was he","he is","is he"],e:"Not only at the beginning triggers inversion."}
 ];
-
 
 const writingQuestions = [
-
-    {
-        q: "Which sentence sounds most natural and professional?",
-        a: [
-            "I want you to send me the file quickly.",
-            "Please send me the file at your earliest convenience.",
-            "Send the file fast.",
-            "You have to send the file now."
-        ],
-        c: 1,
-        explanation: "The second sentence is polite, professional and appropriate in formal communication."
-    },
-
-    {
-        q: "Choose the clearest sentence.",
-        a: [
-            "Due to the fact that he was tired, he did not attend.",
-            "Because he was tired, he did not attend.",
-            "He was tired due to the fact and did not attend.",
-            "Being tired was the reason why attendance was not done."
-        ],
-        c: 1,
-        explanation: "Because he was tired is shorter and clearer."
-    },
-
-    {
-        q: "Which sentence is most appropriate for an academic paper?",
-        a: [
-            "This thing proves that students need sleep.",
-            "The findings suggest that adequate sleep is important for students.",
-            "Students totally need sleep.",
-            "Sleep is super important for students."
-        ],
-        c: 1,
-        explanation: "The second sentence uses precise and appropriately cautious academic language."
-    },
-
-    {
-        q: "Choose the strongest sentence.",
-        a: [
-            "The project was good and very useful.",
-            "The project was useful.",
-            "The project produced several practical benefits for students.",
-            "The project was kind of useful."
-        ],
-        c: 2,
-        explanation: "The third sentence gives a more precise and informative claim."
-    },
-
-    {
-        q: "Which sentence avoids unnecessary repetition?",
-        a: [
-            "The reason is because the class was cancelled.",
-            "The class was cancelled because of the weather.",
-            "The class was cancelled due to the reason of weather.",
-            "Because of the fact that weather happened, class was cancelled."
-        ],
-        c: 1,
-        explanation: "The second sentence communicates the idea directly."
-    },
-
-    {
-        q: "Which opening is most suitable for a professional email?",
-        a: [
-            "Hey bro, I need something.",
-            "Dear Sir/Madam, I am writing to inquire about the position.",
-            "What's up? I want the job.",
-            "Listen, I have a question."
-        ],
-        c: 1,
-        explanation: "The second option is formal and professional."
-    },
-
-    {
-        q: "Which sentence has the most appropriate tone for giving feedback?",
-        a: [
-            "Your work is bad.",
-            "You clearly don't understand this.",
-            "Your work has several strengths, and a few areas could be developed further.",
-            "This is wrong."
-        ],
-        c: 2,
-        explanation: "The third option is constructive and professional."
-    },
-
-    {
-        q: "Choose the most concise version.",
-        a: [
-            "At this point in time, we are currently unable to respond.",
-            "We are currently unable to respond.",
-            "At this current point in time, responding is not possible.",
-            "We cannot currently at this point respond."
-        ],
-        c: 1,
-        explanation: "The second sentence removes unnecessary wording."
-    },
-
-    {
-        q: "Which sentence is more precise?",
-        a: [
-            "Many things affected the result.",
-            "Several factors influenced the result.",
-            "Stuff affected the result.",
-            "A lot of things somehow affected the result."
-        ],
-        c: 1,
-        explanation: "Several factors is more precise and appropriate."
-    },
-
-    {
-        q: "Which sentence is best for a LinkedIn post?",
-        a: [
-            "I learned a lot of things today.",
-            "Today's lesson reminded me that continuous learning is essential for professional growth.",
-            "Today was nice.",
-            "Learning is cool."
-        ],
-        c: 1,
-        explanation: "The second sentence is professional and reflective."
-    },
-
-    {
-        q: "Choose the best transition.",
-        a: [
-            "Furthermore, the study had several limitations.",
-            "And also, the study had stuff.",
-            "Plus the study had things.",
-            "The study had limitations and whatever."
-        ],
-        c: 0,
-        explanation: "Furthermore is a formal transition used to add related information."
-    },
-
-    {
-        q: "Which sentence sounds least ambiguous?",
-        a: [
-            "I saw the student with the teacher.",
-            "While speaking with the teacher, I saw the student.",
-            "I saw the student that had the teacher.",
-            "The student was seen by me with the teacher."
-        ],
-        c: 1,
-        explanation: "The second option clearly establishes the context."
-    }
-
+    {q:"Choose the clearest sentence.",a:"The meeting was postponed because the manager was unavailable.",o:["Due to the manager, the meeting was postponed because unavailable.","The meeting was postponed because the manager was unavailable.","The manager unavailable made the meeting postponed.","Because unavailable, the meeting was postponing."],e:"The correct sentence is direct, grammatical and precise."},
+    {q:"Which phrase is most appropriate in a formal email?",a:"I would appreciate your response at your earliest convenience.",o:["Send me an answer ASAP.","I need your answer now.","I would appreciate your response at your earliest convenience.","Answer me quickly please."],e:"The correct option is professional and appropriately polite."},
+    {q:"Choose the best transition: 'The evidence is limited. ___, the findings remain significant.'",a:"Nevertheless",o:["For example","Nevertheless","Similarly","First"],e:"Nevertheless introduces a contrast."},
+    {q:"Which sentence has the most precise tone?",a:"The results suggest that further research is necessary.",o:["The results kind of say we need more research.","The results prove everything.","The results suggest that further research is necessary.","More research, obviously."],e:"Academic writing should be cautious and precise."},
+    {q:"Choose the strongest thesis statement.",a:"This essay examines how technology has changed communication and evaluates its social effects.",o:["Technology is interesting.","I will talk about technology.","Technology has changed things a lot.","This essay examines how technology has changed communication and evaluates its social effects."],e:"A strong thesis clearly states the focus and purpose."},
+    {q:"Choose the sentence with the clearest logical relationship.",a:"Although the course was demanding, the students completed it successfully.",o:["The course was demanding, although students completed it.","Although the course was demanding, the students completed it successfully.","The students successful because demanding course.","Demanding course therefore although students."],e:"Although clearly introduces contrast."},
+    {q:"Which word best replaces 'very important' in formal writing?",a:"essential",o:["huge","awesome","essential","really big"],e:"Essential is concise and formal."},
+    {q:"Choose the most concise version.",a:"The results were inconclusive.",o:["The results were not able to reach a conclusion.","The results did not conclusively establish the outcome.","The results were inconclusive.","The results were results without conclusion."],e:"The third option expresses the idea most efficiently."},
+    {q:"Which sentence avoids an unsupported absolute claim?",a:"The findings indicate that the approach may improve performance.",o:["This approach always works.","Everyone benefits from this approach.","The findings indicate that the approach may improve performance.","This is definitely the only solution."],e:"May improve is appropriately cautious."},
+    {q:"Choose the best academic phrase.",a:"The findings are consistent with previous research.",o:["The findings are the same as everything before.","The findings match up kinda with old stuff.","The findings are consistent with previous research.","The findings are obviously right."],e:"This is a standard formal academic construction."},
+    {q:"Which opening is most suitable for a professional report?",a:"This report evaluates the effectiveness of the proposed strategy.",o:["So, here's what happened.","I am gonna talk about the strategy.","This report evaluates the effectiveness of the proposed strategy.","Let's check this thing out."],e:"A professional report should state its purpose clearly."},
+    {q:"Choose the best sentence for expressing cautious disagreement.",a:"This interpretation may overlook several relevant factors.",o:["This interpretation is stupid.","This interpretation is completely wrong.","This interpretation may overlook several relevant factors.","Nobody agrees with this interpretation."],e:"The sentence is respectful and evidence-conscious."}
 ];
 
-
-const achievements = [
-
-    {
-        id: "first",
-        icon: "🌱",
-        title: "First Step",
-        description: "Complete your first stage.",
-        check: s => Object.keys(s.completed).length >= 1
-    },
-
-    {
-        id: "ten",
-        icon: "🔥",
-        title: "Getting Serious",
-        description: "Complete 10 stages.",
-        check: s => Object.keys(s.completed).length >= 10
-    },
-
-    {
-        id: "hundred",
-        icon: "⚡",
-        title: "100 XP",
-        description: "Earn 100 XP.",
-        check: s => s.xp >= 100
-    },
-
-    {
-        id: "fivehundred",
-        icon: "💎",
-        title: "500 XP",
-        description: "Earn 500 XP.",
-        check: s => s.xp >= 500
-    },
-
-    {
-        id: "streak3",
-        icon: "🔥",
-        title: "Three Days",
-        description: "Reach a 3-day streak.",
-        check: s => s.streak >= 3
-    },
-
-    {
-        id: "streak7",
-        icon: "👑",
-        title: "Weekly Warrior",
-        description: "Reach a 7-day streak.",
-        check: s => s.streak >= 7
-    },
-
-    {
-        id: "perfect",
-        icon: "🏆",
-        title: "Perfect",
-        description: "Complete a stage with 100%.",
-        check: s => Object.values(s.completed).some(x => x.perfect)
-    },
-
-    {
-        id: "review",
-        icon: "🧠",
-        title: "Learn From Mistakes",
-        description: "Complete a mistake review.",
-        check: s => s.achievements.includes("review")
-    },
-
-    {
-        id: "advanced",
-        icon: "🚀",
-        title: "Advanced",
-        description: "Complete an advanced stage.",
-        check: s => Object.keys(s.completed).some(k => k.includes("Advanced"))
-    }
-];
-
-
-/* =========================
-   STATE
-========================= */
-
-function loadState() {
-
-    try {
-
-        const saved =
-            JSON.parse(
-                localStorage.getItem(STORAGE_KEY)
-            );
-
-        if (saved) {
-            state = {
-                ...state,
-                ...saved,
-                completed: saved.completed || {},
-                mistakes: saved.mistakes || [],
-                achievements: saved.achievements || [],
-                daily: saved.daily || {
-                    date: "",
-                    completed: false
-                }
-            };
-        }
-
-    } catch (error) {
-        console.warn("Could not load saved progress.");
-    }
-}
-
-
-function saveState() {
-
-    localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify(state)
-    );
-
-    checkAchievements();
-}
-
-
-function todayKey() {
-
-    const d = new Date();
-
-    return [
-        d.getFullYear(),
-        String(d.getMonth() + 1).padStart(2, "0"),
-        String(d.getDate()).padStart(2, "0")
-    ].join("-");
-}
-
-
-function yesterdayKey() {
-
-    const d = new Date();
-
-    d.setDate(d.getDate() - 1);
-
-    return [
-        d.getFullYear(),
-        String(d.getMonth() + 1).padStart(2, "0"),
-        String(d.getDate()).padStart(2, "0")
-    ].join("-");
-}
-
-
-function updateStreak() {
-
-    const today = todayKey();
-
-    if (state.lastPracticeDate === today) {
-        return;
-    }
-
-    if (state.lastPracticeDate === yesterdayKey()) {
-        state.streak++;
-    } else {
-        state.streak = 1;
-    }
-
-    state.lastPracticeDate = today;
-}
-
-
-/* =========================
-   THEME
-========================= */
-
-function toggleTheme() {
-
-    document.body.classList.toggle("light");
-
-    const light =
-        document.body.classList.contains("light");
-
-    localStorage.setItem(
-        THEME_KEY,
-        light ? "light" : "dark"
-    );
-
-    updateThemeIcon();
-}
-
-
-function updateThemeIcon() {
-
-    const icon =
-        document.getElementById("themeIcon");
-
-    if (!icon) return;
-
-    icon.textContent =
-        document.body.classList.contains("light")
-            ? "☀️"
-            : "🌙";
-}
-
-
-function loadTheme() {
-
-    const theme =
-        localStorage.getItem(THEME_KEY);
-
-    if (theme === "light") {
-        document.body.classList.add("light");
-    }
-
-    updateThemeIcon();
-}
-
-
-/* =========================
-   SCREEN
-========================= */
-
-function showScreen(id) {
-
-    document
-        .querySelectorAll(".screen")
-        .forEach(screen => {
-            screen.classList.remove("active");
-        });
-
-    const target =
-        document.getElementById(id);
-
-    if (target) {
-        target.classList.add("active");
-    }
-
-    window.scrollTo({
-        top: 0,
-        behavior: "instant"
-    });
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-function updateHome() {
-
-    document.getElementById("topXP").textContent =
-        state.xp;
-
-    document.getElementById("xpValue").textContent =
-        state.xp;
-
-    document.getElementById("streakValue").textContent =
-        state.streak;
-
-    document.getElementById("mistakeValue").textContent =
-        state.mistakes.length;
-
-    document.getElementById("journeyXP").textContent =
-        state.xp;
-
-    document.getElementById("quizXP").textContent =
-        state.xp;
-
-    const total =
-        Object.keys(state.completed).length;
-
-    const mastery =
-        Math.min(
-            100,
-            Math.round((total / 24) * 100)
-        );
-
-    document.getElementById("masteryValue").textContent =
-        mastery + "%";
-
-    const playerLevel =
-        Math.floor(state.xp / 500) + 1;
-
-    document.getElementById("playerLevel").textContent =
-        playerLevel;
-
-    document.getElementById("welcomeText").textContent =
-        state.streak > 1
-            ? `You're on a ${state.streak}-day streak. Keep going!`
-            : "Every session makes you stronger.";
-
-    updateContinueBox();
-    updateReviewBox();
+function loadState(){
+    try{
+        const saved=localStorage.getItem(STORAGE_KEY);
+        if(saved) state={...state,...JSON.parse(saved)};
+    }catch(e){ console.warn(e); }
+
+    const theme=localStorage.getItem(THEME_KEY);
+    if(theme) document.documentElement.dataset.theme=theme;
+    updateThemeButton();
     updateDaily();
-    renderAchievementPreview();
 }
 
-
-function updateContinueBox() {
-
-    const box =
-        document.getElementById("continueBox");
-
-    const introButton =
-        document.getElementById("introContinueBtn");
-
-    if (!state.progress) {
-
-        box.classList.add("hidden");
-
-        if (introButton) {
-            introButton.classList.add("hidden");
-        }
-
-        return;
-    }
-
-    const p = state.progress;
-
-    const stageName =
-        stages[p.section][p.stage]?.name ||
-        "Next Challenge";
-
-    document.getElementById("continueTitle").textContent =
-        `${capitalize(p.section)} · ${p.level}`;
-
-    document.getElementById("continueDescription").textContent =
-        stageName;
-
-    box.classList.remove("hidden");
-
-    if (introButton) {
-        introButton.classList.remove("hidden");
-    }
+function saveState(){
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+    updateAchievements();
 }
 
-
-function updateReviewBox() {
-
-    const box =
-        document.getElementById("reviewBox");
-
-    if (!state.mistakes.length) {
-        box.classList.add("hidden");
-        return;
-    }
-
-    document.getElementById("reviewDescription").textContent =
-        `${state.mistakes.length} item${state.mistakes.length === 1 ? "" : "s"} need more practice.`;
-
-    box.classList.remove("hidden");
+function todayKey(){
+    return new Date().toISOString().slice(0,10);
 }
 
+function yesterdayKey(){
+    const d=new Date();
+    d.setDate(d.getDate()-1);
+    return d.toISOString().slice(0,10);
+}
 
-function updateDaily() {
-
-    const today = todayKey();
-
-    if (state.daily.date !== today) {
-
-        state.daily = {
-            date: today,
-            completed: false
-        };
-
+function updateDaily(){
+    const today=todayKey();
+    if(state.daily.date!==today){
+        state.daily={date:today,completed:false};
         saveState();
     }
+    const el=document.getElementById("dailyText");
+    if(el) el.textContent=state.daily.completed
+        ?"Completed today — come back tomorrow for another challenge!"
+        :"Complete today's challenge and earn bonus XP.";
+}
 
-    const title =
-        document.getElementById("dailyTitle");
+function updateStreak(){
+    const today=todayKey();
+    if(state.lastPracticeDate===today) return;
 
-    const desc =
-        document.getElementById("dailyDescription");
+    if(state.lastPracticeDate===yesterdayKey()) state.streak++;
+    else state.streak=1;
 
-    if (state.daily.completed) {
+    state.lastPracticeDate=today;
+}
 
-        title.textContent =
-            "Daily challenge complete! 🎉";
+function xpLevel(){
+    return Math.floor(state.xp/250)+1;
+}
 
-        desc.textContent =
-            "Come back tomorrow for a new challenge.";
+function mastery(){
+    const total=Object.keys(stages).reduce((n,s)=>n+stages[s].length,0);
+    return Math.min(100,Math.round(Object.keys(state.completed).length/total*100));
+}
 
-    } else {
+function updateHome(){
+    document.getElementById("xpValue").textContent=state.xp;
+    document.getElementById("topXP").textContent=state.xp;
+    document.getElementById("streakValue").textContent=state.streak;
+    document.getElementById("masteryValue").textContent=mastery()+"%";
+    document.getElementById("mistakeValue").textContent=state.mistakes.length;
+    document.getElementById("levelBadge").textContent="Level "+xpLevel();
 
-        title.textContent =
-            "Today's challenge is ready.";
+    document.getElementById("welcomeTitle").textContent=
+        state.streak>0 ? "Keep the momentum going!" : "Ready to learn?";
 
-        desc.textContent =
-            "Complete it for bonus XP and a streak boost.";
+    document.getElementById("streakMessage").textContent=
+        state.streak>0 ? `You're on a ${state.streak}-day learning streak.` : "Start your first challenge today.";
+
+    const review=document.getElementById("reviewCard");
+    review.classList.toggle("hidden",state.mistakes.length===0);
+    document.getElementById("reviewText").textContent=
+        `${state.mistakes.length} question${state.mistakes.length===1?"":"s"} waiting for review.`;
+
+    updateDaily();
+}
+
+function showScreen(id){
+    document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+    window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function startApp(){
+    updateHome();
+    showScreen("homeScreen");
+}
+
+function continueApp(){
+    updateHome();
+    if(state.progress){
+        currentSection=state.progress.section;
+        currentLevel=state.progress.level;
+        currentStage=state.progress.stage;
+        openJourney(currentSection);
+    }else{
+        showScreen("homeScreen");
     }
 }
 
-
-/* =========================
-   JOURNEY
-========================= */
-
-function openJourney(section) {
-
-    currentSection = section;
-
-    currentLevel =
-        state.progress &&
-        state.progress.section === section
-            ? state.progress.level
-            : "Beginner";
-
+function openJourney(section){
+    currentSection=section;
+    currentLevel=state.level||"Beginner";
+    document.getElementById("journeyTitle").textContent=section;
+    renderJourney();
     showScreen("journeyScreen");
+}
 
+function setLevel(level){
+    currentLevel=level;
+    state.level=level;
+    saveState();
     renderJourney();
 }
 
-
-function selectLevel(level) {
-
-    currentLevel = level;
-
-    renderJourney();
+function stageKey(section,level,index){
+    return `${section}|${level}|${index}`;
 }
 
-
-function renderJourney() {
-
-    const titles = {
-        vocabulary: "Vocabulary Journey",
-        grammar: "Grammar Journey",
-        writing: "Writing Journey",
-        mixed: "Mixed Practice"
-    };
-
-    const descriptions = {
-        vocabulary: "Build vocabulary through meaning, context, listening and mastery.",
-        grammar: "Develop accurate grammar through progressive challenges.",
-        writing: "Build clearer, stronger and more natural English.",
-        mixed: "Train several English skills together."
-    };
-
-    document.getElementById("journeyEyebrow").textContent =
-        currentSection.toUpperCase();
-
-    document.getElementById("journeyTitle").textContent =
-        titles[currentSection];
-
-    document.getElementById("journeyDescription").textContent =
-        descriptions[currentSection];
-
-    document
-        .querySelectorAll(".level-tab")
-        .forEach(button => {
-
-            button.classList.toggle(
-                "active",
-                button.dataset.level === currentLevel
-            );
-
-        });
-
-    const map =
-        document.getElementById("journeyMap");
-
-    map.innerHTML = "";
-
-    const sectionStages =
-        stages[currentSection];
-
-    sectionStages.forEach((stage, index) => {
-
-        const key =
-            makeProgressKey(
-                currentSection,
-                currentLevel,
-                index
-            );
-
-        const completed =
-            state.completed[key];
-
-        const previousKey =
-            index === 0
-                ? null
-                : makeProgressKey(
-                    currentSection,
-                    currentLevel,
-                    index - 1
-                );
-
-        const unlocked =
-            index === 0 ||
-            !!state.completed[previousKey];
-
-        const button =
-            document.createElement("button");
-
-        button.className =
-            "journey-node" +
-            (!unlocked ? " locked" : "");
-
-        button.disabled = !unlocked;
-
-        button.innerHTML = `
-            <div class="node-icon">${stage.icon}</div>
-
-            <div class="node-info">
-                <h3>${index + 1}. ${stage.name}</h3>
-                <p>${stage.description}</p>
-            </div>
-
-            <div class="node-status">
-                ${
-                    completed
-                        ? "✓ COMPLETE"
-                        : unlocked
-                            ? "START →"
-                            : "🔒"
-                }
-            </div>
-        `;
-
-        if (unlocked) {
-
-            button.onclick = () => {
-                startStage(
-                    currentSection,
-                    currentLevel,
-                    index
-                );
-            };
-        }
-
-        map.appendChild(button);
+function renderJourney(){
+    document.querySelectorAll(".level-tabs button").forEach(b=>{
+        b.classList.toggle("active",b.dataset.level===currentLevel);
     });
-}
 
-
-function makeProgressKey(section, level, stage) {
-
-    return `${section}|${level}|${stage}`;
-}
-
-
-/* =========================
-   START / CONTINUE
-========================= */
-
-function startNewJourney() {
-
-    state.progress = {
-        section: "vocabulary",
-        level: "Beginner",
-        stage: 0
-    };
-
-    saveState();
-
-    openJourney("vocabulary");
-}
-
-
-function continueJourney() {
-
-    if (!state.progress) {
-
-        openJourney("vocabulary");
-
-        return;
-    }
-
-    currentSection =
-        state.progress.section;
-
-    currentLevel =
-        state.progress.level;
-
-    currentStage =
-        state.progress.stage;
-
-    startStage(
-        currentSection,
-        currentLevel,
-        currentStage
-    );
-}
-
-
-/* =========================
-   QUESTION GENERATION
-========================= */
-
-function shuffle(array) {
-
-    const copy = [...array];
-
-    for (let i = copy.length - 1; i > 0; i--) {
-
-        const j =
-            Math.floor(
-                Math.random() * (i + 1)
-            );
-
-        [
-            copy[i],
-            copy[j]
-        ] =
-        [
-            copy[j],
-            copy[i]
-        ];
-    }
-
-    return copy;
-}
-
-
-function pickRandom(array, count) {
-
-    return shuffle(array)
-        .slice(
-            0,
-            Math.min(count, array.length)
-        );
-}
-
-
-function createVocabularyQuestions(level, stage) {
-
-    const words =
-        vocabulary[level] || [];
-
-    const selected =
-        pickRandom(words, 10);
-
-    return selected.map(item => {
-
-        const distractors =
-            pickRandom(
-                words.filter(
-                    x =>
-                        x.word !== item.word &&
-                        x.meaning !== item.meaning
-                ),
-                3
-            );
-
-        let q;
-        let answers;
-        let correct;
-
-        if (stage === 0 || stage === 2) {
-
-            q =
-                `What is the Dari meaning of "${item.word}"?`;
-
-            answers =
-                shuffle([
-                    item.meaning,
-                    ...distractors.map(x => x.meaning)
-                ]);
-
-            correct =
-                answers.indexOf(item.meaning);
-
-        } else if (stage === 1) {
-
-            q =
-                `Which English word means "${item.meaning}"?`;
-
-            answers =
-                shuffle([
-                    item.word,
-                    ...distractors.map(x => x.word)
-                ]);
-
-            correct =
-                answers.indexOf(item.word);
-
-        } else if (stage === 3) {
-
-            q =
-                `Which word best completes this sentence?\n\n"${item.example}"`;
-
-            answers =
-                shuffle([
-                    item.word,
-                    ...distractors.map(x => x.word)
-                ]);
-
-            correct =
-                answers.indexOf(item.word);
-
-        } else if (stage === 4) {
-
-            q =
-                "Listen carefully. Which word did you hear?";
-
-            answers =
-                shuffle([
-                    item.word,
-                    ...distractors.map(x => x.word)
-                ]);
-
-            correct =
-                answers.indexOf(item.word);
-
-        } else if (stage === 5) {
-
-            q =
-                `Which option is the correct English word for "${item.meaning}"?`;
-
-            answers =
-                shuffle([
-                    item.word,
-                    ...distractors.map(x => x.word)
-                ]);
-
-            correct =
-                answers.indexOf(item.word);
-
-        } else {
-
-            q =
-                `Quick! What does "${item.word}" mean?`;
-
-            answers =
-                shuffle([
-                    item.meaning,
-                    ...distractors.map(x => x.meaning)
-                ]);
-
-            correct =
-                answers.indexOf(item.meaning);
-        }
-
-        return {
-            q,
-            a: answers,
-            c: correct,
-            explanation:
-                `${item.word} means "${item.meaning}".`,
-            speech:
-                item.word,
-            word:
-                item.word
-        };
-    });
-}
-
-
-function createMixedQuestions(level) {
-
-    const vocab =
-        createVocabularyQuestions(
-            level,
-            2
-        ).slice(0, 4);
-
-    const grammar =
-        pickRandom(grammarQuestions, 3);
-
-    const writing =
-        pickRandom(writingQuestions, 3);
-
-    return shuffle([
-        ...vocab,
-        ...grammar,
-        ...writing
-    ]);
-}
-
-
-/* =========================
-   START STAGE
-========================= */
-
-function startStage(
-    section,
-    level,
-    stage
-) {
-
-    currentSection = section;
-    currentLevel = level;
-    currentStage = stage;
-
-    isMistakeReview = false;
-    isDailyChallenge = false;
-
-    hearts = 5;
-    score = 0;
-    currentQuestion = 0;
-
-    if (section === "vocabulary") {
-
-        questions =
-            createVocabularyQuestions(
-                level,
-                stage
-            );
-
-    } else if (section === "grammar") {
-
-        questions =
-            shuffle(grammarQuestions)
-                .slice(0, 10);
-
-    } else if (section === "writing") {
-
-        questions =
-            shuffle(writingQuestions)
-                .slice(0, 10);
-
-    } else {
-
-        questions =
-            createMixedQuestions(level);
-    }
-
-    if (!questions.length) {
-
-        showToast("No questions available yet.");
-
-        return;
-    }
-
-    state.progress = {
-        section,
-        level,
-        stage
-    };
-
-    saveState();
-
-    showScreen("quizScreen");
-
-    renderQuestion();
-}
-
-
-function startDailyChallenge() {
-
-    if (state.daily.completed) {
-
-        showToast("Today's challenge is already complete! 🎉");
-
-        return;
-    }
-
-    isDailyChallenge = true;
-    isMistakeReview = false;
-
-    currentSection = "mixed";
-    currentLevel = "Intermediate";
-    currentStage = 2;
-
-    hearts = 5;
-    score = 0;
-    currentQuestion = 0;
-
-    const seed =
-        new Date().getDate() +
-        new Date().getMonth();
-
-    const vocabPart =
-        createVocabularyQuestions(
-            "Intermediate",
-            seed % 7
-        ).slice(0, 4);
-
-    const grammarPart =
-        shuffle(grammarQuestions).slice(0, 3);
-
-    const writingPart =
-        shuffle(writingQuestions).slice(0, 3);
-
-    questions =
-        [
-            ...vocabPart,
-            ...grammarPart,
-            ...writingPart
-        ];
-
-    showScreen("quizScreen");
-
-    renderQuestion();
-}
-
-
-/* =========================
-   QUIZ
-========================= */
-
-function isSpeedStage() {
-
-    return (
-        currentSection === "vocabulary" &&
-        currentStage === 6
-    ) ||
-    (
-        currentSection === "grammar" &&
-        currentStage === 3
-    ) ||
-    (
-        currentSection === "writing" &&
-        currentStage === 3
-    ) ||
-    (
-        currentSection === "mixed" &&
-        currentStage >= 2
-    ) ||
-    isDailyChallenge;
-}
-
-
-function renderQuestion() {
-
-    stopTimer();
-
-    answeredCurrent = false;
-
-    const question =
-        questions[currentQuestion];
-
-    if (!question) {
-
-        finishStage();
-
-        return;
-    }
-
-    document.getElementById("stageName").textContent =
-        isDailyChallenge
-            ? "Daily Challenge"
-            : stages[currentSection][currentStage].name;
-
-    document.getElementById("questionCounter").textContent =
-        `Question ${currentQuestion + 1} of ${questions.length}`;
-
-    document.getElementById("scoreValue").textContent =
-        score;
-
-    document.getElementById("heartsDisplay").textContent =
-        "❤️".repeat(hearts) +
-        "🖤".repeat(Math.max(0, 5 - hearts));
-
-    document.getElementById("questionProgress").style.width =
-        `${(currentQuestion / questions.length) * 100}%`;
-
-    document.getElementById("questionText").textContent =
-        question.q;
-
-    document.getElementById("questionType").textContent =
-        detectQuestionType(question);
-
-    const listen =
-        document.getElementById("listenButton");
-
-    if (
-        question.speech &&
-        (
-            currentStage === 4 ||
-            currentSection === "vocabulary"
-        )
-    ) {
-
-        listen.classList.remove("hidden");
-
-    } else {
-
-        listen.classList.add("hidden");
-    }
-
-    const grid =
-        document.getElementById("answerGrid");
-
-    grid.innerHTML = "";
-
-    question.a.forEach((answer, index) => {
-
-        const button =
-            document.createElement("button");
-
-        button.className =
-            "answer-btn";
-
-        button.innerHTML = `
-            <span class="answer-key">
-                ${String.fromCharCode(65 + index)}
+    const map=document.getElementById("journeyMap");
+    map.innerHTML="";
+
+    stages[currentSection].forEach((stage,i)=>{
+        const key=stageKey(currentSection,currentLevel,i);
+        const completed=!!state.completed[key];
+        const previous=i===0||!!state.completed[stageKey(currentSection,currentLevel,i-1)];
+        const unlocked=previous;
+
+        const card=document.createElement("button");
+        card.className=`stage-card ${completed?"completed":""} ${!unlocked?"locked":""} ${!completed&&unlocked?"current":""}`;
+        card.disabled=!unlocked;
+        card.onclick=()=>startStage(i);
+
+        card.innerHTML=`
+            <span class="stage-number">${completed?"✓":i+1}</span>
+            <span class="stage-info">
+                <b>${stage[0]}</b>
+                <small>${stage[1]}</small>
             </span>
-            ${escapeHtml(answer)}
+            <span class="stage-state">${completed?"🏆":unlocked?"▶️":"🔒"}</span>
         `;
-
-        button.onclick = () =>
-            chooseAnswer(index);
-
-        grid.appendChild(button);
+        map.appendChild(card);
     });
-
-    document
-        .getElementById("feedback")
-        .className =
-        "feedback hidden";
-
-    document
-        .getElementById("nextButton")
-        .classList.add("hidden");
-
-    if (isSpeedStage()) {
-        startTimer();
-    }
-
-    if (
-        question.speech &&
-        currentStage === 4
-    ) {
-
-        setTimeout(
-            () => speakQuestion(),
-            350
-        );
-    }
 }
 
-
-function detectQuestionType(question) {
-
-    if (question.speech) {
-        if (currentStage === 4) {
-            return "LISTENING";
-        }
-
-        if (currentStage === 5) {
-            return "PRONUNCIATION";
-        }
-    }
-
-    if (currentSection === "grammar") {
-        return "GRAMMAR";
-    }
-
-    if (currentSection === "writing") {
-        return "WRITING";
-    }
-
-    if (currentSection === "mixed") {
-        return "MIXED PRACTICE";
-    }
-
-    if (currentStage === 6) {
-        return "SPEED CHALLENGE";
-    }
-
-    return "VOCABULARY";
+function startStage(index){
+    currentStage=index;
+    isDailyChallenge=false;
+    isMistakeReview=false;
+    roundFailed=false;
+    buildQuestions();
+    startQuiz();
 }
 
+function buildQuestions(){
+    questions=[];
 
-function chooseAnswer(index) {
+    if(currentSection==="Vocabulary"){
+        questions=createVocabularyQuestions(currentLevel,currentStage);
+    }else if(currentSection==="Grammar"){
+        questions=createGrammarQuestions(currentStage);
+    }else if(currentSection==="Writing"){
+        questions=createWritingQuestions(currentStage);
+    }else{
+        questions=createMixedQuestions();
+    }
 
-    if (answeredCurrent) {
+    questions=shuffle(questions).slice(0,10);
+}
+
+function createVocabularyQuestions(level,stage){
+    const pool=vocabulary[level]||[];
+    if(!pool.length) return [];
+
+    const result=[];
+    const count=Math.min(12,pool.length);
+
+    for(let i=0;i<count;i++){
+        const item=pool[i];
+        const mode=(stage+i)%4;
+        let q="",correct="",options=[];
+
+        if(mode===0){
+            q=`What does "${item.word}" mean?`;
+            correct=item.meaning;
+            options=[correct,...randomItems(pool.filter(x=>x.word!==item.word),3).map(x=>x.meaning)];
+        }else if(mode===1){
+            q=`Which word best matches this meaning?\n"${item.meaning}"`;
+            correct=item.word;
+            options=[correct,...randomItems(pool.filter(x=>x.word!==item.word),3).map(x=>x.word)];
+        }else if(mode===2){
+            q=`Choose the best word for this sentence:\n"${item.example}"`;
+            correct=item.word;
+            options=[correct,...randomItems(pool.filter(x=>x.word!==item.word),3).map(x=>x.word)];
+        }else{
+            q=`Which example uses "${item.word}" correctly?`;
+            correct=item.example;
+            options=[correct,...randomItems(pool.filter(x=>x.word!==item.word),3).map(x=>x.example)];
+        }
+
+        result.push({q,a:correct,o:shuffle(options),type:"VOCABULARY",ex:`${item.word}: ${item.meaning}`});
+    }
+    return result;
+}
+
+function createGrammarQuestions(stage){
+    return grammarQuestions.map(x=>({
+        q:stage===0?x.q:`Grammar challenge: ${x.q}`,
+        a:x.a,
+        o:shuffle([...x.o]),
+        type:"GRAMMAR",
+        ex:x.e
+    }));
+}
+
+function createWritingQuestions(stage){
+    return writingQuestions.map(x=>({
+        q:stage===0?x.q:`Writing challenge: ${x.q}`,
+        a:x.a,
+        o:shuffle([...x.o]),
+        type:"WRITING",
+        ex:x.e
+    }));
+}
+
+function createMixedQuestions(){
+    const v=createVocabularyQuestions(currentLevel,2);
+    const g=createGrammarQuestions(2);
+    const w=createWritingQuestions(2);
+    return shuffle([...v.slice(0,4),...g.slice(0,3),...w.slice(0,3)]);
+}
+
+function startQuiz(){
+    if(!questions.length){
+        toast("Vocabulary data could not be loaded.");
         return;
     }
 
-    answeredCurrent = true;
+    currentQuestion=0;
+    score=0;
+    hearts=5;
+    earnedThisRound=0;
+    answeredCurrent=false;
+    timeLeft=getTimeLimit();
 
-    stopTimer();
+    document.getElementById("quizStageTitle").textContent=
+        isDailyChallenge?"Daily Challenge":
+        isMistakeReview?"Mistake Review":
+        stages[currentSection][currentStage][0];
 
-    const question =
-        questions[currentQuestion];
-
-    const buttons =
-        document.querySelectorAll(".answer-btn");
-
-    buttons.forEach(
-        button => button.disabled = true
-    );
-
-    buttons[question.c]
-        ?.classList.add("correct");
-
-    const feedback =
-        document.getElementById("feedback");
-
-    if (index === question.c) {
-
-        score++;
-
-        feedback.className =
-            "feedback correct-feedback";
-
-        feedback.innerHTML =
-            `🎉 Correct! ${escapeHtml(question.explanation || "Great work.")}`;
-
-        showToast(
-            getPositiveMessage()
-        );
-
-        if (question.word) {
-            removeMistake(question.word);
-        }
-
-    } else {
-
-        hearts--;
-
-        buttons[index]
-            ?.classList.add("wrong");
-
-        saveMistake(
-            question
-        );
-
-        feedback.className =
-            "feedback wrong-feedback";
-
-        feedback.innerHTML =
-            `Not quite. ${escapeHtml(question.explanation || "Review this one.")}`;
-
-        updateHearts();
-
-        if (hearts <= 0) {
-
-            setTimeout(
-                finishWithNoHearts,
-                900
-            );
-
-            return;
-        }
-    }
-
-    feedback.classList.remove("hidden");
-
-    document
-        .getElementById("scoreValue")
-        .textContent = score;
-
-    document
-        .getElementById("nextButton")
-        .classList.remove("hidden");
-}
-
-
-function nextQuestion() {
-
-    if (!answeredCurrent) {
-        return;
-    }
-
-    currentQuestion++;
-
+    showScreen("quizScreen");
     renderQuestion();
 }
 
-
-function updateHearts() {
-
-    document.getElementById("heartsDisplay").textContent =
-        "❤️".repeat(hearts) +
-        "🖤".repeat(Math.max(0, 5 - hearts));
+function getTimeLimit(){
+    if(isDailyChallenge) return 20;
+    if(currentSection==="Vocabulary" && currentStage===5) return 12;
+    if(currentSection==="Mixed" && currentStage>=2) return 18;
+    return 30;
 }
 
+function renderQuestion(){
+    stopTimer();
 
-/* =========================
-   TIMER
-========================= */
+    const q=questions[currentQuestion];
+    answeredCurrent=false;
+    timeLeft=getTimeLimit();
 
-function startTimer() {
+    document.getElementById("questionCounter").textContent=
+        `${currentQuestion+1} / ${questions.length}`;
 
-    timeLeft = 30;
+    document.getElementById("scoreValue").textContent=score;
+    document.getElementById("quizXP").textContent=state.xp+earnedThisRound;
+    document.getElementById("quizProgress").style.width=
+        `${currentQuestion/questions.length*100}%`;
 
-    const box =
-        document.getElementById("timerBox");
-
-    const value =
-        document.getElementById("timerValue");
-
-    box.classList.remove("hidden");
-    box.classList.remove("warning");
-
-    value.textContent = timeLeft;
-
-    timerInterval =
-        setInterval(() => {
-
-            timeLeft--;
-
-            value.textContent =
-                timeLeft;
-
-            if (timeLeft <= 8) {
-                box.classList.add("warning");
-            }
-
-            if (timeLeft <= 0) {
-
-                stopTimer();
-
-                timeExpired();
-            }
-
-        }, 1000);
-}
-
-
-function stopTimer() {
-
-    if (timerInterval) {
-
-        clearInterval(
-            timerInterval
-        );
-
-        timerInterval = null;
-    }
-
-    const box =
-        document.getElementById("timerBox");
-
-    if (box) {
-        box.classList.add("hidden");
-        box.classList.remove("warning");
-    }
-}
-
-
-function timeExpired() {
-
-    if (answeredCurrent) {
-        return;
-    }
-
-    answeredCurrent = true;
-
-    const question =
-        questions[currentQuestion];
-
-    const buttons =
-        document.querySelectorAll(".answer-btn");
-
-    buttons.forEach(
-        button => button.disabled = true
-    );
-
-    buttons[question.c]
-        ?.classList.add("correct");
-
-    hearts--;
-
-    saveMistake(question);
+    document.getElementById("timer").textContent=timeLeft;
+    document.getElementById("questionType").textContent=q.type;
+    document.getElementById("questionText").innerHTML=q.q.replace(/\n/g,"<br>");
+    document.getElementById("feedback").className="feedback hidden";
+    document.getElementById("nextBtn").classList.add("hidden");
 
     updateHearts();
 
-    const feedback =
-        document.getElementById("feedback");
+    const grid=document.getElementById("answerGrid");
+    grid.innerHTML="";
 
-    feedback.className =
-        "feedback wrong-feedback";
+    q.o.forEach((answer,i)=>{
+        const btn=document.createElement("button");
+        btn.className="answer-btn";
+        btn.innerHTML=`<span class="answer-key">${i+1}</span>${answer}`;
+        btn.onclick=()=>answerQuestion(answer,btn);
+        grid.appendChild(btn);
+    });
 
-    feedback.innerHTML =
-        `⏰ Time's up! ${escapeHtml(question.explanation || "")}`;
+    startTimer();
+}
 
-    feedback.classList.remove("hidden");
+function startTimer(){
+    timerInterval=setInterval(()=>{
+        timeLeft--;
+        document.getElementById("timer").textContent=timeLeft;
 
-    if (hearts <= 0) {
+        if(timeLeft<=0){
+            stopTimer();
+            if(!answeredCurrent) answerQuestion(null,null,true);
+        }
+    },1000);
+}
 
-        setTimeout(
-            finishWithNoHearts,
-            900
-        );
-
-        return;
+function stopTimer(){
+    if(timerInterval){
+        clearInterval(timerInterval);
+        timerInterval=null;
     }
-
-    document
-        .getElementById("nextButton")
-        .classList.remove("hidden");
 }
 
+function answerQuestion(answer,clickedButton,timedOut=false){
+    if(answeredCurrent) return;
 
-/* =========================
-   MISTAKES
-========================= */
-
-function saveMistake(question) {
-
-    const key =
-        question.word ||
-        question.q;
-
-    const existing =
-        state.mistakes.find(
-            x => x.key === key
-        );
-
-    if (existing) {
-
-        existing.times++;
-
-    } else {
-
-        state.mistakes.push({
-            key,
-            q: question.q,
-            a: question.a,
-            c: question.c,
-            explanation: question.explanation,
-            word: question.word || "",
-            times: 1
-        });
-    }
-
-    state.mistakes =
-        state.mistakes.slice(-100);
-
-    saveState();
-}
-
-
-function removeMistake(word) {
-
-    if (!word) {
-        return;
-    }
-
-    state.mistakes =
-        state.mistakes.filter(
-            x => x.word !== word
-        );
-
-    saveState();
-}
-
-
-function startMistakeReview() {
-
-    if (!state.mistakes.length) {
-
-        showToast("Your mistake list is empty! 🎉");
-
-        return;
-    }
-
-    isMistakeReview = true;
-    isDailyChallenge = false;
-
-    hearts = 5;
-    score = 0;
-    currentQuestion = 0;
-
-    questions =
-        shuffle(state.mistakes)
-            .slice(0, 10)
-            .map(item => ({
-                q: item.q,
-                a: item.a,
-                c: item.c,
-                explanation: item.explanation,
-                word: item.word
-            }));
-
-    showScreen("quizScreen");
-
-    renderQuestion();
-}
-
-
-function finishMistakeReview() {
-
-    state.mistakes = [];
-
-    state.achievements =
-        Array.from(
-            new Set([
-                ...state.achievements,
-                "review"
-            ])
-        );
-
-    saveState();
-}
-
-
-/* =========================
-   FINISH
-========================= */
-
-function finishWithNoHearts() {
-
+    answeredCurrent=true;
     stopTimer();
 
-    const percentage =
-        Math.round(
-            (score / questions.length) * 100
-        );
+    const q=questions[currentQuestion];
+    const correct=answer===q.a;
 
-    document.getElementById("earnedXP").textContent =
-        "+0";
+    document.querySelectorAll(".answer-btn").forEach(btn=>{
+        btn.disabled=true;
+        if(btn.textContent.includes(q.a)) btn.classList.add("correct");
+    });
 
-    document.getElementById("celebrationScore").textContent =
-        `${score}/${questions.length}`;
+    if(clickedButton && !correct) clickedButton.classList.add("wrong");
 
-    document.getElementById("celebrationAccuracy").textContent =
-        `${percentage}%`;
+    if(correct){
+        score++;
+        const speedBonus=Math.max(0,Math.floor(timeLeft/5));
+        const base=currentSection==="Mixed"?15:10;
+        earnedThisRound+=base+speedBonus;
+        showFeedback(true,`Correct! ${q.ex||""}`);
+    }else{
+        hearts--;
+        addMistake(q);
+        showFeedback(false,timedOut?`Time's up. ${q.ex||""}`:`Not quite. ${q.ex||""}`);
+    }
 
-    document.getElementById("celebrationTitle").textContent =
-        "Keep Going! 💪";
+    document.getElementById("scoreValue").textContent=score;
+    document.getElementById("quizXP").textContent=state.xp+earnedThisRound;
+    updateHearts();
 
-    document.getElementById("celebrationMessage").textContent =
-        "You ran out of hearts, but your mistakes have been saved for review.";
+    if(hearts<=0){
+        roundFailed=true;
+        setTimeout(finishRound,900);
+    }else{
+        document.getElementById("nextBtn").classList.remove("hidden");
+    }
+}
 
-    document.getElementById("nextUnlock").textContent =
-        "Review your mistakes and try again.";
+function showFeedback(good,text){
+    const el=document.getElementById("feedback");
+    el.className=`feedback ${good?"good":"bad"}`;
+    el.textContent=text;
+}
 
-    document.getElementById("celebrationStars").textContent =
-        "🧠 ❤️ 💪";
+function nextQuestion(){
+    if(!answeredCurrent) return;
 
+    currentQuestion++;
+
+    if(currentQuestion>=questions.length) finishRound();
+    else renderQuestion();
+}
+
+function updateHearts(){
+    document.getElementById("hearts").textContent=
+        "❤️".repeat(hearts)+"🖤".repeat(5-hearts);
+}
+
+function addMistake(q){
+    const exists=state.mistakes.some(x=>x.q===q.q&&x.a===q.a);
+    if(!exists) state.mistakes.push({
+        q:q.q,a:q.a,o:q.o,type:q.type,ex:q.ex
+    });
+    saveState();
+}
+
+function finishRound(){
+    stopTimer();
+
+    const percentage=Math.round(score/questions.length*100);
+
+    if(!roundFailed){
+        updateStreak();
+
+        if(percentage===100){
+            earnedThisRound+=25;
+            state.perfectRounds++;
+        }
+
+        if(isDailyChallenge){
+            earnedThisRound+=50;
+            state.daily.completed=true;
+        }
+
+        state.xp+=earnedThisRound;
+
+        if(!isMistakeReview){
+            const key=stageKey(currentSection,currentLevel,currentStage);
+            if(!state.completed[key]) state.completed[key]={
+                score:percentage,
+                date:todayKey()
+            };
+
+            state.progress={
+                section:currentSection,
+                level:currentLevel,
+                stage:Math.min(currentStage+1,stages[currentSection].length-1)
+            };
+        }
+
+        saveState();
+    }
+
+    document.getElementById("celebrationTitle").textContent=
+        roundFailed?"Keep Going!":
+        percentage===100?"Perfect!":
+        percentage>=80?"Excellent!":
+        percentage>=60?"Well Done!":"Good Try!";
+
+    document.getElementById("celebrationMessage").textContent=
+        roundFailed
+        ?"You ran out of hearts. Review your mistakes and try again."
+        :`${score} of ${questions.length} correct. ${percentage}% accuracy.`;
+
+    document.getElementById("celebrationIcon").textContent=
+        roundFailed?"💪":percentage===100?"🏆":percentage>=80?"🎉":"👏";
+
+    document.getElementById("earnedXP").textContent=
+        roundFailed?"+0 XP":`+${earnedThisRound} XP`;
+
+    const starCount=roundFailed?1:Math.max(1,Math.ceil(percentage/20));
+    document.getElementById("stars").textContent="⭐".repeat(starCount)+"☆".repeat(5-starCount);
+
+    createConfetti(!roundFailed&&percentage>=60);
     showScreen("celebrationScreen");
 }
 
-
-function finishStage() {
-
-    stopTimer();
-
-    const percentage =
-        Math.round(
-            (score / questions.length) * 100
-        );
-
-    if (isMistakeReview) {
-
-        finishMistakeReview();
-
-        const earned =
-            Math.max(
-                25,
-                score * 10
-            );
-
-        state.xp += earned;
-
-        updateStreak();
-        saveState();
-
-        showCelebration(
-            percentage,
-            earned,
-            "REVIEW COMPLETE! 🧠",
-            "You turned mistakes into progress."
-        );
-
-        return;
-    }
-
-
-    if (isDailyChallenge) {
-
-        const earned =
-            150 +
-            (percentage === 100 ? 100 : 0);
-
-        state.xp += earned;
-
-        state.daily.completed = true;
-
-        updateStreak();
-
-        saveState();
-
-        showCelebration(
-            percentage,
-            earned,
-            percentage === 100
-                ? "DAILY PERFECT! 🏆"
-                : "DAILY COMPLETE! 🔥",
-            "You completed today's challenge."
-        );
-
-        return;
-    }
-
-
-    const key =
-        makeProgressKey(
-            currentSection,
-            currentLevel,
-            currentStage
-        );
-
-    const previous =
-        state.completed[key];
-
-    let earned =
-        100 +
-        currentStage * 25;
-
-    if (percentage === 100) {
-        earned += 50;
-    }
-
-    if (hearts === 5) {
-        earned += 25;
-    }
-
-    if (previous) {
-        earned =
-            Math.floor(earned / 2);
-    }
-
-    state.xp += earned;
-
-    state.completed[key] = {
-        percentage,
-        perfect: percentage === 100,
-        timestamp: Date.now()
-    };
-
-    updateStreak();
-
-    const nextStage =
-        currentStage + 1;
-
-    if (
-        nextStage <
-        stages[currentSection].length
-    ) {
-
-        state.progress = {
-            section: currentSection,
-            level: currentLevel,
-            stage: nextStage
-        };
-
-    } else {
-
-        state.progress = {
-            section: currentSection,
-            level: currentLevel,
-            stage: 0
-        };
-    }
-
-    saveState();
-
-    let title =
-        "GOOD EFFORT! 💪";
-
-    if (percentage === 100) {
-        title = "PERFECT! 🏆";
-    } else if (percentage >= 80) {
-        title = "EXCELLENT! 👏";
-    } else if (percentage >= 60) {
-        title = "WELL DONE! ⭐";
-    }
-
-    const nextName =
-        nextStage <
-        stages[currentSection].length
-            ? stages[currentSection][nextStage].name
-            : "Journey Complete";
-
-    showCelebration(
-        percentage,
-        earned,
-        title,
-        percentage >= 80
-            ? `You've unlocked the next challenge: ${nextName}.`
-            : `Keep practicing. Your next challenge is ${nextName}.`
-    );
-}
-
-
-function showCelebration(
-    percentage,
-    earned,
-    title,
-    message
-) {
-
-    document.getElementById("earnedXP").textContent =
-        `+${earned}`;
-
-    document.getElementById("celebrationScore").textContent =
-        `${score}/${questions.length}`;
-
-    document.getElementById("celebrationAccuracy").textContent =
-        `${percentage}%`;
-
-    document.getElementById("celebrationTitle").textContent =
-        title;
-
-    document.getElementById("celebrationMessage").textContent =
-        message;
-
-    const nextStage =
-        currentStage + 1;
-
-    let nextText =
-        "Your next challenge is ready.";
-
-    if (
-        !isMistakeReview &&
-        !isDailyChallenge &&
-        nextStage <
-        stages[currentSection].length
-    ) {
-
-        nextText =
-            stages[currentSection][nextStage].name;
-
-    } else if (!isMistakeReview && !isDailyChallenge) {
-
-        nextText =
-            "You completed this journey!";
-    }
-
-    document.getElementById("nextUnlock").textContent =
-        nextText;
-
-    if (percentage === 100) {
-        document.getElementById("celebrationStars").textContent =
-            "⭐⭐⭐⭐⭐";
-    } else if (percentage >= 80) {
-        document.getElementById("celebrationStars").textContent =
-            "⭐⭐⭐⭐";
-    } else if (percentage >= 60) {
-        document.getElementById("celebrationStars").textContent =
-            "⭐⭐⭐";
-    } else {
-        document.getElementById("celebrationStars").textContent =
-            "⭐⭐";
-    }
-
-    createConfetti();
-
-    showScreen("celebrationScreen");
-}
-
-
-function continueAfterCelebration() {
-
-    if (isMistakeReview) {
-
-        isMistakeReview = false;
-
+function continueAfterCelebration(){
+    if(roundFailed){
         showScreen("homeScreen");
-
         updateHome();
-
         return;
     }
 
-    if (isDailyChallenge) {
+    document.getElementById("resultMastery").textContent=
+        Math.round(score/questions.length*100)+"%";
 
-        isDailyChallenge = false;
-
-        showScreen("homeScreen");
-
-        updateHome();
-
-        return;
-    }
-
-    const next =
-        currentStage + 1;
-
-    if (
-        next <
-        stages[currentSection].length
-    ) {
-
-        currentStage = next;
-
-        startStage(
-            currentSection,
-            currentLevel,
-            currentStage
-        );
-
-        return;
-    }
-
-    showFinalResult();
-}
-
-
-function showFinalResult() {
-
-    const completedCount =
-        stages[currentSection].reduce(
-            (total, _, index) => {
-
-                const key =
-                    makeProgressKey(
-                        currentSection,
-                        currentLevel,
-                        index
-                    );
-
-                return total +
-                    (state.completed[key] ? 1 : 0);
-
-            },
-            0
-        );
-
-    const mastery =
-        Math.round(
-            (
-                completedCount /
-                stages[currentSection].length
-            ) * 100
-        );
-
-    document.getElementById("finalMastery").textContent =
-        `${mastery}%`;
-
-    document.getElementById("finalCorrect").textContent =
-        completedCount;
-
-    document.getElementById("finalXP").textContent =
-        state.xp;
-
-    document.getElementById("resultTitle").textContent =
-        mastery === 100
-            ? "You mastered it! 🏆"
-            : "Journey complete! 🎉";
-
-    document.getElementById("resultDescription").textContent =
-        `You completed ${completedCount} of ${stages[currentSection].length} stages in ${currentLevel}.`;
+    const percentage=Math.round(score/questions.length*100);
+    document.getElementById("resultMastery").parentElement.style.setProperty("--mastery",percentage+"%");
+    document.getElementById("resultScore").textContent=`${score}/${questions.length}`;
+    document.getElementById("resultXP").textContent=`+${earnedThisRound}`;
+    document.getElementById("resultCompleted").textContent=Object.keys(state.completed).length;
 
     showScreen("resultScreen");
-}
-
-
-/* =========================
-   EXIT MODAL
-========================= */
-
-function confirmExitQuiz() {
-
-    document
-        .getElementById("exitModal")
-        .classList.remove("hidden");
-}
-
-
-function closeExitModal() {
-
-    document
-        .getElementById("exitModal")
-        .classList.add("hidden");
-}
-
-
-function leaveQuiz() {
-
-    closeExitModal();
-
-    stopTimer();
-
-    showScreen("homeScreen");
-
     updateHome();
 }
 
-
-/* =========================
-   AUDIO
-========================= */
-
-function speakQuestion() {
-
-    const question =
-        questions[currentQuestion];
-
-    if (!question) {
+function continueJourney(){
+    if(isDailyChallenge||isMistakeReview){
+        showScreen("homeScreen");
+        updateHome();
         return;
     }
 
-    const text =
-        question.speech ||
-        question.q;
-
-    if (
-        !("speechSynthesis" in window)
-    ) {
-
-        showToast(
-            "Your browser does not support speech synthesis."
-        );
-
-        return;
-    }
-
-    window.speechSynthesis.cancel();
-
-    const utterance =
-        new SpeechSynthesisUtterance(text);
-
-    utterance.lang = "en-US";
-    utterance.rate = .82;
-    utterance.pitch = 1;
-
-    window.speechSynthesis.speak(
-        utterance
-    );
+    currentStage=Math.min(currentStage+1,stages[currentSection].length-1);
+    renderJourney();
+    showScreen("journeyScreen");
 }
 
+function startDailyChallenge(){
+    isDailyChallenge=true;
+    isMistakeReview=false;
+    currentSection=["Vocabulary","Grammar","Writing","Mixed"][new Date().getDate()%4];
+    currentLevel=["Beginner","Intermediate","Advanced"][new Date().getDate()%3];
+    currentStage=new Date().getDate()%stages[currentSection].length;
 
-/* =========================
-   ACHIEVEMENTS
-========================= */
+    buildQuestions();
+    startQuiz();
+}
 
-function checkAchievements() {
+function startMistakeReview(){
+    if(!state.mistakes.length){
+        toast("You have no mistakes to review. Great work!");
+        return;
+    }
 
-    let changed = false;
+    isMistakeReview=true;
+    isDailyChallenge=false;
+    roundFailed=false;
 
-    achievements.forEach(item => {
+    questions=shuffle(state.mistakes.map(x=>({
+        q:x.q,a:x.a,o:shuffle([...x.o]),type:x.type,ex:x.ex
+    }))).slice(0,10);
 
-        if (
-            item.id === "review" &&
-            !state.achievements.includes("review")
-        ) {
-            return;
-        }
+    currentSection="Mixed";
+    currentStage=0;
+    startQuiz();
+}
 
-        if (
-            item.check(state) &&
-            !state.achievements.includes(item.id)
-        ) {
+function updateMistakesAfterReview(){
+    // handled by removeCorrectMistake
+}
 
-            state.achievements.push(item.id);
+function removeCorrectMistake(q){
+    state.mistakes=state.mistakes.filter(x=>!(x.q===q.q&&x.a===q.a));
+    state.reviewed++;
+}
 
-            changed = true;
+function toggleTheme(){
+    const current=document.documentElement.dataset.theme;
+    const next=current==="dark"?"light":"dark";
+    document.documentElement.dataset.theme=next;
+    localStorage.setItem(THEME_KEY,next);
+    updateThemeButton();
+}
 
-            setTimeout(
-                () => showToast(
-                    `${item.icon} Achievement unlocked: ${item.title}!`
-                ),
-                100
-            );
+function updateThemeButton(){
+    const btn=document.getElementById("themeBtn");
+    if(btn) btn.textContent=document.documentElement.dataset.theme==="dark"?"☀️":"🌙";
+}
+
+function speakQuestion(){
+    const text=document.getElementById("questionText").innerText;
+    if("speechSynthesis" in window){
+        speechSynthesis.cancel();
+        const utter=new SpeechSynthesisUtterance(text);
+        utter.lang="en-US";
+        utter.rate=.9;
+        speechSynthesis.speak(utter);
+    }else toast("Speech is not supported by this browser.");
+}
+
+function confirmExitQuiz(){
+    document.getElementById("exitModal").classList.remove("hidden");
+}
+
+function closeExitModal(){
+    document.getElementById("exitModal").classList.add("hidden");
+}
+
+function leaveQuiz(){
+    closeExitModal();
+    stopTimer();
+    showScreen("homeScreen");
+    updateHome();
+}
+
+function updateAchievements(){
+    const earned=state.achievements||[];
+    achievementDefinitions.forEach(a=>{
+        if(a[4](state)&&!earned.includes(a[0])){
+            earned.push(a[0]);
+            toast(`🏆 Achievement unlocked: ${a[2]}`);
         }
     });
-
-    if (changed) {
-
-        localStorage.setItem(
-            STORAGE_KEY,
-            JSON.stringify(state)
-        );
-    }
+    state.achievements=earned;
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
 }
 
+function renderAchievements(){
+    const grid=document.getElementById("achievementsGrid");
+    grid.innerHTML="";
 
-function renderAchievementPreview() {
-
-    const container =
-        document.getElementById(
-            "achievementPreview"
-        );
-
-    if (!container) return;
-
-    container.innerHTML = "";
-
-    achievements
-        .slice(0, 5)
-        .forEach(item => {
-
-            const unlocked =
-                item.check(state);
-
-            const element =
-                document.createElement("div");
-
-            element.className =
-                "achievement-item" +
-                (!unlocked ? " locked" : "");
-
-            element.innerHTML = `
-                <div class="achievement-icon">
-                    ${unlocked ? item.icon : "🔒"}
-                </div>
-
-                <strong>${item.title}</strong>
-
-                <span>${item.description}</span>
-            `;
-
-            container.appendChild(element);
-        });
-}
-
-
-function openAchievements() {
-
-    const grid =
-        document.getElementById(
-            "achievementGrid"
-        );
-
-    grid.innerHTML = "";
-
-    achievements.forEach(item => {
-
-        const unlocked =
-            item.check(state);
-
-        const element =
-            document.createElement("div");
-
-        element.className =
-            "achievement-item" +
-            (!unlocked ? " locked" : "");
-
-        element.innerHTML = `
-            <div class="achievement-icon">
-                ${unlocked ? item.icon : "🔒"}
-            </div>
-
-            <strong>${item.title}</strong>
-
-            <span>${item.description}</span>
+    achievementDefinitions.forEach(a=>{
+        const unlocked=(state.achievements||[]).includes(a[0]);
+        const el=document.createElement("div");
+        el.className=`achievement ${unlocked?"":"locked"}`;
+        el.innerHTML=`
+            <div class="achievement-icon">${unlocked?a[1]:"🔒"}</div>
+            <b>${a[2]}</b>
+            <small>${a[3]}</small>
         `;
-
-        grid.appendChild(element);
+        grid.appendChild(el);
     });
-
-    showScreen("achievementsScreen");
 }
 
-
-/* =========================
-   UTILITIES
-========================= */
-
-function capitalize(value) {
-
-    return value.charAt(0).toUpperCase() +
-        value.slice(1);
+function shuffle(arr){
+    return [...arr].sort(()=>Math.random()-.5);
 }
 
-
-function getPositiveMessage() {
-
-    const messages = [
-        "Excellent! 👏",
-        "Great job! 🔥",
-        "Correct! 🧠",
-        "Nice work! ⭐",
-        "You've got it! 🚀",
-        "Brilliant! 💪"
-    ];
-
-    return messages[
-        Math.floor(
-            Math.random() *
-            messages.length
-        )
-    ];
+function randomItems(arr,n){
+    return shuffle(arr).slice(0,n);
 }
 
-
-function showToast(message) {
-
-    const toast =
-        document.getElementById("toast");
-
-    toast.textContent =
-        message;
-
-    toast.classList.add("show");
-
-    clearTimeout(
-        showToast.timeout
-    );
-
-    showToast.timeout =
-        setTimeout(
-            () => toast.classList.remove("show"),
-            2200
-        );
+function toast(message){
+    const container=document.getElementById("toast-container");
+    const el=document.createElement("div");
+    el.className="toast";
+    el.textContent=message;
+    container.appendChild(el);
+    setTimeout(()=>el.remove(),3200);
 }
 
+function createConfetti(enabled){
+    if(!enabled) return;
 
-function createConfetti() {
+    const container=document.getElementById("confetti");
+    container.innerHTML="";
 
-    const container =
-        document.getElementById(
-            "confetti"
-        );
-
-    container.innerHTML = "";
-
-    const symbols = [
-        "•",
-        "◆",
-        "★",
-        "✦"
-    ];
-
-    for (let i = 0; i < 75; i++) {
-
-        const piece =
-            document.createElement("div");
-
-        piece.className =
-            "confetti-piece";
-
-        piece.textContent =
-            symbols[
-                Math.floor(
-                    Math.random() *
-                    symbols.length
-                )
-            ];
-
-        piece.style.left =
-            `${Math.random() * 100}%`;
-
-        piece.style.fontSize =
-            `${8 + Math.random() * 12}px`;
-
-        piece.style.animationDelay =
-            `${Math.random() * .7}s`;
-
-        piece.style.opacity =
-            `${.5 + Math.random() * .5}`;
-
+    for(let i=0;i<45;i++){
+        const piece=document.createElement("div");
+        piece.className="confetti-piece";
+        piece.style.left=Math.random()*100+"vw";
+        piece.style.animationDelay=Math.random()*1.2+"s";
+        piece.style.background=`hsl(${Math.random()*360},80%,60%)`;
         container.appendChild(piece);
     }
 
-    setTimeout(
-        () => {
-            container.innerHTML = "";
-        },
-        3500
-    );
+    setTimeout(()=>container.innerHTML="",3500);
 }
 
+document.addEventListener("keydown",e=>{
+    if(!document.getElementById("quizScreen").classList.contains("active")) return;
 
-function escapeHtml(value) {
-
-    return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}
-
-
-/* =========================
-   KEYBOARD
-========================= */
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-        const quiz =
-            document
-                .getElementById("quizScreen")
-                .classList
-                .contains("active");
-
-        if (!quiz) return;
-
-        if (
-            ["1", "2", "3", "4"]
-                .includes(event.key)
-        ) {
-
-            const index =
-                Number(event.key) - 1;
-
-            chooseAnswer(index);
-        }
-
-        if (
-            event.key === "Enter" &&
-            answeredCurrent
-        ) {
-
-            nextQuestion();
-        }
+    if(["1","2","3","4"].includes(e.key)&&!answeredCurrent){
+        const index=Number(e.key)-1;
+        const buttons=document.querySelectorAll(".answer-btn");
+        if(buttons[index]) buttons[index].click();
     }
-);
 
+    if(e.key==="Enter"&&answeredCurrent){
+        const next=document.getElementById("nextBtn");
+        if(!next.classList.contains("hidden")) next.click();
+    }
 
-/* =========================
-   INIT
-========================= */
+    if(e.key==="Escape") confirmExitQuiz();
+});
 
-async function loadVocabulary() {
+document.querySelector('[onclick="showScreen(\'achievementsScreen\')"]')
+    ?.addEventListener("click",renderAchievements);
 
-    try {
+document.addEventListener("click",e=>{
+    if(e.target.closest('[onclick="showScreen(\'achievementsScreen\')"]')){
+        setTimeout(renderAchievements,30);
+    }
+});
 
-        const response =
-            await fetch("vocabulary.json");
-
-        if (!response.ok) {
-            throw new Error("Vocabulary file unavailable.");
-        }
-
-        vocabulary =
-            await response.json();
-
-    } catch (error) {
-
+async function loadVocabulary(){
+    try{
+        const response=await fetch("vocabulary.json",{cache:"no-store"});
+        if(!response.ok) throw new Error("Vocabulary file unavailable");
+        vocabulary=await response.json();
+    }catch(error){
         console.error(error);
-
-        vocabulary = {
-            Beginner: [],
-            Intermediate: [],
-            Advanced: []
-        };
-
-        showToast(
-            "Vocabulary database could not be loaded."
-        );
+        toast("Vocabulary file could not be loaded.");
     }
 }
 
-
-async function init() {
-
+async function init(){
     loadState();
-
-    loadTheme();
-
     await loadVocabulary();
-
     updateHome();
-
-    if (state.progress) {
-
-        document
-            .getElementById("introContinueBtn")
-            .classList
-            .remove("hidden");
-    }
-
-    showScreen("introScreen");
+    renderAchievements();
 }
 
-
-document.addEventListener(
-    "DOMContentLoaded",
-    init
-);
+init();
