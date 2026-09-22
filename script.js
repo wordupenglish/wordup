@@ -115,250 +115,1193 @@ Advanced:[
 };
 
 let state=loadState();
-let current={type:"Vocabulary",level:"Beginner",lesson:0,phase:"lesson",item:0,score:0,xp:0,questions:[]};
+
+let current={
+type:"Vocabulary",
+lesson:0,
+phase:"lesson",
+item:0,
+score:0,
+xp:0,
+questions:[]
+};
+
 let selectedLevel="Beginner";
 
-function defaults(){return{xp:0,streak:0,lastDay:"",completed:{},mistakes:[],theme:"light"}}
+function defaults(){
+return{
+xp:0,
+streak:0,
+lastDay:"",
+completed:{},
+mistakes:[],
+theme:"light"
+};
+}
+
 function loadState(){
- let d=defaults();
- try{
-   let old=JSON.parse(localStorage.getItem(OLD)||"null");
-   let saved=JSON.parse(localStorage.getItem(KEY)||"null");
-   return Object.assign(d,old||{},saved||{});
- }catch{return d}
+let d=defaults();
+
+try{
+let old=JSON.parse(localStorage.getItem(OLD)||"null");
+let saved=JSON.parse(localStorage.getItem(KEY)||"null");
+
+if(old) d=Object.assign(d,old);
+if(saved) d=Object.assign(d,saved);
+
+return d;
+}catch{
+return d;
 }
-function save(){localStorage.setItem(KEY,JSON.stringify(state))}
-function today(){return new Date().toISOString().slice(0,10)}
-function addXP(n){state.xp+=n;document.querySelectorAll("#xp,#homeXP").forEach(x=>x.textContent="⭐ "+state.xp+" XP");save()}
-function show(id){document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");window.scrollTo(0,0)}
-function goHome(){updateHome();show("home")}
-function updateHome(){
- document.getElementById("homeXP").textContent=state.xp;
- document.getElementById("xp").textContent="⭐ "+state.xp+" XP";
- document.getElementById("streak").textContent=state.streak;
- let total=0,done=0;
- Object.keys(curriculum).forEach(t=>Object.keys(curriculum[t]).forEach(l=>{
-   total+=curriculum[t][l].length;
-   curriculum[t][l].forEach((_,i)=>{if(state.completed[`${t}-${l}-${i}`])done++})
- }));
- document.getElementById("mastery").textContent=(total?Math.round(done/total*100):0)+"%";
- document.getElementById("mistakes").textContent=state.mistakes.length;
- document.getElementById("mistakeBtn").style.display=state.mistakes.length?"block":"none";
 }
-function openCurriculum(type){current.type=type;selectedLevel="Beginner";document.getElementById("curriculumType").textContent=type.toUpperCase();show("curriculum");renderLessons()}
-function selectLevel(level){selectedLevel=level;renderLessons()}
-function renderLessons(){
- ["Beginner","Intermediate","Advanced"].forEach(x=>document.getElementById(x).classList.toggle("active",x===selectedLevel));
- let list=curriculum[current.type][selectedLevel];
- document.getElementById("lessons").innerHTML=list.map((l,i)=>{
-   let key=`${current.type}-${selectedLevel}-${i}`,done=state.completed[key],unlock=i===0||state.completed[`${current.type}-${selectedLevel}-${i-1}`];
-   return `<div class="lesson-card ${unlock?"":"locked"}">
-    <div class="number">${done?"✓":i+1}</div>
-    <div><b>${l.title}</b><small>${done?"Completed":"Lesson "+(i+1)}</small></div>
-    <button ${unlock?"":"disabled"} onclick="openLesson(${i})">${done?"Review":"Learn"}</button>
-   </div>`
- }).join("");
+
+function save(){
+localStorage.setItem(KEY,JSON.stringify(state));
 }
-function openLesson(i){
- let list=curriculum[current.type][selectedLevel];
- if(!list[i])return;
- current.lesson=i;current.phase="lesson";current.item=0;
- renderLesson();show("lesson");
+
+function today(){
+return new Date().toISOString().slice(0,10);
 }
-function levelHelp(){
- if(selectedLevel==="Beginner")return "دری: اول یاد بگیر، بعد تمرین و تست کن.";
- if(selectedLevel==="Intermediate")return "Learn the idea first, then practice it.";
- return "Study the concept carefully, then apply it in context.";
-}
-function renderLesson(){
- let l=curriculum[current.type][selectedLevel][current.lesson];
- if(current.type==="Vocabulary"){renderVocabularyLesson(l)}
- else if(current.type==="Reading"){renderReadingLesson(l)}
- else if(current.type==="Listening"){renderListeningLesson(l)}
- else {renderGrammarWriting(l)}
-}
-function renderVocabularyLesson(l){
- let items=l.items;
- let x=items[current.item];
- let beginner=selectedLevel==="Beginner";
- document.getElementById("lessonContent").innerHTML=`<div class="lesson-wrap">
- <div class="lesson-hero">
- <p class="eyebrow">${current.type} · ${selectedLevel}</p>
- <h1>${l.title}</h1>
- <p>${levelHelp()}</p>
- <div class="image">${x[5]}</div>
- <p class="word">${x[0]}</p>
- <p class="phonetic">${x[1]}</p>
- <button class="listen" onclick="speak('${esc(x[0])}')">🔊 Listen</button>
- <div class="info-grid">
-  ${beginner?`<div class="info"><h3>معنی / Meaning</h3><p class="dari">${x[2]}</p></div>`:""}
-  <div class="info"><h3>English Meaning</h3><p>${x[3]}</p></div>
-  <div class="info"><h3>Example / مثال</h3><p class="example">“${x[4]}”</p>${beginner?`<p class="dari">مثال برای استفاده از کلمه در جمله.</p>`:""}</div>
- </div>
- <p style="margin-top:20px;color:var(--muted)">Word ${current.item+1} of ${items.length}</p>
- </div></div>`;
-}
-function renderGrammarWriting(l){
- let beginner=selectedLevel==="Beginner";
- document.getElementById("lessonContent").innerHTML=`<div class="lesson-wrap"><div class="lesson-hero">
- <p class="eyebrow">${current.type} · ${selectedLevel}</p>
- <h1>${l.title}</h1>
- <div class="info"><h3>Lesson</h3><p>${l.lesson}</p></div>
- ${beginner?`<div class="info" style="margin-top:15px"><h3>توضیح دری</h3><p class="dari">${l.dari}</p></div>`:""}
- <h3>Examples</h3>${l.examples.map(x=>`<p class="example">“${x}”</p>`).join("")}
- </div></div>`;
-}
-function renderReadingLesson(l){
- document.getElementById("lessonContent").innerHTML=`<div class="lesson-wrap"><div class="lesson-hero">
- <p class="eyebrow">READING · ${selectedLevel}</p><h1>${l.title}</h1>
- <p class="example">${l.text}</p>
- ${selectedLevel==="Beginner"?`<div class="info"><p class="dari">اول متن را با دقت بخوان، سپس سؤال را جواب بده.</p></div>`:""}
- </div></div>`;
-}
-function renderListeningLesson(l){
- document.getElementById("lessonContent").innerHTML=`<div class="lesson-wrap"><div class="lesson-hero">
- <p class="eyebrow">LISTENING · ${selectedLevel}</p><h1>${l.title}</h1>
- <div class="info"><h3>Listen</h3><p>${l.text}</p><button class="listen" onclick="speak('${esc(l.text)}')">🔊 Play Audio</button></div>
- <p>Listen several times. Then continue to practice.</p>
- </div></div>`;
-}
-function beginPractice(){
- if(current.type==="Vocabulary"){
-   if(current.item<curriculum[current.type][selectedLevel][current.lesson].items.length-1){current.item++;renderLesson();return}
- }
- current.phase="practice";current.item=0;renderPractice();show("practice");
-}
-function renderPractice(){
- let l=curriculum[current.type][selectedLevel][current.lesson];
- let html="";
- if(current.type==="Vocabulary"){
-   let x=l.items[current.item], beginner=selectedLevel==="Beginner";
-   html=`<div class="practice-card"><p class="eyebrow">PRACTICE</p><h2>${x[0]}</h2>
-   <p class="phonetic">${x[1]}</p><button class="listen" onclick="speak('${esc(x[0])}')">🔊 Listen</button>
-   <h3>${beginner?"معنی درست را انتخاب کن / Choose the correct meaning":"Choose the correct English meaning"}</h3>
-   <div class="practice-options">
-    ${practiceOptions(x).map((o,i)=>`<button class="option" onclick="practiceAnswer(${i},${i===0})">${o}</button>`).join("")}
-   </div></div>`;
- }else{
-   html=`<div class="practice-card"><p class="eyebrow">GUIDED PRACTICE</p><h2>${l.title}</h2><p>${current.type==="Reading"||current.type==="Listening"?l.question:l.examples[0]}</p>
-   <p class="dari">${selectedLevel==="Beginner"?"حالا مفهوم را با یک تمرین کوتاه بررسی کن.":"Now apply what you have learned."}</p></div>`;
- }
- document.getElementById("practiceLabel").textContent=`${current.type} Practice`;
- document.getElementById("practiceCount").textContent=current.type==="Vocabulary"?`${current.item+1}/${l.items.length}`:"1 practice";
- document.getElementById("practiceContent").innerHTML=html;
- document.getElementById("practiceNext").style.display=current.type==="Vocabulary"?"none":"block";
-}
-function practiceOptions(x){
- let pool=[x[2],x[3],"a type of person","an action or place"];
- return shuffle(pool).slice(0,4);
-}
-function practiceAnswer(i,correct){
- document.querySelectorAll(".option").forEach(x=>x.disabled=true);
- document.querySelectorAll(".option")[i].classList.add(correct?"correct":"wrong");
- let l=curriculum[current.type][selectedLevel][current.lesson];
- setTimeout(()=>{
-   if(current.item<l.items.length-1){current.item++;renderPractice()}
-   else startQuiz();
- },650);
-}
-function practiceNext(){startQuiz()}
-function startQuiz(){
- current.questions=makeQuestions();current.item=0;current.score=0;current.xp=0;
- show("quiz");renderQuestion();
-}
-function makeQuestions(){
- let l=curriculum[current.type][selectedLevel][current.lesson];
- if(current.type==="Vocabulary"){
-   return l.items.map(x=>{
-    let correct=selectedLevel==="Beginner"?x[2]:x[3];
-    let pool=l.items.filter(y=>y!==x).map(y=>selectedLevel==="Beginner"?y[2]:y[3]);
-    return {q:selectedLevel==="Beginner"?`What does “${x[0]}” mean?`:`Which meaning best matches “${x[0]}”?`,a:correct,o:shuffle([correct,...pool]).slice(0,4),ex:`${x[0]} — ${x[3]}`};
-   });
- }
- if(current.type==="Reading"||current.type==="Listening"){
-   return [{q:l.question,a:l.options[l.answer],o:l.options,ex:l.text}];
- }
- let qs=[];
- let base=l.examples||[];
- base.forEach((e,i)=>qs.push({q:`Which sentence correctly demonstrates “${l.title}”?`,a:e,o:shuffle([e,...base.filter(x=>x!==e),"This sentence is not correct."]).slice(0,4),ex:l.lesson}));
- return qs.slice(0,3);
-}
-function renderQuestion(){
- let qs=current.questions,x=qs[current.item],pct=current.item/qs.length*100;
- document.getElementById("quizProgress").textContent=`${current.item+1} / ${qs.length}`;
- document.getElementById("quizXP").textContent="⭐ "+current.xp;
- document.getElementById("bar").style.width=pct+"%";
- document.getElementById("question").innerHTML=`<div class="q-type">${current.type} · ${selectedLevel}</div><div class="q-text">${x.q}</div>`;
- document.getElementById("answers").innerHTML=x.o.map((o,i)=>`<button class="answer" onclick="answer(${i})">${String.fromCharCode(65+i)}. ${o}</button>`).join("");
- document.getElementById("feedback").innerHTML="";
-}
-function answer(i){
- let x=current.questions[current.item],buttons=[...document.querySelectorAll(".answer")];
- buttons.forEach(b=>b.disabled=true);
- let correct=x.o[i]===x.a;
- buttons[i].classList.add(correct?"correct":"wrong");
- if(correct){current.score++;current.xp+=10;addXP(10)}
- else{
-   state.mistakes.push({type:current.type,level:selectedLevel,lesson:current.lesson,q:x.q,a:x.a});
-   state.mistakes=state.mistakes.slice(-30);
- }
- save();
- document.getElementById("feedback").innerHTML=`<div class="feedback ${correct?"good":"bad"}">
- ${correct?"✅ Correct!":"❌ Not quite."} ${selectedLevel==="Beginner"?`<br>Explanation: ${x.ex}`:`<br>${x.ex}`}
- </div>`;
- setTimeout(()=>{
-  current.item++;
-  if(current.item<current.questions.length)renderQuestion();else finishQuiz();
- },900);
-}
-function finishQuiz(){
- let total=current.questions.length,score=Math.round(current.score/total*100);
- let key=`${current.type}-${selectedLevel}-${current.lesson}`;
- if(score>=70){state.completed[key]=true;updateStreak()}
- addXP(score>=90?30:score>=70?20:5);
- save();
- document.getElementById("resultTitle").textContent=score>=70?"🎉 Lesson Mastered!":"📚 Keep Practicing!";
- document.getElementById("resultText").textContent=`You scored ${score}%. ${score>=70?"The next lesson is ready when you are.":"Review the lesson and try again."}`;
- document.getElementById("resultScore").textContent=score+"%";
- document.getElementById("resultEarned").textContent=current.xp;
- show("result");
-}
-function finishResult(){
- if(state.completed[`${current.type}-${selectedLevel}-${current.lesson}`]&&current.lesson+1<curriculum[current.type][selectedLevel].length){
-   current.lesson++;current.item=0;renderLesson();show("lesson");
- }else{openCurriculum(current.type)}
- updateHome();
-}
-function updateStreak(){
- let d=today();
- if(state.lastDay!==d){state.streak++;state.lastDay=d}
-}
-function startContinue(){
- for(let t of Object.keys(curriculum))for(let l of ["Beginner","Intermediate","Advanced"])for(let i=0;i<curriculum[t][l].length;i++){
-   if(!state.completed[`${t}-${l}-${i}`]){current.type=t;selectedLevel=l;current.lesson=i;renderLesson();show("lesson");return}
- }
- openCurriculum("Vocabulary");
-}
-function backToCurriculum(){openCurriculum(current.type)}
-function quitQuiz(){if(confirm("Leave this quiz? Your current quiz progress will not be saved."))backToCurriculum()}
-function startMistakes(){
- if(!state.mistakes.length)return;
- let m=state.mistakes[0];
- current.type=m.type;selectedLevel=m.level;current.lesson=m.lesson;
- current.questions=state.mistakes.slice(0,10).map(x=>({q:x.q,a:x.a,o:shuffle([x.a,"Not enough information","None of these","Another answer"]),ex:"Review this item carefully."}));
- current.item=0;current.score=0;current.xp=0;show("quiz");renderQuestion();
-}
-function toggleTheme(){
- state.theme=state.theme==="dark"?"light":"dark";document.body.classList.toggle("dark",state.theme==="dark");save()
-}
-function speak(text){
- if(!("speechSynthesis"in window))return;
- speechSynthesis.cancel();
- let u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.82;speechSynthesis.speak(u);
-}
-function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
-function esc(s){return String(s).replace(/'/g,"\\'").replace(/\n/g," ")}
-document.addEventListener("DOMContentLoaded",()=>{
- document.body.classList.toggle("dark",state.theme==="dark");
- updateHome();
+
+function addXP(n){
+state.xp+=n;
+
+document.querySelectorAll("#xp,#homeXP").forEach(x=>{
+if(x.id==="homeXP") x.textContent=state.xp;
+else x.textContent="⭐ "+state.xp+" XP";
 });
+
+save();
+}
+
+function show(id){
+document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+window.scrollTo(0,0);
+}
+
+function goHome(){
+updateHome();
+show("home");
+}
+
+function updateHome(){
+
+document.getElementById("homeXP").textContent=state.xp;
+document.getElementById("xp").textContent="⭐ "+state.xp+" XP";
+document.getElementById("streak").textContent=state.streak;
+
+let total=0;
+let done=0;
+
+Object.keys(curriculum).forEach(type=>{
+Object.keys(curriculum[type]).forEach(level=>{
+
+total+=curriculum[type][level].length;
+
+curriculum[type][level].forEach((_,i)=>{
+if(state.completed[`${type}-${level}-${i}`]) done++;
+});
+
+});
+});
+
+document.getElementById("mastery").textContent=
+(total?Math.round(done/total*100):0)+"%";
+
+document.getElementById("mistakes").textContent=state.mistakes.length;
+
+document.getElementById("mistakeBtn").style.display=
+state.mistakes.length?"block":"none";
+}
+
+function openCurriculum(type){
+current.type=type;
+selectedLevel="Beginner";
+
+document.getElementById("curriculumType").textContent=type.toUpperCase();
+
+show("curriculum");
+renderLessons();
+}
+
+function selectLevel(level){
+selectedLevel=level;
+renderLessons();
+}
+
+function renderLessons(){
+
+["Beginner","Intermediate","Advanced"].forEach(x=>{
+document.getElementById(x).classList.toggle("active",x===selectedLevel);
+});
+
+let list=curriculum[current.type][selectedLevel];
+
+document.getElementById("lessons").innerHTML=list.map((l,i)=>{
+
+let key=`${current.type}-${selectedLevel}-${i}`;
+
+let done=state.completed[key];
+
+let unlock=
+i===0 ||
+state.completed[`${current.type}-${selectedLevel}-${i-1}`];
+
+return `
+<div class="lesson-card ${unlock?"":"locked"}">
+
+<div class="number">${done?"✓":i+1}</div>
+
+<div>
+<b>${l.title}</b>
+<small>${done?"Completed":"Lesson "+(i+1)}</small>
+</div>
+
+<button ${unlock?"":"disabled"} onclick="openLesson(${i})">
+${done?"Review":"Learn"}
+</button>
+
+</div>
+`;
+
+}).join("");
+}
+
+function openLesson(i){
+
+let list=curriculum[current.type][selectedLevel];
+
+if(!list[i]) return;
+
+current.lesson=i;
+current.phase="lesson";
+current.item=0;
+
+renderLesson();
+show("lesson");
+}
+
+function levelHelp(){
+
+if(selectedLevel==="Beginner"){
+return "دری: اول یاد بگیر، بعد تمرین و تست کن.";
+}
+
+if(selectedLevel==="Intermediate"){
+return "Learn the idea first, then practice it.";
+}
+
+return "Study the concept carefully, then apply it in context.";
+}
+
+function renderLesson(){
+
+let l=curriculum[current.type][selectedLevel][current.lesson];
+
+if(current.type==="Vocabulary"){
+renderVocabularyLesson(l);
+}
+
+else if(current.type==="Reading"){
+renderReadingLesson(l);
+}
+
+else if(current.type==="Listening"){
+renderListeningLesson(l);
+}
+
+else{
+renderGrammarWriting(l);
+}
+}
+
+/* =========================
+   VOCABULARY LESSON
+========================= */
+
+function renderVocabularyLesson(l){
+
+let x=l.items[current.item];
+
+let beginner=selectedLevel==="Beginner";
+
+document.getElementById("lessonContent").innerHTML=`
+
+<div class="lesson-wrap">
+
+<div class="lesson-hero">
+
+<p class="eyebrow">
+VOCABULARY · ${selectedLevel}
+</p>
+
+<h1>${l.title}</h1>
+
+<p>${levelHelp()}</p>
+
+<div class="image">${x[5]}</div>
+
+<p class="word">${x[0]}</p>
+
+<p class="phonetic">${x[1]}</p>
+
+<button class="listen"
+onclick="speak('${esc(x[0])}')">
+🔊 Listen
+</button>
+
+<div class="info-grid">
+
+${
+beginner
+?
+`
+<div class="info">
+<h3>معنی / Meaning</h3>
+<p class="dari">${x[2]}</p>
+</div>
+`
+:""
+}
+
+<div class="info">
+<h3>English Meaning</h3>
+<p>${x[3]}</p>
+</div>
+
+<div class="info">
+
+<h3>Example / مثال</h3>
+
+<p class="example">
+“${x[4]}”
+</p>
+
+${
+beginner
+?
+`<p class="dari">
+این کلمه را در جمله بالا ببین و به کاربرد آن توجه کن.
+</p>`
+:""
+}
+
+</div>
+
+</div>
+
+<p style="margin-top:20px;color:var(--muted)">
+Word ${current.item+1} of ${l.items.length}
+</p>
+
+</div>
+
+</div>
+`;
+}
+
+/* =========================
+   GRAMMAR / WRITING
+========================= */
+
+function renderGrammarWriting(l){
+
+let beginner=selectedLevel==="Beginner";
+
+document.getElementById("lessonContent").innerHTML=`
+
+<div class="lesson-wrap">
+
+<div class="lesson-hero">
+
+<p class="eyebrow">
+${current.type.toUpperCase()} · ${selectedLevel}
+</p>
+
+<h1>${l.title}</h1>
+
+<div class="info">
+
+<h3>Lesson</h3>
+
+<p>${l.lesson}</p>
+
+</div>
+
+${
+beginner
+?
+`
+<div class="info" style="margin-top:15px">
+
+<h3>توضیح دری</h3>
+
+<p class="dari">${l.dari}</p>
+
+</div>
+`
+:""
+}
+
+<h3>Examples</h3>
+
+${l.examples.map(x=>`
+<p class="example">“${x}”</p>
+`).join("")}
+
+</div>
+
+</div>
+`;
+}
+
+/* =========================
+   READING
+========================= */
+
+function renderReadingLesson(l){
+
+document.getElementById("lessonContent").innerHTML=`
+
+<div class="lesson-wrap">
+
+<div class="lesson-hero">
+
+<p class="eyebrow">
+READING · ${selectedLevel}
+</p>
+
+<h1>${l.title}</h1>
+
+<p class="example">${l.text}</p>
+
+${
+selectedLevel==="Beginner"
+?
+`
+<div class="info">
+
+<p class="dari">
+اول متن را با دقت بخوان، سپس سؤال را جواب بده.
+</p>
+
+</div>
+`
+:""
+}
+
+</div>
+
+</div>
+`;
+}
+
+/* =========================
+   LISTENING
+========================= */
+
+function renderListeningLesson(l){
+
+document.getElementById("lessonContent").innerHTML=`
+
+<div class="lesson-wrap">
+
+<div class="lesson-hero">
+
+<p class="eyebrow">
+LISTENING · ${selectedLevel}
+</p>
+
+<h1>${l.title}</h1>
+
+<div class="info">
+
+<h3>Listen</h3>
+
+<p>${l.text}</p>
+
+<button class="listen"
+onclick="speak('${esc(l.text)}')">
+🔊 Play Audio
+</button>
+
+</div>
+
+<p>Listen several times. Then continue to practice.</p>
+
+</div>
+
+</div>
+`;
+}
+
+/* =========================
+   PRACTICE
+========================= */
+
+function beginPractice(){
+
+if(current.type==="Vocabulary"){
+
+let l=curriculum[current.type][selectedLevel][current.lesson];
+
+if(current.item<l.items.length-1){
+
+current.item++;
+
+renderLesson();
+
+return;
+}
+}
+
+current.phase="practice";
+current.item=0;
+
+renderPractice();
+
+show("practice");
+}
+
+function renderPractice(){
+
+let l=curriculum[current.type][selectedLevel][current.lesson];
+
+let html="";
+
+if(current.type==="Vocabulary"){
+
+let x=l.items[current.item];
+
+let beginner=selectedLevel==="Beginner";
+
+let questionMode=current.item%2===0;
+
+let question;
+let correct;
+let pool;
+
+if(beginner){
+
+if(questionMode){
+
+/*
+English word -> ALL Dari answers
+*/
+
+question=`What does “${x[0]}” mean?`;
+
+correct=x[2];
+
+pool=l.items
+.filter(y=>y!==x)
+.map(y=>y[2]);
+
+}else{
+
+/*
+Dari meaning -> ALL English answers
+*/
+
+question=`"${x[2]}" — کدام کلمه درست است؟`;
+
+correct=x[0];
+
+pool=l.items
+.filter(y=>y!==x)
+.map(y=>y[0]);
+
+}
+
+}else{
+
+/*
+Intermediate and Advanced:
+English -> English
+*/
+
+question=`Which meaning best matches “${x[0]}”?`;
+
+correct=x[3];
+
+pool=l.items
+.filter(y=>y!==x)
+.map(y=>y[3]);
+
+}
+
+let options=makeFourOptions(correct,pool);
+
+html=`
+
+<div class="practice-card">
+
+<p class="eyebrow">GUIDED PRACTICE</p>
+
+<h2>${question}</h2>
+
+${
+questionMode && beginner
+?
+`<button class="listen" onclick="speak('${esc(x[0])}')">🔊 Listen</button>`
+:""
+}
+
+<div class="practice-options">
+
+${options.map((o,i)=>`
+
+<button class="option"
+onclick="practiceAnswer(this,${JSON.stringify(o===correct)})">
+
+${String.fromCharCode(65+i)}. ${o}
+
+</button>
+
+`).join("")}
+
+</div>
+
+</div>
+`;
+
+}else{
+
+html=`
+
+<div class="practice-card">
+
+<p class="eyebrow">GUIDED PRACTICE</p>
+
+<h2>${l.title}</h2>
+
+<p>
+${
+current.type==="Reading"||
+current.type==="Listening"
+?
+l.question
+:
+l.examples[0]
+}
+</p>
+
+<p class="dari">
+${
+selectedLevel==="Beginner"
+?
+"حالا مفهوم را با یک تمرین کوتاه بررسی کن."
+:
+"Now apply what you have learned."
+}
+</p>
+
+</div>
+`;
+}
+
+document.getElementById("practiceLabel").textContent=
+`${current.type} Practice`;
+
+document.getElementById("practiceCount").textContent=
+current.type==="Vocabulary"
+?
+`${current.item+1}/${l.items.length}`
+:
+"Practice";
+
+document.getElementById("practiceContent").innerHTML=html;
+
+document.getElementById("practiceNext").style.display=
+current.type==="Vocabulary"?"none":"block";
+}
+
+function makeFourOptions(correct,pool){
+
+let unique=[...new Set(pool)].filter(x=>x!==correct);
+
+let distractors=shuffle(unique).slice(0,3);
+
+while(distractors.length<3){
+
+let fallback="—";
+
+if(!distractors.includes(fallback) && fallback!==correct){
+distractors.push(fallback);
+}else{
+distractors.push("Other answer");
+}
+}
+
+return shuffle([correct,...distractors]);
+}
+
+function practiceAnswer(button,isCorrect){
+
+document.querySelectorAll(".option").forEach(x=>{
+x.disabled=true;
+});
+
+button.classList.add(isCorrect?"correct":"wrong");
+
+let l=curriculum[current.type][selectedLevel][current.lesson];
+
+setTimeout(()=>{
+
+if(current.item<l.items.length-1){
+
+current.item++;
+
+renderPractice();
+
+}else{
+
+startQuiz();
+
+}
+
+},650);
+}
+
+function practiceNext(){
+startQuiz();
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+function startQuiz(){
+
+current.questions=makeQuestions();
+
+current.item=0;
+current.score=0;
+current.xp=0;
+
+show("quiz");
+
+renderQuestion();
+}
+
+function makeQuestions(){
+
+let l=curriculum[current.type][selectedLevel][current.lesson];
+
+if(current.type==="Vocabulary"){
+
+return l.items.map((x,index)=>{
+
+let beginner=selectedLevel==="Beginner";
+
+let reverse=index%2===1;
+
+let question;
+let correct;
+let pool;
+
+if(beginner){
+
+if(reverse){
+
+/*
+Dari question -> English answers
+*/
+
+question=`"${x[2]}" — کدام کلمه انگلیسی درست است؟`;
+
+correct=x[0];
+
+pool=l.items
+.filter(y=>y!==x)
+.map(y=>y[0]);
+
+}else{
+
+/*
+English question -> Dari answers
+*/
+
+question=`What does “${x[0]}” mean?`;
+
+correct=x[2];
+
+pool=l.items
+.filter(y=>y!==x)
+.map(y=>y[2]);
+
+}
+
+}else{
+
+/*
+Intermediate / Advanced:
+English question -> English answers
+*/
+
+question=`Which meaning best matches “${x[0]}”?`;
+
+correct=x[3];
+
+pool=l.items
+.filter(y=>y!==x)
+.map(y=>y[3]);
+
+}
+
+return{
+q:question,
+a:correct,
+o:makeFourOptions(correct,pool),
+ex:beginner
+?
+`${x[0]} = ${x[2]}`
+:
+`${x[0]} — ${x[3]}`
+};
+
+});
+
+}
+
+if(current.type==="Reading"||current.type==="Listening"){
+
+return[{
+q:l.question,
+a:l.options[l.answer],
+o:l.options,
+ex:l.text
+}];
+
+}
+
+let qs=[];
+
+let base=l.examples||[];
+
+base.forEach(e=>{
+
+let correct=e;
+
+let pool=base.filter(x=>x!==e);
+
+let options=makeFourOptions(correct,pool);
+
+qs.push({
+q:`Which sentence correctly demonstrates “${l.title}”?`,
+a:correct,
+o:options,
+ex:l.lesson
+});
+
+});
+
+return qs.slice(0,3);
+}
+
+/* =========================
+   RENDER QUESTION
+========================= */
+
+function renderQuestion(){
+
+let qs=current.questions;
+
+let x=qs[current.item];
+
+let pct=(current.item/qs.length)*100;
+
+document.getElementById("quizProgress").textContent=
+`${current.item+1} / ${qs.length}`;
+
+document.getElementById("quizXP").textContent=
+"⭐ "+current.xp;
+
+document.getElementById("bar").style.width=pct+"%";
+
+document.getElementById("question").innerHTML=`
+
+<div class="q-type">
+${current.type} · ${selectedLevel}
+</div>
+
+<div class="q-text">
+${x.q}
+</div>
+`;
+
+document.getElementById("answers").innerHTML=
+
+x.o.map((o,i)=>`
+
+<button class="answer"
+onclick="answer(${i})">
+
+${String.fromCharCode(65+i)}. ${o}
+
+</button>
+
+`).join("");
+
+document.getElementById("feedback").innerHTML="";
+}
+
+/* =========================
+   ANSWER
+========================= */
+
+function answer(i){
+
+let x=current.questions[current.item];
+
+let buttons=[
+...document.querySelectorAll(".answer")
+];
+
+buttons.forEach(b=>{
+b.disabled=true;
+});
+
+let correct=x.o[i]===x.a;
+
+buttons[i].classList.add(
+correct?"correct":"wrong"
+);
+
+if(correct){
+
+current.score++;
+current.xp+=10;
+
+addXP(10);
+
+}else{
+
+state.mistakes.push({
+type:current.type,
+level:selectedLevel,
+lesson:current.lesson,
+q:x.q,
+a:x.a
+});
+
+state.mistakes=
+state.mistakes.slice(-30);
+
+}
+
+save();
+
+document.getElementById("feedback").innerHTML=`
+
+<div class="feedback ${correct?"good":"bad"}">
+
+${correct?"✅ Correct!":"❌ Not quite."}
+
+<br>
+
+${
+selectedLevel==="Beginner"
+?
+`Correct answer: <b>${x.a}</b><br>${x.ex}`
+:
+x.ex
+}
+
+</div>
+`;
+
+setTimeout(()=>{
+
+current.item++;
+
+if(current.item<current.questions.length){
+
+renderQuestion();
+
+}else{
+
+finishQuiz();
+
+}
+
+},1100);
+}
+
+/* =========================
+   FINISH
+========================= */
+
+function finishQuiz(){
+
+let total=current.questions.length;
+
+let score=Math.round(
+(current.score/total)*100
+);
+
+let key=
+`${current.type}-${selectedLevel}-${current.lesson}`;
+
+if(score>=70){
+
+state.completed[key]=true;
+
+updateStreak();
+}
+
+addXP(
+score>=90
+?
+30
+:
+score>=70
+?
+20
+:
+5
+);
+
+save();
+
+document.getElementById("resultTitle").textContent=
+score>=70
+?
+"🎉 Lesson Mastered!"
+:
+"📚 Keep Practicing!";
+
+document.getElementById("resultText").textContent=
+`You scored ${score}%. ${
+score>=70
+?
+"The next lesson is ready when you are."
+:
+"Review the lesson and try again."
+}`;
+
+document.getElementById("resultScore").textContent=
+score+"%";
+
+document.getElementById("resultEarned").textContent=
+current.xp;
+
+show("result");
+}
+
+function finishResult(){
+
+let key=
+`${current.type}-${selectedLevel}-${current.lesson}`;
+
+if(
+state.completed[key] &&
+current.lesson+1<
+curriculum[current.type][selectedLevel].length
+){
+
+current.lesson++;
+current.item=0;
+
+renderLesson();
+show("lesson");
+
+}else{
+
+openCurriculum(current.type);
+
+}
+
+updateHome();
+}
+
+/* =========================
+   STREAK
+========================= */
+
+function updateStreak(){
+
+let d=today();
+
+if(state.lastDay!==d){
+
+state.streak++;
+state.lastDay=d;
+}
+}
+
+/* =========================
+   CONTINUE
+========================= */
+
+function startContinue(){
+
+for(let type of Object.keys(curriculum)){
+
+for(let level of [
+"Beginner",
+"Intermediate",
+"Advanced"
+]){
+
+for(let i=0;i<curriculum[type][level].length;i++){
+
+if(
+!state.completed[
+`${type}-${level}-${i}`
+]
+){
+
+current.type=type;
+selectedLevel=level;
+current.lesson=i;
+current.item=0;
+
+renderLesson();
+show("lesson");
+
+return;
+}
+
+}
+
+}
+
+}
+
+openCurriculum("Vocabulary");
+}
+
+function backToCurriculum(){
+openCurriculum(current.type);
+}
+
+function quitQuiz(){
+
+if(
+confirm(
+"Leave this quiz? Your current quiz progress will not be saved."
+)
+){
+
+backToCurriculum();
+
+}
+
+}
+
+/* =========================
+   MISTAKES
+========================= */
+
+function startMistakes(){
+
+if(!state.mistakes.length)return;
+
+let mistakes=state.mistakes.slice(0,10);
+
+current.questions=mistakes.map(x=>({
+
+q:x.q,
+
+a:x.a,
+
+o:makeFourOptions(
+x.a,
+mistakes
+.filter(y=>y.a!==x.a)
+.map(y=>y.a)
+),
+
+ex:"Review this item carefully."
+
+}));
+
+current.item=0;
+current.score=0;
+current.xp=0;
+
+show("quiz");
+
+renderQuestion();
+}
+
+/* =========================
+   THEME
+========================= */
+
+function toggleTheme(){
+
+state.theme=
+state.theme==="dark"
+?
+"light"
+:
+"dark";
+
+document.body.classList.toggle(
+"dark",
+state.theme==="dark"
+);
+
+save();
+}
+
+/* =========================
+   SPEECH
+========================= */
+
+function speak(text){
+
+if(!("speechSynthesis" in window))
+return;
+
+speechSynthesis.cancel();
+
+let u=
+new SpeechSynthesisUtterance(text);
+
+u.lang="en-US";
+u.rate=.82;
+
+speechSynthesis.speak(u);
+}
+
+/* =========================
+   HELPERS
+========================= */
+
+function shuffle(array){
+
+return[...array].sort(
+()=>Math.random()-.5
+);
+
+}
+
+function esc(text){
+
+return String(text)
+.replace(/'/g,"\\'")
+.replace(/\n/g," ");
+
+}
+
+/* =========================
+   START
+========================= */
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+document.body.classList.toggle(
+"dark",
+state.theme==="dark"
+);
+
+updateHome();
+
+}
+);
