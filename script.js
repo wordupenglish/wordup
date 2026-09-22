@@ -1,4 +1,8 @@
-﻿const KEY="wordUpV6State";
+﻿/* =========================
+   WORDUP V6.1 FIX
+   ========================= */
+
+const KEY="wordUpV6State";
 const OLD="wordUpV5State";
 
 const curriculum={
@@ -59,6 +63,7 @@ Advanced:[
 ]}
 ]
 },
+
 Grammar:{
 Beginner:[
 {title:"Personal Pronouns",lesson:"Personal pronouns replace names or nouns: I, you, he, she, it, we, they.",examples:["I am a teacher.","She is my friend.","They are students."],dari:"ضمیرهای شخصی جای نام یا اسم را می‌گیرند. مانند: I, you, he, she, it, we, they."},
@@ -76,6 +81,7 @@ Advanced:[
 {title:"Participle Clauses",lesson:"Participle clauses can make advanced writing more concise.",examples:["Having finished the work, she left.","Designed carefully, the system is reliable."],dari:"عبارت‌های participle می‌توانند جمله‌های پیشرفته را کوتاه‌تر و منسجم‌تر کنند."}
 ]
 },
+
 Writing:{
 Beginner:[
 {title:"Building a Sentence",lesson:"A basic English sentence usually needs a subject and a verb.",examples:["I study.","She works.","They play football."],dari:"یک جمله ساده انگلیسی معمولاً حداقل به فاعل و فعل نیاز دارد."},
@@ -90,6 +96,7 @@ Advanced:[
 {title:"Hedging & Academic Tone",lesson:"Academic writers often qualify claims rather than presenting every statement as absolute fact.",examples:["The findings appear to suggest that...","This evidence may indicate..."],dari:"لحن علمی معمولاً ادعاها را با احتیاط و دقت بیان می‌کند."}
 ]
 },
+
 Reading:{
 Beginner:[
 {title:"A New Student",text:"Ali is a new student. He studies English every morning. He likes his class because his teacher is friendly.",question:"Why does Ali like his class?",options:["His teacher is friendly.","He has no homework.","He studies at night.","His class is empty."],answer:0}
@@ -101,6 +108,7 @@ Advanced:[
 {title:"The Value of Context",text:"Vocabulary knowledge extends beyond knowing a dictionary definition. Advanced learners must recognize connotation, register, collocation, and the pragmatic effect of a word within a particular context.",question:"According to the passage, advanced vocabulary knowledge includes:",options:["Only dictionary definitions.","Only pronunciation.","Contextual and pragmatic understanding.","Memorizing longer word lists."],answer:2}
 ]
 },
+
 Listening:{
 Beginner:[
 {title:"Daily Routine",text:"I wake up at seven o'clock. I have breakfast and go to class.",question:"What time does the speaker wake up?",options:["Six o'clock","Seven o'clock","Eight o'clock","Nine o'clock"],answer:1}
@@ -128,6 +136,7 @@ questions:[]
 
 let selectedLevel="Beginner";
 
+
 function defaults(){
 return{
 xp:0,
@@ -139,182 +148,268 @@ theme:"light"
 };
 }
 
+
 function loadState(){
+
 let d=defaults();
 
 try{
-let old=JSON.parse(localStorage.getItem(OLD)||"null");
-let saved=JSON.parse(localStorage.getItem(KEY)||"null");
 
-if(old) d=Object.assign(d,old);
-if(saved) d=Object.assign(d,saved);
+let old=JSON.parse(
+localStorage.getItem(OLD)||"null"
+);
+
+let saved=JSON.parse(
+localStorage.getItem(KEY)||"null"
+);
+
+if(old)d=Object.assign(d,old);
+
+if(saved)d=Object.assign(d,saved);
 
 return d;
+
 }catch{
+
 return d;
+
 }
 }
+
 
 function save(){
 localStorage.setItem(KEY,JSON.stringify(state));
 }
 
+
 function today(){
 return new Date().toISOString().slice(0,10);
 }
 
+
 function addXP(n){
+
 state.xp+=n;
 
-document.querySelectorAll("#xp,#homeXP").forEach(x=>{
-if(x.id==="homeXP") x.textContent=state.xp;
-else x.textContent="⭐ "+state.xp+" XP";
-});
+let xp=document.getElementById("xp");
+let home=document.getElementById("homeXP");
+
+if(xp)xp.textContent="⭐ "+state.xp+" XP";
+if(home)home.textContent=state.xp;
 
 save();
 }
 
+
 function show(id){
-document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));
-document.getElementById(id).classList.add("active");
+
+document.querySelectorAll(".screen")
+.forEach(x=>x.classList.remove("active"));
+
+let target=document.getElementById(id);
+
+if(target)target.classList.add("active");
+
 window.scrollTo(0,0);
 }
 
+
 function goHome(){
+
 updateHome();
 show("home");
+
 }
+
 
 function updateHome(){
 
-document.getElementById("homeXP").textContent=state.xp;
-document.getElementById("xp").textContent="⭐ "+state.xp+" XP";
-document.getElementById("streak").textContent=state.streak;
+let homeXP=document.getElementById("homeXP");
+let xp=document.getElementById("xp");
+let streak=document.getElementById("streak");
+let mastery=document.getElementById("mastery");
+let mistakes=document.getElementById("mistakes");
+let mistakeBtn=document.getElementById("mistakeBtn");
+
+if(homeXP)homeXP.textContent=state.xp;
+if(xp)xp.textContent="⭐ "+state.xp+" XP";
+if(streak)streak.textContent=state.streak;
 
 let total=0;
 let done=0;
 
 Object.keys(curriculum).forEach(type=>{
+
 Object.keys(curriculum[type]).forEach(level=>{
 
 total+=curriculum[type][level].length;
 
 curriculum[type][level].forEach((_,i)=>{
-if(state.completed[`${type}-${level}-${i}`]) done++;
+
+if(
+state.completed[
+`${type}-${level}-${i}`
+]
+)done++;
+
 });
 
 });
+
 });
 
-document.getElementById("mastery").textContent=
+if(mastery)
+mastery.textContent=
 (total?Math.round(done/total*100):0)+"%";
 
-document.getElementById("mistakes").textContent=state.mistakes.length;
+if(mistakes)
+mistakes.textContent=state.mistakes.length;
 
-document.getElementById("mistakeBtn").style.display=
+if(mistakeBtn)
+mistakeBtn.style.display=
 state.mistakes.length?"block":"none";
 }
 
+
 function openCurriculum(type){
+
 current.type=type;
 selectedLevel="Beginner";
 
-document.getElementById("curriculumType").textContent=type.toUpperCase();
+let label=document.getElementById("curriculumType");
+
+if(label)
+label.textContent=type.toUpperCase();
 
 show("curriculum");
+
 renderLessons();
 }
 
+
 function selectLevel(level){
+
 selectedLevel=level;
+
 renderLessons();
 }
+
 
 function renderLessons(){
 
-["Beginner","Intermediate","Advanced"].forEach(x=>{
-document.getElementById(x).classList.toggle("active",x===selectedLevel);
+["Beginner","Intermediate","Advanced"]
+.forEach(x=>{
+
+let button=document.getElementById(x);
+
+if(button)
+button.classList.toggle(
+"active",
+x===selectedLevel
+);
+
 });
 
-let list=curriculum[current.type][selectedLevel];
+let list=
+curriculum[current.type][selectedLevel];
 
-document.getElementById("lessons").innerHTML=list.map((l,i)=>{
+let container=
+document.getElementById("lessons");
 
-let key=`${current.type}-${selectedLevel}-${i}`;
+if(!container)return;
+
+container.innerHTML=
+list.map((l,i)=>{
+
+let key=
+`${current.type}-${selectedLevel}-${i}`;
 
 let done=state.completed[key];
 
 let unlock=
 i===0 ||
-state.completed[`${current.type}-${selectedLevel}-${i-1}`];
+state.completed[
+`${current.type}-${selectedLevel}-${i-1}`
+];
 
-return `
+return`
+
 <div class="lesson-card ${unlock?"":"locked"}">
 
-<div class="number">${done?"✓":i+1}</div>
+<div class="number">
+${done?"✓":i+1}
+</div>
 
 <div>
 <b>${l.title}</b>
-<small>${done?"Completed":"Lesson "+(i+1)}</small>
+<small>
+${done?"Completed":"Lesson "+(i+1)}
+</small>
 </div>
 
-<button ${unlock?"":"disabled"} onclick="openLesson(${i})">
+<button
+${unlock?"":"disabled"}
+onclick="openLesson(${i})">
+
 ${done?"Review":"Learn"}
+
 </button>
 
 </div>
+
 `;
 
 }).join("");
 }
 
+
 function openLesson(i){
 
-let list=curriculum[current.type][selectedLevel];
+let list=
+curriculum[current.type][selectedLevel];
 
-if(!list[i]) return;
+if(!list[i])return;
 
 current.lesson=i;
 current.phase="lesson";
 current.item=0;
 
 renderLesson();
+
 show("lesson");
 }
 
+
 function levelHelp(){
 
-if(selectedLevel==="Beginner"){
+if(selectedLevel==="Beginner")
 return "دری: اول یاد بگیر، بعد تمرین و تست کن.";
-}
 
-if(selectedLevel==="Intermediate"){
+if(selectedLevel==="Intermediate")
 return "Learn the idea first, then practice it.";
-}
 
 return "Study the concept carefully, then apply it in context.";
 }
 
+
 function renderLesson(){
 
-let l=curriculum[current.type][selectedLevel][current.lesson];
+let l=
+curriculum[current.type][selectedLevel][current.lesson];
 
-if(current.type==="Vocabulary"){
+if(current.type==="Vocabulary")
 renderVocabularyLesson(l);
-}
 
-else if(current.type==="Reading"){
+else if(current.type==="Reading")
 renderReadingLesson(l);
-}
 
-else if(current.type==="Listening"){
+else if(current.type==="Listening")
 renderListeningLesson(l);
-}
 
-else{
+else
 renderGrammarWriting(l);
 }
-}
+
 
 /* =========================
    VOCABULARY LESSON
@@ -324,7 +419,8 @@ function renderVocabularyLesson(l){
 
 let x=l.items[current.item];
 
-let beginner=selectedLevel==="Beginner";
+let beginner=
+selectedLevel==="Beginner";
 
 document.getElementById("lessonContent").innerHTML=`
 
@@ -340,11 +436,17 @@ VOCABULARY · ${selectedLevel}
 
 <p>${levelHelp()}</p>
 
-<div class="image">${x[5]}</div>
+<div class="image">
+${x[5]}
+</div>
 
-<p class="word">${x[0]}</p>
+<p class="word">
+${x[0]}
+</p>
 
-<p class="phonetic">${x[1]}</p>
+<p class="phonetic">
+${x[1]}
+</p>
 
 <button class="listen"
 onclick="speak('${esc(x[0])}')">
@@ -358,16 +460,24 @@ beginner
 ?
 `
 <div class="info">
+
 <h3>معنی / Meaning</h3>
-<p class="dari">${x[2]}</p>
+
+<p class="dari">
+${x[2]}
+</p>
+
 </div>
 `
 :""
 }
 
 <div class="info">
+
 <h3>English Meaning</h3>
+
 <p>${x[3]}</p>
+
 </div>
 
 <div class="info">
@@ -377,15 +487,6 @@ beginner
 <p class="example">
 “${x[4]}”
 </p>
-
-${
-beginner
-?
-`<p class="dari">
-این کلمه را در جمله بالا ببین و به کاربرد آن توجه کن.
-</p>`
-:""
-}
 
 </div>
 
@@ -401,13 +502,15 @@ Word ${current.item+1} of ${l.items.length}
 `;
 }
 
+
 /* =========================
    GRAMMAR / WRITING
 ========================= */
 
 function renderGrammarWriting(l){
 
-let beginner=selectedLevel==="Beginner";
+let beginner=
+selectedLevel==="Beginner";
 
 document.getElementById("lessonContent").innerHTML=`
 
@@ -437,7 +540,9 @@ beginner
 
 <h3>توضیح دری</h3>
 
-<p class="dari">${l.dari}</p>
+<p class="dari">
+${l.dari}
+</p>
 
 </div>
 `
@@ -447,7 +552,11 @@ beginner
 <h3>Examples</h3>
 
 ${l.examples.map(x=>`
-<p class="example">“${x}”</p>
+
+<p class="example">
+“${x}”
+</p>
+
 `).join("")}
 
 </div>
@@ -455,6 +564,7 @@ ${l.examples.map(x=>`
 </div>
 `;
 }
+
 
 /* =========================
    READING
@@ -474,7 +584,9 @@ READING · ${selectedLevel}
 
 <h1>${l.title}</h1>
 
-<p class="example">${l.text}</p>
+<p class="example">
+${l.text}
+</p>
 
 ${
 selectedLevel==="Beginner"
@@ -496,6 +608,7 @@ selectedLevel==="Beginner"
 </div>
 `;
 }
+
 
 /* =========================
    LISTENING
@@ -523,18 +636,23 @@ LISTENING · ${selectedLevel}
 
 <button class="listen"
 onclick="speak('${esc(l.text)}')">
+
 🔊 Play Audio
+
 </button>
 
 </div>
 
-<p>Listen several times. Then continue to practice.</p>
+<p>
+Listen several times. Then continue to practice.
+</p>
 
 </div>
 
 </div>
 `;
 }
+
 
 /* =========================
    PRACTICE
@@ -544,16 +662,22 @@ function beginPractice(){
 
 if(current.type==="Vocabulary"){
 
-let l=curriculum[current.type][selectedLevel][current.lesson];
+let l=
+curriculum[current.type][selectedLevel][current.lesson];
 
-if(current.item<l.items.length-1){
+if(
+current.item<
+l.items.length-1
+){
 
 current.item++;
 
 renderLesson();
 
 return;
+
 }
+
 }
 
 current.phase="practice";
@@ -564,9 +688,11 @@ renderPractice();
 show("practice");
 }
 
+
 function renderPractice(){
 
-let l=curriculum[current.type][selectedLevel][current.lesson];
+let l=
+curriculum[current.type][selectedLevel][current.lesson];
 
 let html="";
 
@@ -574,9 +700,11 @@ if(current.type==="Vocabulary"){
 
 let x=l.items[current.item];
 
-let beginner=selectedLevel==="Beginner";
+let beginner=
+selectedLevel==="Beginner";
 
-let questionMode=current.item%2===0;
+let englishQuestion=
+current.item%2===0;
 
 let question;
 let correct;
@@ -584,31 +712,41 @@ let pool;
 
 if(beginner){
 
-if(questionMode){
+if(englishQuestion){
 
 /*
-English word -> ALL Dari answers
+==========================================
+ENGLISH QUESTION
+ALL FOUR ANSWERS MUST BE DARI
+==========================================
 */
 
-question=`What does “${x[0]}” mean?`;
+question=
+`What does “${x[0]}” mean?`;
 
 correct=x[2];
 
-pool=l.items
+pool=
+l.items
 .filter(y=>y!==x)
 .map(y=>y[2]);
 
 }else{
 
 /*
-Dari meaning -> ALL English answers
+==========================================
+DARI QUESTION
+ALL FOUR ANSWERS MUST BE ENGLISH
+==========================================
 */
 
-question=`"${x[2]}" — کدام کلمه درست است؟`;
+question=
+`"${x[2]}" — کدام کلمه انگلیسی درست است؟`;
 
 correct=x[0];
 
-pool=l.items
+pool=
+l.items
 .filter(y=>y!==x)
 .map(y=>y[0]);
 
@@ -616,35 +754,43 @@ pool=l.items
 
 }else{
 
-/*
-Intermediate and Advanced:
-English -> English
-*/
-
-question=`Which meaning best matches “${x[0]}”?`;
+question=
+`Which meaning best matches “${x[0]}”?`;
 
 correct=x[3];
 
-pool=l.items
+pool=
+l.items
 .filter(y=>y!==x)
 .map(y=>y[3]);
 
 }
 
-let options=makeFourOptions(correct,pool);
+let options=
+makeFourOptions(correct,pool);
 
 html=`
 
 <div class="practice-card">
 
-<p class="eyebrow">GUIDED PRACTICE</p>
+<p class="eyebrow">
+GUIDED PRACTICE
+</p>
 
 <h2>${question}</h2>
 
 ${
-questionMode && beginner
+englishQuestion&&beginner
 ?
-`<button class="listen" onclick="speak('${esc(x[0])}')">🔊 Listen</button>`
+`
+<button
+class="listen"
+onclick="speak('${esc(x[0])}')">
+
+🔊 Listen
+
+</button>
+`
 :""
 }
 
@@ -652,8 +798,10 @@ questionMode && beginner
 
 ${options.map((o,i)=>`
 
-<button class="option"
-onclick="practiceAnswer(this,${JSON.stringify(o===correct)})">
+<button
+class="option"
+data-answer="${encodeURIComponent(o)}"
+onclick="practiceAnswer(this)">
 
 ${String.fromCharCode(65+i)}. ${o}
 
@@ -672,7 +820,9 @@ html=`
 
 <div class="practice-card">
 
-<p class="eyebrow">GUIDED PRACTICE</p>
+<p class="eyebrow">
+GUIDED PRACTICE
+</p>
 
 <h2>${l.title}</h2>
 
@@ -699,6 +849,7 @@ selectedLevel==="Beginner"
 
 </div>
 `;
+
 }
 
 document.getElementById("practiceLabel").textContent=
@@ -711,41 +862,143 @@ current.type==="Vocabulary"
 :
 "Practice";
 
-document.getElementById("practiceContent").innerHTML=html;
+document.getElementById("practiceContent").innerHTML=
+html;
 
 document.getElementById("practiceNext").style.display=
-current.type==="Vocabulary"?"none":"block";
+current.type==="Vocabulary"
+?
+"none"
+:
+"block";
 }
+
+
+/* =========================
+   CRITICAL FIX:
+   CORRECT ANSWER IS ALWAYS
+   EXPLICITLY PRESERVED
+========================= */
 
 function makeFourOptions(correct,pool){
 
-let unique=[...new Set(pool)].filter(x=>x!==correct);
+let cleanPool=
+[...new Set(pool)]
+.filter(x=>String(x)!==String(correct));
 
-let distractors=shuffle(unique).slice(0,3);
+let distractors=
+shuffle(cleanPool).slice(0,3);
+
+/*
+If there are not enough real distractors,
+use safe same-language placeholders.
+*/
+
+const fallbacks=[
+"Other meaning",
+"Another meaning",
+"None of these"
+];
+
+let index=0;
 
 while(distractors.length<3){
 
-let fallback="—";
+let candidate=fallbacks[index++];
 
-if(!distractors.includes(fallback) && fallback!==correct){
-distractors.push(fallback);
+if(
+candidate &&
+candidate!==correct &&
+!distractors.includes(candidate)
+){
+
+distractors.push(candidate);
+
+}
+
+}
+
+return shuffle([
+correct,
+...distractors
+]);
+}
+
+
+/* =========================
+   PRACTICE ANSWER FIX
+========================= */
+
+function practiceAnswer(button){
+
+let selected=
+decodeURIComponent(
+button.dataset.answer
+);
+
+let l=
+curriculum[current.type][selectedLevel][current.lesson];
+
+let x=l.items[current.item];
+
+let englishQuestion=
+current.item%2===0;
+
+let correct;
+
+if(selectedLevel==="Beginner"){
+
+correct=
+englishQuestion
+?
+x[2]
+:
+x[0];
+
 }else{
-distractors.push("Other answer");
-}
-}
 
-return shuffle([correct,...distractors]);
+correct=x[3];
+
 }
 
-function practiceAnswer(button,isCorrect){
+/*
+Compare EXACT VALUES.
+No substring matching.
+No textContent.includes().
+*/
 
-document.querySelectorAll(".option").forEach(x=>{
-x.disabled=true;
+let isCorrect=
+String(selected)===String(correct);
+
+document
+.querySelectorAll(".option")
+.forEach(b=>{
+
+b.disabled=true;
+
 });
 
-button.classList.add(isCorrect?"correct":"wrong");
+button.classList.add(
+isCorrect
+?
+"correct"
+:
+"wrong"
+);
 
-let l=curriculum[current.type][selectedLevel][current.lesson];
+if(!isCorrect){
+
+let correctButton=
+[...document.querySelectorAll(".option")]
+.find(b=>
+decodeURIComponent(b.dataset.answer)
+===String(correct)
+);
+
+if(correctButton)
+correctButton.classList.add("correct");
+
+}
 
 setTimeout(()=>{
 
@@ -761,12 +1014,9 @@ startQuiz();
 
 }
 
-},650);
+},850);
 }
 
-function practiceNext(){
-startQuiz();
-}
 
 /* =========================
    QUIZ
@@ -774,7 +1024,8 @@ startQuiz();
 
 function startQuiz(){
 
-current.questions=makeQuestions();
+current.questions=
+makeQuestions();
 
 current.item=0;
 current.score=0;
@@ -785,17 +1036,21 @@ show("quiz");
 renderQuestion();
 }
 
+
 function makeQuestions(){
 
-let l=curriculum[current.type][selectedLevel][current.lesson];
+let l=
+curriculum[current.type][selectedLevel][current.lesson];
 
 if(current.type==="Vocabulary"){
 
 return l.items.map((x,index)=>{
 
-let beginner=selectedLevel==="Beginner";
+let beginner=
+selectedLevel==="Beginner";
 
-let reverse=index%2===1;
+let englishQuestion=
+index%2===0;
 
 let question;
 let correct;
@@ -803,78 +1058,104 @@ let pool;
 
 if(beginner){
 
-if(reverse){
+if(englishQuestion){
 
 /*
-Dari question -> English answers
+ENGLISH QUESTION
+DARI ANSWERS ONLY
 */
 
-question=`"${x[2]}" — کدام کلمه انگلیسی درست است؟`;
+question=
+`What does “${x[0]}” mean?`;
 
-correct=x[0];
+correct=x[2];
 
-pool=l.items
+pool=
+l.items
 .filter(y=>y!==x)
-.map(y=>y[0]);
+.map(y=>y[2]);
 
 }else{
 
 /*
-English question -> Dari answers
+DARI QUESTION
+ENGLISH ANSWERS ONLY
 */
 
-question=`What does “${x[0]}” mean?`;
+question=
+`"${x[2]}" — کدام کلمه انگلیسی درست است؟`;
 
-correct=x[2];
+correct=x[0];
 
-pool=l.items
+pool=
+l.items
 .filter(y=>y!==x)
-.map(y=>y[2]);
+.map(y=>y[0]);
 
 }
 
 }else{
 
 /*
-Intermediate / Advanced:
-English question -> English answers
+INTERMEDIATE / ADVANCED
+ENGLISH → ENGLISH
 */
 
-question=`Which meaning best matches “${x[0]}”?`;
+question=
+`Which meaning best matches “${x[0]}”?`;
 
 correct=x[3];
 
-pool=l.items
+pool=
+l.items
 .filter(y=>y!==x)
 .map(y=>y[3]);
 
 }
 
 return{
+
 q:question,
+
 a:correct,
-o:makeFourOptions(correct,pool),
+
+o:makeFourOptions(
+correct,
+pool
+),
+
 ex:beginner
 ?
 `${x[0]} = ${x[2]}`
 :
 `${x[0]} — ${x[3]}`
+
 };
 
 });
 
 }
 
-if(current.type==="Reading"||current.type==="Listening"){
+
+if(
+current.type==="Reading"||
+current.type==="Listening"
+){
 
 return[{
+
 q:l.question,
+
 a:l.options[l.answer],
+
 o:l.options,
+
 ex:l.text
+
 }];
 
 }
+
 
 let qs=[];
 
@@ -882,17 +1163,23 @@ let base=l.examples||[];
 
 base.forEach(e=>{
 
-let correct=e;
-
-let pool=base.filter(x=>x!==e);
-
-let options=makeFourOptions(correct,pool);
+let options=
+makeFourOptions(
+e,
+base.filter(x=>x!==e)
+);
 
 qs.push({
-q:`Which sentence correctly demonstrates “${l.title}”?`,
-a:correct,
+
+q:
+`Which sentence correctly demonstrates “${l.title}”?`,
+
+a:e,
+
 o:options,
+
 ex:l.lesson
+
 });
 
 });
@@ -900,25 +1187,27 @@ ex:l.lesson
 return qs.slice(0,3);
 }
 
+
 /* =========================
-   RENDER QUESTION
+   QUIZ RENDER
 ========================= */
 
 function renderQuestion(){
 
-let qs=current.questions;
+let x=
+current.questions[current.item];
 
-let x=qs[current.item];
-
-let pct=(current.item/qs.length)*100;
+let pct=
+(current.item/current.questions.length)*100;
 
 document.getElementById("quizProgress").textContent=
-`${current.item+1} / ${qs.length}`;
+`${current.item+1} / ${current.questions.length}`;
 
 document.getElementById("quizXP").textContent=
 "⭐ "+current.xp;
 
-document.getElementById("bar").style.width=pct+"%";
+document.getElementById("bar").style.width=
+pct+"%";
 
 document.getElementById("question").innerHTML=`
 
@@ -935,8 +1224,10 @@ document.getElementById("answers").innerHTML=
 
 x.o.map((o,i)=>`
 
-<button class="answer"
-onclick="answer(${i})">
+<button
+class="answer"
+data-answer="${encodeURIComponent(o)}"
+onclick="answer(this)">
 
 ${String.fromCharCode(65+i)}. ${o}
 
@@ -947,13 +1238,26 @@ ${String.fromCharCode(65+i)}. ${o}
 document.getElementById("feedback").innerHTML="";
 }
 
+
 /* =========================
-   ANSWER
+   QUIZ ANSWER FIX
 ========================= */
 
-function answer(i){
+function answer(button){
 
-let x=current.questions[current.item];
+let x=
+current.questions[current.item];
+
+let selected=
+decodeURIComponent(
+button.dataset.answer
+);
+
+let correct=
+String(x.a);
+
+let isCorrect=
+selected===correct;
 
 let buttons=[
 ...document.querySelectorAll(".answer")
@@ -963,13 +1267,34 @@ buttons.forEach(b=>{
 b.disabled=true;
 });
 
-let correct=x.o[i]===x.a;
+/*
+IMPORTANT:
+Use exact equality.
+The clicked answer can NEVER
+be incorrectly classified because
+of substring matching.
+*/
 
-buttons[i].classList.add(
-correct?"correct":"wrong"
+if(isCorrect){
+
+button.classList.add("correct");
+
+}else{
+
+button.classList.add("wrong");
+
+let correctButton=
+buttons.find(b=>
+decodeURIComponent(b.dataset.answer)
+===correct
 );
 
-if(correct){
+if(correctButton)
+correctButton.classList.add("correct");
+
+}
+
+if(isCorrect){
 
 current.score++;
 current.xp+=10;
@@ -979,11 +1304,17 @@ addXP(10);
 }else{
 
 state.mistakes.push({
+
 type:current.type,
+
 level:selectedLevel,
+
 lesson:current.lesson,
+
 q:x.q,
+
 a:x.a
+
 });
 
 state.mistakes=
@@ -995,19 +1326,29 @@ save();
 
 document.getElementById("feedback").innerHTML=`
 
-<div class="feedback ${correct?"good":"bad"}">
+<div class="feedback ${isCorrect?"good":"bad"}">
 
-${correct?"✅ Correct!":"❌ Not quite."}
+${
+isCorrect
+?
+"✅ Correct!"
+:
+"❌ Not quite."
+}
 
 <br>
 
 ${
-selectedLevel==="Beginner"
+isCorrect
 ?
-`Correct answer: <b>${x.a}</b><br>${x.ex}`
+""
 :
-x.ex
+`Correct answer: <b>${x.a}</b>`
 }
+
+<br>
+
+${x.ex}
 
 </div>
 `;
@@ -1016,7 +1357,10 @@ setTimeout(()=>{
 
 current.item++;
 
-if(current.item<current.questions.length){
+if(
+current.item<
+current.questions.length
+){
 
 renderQuestion();
 
@@ -1029,15 +1373,18 @@ finishQuiz();
 },1100);
 }
 
+
 /* =========================
    FINISH
 ========================= */
 
 function finishQuiz(){
 
-let total=current.questions.length;
+let total=
+current.questions.length;
 
-let score=Math.round(
+let score=
+Math.round(
 (current.score/total)*100
 );
 
@@ -1090,6 +1437,7 @@ current.xp;
 show("result");
 }
 
+
 function finishResult(){
 
 let key=
@@ -1102,9 +1450,11 @@ curriculum[current.type][selectedLevel].length
 ){
 
 current.lesson++;
+
 current.item=0;
 
 renderLesson();
+
 show("lesson");
 
 }else{
@@ -1116,9 +1466,6 @@ openCurriculum(current.type);
 updateHome();
 }
 
-/* =========================
-   STREAK
-========================= */
 
 function updateStreak(){
 
@@ -1127,25 +1474,27 @@ let d=today();
 if(state.lastDay!==d){
 
 state.streak++;
+
 state.lastDay=d;
 }
 }
 
-/* =========================
-   CONTINUE
-========================= */
 
 function startContinue(){
 
 for(let type of Object.keys(curriculum)){
 
-for(let level of [
+for(let level of[
 "Beginner",
 "Intermediate",
 "Advanced"
 ]){
 
-for(let i=0;i<curriculum[type][level].length;i++){
+for(
+let i=0;
+i<curriculum[type][level].length;
+i++
+){
 
 if(
 !state.completed[
@@ -1154,11 +1503,15 @@ if(
 ){
 
 current.type=type;
+
 selectedLevel=level;
+
 current.lesson=i;
+
 current.item=0;
 
 renderLesson();
+
 show("lesson");
 
 return;
@@ -1173,9 +1526,11 @@ return;
 openCurriculum("Vocabulary");
 }
 
+
 function backToCurriculum(){
 openCurriculum(current.type);
 }
+
 
 function quitQuiz(){
 
@@ -1191,17 +1546,21 @@ backToCurriculum();
 
 }
 
+
 /* =========================
    MISTAKES
 ========================= */
 
 function startMistakes(){
 
-if(!state.mistakes.length)return;
+if(!state.mistakes.length)
+return;
 
-let mistakes=state.mistakes.slice(0,10);
+let mistakes=
+state.mistakes.slice(0,10);
 
-current.questions=mistakes.map(x=>({
+current.questions=
+mistakes.map(x=>({
 
 q:x.q,
 
@@ -1227,6 +1586,7 @@ show("quiz");
 renderQuestion();
 }
 
+
 /* =========================
    THEME
 ========================= */
@@ -1248,13 +1608,16 @@ state.theme==="dark"
 save();
 }
 
+
 /* =========================
    SPEECH
 ========================= */
 
 function speak(text){
 
-if(!("speechSynthesis" in window))
+if(
+!("speechSynthesis" in window)
+)
 return;
 
 speechSynthesis.cancel();
@@ -1268,17 +1631,21 @@ u.rate=.82;
 speechSynthesis.speak(u);
 }
 
+
 /* =========================
    HELPERS
 ========================= */
 
 function shuffle(array){
 
-return[...array].sort(
+return[
+...array
+].sort(
 ()=>Math.random()-.5
 );
 
 }
+
 
 function esc(text){
 
@@ -1287,6 +1654,7 @@ return String(text)
 .replace(/\n/g," ");
 
 }
+
 
 /* =========================
    START
