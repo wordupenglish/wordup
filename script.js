@@ -1842,3 +1842,1528 @@ window.wordUpOpenGitHubRepo =
 window.wordUpExportLocalData =
     wordUpExportLocalData;
 
+
+/* =========================================================
+   WORDUP V10 SMART CEFR ENGINE
+   ========================================================= */
+
+/*
+   WordUp placement is a diagnostic screening system.
+
+   Skills:
+   - Vocabulary
+   - Grammar
+   - Reading
+   - Listening
+   - Writing / Language Use
+
+   Levels:
+   A1
+   A2
+   B1
+   B2
+   C1
+
+   The system does NOT claim to be an externally validated
+   CEFR certification exam. It is designed to place learners
+   into the WordUp curriculum.
+*/
+
+
+const WORDUP_V10_LEVELS = [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1"
+];
+
+
+const WORDUP_V10_SKILLS = [
+    "Vocabulary",
+    "Grammar",
+    "Reading",
+    "Listening",
+    "Writing"
+];
+
+
+/* =========================================================
+   QUESTION BANK
+   ========================================================= */
+
+const WORDUP_V10_PLACEMENT = [
+
+/* =========================
+   A1
+   ========================= */
+
+{
+ level:"A1",
+ skill:"Vocabulary",
+ question:"What does 'apple' mean?",
+ options:["سیب","کتاب","خانه","موتر"],
+ answer:0
+},
+
+{
+ level:"A1",
+ skill:"Vocabulary",
+ question:"Choose the correct word: 'کتاب'",
+ options:["Book","Chair","Door","Water"],
+ answer:0
+},
+
+{
+ level:"A1",
+ skill:"Grammar",
+ question:"I ___ a student.",
+ options:["am","is","are","be"],
+ answer:0
+},
+
+{
+ level:"A1",
+ skill:"Grammar",
+ question:"She ___ from Kabul.",
+ options:["am","are","is","be"],
+ answer:2
+},
+
+{
+ level:"A1",
+ skill:"Reading",
+ passage:"Ali is a student. He lives in Kabul. He likes English.",
+ question:"Where does Ali live?",
+ options:["Herat","Kabul","London","Dubai"],
+ answer:1
+},
+
+{
+ level:"A1",
+ skill:"Listening",
+ audio:"Hello. My name is Sarah. I am twenty years old.",
+ question:"How old is Sarah?",
+ options:["12","15","20","30"],
+ answer:2
+},
+
+{
+ level:"A1",
+ skill:"Writing",
+ question:"Which sentence is written correctly?",
+ options:[
+   "I am a student.",
+   "I student am.",
+   "Am student I.",
+   "I is a student."
+ ],
+ answer:0
+},
+
+/* =========================
+   A2
+   ========================= */
+
+{
+ level:"A2",
+ skill:"Vocabulary",
+ question:"What does 'borrow' mean?",
+ options:[
+   "قرض گرفتن",
+   "فروختن",
+   "شکستن",
+   "ساختن"
+ ],
+ answer:0
+},
+
+{
+ level:"A2",
+ skill:"Vocabulary",
+ question:"Choose the correct English word for 'ملاقات کردن'.",
+ options:["Visit","Forget","Close","Break"],
+ answer:0
+},
+
+{
+ level:"A2",
+ skill:"Grammar",
+ question:"I ___ to the gym yesterday.",
+ options:["go","went","gone","going"],
+ answer:1
+},
+
+{
+ level:"A2",
+ skill:"Grammar",
+ question:"She has ___ finished her homework.",
+ options:["already","yet","ever","still"],
+ answer:0
+},
+
+{
+ level:"A2",
+ skill:"Reading",
+ passage:"Maria usually walks to work because her office is close to her home. On rainy days, however, she takes the bus.",
+ question:"Why does Maria usually walk to work?",
+ options:[
+   "Her office is close to her home.",
+   "She dislikes buses.",
+   "She has no car.",
+   "The bus is expensive."
+ ],
+ answer:0
+},
+
+{
+ level:"A2",
+ skill:"Listening",
+ audio:"Tom usually gets up at seven, but yesterday he woke up at eight because he was tired.",
+ question:"What time did Tom wake up yesterday?",
+ options:["6:00","7:00","8:00","9:00"],
+ answer:2
+},
+
+{
+ level:"A2",
+ skill:"Writing",
+ question:"Which sentence is most natural?",
+ options:[
+   "I went to the market yesterday.",
+   "Yesterday I go market.",
+   "I have went market yesterday.",
+   "I going to market yesterday."
+ ],
+ answer:0
+},
+
+/* =========================
+   B1
+   ========================= */
+
+{
+ level:"B1",
+ skill:"Vocabulary",
+ question:"What does 'reliable' mean?",
+ options:[
+   "قابل اعتماد",
+   "خطرناک",
+   "گران",
+   "ضعیف"
+ ],
+ answer:0
+},
+
+{
+ level:"B1",
+ skill:"Vocabulary",
+ question:"Choose the closest meaning of 'increase'.",
+ options:[
+   "decrease",
+   "grow",
+   "forget",
+   "remove"
+ ],
+ answer:1
+},
+
+{
+ level:"B1",
+ skill:"Grammar",
+ question:"If I had more time, I ___ another language.",
+ options:["learn","will learn","would learn","learned"],
+ answer:2
+},
+
+{
+ level:"B1",
+ skill:"Grammar",
+ question:"She has lived here ___ 2020.",
+ options:["for","since","during","from"],
+ answer:1
+},
+
+{
+ level:"B1",
+ skill:"Reading",
+ passage:"Although the company offered him a higher salary, Daniel decided not to accept the job because the position required him to move to another country.",
+ question:"Why did Daniel reject the job?",
+ options:[
+   "The salary was too low.",
+   "He disliked the company.",
+   "He did not want to move abroad.",
+   "The job required too much experience."
+ ],
+ answer:2
+},
+
+{
+ level:"B1",
+ skill:"Listening",
+ audio:"Although the weather forecast predicted rain, the football match continued because the rain stopped shortly before the game began.",
+ question:"Why did the match continue?",
+ options:[
+   "The forecast changed.",
+   "The rain stopped.",
+   "The players refused to stop.",
+   "The stadium was covered."
+ ],
+ answer:1
+},
+
+{
+ level:"B1",
+ skill:"Writing",
+ question:"Which sentence best connects these ideas?",
+ options:[
+   "I was tired, so I went home early.",
+   "I was tired because but I went home.",
+   "I tired, therefore home.",
+   "Because I was tired although home."
+ ],
+ answer:0
+},
+
+/* =========================
+   B2
+   ========================= */
+
+{
+ level:"B2",
+ skill:"Vocabulary",
+ question:"What does 'substantial' mean in this context: 'The project requires a substantial amount of money.'",
+ options:[
+   "very small",
+   "considerable",
+   "unnecessary",
+   "temporary"
+ ],
+ answer:1
+},
+
+{
+ level:"B2",
+ skill:"Vocabulary",
+ question:"Choose the closest meaning of 'inevitable'.",
+ options:[
+   "avoidable",
+   "uncertain",
+   "unavoidable",
+   "unusual"
+ ],
+ answer:2
+},
+
+{
+ level:"B2",
+ skill:"Grammar",
+ question:"By the time we arrived, the meeting ___.",
+ options:[
+   "has started",
+   "had started",
+   "starts",
+   "was start"
+ ],
+ answer:1
+},
+
+{
+ level:"B2",
+ skill:"Grammar",
+ question:"The report ___ by the research team last month.",
+ options:[
+   "completed",
+   "was completed",
+   "has completing",
+   "completes"
+ ],
+ answer:1
+},
+
+{
+ level:"B2",
+ skill:"Reading",
+ passage:"The rapid development of artificial intelligence has generated considerable enthusiasm, but it has also raised concerns about employment, privacy, and the reliability of automated decision-making.",
+ question:"What is the main point of the passage?",
+ options:[
+   "AI has only positive effects.",
+   "AI development has created both opportunities and concerns.",
+   "AI has stopped developing.",
+   "Privacy is no longer important."
+ ],
+ answer:1
+},
+
+{
+ level:"B2",
+ skill:"Listening",
+ audio:"The manager explained that the company would postpone the project, not because the project lacked value, but because the current budget could not support it.",
+ question:"Why was the project postponed?",
+ options:[
+   "It was considered useless.",
+   "Employees opposed it.",
+   "The budget was insufficient.",
+   "The manager resigned."
+ ],
+ answer:2
+},
+
+{
+ level:"B2",
+ skill:"Writing",
+ question:"Which sentence expresses contrast most accurately?",
+ options:[
+   "Although the task was difficult, she completed it successfully.",
+   "Because the task was difficult, although she completed.",
+   "The task difficult but because successfully.",
+   "She completed although because difficult."
+ ],
+ answer:0
+},
+
+/* =========================
+   C1
+   ========================= */
+
+{
+ level:"C1",
+ skill:"Vocabulary",
+ question:"What does 'ambiguous' mean?",
+ options:[
+   "having more than one possible interpretation",
+   "extremely obvious",
+   "completely incorrect",
+   "very expensive"
+ ],
+ answer:0
+},
+
+{
+ level:"C1",
+ skill:"Vocabulary",
+ question:"Choose the closest meaning of 'mitigate'.",
+ options:[
+   "intensify",
+   "reduce the severity of",
+   "ignore completely",
+   "predict accurately"
+ ],
+ answer:1
+},
+
+{
+ level:"C1",
+ skill:"Grammar",
+ question:"Had the researchers known about the problem, they ___ the experiment.",
+ options:[
+   "would have changed",
+   "will change",
+   "would change",
+   "have changed"
+ ],
+ answer:0
+},
+
+{
+ level:"C1",
+ skill:"Grammar",
+ question:"Rarely ___ such a complex problem so efficiently.",
+ options:[
+   "we have solved",
+   "have we solved",
+   "we solved have",
+   "solved we have"
+ ],
+ answer:1
+},
+
+{
+ level:"C1",
+ skill:"Reading",
+ passage:"While technological innovation is frequently portrayed as an inherently progressive force, its consequences depend substantially on the social institutions through which it is implemented. The same technology may therefore generate radically different outcomes across societies.",
+ question:"What argument does the passage primarily make?",
+ options:[
+   "Technology always improves society.",
+   "Technology has no social consequences.",
+   "The effects of technology depend partly on the social context in which it is used.",
+   "Technological development should be stopped."
+ ],
+ answer:2
+},
+
+{
+ level:"C1",
+ skill:"Listening",
+ audio:"The speaker argues that although economic indicators have improved, these figures alone should not be interpreted as evidence of broad social progress, since they fail to capture disparities in access to education, healthcare, and employment.",
+ question:"What limitation does the speaker identify?",
+ options:[
+   "Economic data are always inaccurate.",
+   "Economic indicators may fail to reflect unequal social outcomes.",
+   "Education has become less important.",
+   "Employment has disappeared."
+ ],
+ answer:1
+},
+
+{
+ level:"C1",
+ skill:"Writing",
+ question:"Which sentence demonstrates the most sophisticated academic style?",
+ options:[
+   "The results are important because they show a problem.",
+   "The findings are significant insofar as they reveal a previously overlooked limitation.",
+   "The results are very important and show a problem.",
+   "The results show something that is important."
+ ],
+ answer:1
+}
+
+];
+
+
+/* =========================================================
+   PLACEMENT STATE
+   ========================================================= */
+
+let wordUpV10PlacementState = {
+    index: 0,
+    answers: [],
+    questions: [],
+    started: false
+};
+
+
+/* =========================================================
+   SHUFFLE
+   ========================================================= */
+
+function wordUpV10Shuffle(array) {
+
+    const copy = [...array];
+
+    for (let i = copy.length - 1; i > 0; i--) {
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [
+            copy[i],
+            copy[j]
+        ] = [
+            copy[j],
+            copy[i]
+        ];
+    }
+
+    return copy;
+}
+
+
+/* =========================================================
+   BUILD TEST
+   ========================================================= */
+
+function wordUpV10BuildTest() {
+
+    /*
+       We deliberately include every skill and every CEFR band.
+       Randomization prevents learners from memorizing one order.
+    */
+
+    const selected = [];
+
+    for (const level of WORDUP_V10_LEVELS) {
+
+        const levelQuestions =
+            WORDUP_V10_PLACEMENT.filter(
+                q => q.level === level
+            );
+
+        selected.push(
+            ...wordUpV10Shuffle(levelQuestions)
+        );
+    }
+
+    return selected;
+}
+
+
+/* =========================================================
+   PLACEMENT SCREEN
+   ========================================================= */
+
+function wordUpV10CreateScreen() {
+
+    let screen =
+        document.getElementById(
+            "wordup-v10-placement-screen"
+        );
+
+    if (screen) return screen;
+
+    screen =
+        document.createElement("div");
+
+    screen.id =
+        "wordup-v10-placement-screen";
+
+    screen.className =
+        "wordup-v10-placement-overlay";
+
+    screen.innerHTML = `
+
+        <div class="wordup-v10-placement-box">
+
+            <div class="wordup-v10-placement-top">
+
+                <span id="wordup-v10-skill">
+                    Vocabulary
+                </span>
+
+                <span id="wordup-v10-progress">
+                    1 / 35
+                </span>
+
+            </div>
+
+            <div
+                id="wordup-v10-level"
+                class="wordup-v10-level-label">
+                A1
+            </div>
+
+            <div
+                id="wordup-v10-passage"
+                class="wordup-v10-passage">
+            </div>
+
+            <div
+                id="wordup-v10-audio"
+                class="wordup-v10-audio">
+            </div>
+
+            <h2 id="wordup-v10-question">
+                Question
+            </h2>
+
+            <div
+                id="wordup-v10-options"
+                class="wordup-v10-options">
+            </div>
+
+            <button
+                id="wordup-v10-next"
+                class="wordup-v10-next"
+                disabled>
+                Next
+            </button>
+
+        </div>
+    `;
+
+    document.body.appendChild(screen);
+
+    return screen;
+}
+
+
+/* =========================================================
+   START PLACEMENT
+   ========================================================= */
+
+function wordUpStartV10Placement() {
+
+    wordUpV10PlacementState = {
+        index: 0,
+        answers: [],
+        questions: wordUpV10BuildTest(),
+        started: true
+    };
+
+    const screen =
+        wordUpV10CreateScreen();
+
+    screen.style.display = "flex";
+
+    wordUpV10RenderQuestion();
+}
+
+
+/*
+   Override older placement entry points.
+*/
+
+window.startPlacementTest =
+    wordUpStartV10Placement;
+
+window.startPlacement =
+    wordUpStartV10Placement;
+
+window.wordUpStartPlacement =
+    wordUpStartV10Placement;
+
+
+/* =========================================================
+   RENDER QUESTION
+   ========================================================= */
+
+function wordUpV10RenderQuestion() {
+
+    const state =
+        wordUpV10PlacementState;
+
+    const q =
+        state.questions[state.index];
+
+    if (!q) {
+
+        wordUpV10Finish();
+
+        return;
+    }
+
+    const skill =
+        document.getElementById(
+            "wordup-v10-skill"
+        );
+
+    const progress =
+        document.getElementById(
+            "wordup-v10-progress"
+        );
+
+    const level =
+        document.getElementById(
+            "wordup-v10-level"
+        );
+
+    const passage =
+        document.getElementById(
+            "wordup-v10-passage"
+        );
+
+    const audio =
+        document.getElementById(
+            "wordup-v10-audio"
+        );
+
+    const question =
+        document.getElementById(
+            "wordup-v10-question"
+        );
+
+    const options =
+        document.getElementById(
+            "wordup-v10-options"
+        );
+
+    const next =
+        document.getElementById(
+            "wordup-v10-next"
+        );
+
+
+    skill.textContent =
+        q.skill;
+
+    progress.textContent =
+        `${state.index + 1} / ${state.questions.length}`;
+
+    level.textContent =
+        q.level;
+
+    question.textContent =
+        q.question;
+
+    passage.textContent =
+        q.passage || "";
+
+    audio.innerHTML = "";
+
+
+    /*
+       Listening:
+       use browser speech synthesis.
+    */
+
+    if (q.skill === "Listening" && q.audio) {
+
+        const listenButton =
+            document.createElement("button");
+
+        listenButton.className =
+            "wordup-v10-listen";
+
+        listenButton.textContent =
+            "🔊 Play Listening";
+
+        listenButton.onclick =
+            () => {
+
+                if (
+                    "speechSynthesis"
+                    in window
+                ) {
+
+                    speechSynthesis.cancel();
+
+                    const utterance =
+                        new SpeechSynthesisUtterance(
+                            q.audio
+                        );
+
+                    utterance.lang =
+                        "en-US";
+
+                    utterance.rate =
+                        q.level === "C1"
+                            ? 1
+                            : q.level === "B2"
+                            ? 0.95
+                            : 0.85;
+
+                    speechSynthesis.speak(
+                        utterance
+                    );
+                }
+            };
+
+        audio.appendChild(
+            listenButton
+        );
+    }
+
+
+    options.innerHTML = "";
+
+    next.disabled = true;
+
+    q.options.forEach(
+        (option, index) => {
+
+            const button =
+                document.createElement("button");
+
+            button.className =
+                "wordup-v10-option";
+
+            button.textContent =
+                option;
+
+            button.onclick =
+                () => {
+
+                    document
+                        .querySelectorAll(
+                            ".wordup-v10-option"
+                        )
+                        .forEach(
+                            b => {
+                                b.disabled = true;
+                            }
+                        );
+
+                    button.classList.add(
+                        index === q.answer
+                            ? "correct"
+                            : "incorrect"
+                    );
+
+                    if (
+                        index !== q.answer
+                    ) {
+
+                        const correct =
+                            document
+                                .querySelectorAll(
+                                    ".wordup-v10-option"
+                                )[q.answer];
+
+                        if (correct) {
+                            correct.classList.add(
+                                "correct"
+                            );
+                        }
+                    }
+
+                    state.answers.push({
+                        level: q.level,
+                        skill: q.skill,
+                        correct:
+                            index === q.answer
+                    });
+
+                    next.disabled = false;
+                };
+
+            options.appendChild(
+                button
+            );
+        }
+    );
+
+
+    next.onclick =
+        () => {
+
+            state.index++;
+
+            wordUpV10RenderQuestion();
+        };
+}
+
+
+/* =========================================================
+   SCORING
+   ========================================================= */
+
+function wordUpV10CalculateResults() {
+
+    const results = {};
+
+    for (
+        const skill
+        of WORDUP_V10_SKILLS
+    ) {
+
+        results[skill] = {};
+
+        for (
+            const level
+            of WORDUP_V10_LEVELS
+        ) {
+
+            const answers =
+                wordUpV10PlacementState.answers
+                    .filter(
+                        a =>
+                            a.skill === skill &&
+                            a.level === level
+                    );
+
+            const correct =
+                answers.filter(
+                    a => a.correct
+                ).length;
+
+            results[skill][level] = {
+                total: answers.length,
+                correct: correct,
+                percentage:
+                    answers.length
+                        ? Math.round(
+                            (
+                                correct /
+                                answers.length
+                            ) * 100
+                        )
+                        : 0
+            };
+        }
+    }
+
+    return results;
+}
+
+
+/* =========================================================
+   DETERMINE LEVEL
+   ========================================================= */
+
+function wordUpV10DetermineSkillLevel(
+    skillResults
+) {
+
+    /*
+       A learner must demonstrate consistent
+       performance rather than simply having
+       one high score.
+
+       Threshold:
+       70% at a level.
+
+       We select the highest level where the
+       learner reaches the threshold.
+    */
+
+    let determined = "A1";
+
+    for (
+        const level
+        of WORDUP_V10_LEVELS
+    ) {
+
+        const result =
+            skillResults[level];
+
+        if (
+            result &&
+            result.percentage >= 70
+        ) {
+            determined = level;
+        }
+    }
+
+    return determined;
+}
+
+
+function wordUpV10LevelIndex(level) {
+
+    return WORDUP_V10_LEVELS.indexOf(
+        level
+    );
+}
+
+
+/* =========================================================
+   OVERALL LEVEL
+   ========================================================= */
+
+function wordUpV10DetermineOverall(
+    skillLevels
+) {
+
+    const indexes =
+        Object.values(
+            skillLevels
+        ).map(
+            wordUpV10LevelIndex
+        );
+
+    const average =
+        indexes.reduce(
+            (a,b) => a + b,
+            0
+        ) / indexes.length;
+
+
+    /*
+       Conservative placement:
+
+       We do not allow one strong skill
+       to hide a significantly weak skill.
+
+       Overall level is capped at one level
+       above the weakest skill.
+    */
+
+    const weakest =
+        Math.min(...indexes);
+
+    let overall =
+        Math.floor(
+            average
+        );
+
+    if (
+        overall >
+        weakest + 1
+    ) {
+        overall =
+            weakest + 1;
+    }
+
+    overall =
+        Math.max(
+            0,
+            Math.min(
+                overall,
+                WORDUP_V10_LEVELS.length - 1
+            )
+        );
+
+    return WORDUP_V10_LEVELS[
+        overall
+    ];
+}
+
+
+/* =========================================================
+   SAVE PLACEMENT RESULT
+   ========================================================= */
+
+function wordUpV10SaveResult(
+    finalResult
+) {
+
+    localStorage.setItem(
+        "wordUpV10PlacementResult",
+        JSON.stringify(
+            finalResult
+        )
+    );
+
+
+    /*
+       Compatibility with the existing
+       WordUp V8/V9 state.
+    */
+
+    try {
+
+        const state =
+            JSON.parse(
+                localStorage.getItem(
+                    "wordUpV8State"
+                ) || "{}"
+            );
+
+        state.placement =
+            finalResult;
+
+        state.placementCompleted =
+            true;
+
+        state.recommendedLevel =
+            finalResult.overallLevel;
+
+        state.unlockedLevels =
+            WORDUP_V10_LEVELS.filter(
+                level =>
+                    wordUpV10LevelIndex(level)
+                    <=
+                    wordUpV10LevelIndex(
+                        finalResult.overallLevel
+                    )
+            );
+
+        localStorage.setItem(
+            "wordUpV8State",
+            JSON.stringify(state)
+        );
+
+    } catch (error) {
+
+        console.warn(
+            "Could not update legacy WordUp state.",
+            error
+        );
+    }
+}
+
+
+/* =========================================================
+   FINISH
+   ========================================================= */
+
+function wordUpV10Finish() {
+
+    const results =
+        wordUpV10CalculateResults();
+
+
+    const skillLevels = {};
+
+    for (
+        const skill
+        of WORDUP_V10_SKILLS
+    ) {
+
+        skillLevels[skill] =
+            wordUpV10DetermineSkillLevel(
+                results[skill]
+            );
+    }
+
+
+    const overallLevel =
+        wordUpV10DetermineOverall(
+            skillLevels
+        );
+
+
+    const finalResult = {
+
+        completedAt:
+            new Date().toISOString(),
+
+        overallLevel:
+            overallLevel,
+
+        skillLevels:
+            skillLevels,
+
+        scores:
+            results,
+
+        questionCount:
+            wordUpV10PlacementState.questions.length
+    };
+
+
+    wordUpV10SaveResult(
+        finalResult
+    );
+
+
+    wordUpV10ShowResult(
+        finalResult
+    );
+}
+
+
+/* =========================================================
+   RESULT SCREEN
+   ========================================================= */
+
+function wordUpV10ShowResult(
+    result
+) {
+
+    const screen =
+        document.getElementById(
+            "wordup-v10-placement-screen"
+        );
+
+    if (!screen) return;
+
+
+    let html = `
+
+        <div class="wordup-v10-result">
+
+            <div class="wordup-v10-result-icon">
+                🎯
+            </div>
+
+            <h1>Your WordUp Level</h1>
+
+            <div class="wordup-v10-main-level">
+                ${result.overallLevel}
+            </div>
+
+            <p>
+                Based on your placement performance,
+                WordUp recommends starting at
+                <strong>${result.overallLevel}</strong>.
+            </p>
+
+            <div class="wordup-v10-skill-results">
+    `;
+
+
+    for (
+        const skill
+        of WORDUP_V10_SKILLS
+    ) {
+
+        html += `
+
+            <div class="wordup-v10-skill-result">
+
+                <strong>
+                    ${skill}
+                </strong>
+
+                <span>
+                    ${result.skillLevels[skill]}
+                </span>
+
+            </div>
+
+        `;
+    }
+
+
+    html += `
+
+            </div>
+
+            <div class="wordup-v10-result-note">
+
+                <strong>
+                    📚 Your previous lessons are unlocked.
+                </strong>
+
+                <p>
+                    You can review all earlier levels,
+                    but WordUp recommends starting at
+                    ${result.overallLevel}.
+                </p>
+
+            </div>
+
+            <button
+                class="wordup-v10-start-button"
+                onclick="wordUpV10EnterLevel()">
+
+                Start ${result.overallLevel}
+
+            </button>
+
+            <button
+                class="wordup-v10-review-button"
+                onclick="wordUpV10ReviewPrevious()">
+
+                Review Previous Levels
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    screen.innerHTML = html;
+}
+
+
+/* =========================================================
+   ENTER RECOMMENDED LEVEL
+   ========================================================= */
+
+function wordUpV10EnterLevel() {
+
+    const saved =
+        JSON.parse(
+            localStorage.getItem(
+                "wordUpV10PlacementResult"
+            ) || "null"
+        );
+
+    if (!saved) return;
+
+
+    /*
+       Store current learner level.
+    */
+
+    localStorage.setItem(
+        "wordUpCurrentLevel",
+        saved.overallLevel
+    );
+
+
+    const screen =
+        document.getElementById(
+            "wordup-v10-placement-screen"
+        );
+
+    if (screen) {
+        screen.style.display =
+            "none";
+    }
+
+
+    /*
+       Return to the existing curriculum.
+    */
+
+    if (
+        typeof showScreen ===
+        "function"
+    ) {
+
+        showScreen(
+            "curriculum"
+        );
+
+    } else {
+
+        location.reload();
+    }
+}
+
+
+function wordUpV10ReviewPrevious() {
+
+    const screen =
+        document.getElementById(
+            "wordup-v10-placement-screen"
+        );
+
+    if (screen) {
+        screen.style.display =
+            "none";
+    }
+
+
+    if (
+        typeof showScreen ===
+        "function"
+    ) {
+
+        showScreen(
+            "curriculum"
+        );
+
+    } else {
+
+        location.reload();
+    }
+}
+
+
+/* =========================================================
+   UNLOCK PREVIOUS LEVELS
+   ========================================================= */
+
+function wordUpV10IsLevelUnlocked(
+    level
+) {
+
+    const result =
+        JSON.parse(
+            localStorage.getItem(
+                "wordUpV10PlacementResult"
+            ) || "null"
+        );
+
+
+    if (!result) {
+
+        return level === "A1";
+    }
+
+
+    const userLevelIndex =
+        wordUpV10LevelIndex(
+            result.overallLevel
+        );
+
+    const requestedIndex =
+        wordUpV10LevelIndex(
+            level
+        );
+
+
+    return requestedIndex <= userLevelIndex;
+}
+
+
+window.wordUpV10IsLevelUnlocked =
+    wordUpV10IsLevelUnlocked;
+
+
+/* =========================================================
+   PLACEMENT RESET
+   ========================================================= */
+
+function wordUpV10ResetPlacement() {
+
+    if (
+        !confirm(
+            "Reset your WordUp placement result?"
+        )
+    ) {
+        return;
+    }
+
+    localStorage.removeItem(
+        "wordUpV10PlacementResult"
+    );
+
+    localStorage.removeItem(
+        "wordUpCurrentLevel"
+    );
+
+    alert(
+        "Placement result reset."
+    );
+
+    location.reload();
+}
+
+
+window.wordUpV10ResetPlacement =
+    wordUpV10ResetPlacement;
+
+
+/* =========================================================
+   AUTO-ADD PLACEMENT BUTTON
+   ========================================================= */
+
+function wordUpV10AddPlacementButton() {
+
+    if (
+        document.getElementById(
+            "wordup-v10-placement-launch"
+        )
+    ) {
+        return;
+    }
+
+
+    const button =
+        document.createElement("button");
+
+    button.id =
+        "wordup-v10-placement-launch";
+
+    button.className =
+        "wordup-v10-placement-launch";
+
+    button.innerHTML =
+        "🎯 Find My English Level";
+
+
+    button.onclick =
+        wordUpStartV10Placement;
+
+
+    const targets =
+        document.querySelectorAll(
+            "main, .home, #home, .screen"
+        );
+
+
+    if (targets.length) {
+
+        targets[0].appendChild(
+            button
+        );
+
+    } else {
+
+        document.body.appendChild(
+            button
+        );
+    }
+}
+
+
+/* =========================================================
+   LOAD PLACEMENT RESULT
+   ========================================================= */
+
+function wordUpV10GetResult() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem(
+                "wordUpV10PlacementResult"
+            ) || "null"
+        );
+
+    } catch {
+
+        return null;
+    }
+}
+
+
+window.wordUpV10GetResult =
+    wordUpV10GetResult;
+
+
+/* =========================================================
+   INIT
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        setTimeout(
+            wordUpV10AddPlacementButton,
+            500
+        );
+
+    }
+);
+
