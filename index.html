@@ -206,8 +206,179 @@
     </button>
 </section>
 
+<!-- WORDUP-V9-FEEDBACK -->
+
+<section id="feedback" class="screen">
+
+    <div class="page-header">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+        <div>
+            <h1>Feedback & Support</h1>
+            <p>Help us make WordUp better.</p>
+        </div>
+    </div>
+
+    <div class="feedback-grid">
+
+        <div class="feedback-card">
+            <div class="feedback-icon">🐛</div>
+            <h2>Report a Problem</h2>
+            <p>
+                Found a bug or something that is not working correctly?
+                Tell us what happened.
+            </p>
+            <button class="primary-btn"
+                    onclick="wordUpReportBug()">
+                Report Bug
+            </button>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-icon">💡</div>
+            <h2>Suggest a Feature</h2>
+            <p>
+                Have an idea that could make WordUp better?
+                We would love to hear it.
+            </p>
+            <button class="primary-btn"
+                    onclick="wordUpSuggestFeature()">
+                Suggest Feature
+            </button>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-icon">💬</div>
+            <h2>General Feedback</h2>
+            <p>
+                Tell us what you like, what you dislike,
+                or what we should improve.
+            </p>
+            <button class="primary-btn"
+                    onclick="wordUpGeneralFeedback()">
+                Send Feedback
+            </button>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-icon">⭐</div>
+            <h2>Contact WordUp</h2>
+            <p>
+                You can also contact the WordUp team directly.
+            </p>
+
+            <button class="secondary-btn"
+                    onclick="wordUpContactEmail()">
+                Email
+            </button>
+
+            <button class="secondary-btn"
+                    onclick="wordUpContactWhatsApp()">
+                WhatsApp
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="admin" class="screen">
+
+    <div class="page-header">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+
+        <div>
+            <h1>🔐 WordUp Admin</h1>
+            <p>Owner control center</p>
+        </div>
+    </div>
+
+
+    <div class="admin-warning">
+        <strong>Owner Area</strong>
+        <span>
+            Website-wide traffic statistics are protected by GitHub.
+            Use the buttons below to open the private GitHub analytics.
+        </span>
+    </div>
+
+
+    <div class="admin-grid">
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminLocalVisits">0</div>
+            <div class="admin-label">Local Visits</div>
+        </div>
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminLessons">0</div>
+            <div class="admin-label">Lessons Completed</div>
+        </div>
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminTests">0</div>
+            <div class="admin-label">Tests Completed</div>
+        </div>
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminMistakes">0</div>
+            <div class="admin-label">Saved Mistakes</div>
+        </div>
+
+    </div>
+
+
+    <div class="admin-actions">
+
+        <button class="admin-action"
+                onclick="wordUpOpenGitHubTraffic()">
+            📊 Website Traffic
+            <small>GitHub Insights → Traffic</small>
+        </button>
+
+        <button class="admin-action"
+                onclick="wordUpOpenGitHubIssues()">
+            🐛 Bug Reports
+            <small>GitHub Issues</small>
+        </button>
+
+        <button class="admin-action"
+                onclick="wordUpOpenGitHubRepo()">
+            🐙 WordUp Repository
+            <small>GitHub</small>
+        </button>
+
+        <button class="admin-action"
+                onclick="wordUpExportLocalData()">
+            💾 Export Local Data
+            <small>Download your current WordUp statistics</small>
+        </button>
+
+    </div>
+
+
+    <div class="admin-note">
+        <h3>📌 Important</h3>
+        <p>
+            GitHub Traffic is the authoritative place for website-wide
+            traffic because GitHub Pages itself does not provide a
+            private analytics dashboard inside the website.
+        </p>
+    </div>
+
+</section>
+
 </main>
 
+<button class="feedback-home-button"
+        onclick="showScreen('feedback')">
+    💬 Feedback & Report a Problem
+</button>
+
+<button class="feedback-home-button admin-entry"
+        onclick="wordUpOpenAdmin()">
+    🔐 Admin
+</button>
 <footer>
     <span>WordUp English</span>
     <span>Built with care by Mr. Suliman</span>
@@ -225,3 +396,4 @@
 <script src="./script.js?v=8.0"></script>
 </body>
 </html>
+

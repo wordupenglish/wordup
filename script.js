@@ -1409,3 +1409,436 @@ document.querySelector(".profile-btn").onclick=()=>{
 showDashboard();
 };
 
+
+/* =========================================================
+   WORDUP V9 ADMIN ENGINE
+   ========================================================= */
+
+const WORDUP_OWNER_EMAIL = "Sulimansurkhrody@yahoo.com";
+
+const WORDUP_GITHUB_REPO =
+    "https://github.com/wordupenglish/wordup";
+
+const WORDUP_GITHUB_ISSUES =
+    "https://github.com/wordupenglish/wordup/issues";
+
+const WORDUP_GITHUB_TRAFFIC =
+    "https://github.com/wordupenglish/wordup/graphs/traffic";
+
+
+/* ---------------------------------------------------------
+   SAFE LOCAL ANALYTICS
+   --------------------------------------------------------- */
+
+function wordUpGetStats() {
+
+    let stats;
+
+    try {
+        stats = JSON.parse(
+            localStorage.getItem("wordUpV9Analytics") || "{}"
+        );
+    } catch {
+        stats = {};
+    }
+
+    stats.visits = Number(stats.visits || 0);
+    stats.lessons = Number(stats.lessons || 0);
+    stats.tests = Number(stats.tests || 0);
+    stats.mistakes = Number(stats.mistakes || 0);
+
+    return stats;
+}
+
+
+function wordUpSaveStats(stats) {
+
+    localStorage.setItem(
+        "wordUpV9Analytics",
+        JSON.stringify(stats)
+    );
+}
+
+
+function wordUpTrackVisit() {
+
+    const stats = wordUpGetStats();
+
+    stats.visits++;
+
+    stats.lastVisit = new Date().toISOString();
+
+    wordUpSaveStats(stats);
+}
+
+
+function wordUpUpdateAdminStats() {
+
+    const stats = wordUpGetStats();
+
+    const visits = document.getElementById("adminLocalVisits");
+    const lessons = document.getElementById("adminLessons");
+    const tests = document.getElementById("adminTests");
+    const mistakes = document.getElementById("adminMistakes");
+
+    if (visits) visits.textContent = stats.visits;
+    if (lessons) lessons.textContent = stats.lessons;
+    if (tests) tests.textContent = stats.tests;
+    if (mistakes) mistakes.textContent = stats.mistakes;
+}
+
+
+wordUpTrackVisit();
+
+
+/* ---------------------------------------------------------
+   ADMIN ACCESS
+   --------------------------------------------------------- */
+
+function wordUpOpenAdmin() {
+
+    const password = prompt(
+        "🔐 WordUp Owner Area\n\nEnter your Admin password:"
+    );
+
+    /*
+       IMPORTANT:
+       This is a local owner gate, not a server-security system.
+       The authoritative private analytics remain on GitHub.
+    */
+
+    const savedPassword =
+        localStorage.getItem("wordUpOwnerPassword");
+
+    if (!savedPassword) {
+
+        const setup = prompt(
+            "First-time setup.\n\nCreate your WordUp Admin password:"
+        );
+
+        if (!setup || setup.length < 8) {
+            alert(
+                "Password must contain at least 8 characters."
+            );
+            return;
+        }
+
+        localStorage.setItem(
+            "wordUpOwnerPassword",
+            setup
+        );
+
+        alert(
+            "Admin password created.\n\nOpen Admin again and enter your password."
+        );
+
+        return;
+    }
+
+    if (password !== savedPassword) {
+
+        alert("❌ Incorrect Admin password.");
+
+        return;
+    }
+
+    showScreen("admin");
+
+    setTimeout(
+        wordUpUpdateAdminStats,
+        50
+    );
+}
+
+
+/* ---------------------------------------------------------
+   GITHUB ADMIN LINKS
+   --------------------------------------------------------- */
+
+function wordUpOpenGitHubTraffic() {
+
+    window.open(
+        WORDUP_GITHUB_TRAFFIC,
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+
+
+function wordUpOpenGitHubIssues() {
+
+    window.open(
+        WORDUP_GITHUB_ISSUES,
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+
+
+function wordUpOpenGitHubRepo() {
+
+    window.open(
+        WORDUP_GITHUB_REPO,
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+
+
+/* ---------------------------------------------------------
+   FEEDBACK
+   --------------------------------------------------------- */
+
+function wordUpBuildDiagnostics() {
+
+    return [
+        "",
+        "========== WordUp Diagnostics ==========",
+        "URL: " + location.href,
+        "Browser: " + navigator.userAgent,
+        "Language: " + navigator.language,
+        "Platform: " + navigator.platform,
+        "Screen: " + window.innerWidth + "x" + window.innerHeight,
+        "Online: " + navigator.onLine,
+        "Time: " + new Date().toISOString(),
+        "========================================",
+        ""
+    ].join("\n");
+}
+
+
+function wordUpSendEmail(subject, body) {
+
+    const mailto =
+        "mailto:" +
+        WORDUP_OWNER_EMAIL +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+
+    window.location.href = mailto;
+}
+
+
+function wordUpGeneralFeedback() {
+
+    wordUpSendEmail(
+        "WordUp Feedback",
+        "Hello WordUp Team,\n\n" +
+        "My feedback:\n\n\n" +
+        wordUpBuildDiagnostics()
+    );
+}
+
+
+function wordUpSuggestFeature() {
+
+    wordUpSendEmail(
+        "WordUp Feature Suggestion",
+        "Hello WordUp Team,\n\n" +
+        "I would like to suggest this feature:\n\n\n" +
+        wordUpBuildDiagnostics()
+    );
+}
+
+
+function wordUpContactEmail() {
+
+    wordUpSendEmail(
+        "WordUp Contact",
+        "Hello WordUp Team,\n\n" +
+        "Message:\n\n\n" +
+        wordUpBuildDiagnostics()
+    );
+}
+
+
+function wordUpContactWhatsApp() {
+
+    window.open(
+        "https://wa.me/93785054012",
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+
+
+/* ---------------------------------------------------------
+   GITHUB BUG REPORT
+   --------------------------------------------------------- */
+
+function wordUpReportBug() {
+
+    const title =
+        encodeURIComponent(
+            "Bug Report — WordUp"
+        );
+
+    const body =
+        encodeURIComponent(
+`## What happened?
+
+Please describe the problem here.
+
+## Steps to reproduce
+
+1.
+2.
+3.
+
+## Expected result
+
+What should have happened?
+
+## Actual result
+
+What actually happened?
+
+${wordUpBuildDiagnostics()}`
+        );
+
+    const issueURL =
+        WORDUP_GITHUB_ISSUES +
+        "/new?title=" +
+        title +
+        "&body=" +
+        body;
+
+    window.open(
+        issueURL,
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+
+
+/* ---------------------------------------------------------
+   EXPORT LOCAL DATA
+   --------------------------------------------------------- */
+
+function wordUpExportLocalData() {
+
+    const data = {};
+
+    for (let i = 0; i < localStorage.length; i++) {
+
+        const key =
+            localStorage.key(i);
+
+        try {
+            data[key] =
+                JSON.parse(
+                    localStorage.getItem(key)
+                );
+        } catch {
+            data[key] =
+                localStorage.getItem(key);
+        }
+    }
+
+    const file = new Blob(
+        [
+            JSON.stringify(
+                data,
+                null,
+                2
+            )
+        ],
+        {
+            type: "application/json"
+        }
+    );
+
+    const url =
+        URL.createObjectURL(file);
+
+    const a =
+        document.createElement("a");
+
+    a.href = url;
+
+    a.download =
+        "wordup-local-data.json";
+
+    document.body.appendChild(a);
+
+    a.click();
+
+    a.remove();
+
+    URL.revokeObjectURL(url);
+}
+
+
+/* ---------------------------------------------------------
+   AUTOMATIC LESSON / TEST TRACKING
+   --------------------------------------------------------- */
+
+function wordUpIncrementLessonCount() {
+
+    const stats =
+        wordUpGetStats();
+
+    stats.lessons++;
+
+    wordUpSaveStats(stats);
+}
+
+
+function wordUpIncrementTestCount() {
+
+    const stats =
+        wordUpGetStats();
+
+    stats.tests++;
+
+    wordUpSaveStats(stats);
+}
+
+
+function wordUpIncrementMistakeCount() {
+
+    const stats =
+        wordUpGetStats();
+
+    stats.mistakes++;
+
+    wordUpSaveStats(stats);
+}
+
+
+/* ---------------------------------------------------------
+   MAKE COMMON BUTTON NAVIGATION SAFE
+   --------------------------------------------------------- */
+
+window.wordUpOpenAdmin =
+    wordUpOpenAdmin;
+
+window.wordUpReportBug =
+    wordUpReportBug;
+
+window.wordUpGeneralFeedback =
+    wordUpGeneralFeedback;
+
+window.wordUpSuggestFeature =
+    wordUpSuggestFeature;
+
+window.wordUpContactEmail =
+    wordUpContactEmail;
+
+window.wordUpContactWhatsApp =
+    wordUpContactWhatsApp;
+
+window.wordUpOpenGitHubTraffic =
+    wordUpOpenGitHubTraffic;
+
+window.wordUpOpenGitHubIssues =
+    wordUpOpenGitHubIssues;
+
+window.wordUpOpenGitHubRepo =
+    wordUpOpenGitHubRepo;
+
+window.wordUpExportLocalData =
+    wordUpExportLocalData;
+

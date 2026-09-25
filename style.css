@@ -692,3 +692,176 @@ main{padding:20px 14px 60px}
 .activity-actions button{width:100%}
 .level-tabs{overflow:auto}
 }
+
+/* =========================================================
+   WORDUP V9 ADMIN STYLES
+   ========================================================= */
+
+.feedback-home-button {
+    width: 100%;
+    max-width: 720px;
+    margin: 10px auto;
+    display: block;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 14px;
+    background: var(--card, #ffffff);
+    color: var(--text, #222222);
+    border: 1px solid rgba(128,128,128,.25);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.feedback-home-button:hover {
+    transform: translateY(-2px);
+}
+
+.admin-entry {
+    opacity: .65;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.feedback-card {
+    padding: 25px;
+    border-radius: 20px;
+    background: var(--card, #ffffff);
+    border: 1px solid rgba(128,128,128,.2);
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
+}
+
+.feedback-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.feedback-card h2 {
+    margin: 5px 0 10px;
+}
+
+.feedback-card p {
+    opacity: .8;
+    line-height: 1.6;
+}
+
+.primary-btn,
+.secondary-btn {
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin: 5px 4px 0 0;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.primary-btn {
+    background: #111827;
+    color: white;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: inherit;
+    border: 1px solid rgba(128,128,128,.35);
+}
+
+.admin-warning {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 18px;
+    border-radius: 16px;
+    background: rgba(255,193,7,.12);
+    border: 1px solid rgba(255,193,7,.35);
+}
+
+.admin-warning strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.admin-card {
+    padding: 22px;
+    text-align: center;
+    border-radius: 18px;
+    background: var(--card, #ffffff);
+    border: 1px solid rgba(128,128,128,.2);
+}
+
+.admin-number {
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.admin-label {
+    margin-top: 5px;
+    opacity: .7;
+}
+
+.admin-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.admin-action {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid rgba(128,128,128,.2);
+    border-radius: 16px;
+    background: var(--card, #ffffff);
+    color: inherit;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.admin-action small {
+    display: block;
+    margin-top: 6px;
+    opacity: .65;
+    font-weight: 400;
+}
+
+.admin-note {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 18px;
+    background: var(--card, #ffffff);
+    border: 1px solid rgba(128,128,128,.2);
+}
+
+@media (max-width: 700px) {
+
+    .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+
