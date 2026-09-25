@@ -2,6 +2,7 @@
 --bg:#f5f7fb;
 --surface:#ffffff;
 --surface2:#eef2f7;
+--card:#ffffff;
 --text:#172033;
 --muted:#687386;
 --primary:#315efb;
@@ -27,6 +28,7 @@ body.dark{
 --bg:#0c111b;
 --surface:#151c29;
 --surface2:#202a3a;
+--card:#151c29;
 --text:#f4f7fb;
 --muted:#aab4c4;
 --border:#2d3748;
@@ -1281,4 +1283,6 @@ main{padding:20px 14px 60px}
     }
 
 }
+
+
 
