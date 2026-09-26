@@ -694,7 +694,7 @@ html+=`<h2>Read</h2><p>${escapeHtml(lesson.passage)}</p>`;
 if(lesson.audio){
 html+=`
 <h2>Listen</h2>
-<button class="primary" onclick="speak(${JSON.stringify(lesson.audio)})">🔊 Play audio</button>
+<button class="primary wordup-sound-button" type="button" data-wordup-sound="${escapeHtml(lesson.audio)}">🔊 Play audio</button>
 <div class="teach-card"><small>${escapeHtml(lesson.audio)}</small></div>`;
 }
 
@@ -720,7 +720,7 @@ html=`
 <div class="example">${escapeHtml(item[3])}</div>
 <div style="font-size:42px;margin-top:12px">${item[4]}</div>
 </div>
-<button class="secondary" onclick="speak(${JSON.stringify(item[0])})">🔊 Hear pronunciation</button>
+<button class="secondary wordup-sound-button" type="button" data-wordup-sound="${escapeHtml(item[0])}">🔊 Hear pronunciation</button>
 `;
 
 }else{
@@ -1353,22 +1353,119 @@ return`
 // LISTENING
 // ============================================================
 
+function wordUpSpeakEnglish(text, rate = 0.9){
+
+    if(
+        !("speechSynthesis" in window) ||
+        typeof SpeechSynthesisUtterance === "undefined"
+    ){
+        alert("🔊 Speech is not available in this browser.");
+        return;
+    }
+
+    const synth = window.speechSynthesis;
+    const message = String(text);
+
+    try{
+        synth.cancel();
+        synth.resume();
+    }catch(error){
+        console.warn("WordUp speech reset:", error);
+    }
+
+    function speakNow(){
+
+        const utterance =
+            new SpeechSynthesisUtterance(message);
+
+        utterance.lang = "en-US";
+        utterance.rate = rate;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+
+        const voices = synth.getVoices();
+
+        const englishVoice =
+            voices.find(v => v.lang === "en-US") ||
+            voices.find(v => v.lang === "en-GB") ||
+            voices.find(v => v.lang.startsWith("en-")) ||
+            voices.find(v => v.lang.startsWith("en"));
+
+        if(englishVoice){
+            utterance.voice = englishVoice;
+        }
+
+        utterance.onerror = function(event){
+            console.warn(
+                "WordUp speech error:",
+                event.error
+            );
+        };
+
+        try{
+            synth.speak(utterance);
+        }catch(error){
+            console.error(
+                "WordUp speech failed:",
+                error
+            );
+        }
+    }
+
+    const voices = synth.getVoices();
+
+    if(voices.length > 0){
+
+        speakNow();
+
+    }else{
+
+        let handled = false;
+
+        const loadVoices = function(){
+
+            if(handled) return;
+
+            handled = true;
+
+            synth.onvoiceschanged = null;
+
+            speakNow();
+        };
+
+        synth.onvoiceschanged = loadVoices;
+
+        setTimeout(loadVoices, 500);
+    }
+}
+
 function speak(text){
-if(!("speechSynthesis" in window)){
-alert("Speech synthesis is not available in this browser.");
-return;
+    wordUpSpeakEnglish(text, 0.9);
 }
-
-speechSynthesis.cancel();
-
-const utterance=new SpeechSynthesisUtterance(text);
-utterance.lang="en-US";
-utterance.rate=.9;
-speechSynthesis.speak(utterance);
-}
-
 
 // ============================================================
+
+// ============================================================
+// WORDUP SOUND BUTTON HANDLER
+// ============================================================
+
+document.addEventListener("click", function(event){
+
+    const button = event.target.closest(".wordup-sound-button");
+
+    if(!button){
+        return;
+    }
+
+    const text = button.getAttribute("data-wordup-sound");
+
+    if(!text){
+        console.warn("WordUp: sound button has no text.");
+        return;
+    }
+
+    speak(text);
+});
 // HELPERS
 // ============================================================
 
@@ -2603,32 +2700,17 @@ function wordUpV10RenderQuestion() {
         listenButton.onclick =
             () => {
 
-                if (
-                    "speechSynthesis"
-                    in window
-                ) {
+                const rate =
+                    q.level === "C1"
+                        ? 1
+                        : q.level === "B2"
+                        ? 0.95
+                        : 0.85;
 
-                    speechSynthesis.cancel();
-
-                    const utterance =
-                        new SpeechSynthesisUtterance(
-                            q.audio
-                        );
-
-                    utterance.lang =
-                        "en-US";
-
-                    utterance.rate =
-                        q.level === "C1"
-                            ? 1
-                            : q.level === "B2"
-                            ? 0.95
-                            : 0.85;
-
-                    speechSynthesis.speak(
-                        utterance
-                    );
-                }
+                wordUpSpeakEnglish(
+                    q.audio,
+                    rate
+                );
             };
 
         audio.appendChild(
@@ -3375,3 +3457,5 @@ function wordUpOpenGoogleAnalytics() {
         "noopener,noreferrer"
     );
 }
+
+
