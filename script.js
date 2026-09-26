@@ -3367,3 +3367,11 @@ document.addEventListener(
     }
 );
 
+
+function wordUpOpenGoogleAnalytics() {
+    window.open(
+        "https://analytics.google.com/analytics/",
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
