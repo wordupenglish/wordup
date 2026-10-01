@@ -7,7 +7,7 @@
 <meta name="description" content="WordUp — Learn English through structured lessons, practice, tests and review.">
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./assets/icon.svg">
-<link rel="stylesheet" href="./style.css?v=20260925175417">
+<link rel="stylesheet" href="./style.css?v=20260928170146">
 <title>WordUp English</title>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MJ67Q7N69"></script>
@@ -46,6 +46,7 @@
         <div class="hero-actions">
             <button class="primary big" onclick="continueLearning()">Continue Learning →</button>
             <button class="secondary big" onclick="showScreen('curriculum')">Explore Curriculum</button>
+            <button class="secondary big" onclick="startPlacement()">🎯 Test My Level</button>
         </div>
     </div>
 
@@ -403,9 +404,27 @@
     </div>
 </div>
 
-<script src="./script.js?v=20260925175417"></script>
+<script src="./script.js?v=20260928170146"></script>
+<!-- WORDUP-V12.3-LOAD-ORDER -->
+<script src="./v12/engine/content-model.js"></script>
+<script src="./v12/engine/question-engine.js"></script>
+<script src="./v12/content/levels/foundation.js"></script>
+<script src="./v12/content/levels/a1.js"></script>
+<script src="./v12/content/levels/a2.js"></script>
+<script src="./v12/content/levels/b1.js"></script>
+<script src="./v12/content/levels/b2.js"></script>
+<script src="./v12/content/levels/c1.js"></script>
+<script src="./v12/content/levels/c2.js"></script>
+<script src="./v12/content/levels/academic.js"></script>
+<script src="./v12/content/content-registry.js"></script>
+<script src="./v12/engine/progress-engine.js"></script>
+<script src="./v12/engine/content-validator.js"></script>
+<script src="./v12/engine/v12-runtime.js"></script>
 </body>
 </html>
+
+
+
 
 
 
