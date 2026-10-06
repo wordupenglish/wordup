@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="WordUp — Learn English through structured lessons, practice, tests and review.">
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./assets/icon.svg">
+<link rel="stylesheet" href="./style.css?v=20260928170146">
+<title>WordUp English</title>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3MJ67Q7N69"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3MJ67Q7N69');
+</script>
+</head>
+
+<body>
+
+<div id="app">
+
+<header class="topbar">
+    <button class="brand" onclick="goHome()">
+        <span class="brand-mark">W</span>
+        <span>WordUp</span>
+    </button>
+
+    <div class="top-actions">
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+        <button class="profile-btn" onclick="showScreen('dashboard')">Progress</button>
+    </div>
+</header>
+
+<main>
+
+<section id="home" class="screen active">
+    <div class="hero">
+        <div class="hero-badge">OFFLINE ENGLISH LEARNING</div>
+        <h1>Learn English.<br><span>Use it confidently.</span></h1>
+        <p>Learn first. Practice freely. Take the test. Build real mastery.</p>
+
+        <div class="hero-actions">
+            <button class="primary big" onclick="continueLearning()">Continue Learning →</button>
+            <button class="secondary big" onclick="showScreen('curriculum')">Explore Curriculum</button>
+            <button class="secondary big" onclick="startPlacement()">🎯 Test My Level</button>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <strong id="homeXP">0</strong>
+            <span>XP</span>
+        </div>
+        <div class="stat-card">
+            <strong id="homeStreak">0</strong>
+            <span>Day streak</span>
+        </div>
+        <div class="stat-card">
+            <strong id="homeMastery">0%</strong>
+            <span>Mastery</span>
+        </div>
+        <div class="stat-card">
+            <strong id="homeLessons">0</strong>
+            <span>Tests passed</span>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Learn by skill</h2>
+        <p>Every skill follows the same learning engine.</p>
+    </div>
+
+    <div class="skill-grid">
+        <button class="skill-card" onclick="openSkill('vocabulary')">
+            <span>📚</span><b>Vocabulary</b><small>Words & expressions</small>
+        </button>
+        <button class="skill-card" onclick="openSkill('grammar')">
+            <span>🔤</span><b>Grammar</b><small>Build accurate English</small>
+        </button>
+        <button class="skill-card" onclick="openSkill('writing')">
+            <span>✍️</span><b>Writing</b><small>Write naturally</small>
+        </button>
+        <button class="skill-card" onclick="openSkill('reading')">
+            <span>📖</span><b>Reading</b><small>Understand context</small>
+        </button>
+        <button class="skill-card" onclick="openSkill('listening')">
+            <span>🎧</span><b>Listening</b><small>Train your ear</small>
+        </button>
+        <button class="skill-card" onclick="startMistakes()">
+            <span>🧠</span><b>Mistake Review</b><small>Fix weak areas</small>
+        </button>
+    </div>
+
+    <button class="placement-card" onclick="startPlacement()">
+        <span>🎯</span>
+        <div>
+            <b>Find my level</b>
+            <small>Take a quick placement test</small>
+        </div>
+        <strong>→</strong>
+    </button>
+</section>
+
+
+<section id="curriculum" class="screen">
+    <div class="screen-head">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+        <div>
+            <h1 id="curriculumTitle">Vocabulary</h1>
+            <p>Choose an activity independently.</p>
+        </div>
+    </div>
+
+    <div class="level-tabs">
+        <button class="level-tab active" data-level="beginner" onclick="setLevel('beginner')">Beginner</button>
+        <button class="level-tab" data-level="intermediate" onclick="setLevel('intermediate')">Intermediate</button>
+        <button class="level-tab" data-level="advanced" onclick="setLevel('advanced')">Advanced</button>
+    </div>
+
+    <div id="lessonList" class="lesson-list"></div>
+</section>
+
+
+<section id="lesson" class="screen">
+    <div class="activity-top">
+        <button class="back-btn" onclick="exitActivity()">← Exit</button>
+        <span id="activityLabel"></span>
+    </div>
+
+    <div class="lesson-progress">
+        <div id="lessonProgressBar"></div>
+    </div>
+
+    <article id="lessonContent" class="lesson-content"></article>
+
+    <div class="activity-actions">
+        <button class="secondary" onclick="exitActivity()">Exit</button>
+        <button class="primary" onclick="nextLearnStep()">Continue →</button>
+    </div>
+</section>
+
+
+<section id="quiz" class="screen">
+    <div class="quiz-top">
+        <button class="back-btn" onclick="exitActivity()">← Exit</button>
+        <div>
+            <span id="quizBadge"></span>
+            <strong id="quizCounter"></strong>
+        </div>
+    </div>
+
+    <div class="quiz-progress">
+        <div id="quizProgressBar"></div>
+    </div>
+
+    <div id="quizContent"></div>
+
+    <div id="quizFeedback"></div>
+
+    <button id="nextQuestionBtn" class="primary full" onclick="nextQuestion()" disabled>
+        Check answer
+    </button>
+</section>
+
+
+<section id="result" class="screen">
+    <div id="resultContent"></div>
+</section>
+
+
+<section id="dashboard" class="screen">
+    <div class="screen-head">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+        <div>
+            <h1>Your Progress</h1>
+            <p>Your learning data is stored on this device.</p>
+        </div>
+    </div>
+
+    <div id="dashboardContent"></div>
+</section>
+
+
+<section id="mistakes" class="screen">
+    <div class="screen-head">
+        <button class="back-btn" onclick="showScreen('home')">← Back</button>
+        <div>
+            <h1>Mistake Review</h1>
+            <p>Review questions you previously missed.</p>
+        </div>
+    </div>
+
+    <div id="mistakeContent"></div>
+</section>
+
+
+<section id="placement" class="screen">
+    <div class="activity-top">
+        <button class="back-btn" onclick="goHome()">← Exit</button>
+        <span>PLACEMENT TEST</span>
+    </div>
+
+    <div class="quiz-progress">
+        <div id="placementProgressBar"></div>
+    </div>
+
+    <div id="placementContent"></div>
+
+    <button id="placementNext" class="primary full" onclick="placementNext()" disabled>
+        Check answer
+    </button>
+</section>
+
+<!-- WORDUP-V9-FEEDBACK -->
+
+<section id="feedback" class="screen">
+
+    <div class="page-header">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+        <div>
+            <h1>Feedback & Support</h1>
+            <p>Help us make WordUp better.</p>
+        </div>
+    </div>
+
+    <div class="feedback-grid">
+
+        <div class="feedback-card">
+            <div class="feedback-icon">🐛</div>
+            <h2>Report a Problem</h2>
+            <p>
+                Found a bug or something that is not working correctly?
+                Tell us what happened.
+            </p>
+            <button class="primary-btn"
+                    onclick="wordUpReportBug()">
+                Report Bug
+            </button>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-icon">💡</div>
+            <h2>Suggest a Feature</h2>
+            <p>
+                Have an idea that could make WordUp better?
+                We would love to hear it.
+            </p>
+            <button class="primary-btn"
+                    onclick="wordUpSuggestFeature()">
+                Suggest Feature
+            </button>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-icon">💬</div>
+            <h2>General Feedback</h2>
+            <p>
+                Tell us what you like, what you dislike,
+                or what we should improve.
+            </p>
+            <button class="primary-btn"
+                    onclick="wordUpGeneralFeedback()">
+                Send Feedback
+            </button>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-icon">⭐</div>
+            <h2>Contact WordUp</h2>
+            <p>
+                You can also contact the WordUp team directly.
+            </p>
+
+            <button class="secondary-btn"
+                    onclick="wordUpContactEmail()">
+                Email
+            </button>
+
+            <button class="secondary-btn"
+                    onclick="wordUpContactWhatsApp()">
+                WhatsApp
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="admin" class="screen">
+
+    <div class="page-header">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+
+        <div>
+            <h1>🔐 WordUp Admin</h1>
+            <p>Owner control center</p>
+        </div>
+    </div>
+
+
+    <div class="admin-warning">
+    <strong>Owner Area</strong>
+    <span>
+        Website-wide analytics are provided by Google Analytics 4.
+        Use the Google Analytics button for your private website analytics.
+    </span>
+</div>
+
+
+    <div class="admin-grid">
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminLocalVisits">0</div>
+            <div class="admin-label">Local Visits</div>
+        </div>
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminLessons">0</div>
+            <div class="admin-label">Lessons Completed</div>
+        </div>
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminTests">0</div>
+            <div class="admin-label">Tests Completed</div>
+        </div>
+
+        <div class="admin-card">
+            <div class="admin-number" id="adminMistakes">0</div>
+            <div class="admin-label">Saved Mistakes</div>
+        </div>
+
+    </div>
+
+
+    <div class="admin-actions">
+
+        <button class="admin-action"
+        onclick="wordUpOpenGoogleAnalytics()">
+    📈 Google Analytics
+    <small>Website traffic, users, engagement &amp; reports</small>
+</button>
+
+<button class="admin-action"
+        onclick="wordUpOpenGitHubTraffic()">
+    📊 GitHub Traffic
+    <small>GitHub Insights → Traffic</small>
+</button>
+
+        <button class="admin-action"
+                onclick="wordUpOpenGitHubIssues()">
+            🐛 Bug Reports
+            <small>GitHub Issues</small>
+        </button>
+
+        <button class="admin-action"
+                onclick="wordUpOpenGitHubRepo()">
+            🐙 WordUp Repository
+            <small>GitHub</small>
+        </button>
+
+        <button class="admin-action"
+                onclick="wordUpExportLocalData()">
+            💾 Export Local Data
+            <small>Download your current WordUp statistics</small>
+        </button>
+
+    </div>
+
+
+    <div class="admin-note">
+    <h3>📌 Analytics</h3>
+    <p>
+        Google Analytics 4 is the primary website analytics system for WordUp.
+        GitHub Traffic remains available as a secondary source.
+    </p>
+</div>
+
+</section>
+
+</main>
+
+<button class="feedback-home-button"
+        onclick="showScreen('feedback')">
+    💬 Feedback & Report a Problem
+</button>
+
+
+<footer>
+    <span>WordUp English</span>
+    <span>Built with care by Mr. Suliman</span>
+</footer>
+
+</div>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script src="./script.js?v=20260928170146"></script>
+</body>
+</html>
+
+
+
+
+
+

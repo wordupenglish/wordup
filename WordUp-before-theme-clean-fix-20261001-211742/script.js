@@ -4610,3 +4610,70 @@ function wordUpOpenGoogleAnalytics() {
 
 })();
 
+/* ============================================================
+   WORDUP THEME CONTROLLER
+   ============================================================ */
+
+(function () {
+    const THEME_KEY = "wordup_theme";
+
+    function applyTheme(theme) {
+        const isDark = theme === "dark";
+
+        document.documentElement.classList.toggle("dark", isDark);
+        document.body.classList.toggle("dark", isDark);
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            isDark ? "dark" : "light"
+        );
+
+        try {
+            localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+        } catch (e) {}
+
+        const buttons = document.querySelectorAll(
+            ".wu-nav-theme, .theme-toggle, #themeToggle"
+        );
+
+        buttons.forEach(button => {
+            button.textContent = isDark ? "☀" : "◐";
+            button.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+            button.setAttribute(
+                "title",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+        });
+    }
+
+    window.wordUpToggleTheme = function () {
+        const current =
+            document.documentElement.getAttribute("data-theme") ||
+            (document.documentElement.classList.contains("dark") ? "dark" : "light");
+
+        applyTheme(current === "dark" ? "light" : "dark");
+    };
+
+    function initializeTheme() {
+        let saved = "light";
+
+        try {
+            saved = localStorage.getItem(THEME_KEY) || "light";
+        } catch (e) {}
+
+        if (saved !== "dark" && saved !== "light") {
+            saved = "light";
+        }
+
+        applyTheme(saved);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeTheme);
+    } else {
+        initializeTheme();
+    }
+})();

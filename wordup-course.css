@@ -1,0 +1,486 @@
+﻿/* =========================================================
+   WORDUP COURSE INTEGRATION
+   ========================================================= */
+
+.wu-course-shell {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.wu-course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.wu-course-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    opacity: .65;
+    margin-bottom: 7px;
+}
+
+.wu-course-header h1 {
+    margin: 0;
+}
+
+.wu-course-header p {
+    margin: 7px 0 0;
+    opacity: .72;
+}
+
+.wu-course-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.wu-course-stat,
+.wu-course-level-summary > div {
+    padding: 18px;
+    border-radius: 18px;
+    background: var(--card, rgba(255,255,255,.06));
+    border: 1px solid rgba(128,128,128,.16);
+}
+
+.wu-course-stat span,
+.wu-course-level-summary span {
+    display: block;
+    font-size: 12px;
+    opacity: .65;
+}
+
+.wu-course-stat strong,
+.wu-course-level-summary strong {
+    display: block;
+    font-size: 27px;
+    margin-top: 4px;
+}
+
+.wu-course-section-heading {
+    margin: 22px 0 14px;
+}
+
+.wu-course-section-heading h2 {
+    margin-bottom: 4px;
+}
+
+.wu-course-section-heading p {
+    margin: 0;
+    opacity: .68;
+}
+
+.wu-level-grid,
+.wu-skill-grid,
+.wu-lesson-list {
+    display: grid;
+    gap: 12px;
+}
+
+.wu-level-card,
+.wu-skill-course-card,
+.wu-course-lesson-card {
+    width: 100%;
+    border: 1px solid rgba(128,128,128,.18);
+    border-radius: 18px;
+    background: var(--card, rgba(255,255,255,.05));
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.wu-level-card:hover,
+.wu-skill-course-card:hover,
+.wu-course-lesson-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(128,128,128,.38);
+}
+
+.wu-level-card {
+    display: grid;
+    grid-template-columns: 58px 1fr 30px;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+}
+
+.wu-level-number {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 800;
+    background: rgba(128,128,128,.12);
+}
+
+.wu-level-main strong,
+.wu-skill-course-card strong,
+.wu-course-lesson-card strong {
+    display: block;
+    font-size: 16px;
+}
+
+.wu-level-main small,
+.wu-skill-course-card small,
+.wu-course-lesson-card small {
+    display: block;
+    margin-top: 4px;
+    opacity: .62;
+    font-size: 12px;
+}
+
+.wu-level-arrow {
+    font-size: 22px;
+    opacity: .55;
+}
+
+.wu-course-progress {
+    height: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(128,128,128,.15);
+}
+
+.wu-course-progress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: .7;
+}
+
+.wu-course-level-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.wu-skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.wu-skill-course-card {
+    display: grid;
+    grid-template-columns: 48px 1fr 24px;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+}
+
+.wu-skill-icon {
+    font-size: 28px;
+}
+
+.wu-course-lesson-card {
+    display: grid;
+    grid-template-columns: 45px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+}
+
+.wu-lesson-index {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(128,128,128,.12);
+    font-weight: 800;
+}
+
+.wu-lesson-status {
+    font-size: 12px;
+    opacity: .7;
+}
+
+.wu-complete-badge,
+.wu-progress-badge {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 999px;
+    background: rgba(80,180,110,.13);
+}
+
+.wu-progress-badge {
+    background: rgba(128,128,128,.13);
+}
+
+.wu-course-empty {
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px dashed rgba(128,128,128,.28);
+}
+
+.wu-lesson-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding: 5px;
+    border-radius: 14px;
+    background: rgba(128,128,128,.08);
+}
+
+.wu-lesson-tabs button {
+    flex: 1;
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 14px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.wu-lesson-tabs button.active {
+    background: rgba(128,128,128,.18);
+}
+
+.wu-learning-card,
+.wu-question-card,
+.wu-test-result,
+.wu-practice-header,
+.wu-test-header {
+    padding: 22px;
+    border-radius: 20px;
+    border: 1px solid rgba(128,128,128,.16);
+    background: var(--card, rgba(255,255,255,.05));
+}
+
+.wu-learning-card h2 {
+    margin-top: 0;
+}
+
+.wu-learning-card h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.wu-learning-card p {
+    line-height: 1.7;
+}
+
+.wu-learning-card li {
+    margin: 8px 0;
+    line-height: 1.55;
+}
+
+.wu-learning-label,
+.wu-practice-header span,
+.wu-test-header span {
+    font-size: 11px;
+    letter-spacing: .12em;
+    font-weight: 800;
+    opacity: .6;
+}
+
+.wu-example-list {
+    display: grid;
+    gap: 8px;
+}
+
+.wu-example-list div {
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(128,128,128,.09);
+}
+
+.wu-vocabulary-mini {
+    display: grid;
+    gap: 8px;
+}
+
+.wu-vocabulary-mini div {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 11px 13px;
+    border-radius: 11px;
+    background: rgba(128,128,128,.08);
+}
+
+.wu-vocabulary-mini span {
+    opacity: .7;
+}
+
+.wu-learning-actions,
+.wu-test-submit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.wu-question-list {
+    display: grid;
+    gap: 14px;
+}
+
+.wu-question-options {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.wu-question-options button {
+    width: 100%;
+    padding: 13px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(128,128,128,.18);
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.wu-question-options button:hover {
+    background: rgba(128,128,128,.08);
+}
+
+.wu-question-options button.selected {
+    border-color: currentColor;
+    background: rgba(128,128,128,.14);
+}
+
+.wu-question-options button.correct {
+    background: rgba(70,190,110,.16);
+}
+
+.wu-question-options button.wrong {
+    background: rgba(220,80,80,.14);
+}
+
+.wu-question-options button:disabled {
+    cursor: default;
+    opacity: .85;
+}
+
+.wu-question-feedback {
+    margin-top: 10px;
+}
+
+.wu-feedback-good,
+.wu-feedback-bad {
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+.wu-feedback-good {
+    background: rgba(70,190,110,.13);
+}
+
+.wu-feedback-bad {
+    background: rgba(220,80,80,.13);
+}
+
+.wu-test-header,
+.wu-practice-header {
+    margin-bottom: 15px;
+}
+
+.wu-test-header strong,
+.wu-practice-header strong {
+    display: block;
+    margin-top: 5px;
+}
+
+.wu-test-header small,
+.wu-practice-header small {
+    display: block;
+    margin-top: 5px;
+    opacity: .65;
+}
+
+.wu-test-result {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.wu-test-result.passed {
+    border-color: rgba(70,190,110,.35);
+}
+
+.wu-test-result.failed {
+    border-color: rgba(220,100,80,.25);
+}
+
+.wu-result-icon {
+    font-size: 45px;
+}
+
+.wu-result-score {
+    display: block;
+    margin: 8px 0;
+    font-size: 45px;
+}
+
+@media (max-width: 750px) {
+
+    .wu-course-header {
+        flex-direction: column;
+    }
+
+    .wu-course-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wu-course-level-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .wu-skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wu-course-lesson-card {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .wu-lesson-status {
+        grid-column: 2;
+    }
+
+    .wu-vocabulary-mini div {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .wu-course-overview {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .wu-course-stat {
+        padding: 14px;
+    }
+
+    .wu-course-stat strong {
+        font-size: 22px;
+    }
+
+    .wu-level-card {
+        grid-template-columns: 45px 1fr 20px;
+        padding: 14px;
+    }
+
+    .wu-level-number {
+        width: 40px;
+        height: 40px;
+    }
+
+}

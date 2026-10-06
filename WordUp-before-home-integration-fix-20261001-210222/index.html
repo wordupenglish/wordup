@@ -7,7 +7,7 @@
 <meta name="description" content="WordUp — Learn English through structured lessons, practice, tests and review.">
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./assets/icon.svg">
-<link rel="stylesheet" href="./style.css?v=20261001-nav">
+<link rel="stylesheet" href="./style.css?v=20261001210000">
 <title>WordUp English</title>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MJ67Q7N69"></script>
@@ -16,86 +16,64 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-3MJ67Q7N69');
-</script>
-<link rel="stylesheet" href="./wordup-course.css?v=20261001-course">
+</script><link rel="stylesheet" href="./wordup-3d.css?v=4">
 </head>
 
 <body>
-
-<!-- WORDUP MAIN NAV -->
+<!-- WORDUP-CLEAN-NAV -->
 <nav class="wu-main-nav" aria-label="Main navigation">
 
-    <div class="wu-nav-brand">
-        <button type="button" class="wu-nav-logo" onclick="showScreen('home')">
-            <span class="wu-nav-logo-mark">W</span>
-            <span class="wu-nav-logo-text">
-                <strong>WORDUP</strong>
-                <small>English Learning</small>
-            </span>
-        </button>
-    </div>
+    <button
+        type="button"
+        class="wu-nav-item active"
+        onclick="showScreen('home')">
+        Home
+    </button>
 
-    <div class="wu-nav-links">
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('curriculum')">
+        Course
+    </button>
 
-        <button type="button"
-                class="wu-nav-link active"
-                data-wu-nav="home"
-                onclick="showScreen('home')">
-            Home
-        </button>
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('mistakes')">
+        Practice
+    </button>
 
-        <button type="button"
-                class="wu-nav-link"
-                data-wu-nav="curriculum"
-                onclick="showScreen('curriculum')">
-            Course
-        </button>
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('dashboard')">
+        Progress
+    </button>
 
-        <button type="button"
-                class="wu-nav-link"
-                data-wu-nav="practice"
-                onclick="showScreen('practice')">
-            Practice
-        </button>
-
-        <button type="button"
-                class="wu-nav-link"
-                data-wu-nav="dashboard"
-                onclick="showScreen('dashboard')">
-            Progress
-        </button>
-
-        <button type="button"
-                class="wu-nav-link"
-                data-wu-nav="profile"
-                onclick="showScreen('profile')">
-            Profile
-        </button>
-
-    </div>
-
-    <div class="wu-nav-actions">
-
-        <button type="button"
-                class="wu-nav-xp"
-                onclick="showScreen('dashboard')">
-            <span>XP</span>
-            <strong id="wuNavXP">0</strong>
-        </button>
-
-        <button type="button"
-                class="wu-nav-theme"
-                onclick="toggleTheme()"
-                aria-label="Toggle theme">
-            ◐
-        </button>
-
-    </div>
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('dashboard')">
+        Profile
+    </button>
 
 </nav>
 
 
 <div id="app">
+
+<header class="topbar">
+    <button class="brand" onclick="goHome()">
+        <span class="brand-mark">W</span>
+        <span>WordUp</span>
+    </button>
+
+    <div class="top-actions">
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+        <button class="profile-btn" onclick="showScreen('dashboard')">Progress</button>
+    </div>
+</header>
 
 <main>
 
@@ -706,212 +684,10 @@
     </div>
 </div>
 
-<script src="./script.js?v=20261001-nav"></script>
+<script src="./script.js?v=20261001210000"></script>
 
-<!-- WORDUP PRACTICE SCREEN -->
-<section id="practice" class="screen">
-
-    <div class="wu-page-header">
-
-        <div class="wu-eyebrow">
-            WORDUP PRACTICE
-        </div>
-
-        <h1>Practice your English</h1>
-
-        <p>
-            Strengthen your English with focused practice and review.
-        </p>
-
-    </div>
-
-    <div class="wu-practice-grid">
-
-        <button type="button"
-                class="wu-practice-card"
-                onclick="showScreen('quiz')">
-
-            <span>📚</span>
-
-            <strong>Vocabulary</strong>
-
-            <small>
-                Build useful vocabulary and improve word knowledge.
-            </small>
-
-        </button>
-
-
-        <button type="button"
-                class="wu-practice-card"
-                onclick="showScreen('quiz')">
-
-            <span>⚙️</span>
-
-            <strong>Grammar</strong>
-
-            <small>
-                Practice grammar through meaningful examples.
-            </small>
-
-        </button>
-
-
-        <button type="button"
-                class="wu-practice-card"
-                onclick="showScreen('quiz')">
-
-            <span>📖</span>
-
-            <strong>Reading</strong>
-
-            <small>
-                Improve comprehension, inference and reading skills.
-            </small>
-
-        </button>
-
-
-        <button type="button"
-                class="wu-practice-card"
-                onclick="showScreen('quiz')">
-
-            <span>🎧</span>
-
-            <strong>Listening</strong>
-
-            <small>
-                Train your understanding of spoken English.
-            </small>
-
-        </button>
-
-
-        <button type="button"
-                class="wu-practice-card"
-                onclick="showScreen('quiz')">
-
-            <span>✍️</span>
-
-            <strong>Writing</strong>
-
-            <small>
-                Develop clear, accurate and effective writing.
-            </small>
-
-        </button>
-
-
-        <button type="button"
-                class="wu-practice-card"
-                onclick="showScreen('mistakes')">
-
-            <span>🔄</span>
-
-            <strong>Mistake Review</strong>
-
-            <small>
-                Review questions and activities you previously missed.
-            </small>
-
-        </button>
-
-    </div>
-
-</section>
-
-<!-- WORDUP PROFILE SCREEN -->
-<section id="profile" class="screen">
-
-    <div class="wu-page-header">
-
-        <div class="wu-eyebrow">
-            LEARNER PROFILE
-        </div>
-
-        <h1>My Profile</h1>
-
-        <p>
-            Your WordUp learning identity, progress and achievements.
-        </p>
-
-    </div>
-
-
-    <div class="wu-profile-layout">
-
-        <div class="wu-profile-card">
-
-            <div class="wu-profile-avatar">
-                S
-            </div>
-
-            <h2>Suliman</h2>
-
-            <p>
-                English Learner
-            </p>
-
-        </div>
-
-
-        <div class="wu-profile-stats">
-
-            <div>
-                <strong id="wuProfileXP">0</strong>
-                <span>Total XP</span>
-            </div>
-
-            <div>
-                <strong id="wuProfileStreak">0</strong>
-                <span>Day Streak</span>
-            </div>
-
-            <div>
-                <strong id="wuProfileMastery">0%</strong>
-                <span>Mastery</span>
-            </div>
-
-            <div>
-                <strong id="wuProfileTests">0</strong>
-                <span>Tests Passed</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- WORDUP-V12-LOAD-ORDER -->
-<script src="./v12/engine/content-model.js?v=20261001-v12"></script>
-<script src="./v12/engine/question-engine.js?v=20261001-v12"></script>
-
-<script src="./v12/content/levels/foundation.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/a1.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/a2.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/b1.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/b2.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/c1.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/c2.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/academic.js?v=20261001-v12"></script>
-
-<script src="./v12/curriculum/master-map.js?v=20261001-curriculum"></script>
-<script src="./v12/content/content-registry.js?v=20261001-v12"></script>
-<script src="./v12/engine/progress-engine.js?v=20261001-v12"></script>
-<script src="./v12/engine/curriculum-expansion.js?v=20261001-curriculum"></script>
-<script src="./v12/engine/content-validator.js?v=20261001-v12"></script>
-<script src="./v12/engine/v12-runtime.js?v=20261001-v12"></script>
-<script src="./wordup-course.js?v=20261001-course"></script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 

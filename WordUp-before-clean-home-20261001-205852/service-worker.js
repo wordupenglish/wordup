@@ -1,10 +1,10 @@
-﻿const CACHE_NAME = "wordup-v10";
+﻿const CACHE_NAME = "wordup-v9";
 
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./style.css?v=20261001-nav",
-  "./script.js?v=20261001-nav",
+  "./style.css?v=8.0",
+  "./script.js?v=8.0",
   "./manifest.json",
   "./assets/icon.svg"
 ];
@@ -38,6 +38,8 @@ self.addEventListener("fetch", event => {
 
   if (url.origin !== location.origin) return;
 
+  // HTML/navigation requests: always check the network first.
+  // This prevents users from being stuck on an old index.html.
   if (
     event.request.mode === "navigate" ||
     event.request.destination === "document"
@@ -52,14 +54,13 @@ self.addEventListener("fetch", event => {
           }
           return response;
         })
-        .catch(() =>
-          caches.match(event.request)
-            .then(cached => cached || caches.match("./index.html"))
-        )
+        .catch(() => caches.match(event.request)
+          .then(cached => cached || caches.match("./index.html")))
     );
     return;
   }
 
+  // Other app files: use cache when available, otherwise fetch.
   event.respondWith(
     caches.match(event.request)
       .then(cached => {

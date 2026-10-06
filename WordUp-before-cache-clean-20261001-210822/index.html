@@ -16,8 +16,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-3MJ67Q7N69');
-</script>
-<link rel="stylesheet" href="./wordup-course.css?v=20261001-course">
+</script><link rel="stylesheet" href="./wordup-3d.css?v=4">
 </head>
 
 <body>
@@ -85,7 +84,7 @@
 
         <button type="button"
                 class="wu-nav-theme"
-                onclick="toggleTheme()"
+                onclick="document.getElementById('themeToggle')?.click()"
                 aria-label="Toggle theme">
             ◐
         </button>
@@ -93,9 +92,60 @@
     </div>
 
 </nav>
+<!-- WORDUP-CLEAN-NAV -->
+<nav class="wu-main-nav" aria-label="Main navigation">
+
+    <button
+        type="button"
+        class="wu-nav-item active"
+        onclick="showScreen('home')">
+        Home
+    </button>
+
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('curriculum')">
+        Course
+    </button>
+
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('mistakes')">
+        Practice
+    </button>
+
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('dashboard')">
+        Progress
+    </button>
+
+    <button
+        type="button"
+        class="wu-nav-item"
+        onclick="showScreen('dashboard')">
+        Profile
+    </button>
+
+</nav>
 
 
 <div id="app">
+
+<header class="topbar">
+    <button class="brand" onclick="goHome()">
+        <span class="brand-mark">W</span>
+        <span>WordUp</span>
+    </button>
+
+    <div class="top-actions">
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+        <button class="profile-btn" onclick="showScreen('dashboard')">Progress</button>
+    </div>
+</header>
 
 <main>
 
@@ -883,34 +933,8 @@
 
 </section>
 
-<!-- WORDUP-V12-LOAD-ORDER -->
-<script src="./v12/engine/content-model.js?v=20261001-v12"></script>
-<script src="./v12/engine/question-engine.js?v=20261001-v12"></script>
-
-<script src="./v12/content/levels/foundation.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/a1.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/a2.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/b1.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/b2.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/c1.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/c2.js?v=20261001-v12"></script>
-<script src="./v12/content/levels/academic.js?v=20261001-v12"></script>
-
-<script src="./v12/curriculum/master-map.js?v=20261001-curriculum"></script>
-<script src="./v12/content/content-registry.js?v=20261001-v12"></script>
-<script src="./v12/engine/progress-engine.js?v=20261001-v12"></script>
-<script src="./v12/engine/curriculum-expansion.js?v=20261001-curriculum"></script>
-<script src="./v12/engine/content-validator.js?v=20261001-v12"></script>
-<script src="./v12/engine/v12-runtime.js?v=20261001-v12"></script>
-<script src="./wordup-course.js?v=20261001-course"></script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 

@@ -231,471 +231,68 @@ questions:[
 
 writing:{
 beginner:[
-
 {
 id:"wb1",
-title:"Building Clear Sentences",
-description:"Learn the basic structure of clear English sentences.",
-teach:{
-intro:"A clear English sentence usually follows Subject + Verb + Object or Complement. The subject tells us who or what performs the action, the verb describes the action or state, and the object or complement completes the idea.",
-examples:[
-"I study English.",
-"She reads books.",
-"They are students.",
-"My brother plays football."
-],
-tips:[
-"Begin with a clear subject.",
-"Use the correct verb form.",
-"Put the object after the verb when needed.",
-"Finish the sentence with appropriate punctuation."
+title:"Building a Sentence",
+description:"Create clear basic sentences.",
+teach:{intro:"جمله انگلیسی معمولاً با فاعل + فعل + مفعول یا مکمل ساخته می‌شود.",examples:["I study English.","She reads books."]},
+questions:[
+["کدام جمله درست است؟",["English I study.","I English study.","I study English.","Study I English."],2,"ساختار طبیعی جمله: Subject + Verb + Object."],
+["Choose the correct sentence.",["She reads books.","She read books every day.","She reading books.","She books reads."],0,"She + reads + books is correct."]
 ]
 },
-questions:[
-["Which sentence has the most natural word order?",["English study I every day.","I study English every day.","Study English I every day.","Every English study I day."],1,"The natural structure is Subject + Verb + Object: I + study + English."],
-["Which sentence is grammatically complete?",["Because I was tired.","Although yesterday.","She reads books.","When I arrived."],2,"She reads books contains a subject, verb, and object."]
-],
-writingTask:"Write five complete sentences about yourself. Include your name, where you live, what you study or do, one thing you enjoy, and one future goal."
-},
-
 {
 id:"wb2",
-title:"Capitalization & Punctuation",
-description:"Use capital letters and basic punctuation accurately.",
-teach:{
-intro:"Capital letters are used at the beginning of sentences and for proper nouns such as people, countries, cities, languages, and institutions. Basic punctuation helps readers understand where ideas begin and end.",
-examples:[
-"My name is Suliman.",
-"I live in Kabul, Afghanistan.",
-"English is my favorite subject.",
-"Do you study English?"
-],
-tips:[
-"Start every sentence with a capital letter.",
-"Use a full stop for a statement.",
-"Use a question mark for a direct question.",
-"Capitalize names, places, countries, and languages."
-]
-},
+title:"Capital Letters",
+description:"Use capitalization correctly.",
+teach:{intro:"حروف بزرگ در ابتدای جمله، نام افراد، مکان‌ها و زبان‌ها استفاده می‌شوند.",examples:["I live in Kabul.","English is useful."]},
 questions:[
-["Which sentence is correctly written?",["i live in Kabul.","I live in kabul.","I live in Kabul.","i live in kabul."],2,"The pronoun I and the proper noun Kabul require capital letters."],
-["Which punctuation mark normally ends a direct question?",[".","!",",","?"],3,"A direct question normally ends with a question mark."]
-],
-writingTask:"Write six sentences about your city or hometown. Use correct capital letters and punctuation."
-},
-
-{
-id:"wb3",
-title:"Describing People",
-description:"Build simple descriptive sentences about people.",
-teach:{
-intro:"When describing a person, combine information about appearance, personality, habits, work, study, and interests. Use adjectives carefully and support descriptions with simple examples.",
-examples:[
-"My sister is friendly and hardworking.",
-"She has long black hair.",
-"She enjoys reading novels.",
-"My teacher is patient because he explains difficult ideas clearly."
-],
-tips:[
-"Use be + adjective: She is kind.",
-"Use have/has for possession: He has brown eyes.",
-"Add a reason or example when possible."
+["Choose the correct sentence.",["i live in Kabul.","I live in kabul.","I live in Kabul.","i live in kabul."],2,"I and Kabul need capital letters."]
 ]
-},
-questions:[
-["Which sentence describes personality?",["He has brown eyes.","She is patient and helpful.","He is 180 centimeters tall.","She has long hair."],1,"Patient and helpful describe personality."],
-["Which sentence is grammatically correct?",["She have long hair.","She has long hair.","She having long hair.","She has long hairs."],1,"She has long hair is the correct structure."]
-],
-writingTask:"Write a short paragraph of 5–7 sentences describing a person you know. Include appearance, personality, activities, and one example."
-},
-
-{
-id:"wb4",
-title:"Writing About Daily Routines",
-description:"Write clearly about regular activities.",
-teach:{
-intro:"The present simple is commonly used to describe routines and repeated actions. Frequency expressions such as usually, often, sometimes, and never add useful detail.",
-examples:[
-"I wake up at seven.",
-"I usually have breakfast before work.",
-"I study English in the evening.",
-"I sometimes read before going to bed."
-],
-tips:[
-"Use the present simple for routines.",
-"Remember -s with he, she, and it.",
-"Use at with specific times.",
-"Use usually, often, sometimes, and never to show frequency."
-]
-},
-questions:[
-["Which sentence correctly describes a routine?",["I am wake up at seven.","I wakes up at seven.","I wake up at seven.","I waking up at seven."],2,"The present simple is used with I: I wake up."],
-["Which sentence is correct?",["She study every evening.","She studies every evening.","She studying every evening.","She studyings every evening."],1,"With she, the present-simple verb takes -s: studies."]
-],
-writingTask:"Write 80–100 words describing your typical weekday. Include times, activities, and frequency expressions."
-},
-
-{
-id:"wb5",
-title:"Connecting Ideas",
-description:"Join simple sentences with basic linking words.",
-teach:{
-intro:"Good writing does not consist only of separate short sentences. Linking words such as and, but, because, so, and although help connect ideas and show relationships.",
-examples:[
-"I was tired, so I went home.",
-"I study English because I want to communicate internationally.",
-"I like reading, but I do not read every day.",
-"I studied hard, and I passed the exam."
-],
-tips:[
-"and adds information.",
-"but shows contrast.",
-"because gives a reason.",
-"so shows a result."
-]
-},
-questions:[
-["Which connector best shows a reason?",["but","because","so","and"],1,"Because introduces a reason."],
-["Which sentence correctly shows a result?",["I was tired so I went home.","I was tired because I went home.","I was tired but I went home because.","I was tired and because home."],0,"So can connect a situation with its result."]
-],
-writingTask:"Write one paragraph of 80–100 words about why you are learning English. Use at least five linking words."
-},
-
-{
-id:"wb6",
-title:"Writing a Short Message",
-description:"Write clear everyday messages.",
-teach:{
-intro:"Short messages should be clear, polite, and appropriate for the situation. Even informal communication benefits from complete ideas and useful details.",
-examples:[
-"Hi Ahmad, I am running late because of traffic. I will arrive at 6:30. Sorry for the delay.",
-"Hello, could you please send me the assignment when you have time? Thank you."
-],
-tips:[
-"Say why you are writing.",
-"Include important details.",
-"Use polite language when making requests.",
-"End appropriately."
-]
-},
-questions:[
-["Which message is most appropriate when making a polite request?",["Send it now!","Give me that.","Could you please send me the file?","You must send it."],2,"Could you please is a polite request structure."],
-["What should a useful short message normally contain?",["Only emojis","The necessary information","Unrelated information","No clear purpose"],1,"A useful message gives the reader the information they need."]
-],
-writingTask:"Write a 60–80 word message to a teacher explaining that you will be late for class."
 }
-
 ],
-
 intermediate:[
-
 {
 id:"wi1",
 title:"Paragraph Structure",
-description:"Build focused paragraphs with a clear main idea.",
-teach:{
-intro:"A strong paragraph normally develops one central idea. It often begins with a topic sentence, continues with supporting details and examples, and may end with a concluding sentence.",
-examples:[
-"Topic sentence: Regular exercise can improve students' daily lives.",
-"Supporting detail: It can increase energy and reduce stress.",
-"Example: For example, a short walk can help students feel more focused.",
-"Concluding sentence: Therefore, regular physical activity can support both study and well-being."
-],
-tips:[
-"Keep one main idea per paragraph.",
-"Make supporting sentences relevant to the topic sentence.",
-"Use examples to develop your point.",
-"Use a concluding sentence when appropriate."
+description:"Write focused academic paragraphs.",
+teach:{intro:"A strong paragraph normally has a topic sentence, supporting ideas and a concluding sentence.",examples:["Topic sentence → evidence → explanation → conclusion."]},
+questions:[
+["What usually introduces the main idea of a paragraph?",["A topic sentence","A random example","A reference list","A question only"],0,"The topic sentence normally introduces the paragraph's main idea."]
 ]
 },
-questions:[
-["What normally introduces the main idea of a paragraph?",["A topic sentence","A reference list","A random detail","A conclusion"],0,"The topic sentence normally introduces the paragraph's central idea."],
-["Which sentence best supports a paragraph about exercise?",["My favorite color is blue.","Exercise can reduce stress and improve energy.","Yesterday I bought a phone.","Some cities are crowded."],1,"The sentence directly develops the paragraph topic."]
-],
-writingTask:"Write a 120-word paragraph about one benefit of learning English. Include a topic sentence, at least three supporting details, an example, and a concluding sentence."
-},
-
 {
 id:"wi2",
-title:"Descriptive Paragraphs",
-description:"Use specific details to make descriptions effective.",
-teach:{
-intro:"Effective descriptive writing helps readers imagine a person, place, object, or experience. Instead of relying only on general adjectives, include specific details about appearance, sound, movement, atmosphere, and personal impressions.",
-examples:[
-"The classroom was small but bright.",
-"Sunlight entered through the large windows.",
-"Students quietly discussed their assignments while the teacher wrote examples on the board."
-],
-tips:[
-"Choose specific details.",
-"Use precise adjectives and verbs.",
-"Organize details logically.",
-"Show the reader what you mean."
-]
-},
-questions:[
-["Which sentence gives the most specific description?",["The room was nice.","The room was very good.","The narrow room had two large windows overlooking the busy street.","The room was okay."],2,"The third sentence provides concrete visual details."],
-["What is useful in descriptive writing?",["Only general adjectives","Specific sensory details","Unrelated facts","Repeated sentences"],1,"Specific details make descriptions clearer and more vivid."]
-],
-writingTask:"Write 120–150 words describing a place where you study, work, or relax."
-},
-
-{
-id:"wi3",
-title:"Narrative Writing",
-description:"Tell a clear story using sequence and detail.",
-teach:{
-intro:"Narrative writing tells a sequence of events. A clear narrative usually establishes the situation, explains what happened, describes important details, and shows the outcome.",
-examples:[
-"At first, I was nervous about the interview.",
-"After I entered the room, the interviewer greeted me warmly.",
-"Although I made one mistake, I continued calmly.",
-"In the end, I felt proud that I had tried."
-],
-tips:[
-"Use time expressions such as first, then, after that, and finally.",
-"Keep events in a logical order.",
-"Use past tenses for completed events.",
-"Include important details rather than every small event."
-]
-},
-questions:[
-["Which expression clearly signals the final stage of a story?",["First","Meanwhile","Finally","Because"],2,"Finally commonly introduces the last stage or outcome."],
-["Which tense is commonly used for completed past events?",["Present simple","Past simple","Future simple","Present continuous"],1,"The past simple commonly describes completed past events."]
-],
-writingTask:"Write 150 words about a memorable day in your life. Organize the events from beginning to end."
-},
-
-{
-id:"wi4",
 title:"Formal Emails",
-description:"Write professional emails with an appropriate tone.",
-teach:{
-intro:"A formal email should have a clear purpose, appropriate greeting, organized information, polite requests, and a professional closing.",
-examples:[
-"Dear Professor Ahmed,",
-"I am writing to ask about the deadline for the upcoming assignment.",
-"Could you please confirm whether the assignment should be submitted through the learning platform?",
-"Kind regards,",
-"Suliman"
-],
-tips:[
-"Use a professional greeting.",
-"State the purpose early.",
-"Use polite request forms.",
-"Proofread before sending."
-]
-},
+description:"Use an appropriate professional tone.",
+teach:{intro:"Formal emails should be clear, respectful and appropriately structured.",examples:["Dear Professor,","I am writing to ask about...","Kind regards,"]},
 questions:[
-["Which opening is most appropriate for a professor?",["Hey!!!","Yo professor","Dear Professor,","What's up?"],2,"Dear Professor is an appropriate formal opening."],
-["Which request is most professional?",["Tell me the deadline.","I need the deadline now.","Could you please confirm the deadline?","When is it?"],2,"Could you please confirm is polite and professional."]
-],
-writingTask:"Write a 120–150 word formal email to a university instructor asking for clarification about an assignment."
-},
-
-{
-id:"wi5",
-title:"Opinion Writing",
-description:"Express an opinion and support it with reasons.",
-teach:{
-intro:"An effective opinion paragraph states a clear position and develops it with relevant reasons and examples. The writer should explain why the reasons support the opinion.",
-examples:[
-"I believe that regular reading is valuable for English learners.",
-"First, reading exposes learners to vocabulary in context.",
-"Second, it helps learners notice natural sentence patterns.",
-"For example, reading short articles every day can gradually improve comprehension."
-],
-tips:[
-"State your opinion clearly.",
-"Give more than one relevant reason.",
-"Explain your reasons.",
-"Use examples."
+["Which opening is most appropriate for a professor?",["Hey!!!","Yo professor","Dear Professor,","What's up?"],2,"Dear Professor is a professional opening."]
 ]
-},
-questions:[
-["What should an opinion paragraph normally contain?",["Only an opinion","An opinion supported by reasons and explanation","Only questions","A list of unrelated facts"],1,"Reasons and explanations develop the writer's position."],
-["Which expression clearly introduces an opinion?",["I believe that","For example","As a result","In contrast"],0,"I believe that directly introduces an opinion."]
-],
-writingTask:"Write 150 words answering: 'Is daily reading important for English learners?' Give at least two reasons and one example."
-},
-
-{
-id:"wi6",
-title:"Advantages & Disadvantages",
-description:"Compare positive and negative aspects of an issue.",
-teach:{
-intro:"Advantages-and-disadvantages writing presents different sides of an issue. Clear organization and balanced development help readers understand the discussion.",
-examples:[
-"Online learning offers several advantages. It provides flexibility and allows learners to access materials from different locations.",
-"However, it can also create challenges. Some learners may find it difficult to remain motivated without direct classroom interaction."
-],
-tips:[
-"Introduce the topic.",
-"Separate advantages from disadvantages.",
-"Use contrast connectors such as however and on the other hand.",
-"Support points with explanations or examples."
-]
-},
-questions:[
-["Which connector clearly introduces contrast?",["Furthermore","However","For example","Therefore"],1,"However signals contrast."],
-["What makes an advantages/disadvantages discussion stronger?",["Only listing points","Explaining and supporting the points","Repeating the title","Using unrelated examples"],1,"Explanation and support develop the ideas."]
-],
-writingTask:"Write 180–200 words discussing the advantages and disadvantages of online English learning."
 }
-
 ],
-
 advanced:[
-
 {
 id:"wa1",
-title:"Thesis Statements",
-description:"Develop focused and arguable academic thesis statements.",
-teach:{
-intro:"A strong academic thesis communicates the central claim or position of an essay. It should be focused enough to guide the discussion and specific enough to be developed with evidence.",
-examples:[
-"Weak: Education is important.",
-"Stronger: Access to quality education can improve social and economic opportunities for young people.",
-"Focused: This essay argues that consistent access to quality English education can expand academic and professional opportunities for Afghan students."
-],
-tips:[
-"Avoid extremely broad claims.",
-"Make the central idea specific.",
-"Ensure the thesis can be developed with evidence.",
-"Do not simply announce a topic."
+title:"Academic Thesis Statements",
+description:"Make a clear, arguable central claim.",
+teach:{intro:"An academic thesis should communicate a focused position or claim that can be supported with evidence.",examples:["This essay argues that..."]},
+questions:[
+["Which is the strongest academic thesis?",["Education is good.","This essay argues that access to education significantly affects social mobility.","I like education.","Education is something everyone knows."],1,"It presents a focused, arguable claim."]
 ]
 },
-questions:[
-["Which is the most focused thesis?",["Education is good.","This essay is about education.","Access to quality education can expand academic and professional opportunities.","Education is something people need."],2,"The third statement presents a focused claim that can be developed."],
-["A strong thesis should primarily:",["Repeat the title","Guide the central argument","List every sentence","Avoid making any claim"],1,"The thesis provides direction for the essay's central argument."]
-],
-writingTask:"Write three possible thesis statements for an essay about the impact of technology on education. Then select the most focused one and explain why."
-},
-
 {
 id:"wa2",
-title:"Academic Paragraph Development",
-description:"Develop claims through reasoning, evidence, and explanation.",
-teach:{
-intro:"Advanced paragraphs should do more than state ideas. A useful structure is claim → evidence or example → explanation → implication. Each sentence should contribute to the paragraph's central purpose.",
-examples:[
-"Regular formative feedback can improve student learning.",
-"For example, timely comments allow learners to identify specific weaknesses before completing another task.",
-"This feedback is useful because it connects performance with practical next steps.",
-"Consequently, feedback becomes part of the learning process rather than simply a final judgment."
-],
-tips:[
-"Make the claim clear.",
-"Use relevant evidence or examples.",
-"Explain how the evidence supports the claim.",
-"Connect the paragraph back to the broader argument."
-]
-},
-questions:[
-["What should normally follow evidence in an analytical paragraph?",["Unrelated information","Explanation of its significance","A new title","A greeting"],1,"Explanation shows how the evidence supports the argument."],
-["Which sequence is most useful for analytical development?",["Claim → evidence → explanation","Conclusion → greeting → claim","Example → unrelated idea → title","Question → emoji → conclusion"],0,"Claim, evidence, and explanation form a useful analytical sequence."]
-],
-writingTask:"Write a 180-word analytical paragraph explaining how regular feedback can help language learners improve."
-},
-
-{
-id:"wa3",
-title:"Cohesion & Coherence",
-description:"Create logical connections across an essay.",
-teach:{
-intro:"Coherence concerns the logical organization of ideas, while cohesion concerns the language that connects those ideas. Good academic writing guides readers through the argument.",
-examples:[
-"Many learners struggle with consistency. However, the problem is not always a lack of motivation. In some cases, learners face limited access to suitable materials. Therefore, flexible learning resources may help address the problem."
-],
-tips:[
-"Organize ideas logically.",
-"Use appropriate transition signals.",
-"Repeat key terms strategically.",
-"Use pronouns and referencing carefully."
-]
-},
-questions:[
-["Which word signals a result?",["However","Nevertheless","Therefore","Although"],2,"Therefore commonly introduces a result or conclusion."],
-["Which sentence creates the clearest logical connection?",["The course is useful. Therefore, students can practice regularly.","The course is useful. Banana students practice.","The course is useful. However because therefore.","The course useful and unrelated."],0,"Therefore clearly connects the first idea with its result."]
-],
-writingTask:"Write 200 words explaining why coherence is important in academic writing. Use at least six appropriate linking expressions."
-},
-
-{
-id:"wa4",
-title:"Paraphrasing",
-description:"Express source ideas accurately in your own language.",
-teach:{
-intro:"Paraphrasing means restating an idea from a source using substantially different wording and sentence structure while preserving the original meaning. A paraphrase should still acknowledge the source when required.",
-examples:[
-"Source idea: Regular practice helps learners develop stronger language habits.",
-"Paraphrase: Consistent practice can gradually help students establish more effective patterns of language use."
-],
-tips:[
-"Understand the original meaning first.",
-"Change vocabulary appropriately.",
-"Change sentence structure when useful.",
-"Do not simply replace a few words with synonyms.",
-"Credit the original source when required."
-]
-},
-questions:[
-["Which approach is the best paraphrase strategy?",["Replace every word with a synonym","Copy the sentence exactly","Understand the idea and restate it using different wording and structure","Remove the source"],2,"A good paraphrase preserves meaning while substantially changing expression."],
-["Why should a source still be acknowledged after paraphrasing?",["Because the underlying idea came from the source","Because paraphrasing makes the source disappear","Because citations are only for quotations","Because the original words must remain"],0,"The underlying idea still belongs to the source."]
-],
-writingTask:"Paraphrase three short academic statements provided by your instructor or textbook. After each paraphrase, explain what you changed."
-},
-
-{
-id:"wa5",
-title:"Summarizing Sources",
-description:"Reduce a longer text to its essential ideas.",
-teach:{
-intro:"A summary presents the central ideas of a source in a shorter form. It should focus on the most important information rather than reproduce every detail.",
-examples:[
-"Original text: A long article discusses several benefits of regular reading, including vocabulary growth, improved comprehension, exposure to grammar patterns, and greater familiarity with academic language.",
-"Summary: Regular reading can support vocabulary, comprehension, grammatical awareness, and academic language development."
-],
-tips:[
-"Identify the main idea first.",
-"Select only important supporting points.",
-"Use your own wording.",
-"Keep the summary significantly shorter than the original."
-]
-},
-questions:[
-["What should a good summary emphasize?",["Every minor detail","The source's central ideas","Personal stories unrelated to the source","Only the title"],1,"A summary focuses on the central ideas."],
-["A summary should normally be:",["Longer than the source","About the same length","Much shorter while preserving key ideas","Unrelated to the source"],2,"A summary condenses the source while retaining important information."]
-],
-writingTask:"Write a 100–120 word summary of a short academic reading you are currently studying. Identify the source clearly."
-},
-
-{
-id:"wa6",
 title:"Hedging & Academic Tone",
-description:"Make academic claims appropriately precise and cautious.",
-teach:{
-intro:"Academic writing often uses cautious language when evidence does not justify absolute claims. Expressions such as may, might, appears to, suggests, and is likely to help writers distinguish evidence from certainty.",
-examples:[
-"Too absolute: Technology always improves learning.",
-"More cautious: Technology may improve learning when it is used purposefully.",
-"The findings appear to suggest a relationship between regular practice and improved performance."
-],
-tips:[
-"Do not make stronger claims than your evidence supports.",
-"Use may, might, could, appears to, and suggests when appropriate.",
-"Distinguish evidence from interpretation."
-]
-},
+description:"Make claims precise and appropriately cautious.",
+teach:{intro:"Academic writing often uses cautious language when evidence does not justify absolute claims.",examples:["The evidence appears to suggest...","The findings may indicate..."]},
 questions:[
-["Which sentence uses appropriate academic hedging?",["This proves everything.","The findings may indicate a relationship.","Everyone agrees this is true.","This always causes the same result."],1,"May indicate appropriately limits the strength of the claim."],
-["Which expression is most cautious?",["Definitely proves","Always demonstrates","May suggest","Absolutely confirms"],2,"May suggest expresses a possibility rather than certainty."]
-],
-writingTask:"Write 200 words discussing one educational claim using appropriately cautious academic language. Include at least five hedging expressions."
+["Which phrase uses appropriate academic hedging?",["This proves everything.","The findings may indicate a relationship.","This is always true.","Everyone agrees."],1,"May indicate appropriately limits the strength of the claim."]
+]
 }
-
 ]
 },
+
 reading:{
 beginner:[
 {
@@ -1069,374 +666,6 @@ startQuiz(mode);
 }
 }
 
-function isWritingLesson(lesson){
-return currentSkill==="writing" && !!lesson.writingTask;
-}
-
-function getWritingDraftKey(lesson){
-return "wordup-writing-draft-"+lesson.id;
-}
-
-function getWritingDraft(lesson){
-try{
-return localStorage.getItem(getWritingDraftKey(lesson))||"";
-}catch(e){
-return "";
-}
-}
-
-function saveWritingDraft(){
-if(!currentLesson)return;
-
-const box=document.getElementById("writingResponse");
-
-if(!box)return;
-
-try{
-localStorage.setItem(
-getWritingDraftKey(currentLesson),
-box.value
-);
-}catch(e){
-console.warn("WordUp: unable to save writing draft.",e);
-}
-
-updateWritingCounter();
-}
-
-function clearWritingDraft(){
-if(!currentLesson)return;
-
-const box=document.getElementById("writingResponse");
-
-if(!box)return;
-
-if(!confirm("Clear your writing draft?")){
-return;
-}
-
-box.value="";
-
-try{
-localStorage.removeItem(getWritingDraftKey(currentLesson));
-}catch(e){
-console.warn("WordUp: unable to clear writing draft.",e);
-}
-
-updateWritingCounter();
-renderWritingFeedback("");
-}
-
-function countWritingWords(text){
-const cleaned=text.trim();
-
-if(!cleaned){
-return 0;
-}
-
-return cleaned.split(/\s+/).filter(Boolean).length;
-}
-
-function countWritingSentences(text){
-if(!text.trim()){
-return 0;
-}
-
-const matches=text.match(/[.!?]+(?=\s|$)/g);
-
-return matches?matches.length:0;
-}
-
-function getWritingRange(task){
-const match=task.match(/(\d+)\s*[–-]\s*(\d+)\s*words/i);
-
-if(match){
-return {
-min:parseInt(match[1],10),
-max:parseInt(match[2],10)
-};
-}
-
-const single=task.match(/(\d+)\s*words?/i);
-
-if(single){
-const value=parseInt(single[1],10);
-
-return {
-min:Math.max(1,value-20),
-max:value+20
-};
-}
-
-return {
-min:1,
-max:Infinity
-};
-}
-
-function evaluateWriting(text,task){
-const wordCount=countWritingWords(text);
-const sentenceCount=countWritingSentences(text);
-const range=getWritingRange(task);
-
-const feedback=[];
-let points=0;
-
-if(wordCount===0){
-
-feedback.push({
-type:"warning",
-text:"Start by writing your response in the box above."
-});
-
-}else{
-
-if(wordCount>=range.min){
-points++;
-feedback.push({
-type:"good",
-text:"Your response meets the minimum word-length target."
-});
-}else{
-feedback.push({
-type:"warning",
-text:"Your response is below the recommended word count."
-});
-}
-
-if(range.max!==Infinity){
-
-if(wordCount<=range.max){
-points++;
-feedback.push({
-type:"good",
-text:"Your response is within the recommended word range."
-});
-}else{
-feedback.push({
-type:"warning",
-text:"Your response is longer than the recommended word range."
-});
-}
-
-}
-
-if(sentenceCount>=3){
-points++;
-feedback.push({
-type:"good",
-text:"You have written multiple complete sentences."
-});
-}else{
-feedback.push({
-type:"warning",
-text:"Try to develop your response with at least three sentences."
-});
-}
-
-const trimmed=text.trim();
-
-if(/^[A-Z]/.test(trimmed)){
-points++;
-feedback.push({
-type:"good",
-text:"Your response begins with a capital letter."
-});
-}else{
-feedback.push({
-type:"warning",
-text:"Check capitalization at the beginning of your response."
-});
-}
-
-if(/[.!?]$/.test(trimmed)){
-points++;
-feedback.push({
-type:"good",
-text:"Your response ends with punctuation."
-});
-}else{
-feedback.push({
-type:"warning",
-text:"Remember to use appropriate punctuation at the end."
-});
-}
-
-const repeatedSpaces=/\s{2,}/.test(text);
-
-if(!repeatedSpaces){
-points++;
-feedback.push({
-type:"good",
-text:"Spacing looks consistent."
-});
-}else{
-feedback.push({
-type:"warning",
-text:"Check for repeated spaces."
-});
-}
-
-}
-
-return {
-wordCount,
-sentenceCount,
-points,
-maxPoints:6,
-feedback
-};
-}
-
-function renderWritingFeedback(text){
-const box=document.getElementById("writingFeedback");
-
-if(!box)return;
-
-if(!text.trim()){
-
-box.innerHTML="";
-
-return;
-}
-
-const result=evaluateWriting(
-text,
-currentLesson?currentLesson.writingTask:""
-);
-
-const percent=Math.round(
-(result.points/result.maxPoints)*100
-);
-
-let heading="Keep developing your response.";
-
-if(percent>=85){
-heading="Excellent work! Your response meets several important writing checks.";
-}else if(percent>=65){
-heading="Good progress! A few areas can still be improved.";
-}else if(percent>=40){
-heading="You have a useful start. Review the feedback below.";
-}
-
-box.innerHTML=`
-<div class="writing-feedback-box">
-<h3>📝 Writing Feedback</h3>
-<p><strong>${heading}</strong></p>
-<div class="writing-stats">
-<span>Words: <b>${result.wordCount}</b></span>
-<span>Sentences: <b>${result.sentenceCount}</b></span>
-<span>Checks passed: <b>${result.points}/${result.maxPoints}</b></span>
-</div>
-<div class="writing-feedback-list">
-${result.feedback.map(item=>`
-<div class="writing-feedback-item ${item.type}">
-${item.type==="good"?"✓":"•"} ${escapeHtml(item.text)}
-</div>
-`).join("")}
-</div>
-<p class="muted writing-feedback-note">
-This is automated practice feedback. It checks basic writing features and does not replace detailed teacher or instructor feedback.
-</p>
-</div>
-`;
-}
-
-function updateWritingCounter(){
-const box=document.getElementById("writingResponse");
-const counter=document.getElementById("writingWordCount");
-
-if(!box||!counter)return;
-
-const count=countWritingWords(box.value);
-
-const range=getWritingRange(
-currentLesson?currentLesson.writingTask:""
-);
-
-let target="";
-
-if(range.max===Infinity){
-target=`Recommended minimum: ${range.min} words`;
-}else if(range.min===range.max){
-target=`Target: ${range.min} words`;
-}else{
-target=`Target: ${range.min}–${range.max} words`;
-}
-
-counter.innerHTML=`
-<span><b>${count}</b> words</span>
-<span>${target}</span>
-`;
-
-try{
-localStorage.setItem(
-getWritingDraftKey(currentLesson),
-box.value
-);
-}catch(e){}
-}
-
-function submitWritingTask(){
-if(!currentLesson||!isWritingLesson(currentLesson)){
-return;
-}
-
-const box=document.getElementById("writingResponse");
-
-if(!box){
-return;
-}
-
-const text=box.value.trim();
-
-if(!text){
-
-alert("Please write your response before checking it.");
-
-return;
-}
-
-renderWritingFeedback(text);
-
-const result=evaluateWriting(
-text,
-currentLesson.writingTask
-);
-
-if(result.wordCount>0){
-
-const rewardKey=
-"wordup-writing-reward-"+currentLesson.id;
-
-let alreadyRewarded=false;
-
-try{
-alreadyRewarded=
-localStorage.getItem(rewardKey)==="1";
-}catch(e){}
-
-if(!alreadyRewarded){
-
-addXP(10);
-
-try{
-localStorage.setItem(rewardKey,"1");
-}catch(e){}
-
-}
-
-}
-
-const feedback=document.getElementById("writingFeedback");
-
-if(feedback){
-feedback.scrollIntoView({
-behavior:"smooth",
-block:"nearest"
-});
-}
-}
 function renderLearn(){
 const lesson=currentLesson;
 
@@ -1445,218 +674,67 @@ document.getElementById("activityLabel").textContent=
 
 const total=lesson.items?lesson.items.length:1;
 const progress=Math.round((learnStep/total)*100);
-
-document.getElementById("lessonProgressBar").style.width=
-progress+"%";
+document.getElementById("lessonProgressBar").style.width=progress+"%";
 
 let html="";
 
-if(lesson.items){
-
-const item=lesson.items[learnStep];
-
-if(!item){
+if(learnStep===0){
 html=`
 <h1>${escapeHtml(lesson.title)}</h1>
 <p class="muted">${escapeHtml(lesson.description)}</p>
+<div class="teach-card">
+<strong>Teacher's note</strong>
+<p>${escapeHtml(lesson.teach.intro)}</p>
+</div>`;
+
+if(lesson.passage){
+html+=`<h2>Read</h2><p>${escapeHtml(lesson.passage)}</p>`;
+}
+
+if(lesson.audio){
+html+=`
+<h2>Listen</h2>
+<button class="primary" onclick="speak(${JSON.stringify(lesson.audio)})">🔊 Play audio</button>
+<div class="teach-card"><small>${escapeHtml(lesson.audio)}</small></div>`;
+}
+
+if(lesson.teach.examples){
+html+=`<h2>Examples</h2>`+
+lesson.teach.examples.map(x=>`<div class="example">${escapeHtml(x)}</div>`).join("");
+}
+
+if(lesson.items){
+html+=`<p><b>${lesson.items.length} items</b> will be introduced in this lesson.</p>`;
+}
+
+}else if(lesson.items){
+
+const item=lesson.items[learnStep-1];
+
+html=`
+<div class="word-display">${escapeHtml(item[0])}</div>
+<div class="ipa">${escapeHtml(item[1])}</div>
+<div class="translation">${escapeHtml(item[2])}</div>
+<div class="teach-card">
+<b>Example</b>
+<div class="example">${escapeHtml(item[3])}</div>
+<div style="font-size:42px;margin-top:12px">${item[4]}</div>
+</div>
+<button class="secondary" onclick="speak(${JSON.stringify(item[0])})">🔊 Hear pronunciation</button>
+`;
+
+}else{
+html=`
+<h1>${escapeHtml(lesson.title)}</h1>
 <div class="teach-card">
 ${escapeHtml(lesson.teach.intro)}
 </div>
 `;
-}else{
-
-html=`
-<h1>${escapeHtml(lesson.title)}</h1>
-<p class="muted">${escapeHtml(lesson.description)}</p>
-
-<div class="word-display">
-${escapeHtml(item[0])}
-</div>
-
-<div class="ipa">
-${escapeHtml(item[1])}
-</div>
-
-<div class="translation">
-${escapeHtml(item[2])}
-</div>
-
-<div class="teach-card">
-<b>Example</b>
-<div class="example">
-${escapeHtml(item[3])}
-</div>
-
-<div style="font-size:42px;margin-top:12px">
-${item[4]}
-</div>
-</div>
-
-<button
-class="secondary wordup-sound-button"
-type="button"
-data-wordup-sound="${escapeHtml(item[0])}">
-🔊 Hear pronunciation
-</button>
-`;
-}
-
-}else{
-
-html=`
-<h1>${escapeHtml(lesson.title)}</h1>
-<p class="muted">${escapeHtml(lesson.description)}</p>
-
-<div class="teach-card">
-<strong>Teacher's note</strong>
-<p>${escapeHtml(lesson.teach.intro)}</p>
-</div>
-`;
-
-if(lesson.passage){
-
-html+=`
-<h2>Read</h2>
-<p>${escapeHtml(lesson.passage)}</p>
-`;
-
-}
-
-if(lesson.audio){
-
-html+=`
-<h2>Listen</h2>
-
-<button
-class="primary wordup-sound-button"
-type="button"
-data-wordup-sound="${escapeHtml(lesson.audio)}">
-🔊 Play audio
-</button>
-
-<div class="teach-card">
-<small>${escapeHtml(lesson.audio)}</small>
-</div>
-`;
-
-}
-
-if(lesson.teach.examples){
-
-html+=`
-<h2>Examples</h2>
-`+
-lesson.teach.examples.map(x=>
-`<div class="example">${escapeHtml(x)}</div>`
-).join("");
-
-}
-
-if(lesson.teach.tips){
-
-html+=`
-<h2>💡 Writing Tips</h2>
-<div class="writing-tips-card">
-<ul>
-${
-lesson.teach.tips.map(x=>
-`<li>${escapeHtml(x)}</li>`
-).join("")
-}
-</ul>
-</div>
-`;
-
-}
-
-if(isWritingLesson(lesson)){
-
-const savedDraft=getWritingDraft(lesson);
-
-html+=`
-<section class="writing-workspace">
-
-<div class="writing-task-card">
-
-<div class="writing-task-heading">
-<span class="writing-task-icon">✍️</span>
-<div>
-<h2>Writing Task</h2>
-<p class="muted">
-Complete the task below using your own English.
-</p>
-</div>
-</div>
-
-<div class="writing-task-prompt">
-${escapeHtml(lesson.writingTask)}
-</div>
-
-</div>
-
-<div class="writing-editor-card">
-
-<label
-for="writingResponse"
-class="writing-editor-label">
-Your Response
-</label>
-
-<textarea
-id="writingResponse"
-class="writing-response"
-placeholder="Start writing here..."
-oninput="updateWritingCounter()">${escapeHtml(savedDraft)}</textarea>
-
-<div class="writing-editor-footer">
-
-<div
-id="writingWordCount"
-class="writing-word-count">
-<span><b>0</b> words</span>
-<span>Recommended length</span>
-</div>
-
-<div class="writing-actions">
-
-<button
-class="secondary"
-type="button"
-onclick="clearWritingDraft()">
-🗑️ Clear
-</button>
-
-<button
-class="primary"
-type="button"
-onclick="submitWritingTask()">
-✓ Check My Writing
-</button>
-
-</div>
-
-</div>
-
-<div id="writingFeedback"></div>
-
-</div>
-
-</section>
-`;
-
-}
-
 }
 
 document.getElementById("lessonContent").innerHTML=html;
-
-if(isWritingLesson(lesson)){
-
-updateWritingCounter();
-
 }
 
-}
 function nextLearnStep(){
 const lesson=currentLesson;
 const total=lesson.items?lesson.items.length+1:1;
@@ -2366,28 +1444,6 @@ function speak(text){
 }
 
 // ============================================================
-
-// ============================================================
-// WORDUP SOUND BUTTON HANDLER
-// ============================================================
-
-document.addEventListener("click", function(event){
-
-    const button = event.target.closest(".wordup-sound-button");
-
-    if(!button){
-        return;
-    }
-
-    const text = button.getAttribute("data-wordup-sound");
-
-    if(!text){
-        console.warn("WordUp: sound button has no text.");
-        return;
-    }
-
-    speak(text);
-});
 // HELPERS
 // ============================================================
 
@@ -4379,234 +3435,4 @@ function wordUpOpenGoogleAnalytics() {
         "noopener,noreferrer"
     );
 }
-
-/* WORDUP CLEAN HOME DATA BRIDGE */
-
-(function () {
-
-    function numberValue(value) {
-        var n = Number(value);
-        return Number.isFinite(n) ? n : 0;
-    }
-
-    function setText(id, value) {
-        var el = document.getElementById(id);
-        if (el) el.textContent = value;
-    }
-
-    function setBar(id, value) {
-        var el = document.getElementById(id);
-        if (el) el.style.width = Math.max(0, Math.min(100, value)) + "%";
-    }
-
-    function loadWordUpHomeStats() {
-
-        try {
-
-            var raw =
-                localStorage.getItem("wordup_v12_progress") ||
-                localStorage.getItem("wordup_progress");
-
-            if (!raw) return;
-
-            var data = JSON.parse(raw) || {};
-
-            var xp =
-                numberValue(data.xp) ||
-                numberValue(data.totalXP) ||
-                numberValue(data.experience);
-
-            var streak =
-                numberValue(data.streak) ||
-                numberValue(data.currentStreak);
-
-            var tests = 0;
-
-            if (Array.isArray(data.tests)) {
-                tests = data.tests.length;
-            } else if (data.tests && typeof data.tests === "object") {
-                tests = Object.keys(data.tests).length;
-            } else {
-                tests =
-                    numberValue(data.testsPassed) ||
-                    numberValue(data.passedTests);
-            }
-
-            var mastery =
-                numberValue(data.mastery) ||
-                numberValue(data.overallMastery) ||
-                numberValue(data.progress);
-
-            setText("wuXP", xp.toLocaleString());
-            setText("wuStreak", streak);
-            setText("wuTests", tests);
-            setText("wuMastery", Math.round(mastery) + "%");
-
-            setText("wuVocabulary", Math.round(mastery) + "%");
-            setText("wuGrammar", Math.round(mastery) + "%");
-            setText("wuReading", Math.round(mastery) + "%");
-            setText("wuListening", Math.round(mastery) + "%");
-            setText("wuWriting", Math.round(mastery) + "%");
-
-            setBar("wuVocabularyBar", mastery);
-            setBar("wuGrammarBar", mastery);
-            setBar("wuReadingBar", mastery);
-            setBar("wuListeningBar", mastery);
-            setBar("wuWritingBar", mastery);
-
-        } catch (error) {
-
-            console.warn("WordUp Home stats could not be loaded.", error);
-
-        }
-
-    }
-
-    function initWordUpCleanHome() {
-
-        loadWordUpHomeStats();
-
-        setTimeout(loadWordUpHomeStats, 500);
-        setTimeout(loadWordUpHomeStats, 1500);
-
-    }
-
-    if (document.readyState === "loading") {
-        document.addEventListener(
-            "DOMContentLoaded",
-            initWordUpCleanHome
-        );
-    } else {
-        initWordUpCleanHome();
-    }
-
-    window.wordUpRefreshHome = loadWordUpHomeStats;
-
-})();
-
-
-
-/* ==================================================
-   WORDUP MAIN NAV CONTROLLER
-   ================================================== */
-
-(function () {
-
-    function updateWordUpNavigation(screenId) {
-
-        var buttons = document.querySelectorAll(".wu-nav-link");
-
-        buttons.forEach(function (button) {
-            button.classList.remove("active");
-        });
-
-        var map = {
-            home: "home",
-            curriculum: "curriculum",
-            practice: "practice",
-            dashboard: "dashboard",
-            profile: "profile"
-        };
-
-        var target = map[screenId];
-
-        if (!target) {
-            return;
-        }
-
-        var button = document.querySelector(
-            '.wu-nav-link[data-wu-nav="' + target + '"]'
-        );
-
-        if (button) {
-            button.classList.add("active");
-        }
-
-    }
-
-    window.wordUpUpdateNavigation = updateWordUpNavigation;
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        updateWordUpNavigation("home");
-
-    });
-
-
-    var originalShowScreen = window.showScreen;
-
-    if (typeof originalShowScreen === "function") {
-
-        window.showScreen = function (screenId) {
-
-            var result = originalShowScreen.apply(this, arguments);
-
-            updateWordUpNavigation(screenId);
-
-            return result;
-
-        };
-
-    }
-
-})();
-
-
-/* ==================================================
-   WORDUP PROFILE DATA SYNC
-   ================================================== */
-
-(function () {
-
-    function syncWordUpProfile() {
-
-        var xp = document.getElementById("wuXP");
-        var streak = document.getElementById("wuStreak");
-        var mastery = document.getElementById("wuMastery");
-        var tests = document.getElementById("wuTestsPassed");
-
-        var navXP = document.getElementById("wuNavXP");
-
-        var profileXP = document.getElementById("wuProfileXP");
-        var profileStreak = document.getElementById("wuProfileStreak");
-        var profileMastery = document.getElementById("wuProfileMastery");
-        var profileTests = document.getElementById("wuProfileTests");
-
-
-        if (xp && navXP) {
-            navXP.textContent = xp.textContent || "0";
-        }
-
-        if (xp && profileXP) {
-            profileXP.textContent = xp.textContent || "0";
-        }
-
-        if (streak && profileStreak) {
-            profileStreak.textContent = streak.textContent || "0";
-        }
-
-        if (mastery && profileMastery) {
-            profileMastery.textContent = mastery.textContent || "0%";
-        }
-
-        if (tests && profileTests) {
-            profileTests.textContent = tests.textContent || "0";
-        }
-
-    }
-
-
-    window.wordUpSyncProfile = syncWordUpProfile;
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        syncWordUpProfile();
-
-        setInterval(syncWordUpProfile, 1000);
-
-    });
-
-})();
 
