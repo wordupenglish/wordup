@@ -81,10 +81,10 @@ test:[
 ],
 review:[
 "Conjunctions connect ideas.",
-"And" adds information.",
-"But" shows contrast.",
-"Or" gives a choice.",
-"Because" gives a reason."
+"And adds information.",
+"But shows contrast.",
+"Or gives a choice.",
+"Because gives a reason."
 ],
 mastery:"You can use basic conjunctions to connect simple ideas clearly and logically.",
 nextLesson:"foundation-grammar-questions",
@@ -397,3 +397,5 @@ window.WORDUP_FOUNDATION_CONTENT = [
 ];
 
 console.log("Foundation Grammar batch 4 loaded:", WORDUP_FOUNDATION_GRAMMAR_4.length);
+
+

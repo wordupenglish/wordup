@@ -2485,3 +2485,456 @@ body.dark .wordup-review-checklist div{
 
 }
 
+
+/* WORDUP FINAL UI REPAIR 2026-10-07
+   Clean professional learner interface
+   Navigation is intentionally isolated from generic .active styles.
+*/
+
+:root{
+    --wu-bg:#f4f6fa;
+    --wu-surface:#ffffff;
+    --wu-surface-soft:#f8f9fc;
+    --wu-text:#172033;
+    --wu-muted:#687386;
+    --wu-border:#e3e7ef;
+    --wu-accent:#315efb;
+    --wu-accent-hover:#264ed8;
+    --wu-accent-soft:#eef2ff;
+    --wu-shadow:0 8px 28px rgba(20,32,55,.07);
+}
+
+body{
+    background:var(--wu-bg);
+    color:var(--wu-text);
+}
+
+/* ------------------------------------------------------------
+   TOP WORDUP NAVIGATION
+------------------------------------------------------------ */
+
+.wu-nav{
+    background:var(--wu-surface) !important;
+    border-bottom:1px solid var(--wu-border) !important;
+    box-shadow:0 2px 14px rgba(20,32,55,.04);
+}
+
+.wu-nav-logo{
+    color:var(--wu-text) !important;
+}
+
+.wu-nav-logo-mark{
+    background:var(--wu-accent) !important;
+    color:#fff !important;
+    box-shadow:0 4px 12px rgba(49,94,251,.20);
+}
+
+.wu-nav-logo-text strong{
+    color:var(--wu-text) !important;
+}
+
+.wu-nav-logo-text small{
+    color:var(--wu-muted) !important;
+}
+
+/* Normal navigation button */
+.wu-nav-link{
+    position:relative !important;
+    border:0 !important;
+    background:transparent !important;
+    color:var(--wu-muted) !important;
+    opacity:1 !important;
+    font-weight:650 !important;
+    border-radius:10px !important;
+    transition:
+        color .18s ease,
+        background .18s ease,
+        transform .18s ease !important;
+}
+
+/* Hover */
+.wu-nav-link:hover{
+    color:var(--wu-text) !important;
+    background:var(--wu-surface-soft) !important;
+}
+
+/* ACTIVE NAVIGATION ONLY */
+.wu-nav-link.active{
+    color:var(--wu-accent) !important;
+    background:var(--wu-accent-soft) !important;
+    font-weight:750 !important;
+    opacity:1 !important;
+    box-shadow:none !important;
+}
+
+/* Small active indicator */
+.wu-nav-link.active::after{
+    content:"";
+    position:absolute;
+    left:18%;
+    right:18%;
+    bottom:4px;
+    height:2px;
+    border-radius:99px;
+    background:var(--wu-accent);
+}
+
+/* Never allow generic active styles to leak into nav */
+.wu-nav-link.active,
+.wu-nav-link.active:hover,
+.wu-nav-link.active:focus{
+    transform:none !important;
+}
+
+/* XP */
+.wu-nav-xp{
+    background:var(--wu-accent-soft) !important;
+    color:var(--wu-accent) !important;
+    border:1px solid rgba(49,94,251,.10) !important;
+    border-radius:10px !important;
+}
+
+/* Theme button */
+.wu-nav-theme{
+    background:var(--wu-surface-soft) !important;
+    color:var(--wu-text) !important;
+    border:1px solid var(--wu-border) !important;
+    border-radius:10px !important;
+}
+
+.wu-nav-theme:hover{
+    background:var(--wu-accent-soft) !important;
+    color:var(--wu-accent) !important;
+}
+
+/* ------------------------------------------------------------
+   LIGHT MODE â€” CLEANER CARDS / SURFACES
+------------------------------------------------------------ */
+
+.card,
+.panel,
+.stat-card,
+.practice-card,
+.lesson-card,
+.dashboard-card,
+.profile-card{
+    border-color:var(--wu-border);
+}
+
+.wu-course-hero,
+.wu-level-card,
+.wu-skill-card,
+.wu-session-card{
+    background:var(--wu-surface);
+    border-color:var(--wu-border);
+    box-shadow:var(--wu-shadow);
+}
+
+/* ------------------------------------------------------------
+   DARK MODE
+------------------------------------------------------------ */
+
+body.dark{
+    --wu-bg:#0b1018;
+    --wu-surface:#141b26;
+    --wu-surface-soft:#1a2331;
+    --wu-text:#f3f6fb;
+    --wu-muted:#aab5c5;
+    --wu-border:#293445;
+    --wu-accent:#6d8cff;
+    --wu-accent-hover:#829cff;
+    --wu-accent-soft:rgba(109,140,255,.13);
+
+    background:var(--wu-bg) !important;
+    color:var(--wu-text) !important;
+}
+
+body.dark .wu-nav{
+    background:#111823 !important;
+    border-bottom-color:#293445 !important;
+    box-shadow:0 2px 18px rgba(0,0,0,.22);
+}
+
+body.dark .wu-nav-logo,
+body.dark .wu-nav-logo-text strong{
+    color:var(--wu-text) !important;
+}
+
+body.dark .wu-nav-logo-text small{
+    color:var(--wu-muted) !important;
+}
+
+body.dark .wu-nav-link{
+    color:var(--wu-muted) !important;
+    background:transparent !important;
+}
+
+body.dark .wu-nav-link:hover{
+    color:var(--wu-text) !important;
+    background:#1a2331 !important;
+}
+
+body.dark .wu-nav-link.active{
+    color:var(--wu-accent) !important;
+    background:var(--wu-accent-soft) !important;
+}
+
+body.dark .wu-nav-link.active::after{
+    background:var(--wu-accent);
+}
+
+body.dark .wu-nav-xp{
+    background:var(--wu-accent-soft) !important;
+    color:var(--wu-accent) !important;
+    border-color:rgba(109,140,255,.18) !important;
+}
+
+body.dark .wu-nav-theme{
+    background:#1a2331 !important;
+    color:var(--wu-text) !important;
+    border-color:#293445 !important;
+}
+
+/* ------------------------------------------------------------
+   MOBILE NAV
+------------------------------------------------------------ */
+
+@media (max-width:760px){
+
+    .wu-nav{
+        padding-left:12px !important;
+        padding-right:12px !important;
+    }
+
+    .wu-nav-logo-text small{
+        display:none;
+    }
+
+    .wu-nav-links{
+        gap:3px !important;
+    }
+
+    .wu-nav-link{
+        padding:9px 8px !important;
+        font-size:13px !important;
+    }
+
+    .wu-nav-link.active::after{
+        left:22%;
+        right:22%;
+    }
+
+    .wu-nav-xp{
+        display:none !important;
+    }
+}
+
+/* WORDUP CLEAN NAV FINAL 20261007 */
+
+.wu-nav-link{
+    position:relative !important;
+    background:transparent !important;
+    color:var(--wu-muted,#687386) !important;
+    border:0 !important;
+    opacity:1 !important;
+    font-weight:650 !important;
+    border-radius:10px !important;
+    box-shadow:none !important;
+}
+
+.wu-nav-link:hover{
+    background:var(--wu-surface-soft,#f8f9fc) !important;
+    color:var(--wu-text,#172033) !important;
+}
+
+.wu-nav-link.active{
+    background:var(--wu-accent-soft,#eef2ff) !important;
+    color:var(--wu-accent,#315efb) !important;
+    opacity:1 !important;
+    font-weight:750 !important;
+    box-shadow:none !important;
+}
+
+.wu-nav-link.active::after{
+    content:"";
+    position:absolute;
+    left:20%;
+    right:20%;
+    bottom:4px;
+    height:2px;
+    border-radius:10px;
+    background:var(--wu-accent,#315efb);
+}
+
+body.dark .wu-nav-link{
+    background:transparent !important;
+    color:#aab5c5 !important;
+}
+
+body.dark .wu-nav-link:hover{
+    background:#1a2331 !important;
+    color:#f3f6fb !important;
+}
+
+body.dark .wu-nav-link.active{
+    background:rgba(109,140,255,.13) !important;
+    color:#6d8cff !important;
+}
+
+body.dark .wu-nav-link.active::after{
+    background:#6d8cff !important;
+}
+
+.wu-nav-theme{
+    border:1px solid var(--border,#dfe4ec) !important;
+    background:var(--surface2,#eef2f7) !important;
+    color:var(--text,#172033) !important;
+}
+
+body.dark .wu-nav-theme{
+    border-color:#293445 !important;
+    background:#1a2331 !important;
+    color:#f3f6fb !important;
+}
+
+/* Clean professional light mode */
+
+body:not(.dark){
+    background:#f4f6fa !important;
+    color:#172033 !important;
+}
+
+body:not(.dark) .topbar{
+    background:#ffffff !important;
+    border-bottom-color:#e3e7ef !important;
+}
+
+body:not(.dark) .wu-nav{
+    background:#ffffff !important;
+    border-bottom-color:#e3e7ef !important;
+}
+
+body:not(.dark) .card,
+body:not(.dark) .panel,
+body:not(.dark) .practice-card,
+body:not(.dark) .lesson-card{
+    border-color:#e3e7ef;
+}
+
+body.dark{
+    background:#0b1018 !important;
+    color:#f3f6fb !important;
+}
+
+/* WordUp in-app feedback form */
+.wordup-feedback-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(10, 15, 25, .72);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+}
+.wordup-feedback-modal {
+    position: relative;
+    width: min(100%, 560px);
+    max-height: calc(100vh - 36px);
+    overflow-y: auto;
+    padding: 28px;
+    border: 1px solid var(--border-color, rgba(128,128,128,.3));
+    border-radius: 18px;
+    background: var(--card-bg, var(--bg-secondary, #fff));
+    color: var(--text-color, var(--text-primary, #222));
+    box-shadow: 0 24px 80px rgba(0,0,0,.3);
+}
+.wordup-feedback-modal h2 { margin: 0 36px 8px 0; }
+.wordup-feedback-intro, .wordup-feedback-note {
+    opacity: .8;
+    line-height: 1.55;
+}
+.wordup-feedback-modal label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 600;
+}
+.wordup-feedback-modal textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color, #bbb);
+    border-radius: 10px;
+    background: var(--input-bg, var(--bg-primary, #fff));
+    color: inherit;
+    font: inherit;
+    resize: vertical;
+}
+.wordup-feedback-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+}
+.wordup-feedback-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+@media (max-width: 520px) {
+    .wordup-feedback-modal { padding: 22px 16px; }
+    .wordup-feedback-actions > button { flex: 1 1 100%; }
+}
+
+/* WordUp feedback theme fix */
+.wordup-feedback-modal {
+    background: var(--surface, #ffffff);
+    color: var(--text, #172033);
+    border: 1px solid var(--border, #dfe4ec);
+}
+
+.wordup-feedback-modal h2,
+.wordup-feedback-modal label {
+    color: var(--text, #172033);
+}
+
+.wordup-feedback-modal textarea {
+    background: var(--surface2, #eef2f7);
+    color: var(--text, #172033);
+    border-color: var(--border, #dfe4ec);
+}
+
+.wordup-feedback-modal textarea::placeholder {
+    color: var(--muted, #687386);
+    opacity: 1;
+}
+
+body.dark .wordup-feedback-modal {
+    background: var(--surface, #151c29);
+    color: var(--text, #f4f7fb);
+    border-color: var(--border, #2d3748);
+}
+
+body.dark .wordup-feedback-modal h2,
+body.dark .wordup-feedback-modal label {
+    color: var(--text, #f4f7fb);
+}
+
+body.dark .wordup-feedback-modal textarea {
+    background: var(--surface2, #202a3a);
+    color: var(--text, #f4f7fb);
+    border-color: var(--border, #2d3748);
+}
+
+body.dark .wordup-feedback-modal textarea::placeholder {
+    color: var(--muted, #aab4c4);
+}

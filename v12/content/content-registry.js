@@ -15,20 +15,15 @@ const WORDUP_CONTENT_REGISTRY = {
     a2:
         window.WORDUP_A2_CONTENT || [],
 
-    b1:
-        window.WORDUP_B1_CONTENT || [],
+    b1: window.WORDUP_B1_CONTENT || [],
 
-    b2:
-        window.WORDUP_B2_CONTENT || [],
+    b2: window.WORDUP_B2_CONTENT || [],
 
-    c1:
-        window.WORDUP_C1_CONTENT || [],
+    c1: window.WORDUP_C1_CONTENT || [],
 
-    c2:
-        window.WORDUP_C2_CONTENT || [],
+    c2: window.WORDUP_C2_CONTENT || [],
 
-    academic:
-        window.WORDUP_ACADEMIC_CONTENT || []
+    academic: window.WORDUP_ACADEMIC_CONTENT || []
 
 };
 
@@ -141,4 +136,5 @@ window.wordUpContentStatistics =
 console.log(
     "WordUp V12.1 Content Registry loaded."
 );
+
 

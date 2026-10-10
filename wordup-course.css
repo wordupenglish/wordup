@@ -484,3 +484,500 @@
     }
 
 }
+
+/* WORDUP CLEAN LEVEL UI 20261007 */
+
+/*
+   Keep the Course page integrated with the normal WordUp page.
+   The course levels must NOT sit inside a giant white container.
+*/
+
+.wu-course-shell {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.wu-course-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(250px, .8fr);
+    gap: 22px;
+    margin: 0 0 24px;
+    padding: 26px;
+    border: 1px solid var(--wu-border);
+    border-radius: 18px;
+    background: var(--wu-card);
+    box-shadow: var(--wu-shadow);
+}
+
+.wu-course-overview-main {
+    min-width: 0;
+}
+
+.wu-course-overview-main h2 {
+    margin: 8px 0 10px;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+}
+
+.wu-course-overview-main p {
+    max-width: 680px;
+    margin: 0;
+    color: var(--wu-muted);
+    line-height: 1.65;
+}
+
+.wu-course-overview-progress {
+    align-self: center;
+    padding: 18px;
+    border: 1px solid var(--wu-border);
+    border-radius: 14px;
+    background: var(--wu-surface);
+}
+
+.wu-course-overview-progress-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 11px;
+}
+
+.wu-course-overview-progress-top span {
+    color: var(--wu-muted);
+    font-size: 13px;
+}
+
+.wu-course-overview-progress-top strong {
+    font-size: 23px;
+}
+
+.wu-course-overview-progress small {
+    display: block;
+    margin-top: 9px;
+    color: var(--wu-muted);
+}
+
+/* Continue card */
+
+.wu-course-continue {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 0 28px;
+    padding: 19px 21px;
+    border: 1px solid var(--wu-border);
+    border-radius: 16px;
+    background: var(--wu-card);
+    color: var(--wu-text);
+    text-align: left;
+    cursor: pointer;
+    box-shadow: var(--wu-shadow);
+    transition:
+        transform .18s ease,
+        border-color .18s ease;
+}
+
+.wu-course-continue:hover {
+    transform: translateY(-1px);
+    border-color: var(--wu-primary);
+}
+
+.wu-course-continue-main {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.wu-course-continue-main > span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    color: var(--wu-primary);
+}
+
+.wu-course-continue-main strong {
+    font-size: 18px;
+}
+
+.wu-course-continue-main small {
+    color: var(--wu-muted);
+}
+
+.wu-course-continue > b {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* Section heading */
+
+.wu-course-section-heading {
+    margin: 0 0 14px;
+}
+
+.wu-course-section-heading h2 {
+    margin: 0 0 5px;
+}
+
+.wu-course-section-heading p {
+    margin: 0;
+    color: var(--wu-muted);
+}
+
+/* Level cards */
+
+.wu-course-level-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.wu-course-level-card {
+    width: 100%;
+    min-height: 126px;
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    border: 1px solid var(--wu-border);
+    border-radius: 16px;
+    background: var(--wu-card);
+    color: var(--wu-text);
+    text-align: left;
+    cursor: pointer;
+    box-shadow: var(--wu-shadow);
+    transition:
+        transform .18s ease,
+        border-color .18s ease,
+        box-shadow .18s ease;
+}
+
+.wu-course-level-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--wu-primary);
+}
+
+.wu-course-level-card.current {
+    border-color: var(--wu-primary);
+}
+
+.wu-course-level-number {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--wu-primary-soft);
+    color: var(--wu-primary);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.wu-course-level-content {
+    min-width: 0;
+}
+
+.wu-course-level-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.wu-course-level-heading strong {
+    font-size: 17px;
+}
+
+.wu-course-current-badge {
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: var(--wu-primary-soft);
+    color: var(--wu-primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.wu-course-level-meta,
+.wu-course-level-percent {
+    display: block;
+    color: var(--wu-muted);
+    font-size: 12px;
+}
+
+.wu-course-level-meta {
+    margin-top: 4px;
+}
+
+.wu-course-level-progress {
+    height: 5px;
+    margin: 10px 0 6px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--wu-surface);
+}
+
+.wu-course-level-progress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--wu-primary);
+}
+
+.wu-course-level-arrow {
+    color: var(--wu-muted);
+    font-size: 19px;
+}
+
+/*
+   Remove any old University-style visual treatment from the
+   levels overview without touching lesson functionality.
+*/
+
+.wu-university-hero,
+.wu-university-stage-grid,
+.wu-university-footer-note,
+.wu-university-brand,
+.wu-university-progress,
+.wu-university-continue {
+    display: none !important;
+}
+
+/*
+   Do NOT override navigation icons here.
+   Navigation remains controlled by the existing UI.
+*/
+
+@media (max-width: 800px) {
+
+    .wu-course-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .wu-course-level-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .wu-course-overview {
+        padding: 20px;
+    }
+
+    .wu-course-continue {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .wu-course-level-card {
+        grid-template-columns: 40px minmax(0, 1fr) 18px;
+        padding: 15px;
+    }
+
+    .wu-course-level-number {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* WORDUP FINAL LEVEL UI FIX */
+
+#curriculum {
+    background: var(--bg, #f5f7fb) !important;
+}
+
+body.dark #curriculum {
+    background: var(--bg, #0c111b) !important;
+}
+
+/* Course wrapper: NEVER a white panel */
+#curriculum .wu-course-shell {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Course header */
+#curriculum .wu-course-header {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Course content */
+#curriculum #wuCourseContent {
+    background: transparent !important;
+}
+
+/* Overview */
+#curriculum .wu-course-overview {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/*
+   LEVELS:
+   These are intentionally NOT white cards.
+*/
+#curriculum .wu-course-level-grid {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#curriculum .wu-course-level-card {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: 1px solid var(--border, #dfe4ec) !important;
+    box-shadow: none !important;
+
+    border-radius: 14px !important;
+}
+
+#curriculum .wu-course-level-card:hover {
+    background: var(--surface2, #eef2f7) !important;
+    box-shadow: none !important;
+}
+
+body.dark #curriculum .wu-course-level-card {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: var(--border, #2d3748) !important;
+}
+
+body.dark #curriculum .wu-course-level-card:hover {
+    background: var(--surface2, #202a3a) !important;
+}
+
+/* Remove old white university/course panels */
+#curriculum .wu-university-shell,
+#curriculum .wu-university-header,
+#curriculum .wu-university-content,
+#curriculum .wu-program-grid,
+#curriculum .wu-program-card {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Navigation icons — ONLY icon presentation */
+.wu-nav-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+}
+
+.wu-nav-link .wu-nav-icon {
+    display: inline-flex !important;
+    width: 20px !important;
+    height: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 17px !important;
+    line-height: 1 !important;
+}
+
+@media (max-width: 700px) {
+    #curriculum .wu-course-level-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* WORDUP CONTINUE LEARNING FINAL FIX */
+
+#curriculum .wu-course-continue {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid var(--border, #dfe4ec) !important;
+    box-shadow: none !important;
+    color: var(--text, #172033) !important;
+}
+
+#curriculum .wu-course-continue:hover {
+    background: var(--surface2, #eef2f7) !important;
+    box-shadow: none !important;
+}
+
+body.dark #curriculum .wu-course-continue {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: var(--border, #2d3748) !important;
+    color: var(--text, #f4f7fb) !important;
+}
+
+body.dark #curriculum .wu-course-continue:hover {
+    background: var(--surface2, #202a3a) !important;
+}
+
+#curriculum .wu-course-continue-main,
+#curriculum .wu-course-continue-main * {
+    background: transparent !important;
+}
+
+/* WORDUP CONTINUE LEARNING FINAL FIX */
+
+#curriculum .wu-course-continue {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid var(--border, #dfe4ec) !important;
+    box-shadow: none !important;
+}
+
+#curriculum .wu-course-continue:hover {
+    background: var(--surface2, #eef2f7) !important;
+    box-shadow: none !important;
+}
+
+body.dark #curriculum .wu-course-continue {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: var(--border, #2d3748) !important;
+}
+
+body.dark #curriculum .wu-course-continue:hover {
+    background: var(--surface2, #202a3a) !important;
+}
+
+#curriculum .wu-course-continue-main,
+#curriculum .wu-course-continue-main * {
+    background: transparent !important;
+}
+
+/* FINAL: CONTINUE LEARNING MUST NOT BE A WHITE PANEL */
+#curriculum .wu-course-continue,
+#curriculum button.wu-course-continue {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: 1px solid var(--border, #dfe4ec) !important;
+}
+
+#curriculum .wu-course-continue:hover,
+#curriculum button.wu-course-continue:hover {
+    background: var(--surface2, #eef2f7) !important;
+    background-color: var(--surface2, #eef2f7) !important;
+}
+
+body.dark #curriculum .wu-course-continue,
+body.dark #curriculum button.wu-course-continue {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: var(--border, #2d3748) !important;
+}
+

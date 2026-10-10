@@ -20,14 +20,28 @@
         "academic"
     ];
 
-    const LEVEL_NAMES = {
+          const LEARNER_LEVEL_NAMES = {
+          foundation: "Foundation",
+          a1: "A1 — Beginner",
+          a2: "A2 — Elementary",
+          b1: "B1 — Intermediate",
+          b2: "B2 — Upper-Intermediate",
+          c1: "C1 — Advanced",
+          c2: "C2 — Proficiency",
+          academic: "Academic English"
+      };
+
+      function learnerLevelName(level) {
+          return LEARNER_LEVEL_NAMES[level] || "Level";
+      }
+      const LEVEL_NAMES = {
         foundation: "Foundation",
-        a1: "A1",
-        a2: "A2",
-        b1: "B1",
-        b2: "B2",
-        c1: "C1",
-        c2: "C2",
+        a1: "A1 — Beginner",
+        a2: "A2 — Elementary",
+        b1: "B1 — Intermediate",
+        b2: "B2 — Upper-Intermediate",
+        c1: "C1 — Advanced",
+        c2: "C2 — Proficiency",
         academic: "Academic English"
     };
 
@@ -36,7 +50,8 @@
         "grammar",
         "vocabulary",
         "reading",
-        "listening"
+        "listening",
+        "speaking"
     ];
 
     const SKILL_ICONS = {
@@ -44,7 +59,8 @@
         grammar: "🔤",
         vocabulary: "📚",
         reading: "📖",
-        listening: "🎧"
+        listening: "🎧",
+        speaking: "🗣️",
     };
 
     const SKILL_NAMES = {
@@ -52,7 +68,59 @@
         grammar: "Grammar",
         vocabulary: "Vocabulary",
         reading: "Reading",
-        listening: "Listening"
+        listening: "Listening",
+        speaking: "Speaking",
+    };
+
+    /*
+    =========================================================
+     WORDUP COURSE
+     Presentation layer only.
+     Uses the existing V12 curriculum/content engine.
+    =========================================================
+    */
+
+    const UNIVERSITY_STAGES = {
+        foundation: {
+            title: "Foundation",
+            subtitle: "Build the essential foundations of English.",
+            description: "Start with letters, words, sentences, basic grammar, reading, listening and guided writing."
+        },
+        a1: {
+            title: "Level 2",
+            subtitle: "Build everyday English.",
+            description: "Develop the language needed for simple communication and familiar situations."
+        },
+        a2: {
+            title: "Level 3",
+            subtitle: "Expand your everyday English.",
+            description: "Build stronger grammar, vocabulary, reading and communication skills."
+        },
+        b1: {
+            title: "Level 4",
+            subtitle: "Become an independent English user.",
+            description: "Develop connected communication, practical reading, listening and structured writing."
+        },
+        b2: {
+            title: "Level 5",
+            subtitle: "Develop confident and precise English.",
+            description: "Strengthen advanced communication, complex grammar and academic preparation."
+        },
+        c1: {
+            title: "Level 6",
+            subtitle: "Use English with precision and flexibility.",
+            description: "Develop sophisticated vocabulary, grammar, argumentation and academic communication."
+        },
+        c2: {
+            title: "Level 7",
+            subtitle: "Reach highly advanced English control.",
+            description: "Work with nuanced language, complex texts and sophisticated communication."
+        },
+        academic: {
+            title: "Academic English",
+            subtitle: "Prepare for university-level English.",
+            description: "Develop academic reading, writing, vocabulary, grammar and research communication."
+        }
     };
 
     let currentView = "levels";
@@ -177,8 +245,8 @@
         if (!content.length) {
             box.innerHTML = `
                 <div class="wu-course-empty">
-                    <h2>Curriculum is loading...</h2>
-                    <p>The V12 learning engine has not loaded its lessons yet.</p>
+                    <h2>Course is loading...</h2>
+                    <p>Your lessons are being prepared. Please try again in a moment.</p>
                 </div>
             `;
             return;
@@ -192,86 +260,200 @@
             x => isLessonComplete(x.id)
         ).length;
 
-        const overall =
-            totalLessons
-                ? Math.round(
-                    completedLessons / totalLessons * 100
-                )
-                : 0;
+        const overall = totalLessons
+            ? Math.round(
+                completedLessons /
+                totalLessons *
+                100
+            )
+            : 0;
+
+        const nextLesson =
+            content.find(
+                x => !isLessonComplete(x.id)
+            );
+
+        const levelCards = LEVELS.map(
+            (level, index) => {
+
+                const lessons =
+                    getLessons(level);
+
+                const completed =
+                    lessons.filter(
+                        x => isLessonComplete(x.id)
+                    ).length;
+
+                const percent =
+                    lessons.length
+                        ? Math.round(
+                            completed /
+                            lessons.length *
+                            100
+                        )
+                        : 0;
+
+                const isCurrent =
+                    progress.currentLevel === level ||
+                    localStorage.getItem("wordUpCurrentLevel") === level;
+
+                return `
+                    <button
+                        type="button"
+                        class="wu-course-level-card ${isCurrent ? "current" : ""}"
+                        onclick="wordUpOpenCourseLevel('${level}')">
+
+                        <div class="wu-course-level-number">
+                            ${index + 1}
+                        </div>
+
+                        <div class="wu-course-level-content">
+
+                            <div class="wu-course-level-heading">
+                                <strong>
+                                    ${esc(LEVEL_NAMES[level] || `Level ${index + 1}`)}
+                                </strong>
+
+                                ${
+                                    isCurrent
+                                    ? `<span class="wu-course-current-badge">Current</span>`
+                                    : ""
+                                }
+                            </div>
+
+                            <span class="wu-course-level-meta">
+                                ${lessons.length} lesson${lessons.length === 1 ? "" : "s"}
+                            </span>
+
+                            <div class="wu-course-level-progress">
+                                <span style="width:${percent}%"></span>
+                            </div>
+
+                            <span class="wu-course-level-percent">
+                                ${percent}% completed
+                            </span>
+
+                        </div>
+
+                        <span class="wu-course-level-arrow">
+                            →
+                        </span>
+
+                    </button>
+                `;
+            }
+        ).join("");
 
         box.innerHTML = `
 
-            <div class="wu-course-overview">
+            <section class="wu-course-overview">
 
-                <div class="wu-course-stat">
-                    <span>Lessons</span>
-                    <strong>${totalLessons}</strong>
+                <div class="wu-course-overview-main">
+
+                    <span class="wu-course-kicker">
+                        WORDUP COURSE
+                    </span>
+
+                    <h2>
+                        Build your English step by step.
+                    </h2>
+
+                    <p>
+                        Work through each level, study the lessons,
+                        practise what you learn, and complete the tests
+                        to keep moving forward.
+                    </p>
+
                 </div>
 
-                <div class="wu-course-stat">
-                    <span>Completed</span>
-                    <strong>${completedLessons}</strong>
+                <div class="wu-course-overview-progress">
+
+                    <div class="wu-course-overview-progress-top">
+                        <span>Overall progress</span>
+                        <strong>${overall}%</strong>
+                    </div>
+
+                    <div class="wu-course-progress">
+                        <span style="width:${overall}%"></span>
+                    </div>
+
+                    <small>
+                        ${completedLessons} of ${totalLessons} lessons completed
+                    </small>
+
                 </div>
 
-                <div class="wu-course-stat">
-                    <span>Course progress</span>
-                    <strong>${overall}%</strong>
-                </div>
+            </section>
 
-                <div class="wu-course-stat">
-                    <span>XP</span>
-                    <strong>${esc(progress.xp || 0)}</strong>
-                </div>
+            ${
+                nextLesson
+                ? `
+                    <button
+                        type="button"
+                        class="wu-course-continue"
+                        onclick="wordUpOpenCourseLesson('${esc(nextLesson.id)}')">
 
-            </div>
+                        <div class="wu-course-continue-main">
+
+                            <span>
+                                CONTINUE LEARNING
+                            </span>
+
+                            <strong>
+                                ${esc(nextLesson.topic || nextLesson.title)}
+                            </strong>
+
+                            <small>
+                                ${esc(
+                                    LEVEL_NAMES[nextLesson.level]
+                                    || nextLesson.level
+                                )}
+                                ·
+                                ${esc(
+                                    SKILL_NAMES[nextLesson.skill]
+                                    || nextLesson.skill
+                                )}
+                            </small>
+
+                        </div>
+
+                        <b>
+                            Continue →
+                        </b>
+
+                    </button>
+                `
+                : `
+                    <div class="wu-course-complete">
+                        <strong>
+                            You have completed all available lessons.
+                        </strong>
+
+                        <span>
+                            Excellent work. Keep practising to maintain your progress.
+                        </span>
+                    </div>
+                `
+            }
 
             <div class="wu-course-section-heading">
-                <h2>Your English journey</h2>
-                <p>Choose a level to see its skills and lessons.</p>
-            </div>
 
-            <div class="wu-level-grid">
+                <h2>
+                    Your Levels
+                </h2>
 
-                ${LEVELS.map((level, index) => {
-
-                    const lessons = getLessons(level);
-                    const pct = levelProgress(level);
-
-                    return `
-                        <button
-                            class="wu-level-card"
-                            onclick="wordUpOpenCourseLevel('${level}')">
-
-                            <div class="wu-level-number">
-                                ${index === 0 ? "START" : index}
-                            </div>
-
-                            <div class="wu-level-main">
-                                <strong>
-                                    ${esc(LEVEL_NAMES[level])}
-                                </strong>
-
-                                <small>
-                                    ${lessons.length} lesson${lessons.length === 1 ? "" : "s"}
-                                </small>
-
-                                <div class="wu-course-progress">
-                                    <span style="width:${pct}%"></span>
-                                </div>
-
-                                <small>${pct}% completed</small>
-                            </div>
-
-                            <span class="wu-level-arrow">→</span>
-
-                        </button>
-                    `;
-                }).join("")}
+                <p>
+                    Choose a level to see its skills and lessons.
+                </p>
 
             </div>
+
+            <div class="wu-course-level-grid">
+                ${levelCards}
+            </div>
+
         `;
     }
-
     function renderLevel(level) {
         currentView = "level";
         currentLevel = level;
@@ -1079,6 +1261,21 @@
         );
     }
 
+      function setSkill(skill) {
+          if (!SKILLS.includes(skill)) return;
+
+          if (!currentLevel) {
+              const preferredLevel =
+                  LEVELS.find(level => getLessons(level, skill).length)
+                  || "foundation";
+
+              openSkill(preferredLevel, skill);
+              return;
+          }
+
+          openSkill(currentLevel, skill);
+      }
+
     function openSkill(level, skill) {
         if (!LEVELS.includes(level)) return;
         if (!SKILLS.includes(skill)) return;
@@ -1300,12 +1497,7 @@
                 setTimeout(
                     () => {
 
-                        if (
-                            currentView === "levels" ||
-                            !document.querySelector(".wu-course-shell")
-                        ) {
-                            renderLevels();
-                        }
+                        renderLevels();
 
                         connectCourseNavigation();
                         removeOldLauncher();
@@ -1355,3 +1547,13 @@
     }
 
 })();
+
+
+
+
+
+
+
+
+
+

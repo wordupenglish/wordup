@@ -255,7 +255,7 @@ Real V12.1 content integration layer
             <div id="wordup-v12-modal">
                 <div class="wu12-header">
                     <div>
-                        <h2>📚 WordUp V12 Learning</h2>
+                        <h2>📚 WordUp Learning</h2>
                         <div class="wu12-meta">Real V12.1 curriculum and practice engine</div>
                     </div>
                     <button class="wu12-close" id="wu12-close">✕</button>
@@ -289,9 +289,9 @@ Real V12.1 content integration layer
 
                 <div id="wu12-main">
                     <div class="wu12-card">
-                        <strong>Select a level above</strong>
+                        <strong>Select a level</strong>
                         <div class="wu12-meta">
-                            Choose a CEFR level to see its available lessons.
+                            Choose a level to see its available lessons.
                         </div>
                     </div>
                 </div>
@@ -488,17 +488,23 @@ Real V12.1 content integration layer
 
         const button = document.createElement("button");
         button.id = "wordup-v12-launcher";
-        button.textContent = "📚 V12 Learning";
-        button.title = "Open WordUp V12 curriculum";
+        button.textContent = "📚 Learning";
+        button.title = "Open WordUp course";
 
-        button.onclick = openHub;
+        button.onclick = () => {
+    if (typeof window.wordUpOpenCourse === "function") {
+        window.wordUpOpenCourse();
+    } else {
+        openHub();
+    }
+};
 
         document.body.appendChild(button);
     }
 
     ready(function () {
         createStyles();
-        installLauncher();
+        // Legacy V12 launcher disabled; WordUp course owns navigation.
 
         console.log(
             "%cWordUp V12.2 Runtime Loaded",
@@ -510,3 +516,6 @@ Real V12.1 content integration layer
     });
 
 })();
+
+
+

@@ -1,4 +1,4 @@
-﻿const DATA = {
+const DATA = {
 
 vocabulary:{
 beginner:[
@@ -888,13 +888,31 @@ save();
 // ============================================================
 
 function showScreen(id){
-document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));
-const el=document.getElementById(id);
-if(el)el.classList.add("active");
-window.scrollTo({top:0,behavior:"auto"});
-updateStats();
-}
+    document.querySelectorAll(".screen").forEach(function(screen){
+        screen.classList.remove("active");
+    });
 
+    var targetScreen = document.getElementById(id);
+
+    if(targetScreen){
+        targetScreen.classList.add("active");
+    }
+
+    /* Keep WordUp top navigation synchronized with the visible screen. */
+    document.querySelectorAll(".wu-nav-link").forEach(function(button){
+        button.classList.toggle(
+            "active",
+            button.getAttribute("data-wu-nav") === id
+        );
+    });
+
+    window.scrollTo({
+        top: 0,
+        behavior: "auto"
+    });
+
+    updateStats();
+}
 function goHome(){
 closeModal();
 showScreen("home");
@@ -2423,10 +2441,13 @@ navigator.serviceWorker.register("./service-worker.js")
 
 loadTheme();
 updateStats();
+const legacyProfileButton = document.querySelector(".profile-btn");
+if (legacyProfileButton) {
+    legacyProfileButton.onclick = () => {
+        showDashboard();
+    };
+}
 
-document.querySelector(".profile-btn").onclick=()=>{
-showDashboard();
-};
 
 
 /* =========================================================
@@ -2626,17 +2647,98 @@ function wordUpBuildDiagnostics() {
 }
 
 
+
+/* WordUp in-app feedback form */
+function wordUpShowFeedbackForm(options) {
+    const existing = document.getElementById("wordup-feedback-overlay");
+    if (existing) existing.remove();
+
+    const overlay = document.createElement("div");
+    overlay.id = "wordup-feedback-overlay";
+    overlay.className = "wordup-feedback-overlay";
+
+    const isBug = options.kind === "github";
+    const heading = isBug ? "Report a Bug" : options.title;
+    const intro = isBug
+        ? "Tell us what went wrong. Your report will be prepared for GitHub."
+        : "Share your message with the WordUp team.";
+
+    overlay.innerHTML = `
+      <div class="wordup-feedback-modal" role="dialog" aria-modal="true" aria-labelledby="wordup-feedback-title">
+        <button type="button" class="wordup-feedback-close" aria-label="Close">×</button>
+        <h2 id="wordup-feedback-title"></h2>
+        <p class="wordup-feedback-intro"></p>
+        <form id="wordup-feedback-form">
+          <label for="wordup-feedback-message">${isBug ? "What happened?" : "Your message"}</label>
+          <textarea id="wordup-feedback-message" name="message" rows="5" required placeholder="${isBug ? "Describe the problem you experienced…" : "Write your feedback here…"}"></textarea>
+          ${isBug ? `
+          <label for="wordup-feedback-steps">Steps to reproduce (optional)</label>
+          <textarea id="wordup-feedback-steps" name="steps" rows="3" placeholder="1. Open…&#10;2. Click…"></textarea>` : ""}
+          <p class="wordup-feedback-note"></p>
+          <div class="wordup-feedback-actions">
+            <button type="button" class="secondary-btn wordup-feedback-cancel">Cancel</button>
+            <button type="submit" class="primary-btn">${isBug ? "Continue to GitHub" : "Continue to Email"}</button>
+          </div>
+        </form>
+      </div>`;
+
+    overlay.querySelector("h2").textContent = heading;
+    overlay.querySelector(".wordup-feedback-intro").textContent = intro;
+    overlay.querySelector(".wordup-feedback-note").textContent = isBug
+        ? "WordUp will open GitHub with your report prepared. You may need to sign in and submit it."
+        : "WordUp will open Yahoo Mail with your message prepared. You must send the email yourself.";
+
+    const close = () => overlay.remove();
+    overlay.querySelector(".wordup-feedback-close").addEventListener("click", close);
+    overlay.querySelector(".wordup-feedback-cancel").addEventListener("click", close);
+    overlay.addEventListener("click", event => {
+        if (event.target === overlay) close();
+    });
+    document.addEventListener("keydown", function escapeFeedback(event) {
+        if (event.key === "Escape" && document.getElementById("wordup-feedback-overlay") === overlay) {
+            close();
+            document.removeEventListener("keydown", escapeFeedback);
+        }
+    });
+
+    overlay.querySelector("form").addEventListener("submit", event => {
+        event.preventDefault();
+        const message = overlay.querySelector('[name="message"]').value.trim();
+        if (!message) {
+            overlay.querySelector('[name="message"]').focus();
+            return;
+        }
+
+        const steps = overlay.querySelector('[name="steps"]')?.value.trim() || "";
+        const report = isBug
+            ? [
+                "## What happened?", message,
+                "", "## Steps to reproduce", steps || "(Not provided)",
+                "", "## Expected result", "Please describe the expected result.",
+                "", "## Actual result", message, "",
+                wordUpBuildDiagnostics()
+              ].join("\n")
+            : options.body + "\n\nLearner message:\n" + message + "\n\n" + wordUpBuildDiagnostics();
+
+        const destination = isBug
+            ? options.destination + "/new?title=" + encodeURIComponent("Bug Report — WordUp") + "&body=" + encodeURIComponent(report)
+            : "https://mail.yahoo.com/d/compose?to=" + encodeURIComponent(options.destination) +
+              "&subject=" + encodeURIComponent(options.title) + "&body=" + encodeURIComponent(report);
+
+        close();
+        window.location.href = destination;
+    });
+
+    document.body.appendChild(overlay);
+    overlay.querySelector('[name="message"]').focus();
+}
 function wordUpSendEmail(subject, body) {
-
-    const mailto =
-        "mailto:" +
-        WORDUP_OWNER_EMAIL +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
-
-    window.location.href = mailto;
+    wordUpShowFeedbackForm({
+        title: subject,
+        kind: "email",
+        destination: WORDUP_OWNER_EMAIL,
+        body: body
+    });
 }
 
 
@@ -2688,47 +2790,12 @@ function wordUpContactWhatsApp() {
    --------------------------------------------------------- */
 
 function wordUpReportBug() {
-
-    const title =
-        encodeURIComponent(
-            "Bug Report — WordUp"
-        );
-
-    const body =
-        encodeURIComponent(
-`## What happened?
-
-Please describe the problem here.
-
-## Steps to reproduce
-
-1.
-2.
-3.
-
-## Expected result
-
-What should have happened?
-
-## Actual result
-
-What actually happened?
-
-${wordUpBuildDiagnostics()}`
-        );
-
-    const issueURL =
-        WORDUP_GITHUB_ISSUES +
-        "/new?title=" +
-        title +
-        "&body=" +
-        body;
-
-    window.open(
-        issueURL,
-        "_blank",
-        "noopener,noreferrer"
-    );
+    wordUpShowFeedbackForm({
+        title: "Report a Bug",
+        kind: "github",
+        destination: WORDUP_GITHUB_ISSUES,
+        body: ""
+    });
 }
 
 
@@ -4609,4 +4676,6 @@ function wordUpOpenGoogleAnalytics() {
     });
 
 })();
+
+
 

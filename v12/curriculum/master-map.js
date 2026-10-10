@@ -390,6 +390,22 @@ b2: {
 
     ]
 
+,
+
+    speaking: [
+        "Expressing and Justifying Opinions",
+        "Agreeing and Disagreeing Diplomatically",
+        "Discussing Advantages and Disadvantages",
+        "Speculating About Possibilities",
+        "Explaining Causes and Consequences",
+        "Comparing Perspectives",
+        "Negotiating and Reaching Agreement",
+        "Giving Presentations",
+        "Handling Questions and Follow-Up",
+        "Storytelling and Anecdotes",
+        "Discussing Social and Cultural Issues",
+        "Problem-Solving Discussions"
+    ]
 },
 
 
@@ -463,6 +479,22 @@ c1: {
 
     ]
 
+,
+
+    speaking: [
+        "Developing and Defending Arguments",
+        "Nuanced Agreement and Disagreement",
+        "Evaluating Competing Perspectives",
+        "Expressing Certainty and Uncertainty",
+        "Hypothesizing and Counterfactuals",
+        "Managing Complex Discussions",
+        "Persuading and Influencing",
+        "Formal Presentations",
+        "Handling Challenging Questions",
+        "Interpreting and Responding to Implicit Meaning",
+        "Leading Collaborative Discussions",
+        "Discussing Complex Social Issues"
+    ]
 },
 
 
@@ -533,6 +565,22 @@ c2: {
 
     ]
 
+,
+
+    speaking: [
+        "Sustaining Sophisticated Arguments",
+        "Evaluating Complex and Conflicting Claims",
+        "Expressing Nuance and Precision",
+        "Advanced Persuasion",
+        "Strategic Use of Register",
+        "Managing High-Level Debate",
+        "Responding to Challenging Counterarguments",
+        "Impromptu Speaking",
+        "Advanced Presentation Skills",
+        "Interpreting Implicit and Figurative Meaning",
+        "Facilitating Expert Discussions",
+        "Speaking with Precision and Flexibility"
+    ]
 },
 
 
@@ -642,6 +690,25 @@ academic: {
 
     ]
 
+,
+
+    speaking: [
+        "Academic Discussion and Seminar Skills",
+        "Presenting Academic Arguments",
+        "Explaining Research Findings",
+        "Discussing Evidence and Sources",
+        "Evaluating Academic Claims",
+        "Questioning and Challenging Ideas",
+        "Academic Debate",
+        "Participating in Seminars",
+        "Leading Academic Discussions",
+        "Conference Presentation Skills",
+        "Handling Questions in Academic Settings",
+        "Defending a Research Position",
+        "Synthesizing Ideas in Discussion",
+        "Critical Response to Academic Arguments",
+        "Academic Speaking Fluency"
+    ]
 }
 
 };
