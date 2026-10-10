@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = "wordup-v18-dictionary-timeout-20261010";
+﻿const CACHE_NAME = "wordup-v19-async-meaning-fix-20261010";
 
 const CORE_ASSETS = [
     "./",
