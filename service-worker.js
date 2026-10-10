@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v15-global-search-20261010";
+const CACHE_NAME = "wordup-v16-search-navigation-fix-20261010";
 
 const CORE_ASSETS = [
     "./",

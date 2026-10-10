@@ -1829,7 +1829,11 @@
             if (!result) return;
             const lessonId = result.dataset.wuSearchLesson;
             closeSearch();
-            openLesson(lessonId);
+            if (typeof window.wordUpOpenCourseLesson === "function") {
+                window.wordUpOpenCourseLesson(lessonId);
+            } else {
+                console.error("WordUp course lesson opener is not available.");
+            }
         });
 
         input.addEventListener("keydown", event => {
