@@ -55,12 +55,12 @@
     ];
 
     const SKILL_ICONS = {
-        writing: "âœï¸",
-        grammar: "ðŸ”¤",
-        vocabulary: "ðŸ“š",
-        reading: "ðŸ“–",
-        listening: "ðŸŽ§",
-        speaking: "ðŸ—£ï¸",
+        writing: "\u270D\uFE0F",
+        grammar: "\u{1F524}",
+        vocabulary: "\u{1F4DA}",
+        reading: "\u{1F4D6}",
+        listening: "\u{1F3A7}",
+        speaking: "\u{1F5E3}\uFE0F",
     };
 
     const SKILL_NAMES = {
