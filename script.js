@@ -4702,28 +4702,73 @@ function wordUpOpenGoogleAnalytics() {
         if (avatar) avatar.textContent = name.charAt(0).toUpperCase();
     }
 
-    window.wordUpEditProfile = function () {
-        var current = getName();
-        var entered = window.prompt(
-            "Enter the learner name for this browser:",
-            current === "Learner" ? "" : current
-        );
+        window.wordUpEditProfile = function () {
+        var modal = document.getElementById("wuNameModal");
+        var input = document.getElementById("wuLearnerNameInput");
+        var error = document.getElementById("wuNameError");
+        if (!modal || !input) return;
 
-        if (entered === null) return;
+        input.value = getName() === "Learner" ? "" : getName();
+        if (error) {
+            error.hidden = true;
+            error.textContent = "Please enter a name.";
+        }
+        modal.hidden = false;
+        document.body.classList.add("wu-name-modal-open");
+        window.setTimeout(function () {
+            input.focus();
+            input.select();
+        }, 0);
+    };
 
-        var name = entered.trim().slice(0, 40);
+    window.wordUpCancelNameEdit = function () {
+        var modal = document.getElementById("wuNameModal");
+        if (modal) modal.hidden = true;
+        document.body.classList.remove("wu-name-modal-open");
+    };
+
+    window.wordUpSaveLearnerName = function () {
+        var input = document.getElementById("wuLearnerNameInput");
+        var error = document.getElementById("wuNameError");
+        if (!input) return;
+
+        var name = input.value.trim().slice(0, 40);
         if (!name) {
-            window.alert("Please enter a name.");
+            if (error) error.hidden = false;
+            input.focus();
             return;
         }
 
         try {
             localStorage.setItem(NAME_KEY, name);
             applyName();
+            window.wordUpCancelNameEdit();
         } catch (e) {
-            window.alert("Unable to save the name in this browser.");
+            if (error) {
+                error.textContent = "Unable to save the name in this browser. Check browser storage settings.";
+                error.hidden = false;
+            }
         }
     };
+
+    document.addEventListener("keydown", function (event) {
+        var modal = document.getElementById("wuNameModal");
+        if (!modal || modal.hidden) return;
+        if (event.key === "Escape") window.wordUpCancelNameEdit();
+        if (event.key === "Enter" &&
+            event.target &&
+            event.target.id === "wuLearnerNameInput") {
+            event.preventDefault();
+            window.wordUpSaveLearnerName();
+        }
+    });
+
+    document.addEventListener("click", function (event) {
+        var modal = document.getElementById("wuNameModal");
+        if (modal && !modal.hidden && event.target === modal) {
+            window.wordUpCancelNameEdit();
+        }
+    });
 
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", applyName);

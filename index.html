@@ -706,7 +706,7 @@
     </div>
 </div>
 
-<script src="./script.js?v=20261010-learner-profile-fix2"></script>
+<script src="./script.js?v=20261010-profile-dialog-fix3"></script>
 
 <!-- WORDUP PRACTICE SCREEN -->
 <section id="practice" class="screen">
@@ -846,13 +846,28 @@
                 L
             </div>
 
-            <h2 id="wuProfileName">Learner</h2>
+            <div id="wuNameModal" class="wu-name-modal" hidden role="dialog" aria-modal="true" aria-labelledby="wuNameModalTitle">
+    <div class="wu-name-dialog">
+        <button type="button" class="wu-name-close" aria-label="Close dialog" onclick="wordUpCancelNameEdit()">Ã—</button>
+        <div class="wu-name-eyebrow">YOUR LEARNING IDENTITY</div>
+        <h2 id="wuNameModalTitle">Edit learner name</h2>
+        <p class="wu-name-description">Choose the name shown on this device. Your learning progress stays on this browser.</p>
+        <label class="wu-name-label" for="wuLearnerNameInput">Learner name</label>
+        <input id="wuLearnerNameInput" class="wu-name-input" type="text" maxlength="40" autocomplete="nickname" placeholder="Enter your name">
+        <p id="wuNameError" class="wu-name-error" role="alert" hidden>Please enter a name.</p>
+        <div class="wu-name-actions">
+            <button type="button" class="wu-name-cancel" onclick="wordUpCancelNameEdit()">Cancel</button>
+            <button type="button" class="wu-name-save" onclick="wordUpSaveLearnerName()">Save name</button>
+        </div>
+    </div>
+</div>
+<h2 id="wuProfileName">Learner</h2>
 
             <p>
                 English Learner
             </p>
 
-            <button type="button" onclick="wordUpEditProfile()">
+            <button type="button" onclick="wordUpEditProfile()" class="wu-edit-name-button">
                 Edit learner name
             </button>
 

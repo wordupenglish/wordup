@@ -2938,3 +2938,136 @@ body.dark .wordup-feedback-modal textarea {
 body.dark .wordup-feedback-modal textarea::placeholder {
     color: var(--muted, #aab4c4);
 }
+/* Learner name editor: responsive light and dark themes */
+.wu-edit-name-button, .wu-name-save, .wu-name-cancel {
+    appearance: none;
+    border: 1px solid var(--wu-border, #d9e1ed);
+    border-radius: 11px;
+    padding: 11px 16px;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+.wu-edit-name-button {
+    margin-top: 18px;
+    background: var(--wu-surface, #f0f4fa);
+    color: var(--wu-text, #172033);
+}
+.wu-name-modal[hidden] { display: none !important; }
+.wu-name-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(8,13,24,.68);
+    backdrop-filter: blur(6px);
+}
+.wu-name-dialog {
+    position: relative;
+    box-sizing: border-box;
+    width: min(100%, 440px);
+    padding: 30px;
+    border: 1px solid var(--wu-border, #dfe4ec);
+    border-radius: 22px;
+    background: var(--wu-surface, #fff);
+    color: var(--wu-text, #172033);
+    box-shadow: 0 24px 80px rgba(0,0,0,.28);
+}
+.wu-name-eyebrow {
+    margin-bottom: 9px;
+    color: var(--wu-accent, #5278ed);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+.wu-name-dialog h2 {
+    margin: 0 36px 8px 0;
+    color: var(--wu-text, #172033);
+    font-size: 24px;
+}
+.wu-name-description {
+    margin: 0 0 22px;
+    color: var(--wu-muted, #687386);
+    font-size: 14px;
+    line-height: 1.55;
+}
+.wu-name-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--wu-text, #172033);
+    font-size: 13px;
+    font-weight: 700;
+}
+.wu-name-input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid var(--wu-border, #d9e1ed);
+    border-radius: 11px;
+    outline: none;
+    background: var(--wu-bg, #f0f4fa);
+    color: var(--wu-text, #172033);
+    font: inherit;
+}
+.wu-name-input:focus {
+    border-color: var(--wu-accent, #5278ed);
+    box-shadow: 0 0 0 3px rgba(82,120,237,.18);
+}
+.wu-name-input::placeholder { color: var(--wu-muted, #687386); }
+.wu-name-error { margin: 8px 0 0; color: #d9485f; font-size: 13px; }
+.wu-name-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 22px;
+}
+.wu-name-cancel {
+    background: var(--wu-bg, #f0f4fa);
+    color: var(--wu-text, #172033);
+}
+.wu-name-save {
+    border-color: var(--wu-accent, #5278ed);
+    background: var(--wu-accent, #5278ed);
+    color: #fff;
+}
+.wu-name-close {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--wu-bg, #f0f4fa);
+    color: var(--wu-text, #172033);
+    font-size: 25px;
+    cursor: pointer;
+}
+body.dark .wu-edit-name-button,
+body.dark .wu-name-cancel,
+body.dark .wu-name-close {
+    background: #202a3a;
+    color: #f4f7fb;
+    border-color: #2d3748;
+}
+body.dark .wu-name-dialog {
+    background: var(--wu-surface, #151c29);
+    color: var(--wu-text, #f4f7fb);
+    border-color: #2d3748;
+}
+body.dark .wu-name-dialog h2,
+body.dark .wu-name-label { color: #f4f7fb; }
+body.dark .wu-name-description { color: var(--wu-muted, #aab4c4); }
+body.dark .wu-name-input {
+    background: #202a3a;
+    color: #f4f7fb;
+    border-color: #2d3748;
+}
+body.wu-name-modal-open { overflow: hidden; }
+@media (max-width: 480px) {
+    .wu-name-dialog { padding: 25px 20px; }
+    .wu-name-actions > button { flex: 1; }
+}
