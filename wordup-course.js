@@ -1605,6 +1605,7 @@
                     `).join("")}
                 </div>
 
+                <div id="wuWordMeaning" aria-live="polite"></div>
                 <div class="wu-search-results" id="wuSearchResults"
                      aria-live="polite"></div>
 
@@ -1666,6 +1667,23 @@
                 .wu-search-filters button.active {
                     background: var(--primary, #315efb); color: white; border-color: transparent;
                 }
+                .wu-word-card {
+                    padding: 16px; margin: 0 0 12px;
+                    border: 1px solid var(--primary, #315efb);
+                    border-radius: 15px;
+                    background: var(--surface2, #eef2f7);
+                }
+                .wu-word-card .wu-word-label {
+                    font-size: .72rem; font-weight: 800; letter-spacing: .08em; opacity: .7;
+                }
+                .wu-word-card h3 { margin: 5px 0 8px; font-size: 1.35rem; }
+                .wu-word-card p { margin: 7px 0; line-height: 1.55; }
+                .wu-word-card .wu-word-example {
+                    padding-top: 8px; border-top: 1px solid var(--border, #dfe4ec);
+                }
+                .wu-word-card .wu-word-status {
+                    color: var(--muted, #687386); font-size: .88rem;
+                }
                 .wu-search-results { display: grid; gap: 9px; }
                 .wu-search-result {
                     display: block; width: 100%; padding: 15px 16px; text-align: left;
@@ -1709,9 +1727,103 @@
         const resultsBox = overlay.querySelector("#wuSearchResults");
         let activeSkill = "all";
 
+        let wordLookupRequest = 0;
+
+        async function renderWordMeaning(rawQuery) {
+            const box = overlay.querySelector("#wuWordMeaning");
+            const query = wuSearchNormalize(rawQuery);
+            const requestId = ++wordLookupRequest;
+
+            if (!query || query.length < 2) {
+                box.innerHTML = "";
+                return;
+            }
+
+            // First search vocabulary already included in WordUp lessons.
+            const vocabulary = [];
+            getContent().forEach(lesson => {
+                (Array.isArray(lesson.vocabulary) ? lesson.vocabulary : []).forEach(item => {
+                    if (!item || typeof item !== "object" || !item.word || !item.meaning) return;
+
+                    const examples = Array.isArray(lesson.examples) ? lesson.examples : [];
+                    vocabulary.push({
+                        word: String(item.word),
+                        meaning: String(item.meaning),
+                        example: String(item.example || examples.find(sentence =>
+                            wuSearchNormalize(sentence).includes(query)
+                        ) || ""),
+                        level: LEVEL_NAMES[lesson.level] || lesson.level || "",
+                        skill: SKILL_NAMES[lesson.skill] || lesson.skill || ""
+                    });
+                });
+            });
+
+            const localMatches = vocabulary.filter(item =>
+                wuSearchNormalize(item.word) === query
+            ).concat(vocabulary.filter(item =>
+                wuSearchNormalize(item.word).startsWith(query) &&
+                wuSearchNormalize(item.word) !== query
+            ));
+
+            if (localMatches.length) {
+                const item = localMatches[0];
+                box.innerHTML = `
+                    <article class="wu-word-card">
+                        <div class="wu-word-label">WORD MEANING</div>
+                        <h3>${esc(item.word)}</h3>
+                        <p>${esc(item.meaning)}</p>
+                        ${item.example ? `<p class="wu-word-example"><strong>Example:</strong> ${esc(item.example)}</p>` : ""}
+                        <div class="wu-word-status">${esc([item.level, item.skill].filter(Boolean).join(" · "))}</div>
+                    </article>
+                `;
+                return;
+            }
+
+            // Online dictionary fallback for words not yet in the lesson vocabulary.
+            if (query.includes(" ")) {
+                box.innerHTML = "";
+                return;
+            }
+
+            box.innerHTML = `<article class="wu-word-card"><div class="wu-word-status">Looking up the meaning of “${esc(rawQuery.trim())}”…</div></article>`;
+
+            try {
+                const response = await fetch(
+                    "https://api.dictionaryapi.dev/api/v2/entries/en/" + encodeURIComponent(query)
+                );
+
+                if (requestId !== wordLookupRequest) return;
+                if (!response.ok) throw new Error("Definition unavailable");
+
+                const entries = await response.json();
+                const entry = entries[0];
+                const meanings = entry && Array.isArray(entry.meanings) ? entry.meanings : [];
+                const firstMeaning = meanings.find(item =>
+                    Array.isArray(item.definitions) && item.definitions.length
+                );
+                const definition = firstMeaning && firstMeaning.definitions[0];
+
+                if (!definition || !definition.definition) throw new Error("Definition unavailable");
+
+                box.innerHTML = `
+                    <article class="wu-word-card">
+                        <div class="wu-word-label">WORD MEANING</div>
+                        <h3>${esc(entry.word || query)}${firstMeaning.partOfSpeech ? ` <span class="wu-word-status">· ${esc(firstMeaning.partOfSpeech)}</span>` : ""}</h3>
+                        <p>${esc(definition.definition)}</p>
+                        ${definition.example ? `<p class="wu-word-example"><strong>Example:</strong> ${esc(definition.example)}</p>` : ""}
+                        ${entry.phonetic ? `<div class="wu-word-status">${esc(entry.phonetic)}</div>` : ""}
+                    </article>
+                `;
+            } catch (error) {
+                if (requestId !== wordLookupRequest) return;
+                box.innerHTML = `<article class="wu-word-card"><div class="wu-word-label">WORD MEANING</div><p class="wu-word-status">No definition found for “${esc(rawQuery.trim())}” yet. Check the spelling or try another word.</p></article>`;
+            }
+        }
+
         function renderResults() {
             const query = wuSearchNormalize(input.value);
             const tokens = query.split(/\s+/).filter(Boolean);
+            renderWordMeaning(input.value);
             let lessons = getContent().filter(lesson =>
                 activeSkill === "all" || lesson.skill === activeSkill
             );
