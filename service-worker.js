@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v21-symbols-repaired-20261010";
+const CACHE_NAME = "wordup-v22-meaning-search-20261010";
 
 const CORE_ASSETS = [
     "./",
