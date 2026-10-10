@@ -4730,4 +4730,6 @@ function wordUpOpenGoogleAnalytics() {
     } else {
         applyName();
     }
+
+    setInterval(applyName, 500);
 })();
