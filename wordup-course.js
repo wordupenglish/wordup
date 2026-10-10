@@ -1,4 +1,4 @@
-﻿/*
+/*
 ============================================================
  WORDUP COURSE INTEGRATION
  Uses the existing V12 curriculum/content/progress engine.
@@ -1545,6 +1545,319 @@
     } else {
         init();
     }
+
+
+
+    /* WORDUP GLOBAL LESSON SEARCH */
+    const WU_SEARCH_SKILLS = [
+        "grammar", "vocabulary", "reading",
+        "listening", "speaking", "writing"
+    ];
+
+    function wuSearchNormalize(value) {
+        return String(value ?? "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, " ")
+            .trim();
+    }
+
+    function wuSearchOpen() {
+        const previousFocus = document.activeElement;
+        const old = document.getElementById("wuGlobalSearchOverlay");
+        if (old) old.remove();
+
+        const content = getContent();
+        const overlay = document.createElement("div");
+        overlay.id = "wuGlobalSearchOverlay";
+        overlay.setAttribute("role", "presentation");
+
+        overlay.innerHTML = `
+            <section class="wu-search-dialog"
+                     role="dialog"
+                     aria-modal="true"
+                     aria-labelledby="wuSearchHeading">
+                <header class="wu-search-header">
+                    <div>
+                        <span class="wu-course-kicker">WORDUP LEARNING</span>
+                        <h2 id="wuSearchHeading">What do you want to learn?</h2>
+                        <p>Search grammar, vocabulary, and all English skills.</p>
+                    </div>
+                    <button type="button" class="wu-search-close"
+                            aria-label="Close search">×</button>
+                </header>
+
+                <label class="wu-search-input-wrap">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="wuSearchInput" type="search"
+                           autocomplete="off"
+                           placeholder="Try “present simple” or “beautiful”"
+                           aria-label="Search English lessons">
+                </label>
+
+                <div class="wu-search-filters" aria-label="Filter by skill">
+                    <button type="button" class="active" data-wu-search-skill="all">All skills</button>
+                    ${WU_SEARCH_SKILLS.map(skill => `
+                        <button type="button" data-wu-search-skill="${skill}">
+                            ${skill.charAt(0).toUpperCase() + skill.slice(1)}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div class="wu-search-results" id="wuSearchResults"
+                     aria-live="polite"></div>
+
+                <p class="wu-search-footer">
+                    Choose a lesson to open its explanations, examples, and practice.
+                </p>
+            </section>
+        `;
+
+        if (!document.getElementById("wu-global-search-styles")) {
+            const style = document.createElement("style");
+            style.id = "wu-global-search-styles";
+            style.textContent = `
+                #wuGlobalSearchOverlay {
+                    position: fixed; inset: 0; z-index: 100500;
+                    display: flex; align-items: flex-start; justify-content: center;
+                    overflow-y: auto; padding: min(8vh, 60px) 16px 24px;
+                    background: rgba(7, 12, 23, .72);
+                    backdrop-filter: blur(7px);
+                }
+                .wu-search-dialog {
+                    width: min(820px, 100%); max-height: 86vh; overflow-y: auto;
+                    padding: clamp(18px, 4vw, 30px);
+                    border: 1px solid var(--border, #dfe4ec);
+                    border-radius: 22px; background: var(--surface, #fff);
+                    color: var(--text, #172033);
+                    box-shadow: 0 24px 80px rgba(0,0,0,.3);
+                }
+                .wu-search-header {
+                    display: flex; align-items: flex-start;
+                    justify-content: space-between; gap: 16px; margin-bottom: 20px;
+                }
+                .wu-search-header h2 { margin: 7px 0; font-size: clamp(1.25rem, 3vw, 1.8rem); }
+                .wu-search-header p { margin: 0; color: var(--muted, #687386); }
+                .wu-search-close {
+                    flex: 0 0 auto; width: 40px; height: 40px;
+                    border: 1px solid var(--border, #dfe4ec); border-radius: 12px;
+                    background: var(--surface2, #eef2f7); color: inherit;
+                    font: inherit; font-size: 25px; cursor: pointer;
+                }
+                .wu-search-input-wrap {
+                    display: flex; align-items: center; gap: 12px;
+                    border: 2px solid var(--primary, #315efb);
+                    border-radius: 15px; padding: 0 15px; min-height: 58px;
+                }
+                .wu-search-input-wrap span { font-size: 27px; opacity: .7; }
+                #wuSearchInput {
+                    width: 100%; min-width: 0; border: 0; outline: 0;
+                    background: transparent; color: inherit; font: inherit; font-size: 1rem;
+                }
+                .wu-search-filters {
+                    display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0 20px;
+                }
+                .wu-search-filters button {
+                    padding: 8px 12px; border: 1px solid var(--border, #dfe4ec);
+                    border-radius: 999px; background: transparent; color: inherit;
+                    font: inherit; font-size: .85rem; cursor: pointer;
+                }
+                .wu-search-filters button.active {
+                    background: var(--primary, #315efb); color: white; border-color: transparent;
+                }
+                .wu-search-results { display: grid; gap: 9px; }
+                .wu-search-result {
+                    display: block; width: 100%; padding: 15px 16px; text-align: left;
+                    border: 1px solid var(--border, #dfe4ec); border-radius: 14px;
+                    background: var(--surface, #fff); color: inherit; cursor: pointer;
+                    font: inherit;
+                }
+                .wu-search-result:hover, .wu-search-result:focus-visible {
+                    border-color: var(--primary, #315efb);
+                    background: var(--surface2, #eef2f7);
+                }
+                .wu-search-result strong { display: block; font-size: 1rem; margin-bottom: 5px; }
+                .wu-search-result small {
+                    display: block; color: var(--muted, #687386);
+                    line-height: 1.5; margin-top: 4px;
+                }
+                .wu-search-meta { font-size: .75rem; font-weight: 700; opacity: .75; }
+                .wu-search-empty {
+                    padding: 25px 16px; border-radius: 14px;
+                    background: var(--surface2, #eef2f7); text-align: center;
+                }
+                .wu-search-empty p { color: var(--muted, #687386); }
+                .wu-search-suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+                .wu-search-suggestions button {
+                    padding: 8px 11px; border-radius: 999px;
+                    border: 1px solid var(--border, #dfe4ec);
+                    background: var(--surface, #fff); color: inherit; cursor: pointer;
+                }
+                .wu-search-footer { color: var(--muted, #687386); font-size: .82rem; margin: 18px 0 0; }
+                @media(max-width:520px) {
+                    #wuGlobalSearchOverlay { padding: 12px; }
+                    .wu-search-dialog { max-height: 94vh; border-radius: 17px; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        document.body.appendChild(overlay);
+
+        const input = overlay.querySelector("#wuSearchInput");
+        const resultsBox = overlay.querySelector("#wuSearchResults");
+        let activeSkill = "all";
+
+        function renderResults() {
+            const query = wuSearchNormalize(input.value);
+            const tokens = query.split(/\s+/).filter(Boolean);
+            let lessons = getContent().filter(lesson =>
+                activeSkill === "all" || lesson.skill === activeSkill
+            );
+
+            if (tokens.length) {
+                lessons = lessons.map(lesson => {
+                    const title = wuSearchNormalize(
+                        lesson.topic || lesson.title || lesson.id
+                    );
+                    const skill = wuSearchNormalize(lesson.skill);
+                    const corpus = wuSearchNormalize(JSON.stringify(lesson));
+                    let score = 0;
+                    let matched = 0;
+
+                    if (title.includes(query)) score += 100;
+
+                    for (const token of tokens) {
+                        if (corpus.includes(token)) {
+                            matched++;
+                            score += 4;
+                            if (title.includes(token)) score += 20;
+                            if (skill === token) score += 30;
+                        }
+                    }
+
+                    if (matched === tokens.length) score += 15;
+                    return { lesson, score, matched };
+                })
+                .filter(item => item.score > 0 && item.matched > 0)
+                .sort((a, b) => b.score - a.score)
+                .map(item => item.lesson);
+            } else {
+                lessons = lessons.slice(0, 18);
+            }
+
+            if (!query && activeSkill === "all") {
+                resultsBox.innerHTML = `
+                    <div class="wu-search-empty">
+                        <strong>Popular searches</strong>
+                        <div class="wu-search-suggestions">
+                            ${["present simple", "vocabulary", "reading", "speaking", "academic writing"]
+                                .map(term => `<button type="button" data-wu-search-query="${term}">${term.replace(/\b\w/g, c => c.toUpperCase())}</button>`)
+                                .join("")}
+                        </div>
+                        <p>Or type any word, topic, or skill in the search box.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            if (!lessons.length) {
+                resultsBox.innerHTML = `
+                    <div class="wu-search-empty">
+                        <strong>No matching lessons yet</strong>
+                        <p>Try a shorter phrase, a different spelling, or another skill.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            resultsBox.innerHTML = `
+                <div class="wu-search-meta">${lessons.length}${tokens.length ? " matching" : ""} lesson suggestions</div>
+                ${lessons.slice(0, 30).map(lesson => {
+                    const title = lesson.topic || lesson.title || lesson.id;
+                    const level = LEVEL_NAMES[lesson.level] || lesson.level || "English";
+                    const skill = SKILL_NAMES[lesson.skill] || lesson.skill || "Lesson";
+                    const description = lesson.objective || lesson.description ||
+                        lesson.explanation || "Open this lesson to study the explanation, examples, and practice.";
+                    return `
+                        <button type="button" class="wu-search-result"
+                                data-wu-search-lesson="${esc(lesson.id)}">
+                            <strong>${esc(title)}</strong>
+                            <span class="wu-search-meta">${esc(level)} · ${esc(skill)}</span>
+                            <small>${esc(String(description).slice(0, 190))}</small>
+                        </button>
+                    `;
+                }).join("")}
+            `;
+        }
+
+        function closeSearch() {
+            overlay.remove();
+            if (previousFocus && previousFocus.isConnected && previousFocus.focus) {
+                previousFocus.focus();
+            }
+        }
+
+        overlay.querySelector(".wu-search-close").addEventListener("click", closeSearch);
+        overlay.addEventListener("click", event => {
+            if (event.target === overlay) closeSearch();
+        });
+
+        input.addEventListener("input", renderResults);
+
+        overlay.querySelector(".wu-search-filters").addEventListener("click", event => {
+            const button = event.target.closest("[data-wu-search-skill]");
+            if (!button) return;
+            activeSkill = button.dataset.wuSearchSkill;
+            overlay.querySelectorAll("[data-wu-search-skill]").forEach(item => {
+                item.classList.toggle("active", item === button);
+            });
+            renderResults();
+        });
+
+        resultsBox.addEventListener("click", event => {
+            const suggestion = event.target.closest("[data-wu-search-query]");
+            if (suggestion) {
+                input.value = suggestion.dataset.wuSearchQuery;
+                renderResults();
+                input.focus();
+                return;
+            }
+
+            const result = event.target.closest("[data-wu-search-lesson]");
+            if (!result) return;
+            const lessonId = result.dataset.wuSearchLesson;
+            closeSearch();
+            openLesson(lessonId);
+        });
+
+        input.addEventListener("keydown", event => {
+            if (event.key === "Escape") closeSearch();
+            if (event.key === "Enter") {
+                const first = resultsBox.querySelector("[data-wu-search-lesson]");
+                if (first) first.click();
+            }
+        });
+
+        renderResults();
+        window.setTimeout(() => input.focus(), 30);
+    }
+
+    window.wordUpOpenSearch = wuSearchOpen;
+
+    document.addEventListener("keydown", event => {
+        if (event.key !== "/" || event.ctrlKey || event.altKey || event.metaKey) return;
+        const target = event.target;
+        if (target && (
+            target.matches("input, textarea, select") ||
+            target.isContentEditable
+        )) return;
+        if (!document.getElementById("wuGlobalSearchOverlay")) {
+            event.preventDefault();
+            wuSearchOpen();
+        }
+    });
 
 })();
 
