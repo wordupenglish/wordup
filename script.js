@@ -4676,6 +4676,58 @@ function wordUpOpenGoogleAnalytics() {
     });
 
 })();
+// WORDUP: PER-DEVICE LEARNER IDENTITY
+(function () {
+    "use strict";
 
+    var NAME_KEY = "wordUpLearnerName";
 
+    function getName() {
+        try {
+            var value = localStorage.getItem(NAME_KEY);
+            return value && value.trim() ? value.trim().slice(0, 40) : "Learner";
+        } catch (e) {
+            return "Learner";
+        }
+    }
 
+    function applyName() {
+        var name = getName();
+        var welcome = document.getElementById("wuWelcomeName");
+        var profile = document.getElementById("wuProfileName");
+        var avatar = document.getElementById("wuProfileAvatar");
+
+        if (welcome) welcome.textContent = name;
+        if (profile) profile.textContent = name;
+        if (avatar) avatar.textContent = name.charAt(0).toUpperCase();
+    }
+
+    window.wordUpEditProfile = function () {
+        var current = getName();
+        var entered = window.prompt(
+            "Enter the learner name for this browser:",
+            current === "Learner" ? "" : current
+        );
+
+        if (entered === null) return;
+
+        var name = entered.trim().slice(0, 40);
+        if (!name) {
+            window.alert("Please enter a name.");
+            return;
+        }
+
+        try {
+            localStorage.setItem(NAME_KEY, name);
+            applyName();
+        } catch (e) {
+            window.alert("Unable to save the name in this browser.");
+        }
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", applyName);
+    } else {
+        applyName();
+    }
+})();
