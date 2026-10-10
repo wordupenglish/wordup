@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v17-instant-word-meaning-20261010";
+﻿const CACHE_NAME = "wordup-v18-dictionary-timeout-20261010";
 
 const CORE_ASSETS = [
     "./",

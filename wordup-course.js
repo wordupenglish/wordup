@@ -1,4 +1,4 @@
-/*
+﻿/*
 ============================================================
  WORDUP COURSE INTEGRATION
  Uses the existing V12 curriculum/content/progress engine.
@@ -22,12 +22,12 @@
 
           const LEARNER_LEVEL_NAMES = {
           foundation: "Foundation",
-          a1: "A1 — Beginner",
-          a2: "A2 — Elementary",
-          b1: "B1 — Intermediate",
-          b2: "B2 — Upper-Intermediate",
-          c1: "C1 — Advanced",
-          c2: "C2 — Proficiency",
+          a1: "A1 â€” Beginner",
+          a2: "A2 â€” Elementary",
+          b1: "B1 â€” Intermediate",
+          b2: "B2 â€” Upper-Intermediate",
+          c1: "C1 â€” Advanced",
+          c2: "C2 â€” Proficiency",
           academic: "Academic English"
       };
 
@@ -36,12 +36,12 @@
       }
       const LEVEL_NAMES = {
         foundation: "Foundation",
-        a1: "A1 — Beginner",
-        a2: "A2 — Elementary",
-        b1: "B1 — Intermediate",
-        b2: "B2 — Upper-Intermediate",
-        c1: "C1 — Advanced",
-        c2: "C2 — Proficiency",
+        a1: "A1 â€” Beginner",
+        a2: "A2 â€” Elementary",
+        b1: "B1 â€” Intermediate",
+        b2: "B2 â€” Upper-Intermediate",
+        c1: "C1 â€” Advanced",
+        c2: "C2 â€” Proficiency",
         academic: "Academic English"
     };
 
@@ -55,12 +55,12 @@
     ];
 
     const SKILL_ICONS = {
-        writing: "✍️",
-        grammar: "🔤",
-        vocabulary: "📚",
-        reading: "📖",
-        listening: "🎧",
-        speaking: "🗣️",
+        writing: "âœï¸",
+        grammar: "ðŸ”¤",
+        vocabulary: "ðŸ“š",
+        reading: "ðŸ“–",
+        listening: "ðŸŽ§",
+        speaking: "ðŸ—£ï¸",
     };
 
     const SKILL_NAMES = {
@@ -219,7 +219,7 @@
                         class="back-btn"
                         id="wuCourseBack"
                         onclick="wordUpCourseBack()">
-                        ← Back
+                        â† Back
                     </button>
                 </div>
 
@@ -336,7 +336,7 @@
                         </div>
 
                         <span class="wu-course-level-arrow">
-                            →
+                            â†’
                         </span>
 
                     </button>
@@ -408,7 +408,7 @@
                                     LEVEL_NAMES[nextLesson.level]
                                     || nextLesson.level
                                 )}
-                                ·
+                                Â·
                                 ${esc(
                                     SKILL_NAMES[nextLesson.skill]
                                     || nextLesson.skill
@@ -418,7 +418,7 @@
                         </div>
 
                         <b>
-                            Continue →
+                            Continue â†’
                         </b>
 
                     </button>
@@ -545,7 +545,7 @@
                                 <small>${pct}% completed</small>
                             </div>
 
-                            <span>→</span>
+                            <span>â†’</span>
 
                         </button>
                     `;
@@ -565,7 +565,7 @@
         renderShell();
 
         document.getElementById("wuCourseTitle").textContent =
-            `${LEVEL_NAMES[level]} · ${SKILL_NAMES[skill]}`;
+            `${LEVEL_NAMES[level]} Â· ${SKILL_NAMES[skill]}`;
 
         document.getElementById("wuCourseSubtitle").textContent =
             "Choose a lesson and follow the learning sequence.";
@@ -608,7 +608,7 @@
                             onclick="wordUpOpenCourseLesson('${esc(lesson.id)}')">
 
                             <div class="wu-lesson-index">
-                                ${completed ? "✓" : index + 1}
+                                ${completed ? "âœ“" : index + 1}
                             </div>
 
                             <div class="wu-lesson-main">
@@ -619,8 +619,8 @@
 
                                 <small>
                                     ${esc(lesson.duration || 10)} min
-                                    · ${lesson.practice?.length || 0} practice questions
-                                    · ${lesson.test?.length || 0} test questions
+                                    Â· ${lesson.practice?.length || 0} practice questions
+                                    Â· ${lesson.test?.length || 0} test questions
                                 </small>
 
                                 ${
@@ -638,7 +638,7 @@
                                     ? `<span class="wu-complete-badge">Completed</span>`
                                     : tested
                                     ? `<span class="wu-progress-badge">Tested</span>`
-                                    : `<span>Start →</span>`
+                                    : `<span>Start â†’</span>`
                                 }
 
                             </div>
@@ -667,7 +667,7 @@
             lesson.topic || "Lesson";
 
         document.getElementById("wuCourseSubtitle").textContent =
-            `${LEVEL_NAMES[lesson.level] || lesson.level} · ${SKILL_NAMES[lesson.skill] || lesson.skill}`;
+            `${LEVEL_NAMES[lesson.level] || lesson.level} Â· ${SKILL_NAMES[lesson.skill] || lesson.skill}`;
 
         renderLessonTabs();
     }
@@ -806,13 +806,13 @@
                 <button
                     class="primary"
                     onclick="wordUpCourseTab('practice')">
-                    Start Practice →
+                    Start Practice â†’
                 </button>
 
                 <button
                     class="secondary"
                     onclick="wordUpCourseCompleteLesson()">
-                    ✓ Mark Lesson Complete
+                    âœ“ Mark Lesson Complete
                 </button>
 
             </div>
@@ -832,7 +832,7 @@
                     <h2>No practice questions yet.</h2>
                     <button class="primary"
                         onclick="wordUpCourseTab('test')">
-                        Continue to Test →
+                        Continue to Test â†’
                     </button>
                 </div>
             `;
@@ -902,7 +902,7 @@
                 <button
                     class="primary"
                     onclick="wordUpCourseTab('test')">
-                    Take Final Test →
+                    Take Final Test â†’
                 </button>
 
             </div>
@@ -1014,8 +1014,8 @@
             );
 
         feedback.innerHTML = correct
-            ? `<div class="wu-feedback-good">✓ Correct! Excellent.</div>`
-            : `<div class="wu-feedback-bad">✗ Not quite. Review the lesson and try again.</div>`;
+            ? `<div class="wu-feedback-good">âœ“ Correct! Excellent.</div>`
+            : `<div class="wu-feedback-bad">âœ— Not quite. Review the lesson and try again.</div>`;
     }
 
     function selectTestAnswer(questionIndex, optionIndex) {
@@ -1090,7 +1090,7 @@
             ">
 
                 <div class="wu-result-icon">
-                    ${passed ? "🎉" : "📚"}
+                    ${passed ? "ðŸŽ‰" : "ðŸ“š"}
                 </div>
 
                 <h2>
@@ -1133,7 +1133,7 @@
                             <button
                                 class="primary"
                                 onclick="wordUpCourseNextLesson()">
-                                Next Lesson →
+                                Next Lesson â†’
                             </button>
                         `
                         : `
@@ -1466,7 +1466,7 @@
 
                 if (
                     label === "Course" ||
-                    label === "📚 Course"
+                    label === "ðŸ“š Course"
                 ) {
                     element.onclick = function (event) {
                         event.preventDefault();
@@ -1585,14 +1585,14 @@
                         <p>Search grammar, vocabulary, and all English skills.</p>
                     </div>
                     <button type="button" class="wu-search-close"
-                            aria-label="Close search">×</button>
+                            aria-label="Close search">Ã—</button>
                 </header>
 
                 <label class="wu-search-input-wrap">
-                    <span aria-hidden="true">⌕</span>
+                    <span aria-hidden="true">âŒ•</span>
                     <input id="wuSearchInput" type="search"
                            autocomplete="off"
-                           placeholder="Try “present simple” or “beautiful”"
+                           placeholder="Try â€œpresent simpleâ€ or â€œbeautifulâ€"
                            aria-label="Search English lessons">
                 </label>
 
@@ -1773,7 +1773,85 @@
                         <h3>${esc(item.word)}</h3>
                         <p>${esc(item.meaning)}</p>
                         ${item.example ? `<p class="wu-word-example"><strong>Example:</strong> ${esc(item.example)}</p>` : ""}
-                        <div class="wu-word-status">${esc([item.level, item.skill].filter(Boolean).join(" · "))}</div>
+                        <div class="wu-word-status">${esc([item.level, item.skill].filter(Boolean).join(" Â· "))}</div>
+                    </article>
+                `;
+                return;
+            }
+
+            // Offline definitions for common words: no network needed.
+            const quickDefinitions = {
+                thing: {
+                    pos: "noun",
+                    definition: "An object, item, or matter that is not named more exactly.",
+                    example: "What is that thing on the table?"
+                },
+                beautiful: {
+                    pos: "adjective",
+                    definition: "Very attractive or pleasing to look at, hear, or experience.",
+                    example: "It was a beautiful day."
+                },
+                run: {
+                    pos: "verb",
+                    definition: "To move quickly on foot, faster than walking.",
+                    example: "I run in the park every morning."
+                },
+                happy: {
+                    pos: "adjective",
+                    definition: "Feeling or showing pleasure, joy, or contentment.",
+                    example: "She is happy with her results."
+                },
+                book: {
+                    pos: "noun",
+                    definition: "A set of written or printed pages joined together inside a cover.",
+                    example: "I borrowed a book from the library."
+                },
+                good: {
+                    pos: "adjective",
+                    definition: "Of a high standard; useful, suitable, or pleasing.",
+                    example: "She is a good teacher."
+                },
+                love: {
+                    pos: "noun",
+                    definition: "A strong feeling of affection or deep care for someone or something.",
+                    example: "They have a love of learning."
+                },
+                work: {
+                    pos: "verb",
+                    definition: "To do a job or activity that requires effort.",
+                    example: "I work at a school."
+                },
+                school: {
+                    pos: "noun",
+                    definition: "A place where people, especially children, learn.",
+                    example: "The children walk to school."
+                },
+                important: {
+                    pos: "adjective",
+                    definition: "Having great value, meaning, or influence.",
+                    example: "Practice is important when learning English."
+                },
+                learn: {
+                    pos: "verb",
+                    definition: "To gain knowledge or a skill through study, practice, or experience.",
+                    example: "I learn a new English word every day."
+                },
+                friend: {
+                    pos: "noun",
+                    definition: "A person you know well and like, and who likes you.",
+                    example: "My friend helps me study."
+                }
+            };
+
+            const quick = quickDefinitions[query];
+
+            if (quick) {
+                box.innerHTML = `
+                    <article class="wu-word-card">
+                        <div class="wu-word-label">WORD MEANING</div>
+                        <h3>${esc(rawQuery.trim())} <span class="wu-word-status">· ${esc(quick.pos)}</span></h3>
+                        <p>${esc(quick.definition)}</p>
+                        <p class="wu-word-example"><strong>Example:</strong> ${esc(quick.example)}</p>
                     </article>
                 `;
                 return;
@@ -1785,17 +1863,26 @@
                 return;
             }
 
-            box.innerHTML = `<article class="wu-word-card"><div class="wu-word-status">Looking up the meaning of “${esc(rawQuery.trim())}”…</div></article>`;
+            box.innerHTML = `<article class="wu-word-card"><div class="wu-word-status">Looking up the meaning of â€œ${esc(rawQuery.trim())}â€â€¦</div></article>`;
 
             try {
-                const response = await fetch(
-                    "https://api.dictionaryapi.dev/api/v2/entries/en/" + encodeURIComponent(query)
-                );
+                const controller = new AbortController();
+                const timeoutId = window.setTimeout(() => controller.abort(), 5000);
+                let entries;
+
+                try {
+                    const response = await fetch(
+                        "https://api.dictionaryapi.dev/api/v2/entries/en/" + encodeURIComponent(query),
+                        { signal: controller.signal }
+                    );
+
+                    if (!response.ok) throw new Error("Definition unavailable");
+                    entries = await response.json();
+                } finally {
+                    window.clearTimeout(timeoutId);
+                }
 
                 if (requestId !== wordLookupRequest) return;
-                if (!response.ok) throw new Error("Definition unavailable");
-
-                const entries = await response.json();
                 const entry = entries[0];
                 const meanings = entry && Array.isArray(entry.meanings) ? entry.meanings : [];
                 const firstMeaning = meanings.find(item =>
@@ -1808,7 +1895,7 @@
                 box.innerHTML = `
                     <article class="wu-word-card">
                         <div class="wu-word-label">WORD MEANING</div>
-                        <h3>${esc(entry.word || query)}${firstMeaning.partOfSpeech ? ` <span class="wu-word-status">· ${esc(firstMeaning.partOfSpeech)}</span>` : ""}</h3>
+                        <h3>${esc(entry.word || query)}${firstMeaning.partOfSpeech ? ` <span class="wu-word-status">Â· ${esc(firstMeaning.partOfSpeech)}</span>` : ""}</h3>
                         <p>${esc(definition.definition)}</p>
                         ${definition.example ? `<p class="wu-word-example"><strong>Example:</strong> ${esc(definition.example)}</p>` : ""}
                         ${entry.phonetic ? `<div class="wu-word-status">${esc(entry.phonetic)}</div>` : ""}
@@ -1816,7 +1903,7 @@
                 `;
             } catch (error) {
                 if (requestId !== wordLookupRequest) return;
-                box.innerHTML = `<article class="wu-word-card"><div class="wu-word-label">WORD MEANING</div><p class="wu-word-status">No definition found for “${esc(rawQuery.trim())}” yet. Check the spelling or try another word.</p></article>`;
+                box.innerHTML = `<article class="wu-word-card"><div class="wu-word-label">WORD MEANING</div><p class="wu-word-status">No definition found for â€œ${esc(rawQuery.trim())}â€ yet. Check the spelling or try another word.</p></article>`;
             }
         }
 
@@ -1896,7 +1983,7 @@
                         <button type="button" class="wu-search-result"
                                 data-wu-search-lesson="${esc(lesson.id)}">
                             <strong>${esc(title)}</strong>
-                            <span class="wu-search-meta">${esc(level)} · ${esc(skill)}</span>
+                            <span class="wu-search-meta">${esc(level)} Â· ${esc(skill)}</span>
                             <small>${esc(String(description).slice(0, 190))}</small>
                         </button>
                     `;
