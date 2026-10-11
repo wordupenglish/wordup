@@ -740,7 +740,7 @@
                     onclick="wordUpSpeakTextFromButton(this)"
                     aria-label="Listen to lesson text"
                     title="Listen">
-                    <span aria-hidden="true">ðŸ”Š</span>
+                    <span aria-hidden="true">&#128266;</span>
                 </button>
                 <span class="wu-speakable-text">${esc(text)}</span>
             </span>

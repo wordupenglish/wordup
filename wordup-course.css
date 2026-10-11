@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    WORDUP COURSE INTEGRATION
    ========================================================= */
 
@@ -301,19 +301,27 @@
     gap: 8px;
 }
 
-.wu-vocabulary-mini div {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
+.wu-vocabulary-mini > div {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+    column-gap: 16px;
+    row-gap: 5px;
     padding: 11px 13px;
     border-radius: 11px;
     background: rgba(128,128,128,.08);
 }
 
-.wu-vocabulary-mini span {
-    opacity: .7;
+.wu-vocabulary-mini > div > strong,
+.wu-vocabulary-mini > div > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    line-height: 1.55;
 }
 
+.wu-vocabulary-mini > div > span {
+    opacity: .8;
+}
 .wu-learning-actions,
 .wu-test-submit {
     display: flex;
@@ -451,8 +459,8 @@
         grid-column: 2;
     }
 
-    .wu-vocabulary-mini div {
-        flex-direction: column;
+    .wu-vocabulary-mini > div {
+        grid-template-columns: minmax(0, 1fr);
         gap: 4px;
     }
 
