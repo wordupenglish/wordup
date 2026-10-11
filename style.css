@@ -3071,3 +3071,36 @@ body.wu-name-modal-open { overflow: hidden; }
     .wu-name-dialog { padding: 25px 20px; }
     .wu-name-actions > button { flex: 1; }
 }
+/* Small inline pronunciation controls for Reading, Vocabulary, Speaking and Listening lessons. */
+.wu-speakable {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    max-width: 100%;
+}
+.wu-speakable-text { min-width: 0; }
+.wu-speak-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0;
+    margin: 0 0.12rem 0 0;
+    border: 1px solid var(--border, #dfe4ec);
+    border-radius: 999px;
+    background: var(--surface2, #eef2f7);
+    color: var(--primary, #315efb);
+    font-size: 0.9rem;
+    line-height: 1;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.wu-speak-button:hover,
+.wu-speak-button:focus-visible {
+    background: var(--primary, #315efb);
+    color: #fff;
+    outline-offset: 2px;
+}
+.wu-speak-button:active { transform: scale(0.96); }

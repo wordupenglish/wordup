@@ -718,6 +718,47 @@
         }
     }
 
+    function speakableLessonText(value) {
+        const text = String(value ?? "");
+        const trimmed = text.trim();
+
+        if (
+            !trimmed ||
+            !currentLesson ||
+            !["reading", "vocabulary", "speaking", "listening"].includes(currentLesson.skill) ||
+            !/[A-Za-z]/.test(trimmed)
+        ) {
+            return esc(text);
+        }
+
+        return `
+            <span class="wu-speakable">
+                <button
+                    type="button"
+                    class="wu-speak-button"
+                    data-speak="${esc(trimmed)}"
+                    onclick="wordUpSpeakTextFromButton(this)"
+                    aria-label="Listen to lesson text"
+                    title="Listen">
+                    <span aria-hidden="true">ðŸ”Š</span>
+                </button>
+                <span class="wu-speakable-text">${esc(text)}</span>
+            </span>
+        `;
+    }
+
+    function speakTextFromButton(button) {
+        const text = button && button.dataset ? button.dataset.speak : "";
+        if (!text || !("speechSynthesis" in window) || typeof window.SpeechSynthesisUtterance !== "function") {
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+        const utterance = new window.SpeechSynthesisUtterance(text);
+        utterance.lang = "en-US";
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+    }
     function renderLearn() {
         const lesson = currentLesson;
 
@@ -730,19 +771,19 @@
                 </div>
 
                 <h2>
-                    ${esc(lesson.topic)}
+                    ${speakableLessonText(lesson.topic)}
                 </h2>
 
                 <h3>Objective</h3>
 
                 <p>
-                    ${esc(lesson.objective)}
+                    ${speakableLessonText(lesson.objective)}
                 </p>
 
                 <h3>Explanation</h3>
 
                 <p>
-                    ${esc(lesson.explanation)}
+                    ${speakableLessonText(lesson.explanation)}
                 </p>
 
         `;
@@ -752,7 +793,7 @@
                 <h3>Key rules</h3>
                 <ul>
                     ${lesson.rules.map(x =>
-                        `<li>${esc(x)}</li>`
+                        `<li>${speakableLessonText(x)}</li>`
                     ).join("")}
                 </ul>
             `;
@@ -763,7 +804,7 @@
                 <h3>Examples</h3>
                 <div class="wu-example-list">
                     ${lesson.examples.map(x =>
-                        `<div>${esc(x)}</div>`
+                        `<div>${speakableLessonText(x)}</div>`
                     ).join("")}
                 </div>
             `;
@@ -777,8 +818,8 @@
 
                     ${lesson.vocabulary.map(item => `
                         <div>
-                            <strong>${esc(item.word)}</strong>
-                            <span>${esc(item.meaning)}</span>
+                            <strong>${speakableLessonText(item.word)}</strong>
+                            <span>${speakableLessonText(item.meaning)}</span>
                         </div>
                     `).join("")}
 
@@ -791,7 +832,7 @@
                 <h3>Common mistakes</h3>
                 <ul>
                     ${lesson.mistakes.map(x =>
-                        `<li>${esc(x)}</li>`
+                        `<li>${speakableLessonText(x)}</li>`
                     ).join("")}
                 </ul>
             `;
@@ -1350,6 +1391,7 @@
     window.wordUpCourseBack =
         courseBack;
 
+    window.wordUpSpeakTextFromButton = speakTextFromButton;
     window.wordUpCourseTab =
         function (tab) {
             currentTab = tab;
