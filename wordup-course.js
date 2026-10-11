@@ -1728,6 +1728,7 @@
         let activeSkill = "all";
 
         let wordLookupRequest = 0;
+        const openDictionaryBucketCache = new Map();
 
         async function renderWordMeaning(rawQuery) {
             const box = overlay.querySelector("#wuWordMeaning");
@@ -1862,6 +1863,71 @@
                 return;
             }
 
+            // Primary dictionary lookup; the source/provider name is never shown in the UI.
+            if (/^[a-z]+$/.test(query)) {
+                try {
+                    const shardKey = query.slice(0, 2);
+                    let shardPromise = openDictionaryBucketCache.get(shardKey);
+                    if (!shardPromise) {
+                        const shardUrl = "https://raw.githubusercontent.com/mhollingshead/open-dictionary/main/api/" +
+                            query.slice(0, 1) + "/" + shardKey + ".json";
+                        const controller = new AbortController();
+                        const timeoutId = window.setTimeout(() => controller.abort(), 10000);
+                        shardPromise = fetch(shardUrl, { signal: controller.signal })
+                            .then(response => {
+                                if (!response.ok) throw new Error("Dictionary shard unavailable");
+                                return response.json();
+                            })
+                            .finally(() => window.clearTimeout(timeoutId));
+                        openDictionaryBucketCache.set(shardKey, shardPromise);
+                        shardPromise.catch(() => {
+                            if (openDictionaryBucketCache.get(shardKey) === shardPromise) {
+                                openDictionaryBucketCache.delete(shardKey);
+                            }
+                        });
+                    }
+
+                    const bucket = await shardPromise;
+                    if (requestId !== wordLookupRequest) return;
+
+                    const entry = bucket && bucket[query];
+                    const senses = [];
+                    (Array.isArray(entry && entry.etymologies) ? entry.etymologies : []).forEach(etymology => {
+                        (Array.isArray(etymology.partsOfSpeech) ? etymology.partsOfSpeech : []).forEach(part => {
+                            (Array.isArray(part.senses) ? part.senses : []).forEach(sense => {
+                                if (sense && typeof sense.sense === "string" && sense.sense.trim()) {
+                                    senses.push({
+                                        pos: String(part.partOfSpeech || ""),
+                                        definition: sense.sense.trim(),
+                                        example: Array.isArray(sense.examples) ? String(sense.examples.find(Boolean) || "") : ""
+                                    });
+                                }
+                            });
+                        });
+                    });
+
+                    if (senses.length) {
+                        const uniqueSenses = senses.filter((sense, index, all) =>
+                            all.findIndex(item => item.definition === sense.definition && item.pos === sense.pos) === index
+                        ).slice(0, 3);
+                        box.innerHTML = `
+                            <article class="wu-word-card">
+                                <div class="wu-word-label">WORD MEANING</div>
+                                <h3>${esc(entry.word || query)}${uniqueSenses[0].pos
+                                    ? ` <span class="wu-word-status">Â· ${esc(uniqueSenses[0].pos)}</span>`
+                                    : ""}</h3>
+                                ${uniqueSenses.map((sense, index) => `
+                                    <p>${uniqueSenses.length > 1 ? `<strong>${index + 1}.</strong> ` : ""}${esc(sense.definition)}</p>
+                                    ${sense.example ? `<p class="wu-word-example"><strong>Example:</strong> ${esc(sense.example)}</p>` : ""}
+                                `).join("")}
+                            </article>
+                        `;
+                        return;
+                    }
+                } catch (openDictionaryError) {
+                    // Fall through silently to the existing dictionary providers.
+                }
+            }
             // Online dictionary fallback for words not yet in the lesson vocabulary.
             if (query.includes(" ")) {
                 box.innerHTML = "";

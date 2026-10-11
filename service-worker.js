@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v23-meaning-search-20261010";
+const CACHE_NAME = "wordup-v24-open-dictionary-20261011";
 
 const CORE_ASSETS = [
     "./",
