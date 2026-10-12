@@ -748,18 +748,27 @@
     }
 
     function speakTextFromButton(button) {
-        const text = button && button.dataset ? button.dataset.speak : "";
-        if (!text || !("speechSynthesis" in window) || typeof window.SpeechSynthesisUtterance !== "function") {
+        const rawText = button && button.dataset ? button.dataset.speak : "";
+        if (!rawText || !("speechSynthesis" in window) ||
+            typeof window.SpeechSynthesisUtterance !== "function") {
             return;
         }
 
+        // Remove URL and slash notation before sending text to speech.
+        const spokenText = String(rawText)
+            .replace(/https?:\/\/\S+/gi, " ")
+            .replace(/\/+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+        if (!spokenText) return;
+
         window.speechSynthesis.cancel();
-        const utterance = new window.SpeechSynthesisUtterance(text);
+        const utterance = new window.SpeechSynthesisUtterance(spokenText);
         utterance.lang = "en-US";
         utterance.rate = 0.9;
         window.speechSynthesis.speak(utterance);
-    }
-    function renderLearn() {
+    }    function renderLearn() {
         const lesson = currentLesson;
 
         let html = `

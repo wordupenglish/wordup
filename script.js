@@ -2304,7 +2304,14 @@ function wordUpSpeakEnglish(text, rate = 0.9){
     }
 
     const synth = window.speechSynthesis;
-    const message = String(text);
+    const message = String(text ?? "")
+        .replace(/```[\s\S]*?```/g, " ")
+        .replace(/https?:\/\/\S+/gi, " ")
+        .replace(/(^|\s)\/{1,3}(?=\s|$)/g, " ")
+        .replace(/[\/\\*_#`<>|{}[\]]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    if (!message) return;
 
     try{
         synth.cancel();
@@ -4188,58 +4195,67 @@ function wordUpV10ShowResult(
    ========================================================= */
 
 function wordUpV10EnterLevel() {
+    let saved;
 
-    const saved =
-        JSON.parse(
-            localStorage.getItem(
-                "wordUpV10PlacementResult"
-            ) || "null"
+    try {
+        saved = JSON.parse(
+            localStorage.getItem("wordUpV10PlacementResult") || "null"
         );
-
-    if (!saved) return;
-
-
-    /*
-       Store current learner level.
-    */
-
-    localStorage.setItem(
-        "wordUpCurrentLevel",
-        saved.overallLevel
-    );
-
-
-    const screen =
-        document.getElementById(
-            "wordup-v10-placement-screen"
-        );
-
-    if (screen) {
-        screen.style.display =
-            "none";
+    } catch (error) {
+        console.error("Could not read placement result:", error);
+        return;
     }
 
+    if (!saved) {
+        console.warn("Complete Test My Level before entering a level.");
+        return;
+    }
 
-    /*
-       Return to the existing curriculum.
-    */
+    const recommendedLevel = String(
+        saved.overallLevel || saved.level || ""
+    ).toLowerCase();
 
-    if (
-        typeof showScreen ===
-        "function"
-    ) {
+    const levelMap = {
+        foundation: "beginner",
+        a1: "beginner",
+        a2: "beginner",
+        b1: "intermediate",
+        b2: "intermediate",
+        c1: "advanced",
+        c2: "advanced",
+        academic: "advanced",
+        beginner: "beginner",
+        intermediate: "intermediate",
+        advanced: "advanced"
+    };
 
-        showScreen(
-            "curriculum"
-        );
+    const curriculumLevel = levelMap[recommendedLevel];
 
+    if (!curriculumLevel) {
+        console.error("Unrecognized recommended level:", recommendedLevel);
+        return;
+    }
+
+    localStorage.setItem("wordUpCurrentLevel", recommendedLevel);
+    localStorage.setItem("wordUpCurriculumTier", curriculumLevel);
+
+    const screen = document.getElementById("wordup-v10-placement-screen");
+    if (screen) screen.style.display = "none";
+
+    if (typeof showScreen === "function") {
+        showScreen("curriculum");
+
+        if (
+            typeof currentSkill !== "undefined" &&
+            currentSkill &&
+            typeof setLevel === "function"
+        ) {
+            setLevel(curriculumLevel);
+        }
     } else {
-
         location.reload();
     }
 }
-
-
 function wordUpV10ReviewPrevious() {
 
     const screen =
