@@ -8,7 +8,7 @@
 const WORDUP_A2_SPEAKING = [
 
 {
-id:"a2-speaking-past-experiences",
+id:"a2-speaking-past-experiences-practice",
 level:"a2",
 skill:"speaking",
 topic:"Talking About Past Experiences",
@@ -72,7 +72,7 @@ level:"a2",
 skill:"speaking",
 topic:"Describing Personal Experiences",
 objective:"Describe an experience with basic details about what happened, where, when, and how you felt.",
-prerequisites:["a2-speaking-past-experiences"],
+prerequisites:["a2-speaking-past-experiences-practice"],
 introduction:"A good short story gives listeners enough information to understand the event.",
 explanation:"Organize a short experience around four questions: What happened? Where? When? How did you feel? Use simple connectors such as then, because, but, and so.",
 learningPoints:[
@@ -185,7 +185,7 @@ estimatedTime:20
 },
 
 {
-id:"a2-speaking-giving-advice",
+id:"a2-speaking-giving-advice-practice",
 level:"a2",
 skill:"speaking",
 topic:"Giving Advice",
@@ -426,7 +426,7 @@ level:"a2",
 skill:"speaking",
 topic:"Describing Problems",
 objective:"Explain a simple everyday problem clearly and ask for appropriate help.",
-prerequisites:["a2-speaking-giving-advice"],
+prerequisites:["a2-speaking-giving-advice-practice"],
 introduction:"Describing a problem accurately is the first step toward finding a solution.",
 explanation:"State what is wrong, give a few relevant details, and explain what you need. Useful phrases include I have a problem, There is a problem with..., and Could you help me?",
 learningPoints:[
@@ -485,7 +485,7 @@ level:"a2",
 skill:"speaking",
 topic:"Making Suggestions",
 objective:"Suggest practical actions and respond appropriately to suggestions.",
-prerequisites:["a2-speaking-giving-advice"],
+prerequisites:["a2-speaking-giving-advice-practice"],
 introduction:"Suggestions allow people to solve problems and make decisions together.",
 explanation:"Use Let's, Why don't we...?, How about...?, and We could... to suggest actions. Respond with acceptance, hesitation, or an alternative.",
 learningPoints:[

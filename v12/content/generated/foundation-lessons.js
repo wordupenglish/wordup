@@ -211,7 +211,7 @@ const WORDUP_FOUNDATION_LESSONS = [
     },
 
     {
-        id: "foundation-grammar-sentence-1",
+        id: "foundation-grammar-sentence-1-expanded",
         level: "foundation",
         skill: "grammar",
         topic: "What Is a Sentence?",
