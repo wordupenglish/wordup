@@ -1702,8 +1702,8 @@ body.dark .wordup-review-checklist div{
     letter-spacing: -.045em;
 }
 
-.wu-welcome h1 span {
-    display: block;
+.wu-welcome h1 > span:not(#wuWelcomeName) {
+    display: inline;
     opacity: .58;
     font-weight: 500;
 }
