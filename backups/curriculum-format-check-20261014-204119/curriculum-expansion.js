@@ -1,0 +1,1249 @@
+/*
+=========================================================
+ WORDUP CURRICULUM EXPANSION ENGINE
+ Uses the existing V12 master curriculum map.
+ Does NOT create a new curriculum version.
+=========================================================
+*/
+
+(function () {
+
+    "use strict";
+
+    const LEVEL_NAMES = {
+        foundation: "Foundation",
+        a1: "A1",
+        a2: "A2",
+        b1: "B1",
+        b2: "B2",
+        c1: "C1",
+        c2: "C2",
+        academic: "Academic English"
+    };
+
+    const SKILL_NAMES = {
+        writing: "Writing",
+        grammar: "Grammar",
+        vocabulary: "Vocabulary",
+        reading: "Reading",
+        listening: "Listening",
+        speaking: "Speaking"
+    };
+
+    const SKILL_ICONS = {
+        writing: "✍️",
+        grammar: "🔤",
+        vocabulary: "📚",
+        reading: "📖",
+        listening: "🎧",
+        speaking: "🗣️"
+    };
+
+    function slugify(value) {
+        return String(value)
+            .toLowerCase()
+            .replace(/&/g, " and ")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+    }
+
+    function levelName(level) {
+        return LEVEL_NAMES[level] || level;
+    }
+
+    function skillName(skill) {
+        return SKILL_NAMES[skill] || skill;
+    }
+
+
+    function grammarTeachingGuide(topic) {
+        const t = String(topic).toLowerCase();
+        // WORDUP_TARGETED_TEACHING_GUIDES_20261014
+        // Specific guides must run before broad sentence, clause, and conjunction matches.
+        if (/^rhetorical grammar$/.test(t)) return {
+            objective: "Use rhetorical grammatical choices to emphasize claims, create parallelism, and guide an audience's interpretation.",
+            explanation: "Rhetorical grammar examines how grammatical form influences emphasis, rhythm, tone, and persuasion. Parallel structures give equal grammatical form to ideas of equal importance: “The policy aims to reduce costs, improve access, and strengthen services.” A rhetorical question makes a point rather than simply requesting information. Cleft sentences, such as “It was the final paragraph that clarified the argument,” place special focus on one part of a message. Choose a structure according to the point you want readers or listeners to notice.",
+            rules: [
+                "Use parallel grammatical forms for items joined in a series or comparison.",
+                "Use rhetorical questions when their implied answer supports your argument.",
+                "Use cleft structures such as “It was X that…” to emphasize a particular element.",
+                "Keep balanced phrases logically equivalent and grammatically consistent.",
+                "Revise for emphasis without sacrificing clarity, accuracy, or natural tone."
+            ]
+        };
+
+        if (/^sentence-level editing$/.test(t)) return {
+            objective: "Edit sentences for grammatical accuracy, complete clauses, logical connections, punctuation, and precise meaning.",
+            explanation: "Sentence-level editing improves the correctness and clarity of individual sentences. First locate the main clause and check that it expresses a complete thought. A fragment lacks an essential part of a sentence; a run-on joins independent clauses incorrectly; and a comma splice joins two independent clauses with only a comma. Correct these by restructuring the sentence, using suitable conjunctions, using a semicolon where appropriate, or separating the clauses. Also check subject–verb agreement, modifier placement, parallel structure, and punctuation. Preserve the writer's intended meaning while making the sentence easier to understand.",
+            rules: [
+                "Identify independent and dependent clauses before changing punctuation.",
+                "Repair fragments by supplying the missing clause or connecting the fragment appropriately.",
+                "Repair comma splices and run-ons with correct punctuation or a suitable conjunction.",
+                "Check agreement against the true subject, not a nearby noun.",
+                "Remove ambiguous modifiers and inconsistent parallel structures.",
+                "Reread the revised sentence to confirm that its meaning remains accurate."
+            ]
+        };
+
+        if (/^clauses?$/.test(t)) return {
+            objective: "Distinguish independent and dependent clauses and use noun, relative, and adverbial clauses accurately.",
+            explanation: "A clause contains a subject and a verb. An independent clause expresses a complete thought and can stand alone: “The students completed the assignment.” A dependent clause cannot normally stand alone in the same way: “Although the assignment was difficult.” Relative clauses describe a noun (“the teacher who helped me”); noun clauses perform roles such as subject or object (“What she explained was useful”); and adverbial clauses express relationships such as time, reason, condition, or contrast (“We stayed inside because it was raining”). When a dependent clause begins a sentence, it is usually followed by a comma. When it follows the main clause, a comma is often unnecessary for an essential clause. Identify the clause's function before choosing punctuation.",
+            rules: [
+                "Find the subject and verb in each clause.",
+                "Check whether the clause can stand alone as a complete sentence.",
+                "Identify whether a dependent clause functions as a noun, modifier, or adverbial.",
+                "Use relative clauses to identify or add information about a noun.",
+                "Use subordinating conjunctions to express relationships such as time, reason, condition, and contrast.",
+                "Punctuate introductory dependent clauses with a comma and avoid comma splices."
+            ]
+        };
+
+        if (/^phrase structure$/.test(t)) return {
+            objective: "Identify phrase heads and constituents and explain how noun, verb, adjective, adverb, and prepositional phrases function in sentences.",
+            explanation: "A phrase is a group of words that functions as a unit but does not itself form a complete independent clause. Most phrases are organized around a head, the word that determines the phrase's basic type. In “those two very useful books,” books is the head of the noun phrase. In “has carefully reviewed the report,” has reviewed forms the verb group, with carefully modifying the action and the report as its object. In “beside the main entrance,” beside is the preposition and the main entrance is its complement. Phrases may contain modifiers and other phrases, so identify the head first and then examine how the remaining words relate to it.",
+            rules: [
+                "Identify the head word that determines the phrase's type.",
+                "Distinguish a phrase from a clause by checking for a subject–predicate structure and independent meaning.",
+                "Identify determiners and modifiers within noun phrases.",
+                "Identify the main verb and its auxiliaries within verb phrases.",
+                "Identify the preposition and its complement within prepositional phrases.",
+                "Use constituent relationships to explain how a phrase functions in the larger sentence."
+            ]
+        };
+        const guides = [
+            [/present simple/, "Use the present simple for habits, routines, facts, and regular situations.", "The present simple describes what happens regularly or what is generally true. With he, she, and it, most main verbs take -s or -es. Questions and negatives use do or does followed by the base verb.", ["Choose it for routines, habits, and facts.", "Add -s or -es to most verbs with he, she, or it.", "Use do or does to form questions.", "Use do not or does not for negatives.", "Keep the main verb in its base form after do or does."]],
+            [/present continuous|present progressive/, "Describe actions happening now or temporary situations.", "The present continuous uses am, is, or are followed by a verb ending in -ing. It commonly describes an action in progress now or a temporary situation.", ["Choose the correct form of be: am, is, or are.", "Add -ing to the main verb.", "Use the tense for actions in progress or temporary situations.", "Include a time expression when it clarifies the meaning.", "Do not omit the form of be."]],
+            [/past simple|simple past/, "Describe completed past actions and events.", "The past simple refers to completed events in the past. Regular verbs often end in -ed, while irregular verbs have their own past forms. Questions and negatives generally use did plus the base verb.", ["Look for a finished past time or event.", "Use the past form in affirmative statements.", "Use did plus the base verb in questions.", "Use did not plus the base verb in negatives.", "Learn common irregular past forms."]],
+            [/present perfect/, "Connect past experiences or events with the present.", "The present perfect uses have or has plus the past participle. It can describe experiences, recent events, or situations that began in the past and remain relevant now.", ["Use have with I, you, we, and they.", "Use has with he, she, and it.", "Follow have or has with a past participle.", "Use it when the present connection matters.", "Distinguish it from a finished past time expressed with the past simple."]],
+            [/past continuous|past progressive/, "Describe an action that was in progress at a past time.", "The past continuous uses was or were plus verb-ing. It often provides background or describes an action in progress when another event occurred.", ["Use was with I, he, she, and it.", "Use were with you, we, and they.", "Follow was or were with verb-ing.", "Use it for an action in progress at a past time.", "Combine it with the past simple when a shorter event interrupts an ongoing action."]],
+            [/future|going to|will and/, "Talk about future plans, predictions, and decisions.", "English uses several forms for future meaning. Will often expresses predictions or decisions made at the moment; be going to commonly expresses intentions or predictions based on present evidence.", ["Identify whether the meaning is a plan, prediction, or decision.", "Use will plus the base verb.", "Use the correct form of be before going to.", "Do not add -s to the verb after will.", "Choose the form that best fits the context."]],
+            [/article|a an the/, "Choose articles according to meaning and the noun's sound.", "A and an introduce a singular countable noun when it is not identified as a particular one. The points to something specific or already identifiable. The choice between a and an depends on the initial sound, not simply the first letter.", ["Use a before a consonant sound.", "Use an before a vowel sound.", "Use the when the listener can identify the specific thing.", "Check whether a noun is singular and countable.", "Remember that some nouns can take no article in general statements."]],
+            [/modal verb|modals/, "Express ability, advice, permission, obligation, and possibility.", "Modal verbs change the meaning of the main verb. Most modals are followed directly by the base form, without to or an -s ending.", ["Choose a modal that matches the intended meaning.", "Follow most modals with the base verb.", "Do not add -s after a modal.", "Form questions by placing the modal before the subject.", "Check the difference between obligation, advice, and possibility."]],
+            [/passive voice|passive/, "Focus on the action or receiver rather than the doer.", "The passive voice is formed with an appropriate form of be plus a past participle. It is useful when the action or receiver is more important than who performs it.", ["Identify the object or receiver of the action.", "Use the appropriate tense of be.", "Add the past participle.", "Include a by-phrase only when the doer matters.", "Keep the intended tense consistent."]],
+            [/conditional|if clause/, "Express real possibilities, imagined situations, and their results.", "Conditional sentences connect a condition with a result. The verb forms depend on whether the situation is generally true, realistically possible, hypothetical, or imagined in the past.", ["Identify the type of condition and its meaning.", "Check the tense in both clauses.", "Use a comma when the if-clause comes first.", "Avoid choosing verb forms without considering the meaning.", "Read both clauses together to check the logic."]],
+            [/reported speech|indirect speech/, "Report what someone said without repeating the exact words.", "Reported speech presents another person's message indirectly. Pronouns, time expressions, and verb tenses may change depending on the reporting context.", ["Identify the original speaker and listener.", "Adjust pronouns to match the new context.", "Check whether the reporting verb requires a tense change.", "Update time and place expressions when necessary.", "Preserve the original meaning."]],
+            [/subject.?verb agreement|agreement/, "Match the verb with its grammatical subject.", "Subject–verb agreement means that the verb form matches the subject. The subject, rather than a nearby noun, determines the form.", ["Find the main subject.", "Identify whether it is singular or plural.", "Choose the matching verb form.", "Do not be misled by nouns between the subject and verb.", "Check agreement throughout the sentence."]],
+            [/comparative|superlative|comparison/, "Compare people, places, things, and actions accurately.", "Comparatives express a difference between items, while superlatives identify the highest or lowest degree within a group. The form depends partly on the adjective or adverb.", ["Use a comparative when comparing two items.", "Use a superlative to identify an extreme in a group.", "Check whether the word takes -er/-est or more/most.", "Watch for irregular forms such as better and best.", "Use than with many comparative structures and the with many superlatives."]],
+            [/pronoun/, "Use pronouns clearly and match them to their referents.", "Pronouns replace nouns or noun phrases. Their form depends on their grammatical role, and readers should be able to identify what each pronoun refers to.", ["Identify the noun or idea being replaced.", "Choose subject or object forms correctly.", "Check possessive forms carefully.", "Make the reference clear and unambiguous.", "Check agreement with the intended referent."]],
+            [/preposition/, "Express relationships of place, time, direction, and connection.", "Prepositions show relationships between words. Their choice often depends on the meaning and common usage of the surrounding expression.", ["Identify the relationship you need to express.", "Check common combinations and fixed expressions.", "Distinguish time, place, and movement meanings.", "Use the correct form after the preposition.", "Learn prepositions in useful phrases, not only as isolated words."]],
+            [/adjective|adverb/, "Choose words that describe nouns or modify actions and descriptions.", "Adjectives commonly describe nouns, while adverbs often modify verbs, adjectives, or other adverbs. Some words have similar forms, so their role in the sentence matters.", ["Identify which word needs describing or modifying.", "Use an adjective to describe a noun.", "Use an adverb when the sentence requires one.", "Check irregular forms such as good and well.", "Place the modifier where its meaning is clear."]],
+            [/countable|uncountable|quantifier/, "Choose noun forms and quantity expressions accurately.", "Countable nouns can be counted individually and have singular and plural forms. Uncountable nouns are treated as a mass or concept. Quantity words such as many, much, and some depend on the noun and context.", ["Decide whether the noun is countable in this meaning.", "Use singular or plural forms appropriately.", "Use many with plural countable nouns.", "Use much with uncountable nouns, especially in questions and negatives.", "Check whether a, an, or a quantity expression is needed."]],
+            [/question|interrogative/, "Form questions with correct word order and auxiliary verbs.", "English questions often place an auxiliary verb before the subject. The structure depends on whether the question uses be, a modal, or do-support.", ["Choose the appropriate question word if needed.", "Place the auxiliary before the subject in most questions.", "Use do or does for many present-simple questions.", "Use did plus the base verb for many past-simple questions.", "Check word order and punctuation."]],
+            [/gerund|infinitive/, "Choose the -ing form or infinitive according to the sentence pattern.", "Some verbs are followed by an -ing form, some by to plus the base verb, and some allow both with a change in meaning. The pattern often depends on the preceding verb or expression.", ["Identify the verb or expression before the gap.", "Check whether it takes -ing or to plus the base verb.", "Learn common verb patterns in phrases.", "Notice verbs that change meaning with different patterns.", "Read the full sentence to confirm the intended meaning."]],
+            [/relative clause|relative pronoun/, "Add information about a person, thing, or place using a relative clause.", "Relative clauses identify or describe a noun. Relative words such as who, which, that, and whose have different uses, and punctuation can change the meaning.", ["Identify the noun being described.", "Choose a relative word that fits the reference.", "Check whether the information is essential or additional.", "Use commas appropriately for additional information.", "Avoid repeating a subject or object unnecessarily."]],
+            [/noun|plural/, "Recognize noun forms and use them correctly in sentences.", "Nouns name people, places, things, and ideas. Their forms and surrounding words depend on number, possession, and whether the noun is countable.", ["Identify the noun and its role.", "Check singular and plural forms.", "Learn irregular plural forms where necessary.", "Check articles and determiners before the noun.", "Use apostrophes carefully for possession."]],
+            [/sentence|word order/, "Build complete sentences with clear and accurate word order.", "A complete sentence communicates a full idea. English commonly uses subject–verb–object order, but questions, clauses, and modifiers may require different arrangements.", ["Identify the subject and main verb.", "Check whether the sentence expresses a complete idea.", "Use word order appropriate to a statement or question.", "Place modifiers close to the words they describe.", "Check capitalization and final punctuation."]],
+            [/conjunction|clause/, "Connect words and ideas while keeping sentence relationships clear.", "Conjunctions connect words, phrases, or clauses. The choice of connector shows relationships such as addition, contrast, reason, or result.", ["Identify the relationship between the ideas.", "Choose a connector that expresses that relationship.", "Check the structure required by the connector.", "Avoid joining independent clauses with only a comma.", "Read the sentence to confirm the logic is clear."]]
+        ];
+        for (const [pattern, objective, explanation, rules] of guides) {
+            if (pattern.test(t)) return { objective, explanation, rules };
+        }
+        return {
+            objective: "Understand the purpose and form of " + topic + " and apply it accurately in meaningful sentences.",
+            explanation: "This grammar lesson focuses on " + topic + ". Study how the structure is formed, what it means, and when English speakers use it. Compare the examples, notice the pattern, and use the structure in your own sentences. Check both the form and the meaning before deciding that an answer is correct.",
+            rules: [
+                "Identify the structure and the meaning it expresses.",
+                "Study the word order and verb or word forms in the examples.",
+                "Notice how the structure changes with the subject and context.",
+                "Use the structure in a complete sentence of your own.",
+                "Check grammar, meaning, and punctuation together."
+            ]
+        };
+    }
+
+    function buildObjective(level, skill, topic) {
+
+        if (skill === "writing") {
+            return "Develop the ability to use " + topic +
+                " clearly and appropriately in written English.";
+        }
+
+        if (skill === "grammar") {
+            return grammarTeachingGuide(topic).objective;
+        }
+
+        if (skill === "vocabulary") {
+            return "Build useful vocabulary knowledge related to " + topic +
+                " and use it appropriately in context.";
+        }
+
+        if (skill === "reading") {
+            return "Develop reading skills through " + topic +
+                " and learn to understand meaning, structure, and important information.";
+        }
+
+        if (skill === "listening") {
+            return "Develop listening skills through " + topic +
+                " and identify important meaning, information, and context.";
+        }
+
+        if (skill === "speaking") {
+            return "Develop spoken English through " + topic +
+                ", with attention to clear ideas, appropriate language, " +
+                "fluency, pronunciation, and interaction.";
+        }
+
+        return "Develop English skills through " + topic + ".";
+    }
+
+    function buildExplanation(level, skill, topic) {
+
+        const levelText = levelName(level);
+
+        if (skill === "writing") {
+            return (
+                "This " + levelText + " writing lesson focuses on " + topic + ". " +
+                "Learners should first understand the purpose of the writing task, " +
+                "then organize ideas clearly, choose appropriate language, and check " +
+                "grammar, vocabulary, punctuation, and overall clarity before finishing."
+            );
+        }
+
+        if (skill === "grammar") {
+            return grammarTeachingGuide(topic).explanation;
+        }
+
+        if (skill === "vocabulary") {
+            return (
+                "This " + levelText + " vocabulary lesson focuses on " + topic + ". " +
+                "Good vocabulary learning includes understanding meaning, noticing words " +
+                "in context, learning common combinations, and using new vocabulary accurately " +
+                "rather than memorizing isolated words."
+            );
+        }
+
+        if (skill === "reading") {
+            return (
+                "This " + levelText + " reading lesson focuses on " + topic + ". " +
+                "Effective readers identify the purpose of a text, locate important information, " +
+                "connect ideas, use context to understand unfamiliar language, and distinguish " +
+                "main ideas from supporting details."
+            );
+        }
+
+        if (skill === "listening") {
+            return (
+                "This " + levelText + " listening lesson focuses on " + topic + ". " +
+                "Effective listening requires attention to key words, context, speaker purpose, " +
+                "organization, and meaning. Learners should focus on understanding the message " +
+                "rather than trying to recognize every single word."
+            );
+        }
+
+        if (skill === "speaking") {
+            return (
+                "This " + levelText + " speaking lesson focuses on " + topic + ". " +
+                "Plan your message, organize ideas, choose language for your " +
+                "audience, and practise speaking aloud. Pay attention to clarity, " +
+                "pronunciation, fluency, and responding appropriately to others. " +
+                "Record yourself when possible and review one area to improve."
+            );
+        }
+
+        return "This lesson develops English through " + topic + ".";
+    }
+
+    function buildRules(skill, topic) {
+
+        if (skill === "writing") {
+            return [
+                "Understand the purpose before writing.",
+                "Organize ideas in a logical order.",
+                "Use language appropriate to the task and audience.",
+                "Check grammar, vocabulary, spelling, and punctuation.",
+                "Revise the final text for clarity."
+            ];
+        }
+
+        if (skill === "grammar") {
+            return grammarTeachingGuide(topic).rules;
+        }
+
+        if (skill === "vocabulary") {
+            return [
+                "Learn the meaning of the word or expression.",
+                "Notice how it is used in context.",
+                "Learn useful word combinations.",
+                "Pay attention to register and appropriateness.",
+                "Use the vocabulary in a complete sentence."
+            ];
+        }
+
+        if (skill === "reading") {
+            return [
+                "Identify the purpose of the text.",
+                "Look for the main idea.",
+                "Find supporting information.",
+                "Use context when a word is unfamiliar.",
+                "Check that your interpretation is supported by the text."
+            ];
+        }
+
+        if (skill === "listening") {
+            return [
+                "Identify the situation and topic.",
+                "Listen for the main message.",
+                "Notice important details.",
+                "Use context to interpret unfamiliar language.",
+                "Check your understanding against the complete message."
+            ];
+        }
+
+                if (skill === "speaking") {
+            return [
+                "Identify your purpose and audience before speaking.",
+                "State your main point and support it with relevant details.",
+                "Use linking expressions to connect ideas.",
+                "Speak clearly and adjust your pace to the situation.",
+                "Listen to others and respond directly to their ideas."
+            ];
+        }
+
+        return [];
+    }
+
+    // WORDUP_TOPIC_GRAMMAR_PATCH
+    function topicGrammarContent(topic) {
+        const t = String(topic).toLowerCase();
+        const banks = [
+            {
+                match: /present simple/,
+                examples: ["I work every day.", "She works every day.", "Do they work here?"],
+                practice: [
+                    ["She ___ English every evening.", "studies", "study", "studying", "studied", "Use -s with he, she, or it in the present simple."],
+                    ["___ he live near the school?", "Does", "Do", "Is", "Has", "Use does to form present-simple questions with he, she, or it."]
+                ],
+                test: [
+                    ["My brother ___ to work by bus.", "goes", "go", "going", "gone", "A third-person singular subject takes the -s form."],
+                    ["They ___ coffee in the evening.", "do not drink", "does not drinks", "are not drink", "not drinks", "Use do not plus the base verb with they."]
+                ]
+            },
+            {
+                match: /present continuous|present progressive/,
+                examples: ["I am reading now.", "She is cooking dinner.", "They are studying at the moment."],
+                practice: [
+                    ["Look! The children ___ in the garden.", "are playing", "play", "plays", "played", "Use am, is, or are plus verb-ing for an action happening now."],
+                    ["He ___ a letter right now.", "is writing", "writes", "write", "writing", "He takes is before the -ing form."]
+                ],
+                test: [
+                    ["Choose the correct sentence.", "We are learning English now.", "We learning English now.", "We is learning English now.", "We are learn English now.", "The present continuous uses be plus verb-ing."],
+                    ["I ___ dinner at the moment.", "am making", "make", "makes", "making", "Use am with I in the present continuous."]
+                ]
+            },
+            {
+                match: /past simple|simple past/,
+                examples: ["I visited my uncle yesterday.", "She went home early.", "Did you see the film?"],
+                practice: [
+                    ["Yesterday, Ali ___ to Kabul.", "went", "go", "goes", "going", "Went is the past form of go."],
+                    ["We ___ football last Friday.", "played", "play", "plays", "playing", "Regular verbs commonly form the past simple with -ed."]
+                ],
+                test: [
+                    ["Which question is correct?", "Did you finish your work?", "Did you finished your work?", "Do you finished your work?", "Were you finish your work?", "After did, use the base form of the verb."],
+                    ["She ___ the answer yesterday.", "knew", "knows", "know", "knowing", "Knew is the past simple of know."]
+                ]
+            },
+            {
+                match: /modal verb/,
+                examples: ["You should rest.", "You must wear a seat belt.", "It might rain later."],
+                practice: [
+                    ["You ___ wear a seat belt. It is the law.", "must", "might", "would", "could", "Must expresses strong obligation."],
+                    ["I have a headache. I ___ take a rest.", "should", "mustn't", "can't", "wouldn't", "Should is commonly used to give advice."]
+                ],
+                test: [
+                    ["The sky is dark. It ___ rain later.", "might", "mustn't", "shouldn't", "can't to", "Might expresses possibility."],
+                    ["Choose the correct sentence.", "She can speak English.", "She cans speak English.", "She can speaks English.", "She can to speak English.", "A modal verb is followed by the base form without to."]
+                ]
+            },
+            {
+                match: /article|a an the/,
+                examples: ["I saw a bird.", "She ate an apple.", "The sun is bright."],
+                practice: [
+                    ["He ate ___ orange.", "an", "a", "the", "no article", "Use an before a vowel sound, as in orange."],
+                    ["Please close ___ door beside you.", "the", "a", "an", "no article", "The identifies a particular door known in the situation."]
+                ],
+                test: [
+                    ["She is ___ university student.", "a", "an", "the", "no article", "University begins with a /juː/ sound, so use a."],
+                    ["I need ___ umbrella because it is raining.", "an", "a", "the", "no article", "Umbrella begins with a vowel sound."]
+                ]
+            },
+            {
+                match: /comparative|superlative/,
+                examples: ["This road is longer than that one.", "Sara is taller than Mina.", "It is the most interesting book here."],
+                practice: [
+                    ["My bag is ___ than yours.", "heavier", "heavy", "heaviest", "more heavy than", "Use a comparative adjective with than."],
+                    ["This is the ___ building in the city.", "tallest", "taller", "tall", "more taller", "Use the superlative to compare one item with a whole group."]
+                ],
+                test: [
+                    ["Choose the correct comparison.", "Today is hotter than yesterday.", "Today is hottest than yesterday.", "Today is more hot than yesterday.", "Today hotter yesterday.", "Hot forms the comparative hotter."],
+                    ["Of the three routes, this one is ___.", "the shortest", "shorter", "short", "more short", "Use the superlative when comparing three or more items."]
+                ]
+            },
+            {
+                match: /subject.?verb agreement/,
+                examples: ["The student reads daily.", "The students read daily.", "My friends are ready."],
+                practice: [
+                    ["The list of names ___ on the desk.", "is", "are", "were", "be", "The subject is list, which is singular."],
+                    ["Each student ___ a notebook.", "has", "have", "having", "are having", "Each is treated as singular in standard subject-verb agreement."]
+                ],
+                test: [
+                    ["Neither answer ___ correct.", "is", "are", "be", "were", "Neither is normally singular in this construction."],
+                    ["The teachers ___ preparing the lessons.", "are", "is", "was", "has", "The plural subject teachers takes are."]
+                ]
+            },
+            {
+                match: /present perfect/,
+                examples: ["I have visited Uzbekistan twice.", "She has finished her homework.", "Have you ever tried this food?"],
+                practice: [
+                    ["She ___ her homework already.", "has finished", "have finished", "finished has", "is finish", "Use has plus the past participle with she."],
+                    ["I have never ___ snow.", "seen", "saw", "see", "seeing", "Present perfect uses have or has plus the past participle."]
+                ],
+                test: [
+                    ["___ you ever visited another country?", "Have", "Did", "Do", "Are", "Use have to ask about life experience with you."],
+                    ["They ___ here since 2020.", "have lived", "lived", "are live", "has lived", "Use present perfect with since for a situation continuing to the present."]
+                ]
+            }
+        ];
+
+        // WORDUP_GRAMMAR_PATCH_2
+        const extraBanks = [
+          {match:/future simple|future forms|future with will/,
+           examples:["I will call you tomorrow.","She will help us.","Will they arrive soon?"],
+           practice:[["I think it ___ rain tomorrow.","will","is","has","was","Use will to express a prediction about the future."],["She ___ visit us next week.","will","did","was","has","Will is followed by the base verb."]],
+           test:[["Choose the correct sentence.","They will travel next month.","They will travelled next month.","They will travels next month.","They travelling next month.","Use will plus the base form."],["I promise I ___ help you.","will","am","did","have","Will can express a promise."]]},
+          {match:/past continuous|past progressive/,
+           examples:["I was reading at eight.","They were playing when it rained.","She was cooking while I studied."],
+           practice:[["At nine, I ___ a book.","was reading","readed","am read","were reading","Use was or were plus verb-ing."],["They ___ sleeping when I called.","were","was","are","is","Use were with the plural subject they."]],
+           test:[["The phone rang while we ___.","were eating","ate","are eat","was ate","The ongoing past action uses were eating."],["He ___ home when he saw the accident.","was walking","walks","has walked","were walking","Use was with he in the past continuous."]]},
+          {match:/past perfect/,
+           examples:["She had left before I arrived.","They had finished by noon.","Had you met him before?"],
+           practice:[["The train ___ before we reached the station.","had left","has leave","was leave","have left","Use had plus the past participle for the earlier past action."],["He had ___ dinner before the guests arrived.","eaten","eat","ate","eating","Eaten is the past participle of eat."]],
+           test:[["By the time I called, she ___.","had slept","has sleep","was sleep","have slept","Past perfect marks an action completed before another past event."],["Choose the correct sentence.","They had finished before sunset.","They have finish before sunset.","They had finish before sunset.","They were finish before sunset.","Past perfect uses had plus the past participle."]]},
+          {match:/conditional|first conditional|second conditional|third conditional/,
+           examples:["If it rains, we will stay home.","If I had more time, I would travel.","If she had studied, she would have passed."],
+           practice:[["If I see Ali, I ___ him.","will tell","would told","told","will told","First conditional uses if plus present simple, then will plus base verb."],["If I were rich, I ___ a school.","would build","will built","would built","builded","Second conditional uses would plus the base verb."]],
+           test:[["If you heat ice, it ___.","melts","will melted","melted","would melts","Zero conditional describes general truths using present simple."],["If they had left earlier, they ___ the bus.","would have caught","will catch","would caught","had catch","Third conditional uses would have plus the past participle."]]},
+          {match:/passive voice|passive/,
+           examples:["The letter was written yesterday.","English is spoken worldwide.","The rooms are cleaned daily."],
+           practice:[["The cake ___ by Sara yesterday.","was made","made","is make","was make","Past simple passive uses was or were plus a past participle."],["English ___ in many countries.","is spoken","speaks","is speak","spoken","Present simple passive uses am, is, or are plus a past participle."]],
+           test:[["Choose the correct passive sentence.","The window was broken.","The window broke by him.","The window was break.","The window is broke yesterday.","Use was plus the past participle broken."],["These cars ___ in Japan.","are made","make","are making","made by","Present passive uses are plus the past participle."]]},
+          {match:/reported speech|indirect speech/,
+           examples:["Direct: “I am tired.” Reported: She said she was tired.","He said, “I can swim.” → He said he could swim.","She said that she had finished."],
+           practice:[["He said, “I am busy.” → He said he ___ busy.","was","is being","has","will","Reported speech often shifts am to was when reporting in the past."],["She said, “I can drive.” → She said she ___ drive.","could","can to","cans","will can","Can commonly changes to could in reported speech."]],
+           test:[["“I like tea,” she said. → She said she ___ tea.","liked","likes yesterday","liking","did liked","Present simple commonly shifts to past simple in reported speech."],["“We have finished,” they said. → They said they ___ finished.","had","have been","are","will have been","Present perfect commonly shifts to past perfect."]]},
+          {match:/relative clause|relative pronoun/,
+           examples:["The woman who called is my aunt.","This is the book that I bought.","The house where I grew up is old."],
+           practice:[["The man ___ lives next door is kind.","who","where","when","whose place","Who refers to a person."],["This is the shop ___ I bought my phone.","where","who","whose","when","Where refers to a place."]],
+           test:[["The student ___ bag was lost reported it.","whose","who","where","which person","Whose indicates possession."],["That is the film ___ we watched.","that","where","who","when","That can refer to a thing in a defining relative clause."]]},
+          {match:/preposition/,
+           examples:["The keys are on the table.","We arrived at noon.","She has lived here since 2022."],
+           practice:[["The meeting starts ___ Monday.","on","in","at","by of","Use on with days of the week."],["The children are ___ the room.","in","at","on","to","Use in for being inside a room."]],
+           test:[["I usually wake up ___ seven o'clock.","at","on","in","from","Use at with a specific clock time."],["She has worked here ___ 2021.","since","for","during","until ago","Use since with the starting point of a period."]]},
+          {match:/gerund|infinitive/,
+           examples:["I enjoy reading.","She wants to learn.","He decided to leave early."],
+           practice:[["They enjoy ___ football.","playing","to playing","play","played","Enjoy is followed by a gerund ending in -ing."],["I hope ___ you soon.","to see","seeing to","see","saw","Hope is commonly followed by a to-infinitive."]],
+           test:[["Choose the correct sentence.","She avoids driving at night.","She avoids to drive at night.","She avoid drive at night.","She avoiding to drive at night.","Avoid is followed by a gerund."],["He decided ___ a new job.","to find","finding to","find","found","Decide is followed by a to-infinitive."]]},
+          {match:/question form|forming questions|question structure|wh.?questions/,
+           examples:["Where do you live?","Why did she leave?","Have they finished their work?"],
+           practice:[["Where ___ you live?","do","does","are","have","Use do with you in present-simple questions."],["Why ___ she leave yesterday?","did","does","was","has","Use did for past-simple questions and keep the main verb in base form."]],
+           test:[["Choose the correct question.","Does he work here?","Do he works here?","Is he work here?","Does he works here?","Use does plus the base verb with he."],["___ they finished the task yet?","Have","Did","Do","Are","Use have with the past participle to form a present-perfect question."]]}
+        ];
+        // WORDUP_GRAMMAR_COVERAGE_PATCH_3
+        const coverageBanks = [
+          {match:/what is a sentence|sentence architecture/,
+           examples:["A sentence expresses a complete thought: The children are playing.","A statement usually has a subject and a verb: Mina smiled.","A question asks for information: Where do you live?"],
+           practice:[["Which is a complete sentence?","The baby is sleeping.","Because the baby","In the small room","After the lesson","A complete sentence expresses a complete thought."],["Which sentence has a subject and a verb?","Birds fly.","Under the tree.","Very beautiful.","After lunch.","Birds is the subject and fly is the verb."]],
+           test:[["Which is a complete sentence?","We arrived early.","When we arrived","Near the station","Because it rained","A complete sentence can stand alone as a complete thought."],["In 'The teacher explained the rule,' what is the subject?","The teacher","explained","the rule","the","The subject tells who performed the action."]]},
+          {match:/\bsubject\b/,
+           examples:["The students are ready.","My older brother works in Kabul.","The red bus stopped suddenly."],
+           practice:[["In 'The little girl laughed,' who is the subject?","The little girl","laughed","little","the","The subject is the person or thing that laughs."],["Choose the subject: 'Our teacher speaks clearly.'","Our teacher","speaks","clearly","teacher speaks","Our teacher performs the action."]],
+           test:[["What is the subject in 'The birds built a nest'?","The birds","built","a nest","nest","The birds perform the action."],["Choose the sentence with a clear subject.","The train arrived.","Arrived the station.","Very quickly.","In the garden.","The train arrived expresses a complete clause."]]},
+          {match:/\bobject\b/,
+           examples:["Sara opened the window.","We watched a film.","He gave his friend a book."],
+           practice:[["What is the object in 'Ali kicked the ball'?","the ball","Ali","kicked","the","The ball receives the action of kicking."],["Which sentence has a direct object?","She reads a novel.","He sleeps.","They arrived.","The baby cried.","A novel receives the action of reads."]],
+           test:[["Identify the object: 'Mina wrote a letter.'","a letter","Mina","wrote","Mina wrote","A letter receives the action."],["Which word is the object in 'They repaired the road'?","the road","They","repaired","they repaired","The road is what they repaired."]]},
+          {match:/\bword order\b|sentence writing/,
+           examples:["She speaks English well.","We went to school yesterday.","They do not eat meat."],
+           practice:[["Choose the correct word order.","She speaks English every day.","She English speaks every day.","Speaks she every day English.","Every day English she speaks.","A standard statement usually follows subject + verb + object."],["Arrange the words correctly.","They live in Kabul.","Live they Kabul in.","In they Kabul live.","Kabul they in live.","The subject normally comes before the verb in a statement."]],
+           test:[["Choose the correct question.","Where do you work?","Where you do work?","Where work you?","Do where you work?","Question words normally come before the auxiliary and subject."],["Choose the correct negative sentence.","He does not drive.","He not does drive.","He does not drives.","He do not drives.","Use does not plus the base verb with he."]]},
+          {match:/\bnouns?\b|countable and uncountable/,
+           examples:["The student has three books.","Water is essential for life.","There is some rice in the bowl."],
+           practice:[["Which is a countable noun?","chair","water","information","rice","You can count chairs: one chair, two chairs."],["Choose the correct phrase.","much information","many information","an information","informations","Information is normally uncountable in standard English."]],
+           test:[["Choose the correct sentence.","I bought three apples.","I bought three rice.","I need an advice.","She gave me informations.","Apples are countable and take a plural form."],["Complete the sentence: 'There isn't ___ milk.'","much","many","a few","several","Milk is uncountable, so much is appropriate."]]},
+          {match:/\bpronouns?\b|possessives/,
+           examples:["Laila is my friend. She is kind.","This book belongs to me. It is mine.","Their house is near ours."],
+           practice:[["Replace 'Ahmed and I' with a subject pronoun.","we","us","our","ours","We is the subject pronoun for Ahmed and I."],["This is ___ notebook; it belongs to me.","my","mine","me","I","My comes before a noun; mine stands alone."]],
+           test:[["Choose the correct sentence.","She gave it to him.","Her gave it to he.","She gave it to he.","Him gave it to she.","Use him as the object pronoun after to."],["The red bag is ___.","hers","her","she","hers bag","Hers is a possessive pronoun used without a following noun."]]},
+          {match:/\bverbs?\b|verb patterns/,
+           examples:["They work at a hospital.","She has finished her work.","The children were playing outside."],
+           practice:[["Choose the main verb: 'Birds build nests.'","build","Birds","nests","the","Build expresses the action."],["Complete: 'He ___ breakfast every morning.'","eats","eat","eating","eaten","The present simple takes -s with he."]],
+           test:[["Choose the correct verb form.","They have arrived.","They has arrived.","They having arrived.","They is arrive.","Have agrees with the plural subject they."],["Which sentence uses a verb correctly?","She wrote a report.","She write a report yesterday.","She writing a report yesterday.","She written a report yesterday.","Wrote is the past simple form of write."]]},
+          {match:/\bpronunciation\b|adjectives?\b/,
+           examples:["The blue car is fast.","It was a difficult examination.","She is a careful driver."],
+           practice:[["Choose the adjective: 'The quiet room felt comfortable.'","quiet","room","felt","the","Quiet describes the noun room."],["Complete: 'This book is ___ than that one.'","more interesting","most interesting","interest","interestingly","Use a comparative form with than."]],
+           test:[["Which word describes the noun in 'a careful student'?","careful","student","a","the","Careful describes the student."],["Choose the correct form.","This exercise is easier.","This exercise is easiest than that.","This exercise more easy.","This exercise easy than that.","Easier is the comparative form of easy."]]},
+          {match:/\badverbs?\b/,
+           examples:["She speaks clearly.","We arrived yesterday.","The children played very happily."],
+           practice:[["Choose the adverb: 'He answered politely.'","politely","answered","he","the","Politely describes how he answered."],["Complete: 'She runs ___. '","quickly","quick","quickerly","quickness","Quickly describes the action runs."]],
+           test:[["Which word tells when? 'We met yesterday.'","yesterday","met","we","the","Yesterday tells when the meeting happened."],["Choose the correct sentence.","He speaks slowly.","He speaks slowlier.","He slowly speaks English goodly.","He speaks slow.","Slowly is the adverb form used here."]]},
+          {match:/\bconjunctions?\b|basic conjunctions/,
+           examples:["I was tired, but I finished the work.","We stayed home because it rained.","You can have tea or coffee."],
+           practice:[["Choose the best conjunction: 'I studied hard, ___ I passed.'","so","although","unless","while","So introduces the result of studying hard."],["'I stayed inside ___ it was snowing.'","because","but","or","nor","Because introduces the reason."]],
+           test:[["Choose the contrast connector.","Although it was late, we continued.","Because it was late, we continued.","So it was late, we continued.","Unless it was late, we continued.","Although introduces a contrast."],["Complete: 'Hurry up, ___ we will miss the bus.'","or","because","although","since","Or expresses the unwanted alternative."]]},
+          {match:/negative sentences?/,
+           examples:["I do not understand the question.","She is not at home.","They have never visited Herat."],
+           practice:[["Make this negative: 'He likes tea.'","He does not like tea.","He do not likes tea.","He not likes tea.","He does not likes tea.","Use does not plus the base verb."],["Choose the correct negative.","They are not ready.","They do not ready.","They not are ready.","They does not ready.","With be, put not after the verb."]],
+           test:[["Choose the correct negative past sentence.","She did not go.","She did not went.","She does not went.","She not went.","After did not, use the base form."],["Make 'I have finished' negative.","I have not finished.","I do not have finished.","I have not finish.","I not finished have.","Place not after have."]]},
+          {match:/basic tenses|advanced tense review/,
+           examples:["I study every day.","I am studying now.","I studied yesterday."],
+           practice:[["Which tense describes a routine?","Present simple","Past continuous","Past perfect","Present perfect continuous","The present simple describes routines and habits."],["Complete: 'Yesterday, she ___ home.'","went","goes","is going","has go","Yesterday signals a completed past event."]],
+           test:[["Choose the present continuous sentence.","They are studying now.","They study every day.","They studied yesterday.","They had studied before.","Be plus verb-ing describes an action in progress."],["Complete: 'She has ___ her work.'","finished","finish","finishing","finishes","Present perfect uses have or has plus a past participle."]]},
+          {match:/future with going to|going to/,
+           examples:["I am going to study tonight.","They are going to travel next week.","Look at those clouds; it is going to rain."],
+           practice:[["She ___ going to visit her aunt.","is","are","am","be","Use is with she."],["We are going to ___ a new course.","start","started","starting","starts","Going to is followed by the base verb."]],
+           test:[["Choose the correct sentence.","He is going to cook dinner.","He going to cook dinner.","He is going cook dinner.","He are going to cook dinner.","Use be + going to + base verb."],["Look at the dark clouds. It ___ rain.","is going to","are going to","going to","will to","Be going to commonly expresses a prediction based on present evidence."]]},
+          {match:/countable and uncountable/,
+           examples:["I have a few friends here.","We need some information.","There is little sugar left."],
+           practice:[["Choose the correct phrase.","many books","much books","a little books","an books","Books are countable plural nouns."],["Choose the correct phrase.","a little water","a few water","many water","an water","Water is uncountable, so a little is appropriate."]],
+           test:[["Complete: 'How ___ students are present?'","many","much","little","any of","Many is used with countable plural nouns."],["Complete: 'How ___ time do we have?'","much","many","few","several","Time is uncountable in this use."]]},
+          {match:/there is and there are/,
+           examples:["There is a book on the desk.","There are two windows in the room.","Is there any water?"],
+           practice:[["___ a bank near my house.","There is","There are","There be","There have","Use there is with a singular noun."],["___ three students outside.","There are","There is","There has","There be","Use there are with plural nouns."]],
+           test:[["Choose the correct question.","Are there any seats?","Is there any seats?","There are seats?","Are there a seat?","Use are there with plural seats."],["Complete: 'There ___ some milk in the fridge.'","is","are","be","have","Milk is uncountable and takes is."]]},
+          {match:/imperatives?/,
+           examples:["Please open your book.","Turn left at the next street.","Do not touch the hot pan."],
+           practice:[["Choose the imperative.","Please sit down.","You are sitting.","She sits down.","They sat down.","An imperative gives a command or instruction."],["Make this instruction negative.","Do not run.","Not run.","Does not run.","You not run.","Use do not plus the base verb for a negative imperative."]],
+           test:[["Which is a polite instruction?","Please wait here.","You waits here.","You are wait here.","Waiting here you.","Please wait here uses the imperative form."],["Complete the instruction: '___ careful!'","Be","Are","Do","Being","Use be at the start of this imperative."]]},
+          {match:/modal meaning/,
+           examples:["You must wear a helmet.","You should see a doctor.","She might arrive late."],
+           practice:[["Which modal expresses advice?","should","mustn't","can't","might not","Should commonly gives advice."],["The lights are off; they ___ be at home.","might not","must to","should to","are can","Might not expresses a possibility that something is untrue."]],
+           test:[["Which modal expresses prohibition?","must not","might","could","would","Must not expresses that something is not allowed."],["You ___ bring your passport; it is required.","must","might","would","could maybe","Must expresses strong obligation."]]},
+          {match:/adverb clauses?/,
+           examples:["We stayed home because it was raining.","Although she was tired, she continued.","Call me when you arrive."],
+           practice:[["Which words introduce a reason clause?","because","although","unless","whereas","Because introduces the reason."],["'Although it was cold, we walked.' What does although show?","Contrast","Purpose","Time only","Possession","Although introduces a contrast between two ideas."]],
+           test:[["Complete: 'We left early ___ we could catch the bus.'","so that","although","whereas","unless","So that introduces purpose."],["Which word introduces a time clause?","when","because","although","despite","When indicates the time of an event."]]},
+          {match:/complex sentences?|dependent clauses?|independent clauses?/,
+           examples:["Although it rained, we played outside.","I called her because I needed help.","The man who lives next door is a doctor."],
+           practice:[["Which is an independent clause?","The train arrived.","Although the train","Because it was late","When we arrived","An independent clause can stand alone as a sentence."],["Which word can introduce a dependent clause?","because","and only","very","quickly","Because introduces a clause that depends on another clause for the full message."]],
+           test:[["Choose the complex sentence.","We stayed inside because it rained.","Ali smiled.","The bus arrived.","Mina reads daily.","The sentence combines an independent clause and a dependent clause."],["Which clause cannot normally stand alone here?","Although the road was wet","The road was wet.","The driver stopped.","We reached home.","Although the road was wet leaves the idea incomplete."]]},
+          {match:/noun clauses?/,
+           examples:["I know that she is honest.","What he said surprised everyone.","We do not know whether they will come."],
+           practice:[["In 'I know what you mean,' what you mean functions as a ___.","noun clause","adjective","adverb","main verb","The clause acts as the object of know."],["Choose the noun clause.","That he won surprised us.","The boy who won","Running very quickly","After the match","That he won acts as the subject of surprised."]],
+           test:[["Complete: 'She explained ___ the plan had changed.'","why","whose","wherever of","despite","Why introduces the noun clause explaining the reason."],["In 'I believe that he is right,' the clause beginning with that is the ___.","object of believe","adjective before he","main verb","preposition","The noun clause is the object of believe."]]},
+          {match:/participles?\b|participle clauses?/,
+           examples:["The broken window needs repair.","Walking home, I met an old friend.","Having finished the task, she went outside."],
+           practice:[["Choose the past participle used as an adjective.","broken","break","breaking only","breaks","Broken describes the condition of the window."],["Complete: '___ the report, he sent it to his manager.'","Having finished","Have finish","Finishing had","Has finished","Having plus a past participle can show an earlier completed action."]],
+           test:[["Choose the sentence with a participle clause.","Feeling tired, Mina went home.","Mina feels tired.","Mina was tired.","Mina will feel tired.","Feeling tired gives background information about Mina."],["Choose the correct form: 'The ___ glass was swept up.'","shattered","shatter","shattering it","shatters","Shattered is the past participle describing the glass."]]},
+          {match:/advanced clauses|advanced clause structures|mastery of clause structures|clause structures/,
+           examples:["What matters most is how we respond.","The proposal, which the committee reviewed, was approved.","Although the evidence was limited, the researchers reported their findings."],
+           practice:[["Which clause functions as the subject?","What she decided remains unclear.","Because she decided","Very carefully","Decided yesterday","What she decided is a noun clause functioning as the subject."],["Which connector introduces concession?","although","because","so that","therefore only","Although introduces a contrast or concession."]],
+           test:[["Choose the sentence with a correctly embedded clause.","The report explains why costs increased.","The report explains why did costs increase.","The report why costs increased explains it.","The report explains because costs increased why.","Embedded questions use statement word order."],["Which sentence expresses concession?","Although the sample was small, the result was useful.","Because the sample was small, it was collected.","The sample was small, so it was small.","The sample which small was useful.","Although signals a contrast between the limitation and result."]]},
+          {match:/inversion/,
+           examples:["Rarely have I seen such dedication.","Not only did she pass, but she also excelled.","Had I known, I would have called."],
+           practice:[["Choose the correct formal inversion.","Rarely have we seen this.","Rarely we have seen this.","Rarely did we saw this.","Rarely have seen we this.","A negative or restrictive adverb at the start triggers auxiliary-subject inversion."],["Complete: 'Not only ___ he apologise, but he also offered help.'","did","does to","was","has to","Use did before the subject in this past-simple inversion."]],
+           test:[["Choose the correct sentence.","Never have I heard that expression.","Never I have heard that expression.","Never did I heard that expression.","Never have heard I that expression.","Never at the start requires auxiliary-subject inversion."],["Complete: 'Had I known, I ___ earlier.'","would have acted","will acted","would acted","had act","This is an inverted third conditional."]]},
+          {match:/cleft sentence|cleft construction|cleft constructions/,
+           examples:["It was Sara who solved the problem.","What we need is more time.","It is honesty that matters most."],
+           practice:[["Choose the cleft sentence that emphasizes Sara.","It was Sara who solved the problem.","Sara solved the problem yesterday.","Sara is solving a problem.","The problem was difficult.","It-cleft structures emphasize a particular element."],["Complete: 'What I need ___ a quiet place.'","is","are","be","have","The what-clause is singular and takes is."]],
+           test:[["Which structure emphasizes the time?","It was yesterday that they arrived.","They arrived yesterday.","Yesterday was a day.","They were arriving.","An it-cleft can emphasize when something happened."],["Choose the correct cleft sentence.","What matters is the evidence.","What matters are the evidence.","What matter is evidence.","What matters be evidence.","The singular clause takes is."]]},
+          {match:/hedging|advanced modality/,
+           examples:["The findings suggest that sleep may affect memory.","This approach appears to be effective.","The results are likely to indicate a wider pattern."],
+           practice:[["Which phrase appropriately hedges a research claim?","The results may suggest a link.","The results prove everything.","There is absolutely no doubt.","This always happens in every case.","May suggest communicates a cautious interpretation."],["Replace the absolute claim with a cautious one: 'This causes stress.'","This may contribute to stress.","This always causes stress in everyone.","This unquestionably proves stress.","This can never be questioned.","May contribute expresses a less absolute relationship."]],
+           test:[["Which is the most cautious academic claim?","The evidence appears to support the claim.","The evidence proves the claim in all cases.","The claim is unquestionably true.","No alternative explanation exists.","Appears to support signals appropriate caution."],["Which modal best signals possibility?","might","must","has to","cannot","Might presents a possible rather than certain interpretation."]]},
+          {match:/nominalisation/,
+           examples:["The team decided quickly. → The team made a quick decision.","Researchers analysed the data. → The analysis of the data was completed.","The population increased. → There was an increase in the population."],
+           practice:[["Which noun is formed from 'analyse'?","analysis","analytical","analysingly","analysed","Analysis is the noun form of analyse."],["Convert 'The company expanded rapidly' into a nominalised phrase.","the rapid expansion of the company","the company rapidly expanded","the company is expanding","expand the company rapid","Expansion is the noun formed from expand."]],
+           test:[["Which sentence uses nominalisation?","The committee made a decision.","The committee decided.","The committee is deciding.","The committee will decide.","Decision is a noun expressing the action of deciding."],["Nominalisation changes a verb or adjective into a ___.","noun","pronoun","conjunction","preposition","Nominalisation creates a noun form, such as develop → development."]]},
+          {match:/fronting|information structure/,
+           examples:["This problem, we can solve tomorrow.","What surprised me most was her patience.","Into the room walked the director."],
+           practice:[["What is a common purpose of fronting?","To place information in a prominent position","To remove every verb","To make every sentence a question","To change all nouns to adjectives","Fronting changes the usual order to highlight information."],["Which phrase is fronted for emphasis?","This issue, we must address now.","We must address this issue now.","We addressed the issue yesterday.","The issue is important.","This issue is placed at the beginning for emphasis."]],
+           test:[["Which sentence places a location first for emphasis?","On the hill stood an old castle.","An old castle stood on the hill.","The castle was old.","The hill was green.","The opening location is fronted for prominence."],["Information structure often concerns how a sentence organizes ___.","given and new information","only verb spelling","alphabetical order","punctuation marks only","Writers organize familiar and new information to guide readers."]]},
+          {match:/subordination/,
+           examples:["We cancelled the match because it rained.","Although she was nervous, she spoke clearly.","After the meeting ended, we went home."],
+           practice:[["Which sentence uses subordination?","We left because the shop was closing.","We left and she stayed.","Ali smiled; Mina laughed.","The shop and the market closed.","Because introduces a dependent clause."],["Which word is a subordinating conjunction?","although","and","or","nor","Although connects a dependent clause expressing contrast."]],
+           test:[["Choose the sentence with a subordinate clause.","When the lesson ended, students left.","Students left and teachers stayed.","The lesson ended; students left.","Students and teachers left.","When the lesson ended is dependent on the main clause."],["Which connector shows cause?","because","although","whereas","even though","Because introduces a reason."]]},
+          {match:/coordination|complex coordination/,
+           examples:["The course is challenging but rewarding.","She researched the topic and wrote a report.","You can revise now, or you can revise tomorrow."],
+           practice:[["Which word coordinates contrasting ideas?","but","because","although only","unless","But joins ideas in contrast."],["Choose the correctly coordinated sentence.","He planned carefully, and he succeeded.","He planned carefully because and succeeded.","He planned carefully but because succeeded.","He and planned carefully succeeded.","And coordinates two related independent clauses here."]],
+           test:[["Which is a coordinating conjunction?","yet","although","because","unless","Yet can coordinate contrasting independent clauses."],["Choose the sentence with parallel coordinated verbs.","She reads and writes every day.","She reads and writing every day.","She reading and writes every day.","She read and writes yesterday.","Reads and writes use parallel verb forms."]]},
+          {match:/ellipsis/,
+           examples:["I can play the guitar, and my sister can too.","Some students chose tea; others, coffee.","Would you like to come? I would."],
+           practice:[["In 'I can swim, and Ali can too,' what is omitted after can?","swim","Ali","and","too","The repeated verb phrase is omitted because it is understood."],["Why do writers use ellipsis?","To avoid repeating recoverable words","To make every sentence incomplete","To remove essential meaning","To replace every noun","Ellipsis avoids repetition when the missing words are clear."]],
+           test:[["Which sentence uses ellipsis naturally?","I ordered tea; she, coffee.","I ordered tea she coffee.","I ordered and coffee she.","Tea ordered she coffee.","The verb ordered is omitted after she but understood."],["In 'Would you like to join us? I would,' which words are omitted?","like to join you","would","you","join us would","The understood verb phrase is omitted after would."]]},
+          {match:/substitution/,
+           examples:["I need a pen. Do you have one?","She said she would help, and she did so.","I prefer the blue shirt to the red one."],
+           practice:[["In 'I need a pen. Do you have one?', what does one replace?","a pen","I need","do you","have","One substitutes for a singular countable noun to avoid repetition."],["Choose the correct substitution.","I wanted to leave, but I could not.","I wanted to leave, but I could not leave it did.","I wanted leave, but not could.","I leave wanted, but could not.","Could not stands for the previously mentioned action."]],
+           test:[["What does one replace in 'The first answer is correct; the second one is not'?","answer","first","correct","second","One substitutes for the noun answer."],["Which phrase substitutes for an earlier action?","do so","because of","in spite of","as soon as","Do so can replace a previously mentioned action."]]},
+          {match:/emphasis|parallelism|parallel structure/,
+           examples:["She wanted to learn, to practise, and to improve.","It was the final chapter that changed my view.","The plan is simple, practical, and affordable."],
+           practice:[["Choose the parallel list.","to read, to write, and to speak","to read, writing, and to speak","read, to writing, and speaking","reading, to write, and speak","Parallel items use matching grammatical forms."],["Which sentence gives emphasis with 'do'?","I do understand your concern.","I does understand your concern.","I do understands your concern.","I understanding do your concern.","Do can add emphasis before the base verb."]],
+           test:[["Choose the sentence with parallel structure.","She enjoys reading, writing, and speaking.","She enjoys reading, to write, and speaking.","She enjoys to read, writing, and speak.","She enjoys read, writing, and to speak.","The three activities use matching -ing forms."],["Which sentence uses emphatic do correctly?","He did finish the assignment.","He did finished the assignment.","He does finished the assignment yesterday.","He do finish yesterday.","Did is followed by the base verb finish."]]},
+          {match:/register|stylistic variation|formal voice/,
+           examples:["Informal: 'The results are a bit unclear.' Formal: 'The results remain somewhat inconclusive.'","Informal: 'We looked at the data.' Formal: 'We examined the data.'","Academic writing often avoids unsupported absolute claims."],
+           practice:[["Which phrase best fits a formal academic report?","The findings indicate a possible trend.","The results are super cool.","The data is kinda weird.","Everyone totally knows this.","The first option is measured and appropriate for formal writing."],["Choose the more formal verb.","investigate","check out","look into it","have a peek at","Investigate is suitable for formal academic prose."]],
+           test:[["Which sentence is most appropriate in a formal report?","The study identified three limitations.","The study found some pretty weird stuff.","We kinda checked the results.","The results were super bad.","The first sentence uses precise formal language."],["Which wording is less absolute and more academic?","The evidence suggests a relationship.","This proves it always happens.","Everyone knows this is true.","There is no possible doubt.","Suggests communicates a cautious interpretation."]]},
+          {match:/sentence editing|academic sentence patterns|academic cohesion/,
+           examples:["The study had a small sample; therefore, its findings should be interpreted cautiously.","First, the evidence is reviewed. Next, the results are compared.","Although the sample was small, the pattern was consistent."],
+           practice:[["Which connector clearly signals a result?","therefore","nevertheless","for example","in contrast","Therefore signals a consequence or conclusion."],["Which sentence has clear academic cohesion?","The sample was small; therefore, conclusions are limited.","The sample was small. Therefore, because sample.","Small sample and conclusions therefore limited.","The sample. Conclusions. Therefore because.","The first sentence connects evidence and consequence clearly."]],
+           test:[["Choose the correctly punctuated sentence.","The evidence was limited; however, it was useful.","The evidence was limited however it was useful.","The evidence; however it was limited it useful.","The evidence was limited, however it was useful.","A semicolon can join independent clauses before however."],["Which revision is clearest?","The results suggest a trend, but further research is needed.","The results suggest a trend and research and needed.","The results trend suggest further needed research.","The results, which trend, further research.","The first option states the finding and limitation clearly."]]}
+        ];
+        const targetedBanks = [
+            {
+                match: /^questions?$/,
+                examples: [
+                    "Statement: Farid studies English. Yes/no question: Does Farid study English?",
+                    "Wh-question: Where does Farid study? The question word comes first, followed by the auxiliary and subject.",
+                    "Subject question: Who called you? Who is the subject, so do-support is not normally needed."
+                ],
+                practice: [
+                    ["Choose the correct question about Farid's routine.", "Where does Farid study?", "Where Farid does study?", "Where do Farid studies?", "Where is Farid study?", "In a present-simple wh-question about a place, use question word + does + subject + base verb."],
+                    ["Choose the correct subject question.", "Who opened the window?", "Who did opened the window?", "Who does opened the window?", "Who the window opened?", "Who is the subject performing the action, so the statement-like subject order is retained."]
+                ],
+                test: [
+                    ["Choose the correct past-simple question.", "When did they arrive?", "When did they arrived?", "When they did arrive?", "When were they arrive?", "Use did + subject + base verb; arrive does not change to arrived after did."],
+                    ["Complete: '___ your sister speak English?' ", "Does", "Do", "Is", "Has", "Sister is third-person singular, so present-simple questions use does + base verb."]
+                ]
+            },
+            {
+                match: /^rhetorical grammar$/,
+                examples: [
+                    "Neutral: The policy has serious problems. Emphatic: The policy has three serious problems.",
+                    "Parallel structure: The proposal aims to reduce costs, improve access, and increase reliability.",
+                    "Rhetorical question: How can a community thrive without safe drinking water? The question emphasizes an argument rather than requesting information."
+                ],
+                practice: [
+                    ["Which sentence uses parallel structure?", "The plan will reduce costs, improve access, and strengthen services.", "The plan will reduce costs, access will improve, and stronger services.", "The plan reduces costs, improving access, and services are stronger.", "The plan will reduce costs, better access, and strengthening services.", "The three coordinated verb phrases use the same grammatical pattern."],
+                    ["A writer asks, 'Who could reasonably oppose safer roads?' What is the most likely rhetorical purpose?", "To encourage readers to agree that safer roads are desirable", "To request the name of a particular person", "To introduce an unrelated topic", "To avoid expressing any viewpoint", "The question is framed to persuade readers, not to obtain a literal name."]
+                ],
+                test: [
+                    ["Which revision creates emphasis through a cleft sentence?", "It was the final paragraph that clarified the argument.", "The final paragraph clarified the argument.", "The paragraph was final and clear.", "The argument clarified the paragraph.", "The it-cleft places focus on the final paragraph."],
+                    ["Which choice is the strongest example of balanced rhetorical phrasing?", "We need fairness in policy, honesty in leadership, and care in practice.", "We need policy that is fair, leaders who are honest, and to practise carefully.", "Fair policy, leaders honestly, and careful practice are needed.", "We need fairness, leaders should be honest, and practising with care.", "The parallel noun phrases create balance and make the three priorities easier to remember."]
+                ]
+            },
+            {
+                match: /^sentence-level editing$/,
+                examples: [
+                    "Fragment: Because the bus was late. Complete: Because the bus was late, we arrived after the lesson began.",
+                    "Comma splice: The evidence was limited, the team repeated the study. Revision: The evidence was limited, so the team repeated the study.",
+                    "Agreement: The list of recommendations is useful. The subject is list, not recommendations."
+                ],
+                practice: [
+                    ["Choose the complete and correctly punctuated sentence.", "Although the task was difficult, she completed it.", "Although the task was difficult.", "She completed, although the task difficult.", "Although difficult the task, she completed.", "An although-clause needs a main clause to form a complete sentence."],
+                    ["Correct the comma splice: 'The room was quiet, everyone was working.'", "The room was quiet, and everyone was working.", "The room was quiet everyone, was working.", "The room, was quiet everyone was working.", "The room was quiet, everyone working.", "Join the independent clauses with a coordinating conjunction, a semicolon, or separate sentences."]
+                ],
+                test: [
+                    ["Choose the sentence with correct subject–verb agreement.", "The quality of these examples is excellent.", "The quality of these examples are excellent.", "The examples quality are excellent.", "The quality of these examples have excellent.", "The head subject is the singular noun quality, so use is."],
+                    ["Which revision corrects the run-on most clearly?", "The deadline was close, so we prioritised the essential tasks.", "The deadline was close we prioritised the essential tasks.", "The deadline was close, we prioritised the essential tasks.", "The deadline close, so prioritised essential tasks.", "The conjunction so connects the two related independent clauses correctly."]
+                ]
+            },
+            {
+                match: /^clauses?$/,
+                examples: [
+                    "Independent clause: The students completed the task. It expresses a complete thought.",
+                    "Dependent adverbial clause: Although the task was difficult, the students completed it.",
+                    "Relative clause: The book that you recommended is useful. The clause that you recommended describes book."
+                ],
+                practice: [
+                    ["Which option is an independent clause?", "The students completed the assignment.", "Although the students completed the assignment", "Because the lesson ended", "Who studied at the library", "An independent clause can stand alone as a complete sentence."],
+                    ["Identify the relative clause: 'The teacher who helped me was patient.'", "who helped me", "The teacher", "was patient", "The teacher was", "The relative clause who helped me identifies which teacher."]
+                ],
+                test: [
+                    ["Which sentence contains a dependent adverbial clause?", "We stayed inside because the rain was heavy.", "The rain was heavy.", "The rain and the wind stopped.", "The heavy rain stopped.", "Because the rain was heavy gives the reason and depends on the main clause."],
+                    ["Which sentence correctly punctuates an introductory dependent clause?", "When the lesson ended, the students left.", "When the lesson ended the, students left.", "When, the lesson ended the students left.", "The lesson, when ended the students left.", "Place a comma after an introductory dependent clause."]
+                ]
+            },
+            {
+                match: /^phrase structure$/,
+                examples: [
+                    "Noun phrase: the three careful researchers. The head noun is researchers; the other words specify or describe it.",
+                    "Verb phrase: has been studying the results. The verb group has been studying combines with the object the results.",
+                    "Prepositional phrase: under the old bridge. The phrase begins with under and includes its complement, the old bridge."
+                ],
+                practice: [
+                    ["In the noun phrase 'those two very useful books', which word is the head?", "books", "those", "very", "useful", "Books is the main noun; the other words identify or modify it."],
+                    ["Which option is a verb phrase?", "has completed the report", "the completed report", "after the report", "the careful researcher", "Has completed is the verb group, and the report is its object."]
+                ],
+                test: [
+                    ["In 'the unusually bright room', what is the head of the noun phrase?", "room", "the", "unusually", "bright", "Room is the main noun modified by unusually bright."],
+                    ["Which phrase contains a preposition and its complement?", "beside the main entrance", "the main entrance", "extremely useful", "has arrived early", "Beside is the preposition and the main entrance is its complement."]
+                ]
+            }
+        ];
+        // Keep original banks first; add the extended topic banks.
+        const bank = targetedBanks.concat(banks, extraBanks, coverageBanks).find(item => item.match.test(t));
+        if (!bank) return null;
+
+        function makeQuestions(rows, isTest) {
+            return rows.map((row, index) => buildAssessmentQuestion(
+                row[0], row[1], [row[2], row[3], row[4]], row[5],
+                assessmentSeed(topic, index, isTest)
+            ));
+        }
+
+        return {
+            examples: bank.examples,
+            practice: makeQuestions(bank.practice, false),
+            test: makeQuestions(bank.test, true)
+        };
+    }
+    function buildExamples(level, skill, topic) {
+        if (skill === "grammar") { const bank = topicGrammarContent(topic); if (bank) return bank.examples; }
+
+        if (skill === "writing") {
+            return [
+                "The lesson focuses on " + topic + ".",
+                "A clear response should organize ideas around the purpose of " + topic + ".",
+                "After writing, check the text for accuracy and clarity."
+            ];
+        }
+
+        if (skill === "grammar") {
+            return [
+                "Learners study " + topic + " in meaningful sentences.",
+                "The structure should be understood through both form and meaning.",
+                "Always check how " + topic + " functions in context."
+            ];
+        }
+
+        if (skill === "vocabulary") {
+            return [
+                "The lesson develops vocabulary connected with " + topic + ".",
+                "New vocabulary should be understood through context.",
+                "Learners should use new vocabulary in complete sentences."
+            ];
+        }
+
+        if (skill === "reading") {
+            return [
+                "A reader can use " + topic + " to understand a text more effectively.",
+                "Important information should be supported by evidence from the text.",
+                "Good reading connects individual details to the overall meaning."
+            ];
+        }
+
+        if (skill === "listening") {
+            return [
+                "A listener can use " + topic + " to understand spoken English.",
+                "Important information should be identified from the speaker's message.",
+                "Context helps listeners interpret unfamiliar words and expressions."
+            ];
+        }
+
+                if (skill === "speaking") {
+            return [
+                "Opinion: In my view, this topic is important because ...",
+                "Giving a reason: One reason is that ...",
+                "Adding an example: For example, ...",
+                "Responding politely: I understand your point, but ...",
+                "Clarifying: What I mean is ..."
+            ];
+        }
+
+        return [];
+    }
+
+    function buildVocabulary(skill, topic) {
+
+        const common = [
+            {
+                word: "context",
+                meaning: "the situation or surrounding information that helps explain meaning"
+            },
+            {
+                word: "accuracy",
+                meaning: "the quality of being correct"
+            },
+            {
+                word: "purpose",
+                meaning: "the reason why something is done or created"
+            },
+            {
+                word: "appropriate",
+                meaning: "suitable for a particular situation"
+            }
+        ];
+
+        if (skill === "grammar") {
+            common.push({
+                word: "structure",
+                meaning: "the way parts of a language are organized"
+            });
+        }
+
+        if (skill === "writing") {
+            common.push({
+                word: "coherence",
+                meaning: "clear and logical connection between ideas"
+            });
+        }
+
+        if (skill === "reading") {
+            common.push({
+                word: "evidence",
+                meaning: "information that supports an idea or interpretation"
+            });
+        }
+
+        if (skill === "listening") {
+            common.push({
+                word: "speaker",
+                meaning: "the person who is talking"
+            });
+        }
+
+        if (skill === "vocabulary") {
+            common.push({
+                word: "collocation",
+                meaning: "a combination of words that commonly occur together"
+            });
+        }
+
+                if (skill === "speaking") {
+            common.push(
+                {
+                    word: "fluency",
+                    meaning: "the ability to express ideas smoothly and naturally"
+                },
+                {
+                    word: "intonation",
+                    meaning: "the way a speaker's voice rises and falls"
+                },
+                {
+                    word: "turn-taking",
+                    meaning: "sharing speaking time in a conversation"
+                }
+            );
+        }
+
+        return common;
+    }
+
+    function buildAssessmentQuestion(question, correct, distractors, explanation, seed) {
+        const options = [correct].concat(distractors).slice(0, 4);
+        const offset = Math.abs(seed) % options.length;
+        const rotated = options.slice(offset).concat(options.slice(0, offset));
+        const answer = (options.length - offset) % options.length;
+
+        return {
+            type: "multiple-choice",
+            question: question,
+            options: rotated,
+            answer: answer,
+            explanation: explanation
+        };
+    }
+
+    function assessmentSeed(topic, index, isTest) {
+        const text = String(topic);
+        let sum = isTest ? 17 : 3;
+
+        for (let i = 0; i < text.length; i++) {
+            sum += text.charCodeAt(i) * (i + 1);
+        }
+
+        return sum + index * 7;
+    }
+
+    function buildPractice(skill, topic, level, allTopics) {
+        if (skill === "grammar") { const bank = topicGrammarContent(topic); if (bank) return bank.practice; }
+        const prompts = {
+            writing: [
+                "Which approach best supports writing about " + topic + "?",
+                "When revising writing about " + topic + ", what should you check?",
+                "Which choice is most likely to improve a response about " + topic + "?"
+            ],
+            grammar: [
+                "When studying " + topic + ", what should you examine in a sentence?",
+                "How can you check your use of " + topic + "?",
+                "Which approach best supports accurate use of " + topic + "?"
+            ],
+            vocabulary: [
+                "How should you learn vocabulary related to " + topic + "?",
+                "What helps you use vocabulary from " + topic + " accurately?",
+                "Which action best develops usable vocabulary for " + topic + "?"
+            ],
+            reading: [
+                "When reading a text about " + topic + ", what should you identify first?",
+                "How should you support an interpretation of a text about " + topic + "?",
+                "What is a useful strategy when reading about " + topic + "?"
+            ],
+            listening: [
+                "When listening to material about " + topic + ", what should you focus on?",
+                "How can context help you understand spoken material about " + topic + "?",
+                "What should you do after listening to material about " + topic + "?"
+            ],
+            speaking: [
+                "When speaking about " + topic + ", what should you do before presenting your ideas?",
+                "Which technique can make speaking about " + topic + " clearer?",
+                "How can you improve your spoken response about " + topic + "?"
+            ]
+        };
+
+        const correct = {
+            writing: [
+                "Plan, organize, and support ideas for the task and audience",
+                "Check organization, grammar, vocabulary, and punctuation",
+                "Revise the response for purpose, clarity, and accuracy"
+            ],
+            grammar: [
+                "Examine the form, meaning, and use in context",
+                "Check whether the structure expresses the intended meaning",
+                "Practise the structure in meaningful sentences"
+            ],
+            vocabulary: [
+                "Study meaning, context, and common word combinations",
+                "Use the words in appropriate sentences and situations",
+                "Review meaning and practise using the words in context"
+            ],
+            reading: [
+                "Identify the main idea and the writer's purpose",
+                "Support the interpretation with evidence from the text",
+                "Connect important details to the overall meaning"
+            ],
+            listening: [
+                "Listen for the main message and relevant details",
+                "Use the situation and surrounding message to interpret meaning",
+                "Review the main message and check important details"
+            ],
+            speaking: [
+                "Plan the main point and organize supporting ideas",
+                "Use clear language, appropriate pace, and connected ideas",
+                "Practise aloud and review clarity and fluency"
+            ]
+        };
+
+        const wrong = {
+            writing: [
+                "Ignore the audience and write unrelated ideas",
+                "Finish without reviewing the text",
+                "Choose words without considering their meaning"
+            ],
+            grammar: [
+                "Memorize a label without examining how it is used",
+                "Ignore the sentence's intended meaning",
+                "Avoid practising the structure in context"
+            ],
+            vocabulary: [
+                "Memorize words without learning their meanings",
+                "Use every word in exactly the same situation",
+                "Ignore context and common word combinations"
+            ],
+            reading: [
+                "Choose an interpretation without textual evidence",
+                "Ignore the main idea and focus on one unrelated detail",
+                "Assume that every unfamiliar word changes the main message"
+            ],
+            listening: [
+                "Ignore the main message and focus on unrelated sounds",
+                "Guess the entire message without using context",
+                "Assume that every word must be understood before meaning is clear"
+            ],
+            speaking: [
+                "Speak without considering the purpose or audience",
+                "Ignore whether listeners can follow the message",
+                "Avoid practising or reviewing your performance"
+            ]
+        };
+
+        const skillPrompts = prompts[skill] || prompts.vocabulary;
+        const correctAnswers = correct[skill] || correct.vocabulary;
+        const distractors = wrong[skill] || wrong.vocabulary;
+
+        return skillPrompts.map(function (question, index) {
+            return buildAssessmentQuestion(
+                question,
+                correctAnswers[index],
+                distractors,
+                "For " + topic + ", this approach supports the " +
+                    skillName(skill).toLowerCase() +
+                    " skill by focusing on meaningful use and the purpose of the task.",
+                assessmentSeed(topic, index, false)
+            );
+        });
+    }
+
+    function buildTest(skill, topic, level, allTopics) {
+        if (skill === "grammar") { const bank = topicGrammarContent(topic); if (bank) return bank.test; }
+        const questions = {
+            writing: [
+                "Which plan is strongest for a writing task about " + topic + "?",
+                "Which revision is most useful for a response about " + topic + "?",
+                "What should a final check of writing about " + topic + " include?"
+            ],
+            grammar: [
+                "Which method best checks understanding of " + topic + "?",
+                "What matters when applying " + topic + " in a new sentence?",
+                "How can a learner demonstrate accurate use of " + topic + "?"
+            ],
+            vocabulary: [
+                "Which method best demonstrates knowledge of vocabulary for " + topic + "?",
+                "What should guide the choice of a word related to " + topic + "?",
+                "Which activity best checks whether vocabulary for " + topic + " can be used?"
+            ],
+            reading: [
+                "Which evidence best supports an interpretation of a text about " + topic + "?",
+                "How should a reader distinguish a main idea from a detail about " + topic + "?",
+                "What is the strongest way to confirm an interpretation of " + topic + "?"
+            ],
+            listening: [
+                "Which strategy best demonstrates understanding of spoken material about " + topic + "?",
+                "What should a listener use to interpret an unfamiliar expression about " + topic + "?",
+                "How can a listener check understanding of a message about " + topic + "?",
+            ],
+            speaking: [
+                "Which response best demonstrates preparation for speaking about " + topic + "?",
+                "What makes a spoken explanation of " + topic + " effective?",
+                "How should a speaker respond during a discussion of " + topic + "?"
+            ]
+        };
+
+        const correct = {
+            writing: [
+                "Set a clear purpose, organize ideas, and support the main point",
+                "Improve clarity, organization, and language accuracy",
+                "Review purpose, paragraph flow, grammar, and punctuation"
+            ],
+            grammar: [
+                "Explain its function and apply it in meaningful examples",
+                "Check both the structure and the intended meaning",
+                "Use the structure accurately in an appropriate context"
+            ],
+            vocabulary: [
+                "Use the words accurately in meaningful context",
+                "Meaning, context, and appropriateness for the situation",
+                "Use the words in original sentences or realistic situations"
+            ],
+            reading: [
+                "Relevant details or statements from the text",
+                "Use the central message and supporting details together",
+                "Check the interpretation against textual evidence"
+            ],
+            listening: [
+                "Identify the main message and verify important details",
+                "Use the situation and surrounding spoken message",
+                "Compare the interpretation with the complete message"
+            ],
+            speaking: [
+                "Plan a clear point and support it with relevant reasons",
+                "Clear organization, suitable language, and understandable delivery",
+                "Listen carefully and respond directly and respectfully"
+            ]
+        };
+
+        const wrong = {
+            writing: [
+                "Include ideas without organizing them",
+                "Change words without checking whether meaning is clear",
+                "Submit immediately without reviewing the text"
+            ],
+            grammar: [
+                "Identify a label but ignore meaning and use",
+                "Repeat the structure without checking the context",
+                "Avoid using the structure in complete sentences"
+            ],
+            vocabulary: [
+                "Repeat a list without understanding the words",
+                "Choose words without considering their meaning",
+                "Avoid using new vocabulary in context"
+            ],
+            reading: [
+                "Rely on personal opinion instead of the text",
+                "Treat one minor detail as the whole message",
+                "Accept an interpretation without checking the text"
+            ],
+            listening: [
+                "Focus only on isolated words and ignore the message",
+                "Guess without considering the situation",
+                "Ignore details that could confirm or correct understanding"
+            ],
+            speaking: [
+                "Repeat memorized phrases without addressing the topic",
+                "Speak without organizing ideas or considering the audience",
+                "Ignore other speakers and continue with an unrelated point"
+            ]
+        };
+
+        const skillQuestions = questions[skill] || questions.vocabulary;
+        const correctAnswers = correct[skill] || correct.vocabulary;
+        const distractors = wrong[skill] || wrong.vocabulary;
+
+        return skillQuestions.map(function (question, index) {
+            return buildAssessmentQuestion(
+                question,
+                correctAnswers[index],
+                distractors,
+                "A strong answer applies " + skillName(skill).toLowerCase() +
+                    " strategies to " + topic + " and demonstrates understanding, " +
+                    "rather than relying on memorization alone.",
+                assessmentSeed(topic, index, true)
+            );
+        });
+    }
+    function buildLesson(level, skill, topic, index, allTopics) {
+
+        const id =
+            "curriculum-" +
+            level +
+            "-" +
+            skill +
+            "-" +
+            slugify(topic);
+
+        return {
+            id: id,
+
+            level: level,
+
+            skill: skill,
+
+            topic: topic,
+
+            unit: skillName(skill),
+
+            unitOrder: index + 1,
+
+            source: "WORDUP_V12_MASTER_MAP",
+
+            curriculum: true,
+
+            icon: SKILL_ICONS[skill],
+
+            objective: buildObjective(level, skill, topic),
+
+            explanation: buildExplanation(level, skill, topic),
+
+            rules: buildRules(skill, topic),
+
+            examples: buildExamples(level, skill, topic),
+
+            mistakes: [
+                "Trying to complete the lesson without understanding the main idea.",
+                "Ignoring examples and context.",
+                "Repeating the same mistake without reviewing the explanation.",
+                "Moving forward without checking understanding."
+            ],
+
+            vocabulary: buildVocabulary(skill, topic),
+
+            practice: buildPractice(
+                skill,
+                topic,
+                level,
+                allTopics
+            ),
+
+            test: buildTest(
+                skill,
+                topic,
+                level,
+                allTopics
+            ),
+
+            review: [
+                "Review the meaning and purpose of " + topic + ".",
+                "Study the examples again.",
+                "Complete the practice activities.",
+                "Review mistakes before taking the test."
+            ],
+
+            duration: skill === "writing" ? 20 :
+                      skill === "reading" ? 18 :
+                      skill === "listening" ? 18 :
+                      skill === "speaking" ? 18 :
+                      skill === "grammar" ? 15 :
+                      12
+        };
+    }
+
+    function expandCurriculum() {
+
+        if (!window.WORDUP_V12_CURRICULUM) {
+            console.error(
+                "WordUp curriculum expansion: master map is not loaded."
+            );
+            return;
+        }
+
+        if (!window.WORDUP_CONTENT_REGISTRY) {
+            console.error(
+                "WordUp curriculum expansion: content registry is not loaded."
+            );
+            return;
+        }
+
+        const curriculum = window.WORDUP_V12_CURRICULUM;
+        const registry = window.WORDUP_CONTENT_REGISTRY;
+
+        let added = 0;
+        let existing = 0;
+
+        Object.keys(curriculum).forEach(level => {
+
+            if (!registry[level]) {
+                registry[level] = [];
+            }
+
+            const levelMap = curriculum[level];
+
+            Object.keys(levelMap).forEach(skill => {
+
+                if (!registry[level][skill]) {
+                    // Registry stores arrays by level, so this branch
+                    // is intentionally unused. Kept defensive.
+                }
+
+                const topics = Array.isArray(levelMap[skill])
+                    ? levelMap[skill]
+                    : [];
+
+                const existingTopics = registry[level]
+                    .filter(item =>
+                        item &&
+                        item.skill === skill &&
+                        item.level === level
+                    )
+                    .map(item => item.topic);
+
+                topics.forEach((topic, index) => {
+
+                    if (existingTopics.includes(topic)) {
+                        existing++;
+                        return;
+                    }
+
+                    const allTopics = topics;
+
+                    const lesson = buildLesson(
+                        level,
+                        skill,
+                        topic,
+                        index,
+                        allTopics
+                    );
+
+                    registry[level].push(lesson);
+
+                    added++;
+                });
+            });
+        });
+
+        window.WORDUP_CURRICULUM_EXPANDED = true;
+
+        window.WORDUP_CURRICULUM_EXPANSION_STATS = {
+            added: added,
+            existing: existing,
+            total: Object.values(registry)
+                .reduce((sum, items) =>
+                    sum + (Array.isArray(items) ? items.length : 0), 0)
+        };
+
+        console.log(
+            "WordUp curriculum expanded:",
+            window.WORDUP_CURRICULUM_EXPANSION_STATS
+        );
+    }
+
+    expandCurriculum();
+
+})();
+

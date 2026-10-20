@@ -1,0 +1,371 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261014204647
+Username: DESKTOP-PUC1C40\Kohsari Computer
+RunAs User: DESKTOP-PUC1C40\Kohsari Computer
+Configuration Name: 
+Machine: DESKTOP-PUC1C40 (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7272
+PSVersion: 5.1.26100.9549
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9549
+BuildVersion: 10.0.26100.9549
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012\practice-diagnostic-20261014-204646.txt
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> Write-Host "`n=== WORDUP PRACTICE DIAGNOSTICS ===" -ForegroundColor Cyan
+
+=== WORDUP PRACTICE DIAGNOSTICS ===
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> Write-Host "Workspace: $P"
+Workspace: C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> Write-Host "`n=== 1. GIT STATUS ===" -ForegroundColor Cyan
+
+=== 1. GIT STATUS ===
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> git status --short
+
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> Write-Host "`n=== 2. REQUIRED FILES ===" -ForegroundColor Cyan
+
+=== 2. REQUIRED FILES ===
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> $Files = @(
+    "index.html",
+    "wordup-course.js",
+    "wordup-exams.js",
+    "v12/engine/question-engine.js",
+    "v12/engine/practice-test.js",
+    "v12/engine/v12-runtime.js"
+)
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> foreach ($File in $Files) {
+    $Full = Join-Path $P $File
+    if (Test-Path $Full) {
+        Write-Host "[FOUND] $File" -ForegroundColor Green
+    } else {
+        Write-Host "[MISSING] $File" -ForegroundColor Red
+    }
+}
+[FOUND] index.html
+[FOUND] wordup-course.js
+[FOUND] wordup-exams.js
+[FOUND] v12/engine/question-engine.js
+[FOUND] v12/engine/practice-test.js
+[FOUND] v12/engine/v12-runtime.js
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> Write-Host "`n=== 3. PRACTICE EVENT HANDLERS ===" -ForegroundColor Cyan
+
+=== 3. PRACTICE EVENT HANDLERS ===
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> $Patterns = @(
+    "Check answer",
+    "checkAnswer",
+    "check-answer",
+    "practice",
+    "question-engine",
+    "practice-test",
+    "addEventListener",
+    "onclick",
+    "answer",
+    "question"
+)
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> foreach ($File in $Files) {
+    $Full = Join-Path $P $File
+    if (Test-Path $Full) {
+        Write-Host "`n--- $File ---"
+        Select-String -Path $Full -Pattern $Patterns `
+            -CaseSensitive:$false |
+            Select-Object -First 30 |
+            ForEach-Object {
+                "{0}:{1}: {2}" -f $_.Path.Replace($P, "."), $_.LineNumber, $_.Line.Trim()
+            }
+    }
+}
+
+--- index.html ---
+.\index.html:7: <meta name="description" content="WordUp &mdash; Learn English through structured lessons, practice, tests and review.">
+.\index.html:30: <button type="button" class="wu-nav-logo" onclick="showScreen('home')">
+.\index.html:44: onclick="showScreen('home')">
+.\index.html:51: onclick="wordUpOpenSearch()">
+.\index.html:57: onclick="showScreen('curriculum')">
+.\index.html:63: data-wu-nav="practice"
+.\index.html:64: onclick="showScreen('practice')">
+.\index.html:65: Practice
+.\index.html:71: onclick="showDashboard()">
+.\index.html:78: onclick="showScreen('profile')">
+.\index.html:88: onclick="showScreen('dashboard')">
+.\index.html:95: onclick="toggleTheme()"
+.\index.html:123: Learn English through structured lessons, practice, tests and review.
+.\index.html:165: onclick="showScreen('curriculum')">
+.\index.html:221: onclick="startPlacement()">
+.\index.html:239: onclick="showScreen('curriculum')">
+.\index.html:272: Complete a short mixed practice session today.
+.\index.html:278: onclick="showScreen('curriculum')">
+.\index.html:297: onclick="showScreen('dashboard')">
+.\index.html:366: onclick="showScreen('curriculum')">
+.\index.html:376: onclick="showScreen('mistakes')">
+.\index.html:380: <small>Practice what you missed</small>
+.\index.html:386: onclick="showScreen('dashboard')">
+.\index.html:396: onclick="showScreen('feedback')">
+.\index.html:406: onclick="showScreen('feedback')">
+.\index.html:420: <button class="back-btn" onclick="goHome()">&#x2190; Back</button>
+.\index.html:428: <button class="level-tab active" data-level="beginner" onclick="setLevel('beginner')">Beginner</button>
+.\index.html:429: <button class="level-tab" data-level="intermediate" onclick="setLevel('intermediate')">Intermediate</button>
+.\index.html:430: <button class="level-tab" data-level="advanced" onclick="setLevel('advanced')">Advanced</button>
+.\index.html:439: <button class="back-btn" onclick="exitActivity()">&#x2190; Exit</button>
+
+--- wordup-course.js ---
+.\wordup-course.js:221: onclick="wordUpCourseBack()">
+.\wordup-course.js:304: onclick="wordUpOpenCourseLevel('${level}')">
+.\wordup-course.js:394: onclick="wordUpOpenCourseLesson('${esc(nextLesson.id)}')">
+.\wordup-course.js:526: onclick="wordUpOpenCourseSkill('${level}','${skill}')">
+.\wordup-course.js:608: onclick="wordUpOpenCourseLesson('${esc(lesson.id)}')">
+.\wordup-course.js:622: \u00B7 ${lesson.practice?.length || 0} practice questions
+.\wordup-course.js:623: \u00B7 ${lesson.test?.length || 0} test questions
+.\wordup-course.js:687: onclick="wordUpCourseTab('learn')">
+.\wordup-course.js:692: class="${currentTab === "practice" ? "active" : ""}"
+.\wordup-course.js:693: onclick="wordUpCourseTab('practice')">
+.\wordup-course.js:694: Practice
+.\wordup-course.js:699: onclick="wordUpCourseTab('test')">
+.\wordup-course.js:712: if (currentTab === "practice") {
+.\wordup-course.js:713: renderPractice();
+.\wordup-course.js:740: onclick="wordUpSpeakTextFromButton(this)"
+.\wordup-course.js:858: onclick="wordUpCourseTab('practice')">
+.\wordup-course.js:859: Start Practice \u2192
+.\wordup-course.js:864: onclick="wordUpCourseCompleteLesson()">
+.\wordup-course.js:875: function renderPractice() {
+.\wordup-course.js:877: const questions = lesson.practice || [];
+.\wordup-course.js:879: if (!questions.length) {
+.\wordup-course.js:882: <h2>No practice questions yet.</h2>
+.\wordup-course.js:884: onclick="wordUpCourseTab('test')">
+.\wordup-course.js:894: <div class="wu-practice-header">
+.\wordup-course.js:895: <span>PRACTICE</span>
+.\wordup-course.js:896: <strong>${questions.length} questions</strong>
+.\wordup-course.js:897: <small>Practice is for learning. Your test is scored.</small>
+.\wordup-course.js:900: <div class="wu-question-list">
+.\wordup-course.js:902: ${questions.map((q, index) => {
+.\wordup-course.js:904: const answer =
+
+--- wordup-exams.js ---
+.\wordup-exams.js:22: function questionFrom(q, lesson, skill, idx) {
+.\wordup-exams.js:24: const prompt=q.question||q.prompt||q.text;
+.\wordup-exams.js:28: const answer=Number(q.answer ?? q.correctAnswer ?? q.correct);
+.\wordup-exams.js:29: if (opts.length>=2 && Number.isInteger(answer) && answer>=0 && answer<opts.length) return {type:'choice',skill,lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt,options:opts.map(String),answer,explanation:q.explanation||q.feedback||''};
+.\wordup-exams.js:32: function buildQuestions(mode, level) {
+.\wordup-exams.js:37: [...(lesson.test||[]),...(lesson.practice||[])].forEach((q,i)=>{const v=questionFrom(q,lesson,skill,i);if(v)qs.push(v);});
+.\wordup-exams.js:52: answer: cleanWord,
+.\wordup-exams.js:73: answer: sentence,
+.\wordup-exams.js:81: if(phrase) qs.push({type:'speech',skill,lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:'Say this sentence aloud as clearly as you can.',answer:phrase.trim(),audio:phrase.trim()});
+.\wordup-exams.js:85: const seen=new Set(); qs=qs.filter(q=>{const k=q.skill+'|'+q.lessonId+'|'+q.type+'|'+q.prompt+'|'+(q.answer||'');if(seen.has(k))return false;seen.add(k);return true;});
+.\wordup-exams.js:94: const questions=buildQuestions(mode,level);
+.\wordup-exams.js:95: if(questions.length<5){alert('This exam needs at least five available questions. More lesson assessment content must be added first.');return;}
+.\wordup-exams.js:96: cleanupTimer(); state={mode,level:level||null,questions,answers:{},index:0,started:0,violations:0,finished:false,attemptId:'WU-'+Date.now().toString(36).toUpperCase()};
+.\wordup-exams.js:118: root.innerHTML=`<section class="wue-view">${header(title,'Your progress is built one question at a time. Breathe, focus, and trust the work you have done.')}
+.\wordup-exams.js:119: <div class="wue-motivation"><p>✨ You do not need to be perfect — just give every question your honest best.</p><p>💪 Every challenge is a chance to discover how much you have learned and what to improve next.</p><p>🌱 Stay calm, believe in your effort, and keep moving forward. You can do this!</p></div>
+.\wordup-exams.js:120: <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>Questions cover Vocabulary, Grammar, Reading, Listening, Speaking, and Writing where lesson content is available.</li><li>Listening and writing tasks may play audio only. Type what you hear. Speaking tasks may ask for microphone access.</li><li>Do not switch tabs, copy questions, or use outside help. Repeated focus changes may submit the exam.</li><li>Your attempt and results are saved on this device. Browser-based exams cannot completely prevent cheating.</li></ul>
+.\wordup-exams.js:122: <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamCancel()">Not now</button><button id="wueBegin" class="wue-primary" disabled onclick="wordUpExamBegin()">I agree — Begin exam</button></div></div></section>`;
+.\wordup-exams.js:123: $('#wueRulesCheck',root).addEventListener('change',e=>$('#wueBegin',root).disabled=!e.target.checked);
+.\wordup-exams.js:125: function begin() { if(!state||!$('#wueRulesCheck')?.checked)return; state.started=Date.now(); state.deadline=state.started+remaining*1000; saveAttempt({id:state.attemptId,mode:state.mode,level:state.level||null,date:new Date(state.started).toISOString(),status:'in-progress',answers:{},score:null}); renderQuestion(); timer=setInterval(()=>{if(!state||state.finished)return;remaining=Math.max(0,Math.ceil((state.deadline-Date.now())/1000));const t=$('#wueTimer');if(t)t.textContent=`${String(Math.floor(remaining/60)).padStart(2,'0')}:${String(remaining%60).padStart(2,'0')}`;if(remaining<=0)finish(true);},250); installGuards(); }
+.\wordup-exams.js:127: function renderQuestion() {
+.\wordup-exams.js:128: if(!state||state.finished)return; const q=state.questions[state.index], root=rootBox(); if(!q||!root)return;
+.\wordup-exams.js:129: const skills=[...new Set(state.questions.map(x=>x.skill))];
+.\wordup-exams.js:130: root.innerHTML=`<section class="wue-view">${header(state.mode==='master'?'Master Exam':state.mode==='placement'?'Test My Level':`${levelName(state.level)} Exam`,'Read or listen carefully. One question at a time.')}
+.\wordup-exams.js:131: <div class="wue-exam-bar"><span>Question ${state.index+1} of ${state.questions.length}</span><span id="wueTimer" aria-live="polite">${String(Math.floor(remaining/60)).padStart(2,'0')}:${String(remaining%60).padStart(2,'0')}</span></div>
+.\wordup-exams.js:132: <div class="wue-progress"><span style="width:${state.index/state.questions.length*100}%"></span></div>
+.\wordup-exams.js:133: <div class="wue-panel wue-question"><div class="wue-tags"><span>${ICONS[q.skill]||'📝'} ${esc(q.skill)}</span><span>${esc(q.type==='dictation'?'Audio typing':q.type==='speech'?'Pronunciation':'Question')}</span></div><h3>${esc(q.prompt)}</h3>
+.\wordup-exams.js:134: ${q.type==='choice'?`<div class="wue-options">${q.options.map((o,i)=>`<button class="wue-option" data-wue-option="${i}" onclick="wordUpExamChoose(${i})">${esc(o)}</button>`).join('')}</div>`:''}
+.\wordup-exams.js:135: ${q.type==='dictation'?`<div class="wue-audio"><button class="wue-secondary" onclick="wordUpExamPlayAudio()">🔊 Play audio</button><p>Audio only — the answer is not shown.</p></div><input id="wueTyped" class="wue-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type what you hear" aria-label="Type the spoken answer">`:''}
+.\wordup-exams.js:136: ${q.type==='speech'?`<div class="wue-audio"><button class="wue-secondary" onclick="wordUpExamPlayAudio()">🔊 Hear example</button></div><div class="wue-speech-actions"><button class="wue-secondary" onclick="wordUpExamMic()">🎙️ Start microphone</button><span id="wueSpeechStatus" aria-live="polite">Microphone permission may be required.</span></div><textarea id="wueSpeechText" class="wue-input" rows="2" placeholder="Recognized speech appears here" aria-label="Recognized pronunciation"></textarea><p class="wue-muted">Pronunciation is checked against speech recognition when your browser supports it. This is an estimate, not a professional accent score.</p>`:''}
+.\wordup-exams.js:137: <div class="wue-actions"><button class="wue-primary" id="wueNext" onclick="wordUpExamNext()" ${q.type==='choice'?'disabled':''}>${state.index===state.questions.length-1?'Finish exam':'Submit & continue →'}</button></div><p id="wueFeedback" class="wue-feedback" aria-live="polite"></p></div></section>`;
+
+--- v12/engine/question-engine.js ---
+.\v12\engine\question-engine.js:3: WORDUP V12.1 QUESTION ENGINE
+.\v12\engine\question-engine.js:7: const WORDUP_QUESTION_TYPES = [
+.\v12\engine\question-engine.js:22: function wordUpCreateQuestion(
+.\v12\engine\question-engine.js:24: question,
+.\v12\engine\question-engine.js:26: answer,
+.\v12\engine\question-engine.js:34: question,
+.\v12\engine\question-engine.js:38: answer,
+.\v12\engine\question-engine.js:47: function wordUpCheckQuestion(
+.\v12\engine\question-engine.js:48: question,
+.\v12\engine\question-engine.js:49: answer
+.\v12\engine\question-engine.js:53: String(answer).toLowerCase().trim() ===
+.\v12\engine\question-engine.js:54: String(question.answer).toLowerCase().trim()
+.\v12\engine\question-engine.js:60: function wordUpScoreQuestions(
+.\v12\engine\question-engine.js:61: questions,
+.\v12\engine\question-engine.js:62: answers
+.\v12\engine\question-engine.js:65: if(!questions.length){
+.\v12\engine\question-engine.js:71: questions.forEach(
+.\v12\engine\question-engine.js:72: (question,index)=>{
+.\v12\engine\question-engine.js:75: wordUpCheckQuestion(
+.\v12\engine\question-engine.js:76: question,
+.\v12\engine\question-engine.js:77: answers[index]
+.\v12\engine\question-engine.js:89: (correct / questions.length) * 100
+.\v12\engine\question-engine.js:95: window.WORDUP_QUESTION_TYPES =
+.\v12\engine\question-engine.js:96: WORDUP_QUESTION_TYPES;
+.\v12\engine\question-engine.js:98: window.wordUpCreateQuestion =
+.\v12\engine\question-engine.js:99: wordUpCreateQuestion;
+.\v12\engine\question-engine.js:101: window.wordUpCheckQuestion =
+.\v12\engine\question-engine.js:102: wordUpCheckQuestion;
+.\v12\engine\question-engine.js:104: window.wordUpScoreQuestions =
+.\v12\engine\question-engine.js:105: wordUpScoreQuestions;
+
+--- v12/engine/practice-test.js ---
+.\v12\engine\practice-test.js:3: WORDUP V12 PRACTICE / TEST ENGINE
+.\v12\engine\practice-test.js:6: PRACTICE
+.\v12\engine\practice-test.js:15: - no immediate answers
+.\v12\engine\practice-test.js:23: questions,
+.\v12\engine\practice-test.js:24: answers
+.\v12\engine\practice-test.js:27: if(!questions.length){
+.\v12\engine\practice-test.js:33: questions.forEach(
+.\v12\engine\practice-test.js:34: (question,index)=>{
+.\v12\engine\practice-test.js:37: answers[index] ===
+.\v12\engine\practice-test.js:38: question.answer
+.\v12\engine\practice-test.js:47: (correct / questions.length) * 100
+.\v12\engine\practice-test.js:53: function wordUpV12PracticeScore(
+.\v12\engine\practice-test.js:54: questions,
+.\v12\engine\practice-test.js:55: answers
+.\v12\engine\practice-test.js:59: questions,
+.\v12\engine\practice-test.js:60: answers
+.\v12\engine\practice-test.js:67: questions,
+.\v12\engine\practice-test.js:68: answers
+.\v12\engine\practice-test.js:72: questions,
+.\v12\engine\practice-test.js:73: answers
+.\v12\engine\practice-test.js:80: practice,
+.\v12\engine\practice-test.js:85: test.length >= practice.length &&
+.\v12\engine\practice-test.js:101: window.wordUpV12PracticeScore =
+.\v12\engine\practice-test.js:102: wordUpV12PracticeScore;
+.\v12\engine\practice-test.js:114: "WordUp V12 Practice/Test Engine loaded."
+
+--- v12/engine/v12-runtime.js ---
+.\v12\engine\v12-runtime.js:15: document.addEventListener("DOMContentLoaded", fn);
+.\v12\engine\v12-runtime.js:259: <div class="wu12-meta">Real V12.1 curriculum and practice engine</div>
+.\v12\engine\v12-runtime.js:303: document.getElementById("wu12-close").onclick = () => overlay.remove();
+.\v12\engine\v12-runtime.js:305: overlay.addEventListener("click", e => {
+.\v12\engine\v12-runtime.js:310: button.onclick = () => showLessons(button.dataset.level, content);
+.\v12\engine\v12-runtime.js:342: item.onclick = () => showLesson(item.dataset.lesson, content);
+.\v12\engine\v12-runtime.js:352: const practice = Array.isArray(lesson.practice) ? lesson.practice : [];
+.\v12\engine\v12-runtime.js:393: if (practice.length) {
+.\v12\engine\v12-runtime.js:396: <h3>Practice</h3>
+.\v12\engine\v12-runtime.js:397: ${practice.map((q, i) => renderQuestion(q, "practice", i)).join("")}
+.\v12\engine\v12-runtime.js:406: ${test.map((q, i) => renderQuestion(q, "test", i)).join("")}
+.\v12\engine\v12-runtime.js:421: document.getElementById("wu12-back").onclick = () => {
+.\v12\engine\v12-runtime.js:425: document.getElementById("wu12-complete").onclick = () => {
+.\v12\engine\v12-runtime.js:434: main.querySelectorAll(".wu12-option[data-answer]").forEach(button => {
+.\v12\engine\v12-runtime.js:435: button.onclick = () => {
+.\v12\engine\v12-runtime.js:436: const correct = button.dataset.answer === "true";
+.\v12\engine\v12-runtime.js:454: function renderQuestion(q, type, index) {
+.\v12\engine\v12-runtime.js:455: const prompt = q.question || q.prompt || q.text || "Question";
+.\v12\engine\v12-runtime.js:461: const answer = q.answer ?? q.correctAnswer ?? q.correct;
+.\v12\engine\v12-runtime.js:463: if (!options.length && answer !== undefined) {
+.\v12\engine\v12-runtime.js:464: options = [answer];
+.\v12\engine\v12-runtime.js:472: const correct = String(option) === String(answer);
+.\v12\engine\v12-runtime.js:477: data-answer="${correct}">
+.\v12\engine\v12-runtime.js:494: button.onclick = () => {
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> Write-Host "`n=== 4. JAVASCRIPT SYNTAX CHECK ===" -ForegroundColor Cyan
+
+=== 4. JAVASCRIPT SYNTAX CHECK ===
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> $Node = Get-Command node -ErrorAction SilentlyContinue
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> if ($Node) {
+    foreach ($File in $Files) {
+        $Full = Join-Path $P $File
+        if (Test-Path $Full -and $Full.EndsWith(".js")) {
+            $Output = & node --check $Full 2>&1
+            if ($LASTEXITCODE -eq 0) {
+                Write-Host "[SYNTAX OK] $File" -ForegroundColor Green
+            } else {
+                Write-Host "[SYNTAX ERROR] $File" -ForegroundColor Red
+                $Output
+            }
+        }
+    }
+} else {
+    Write-Host "Node.js not found; syntax check skipped."
+}
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> TerminatingError(Test-Path): "A parameter cannot be found that matches parameter name 'and'."
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> TerminatingError(Test-Path): "A parameter cannot be found that matches parameter name 'and'."
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> TerminatingError(Test-Path): "A parameter cannot be found that matches parameter name 'and'."
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> TerminatingError(Test-Path): "A parameter cannot be found that matches parameter name 'and'."
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> TerminatingError(Test-Path): "A parameter cannot be found that matches parameter name 'and'."
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> TerminatingError(Test-Path): "A parameter cannot be found that matches parameter name 'and'."
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+Test-Path : A parameter cannot be found that matches parameter name 'and'.
+At line:4 char:29
++         if (Test-Path $Full -and $Full.EndsWith(".js")) {
++                             ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Path], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestPathCommand
+
+PS C:\Users\Kohsari Computer\WordUp-Workspace\Temporary-Projects\WordUp-Integration-20261012> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20261014204649
+**********************

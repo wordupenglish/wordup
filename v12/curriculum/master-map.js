@@ -1,4 +1,4 @@
-﻿/*
+/*
 =========================================================
  WORDUP V12 COMPLETE CURRICULUM MAP
 =========================================================
@@ -89,6 +89,18 @@ foundation: {
 
     ]
 
+,
+
+    speaking: [
+        "Greetings and Introductions",
+        "Asking and Answering Simple Questions",
+        "Talking About Family",
+        "Describing Daily Routines",
+        "Expressing Likes and Dislikes",
+        "Asking for Help and Clarification",
+        "Giving Simple Directions",
+        "Pronunciation and Speaking Clearly"
+    ]
 },
 
 
@@ -163,6 +175,20 @@ a1: {
 
     ]
 
+,
+
+    speaking: [
+        "Introducing Yourself in Detail",
+        "Describing People and Places",
+        "Talking About Past Events",
+        "Making Plans and Invitations",
+        "Asking Follow-up Questions",
+        "Giving Opinions with Simple Reasons",
+        "Ordering Food and Making Requests",
+        "Talking About Health and Feelings",
+        "Comparing Everyday Things",
+        "Keeping a Short Conversation Going"
+    ]
 },
 
 
@@ -235,6 +261,20 @@ a2: {
 
     ]
 
+,
+
+    speaking: [
+        "Narrating Experiences in Sequence",
+        "Describing Goals and Plans",
+        "Making Suggestions and Responding",
+        "Explaining Problems and Solutions",
+        "Comparing Options and Preferences",
+        "Expressing Agreement and Disagreement",
+        "Telling a Short Story",
+        "Giving Instructions Clearly",
+        "Handling Everyday Conversations",
+        "Speaking About Experiences and Achievements"
+    ]
 },
 
 
@@ -313,6 +353,22 @@ b1: {
 
     ]
 
+,
+
+    speaking: [
+        "Presenting Opinions with Reasons",
+        "Agreeing and Disagreeing Politely",
+        "Describing Experiences in Detail",
+        "Explaining Causes and Results",
+        "Making and Responding to Suggestions",
+        "Speculating About Possibilities",
+        "Comparing Advantages and Disadvantages",
+        "Telling Stories with Clear Structure",
+        "Giving Short Presentations",
+        "Participating in Group Discussions",
+        "Clarifying and Reformulating Ideas",
+        "Handling Unexpected Questions"
+    ]
 },
 
 

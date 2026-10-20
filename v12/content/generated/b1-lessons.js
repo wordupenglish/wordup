@@ -1,8 +1,5 @@
-// WordUp B1 Complete Quality Lessons
-// 56 validated lessons.
-// Quality content merged into the existing B1 curriculum.
-// Main application has not been modified.
-
+// WordUp curriculum quality repair pass — generated from the existing source pack.
+// Review notes and verification results are in REPAIR-REPORT.md.
 const b1Lessons = [
   {
     "id": "b1-grammar-present-perfect-experience",
@@ -14,11 +11,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use present perfect for life experiences clearly and accurately.",
     "explanation": "Use the present perfect to talk about experiences that have happened at an unspecified time before now. The exact time is not important or is not mentioned.",
     "learningPoints": [
-      "Understand present perfect for life experiences.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of present perfect for life experiences.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving present perfect for life experiences.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use have or has + past participle.",
@@ -33,12 +29,12 @@ const b1Lessons = [
       "We have seen that film before."
     ],
     "examplesInContext": [
-      "Context: This is an example of present perfect for life experiences.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: Have you ever visited Herat?",
+      "Second example: I have never tried skiing.",
+      "Contrast: I have visited Herat last year.",
+      "Correction: I visited Herat last year."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply present perfect for life experiences in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "experience",
@@ -63,28 +59,28 @@ const b1Lessons = [
       "Using a finished time expression such as last year with the present perfect."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of present perfect for life experiences and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using present perfect for life experiences."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for present perfect for life experiences in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses present perfect for life experiences; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using present perfect for life experiences in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use present perfect for life experiences in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -155,7 +151,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use present perfect for life experiences accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of present perfect for life experiences."
+      ]
+    },
     "nextLesson": "b1-grammar-present-perfect-for-since",
     "estimatedTime": 40,
     "duration": 40,
@@ -173,11 +177,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use for and since clearly and accurately.",
     "explanation": "Use the present perfect with for and since to describe situations that started in the past and continue to the present.",
     "learningPoints": [
-      "Understand for and since.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of for and since.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving for and since.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use for with a period of time.",
@@ -192,12 +195,12 @@ const b1Lessons = [
       "He has studied English since childhood."
     ],
     "examplesInContext": [
-      "Context: This is an example of for and since.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used for and since to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses for and since accurately in context.",
+      "Contrast: The sentence uses for and since without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of for and since matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply for and since in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "duration",
@@ -222,28 +225,28 @@ const b1Lessons = [
       "Using the present simple when the situation began in the past and continues now."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of for and since and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using for and since."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for for and since in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses for and since; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using for and since in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use for and since in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -314,7 +317,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use for and since accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of for and since."
+      ]
+    },
     "nextLesson": "b1-grammar-present-perfect-vs-past-simple",
     "estimatedTime": 40,
     "duration": 40,
@@ -332,11 +343,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use present perfect and past simple clearly and accurately.",
     "explanation": "The present perfect connects past events with the present or focuses on experience. The past simple describes completed events at a finished or specified time in the past.",
     "learningPoints": [
-      "Understand present perfect and past simple.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of present perfect and past simple.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving present perfect and past simple.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use present perfect when the exact past time is not important.",
@@ -351,12 +361,12 @@ const b1Lessons = [
       "When did you see it?"
     ],
     "examplesInContext": [
-      "Context: This is an example of present perfect and past simple.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: Have you ever visited Herat?",
+      "Second example: I have never tried skiing.",
+      "Contrast: I have visited Herat last year.",
+      "Correction: I visited Herat last year."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply present perfect and past simple in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "finished",
@@ -381,28 +391,28 @@ const b1Lessons = [
       "Forgetting that a finished time period normally requires the past simple."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of present perfect and past simple and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using present perfect and past simple."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for present perfect and past simple in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses present perfect and past simple; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using present perfect and past simple in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use present perfect and past simple in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -473,7 +483,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use present perfect and past simple accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of present perfect and past simple."
+      ]
+    },
     "nextLesson": "b1-grammar-past-continuous",
     "estimatedTime": 40,
     "duration": 40,
@@ -491,11 +509,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use past continuous clearly and accurately.",
     "explanation": "Use the past continuous to describe an action that was in progress at a particular time in the past.",
     "learningPoints": [
-      "Understand past continuous.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of past continuous.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving past continuous.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Form the tense with was or were + verb-ing.",
@@ -510,12 +527,12 @@ const b1Lessons = [
       "We were walking home."
     ],
     "examplesInContext": [
-      "Context: This is an example of past continuous.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used past continuous to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses past continuous accurately in context.",
+      "Contrast: The sentence uses past continuous without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of past continuous matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply past continuous in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "in progress",
@@ -540,28 +557,28 @@ const b1Lessons = [
       "Using was with they or were with he."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of past continuous and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using past continuous."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for past continuous in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses past continuous; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using past continuous in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use past continuous in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -632,7 +649,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use past continuous accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of past continuous."
+      ]
+    },
     "nextLesson": "b1-grammar-past-continuous-vs-past-simple",
     "estimatedTime": 40,
     "duration": 40,
@@ -650,11 +675,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use past continuous versus past simple clearly and accurately.",
     "explanation": "The past continuous often describes the longer background action, while the past simple describes a shorter completed action that happened during or interrupted it.",
     "learningPoints": [
-      "Understand past continuous versus past simple.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of past continuous versus past simple.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving past continuous versus past simple.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use past continuous for the action already in progress.",
@@ -669,12 +693,12 @@ const b1Lessons = [
       "We were driving when we saw the accident."
     ],
     "examplesInContext": [
-      "Context: This is an example of past continuous versus past simple.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: I visited Bamyan last summer.",
+      "Second example: Did you see the exhibition?",
+      "Contrast: I did went to the library.",
+      "Correction: I went to the library."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply past continuous versus past simple in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "interrupt",
@@ -699,28 +723,28 @@ const b1Lessons = [
       "Confusing when and while in longer sentences."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of past continuous versus past simple and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using past continuous versus past simple."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for past continuous versus past simple in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses past continuous versus past simple; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using past continuous versus past simple in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use past continuous versus past simple in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -791,7 +815,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use past continuous versus past simple accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of past continuous versus past simple."
+      ]
+    },
     "nextLesson": "b1-grammar-used-to",
     "estimatedTime": 40,
     "duration": 40,
@@ -809,11 +841,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use used to for past habits and states clearly and accurately.",
     "explanation": "Use used to + base verb to talk about past habits or states that are no longer true.",
     "learningPoints": [
-      "Understand used to for past habits and states.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of used to for past habits and states.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving used to for past habits and states.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use used to for repeated past habits.",
@@ -828,12 +859,12 @@ const b1Lessons = [
       "Did you use to watch cartoons?"
     ],
     "examplesInContext": [
-      "Context: This is an example of used to for past habits and states.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used used to for past habits and states to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses used to for past habits and states accurately in context.",
+      "Contrast: The sentence uses used to for past habits and states without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of used to for past habits and states matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply used to for past habits and states in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "habit",
@@ -858,28 +889,28 @@ const b1Lessons = [
       "Confusing used to with be used to."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of used to for past habits and states and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using used to for past habits and states."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for used to for past habits and states in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses used to for past habits and states; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using used to for past habits and states in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use used to for past habits and states in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -950,7 +981,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use used to for past habits and states accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of used to for past habits and states."
+      ]
+    },
     "nextLesson": "b1-grammar-first-conditional",
     "estimatedTime": 40,
     "duration": 40,
@@ -968,11 +1007,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use first conditional clearly and accurately.",
     "explanation": "The first conditional describes a real or possible future situation and its likely result.",
     "learningPoints": [
-      "Understand first conditional.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of first conditional.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving first conditional.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use if + present simple in the condition clause.",
@@ -987,12 +1025,12 @@ const b1Lessons = [
       "If she finishes her work, she will join us."
     ],
     "examplesInContext": [
-      "Context: This is an example of first conditional.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: If you revise, you will feel more confident.",
+      "Second example: If water reaches 100°C, it boils.",
+      "Contrast: If it will rain, we will stay inside.",
+      "Correction: If it rains, we will stay inside."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply first conditional in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "condition",
@@ -1017,28 +1055,28 @@ const b1Lessons = [
       "Forgetting the comma when the if-clause comes first."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of first conditional and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using first conditional."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for first conditional in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses first conditional; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using first conditional in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use first conditional in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -1109,7 +1147,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use first conditional accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of first conditional."
+      ]
+    },
     "nextLesson": "b1-grammar-second-conditional",
     "estimatedTime": 40,
     "duration": 40,
@@ -1127,11 +1173,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use second conditional clearly and accurately.",
     "explanation": "The second conditional describes hypothetical, unlikely, or imaginary situations in the present or future.",
     "learningPoints": [
-      "Understand second conditional.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of second conditional.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving second conditional.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use if + past simple for the condition.",
@@ -1146,12 +1191,12 @@ const b1Lessons = [
       "If we lived closer, we would visit more often."
     ],
     "examplesInContext": [
-      "Context: This is an example of second conditional.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: If you revise, you will feel more confident.",
+      "Second example: If water reaches 100°C, it boils.",
+      "Contrast: If it will rain, we will stay inside.",
+      "Correction: If it rains, we will stay inside."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply second conditional in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "hypothetical",
@@ -1176,28 +1221,28 @@ const b1Lessons = [
       "Confusing hypothetical situations with realistic first conditional situations."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of second conditional and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using second conditional."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for second conditional in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses second conditional; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using second conditional in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use second conditional in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -1268,7 +1313,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use second conditional accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of second conditional."
+      ]
+    },
     "nextLesson": "b1-grammar-should-must-have-to",
     "estimatedTime": 40,
     "duration": 40,
@@ -1286,11 +1339,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use obligation advice and necessity clearly and accurately.",
     "explanation": "Should usually expresses advice or recommendation. Must and have to express obligation, although their meaning can differ depending on whether the obligation comes from the speaker or an external rule.",
     "learningPoints": [
-      "Understand obligation advice and necessity.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of obligation advice and necessity.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving obligation advice and necessity.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use should + base verb for advice.",
@@ -1305,12 +1357,12 @@ const b1Lessons = [
       "You don't have to bring a laptop."
     ],
     "examplesInContext": [
-      "Context: This is an example of obligation advice and necessity.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used obligation advice and necessity to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses obligation advice and necessity accurately in context.",
+      "Contrast: The sentence uses obligation advice and necessity without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of obligation advice and necessity matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply obligation advice and necessity in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "obligation",
@@ -1335,28 +1387,28 @@ const b1Lessons = [
       "Using have to incorrectly with he or she."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of obligation advice and necessity and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using obligation advice and necessity."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for obligation advice and necessity in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses obligation advice and necessity; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using obligation advice and necessity in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use obligation advice and necessity in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -1427,7 +1479,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use obligation advice and necessity accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of obligation advice and necessity."
+      ]
+    },
     "nextLesson": "b1-grammar-modals-possibility",
     "estimatedTime": 40,
     "duration": 40,
@@ -1445,11 +1505,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use may might could clearly and accurately.",
     "explanation": "Use may, might, and could to express possibility. The choice often depends on how possible the speaker thinks something is, although these forms frequently overlap.",
     "learningPoints": [
-      "Understand may might could.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of may might could.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving may might could.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use may + base verb for possibility.",
@@ -1464,12 +1523,12 @@ const b1Lessons = [
       "He may arrive late."
     ],
     "examplesInContext": [
-      "Context: This is an example of may might could.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used may might could to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses may might could accurately in context.",
+      "Contrast: The sentence uses may might could without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of may might could matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply may might could in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "possibility",
@@ -1494,28 +1553,28 @@ const b1Lessons = [
       "Confusing could for possibility with could for past ability."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of may might could and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using may might could."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for may might could in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses may might could; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using may might could in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use may might could in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -1586,7 +1645,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use may might could accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of may might could."
+      ]
+    },
     "nextLesson": "b1-grammar-gerunds-infinitives",
     "estimatedTime": 40,
     "duration": 40,
@@ -1604,11 +1671,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use gerunds and infinitives clearly and accurately.",
     "explanation": "Some verbs are followed by a gerund (-ing form), some by an infinitive with to, and some can take both forms with similar or different meanings.",
     "learningPoints": [
-      "Understand gerunds and infinitives.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of gerunds and infinitives.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving gerunds and infinitives.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Enjoy is followed by a gerund: enjoy reading.",
@@ -1623,12 +1689,12 @@ const b1Lessons = [
       "They decided to continue the project."
     ],
     "examplesInContext": [
-      "Context: This is an example of gerunds and infinitives.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: I enjoy learning languages.",
+      "Second example: She decided to apply.",
+      "Contrast: I enjoy to read novels.",
+      "Correction: I enjoy reading novels."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply gerunds and infinitives in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "gerund",
@@ -1653,28 +1719,28 @@ const b1Lessons = [
       "Choosing a verb form without checking the pattern of the main verb."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of gerunds and infinitives and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using gerunds and infinitives."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for gerunds and infinitives in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses gerunds and infinitives; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using gerunds and infinitives in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use gerunds and infinitives in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -1745,7 +1811,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use gerunds and infinitives accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of gerunds and infinitives."
+      ]
+    },
     "nextLesson": "b1-grammar-verb-patterns",
     "estimatedTime": 40,
     "duration": 40,
@@ -1763,11 +1837,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use verb patterns clearly and accurately.",
     "explanation": "English verbs follow different patterns. Learning common verb patterns helps you form accurate sentences and avoid choosing the wrong structure after a verb.",
     "learningPoints": [
-      "Understand verb patterns.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of verb patterns.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving verb patterns.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Learn verbs together with the grammatical pattern they require.",
@@ -1782,12 +1855,12 @@ const b1Lessons = [
       "They agreed to meet after class."
     ],
     "examplesInContext": [
-      "Context: This is an example of verb patterns.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used verb patterns to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses verb patterns accurately in context.",
+      "Contrast: The sentence uses verb patterns without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of verb patterns matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply verb patterns in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "pattern",
@@ -1812,28 +1885,28 @@ const b1Lessons = [
       "Translating verb patterns directly from another language."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of verb patterns and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using verb patterns."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for verb patterns in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses verb patterns; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using verb patterns in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use verb patterns in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -1904,7 +1977,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use verb patterns accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of verb patterns."
+      ]
+    },
     "nextLesson": "b1-grammar-relative-clauses",
     "estimatedTime": 40,
     "duration": 40,
@@ -1922,11 +2003,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use defining relative clauses clearly and accurately.",
     "explanation": "Relative clauses give additional information about a person, thing, or place. They commonly begin with who, which, that, whose, where, or when.",
     "learningPoints": [
-      "Understand defining relative clauses.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of defining relative clauses.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving defining relative clauses.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use who mainly for people.",
@@ -1941,12 +2021,12 @@ const b1Lessons = [
       "I met a student whose English was excellent."
     ],
     "examplesInContext": [
-      "Context: This is an example of defining relative clauses.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The tutor who helped me was patient.",
+      "Second example: The book that you recommended is useful.",
+      "Contrast: The tutor who he helped me was patient.",
+      "Correction: The tutor who helped me was patient."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply defining relative clauses in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "relative clause",
@@ -1971,28 +2051,28 @@ const b1Lessons = [
       "Repeating the subject unnecessarily inside a defining relative clause."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of defining relative clauses and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using defining relative clauses."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for defining relative clauses in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses defining relative clauses; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using defining relative clauses in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use defining relative clauses in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -2063,7 +2143,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use defining relative clauses accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of defining relative clauses."
+      ]
+    },
     "nextLesson": "b1-grammar-comparatives-advanced",
     "estimatedTime": 40,
     "duration": 40,
@@ -2081,11 +2169,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use comparative structures clearly and accurately.",
     "explanation": "Comparatives can express differences in degree. B1 learners also need structures such as much better, far more useful, less expensive, and as...as.",
     "learningPoints": [
-      "Understand comparative structures.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of comparative structures.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving comparative structures.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use -er with many short adjectives.",
@@ -2100,12 +2187,12 @@ const b1Lessons = [
       "The two assignments are as important as each other."
     ],
     "examplesInContext": [
-      "Context: This is an example of comparative structures.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used comparative structures to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses comparative structures accurately in context.",
+      "Contrast: The sentence uses comparative structures without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of comparative structures matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply comparative structures in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "degree",
@@ -2130,28 +2217,28 @@ const b1Lessons = [
       "Confusing less with fewer."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of comparative structures and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using comparative structures."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for comparative structures in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses comparative structures; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using comparative structures in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use comparative structures in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -2222,7 +2309,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use comparative structures accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of comparative structures."
+      ]
+    },
     "nextLesson": "b1-grammar-adverbs-manner-frequency",
     "estimatedTime": 40,
     "duration": 40,
@@ -2240,11 +2335,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use adverbs clearly and accurately.",
     "explanation": "Adverbs of manner describe how an action happens, while adverbs of frequency describe how often it happens.",
     "learningPoints": [
-      "Understand adverbs.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of adverbs.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving adverbs.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Many manner adverbs end in -ly.",
@@ -2259,12 +2353,12 @@ const b1Lessons = [
       "They are often late for class."
     ],
     "examplesInContext": [
-      "Context: This is an example of adverbs.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The speaker used adverbs to make the relationship between the ideas clear.",
+      "Second example: The revised sentence uses adverbs accurately in context.",
+      "Contrast: The sentence uses adverbs without checking whether its form fits the meaning.",
+      "Correction: Revise the sentence so the form of adverbs matches the intended meaning."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply adverbs in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "manner",
@@ -2289,28 +2383,28 @@ const b1Lessons = [
       "Using an incorrect -ly form."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of adverbs and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using adverbs."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for adverbs in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses adverbs; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using adverbs in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use adverbs in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -2381,7 +2475,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use adverbs accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of adverbs."
+      ]
+    },
     "nextLesson": "b1-grammar-question-forms",
     "estimatedTime": 40,
     "duration": 40,
@@ -2399,11 +2501,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use question formation clearly and accurately.",
     "explanation": "Complex questions combine question words with structures such as indirect questions, embedded questions, and questions about longer clauses.",
     "learningPoints": [
-      "Understand question formation.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of question formation.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving question formation.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Indirect questions use statement word order after the question phrase.",
@@ -2418,12 +2519,12 @@ const b1Lessons = [
       "I'd like to know why the meeting was cancelled."
     ],
     "examplesInContext": [
-      "Context: This is an example of question formation.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: Does she work here?",
+      "Second example: Where did they go?",
+      "Contrast: Where did they went?",
+      "Correction: Where did they go?"
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply question formation in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "indirect question",
@@ -2448,28 +2549,28 @@ const b1Lessons = [
       "Forgetting whether or if in yes/no indirect questions."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of question formation and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using question formation."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for question formation in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses question formation; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using question formation in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use question formation in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -2540,7 +2641,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use question formation accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of question formation."
+      ]
+    },
     "nextLesson": "b1-grammar-reported-statements",
     "estimatedTime": 40,
     "duration": 40,
@@ -2558,11 +2667,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use reported speech clearly and accurately.",
     "explanation": "Reported speech allows us to communicate what another person said without repeating their exact words. Tenses often move back when the reporting verb is in the past.",
     "learningPoints": [
-      "Understand reported speech.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of reported speech.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving reported speech.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Use a reporting verb such as said or told.",
@@ -2577,12 +2685,12 @@ const b1Lessons = [
       "They said, 'We have finished.' → They said that they had finished."
     ],
     "examplesInContext": [
-      "Context: This is an example of reported speech.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: Mina said that she was tired.",
+      "Second example: He told me he had finished the task.",
+      "Contrast: Mina said me that she was tired.",
+      "Correction: Mina told me that she was tired."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply reported speech in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "report",
@@ -2607,28 +2715,28 @@ const b1Lessons = [
       "Forgetting to adjust pronouns or time expressions."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of reported speech and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using reported speech."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for reported speech in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses reported speech; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using reported speech in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use reported speech in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -2699,7 +2807,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use reported speech accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of reported speech."
+      ]
+    },
     "nextLesson": "b1-grammar-passive-introduction",
     "estimatedTime": 40,
     "duration": 40,
@@ -2717,11 +2833,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use passive voice clearly and accurately.",
     "explanation": "The passive voice focuses on the action or the person or thing affected by the action rather than the person who performs it.",
     "learningPoints": [
-      "Understand passive voice.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the form and meaning of passive voice.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving passive voice.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Form the passive with be + past participle.",
@@ -2736,12 +2851,12 @@ const b1Lessons = [
       "The emails were sent by the administrator."
     ],
     "examplesInContext": [
-      "Context: This is an example of passive voice.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Rule in use: The results were published yesterday.",
+      "Second example: Applications are reviewed every week.",
+      "Contrast: The report was write yesterday.",
+      "Correction: The report was written yesterday."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply passive voice in a realistic grammar situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "passive",
@@ -2766,28 +2881,28 @@ const b1Lessons = [
       "Adding by when the agent is unnecessary."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of passive voice and check them against the rule."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using passive voice."
+        "type": "noticing",
+        "prompt": "Highlight the structure used for passive voice in each example and explain its meaning."
       },
       {
         "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "prompt": "Correct the sentence that misuses passive voice; explain the rule behind the correction."
       },
       {
         "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "prompt": "Write two original sentences using passive voice in different realistic contexts."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "transfer",
+        "prompt": "Use passive voice in a short dialogue or paragraph and check form, meaning, and punctuation."
       }
     ],
     "practice": [
@@ -2858,7 +2973,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use passive voice accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of passive voice."
+      ]
+    },
     "nextLesson": "b1-vocabulary-education",
     "estimatedTime": 40,
     "duration": 40,
@@ -2876,11 +2999,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use education and academic life clearly and accurately.",
     "explanation": "Academic life involves more than attending classes. Students enroll in courses, complete assignments, meet deadlines, participate in discussions, and prepare for exams. At B1 level, learners should be able to describe their studies and understand common university vocabulary.",
     "learningPoints": [
-      "Understand education and academic life.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in education and academic life.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Use enroll in or register for a course when talking about joining a course.",
@@ -2901,7 +3023,7 @@ const b1Lessons = [
       "The students discussed their research project after class.",
       "She submitted her assignment one day before the deadline."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply education and academic life in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "enroll",
@@ -2950,28 +3072,28 @@ const b1Lessons = [
       "Incorrect: I have a deadline in Friday. Correct: I have a deadline on Friday."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using education and academic life."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about education and academic life."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -3055,8 +3177,21 @@ const b1Lessons = [
         "answer": "enroll in a course"
       }
     ],
-    "review": "Remember: enroll in a course, attend a lecture, complete an assignment, meet a deadline, conduct research, and earn a degree.",
-    "mastery": "You can use education and academic life accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of education and academic life without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of education and academic life."
+      ]
+    },
     "nextLesson": "b1-vocabulary-workplace",
     "estimatedTime": 40,
     "duration": 40,
@@ -3074,11 +3209,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use workplace language clearly and accurately.",
     "explanation": "Workplace vocabulary helps learners describe what they do at work and communicate professionally. Common words include colleague, responsibility, task, meeting, schedule, manager, and department.",
     "learningPoints": [
-      "Understand workplace language.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in workplace language.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Use colleague for someone you work with.",
@@ -3099,7 +3233,7 @@ const b1Lessons = [
       "My colleague helped me solve a problem with the report.",
       "The manager gave each employee a clear responsibility."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply workplace language in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "colleague",
@@ -3148,28 +3282,28 @@ const b1Lessons = [
       "Say attend a meeting rather than attend to a meeting."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using workplace language."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about workplace language."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -3253,8 +3387,21 @@ const b1Lessons = [
         "answer": "Employee"
       }
     ],
-    "review": "Remember the difference between colleague, employee, manager, responsibility, task, department, and meeting.",
-    "mastery": "You can use workplace language accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of workplace language without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of workplace language."
+      ]
+    },
     "nextLesson": "b1-vocabulary-careers",
     "estimatedTime": 40,
     "duration": 40,
@@ -3272,11 +3419,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use careers and employment clearly and accurately.",
     "explanation": "Career vocabulary is useful when applying for jobs or discussing professional goals. Learners should understand words such as qualification, experience, application, interview, position, salary, and promotion.",
     "learningPoints": [
-      "Understand careers and employment.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in careers and employment.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Apply for a job or position.",
@@ -3293,12 +3439,12 @@ const b1Lessons = [
       "He received a promotion after three years."
     ],
     "examplesInContext": [
-      "Context: This is an example of careers and employment.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “qualification” means an official skill, certificate, or degree needed for a job. Example: The writer used “qualification” precisely in a sentence about careers and employment.",
+      "In context: “experience” means knowledge gained through doing something. Example: The writer used “experience” precisely in a sentence about careers and employment.",
+      "In context: “application” means a formal request for a job. Example: The writer used “application” precisely in a sentence about careers and employment.",
+      "In context: “interview” means a formal meeting in which someone is assessed for a job. Example: The writer used “interview” precisely in a sentence about careers and employment."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply careers and employment in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "qualification",
@@ -3347,28 +3493,28 @@ const b1Lessons = [
       "A salary is normally paid regularly; a fee is usually payment for a particular service."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using careers and employment."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about careers and employment."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -3452,8 +3598,21 @@ const b1Lessons = [
         "answer": "career"
       }
     ],
-    "review": "Use apply for, work experience, job interview, job position, salary, promotion, qualification, and career development.",
-    "mastery": "You can use careers and employment accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of careers and employment without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of careers and employment."
+      ]
+    },
     "nextLesson": "b1-vocabulary-travel",
     "estimatedTime": 40,
     "duration": 40,
@@ -3471,11 +3630,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use travel and tourism clearly and accurately.",
     "explanation": "Travel vocabulary allows learners to describe journeys and solve common problems while travelling. Important words include destination, accommodation, reservation, departure, arrival, sightseeing, and luggage.",
     "learningPoints": [
-      "Understand travel and tourism.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in travel and tourism.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Make a reservation or booking.",
@@ -3492,12 +3650,12 @@ const b1Lessons = [
       "We spent the afternoon sightseeing."
     ],
     "examplesInContext": [
-      "Context: This is an example of travel and tourism.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “destination” means the place you are travelling to. Example: The writer used “destination” precisely in a sentence about travel and tourism.",
+      "In context: “accommodation” means a place where you stay. Example: The writer used “accommodation” precisely in a sentence about travel and tourism.",
+      "In context: “reservation” means an arrangement to keep a room, seat, or service for you. Example: The writer used “reservation” precisely in a sentence about travel and tourism.",
+      "In context: “departure” means the act or time of leaving. Example: The writer used “departure” precisely in a sentence about travel and tourism."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply travel and tourism in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "destination",
@@ -3546,28 +3704,28 @@ const b1Lessons = [
       "Say arrive at the airport but arrive in Kabul."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using travel and tourism."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about travel and tourism."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -3651,8 +3809,21 @@ const b1Lessons = [
         "answer": "luggage"
       }
     ],
-    "review": "Remember: destination, accommodation, reservation, departure, arrival, sightseeing, luggage, and journey.",
-    "mastery": "You can use travel and tourism accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of travel and tourism without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of travel and tourism."
+      ]
+    },
     "nextLesson": "b1-vocabulary-health",
     "estimatedTime": 40,
     "duration": 40,
@@ -3670,11 +3841,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use health and wellbeing clearly and accurately.",
     "explanation": "Health vocabulary helps learners describe general wellbeing and everyday health concerns. At B1, learners should distinguish between symptoms, habits, treatment, exercise, diet, and recovery.",
     "learningPoints": [
-      "Understand health and wellbeing.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in health and wellbeing.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Have or experience a symptom.",
@@ -3691,12 +3861,12 @@ const b1Lessons = [
       "Getting enough sleep is important for wellbeing."
     ],
     "examplesInContext": [
-      "Context: This is an example of health and wellbeing.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “symptom” means a sign that you may have an illness. Example: The writer used “symptom” precisely in a sentence about health and wellbeing.",
+      "In context: “treatment” means medical care given for an illness or condition. Example: The writer used “treatment” precisely in a sentence about health and wellbeing.",
+      "In context: “recovery” means the process of becoming healthy again. Example: The writer used “recovery” precisely in a sentence about health and wellbeing.",
+      "In context: “exercise” means physical activity done to improve health. Example: The writer used “exercise” precisely in a sentence about health and wellbeing."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply health and wellbeing in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "symptom",
@@ -3745,28 +3915,28 @@ const b1Lessons = [
       "Health is generally uncountable: good health, not a good health."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using health and wellbeing."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about health and wellbeing."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -3850,8 +4020,21 @@ const b1Lessons = [
         "answer": "mental wellbeing"
       }
     ],
-    "review": "Focus on natural combinations such as regular exercise, balanced diet, common symptom, receive treatment, and mental wellbeing.",
-    "mastery": "You can use health and wellbeing accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of health and wellbeing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of health and wellbeing."
+      ]
+    },
     "nextLesson": "b1-vocabulary-relationships",
     "estimatedTime": 40,
     "duration": 40,
@@ -3869,11 +4052,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use relationships and social life clearly and accurately.",
     "explanation": "Relationship vocabulary helps learners describe how people interact. Important concepts include trust, support, respect, disagreement, communication, friendship, and relationship.",
     "learningPoints": [
-      "Understand relationships and social life.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in relationships and social life.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Build trust and maintain a relationship.",
@@ -3890,12 +4072,12 @@ const b1Lessons = [
       "Mutual respect can strengthen relationships."
     ],
     "examplesInContext": [
-      "Context: This is an example of relationships and social life.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “trust” means belief that someone is honest and reliable. Example: The writer used “trust” precisely in a sentence about relationships and social life.",
+      "In context: “support” means help or encouragement. Example: The writer used “support” precisely in a sentence about relationships and social life.",
+      "In context: “respect” means admiration for someone's abilities or qualities. Example: The writer used “respect” precisely in a sentence about relationships and social life.",
+      "In context: “communication” means the process of sharing information or feelings. Example: The writer used “communication” precisely in a sentence about relationships and social life."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply relationships and social life in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "trust",
@@ -3944,28 +4126,28 @@ const b1Lessons = [
       "Use respect as both a noun and verb: show respect / respect someone."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using relationships and social life."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about relationships and social life."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -4049,8 +4231,21 @@ const b1Lessons = [
         "answer": "reliable"
       }
     ],
-    "review": "Remember: build trust, give support, show respect, effective communication, have a disagreement, and resolve a conflict.",
-    "mastery": "You can use relationships and social life accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of relationships and social life without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of relationships and social life."
+      ]
+    },
     "nextLesson": "b1-vocabulary-media",
     "estimatedTime": 40,
     "duration": 40,
@@ -4068,11 +4263,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use media and news clearly and accurately.",
     "explanation": "Media vocabulary is essential for discussing news and information. Learners should understand the difference between an article, report, source, headline, journalist, audience, and social media post.",
     "learningPoints": [
-      "Understand media and news.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in media and news.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "A journalist reports or writes news.",
@@ -4089,12 +4283,12 @@ const b1Lessons = [
       "The program has a large international audience."
     ],
     "examplesInContext": [
-      "Context: This is an example of media and news.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “headline” means the title of a news story. Example: The writer used “headline” precisely in a sentence about media and news.",
+      "In context: “journalist” means a person who collects and writes news. Example: The writer used “journalist” precisely in a sentence about media and news.",
+      "In context: “source” means a person, document, or place providing information. Example: The writer used “source” precisely in a sentence about media and news.",
+      "In context: “article” means a piece of writing in a newspaper, magazine, or website. Example: The writer used “article” precisely in a sentence about media and news."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply media and news in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "headline",
@@ -4143,28 +4337,28 @@ const b1Lessons = [
       "A headline is usually the title, not the complete article."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using media and news."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about media and news."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -4248,8 +4442,21 @@ const b1Lessons = [
         "answer": "publish"
       }
     ],
-    "review": "Focus on headline, journalist, source, article, report, audience, broadcast, and publish.",
-    "mastery": "You can use media and news accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of media and news without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of media and news."
+      ]
+    },
     "nextLesson": "b1-vocabulary-technology",
     "estimatedTime": 40,
     "duration": 40,
@@ -4267,11 +4474,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use technology and digital life clearly and accurately.",
     "explanation": "Technology vocabulary allows learners to explain how digital tools work and describe common problems. Useful terms include device, software, update, download, upload, account, password, and network.",
     "learningPoints": [
-      "Understand technology and digital life.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in technology and digital life.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Download means transfer data from the internet to your device.",
@@ -4288,12 +4494,12 @@ const b1Lessons = [
       "The Wi-Fi network is not working."
     ],
     "examplesInContext": [
-      "Context: This is an example of technology and digital life.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “device” means a piece of electronic equipment. Example: The writer used “device” precisely in a sentence about technology and digital life.",
+      "In context: “software” means programs used by a computer or device. Example: The writer used “software” precisely in a sentence about technology and digital life.",
+      "In context: “update” means a newer version or improvement. Example: The writer used “update” precisely in a sentence about technology and digital life.",
+      "In context: “download” means copy data from the internet to your device. Example: The writer used “download” precisely in a sentence about technology and digital life."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply technology and digital life in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "device",
@@ -4342,28 +4548,28 @@ const b1Lessons = [
       "Say log in to an account, not log in an account."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using technology and digital life."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about technology and digital life."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -4447,8 +4653,21 @@ const b1Lessons = [
         "answer": "network"
       }
     ],
-    "review": "Remember the direction: download to your device; upload to an online service. Also learn install software, create an account, reset a password, and Wi-Fi network.",
-    "mastery": "You can use technology and digital life accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of technology and digital life without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of technology and digital life."
+      ]
+    },
     "nextLesson": "b1-vocabulary-environment",
     "estimatedTime": 40,
     "duration": 40,
@@ -4466,11 +4685,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use environment and climate clearly and accurately.",
     "explanation": "Environmental vocabulary helps learners discuss problems such as pollution, waste, climate change, and loss of natural resources. It also helps them describe solutions such as recycling, conservation, and sustainable development.",
     "learningPoints": [
-      "Understand environment and climate.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in environment and climate.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Reduce waste rather than make waste.",
@@ -4487,12 +4705,12 @@ const b1Lessons = [
       "Public transport can help reduce emissions."
     ],
     "examplesInContext": [
-      "Context: This is an example of environment and climate.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “pollution” means harmful substances entering the environment. Example: The writer used “pollution” precisely in a sentence about environment and climate.",
+      "In context: “waste” means unwanted material that is thrown away. Example: The writer used “waste” precisely in a sentence about environment and climate.",
+      "In context: “recycle” means process used materials so they can be used again. Example: The writer used “recycle” precisely in a sentence about environment and climate.",
+      "In context: “resource” means a useful supply of something. Example: The writer used “resource” precisely in a sentence about environment and climate."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply environment and climate in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "pollution",
@@ -4541,28 +4759,28 @@ const b1Lessons = [
       "Natural resources are resources from nature, not simply any useful object."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using environment and climate."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about environment and climate."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -4646,8 +4864,21 @@ const b1Lessons = [
         "answer": "climate"
       }
     ],
-    "review": "Learn the environmental word families around pollution, waste, recycling, resources, conservation, sustainability, emissions, and climate change.",
-    "mastery": "You can use environment and climate accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of environment and climate without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of environment and climate."
+      ]
+    },
     "nextLesson": "b1-vocabulary-money",
     "estimatedTime": 40,
     "duration": 40,
@@ -4665,11 +4896,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use money and personal finance clearly and accurately.",
     "explanation": "Money vocabulary is useful for discussing salaries, prices, expenses, savings, budgets, and financial choices. Learners should understand the difference between income, spending, saving, and borrowing.",
     "learningPoints": [
-      "Understand money and personal finance.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in money and personal finance.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Earn money through work.",
@@ -4686,12 +4916,12 @@ const b1Lessons = [
       "We need to plan our monthly budget."
     ],
     "examplesInContext": [
-      "Context: This is an example of money and personal finance.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “income” means money received regularly, especially from work or investments. Example: The writer used “income” precisely in a sentence about money and personal finance.",
+      "In context: “expense” means money spent on something. Example: The writer used “expense” precisely in a sentence about money and personal finance.",
+      "In context: “budget” means a plan for how money will be spent. Example: The writer used “budget” precisely in a sentence about money and personal finance.",
+      "In context: “saving” means money kept for future use. Example: The writer used “saving” precisely in a sentence about money and personal finance."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply money and personal finance in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "income",
@@ -4740,28 +4970,28 @@ const b1Lessons = [
       "Afford is normally followed by a noun or to + verb: afford a car / afford to travel."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using money and personal finance."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about money and personal finance."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -4845,8 +5075,21 @@ const b1Lessons = [
         "answer": "afford"
       }
     ],
-    "review": "Remember: earn income, manage a budget, pay expenses, save money, borrow from, lend to, and afford something.",
-    "mastery": "You can use money and personal finance accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of money and personal finance without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of money and personal finance."
+      ]
+    },
     "nextLesson": "b1-vocabulary-personality",
     "estimatedTime": 40,
     "duration": 40,
@@ -4864,11 +5107,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use personality and character clearly and accurately.",
     "explanation": "Personality vocabulary allows learners to describe how people usually behave. At B1 level, learners should use adjectives such as confident, reliable, patient, generous, independent, polite, ambitious, and sensitive appropriately.",
     "learningPoints": [
-      "Understand personality and character.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in personality and character.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Use personality adjectives after be: She is confident.",
@@ -4885,12 +5127,12 @@ const b1Lessons = [
       "He is independent and solves problems by himself."
     ],
     "examplesInContext": [
-      "Context: This is an example of personality and character.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “confident” means sure of your abilities or qualities. Example: The writer used “confident” precisely in a sentence about personality and character.",
+      "In context: “reliable” means able to be trusted. Example: The writer used “reliable” precisely in a sentence about personality and character.",
+      "In context: “patient” means able to wait or deal calmly with difficulty. Example: The writer used “patient” precisely in a sentence about personality and character.",
+      "In context: “generous” means willing to give time, money, or help. Example: The writer used “generous” precisely in a sentence about personality and character."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply personality and character in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "confident",
@@ -4939,28 +5181,28 @@ const b1Lessons = [
       "Independent is different from selfish: an independent person can still help others."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using personality and character."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about personality and character."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -5044,8 +5286,21 @@ const b1Lessons = [
         "answer": "confident"
       }
     ],
-    "review": "Use personality adjectives carefully: confident, reliable, patient, generous, ambitious, independent, sensitive, and polite.",
-    "mastery": "You can use personality and character accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of personality and character without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of personality and character."
+      ]
+    },
     "nextLesson": "b1-vocabulary-emotions",
     "estimatedTime": 40,
     "duration": 40,
@@ -5063,11 +5318,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use emotions and reactions clearly and accurately.",
     "explanation": "Emotion vocabulary helps learners explain how they feel and why. B1 learners should distinguish between adjectives describing feelings and adjectives describing what causes those feelings.",
     "learningPoints": [
-      "Understand emotions and reactions.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in emotions and reactions.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Use interested, excited, worried, and bored to describe how someone feels.",
@@ -5084,12 +5338,12 @@ const b1Lessons = [
       "The story was so interesting that I forgot the time."
     ],
     "examplesInContext": [
-      "Context: This is an example of emotions and reactions.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “anxious” means worried or nervous about something. Example: The writer used “anxious” precisely in a sentence about emotions and reactions.",
+      "In context: “excited” means very happy and enthusiastic about something. Example: The writer used “excited” precisely in a sentence about emotions and reactions.",
+      "In context: “disappointed” means sad because something was not as good as expected. Example: The writer used “disappointed” precisely in a sentence about emotions and reactions.",
+      "In context: “proud” means pleased about something you or someone else achieved. Example: The writer used “proud” precisely in a sentence about emotions and reactions."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply emotions and reactions in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "anxious",
@@ -5138,28 +5392,28 @@ const b1Lessons = [
       "Say grateful for something, but grateful to someone."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using emotions and reactions."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about emotions and reactions."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -5243,8 +5497,21 @@ const b1Lessons = [
         "answer": "frustrated"
       }
     ],
-    "review": "Pay attention to emotion patterns: anxious about, proud of, disappointed with, grateful for, and feel relieved.",
-    "mastery": "You can use emotions and reactions accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of emotions and reactions without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of emotions and reactions."
+      ]
+    },
     "nextLesson": "b1-vocabulary-common-collocations",
     "estimatedTime": 40,
     "duration": 40,
@@ -5262,11 +5529,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use common collocations clearly and accurately.",
     "explanation": "A collocation is a combination of words that commonly occur together. Learning collocations makes English sound more natural and reduces direct translation from another language.",
     "learningPoints": [
-      "Understand common collocations.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Explain the meaning and part of speech of key words in common collocations.",
+      "Recognise the words in context and identify common word partners.",
+      "Distinguish a target word from a similar word when their meanings differ.",
+      "Use at least three target words accurately in original sentences."
     ],
     "rules": [
       "Make a decision, not do a decision.",
@@ -5283,12 +5549,12 @@ const b1Lessons = [
       "Researchers conduct research before publishing their findings."
     ],
     "examplesInContext": [
-      "Context: This is an example of common collocations.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "In context: “make a decision” means choose what to do. Example: The writer used “make a decision” precisely in a sentence about common collocations.",
+      "In context: “make progress” means develop or improve. Example: The writer used “make progress” precisely in a sentence about common collocations.",
+      "In context: “take responsibility” means accept that you are responsible for something. Example: The writer used “take responsibility” precisely in a sentence about common collocations.",
+      "In context: “pay attention” means listen or watch carefully. Example: The writer used “pay attention” precisely in a sentence about common collocations."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply common collocations in a realistic vocabulary situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "make a decision",
@@ -5337,28 +5603,28 @@ const b1Lessons = [
       "Incorrect: make attention. Correct: pay attention."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Read each target word with its definition and part of speech.",
+      "Match the word to the sentence where its meaning fits best.",
+      "Compare similar words and note differences in meaning, collocation, or formality.",
+      "Complete the practice questions using context clues rather than guessing from one word.",
+      "Write three original sentences and check that each word is used naturally."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using common collocations."
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about common collocations."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
       }
     ],
     "practice": [
@@ -5442,8 +5708,21 @@ const b1Lessons = [
         "answer": "gain experience"
       }
     ],
-    "review": "Master the combinations: make a decision, make progress, take responsibility, pay attention, do research, solve a problem, gain experience, keep in touch.",
-    "mastery": "You can use common collocations accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of common collocations without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of common collocations."
+      ]
+    },
     "nextLesson": "b1-reading-news-article",
     "estimatedTime": 40,
     "duration": 40,
@@ -5461,11 +5740,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use short news articles clearly and accurately.",
     "explanation": "News articles usually present the most important information first. A reader should identify what happened, who was involved, where and when it happened, and why it matters. Headlines are often short, so the first paragraph can provide important details that are not included in the headline.",
     "learningPoints": [
-      "Understand short news articles.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the main idea of a text related to short news articles.",
+      "Locate details and evidence that support the main idea.",
+      "Use context to infer the meaning of an unfamiliar word or phrase.",
+      "Summarise or infer meaning without confusing evidence with personal opinion."
     ],
     "rules": [
       "Read the headline first and predict the topic.",
@@ -5480,12 +5758,12 @@ const b1Lessons = [
       "The university said the center was created to help students develop stronger independent learning habits."
     ],
     "examplesInContext": [
-      "Context: This is an example of short news articles.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before reading: use the title “short news articles” to predict the subject and the kind of information the text may contain.",
+      "During reading: identify the sentence that expresses the main idea, then mark two details that support it.",
+      "After reading: summarise the message of short news articles in one sentence without copying the text.",
+      "Inference: explain what the text suggests and quote a detail that supports your inference."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply short news articles in a realistic reading situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "facility",
@@ -5526,28 +5804,28 @@ const b1Lessons = [
       "Do not stop reading because you do not know one word."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Preview the title and predict the text's purpose.",
+      "Read once for the main idea without stopping at every unfamiliar word.",
+      "Read again and mark the line that supports each answer.",
+      "Use context to infer one unfamiliar word and explain the clue you used.",
+      "Write a one-sentence summary supported by a detail from the text."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using short news articles."
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about short news articles in one sentence."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
       }
     ],
     "practice": [
@@ -5621,8 +5899,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "When reading news, identify the main event first and then check the supporting details.",
-    "mastery": "You can use short news articles accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of short news articles without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of short news articles."
+      ]
+    },
     "nextLesson": "b1-reading-personal-story",
     "estimatedTime": 40,
     "duration": 25,
@@ -5644,11 +5935,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use personal narratives clearly and accurately.",
     "explanation": "Personal stories often describe events in chronological order. Pay attention to time expressions such as first, later, after that, and finally. Also notice how the writer's feelings change during the experience.",
     "learningPoints": [
-      "Understand personal narratives.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the main idea of a text related to personal narratives.",
+      "Locate details and evidence that support the main idea.",
+      "Use context to infer the meaning of an unfamiliar word or phrase.",
+      "Summarise or infer meaning without confusing evidence with personal opinion."
     ],
     "rules": [
       "Identify the beginning, middle, and ending.",
@@ -5663,12 +5953,12 @@ const b1Lessons = [
       "By the end of the presentation, I felt proud of myself."
     ],
     "examplesInContext": [
-      "Context: This is an example of personal narratives.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before reading: use the title “personal narratives” to predict the subject and the kind of information the text may contain.",
+      "During reading: identify the sentence that expresses the main idea, then mark two details that support it.",
+      "After reading: summarise the message of personal narratives in one sentence without copying the text.",
+      "Inference: explain what the text suggests and quote a detail that supports your inference."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply personal narratives in a realistic reading situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "presentation",
@@ -5709,28 +5999,28 @@ const b1Lessons = [
       "Do not assume every detail has equal importance."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Preview the title and predict the text's purpose.",
+      "Read once for the main idea without stopping at every unfamiliar word.",
+      "Read again and mark the line that supports each answer.",
+      "Use context to infer one unfamiliar word and explain the clue you used.",
+      "Write a one-sentence summary supported by a detail from the text."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using personal narratives."
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about personal narratives in one sentence."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
       }
     ],
     "practice": [
@@ -5804,8 +6094,21 @@ const b1Lessons = [
         "answer": 2
       }
     ],
-    "review": "Personal stories become easier to understand when you follow the order of events and track changes in feelings.",
-    "mastery": "You can use personal narratives accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of personal narratives without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of personal narratives."
+      ]
+    },
     "nextLesson": "b1-reading-workplace-email",
     "estimatedTime": 40,
     "duration": 25,
@@ -5827,11 +6130,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use workplace emails clearly and accurately.",
     "explanation": "Workplace emails often contain a clear purpose, a request, a deadline, and information about what should happen next. Look for action words such as confirm, send, complete, attend, and prepare.",
     "learningPoints": [
-      "Understand workplace emails.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the main idea of a text related to workplace emails.",
+      "Locate details and evidence that support the main idea.",
+      "Use context to infer the meaning of an unfamiliar word or phrase.",
+      "Summarise or infer meaning without confusing evidence with personal opinion."
     ],
     "rules": [
       "Identify why the email was written.",
@@ -5846,12 +6148,12 @@ const b1Lessons = [
       "Please let me know if you have any questions."
     ],
     "examplesInContext": [
-      "Context: This is an example of workplace emails.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before reading: use the title “workplace emails” to predict the subject and the kind of information the text may contain.",
+      "During reading: identify the sentence that expresses the main idea, then mark two details that support it.",
+      "After reading: summarise the message of workplace emails in one sentence without copying the text.",
+      "Inference: explain what the text suggests and quote a detail that supports your inference."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply workplace emails in a realistic reading situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "monthly",
@@ -5892,28 +6194,28 @@ const b1Lessons = [
       "Do not ignore the requested preparation."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Preview the title and predict the text's purpose.",
+      "Read once for the main idea without stopping at every unfamiliar word.",
+      "Read again and mark the line that supports each answer.",
+      "Use context to infer one unfamiliar word and explain the clue you used.",
+      "Write a one-sentence summary supported by a detail from the text."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using workplace emails."
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about workplace emails in one sentence."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
       }
     ],
     "practice": [
@@ -5987,8 +6289,21 @@ const b1Lessons = [
         "answer": 1
       }
     ],
-    "review": "For workplace emails, identify the purpose, requested actions, deadlines, and location.",
-    "mastery": "You can use workplace emails accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of workplace emails without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of workplace emails."
+      ]
+    },
     "nextLesson": "b1-reading-online-information",
     "estimatedTime": 40,
     "duration": 25,
@@ -6010,11 +6325,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use web information clearly and accurately.",
     "explanation": "Online information can be organized with headings, short sections, dates, and key facts. Read the question first, then scan the text for the information you need instead of reading every word equally.",
     "learningPoints": [
-      "Understand web information.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the main idea of a text related to web information.",
+      "Locate details and evidence that support the main idea.",
+      "Use context to infer the meaning of an unfamiliar word or phrase.",
+      "Summarise or infer meaning without confusing evidence with personal opinion."
     ],
     "rules": [
       "Read the question before scanning the text.",
@@ -6031,12 +6345,12 @@ const b1Lessons = [
       "Registration closes: 12 October"
     ],
     "examplesInContext": [
-      "Context: This is an example of web information.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before reading: use the title “web information” to predict the subject and the kind of information the text may contain.",
+      "During reading: identify the sentence that expresses the main idea, then mark two details that support it.",
+      "After reading: summarise the message of web information in one sentence without copying the text.",
+      "Inference: explain what the text suggests and quote a detail that supports your inference."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply web information in a realistic reading situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "workshop",
@@ -6077,28 +6391,28 @@ const b1Lessons = [
       "Do not rely on one keyword without checking the surrounding information."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Preview the title and predict the text's purpose.",
+      "Read once for the main idea without stopping at every unfamiliar word.",
+      "Read again and mark the line that supports each answer.",
+      "Use context to infer one unfamiliar word and explain the clue you used.",
+      "Write a one-sentence summary supported by a detail from the text."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using web information."
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about web information in one sentence."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
       }
     ],
     "practice": [
@@ -6172,8 +6486,21 @@ const b1Lessons = [
         "answer": 1
       }
     ],
-    "review": "When searching online, scan for specific facts and carefully compare dates, times, locations, and requirements.",
-    "mastery": "You can use web information accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of web information without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of web information."
+      ]
+    },
     "nextLesson": "b1-reading-reviews",
     "estimatedTime": 40,
     "duration": 25,
@@ -6195,11 +6522,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use reviews and opinions clearly and accurately.",
     "explanation": "Reviews combine description and opinion. Look for opinion words and phrases such as excellent, disappointing, useful, comfortable, worth the price, and I would recommend. Then identify the reasons behind the reviewer's judgment.",
     "learningPoints": [
-      "Understand reviews and opinions.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the main idea of a text related to reviews and opinions.",
+      "Locate details and evidence that support the main idea.",
+      "Use context to infer the meaning of an unfamiliar word or phrase.",
+      "Summarise or infer meaning without confusing evidence with personal opinion."
     ],
     "rules": [
       "Separate facts from opinions.",
@@ -6214,12 +6540,12 @@ const b1Lessons = [
       "I would recommend this course to students who want more speaking practice."
     ],
     "examplesInContext": [
-      "Context: This is an example of reviews and opinions.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before reading: use the title “reviews and opinions” to predict the subject and the kind of information the text may contain.",
+      "During reading: identify the sentence that expresses the main idea, then mark two details that support it.",
+      "After reading: summarise the message of reviews and opinions in one sentence without copying the text.",
+      "Inference: explain what the text suggests and quote a detail that supports your inference."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply reviews and opinions in a realistic reading situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "overall",
@@ -6260,28 +6586,28 @@ const b1Lessons = [
       "Look for reasons, not only opinion words."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Preview the title and predict the text's purpose.",
+      "Read once for the main idea without stopping at every unfamiliar word.",
+      "Read again and mark the line that supports each answer.",
+      "Use context to infer one unfamiliar word and explain the clue you used.",
+      "Write a one-sentence summary supported by a detail from the text."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using reviews and opinions."
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about reviews and opinions in one sentence."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
       }
     ],
     "practice": [
@@ -6355,8 +6681,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "A review is easier to understand when you identify the writer's overall opinion and the reasons behind it.",
-    "mastery": "You can use reviews and opinions accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of reviews and opinions without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of reviews and opinions."
+      ]
+    },
     "nextLesson": "b1-reading-instructions",
     "estimatedTime": 40,
     "duration": 25,
@@ -6378,11 +6717,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use instructions and procedures clearly and accurately.",
     "explanation": "Instructions explain how to complete a task. They often use sequence words and imperative verbs. Read each step in order and pay attention to conditions such as if, unless, before, and after.",
     "learningPoints": [
-      "Understand instructions and procedures.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the main idea of a text related to instructions and procedures.",
+      "Locate details and evidence that support the main idea.",
+      "Use context to infer the meaning of an unfamiliar word or phrase.",
+      "Summarise or infer meaning without confusing evidence with personal opinion."
     ],
     "rules": [
       "Follow steps in the correct order.",
@@ -6398,12 +6736,12 @@ const b1Lessons = [
       "If you forget your password, select Reset Password."
     ],
     "examplesInContext": [
-      "Context: This is an example of instructions and procedures.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before reading: use the title “instructions and procedures” to predict the subject and the kind of information the text may contain.",
+      "During reading: identify the sentence that expresses the main idea, then mark two details that support it.",
+      "After reading: summarise the message of instructions and procedures in one sentence without copying the text.",
+      "Inference: explain what the text suggests and quote a detail that supports your inference."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply instructions and procedures in a realistic reading situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "submit",
@@ -6444,28 +6782,28 @@ const b1Lessons = [
       "Do not assume submission is complete without confirmation."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Preview the title and predict the text's purpose.",
+      "Read once for the main idea without stopping at every unfamiliar word.",
+      "Read again and mark the line that supports each answer.",
+      "Use context to infer one unfamiliar word and explain the clue you used.",
+      "Write a one-sentence summary supported by a detail from the text."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using instructions and procedures."
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about instructions and procedures in one sentence."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
       }
     ],
     "practice": [
@@ -6539,8 +6877,21 @@ const b1Lessons = [
         "answer": 2
       }
     ],
-    "review": "For instructions, follow the sequence carefully and pay attention to conditions, warnings, and confirmation steps.",
-    "mastery": "You can use instructions and procedures accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of instructions and procedures without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of instructions and procedures."
+      ]
+    },
     "nextLesson": "b1-reading-articles",
     "estimatedTime": 40,
     "duration": 25,
@@ -6562,11 +6913,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use short informative articles clearly and accurately.",
     "explanation": "Informational articles explain a topic rather than simply telling a story. The main idea is usually supported by several points or examples. Look for repeated ideas, topic sentences, examples, and cause-and-effect relationships.",
     "learningPoints": [
-      "Understand short informative articles.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the main idea of a text related to short informative articles.",
+      "Locate details and evidence that support the main idea.",
+      "Use context to infer the meaning of an unfamiliar word or phrase.",
+      "Summarise or infer meaning without confusing evidence with personal opinion."
     ],
     "rules": [
       "Identify the topic before focusing on details.",
@@ -6581,12 +6931,12 @@ const b1Lessons = [
       "Therefore, reading is an important part of language learning."
     ],
     "examplesInContext": [
-      "Context: This is an example of short informative articles.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before reading: use the title “short informative articles” to predict the subject and the kind of information the text may contain.",
+      "During reading: identify the sentence that expresses the main idea, then mark two details that support it.",
+      "After reading: summarise the message of short informative articles in one sentence without copying the text.",
+      "Inference: explain what the text suggests and quote a detail that supports your inference."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply short informative articles in a realistic reading situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       {
         "word": "expose",
@@ -6627,28 +6977,28 @@ const b1Lessons = [
       "Do not ignore the final recommendation."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Preview the title and predict the text's purpose.",
+      "Read once for the main idea without stopping at every unfamiliar word.",
+      "Read again and mark the line that supports each answer.",
+      "Use context to infer one unfamiliar word and explain the clue you used.",
+      "Write a one-sentence summary supported by a detail from the text."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using short informative articles."
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about short informative articles in one sentence."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
       }
     ],
     "practice": [
@@ -6722,8 +7072,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "When reading an article, identify the main message first, then connect supporting points and examples to it.",
-    "mastery": "You can use short informative articles accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of short informative articles without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of short informative articles."
+      ]
+    },
     "nextLesson": "b1-listening-work-conversations",
     "estimatedTime": 40,
     "duration": 25,
@@ -6745,11 +7108,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use workplace conversations clearly and accurately.",
     "explanation": "Workplace conversations often contain practical information about tasks, deadlines, responsibilities, requests, and solutions.",
     "learningPoints": [
-      "Understand workplace conversations.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the purpose and overall message of a spoken text about workplace conversations.",
+      "Record important details, examples, and reasons.",
+      "Recognise signposting language that shows contrast, sequence, or cause.",
+      "Summarise the message and support the summary with a heard detail."
     ],
     "rules": [
       "Understand the main pattern before using workplace conversations.",
@@ -6764,12 +7126,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of workplace conversations.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before listening: predict three words or ideas likely to occur in a discussion about workplace conversations.",
+      "First listen: write the speaker's purpose in one short sentence.",
+      "Second listen: note one key detail, one example, and any contrast signalled by “but,” “however,” or “although.”",
+      "After listening: summarise the message and explain which detail best supports the main point."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply workplace conversations in a realistic listening situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "report",
@@ -6804,28 +7166,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Predict the likely situation and key vocabulary before listening.",
+      "Listen once for the speaker, situation, and purpose.",
+      "Listen again and note the key detail or phrase that supports each answer.",
+      "Check whether your notes distinguish the main point from an example.",
+      "Give a short oral summary and compare it with the lesson's key points."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using workplace conversations."
+        "type": "gist",
+        "prompt": "Listen to a short text about workplace conversations and state the speaker's purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
       }
     ],
     "practice": [
@@ -6906,7 +7268,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use workplace conversations accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of workplace conversations."
+      ]
+    },
     "nextLesson": "b1-listening-travel-situations",
     "estimatedTime": 40,
     "duration": 40,
@@ -6931,11 +7301,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use travel conversations clearly and accurately.",
     "explanation": "Travel listening requires attention to practical details such as names, dates, room numbers, directions, prices, schedules, and transport information.",
     "learningPoints": [
-      "Understand travel conversations.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the purpose and overall message of a spoken text about travel conversations.",
+      "Record important details, examples, and reasons.",
+      "Recognise signposting language that shows contrast, sequence, or cause.",
+      "Summarise the message and support the summary with a heard detail."
     ],
     "rules": [
       "Understand the main pattern before using travel conversations.",
@@ -6950,12 +7319,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of travel conversations.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before listening: predict three words or ideas likely to occur in a discussion about travel conversations.",
+      "First listen: write the speaker's purpose in one short sentence.",
+      "Second listen: note one key detail, one example, and any contrast signalled by “but,” “however,” or “although.”",
+      "After listening: summarise the message and explain which detail best supports the main point."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply travel conversations in a realistic listening situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "reservation",
@@ -6990,28 +7359,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Predict the likely situation and key vocabulary before listening.",
+      "Listen once for the speaker, situation, and purpose.",
+      "Listen again and note the key detail or phrase that supports each answer.",
+      "Check whether your notes distinguish the main point from an example.",
+      "Give a short oral summary and compare it with the lesson's key points."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using travel conversations."
+        "type": "gist",
+        "prompt": "Listen to a short text about travel conversations and state the speaker's purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
       }
     ],
     "practice": [
@@ -7092,7 +7461,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use travel conversations accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of travel conversations."
+      ]
+    },
     "nextLesson": "b1-listening-interviews",
     "estimatedTime": 40,
     "duration": 40,
@@ -7117,11 +7494,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use interviews clearly and accurately.",
     "explanation": "In interviews, listen for the relationship between questions and answers. Speakers often explain an opinion by giving a reason, example, or personal experience.",
     "learningPoints": [
-      "Understand interviews.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the purpose and overall message of a spoken text about interviews.",
+      "Record important details, examples, and reasons.",
+      "Recognise signposting language that shows contrast, sequence, or cause.",
+      "Summarise the message and support the summary with a heard detail."
     ],
     "rules": [
       "Understand the main pattern before using interviews.",
@@ -7136,12 +7512,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of interviews.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before listening: predict three words or ideas likely to occur in a discussion about interviews.",
+      "First listen: write the speaker's purpose in one short sentence.",
+      "Second listen: note one key detail, one example, and any contrast signalled by “but,” “however,” or “although.”",
+      "After listening: summarise the message and explain which detail best supports the main point."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply interviews in a realistic listening situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "encourage",
@@ -7176,28 +7552,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Predict the likely situation and key vocabulary before listening.",
+      "Listen once for the speaker, situation, and purpose.",
+      "Listen again and note the key detail or phrase that supports each answer.",
+      "Check whether your notes distinguish the main point from an example.",
+      "Give a short oral summary and compare it with the lesson's key points."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using interviews."
+        "type": "gist",
+        "prompt": "Listen to a short text about interviews and state the speaker's purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
       }
     ],
     "practice": [
@@ -7278,7 +7654,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use interviews accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of interviews."
+      ]
+    },
     "nextLesson": "b1-listening-phone-calls",
     "estimatedTime": 40,
     "duration": 40,
@@ -7303,11 +7687,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use telephone conversations clearly and accurately.",
     "explanation": "Telephone conversations can be difficult because you cannot see the speaker. Focus on the purpose of the call, names, times, changes, and requests.",
     "learningPoints": [
-      "Understand telephone conversations.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the purpose and overall message of a spoken text about telephone conversations.",
+      "Record important details, examples, and reasons.",
+      "Recognise signposting language that shows contrast, sequence, or cause.",
+      "Summarise the message and support the summary with a heard detail."
     ],
     "rules": [
       "Understand the main pattern before using telephone conversations.",
@@ -7322,12 +7705,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of telephone conversations.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before listening: predict three words or ideas likely to occur in a discussion about telephone conversations.",
+      "First listen: write the speaker's purpose in one short sentence.",
+      "Second listen: note one key detail, one example, and any contrast signalled by “but,” “however,” or “although.”",
+      "After listening: summarise the message and explain which detail best supports the main point."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply telephone conversations in a realistic listening situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "available",
@@ -7362,28 +7745,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Predict the likely situation and key vocabulary before listening.",
+      "Listen once for the speaker, situation, and purpose.",
+      "Listen again and note the key detail or phrase that supports each answer.",
+      "Check whether your notes distinguish the main point from an example.",
+      "Give a short oral summary and compare it with the lesson's key points."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using telephone conversations."
+        "type": "gist",
+        "prompt": "Listen to a short text about telephone conversations and state the speaker's purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
       }
     ],
     "practice": [
@@ -7464,7 +7847,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use telephone conversations accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of telephone conversations."
+      ]
+    },
     "nextLesson": "b1-listening-announcements",
     "estimatedTime": 40,
     "duration": 40,
@@ -7489,11 +7880,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use announcements clearly and accurately.",
     "explanation": "Announcements often contain dense information. Pay special attention to corrections, numbers, times, locations, deadlines, and instructions.",
     "learningPoints": [
-      "Understand announcements.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the purpose and overall message of a spoken text about announcements.",
+      "Record important details, examples, and reasons.",
+      "Recognise signposting language that shows contrast, sequence, or cause.",
+      "Summarise the message and support the summary with a heard detail."
     ],
     "rules": [
       "Understand the main pattern before using announcements.",
@@ -7508,12 +7898,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of announcements.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before listening: predict three words or ideas likely to occur in a discussion about announcements.",
+      "First listen: write the speaker's purpose in one short sentence.",
+      "Second listen: note one key detail, one example, and any contrast signalled by “but,” “however,” or “although.”",
+      "After listening: summarise the message and explain which detail best supports the main point."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply announcements in a realistic listening situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "announcement",
@@ -7548,28 +7938,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Predict the likely situation and key vocabulary before listening.",
+      "Listen once for the speaker, situation, and purpose.",
+      "Listen again and note the key detail or phrase that supports each answer.",
+      "Check whether your notes distinguish the main point from an example.",
+      "Give a short oral summary and compare it with the lesson's key points."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using announcements."
+        "type": "gist",
+        "prompt": "Listen to a short text about announcements and state the speaker's purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
       }
     ],
     "practice": [
@@ -7650,7 +8040,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use announcements accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of announcements."
+      ]
+    },
     "nextLesson": "b1-listening-short-talks",
     "estimatedTime": 40,
     "duration": 40,
@@ -7675,11 +8073,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use short talks clearly and accurately.",
     "explanation": "Short talks usually follow a clear structure: introduction, main points, examples, and conclusion. Listen for phrases that signal this structure.",
     "learningPoints": [
-      "Understand short talks.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Identify the purpose and overall message of a spoken text about short talks.",
+      "Record important details, examples, and reasons.",
+      "Recognise signposting language that shows contrast, sequence, or cause.",
+      "Summarise the message and support the summary with a heard detail."
     ],
     "rules": [
       "Understand the main pattern before using short talks.",
@@ -7694,12 +8091,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of short talks.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Before listening: predict three words or ideas likely to occur in a discussion about short talks.",
+      "First listen: write the speaker's purpose in one short sentence.",
+      "Second listen: note one key detail, one example, and any contrast signalled by “but,” “however,” or “although.”",
+      "After listening: summarise the message and explain which detail best supports the main point."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply short talks in a realistic listening situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "benefit",
@@ -7734,28 +8131,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Predict the likely situation and key vocabulary before listening.",
+      "Listen once for the speaker, situation, and purpose.",
+      "Listen again and note the key detail or phrase that supports each answer.",
+      "Check whether your notes distinguish the main point from an example.",
+      "Give a short oral summary and compare it with the lesson's key points."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using short talks."
+        "type": "gist",
+        "prompt": "Listen to a short text about short talks and state the speaker's purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
       }
     ],
     "practice": [
@@ -7836,7 +8233,15 @@ const b1Lessons = [
       "Review common mistakes.",
       "Complete the test again after reviewing."
     ],
-    "mastery": "You can use short talks accurately and independently in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of short talks."
+      ]
+    },
     "nextLesson": "b1-speaking-experiences",
     "estimatedTime": 40,
     "duration": 40,
@@ -7861,11 +8266,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use personal experiences clearly and accurately.",
     "explanation": "When talking about an experience, explain when and where it happened, describe the main events, and finish with the result or your reaction. Past simple is useful for completed events, while past continuous can provide background information.",
     "learningPoints": [
-      "Understand personal experiences.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Introduce and organise ideas about personal experiences clearly.",
+      "Support a point with a relevant reason or specific example.",
+      "Use linking expressions and understandable pronunciation.",
+      "Respond to a follow-up question and improve the response after feedback."
     ],
     "rules": [
       "Understand the main pattern before using personal experiences.",
@@ -7880,12 +8284,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of personal experiences.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Opening: introduce personal experiences in one clear sentence.",
+      "Development: give two related points and support one with a specific example.",
+      "Interaction: ask a relevant follow-up question and respond directly to the other speaker.",
+      "Reflection: repeat your response and improve one unclear phrase or grammatical error."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply personal experiences in a realistic speaking situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "experience",
@@ -7915,28 +8319,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Plan an opening sentence and two main points about personal experiences.",
+      "Add a reason or example to support one point.",
+      "Practise aloud slowly, pausing between thought groups.",
+      "Answer a follow-up question without changing the subject.",
+      "Repeat the task with fewer notes and correct one issue from your first attempt."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using personal experiences."
+        "type": "planning",
+        "prompt": "Prepare a short response about personal experiences with an opening, two points, and a closing."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
       }
     ],
     "practice": [
@@ -8000,8 +8404,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the speaking strategies, practise the target language aloud, and repeat the speaking task using your own ideas.",
-    "mastery": "You can use personal experiences accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of personal experiences without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of personal experiences."
+      ]
+    },
     "nextLesson": "b1-speaking-opinions",
     "estimatedTime": 40,
     "duration": 20,
@@ -8025,11 +8442,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use opinions and reasons clearly and accurately.",
     "explanation": "A strong B1 opinion includes three parts: a clear position, a reason or example, and a response to another person's idea. Useful expressions include I think, I believe, in my opinion, from my point of view, and because.",
     "learningPoints": [
-      "Understand opinions and reasons.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Introduce and organise ideas about opinions and reasons clearly.",
+      "Support a point with a relevant reason or specific example.",
+      "Use linking expressions and understandable pronunciation.",
+      "Respond to a follow-up question and improve the response after feedback."
     ],
     "rules": [
       "Understand the main pattern before using opinions and reasons.",
@@ -8044,12 +8460,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of opinions and reasons.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Opening: introduce opinions and reasons in one clear sentence.",
+      "Development: give two related points and support one with a specific example.",
+      "Interaction: ask a relevant follow-up question and respond directly to the other speaker.",
+      "Reflection: repeat your response and improve one unclear phrase or grammatical error."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply opinions and reasons in a realistic speaking situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "opinion",
@@ -8079,28 +8495,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Plan an opening sentence and two main points about opinions and reasons.",
+      "Add a reason or example to support one point.",
+      "Practise aloud slowly, pausing between thought groups.",
+      "Answer a follow-up question without changing the subject.",
+      "Repeat the task with fewer notes and correct one issue from your first attempt."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using opinions and reasons."
+        "type": "planning",
+        "prompt": "Prepare a short response about opinions and reasons with an opening, two points, and a closing."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
       }
     ],
     "practice": [
@@ -8164,8 +8580,21 @@ const b1Lessons = [
         "answer": 1
       }
     ],
-    "review": "Review the speaking strategies, practise the target language aloud, and repeat the speaking task using your own ideas.",
-    "mastery": "You can use opinions and reasons accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of opinions and reasons without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of opinions and reasons."
+      ]
+    },
     "nextLesson": "b1-speaking-future-plans",
     "estimatedTime": 40,
     "duration": 20,
@@ -8189,11 +8618,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use future plans clearly and accurately.",
     "explanation": "English uses several forms for the future. Be going to is common for plans and intentions, while the present continuous can describe fixed arrangements. Will can be used for decisions made at the moment and predictions.",
     "learningPoints": [
-      "Understand future plans.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Introduce and organise ideas about future plans clearly.",
+      "Support a point with a relevant reason or specific example.",
+      "Use linking expressions and understandable pronunciation.",
+      "Respond to a follow-up question and improve the response after feedback."
     ],
     "rules": [
       "Understand the main pattern before using future plans.",
@@ -8208,12 +8636,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of future plans.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Opening: introduce future plans in one clear sentence.",
+      "Development: give two related points and support one with a specific example.",
+      "Interaction: ask a relevant follow-up question and respond directly to the other speaker.",
+      "Reflection: repeat your response and improve one unclear phrase or grammatical error."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply future plans in a realistic speaking situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "plan",
@@ -8243,28 +8671,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Plan an opening sentence and two main points about future plans.",
+      "Add a reason or example to support one point.",
+      "Practise aloud slowly, pausing between thought groups.",
+      "Answer a follow-up question without changing the subject.",
+      "Repeat the task with fewer notes and correct one issue from your first attempt."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using future plans."
+        "type": "planning",
+        "prompt": "Prepare a short response about future plans with an opening, two points, and a closing."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
       }
     ],
     "practice": [
@@ -8328,8 +8756,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the speaking strategies, practise the target language aloud, and repeat the speaking task using your own ideas.",
-    "mastery": "You can use future plans accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of future plans without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of future plans."
+      ]
+    },
     "nextLesson": "b1-speaking-problems-solutions",
     "estimatedTime": 40,
     "duration": 20,
@@ -8353,11 +8794,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use problems and solutions clearly and accurately.",
     "explanation": "When discussing a problem, first explain what is wrong. Then suggest one or more solutions and give reasons for your choices. Useful expressions include We could..., We should..., Why don't we...?, and One possible solution is....",
     "learningPoints": [
-      "Understand problems and solutions.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Introduce and organise ideas about problems and solutions clearly.",
+      "Support a point with a relevant reason or specific example.",
+      "Use linking expressions and understandable pronunciation.",
+      "Respond to a follow-up question and improve the response after feedback."
     ],
     "rules": [
       "Understand the main pattern before using problems and solutions.",
@@ -8372,12 +8812,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of problems and solutions.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Opening: introduce problems and solutions in one clear sentence.",
+      "Development: give two related points and support one with a specific example.",
+      "Interaction: ask a relevant follow-up question and respond directly to the other speaker.",
+      "Reflection: repeat your response and improve one unclear phrase or grammatical error."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply problems and solutions in a realistic speaking situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "problem",
@@ -8407,28 +8847,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Plan an opening sentence and two main points about problems and solutions.",
+      "Add a reason or example to support one point.",
+      "Practise aloud slowly, pausing between thought groups.",
+      "Answer a follow-up question without changing the subject.",
+      "Repeat the task with fewer notes and correct one issue from your first attempt."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using problems and solutions."
+        "type": "planning",
+        "prompt": "Prepare a short response about problems and solutions with an opening, two points, and a closing."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
       }
     ],
     "practice": [
@@ -8492,8 +8932,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the speaking strategies, practise the target language aloud, and repeat the speaking task using your own ideas.",
-    "mastery": "You can use problems and solutions accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of problems and solutions without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of problems and solutions."
+      ]
+    },
     "nextLesson": "b1-speaking-agree-disagree",
     "estimatedTime": 40,
     "duration": 20,
@@ -8517,11 +8970,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use agreement and disagreement clearly and accurately.",
     "explanation": "Effective discussion requires respectful responses. You can show agreement with I agree, That's a good point, or I think you're right. For disagreement, use expressions such as I see your point, but... or I'm not sure I agree because....",
     "learningPoints": [
-      "Understand agreement and disagreement.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Introduce and organise ideas about agreement and disagreement clearly.",
+      "Support a point with a relevant reason or specific example.",
+      "Use linking expressions and understandable pronunciation.",
+      "Respond to a follow-up question and improve the response after feedback."
     ],
     "rules": [
       "Understand the main pattern before using agreement and disagreement.",
@@ -8536,12 +8988,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of agreement and disagreement.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Opening: introduce agreement and disagreement in one clear sentence.",
+      "Development: give two related points and support one with a specific example.",
+      "Interaction: ask a relevant follow-up question and respond directly to the other speaker.",
+      "Reflection: repeat your response and improve one unclear phrase or grammatical error."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply agreement and disagreement in a realistic speaking situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "agree",
@@ -8571,28 +9023,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Plan an opening sentence and two main points about agreement and disagreement.",
+      "Add a reason or example to support one point.",
+      "Practise aloud slowly, pausing between thought groups.",
+      "Answer a follow-up question without changing the subject.",
+      "Repeat the task with fewer notes and correct one issue from your first attempt."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using agreement and disagreement."
+        "type": "planning",
+        "prompt": "Prepare a short response about agreement and disagreement with an opening, two points, and a closing."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
       }
     ],
     "practice": [
@@ -8656,8 +9108,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the speaking strategies, practise the target language aloud, and repeat the speaking task using your own ideas.",
-    "mastery": "You can use agreement and disagreement accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of agreement and disagreement without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of agreement and disagreement."
+      ]
+    },
     "nextLesson": "b1-speaking-storytelling",
     "estimatedTime": 40,
     "duration": 20,
@@ -8681,11 +9146,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use storytelling clearly and accurately.",
     "explanation": "A good B1 story has a clear sequence. Introduce the situation, explain what happened, describe an important event or problem, and finish with the result or your reaction. Linking words such as first, then, suddenly, after that, and finally help listeners follow the story.",
     "learningPoints": [
-      "Understand storytelling.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Introduce and organise ideas about storytelling clearly.",
+      "Support a point with a relevant reason or specific example.",
+      "Use linking expressions and understandable pronunciation.",
+      "Respond to a follow-up question and improve the response after feedback."
     ],
     "rules": [
       "Understand the main pattern before using storytelling.",
@@ -8700,12 +9164,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of storytelling.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Opening: introduce storytelling in one clear sentence.",
+      "Development: give two related points and support one with a specific example.",
+      "Interaction: ask a relevant follow-up question and respond directly to the other speaker.",
+      "Reflection: repeat your response and improve one unclear phrase or grammatical error."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply storytelling in a realistic speaking situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "suddenly",
@@ -8735,28 +9199,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Plan an opening sentence and two main points about storytelling.",
+      "Add a reason or example to support one point.",
+      "Practise aloud slowly, pausing between thought groups.",
+      "Answer a follow-up question without changing the subject.",
+      "Repeat the task with fewer notes and correct one issue from your first attempt."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using storytelling."
+        "type": "planning",
+        "prompt": "Prepare a short response about storytelling with an opening, two points, and a closing."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
       }
     ],
     "practice": [
@@ -8820,8 +9284,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the speaking strategies, practise the target language aloud, and repeat the speaking task using your own ideas.",
-    "mastery": "You can use storytelling accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of storytelling without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of storytelling."
+      ]
+    },
     "nextLesson": "b1-writing-personal-experience",
     "estimatedTime": 40,
     "duration": 20,
@@ -8845,11 +9322,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use personal experience writing clearly and accurately.",
     "explanation": "A personal experience paragraph or short composition tells the reader what happened and helps the reader understand why the experience was important. Organize events in a logical order and use past tenses accurately. Add specific details about people, places, actions, and feelings rather than giving only general statements.",
     "learningPoints": [
-      "Understand personal experience writing.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Plan a clear response to a task about personal experience writing.",
+      "Develop the main point with relevant support and explanation.",
+      "Organise ideas with logical paragraphing and precise linking expressions.",
+      "Edit the final draft for grammar, punctuation, spelling, and clarity."
     ],
     "rules": [
       "Understand the main pattern before using personal experience writing.",
@@ -8864,12 +9340,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of personal experience writing.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Model focus: write a clear topic sentence about personal experience writing.",
+      "Support: add a specific example, reason, or piece of evidence.",
+      "Connection: explain how the supporting detail strengthens the main point.",
+      "Revision: remove repetition and check that every sentence contributes to the purpose."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply personal experience writing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "experience",
@@ -8899,28 +9375,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Identify the purpose, reader, and main point of the task.",
+      "Create a brief outline with a clear beginning, developed support, and ending.",
+      "Draft the response using specific examples and logical links.",
+      "Revise for unity, clarity, and appropriate tone.",
+      "Proofread grammar, punctuation, and spelling before submitting the final version."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using personal experience writing."
+        "type": "planning",
+        "prompt": "Plan a response about personal experience writing for a clearly identified reader and purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
       }
     ],
     "practice": [
@@ -8984,8 +9460,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the model, study the useful language, then write your own response using the same structure.",
-    "mastery": "You can use personal experience writing accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of personal experience writing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of personal experience writing."
+      ]
+    },
     "nextLesson": "b1-writing-opinion-paragraph",
     "estimatedTime": 40,
     "duration": 25,
@@ -9009,11 +9498,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use opinion paragraphs clearly and accurately.",
     "explanation": "An opinion paragraph presents a clear view about a topic and supports that view with reasons and examples. The reader should be able to identify your position immediately. Develop each reason rather than simply listing several ideas.",
     "learningPoints": [
-      "Understand opinion paragraphs.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Plan a clear response to a task about opinion paragraphs.",
+      "Develop the main point with relevant support and explanation.",
+      "Organise ideas with logical paragraphing and precise linking expressions.",
+      "Edit the final draft for grammar, punctuation, spelling, and clarity."
     ],
     "rules": [
       "Understand the main pattern before using opinion paragraphs.",
@@ -9028,12 +9516,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of opinion paragraphs.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Model focus: write a clear topic sentence about opinion paragraphs.",
+      "Support: add a specific example, reason, or piece of evidence.",
+      "Connection: explain how the supporting detail strengthens the main point.",
+      "Revision: remove repetition and check that every sentence contributes to the purpose."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply opinion paragraphs in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "opinion",
@@ -9063,28 +9551,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Identify the purpose, reader, and main point of the task.",
+      "Create a brief outline with a clear beginning, developed support, and ending.",
+      "Draft the response using specific examples and logical links.",
+      "Revise for unity, clarity, and appropriate tone.",
+      "Proofread grammar, punctuation, and spelling before submitting the final version."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using opinion paragraphs."
+        "type": "planning",
+        "prompt": "Plan a response about opinion paragraphs for a clearly identified reader and purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
       }
     ],
     "practice": [
@@ -9148,8 +9636,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the model, study the useful language, then write your own response using the same structure.",
-    "mastery": "You can use opinion paragraphs accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of opinion paragraphs without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of opinion paragraphs."
+      ]
+    },
     "nextLesson": "b1-writing-informal-email",
     "estimatedTime": 40,
     "duration": 25,
@@ -9173,11 +9674,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use informal emails clearly and accurately.",
     "explanation": "Informal emails are usually written to friends, classmates, relatives, or people you know well. The language can be friendly and conversational, but the message should still be organized and easy to understand. Use an appropriate greeting, explain why you are writing, include the necessary details, and finish naturally.",
     "learningPoints": [
-      "Understand informal emails.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Plan a clear response to a task about informal emails.",
+      "Develop the main point with relevant support and explanation.",
+      "Organise ideas with logical paragraphing and precise linking expressions.",
+      "Edit the final draft for grammar, punctuation, spelling, and clarity."
     ],
     "rules": [
       "Understand the main pattern before using informal emails.",
@@ -9192,12 +9692,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of informal emails.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Model focus: write a clear topic sentence about informal emails.",
+      "Support: add a specific example, reason, or piece of evidence.",
+      "Connection: explain how the supporting detail strengthens the main point.",
+      "Revision: remove repetition and check that every sentence contributes to the purpose."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply informal emails in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "guess",
@@ -9227,28 +9727,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Identify the purpose, reader, and main point of the task.",
+      "Create a brief outline with a clear beginning, developed support, and ending.",
+      "Draft the response using specific examples and logical links.",
+      "Revise for unity, clarity, and appropriate tone.",
+      "Proofread grammar, punctuation, and spelling before submitting the final version."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using informal emails."
+        "type": "planning",
+        "prompt": "Plan a response about informal emails for a clearly identified reader and purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
       }
     ],
     "practice": [
@@ -9312,8 +9812,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the model, study the useful language, then write your own response using the same structure.",
-    "mastery": "You can use informal emails accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of informal emails without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of informal emails."
+      ]
+    },
     "nextLesson": "b1-writing-formal-email",
     "estimatedTime": 40,
     "duration": 25,
@@ -9337,11 +9850,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use formal emails clearly and accurately.",
     "explanation": "Formal emails are used when writing to institutions, teachers, employers, organizations, or people you do not know well. The message should be polite, direct, and professional. Avoid slang and overly casual expressions, and make requests respectfully.",
     "learningPoints": [
-      "Understand formal emails.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Plan a clear response to a task about formal emails.",
+      "Develop the main point with relevant support and explanation.",
+      "Organise ideas with logical paragraphing and precise linking expressions.",
+      "Edit the final draft for grammar, punctuation, spelling, and clarity."
     ],
     "rules": [
       "Understand the main pattern before using formal emails.",
@@ -9356,12 +9868,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of formal emails.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Model focus: write a clear topic sentence about formal emails.",
+      "Support: add a specific example, reason, or piece of evidence.",
+      "Connection: explain how the supporting detail strengthens the main point.",
+      "Revision: remove repetition and check that every sentence contributes to the purpose."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply formal emails in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "regarding",
@@ -9391,28 +9903,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Identify the purpose, reader, and main point of the task.",
+      "Create a brief outline with a clear beginning, developed support, and ending.",
+      "Draft the response using specific examples and logical links.",
+      "Revise for unity, clarity, and appropriate tone.",
+      "Proofread grammar, punctuation, and spelling before submitting the final version."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using formal emails."
+        "type": "planning",
+        "prompt": "Plan a response about formal emails for a clearly identified reader and purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
       }
     ],
     "practice": [
@@ -9476,8 +9988,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the model, study the useful language, then write your own response using the same structure.",
-    "mastery": "You can use formal emails accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of formal emails without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of formal emails."
+      ]
+    },
     "nextLesson": "b1-writing-description",
     "estimatedTime": 40,
     "duration": 25,
@@ -9501,11 +10026,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use descriptive writing clearly and accurately.",
     "explanation": "A detailed description helps the reader form a clear picture. Start with the most important information, then add specific details about appearance, location, qualities, atmosphere, or function. Use descriptive adjectives carefully and organize information from general to specific.",
     "learningPoints": [
-      "Understand descriptive writing.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Plan a clear response to a task about descriptive writing.",
+      "Develop the main point with relevant support and explanation.",
+      "Organise ideas with logical paragraphing and precise linking expressions.",
+      "Edit the final draft for grammar, punctuation, spelling, and clarity."
     ],
     "rules": [
       "Understand the main pattern before using descriptive writing.",
@@ -9520,12 +10044,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of descriptive writing.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Model focus: write a clear topic sentence about descriptive writing.",
+      "Support: add a specific example, reason, or piece of evidence.",
+      "Connection: explain how the supporting detail strengthens the main point.",
+      "Revision: remove repetition and check that every sentence contributes to the purpose."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply descriptive writing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "spacious",
@@ -9555,28 +10079,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Identify the purpose, reader, and main point of the task.",
+      "Create a brief outline with a clear beginning, developed support, and ending.",
+      "Draft the response using specific examples and logical links.",
+      "Revise for unity, clarity, and appropriate tone.",
+      "Proofread grammar, punctuation, and spelling before submitting the final version."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using descriptive writing."
+        "type": "planning",
+        "prompt": "Plan a response about descriptive writing for a clearly identified reader and purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
       }
     ],
     "practice": [
@@ -9640,8 +10164,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the model, study the useful language, then write your own response using the same structure.",
-    "mastery": "You can use descriptive writing accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of descriptive writing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of descriptive writing."
+      ]
+    },
     "nextLesson": "b1-writing-short-essay",
     "estimatedTime": 40,
     "duration": 25,
@@ -9665,11 +10202,10 @@ const b1Lessons = [
     "introduction": "This lesson develops your ability to use short essays clearly and accurately.",
     "explanation": "A short essay develops a central idea across several connected paragraphs. The introduction presents the topic and main direction of the essay. Body paragraphs develop the main points with reasons and examples. The conclusion brings the discussion together without introducing a completely new main idea.",
     "learningPoints": [
-      "Understand short essays.",
-      "Recognize the target language in context.",
-      "Use the target language accurately.",
-      "Practice independently.",
-      "Apply the skill to a new situation."
+      "Plan a clear response to a task about short essays.",
+      "Develop the main point with relevant support and explanation.",
+      "Organise ideas with logical paragraphing and precise linking expressions.",
+      "Edit the final draft for grammar, punctuation, spelling, and clarity."
     ],
     "rules": [
       "Understand the main pattern before using short essays.",
@@ -9684,12 +10220,12 @@ const b1Lessons = [
       "Use the pattern carefully in your own English."
     ],
     "examplesInContext": [
-      "Context: This is an example of short essays.",
-      "Context: We use this language in everyday communication.",
-      "Context: The example shows how the target language works.",
-      "Context: Use the pattern carefully in your own English."
+      "Model focus: write a clear topic sentence about short essays.",
+      "Support: add a specific example, reason, or piece of evidence.",
+      "Connection: explain how the supporting detail strengthens the main point.",
+      "Revision: remove repetition and check that every sentence contributes to the purpose."
     ],
-    "context": "This language is useful in everyday communication, education, work, and real-life situations.",
+    "context": "Apply short essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [
       [
         "introduction",
@@ -9719,28 +10255,28 @@ const b1Lessons = [
       "Copying examples without understanding them."
     ],
     "guidedPractice": [
-      "Review the explanation.",
-      "Study the examples.",
-      "Complete the guided activities.",
-      "Check your answers.",
-      "Try the task again without looking at the example."
+      "Identify the purpose, reader, and main point of the task.",
+      "Create a brief outline with a clear beginning, developed support, and ending.",
+      "Draft the response using specific examples and logical links.",
+      "Revise for unity, clarity, and appropriate tone.",
+      "Proofread grammar, punctuation, and spelling before submitting the final version."
     ],
     "activities": [
       {
-        "type": "guided-practice",
-        "prompt": "Complete guided practice using short essays."
+        "type": "planning",
+        "prompt": "Plan a response about short essays for a clearly identified reader and purpose."
       },
       {
-        "type": "error-correction",
-        "prompt": "Find and correct mistakes in example sentences."
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
       },
       {
-        "type": "sentence-building",
-        "prompt": "Create your own sentences using the lesson pattern."
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
       },
       {
-        "type": "real-life-use",
-        "prompt": "Use the target language in a realistic everyday situation."
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
       }
     ],
     "practice": [
@@ -9804,8 +10340,21 @@ const b1Lessons = [
         "answer": 0
       }
     ],
-    "review": "Review the model, study the useful language, then write your own response using the same structure.",
-    "mastery": "You can use short essays accurately and independently in a new context.",
+    "review": [
+      "Explain the main idea of short essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of short essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 40,
     "duration": 25,
@@ -9821,10 +10370,5 @@ const b1Lessons = [
   }
 ];
 
-if (typeof module !== "undefined") {
-    module.exports = b1Lessons;
-}
-
-if (typeof window !== "undefined") {
-    window.WORDUP_B1_CONTENT = b1Lessons;
-}
+if (typeof module !== "undefined") module.exports = b1Lessons;
+if (typeof window !== "undefined") window.WORDUP_B1_CONTENT = b1Lessons;

@@ -1352,35 +1352,14 @@
     }
 
     function openHomeSkill(skill) {
-        const progress =
-            getProgress();
+        // Select the earliest available level for this skill.
+        // Ignore a previously saved level that may incorrectly force B2.
+        const preferredLevel = LEVELS.find(
+            level => getLessons(level, skill).length > 0
+        ) || "foundation";
 
-        let preferredLevel =
-            localStorage.getItem(
-                "wordUpCurrentLevel"
-            );
-
-        preferredLevel =
-            preferredLevel &&
-            LEVELS.includes(
-                preferredLevel.toLowerCase()
-            )
-                ? preferredLevel.toLowerCase()
-                : null;
-
-        if (!preferredLevel) {
-            preferredLevel = LEVELS.find(
-                level =>
-                    getLessons(level, skill).length
-            ) || "foundation";
-        }
-
-        openSkill(
-            preferredLevel,
-            skill
-        );
+        openSkill(preferredLevel, skill);
     }
-
     /*
        Expose public controls.
     */

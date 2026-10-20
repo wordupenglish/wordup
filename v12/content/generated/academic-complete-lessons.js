@@ -1,3 +1,5 @@
+// WordUp curriculum quality repair pass — generated from the existing source pack.
+// Review notes and verification results are in REPAIR-REPORT.md.
 const academicCompleteLessons = [
   {
     "id": "academic-grammar-sentence-architecture",
@@ -8,12 +10,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use sentence architecture accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on sentence architecture through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Sentence Architecture is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Sentence Architecture: A clause contains a subject and a verb. An independent clause can stand alone; a dependent clause needs a main clause. Connect ideas with an appropriate subordinating word or relative pronoun, and punctuate the relationship clearly. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Sentence Architecture.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of sentence architecture.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving sentence architecture.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Sentence Architecture.",
@@ -37,7 +39,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of sentence architecture and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Sentence Architecture?",
@@ -67,16 +75,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Sentence Architecture?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using sentence architecture in a meaningful context.",
         "options": [],
         "answer": null
@@ -90,20 +88,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses sentence architecture?",
+        "options": [
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it.",
+          "The students works carefully.",
+          "He do not understand the instruction."
+        ],
+        "answer": 0
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of sentence architecture?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using sentence architecture accurately in a meaningful context.",
         "options": [],
@@ -113,10 +111,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to sentence architecture and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses sentence architecture?",
+        "options": [
+          "He do not understand the instruction.",
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it.",
+          "The students works carefully."
+        ],
+        "answer": 1
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use sentence architecture in a new meaningful context.",
+    "review": [
+      "Explain the main idea of sentence architecture without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of sentence architecture."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -133,12 +154,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use clauses accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on clauses through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Clauses is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Clauses: A clause contains a subject and a verb. An independent clause can stand alone; a dependent clause needs a main clause. Connect ideas with an appropriate subordinating word or relative pronoun, and punctuate the relationship clearly. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Clauses.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of clauses.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving clauses.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Clauses.",
@@ -162,7 +183,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of clauses and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Clauses?",
@@ -192,16 +219,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Clauses?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using clauses in a meaningful context.",
         "options": [],
         "answer": null
@@ -215,20 +232,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses clauses?",
+        "options": [
+          "Although the task was difficult. We completed it.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "Although the task was difficult, we completed it."
+        ],
+        "answer": 3
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of clauses?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using clauses accurately in a meaningful context.",
         "options": [],
@@ -238,10 +255,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to clauses and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses clauses?",
+        "options": [
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it.",
+          "The students works carefully.",
+          "He do not understand the instruction."
+        ],
+        "answer": 0
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use clauses in a new meaningful context.",
+    "review": [
+      "Explain the main idea of clauses without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of clauses."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -258,12 +298,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use phrase structure accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on phrase structure through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Phrase Structure is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Phrase Structure: Study Phrase Structure by identifying its form, meaning, and typical context. Compare a correct example with a common error, then explain why the correct form fits the intended meaning. Check word order, agreement, and punctuation before using the structure in your own sentence. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Phrase Structure.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of phrase structure.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving phrase structure.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Phrase Structure.",
@@ -287,7 +327,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of phrase structure and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Phrase Structure?",
@@ -317,16 +363,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Phrase Structure?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using phrase structure in a meaningful context.",
         "options": [],
         "answer": null
@@ -340,20 +376,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses phrase structure?",
+        "options": [
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Phrase Structure to make the relationship between the ideas clear.",
+          "The sentence uses Phrase Structure without checking whether its form fits the meaning."
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of phrase structure?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using phrase structure accurately in a meaningful context.",
         "options": [],
@@ -363,10 +399,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to phrase structure and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses phrase structure?",
+        "options": [
+          "The sentence uses Phrase Structure without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Phrase Structure to make the relationship between the ideas clear."
+        ],
+        "answer": 3
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use phrase structure in a new meaningful context.",
+    "review": [
+      "Explain the main idea of phrase structure without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of phrase structure."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -383,12 +442,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use coordination accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on coordination through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Coordination is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Coordination: Study Coordination by identifying its form, meaning, and typical context. Compare a correct example with a common error, then explain why the correct form fits the intended meaning. Check word order, agreement, and punctuation before using the structure in your own sentence. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Coordination.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of coordination.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving coordination.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Coordination.",
@@ -412,7 +471,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of coordination and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Coordination?",
@@ -442,16 +507,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Coordination?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using coordination in a meaningful context.",
         "options": [],
         "answer": null
@@ -465,20 +520,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses coordination?",
+        "options": [
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Coordination to make the relationship between the ideas clear.",
+          "The sentence uses Coordination without checking whether its form fits the meaning."
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of coordination?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using coordination accurately in a meaningful context.",
         "options": [],
@@ -488,10 +543,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to coordination and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses coordination?",
+        "options": [
+          "The sentence uses Coordination without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Coordination to make the relationship between the ideas clear."
+        ],
+        "answer": 3
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use coordination in a new meaningful context.",
+    "review": [
+      "Explain the main idea of coordination without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of coordination."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -508,12 +586,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use subordination accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on subordination through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Subordination is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Subordination: Study Subordination by identifying its form, meaning, and typical context. Compare a correct example with a common error, then explain why the correct form fits the intended meaning. Check word order, agreement, and punctuation before using the structure in your own sentence. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Subordination.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of subordination.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving subordination.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Subordination.",
@@ -537,7 +615,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of subordination and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Subordination?",
@@ -567,16 +651,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Subordination?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using subordination in a meaningful context.",
         "options": [],
         "answer": null
@@ -590,20 +664,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses subordination?",
+        "options": [
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Subordination to make the relationship between the ideas clear.",
+          "The sentence uses Subordination without checking whether its form fits the meaning."
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of subordination?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using subordination accurately in a meaningful context.",
         "options": [],
@@ -613,10 +687,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to subordination and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses subordination?",
+        "options": [
+          "The sentence uses Subordination without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Subordination to make the relationship between the ideas clear."
+        ],
+        "answer": 3
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use subordination in a new meaningful context.",
+    "review": [
+      "Explain the main idea of subordination without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of subordination."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -662,7 +759,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of relative clauses and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates accurate use of relative clauses?",
@@ -692,16 +795,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates accurate use of relative clauses?",
-        "options": [
-          "The report submitted yesterday requires further review.",
-          "The report submitting yesterday requires further review.",
-          "The report was submit yesterday requires further review.",
-          "The report submission yesterday requiring further review."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Reduce or combine two clauses while preserving the meaning of relative clauses.",
         "options": [],
         "answer": null
@@ -715,21 +808,21 @@ const academicCompleteLessons = [
         "question": "Write a formal sentence using the target structure.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses relative clauses?",
+        "options": [
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The tutor who helped me was patient.",
+          "The tutor who he helped me was patient."
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of relative clauses?",
-        "options": [
-          "The report submitted yesterday requires further review.",
-          "The report submitting yesterday requires further review.",
-          "The report was submit yesterday requires further review.",
-          "The report submission yesterday requiring further review."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Reduce or combine two clauses while preserving the meaning of relative clauses.",
         "options": [],
         "answer": null
@@ -743,10 +836,33 @@ const academicCompleteLessons = [
         "question": "Write a formal sentence using the target structure.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses relative clauses?",
+        "options": [
+          "The tutor who he helped me was patient.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The tutor who helped me was patient."
+        ],
+        "answer": 3
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use relative clauses in a new meaningful context.",
+    "review": [
+      "Explain the main idea of relative clauses without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of relative clauses."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -763,12 +879,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use noun clauses accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on noun clauses through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Noun Clauses is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Noun Clauses: A clause contains a subject and a verb. An independent clause can stand alone; a dependent clause needs a main clause. Connect ideas with an appropriate subordinating word or relative pronoun, and punctuate the relationship clearly. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Noun Clauses.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of noun clauses.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving noun clauses.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Noun Clauses.",
@@ -792,7 +908,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of noun clauses and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Noun Clauses?",
@@ -822,16 +944,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Noun Clauses?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using noun clauses in a meaningful context.",
         "options": [],
         "answer": null
@@ -845,20 +957,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses noun clauses?",
+        "options": [
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it.",
+          "The students works carefully.",
+          "He do not understand the instruction."
+        ],
+        "answer": 0
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of noun clauses?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using noun clauses accurately in a meaningful context.",
         "options": [],
@@ -868,10 +980,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to noun clauses and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses noun clauses?",
+        "options": [
+          "He do not understand the instruction.",
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it.",
+          "The students works carefully."
+        ],
+        "answer": 1
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use noun clauses in a new meaningful context.",
+    "review": [
+      "Explain the main idea of noun clauses without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of noun clauses."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -888,12 +1023,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use adverb clauses accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on adverb clauses through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Adverb Clauses is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Adverb Clauses: A clause contains a subject and a verb. An independent clause can stand alone; a dependent clause needs a main clause. Connect ideas with an appropriate subordinating word or relative pronoun, and punctuate the relationship clearly. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Adverb Clauses.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of adverb clauses.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving adverb clauses.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Adverb Clauses.",
@@ -917,7 +1052,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of adverb clauses and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Adverb Clauses?",
@@ -947,16 +1088,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Adverb Clauses?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using adverb clauses in a meaningful context.",
         "options": [],
         "answer": null
@@ -970,20 +1101,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses adverb clauses?",
+        "options": [
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it.",
+          "The students works carefully.",
+          "He do not understand the instruction."
+        ],
+        "answer": 0
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of adverb clauses?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using adverb clauses accurately in a meaningful context.",
         "options": [],
@@ -993,10 +1124,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to adverb clauses and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses adverb clauses?",
+        "options": [
+          "He do not understand the instruction.",
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it.",
+          "The students works carefully."
+        ],
+        "answer": 1
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use adverb clauses in a new meaningful context.",
+    "review": [
+      "Explain the main idea of adverb clauses without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of adverb clauses."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -1042,7 +1196,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of participle clauses and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Choose the best reduced form: Because she had reviewed the data, she changed the conclusion.",
@@ -1140,8 +1300,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can accurately recognise, explain, and use participle clauses in a new meaningful context.",
+    "review": [
+      "Explain the main idea of participle clauses without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of participle clauses."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -1158,12 +1331,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use parallel structure accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on parallel structure through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Parallel Structure is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Parallel Structure: Study Parallel Structure by identifying its form, meaning, and typical context. Compare a correct example with a common error, then explain why the correct form fits the intended meaning. Check word order, agreement, and punctuation before using the structure in your own sentence. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Parallel Structure.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of parallel structure.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving parallel structure.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Parallel Structure.",
@@ -1187,7 +1360,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of parallel structure and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Parallel Structure?",
@@ -1217,16 +1396,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Parallel Structure?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using parallel structure in a meaningful context.",
         "options": [],
         "answer": null
@@ -1240,20 +1409,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses parallel structure?",
+        "options": [
+          "The speaker used Parallel Structure to make the relationship between the ideas clear.",
+          "The sentence uses Parallel Structure without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction."
+        ],
+        "answer": 0
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of parallel structure?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using parallel structure accurately in a meaningful context.",
         "options": [],
@@ -1263,10 +1432,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to parallel structure and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses parallel structure?",
+        "options": [
+          "He do not understand the instruction.",
+          "The speaker used Parallel Structure to make the relationship between the ideas clear.",
+          "The sentence uses Parallel Structure without checking whether its form fits the meaning.",
+          "The students works carefully."
+        ],
+        "answer": 1
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use parallel structure in a new meaningful context.",
+    "review": [
+      "Explain the main idea of parallel structure without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of parallel structure."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -1283,12 +1475,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use academic sentence patterns accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on academic sentence patterns through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Academic Sentence Patterns is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Academic Sentence Patterns: A clause contains a subject and a verb. An independent clause can stand alone; a dependent clause needs a main clause. Connect ideas with an appropriate subordinating word or relative pronoun, and punctuate the relationship clearly. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Academic Sentence Patterns.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of academic sentence patterns.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving academic sentence patterns.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Academic Sentence Patterns.",
@@ -1312,7 +1504,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of academic sentence patterns and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Academic Sentence Patterns?",
@@ -1342,16 +1540,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Academic Sentence Patterns?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using academic sentence patterns in a meaningful context.",
         "options": [],
         "answer": null
@@ -1365,20 +1553,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses academic sentence patterns?",
+        "options": [
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "Although the task was difficult, we completed it.",
+          "Although the task was difficult. We completed it."
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of academic sentence patterns?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using academic sentence patterns accurately in a meaningful context.",
         "options": [],
@@ -1388,10 +1576,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to academic sentence patterns and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses academic sentence patterns?",
+        "options": [
+          "Although the task was difficult. We completed it.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "Although the task was difficult, we completed it."
+        ],
+        "answer": 3
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use academic sentence patterns in a new meaningful context.",
+    "review": [
+      "Explain the main idea of academic sentence patterns without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic sentence patterns."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -1408,12 +1619,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use nominalisation accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on nominalisation through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Nominalisation is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Nominalisation: Study Nominalisation by identifying its form, meaning, and typical context. Compare a correct example with a common error, then explain why the correct form fits the intended meaning. Check word order, agreement, and punctuation before using the structure in your own sentence. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Nominalisation.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of nominalisation.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving nominalisation.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Nominalisation.",
@@ -1437,7 +1648,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of nominalisation and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Nominalisation?",
@@ -1467,16 +1684,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Nominalisation?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using nominalisation in a meaningful context.",
         "options": [],
         "answer": null
@@ -1490,20 +1697,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses nominalisation?",
+        "options": [
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Nominalisation to make the relationship between the ideas clear.",
+          "The sentence uses Nominalisation without checking whether its form fits the meaning."
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of nominalisation?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using nominalisation accurately in a meaningful context.",
         "options": [],
@@ -1513,10 +1720,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to nominalisation and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses nominalisation?",
+        "options": [
+          "The sentence uses Nominalisation without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Nominalisation to make the relationship between the ideas clear."
+        ],
+        "answer": 3
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use nominalisation in a new meaningful context.",
+    "review": [
+      "Explain the main idea of nominalisation without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of nominalisation."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -1562,7 +1792,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of hedging and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence expresses cautious interpretation?",
@@ -1660,8 +1896,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use hedging in a new meaningful context.",
+    "review": [
+      "Explain the main idea of hedging without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of hedging."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -1678,12 +1927,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use formal voice accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on formal voice through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Formal Voice is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Formal Voice: Study Formal Voice by identifying its form, meaning, and typical context. Compare a correct example with a common error, then explain why the correct form fits the intended meaning. Check word order, agreement, and punctuation before using the structure in your own sentence. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Formal Voice.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of formal voice.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving formal voice.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Formal Voice.",
@@ -1707,7 +1956,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of formal voice and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Formal Voice?",
@@ -1737,16 +1992,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Formal Voice?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using formal voice in a meaningful context.",
         "options": [],
         "answer": null
@@ -1760,20 +2005,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses formal voice?",
+        "options": [
+          "The sentence uses Formal Voice without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Formal Voice to make the relationship between the ideas clear."
+        ],
+        "answer": 3
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of formal voice?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using formal voice accurately in a meaningful context.",
         "options": [],
@@ -1783,10 +2028,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to formal voice and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses formal voice?",
+        "options": [
+          "The speaker used Formal Voice to make the relationship between the ideas clear.",
+          "The sentence uses Formal Voice without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction."
+        ],
+        "answer": 0
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use formal voice in a new meaningful context.",
+    "review": [
+      "Explain the main idea of formal voice without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of formal voice."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -1803,12 +2071,12 @@ const academicCompleteLessons = [
     "objective": "By the end of the lesson, the learner can recognise, explain, and use academic cohesion accurately in formal academic communication.",
     "prerequisites": [],
     "introduction": "This lesson focuses on academic cohesion through meaning, form, contrast, guided practice, and independent production.",
-    "explanation": "Academic Cohesion is treated as a functional grammar system. Learners examine form, meaning, contrast, and use, then apply the structure to a realistic communication problem.",
+    "explanation": "Academic Cohesion: Study Academic Cohesion by identifying its form, meaning, and typical context. Compare a correct example with a common error, then explain why the correct form fits the intended meaning. Check word order, agreement, and punctuation before using the structure in your own sentence. First, identify what the sentence is trying to express; next, choose the form that communicates that meaning; finally, check the subject, verb form, word order, and time reference. Compare the examples below and notice how a small change in form can change accuracy or meaning.",
     "learningPoints": [
-      "Identify the form and function associated with Academic Cohesion.",
-      "Choose the structure according to meaning, time, emphasis, and register.",
-      "Check agreement, auxiliary use, word order, and complementation.",
-      "Prefer clear and purposeful use over mechanical repetition."
+      "Explain the form and meaning of academic cohesion.",
+      "Choose the correct structure in a complete sentence.",
+      "Identify and correct a common error involving academic cohesion.",
+      "Produce an original sentence and explain why its form is appropriate."
     ],
     "rules": [
       "Identify the form and function associated with Academic Cohesion.",
@@ -1832,7 +2100,13 @@ const academicCompleteLessons = [
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
-    "guidedPractice": [],
+    "guidedPractice": [
+      "Read the rule and underline the form that carries the meaning.",
+      "Label the subject, verb, and time or relationship expressed in each example.",
+      "Compare the correct example with the common error; explain the difference before checking the correction.",
+      "Complete the practice questions and say why each distractor is incorrect.",
+      "Write two original examples of academic cohesion and check them against the rule."
+    ],
     "activities": [
       {
         "question": "Which sentence demonstrates appropriate grammatical control of Academic Cohesion?",
@@ -1862,16 +2136,6 @@ const academicCompleteLessons = [
     ],
     "practice": [
       {
-        "question": "Which sentence demonstrates appropriate grammatical control of Academic Cohesion?",
-        "options": [
-          "The revised sentence communicates the intended relationship clearly.",
-          "The revised sentence communicating intended relationship clearly.",
-          "The sentence revised communicate the relationship.",
-          "The intended relationship clearly sentence revised."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Write a sentence using academic cohesion in a meaningful context.",
         "options": [],
         "answer": null
@@ -1885,20 +2149,20 @@ const academicCompleteLessons = [
         "question": "Explain why your corrected form is appropriate.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses academic cohesion?",
+        "options": [
+          "The sentence uses Academic Cohesion without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction.",
+          "The speaker used Academic Cohesion to make the relationship between the ideas clear."
+        ],
+        "answer": 3
       }
     ],
     "independentPractice": [],
     "test": [
-      {
-        "question": "Which sentence demonstrates accurate use of academic cohesion?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
       {
         "question": "Write a sentence using academic cohesion accurately in a meaningful context.",
         "options": [],
@@ -1908,10 +2172,33 @@ const academicCompleteLessons = [
         "question": "Correct a sentence containing an error related to academic cohesion and explain the correction.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "Which sentence correctly uses academic cohesion?",
+        "options": [
+          "The speaker used Academic Cohesion to make the relationship between the ideas clear.",
+          "The sentence uses Academic Cohesion without checking whether its form fits the meaning.",
+          "The students works carefully.",
+          "He do not understand the instruction."
+        ],
+        "answer": 0
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can recognise, explain, and accurately use academic cohesion in a new meaningful context.",
+    "review": [
+      "Explain the main idea of academic cohesion without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "grammar"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic cohesion."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -2035,52 +2322,69 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about academic word list."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
-      {
-        "question": "In the context of Academic Word List, what does \"hypothesis\" most closely mean?",
-        "options": [
-          "a testable explanation or prediction",
-          "the system of methods used in a study",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Academic Word List, what does \"methodology\" most closely mean?",
-        "options": [
-          "a testable explanation or prediction",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Academic Word List, what does \"variable\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "the results or observations produced by an investigation",
-          "a factor that can change or take different values",
-          "a testable explanation or prediction"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Academic Word List, what does \"findings\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a testable explanation or prediction",
-          "the system of methods used in a study"
-        ],
-        "answer": 3
-      },
       {
         "question": "Write a short response about an adult education programme using at least three target words accurately.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean?",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 1)",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 2)",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 3)",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -2097,7 +2401,7 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Academic Word List, what does \"hypothesis\" most closely mean?",
+        "question": "In this lesson, what does “hypothesis” mean?",
         "options": [
           "a testable explanation or prediction",
           "the system of methods used in a study",
@@ -2107,34 +2411,34 @@ const academicCompleteLessons = [
         "answer": 0
       },
       {
-        "question": "In the context of Academic Word List, what does \"methodology\" most closely mean?",
+        "question": "In this lesson, what does “hypothesis” mean? (review 1)",
         "options": [
           "a testable explanation or prediction",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Academic Word List, what does \"variable\" most closely mean?",
-        "options": [
           "the system of methods used in a study",
-          "the results or observations produced by an investigation",
           "a factor that can change or take different values",
-          "a testable explanation or prediction"
+          "the results or observations produced by an investigation"
         ],
-        "answer": 2
+        "answer": 0
       },
       {
-        "question": "In the context of Academic Word List, what does \"findings\" most closely mean?",
+        "question": "In this lesson, what does “hypothesis” mean? (review 2)",
         "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
           "a testable explanation or prediction",
-          "the system of methods used in a study"
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
         ],
-        "answer": 3
+        "answer": 0
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 3)",
+        "options": [
+          "a testable explanation or prediction",
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
+        ],
+        "answer": 0
       }
     ],
     "review": [
@@ -2142,7 +2446,15 @@ const academicCompleteLessons = [
       "Return to the context of an adult education programme and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Academic Word List and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic word list."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -2265,52 +2577,69 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about academic collocations."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
-      {
-        "question": "In the context of Academic Collocations, what does \"methodology\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Academic Collocations, what does \"variable\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea",
-          "a factor that can change or take different values"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Academic Collocations, what does \"findings\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "a possible meaning, result, or consequence of an idea",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Academic Collocations, what does \"implication\" most closely mean?",
-        "options": [
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea",
-          "the system of methods used in a study",
-          "a factor that can change or take different values"
-        ],
-        "answer": 3
-      },
       {
         "question": "Write a short response about a classroom discussion about assessment using at least three target words accurately.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "In this lesson, what does “methodology” mean?",
+        "options": [
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "the system of methods used in a study",
+          "a factor that can change or take different values"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “methodology” mean? (review 1)",
+        "options": [
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "the system of methods used in a study",
+          "a factor that can change or take different values"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “methodology” mean? (review 2)",
+        "options": [
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "the system of methods used in a study",
+          "a factor that can change or take different values"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “methodology” mean? (review 3)",
+        "options": [
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "the system of methods used in a study",
+          "a factor that can change or take different values"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -2327,42 +2656,42 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Academic Collocations, what does \"methodology\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Academic Collocations, what does \"variable\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea",
-          "a factor that can change or take different values"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Academic Collocations, what does \"findings\" most closely mean?",
+        "question": "In this lesson, what does “methodology” mean?",
         "options": [
           "a factor that can change or take different values",
-          "a possible meaning, result, or consequence of an idea",
           "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
           "the system of methods used in a study"
         ],
-        "answer": 2
+        "answer": 3
       },
       {
-        "question": "In the context of Academic Collocations, what does \"implication\" most closely mean?",
+        "question": "In this lesson, what does “methodology” mean? (review 1)",
         "options": [
+          "a factor that can change or take different values",
           "the results or observations produced by an investigation",
           "a possible meaning, result, or consequence of an idea",
-          "the system of methods used in a study",
-          "a factor that can change or take different values"
+          "the system of methods used in a study"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “methodology” mean? (review 2)",
+        "options": [
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "the system of methods used in a study"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “methodology” mean? (review 3)",
+        "options": [
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "the system of methods used in a study"
         ],
         "answer": 3
       }
@@ -2372,7 +2701,15 @@ const academicCompleteLessons = [
       "Return to the context of a classroom discussion about assessment and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Academic Collocations and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic collocations."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -2495,52 +2832,69 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about research vocabulary."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
-      {
-        "question": "In the context of Research Vocabulary, what does \"variable\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Research Vocabulary, what does \"findings\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Research Vocabulary, what does \"implication\" most closely mean?",
-        "options": [
-          "the results or observations produced by an investigation",
-          "consistently dependable or trustworthy",
-          "a possible meaning, result, or consequence of an idea",
-          "a factor that can change or take different values"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Research Vocabulary, what does \"reliable\" most closely mean?",
-        "options": [
-          "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 3
-      },
       {
         "question": "Write a short response about an analysis of workplace behaviour using at least three target words accurately.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "In this lesson, what does “variable” mean?",
+        "options": [
+          "a possible meaning, result, or consequence of an idea",
+          "consistently dependable or trustworthy",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “variable” mean? (review 1)",
+        "options": [
+          "a possible meaning, result, or consequence of an idea",
+          "consistently dependable or trustworthy",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “variable” mean? (review 2)",
+        "options": [
+          "a possible meaning, result, or consequence of an idea",
+          "consistently dependable or trustworthy",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “variable” mean? (review 3)",
+        "options": [
+          "a possible meaning, result, or consequence of an idea",
+          "consistently dependable or trustworthy",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -2557,42 +2911,42 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Research Vocabulary, what does \"variable\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Research Vocabulary, what does \"findings\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Research Vocabulary, what does \"implication\" most closely mean?",
+        "question": "In this lesson, what does “variable” mean?",
         "options": [
           "the results or observations produced by an investigation",
-          "consistently dependable or trustworthy",
           "a possible meaning, result, or consequence of an idea",
+          "consistently dependable or trustworthy",
           "a factor that can change or take different values"
         ],
-        "answer": 2
+        "answer": 3
       },
       {
-        "question": "In the context of Research Vocabulary, what does \"reliable\" most closely mean?",
+        "question": "In this lesson, what does “variable” mean? (review 1)",
         "options": [
+          "the results or observations produced by an investigation",
           "a possible meaning, result, or consequence of an idea",
           "consistently dependable or trustworthy",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation"
+          "a factor that can change or take different values"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “variable” mean? (review 2)",
+        "options": [
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "consistently dependable or trustworthy",
+          "a factor that can change or take different values"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “variable” mean? (review 3)",
+        "options": [
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea",
+          "consistently dependable or trustworthy",
+          "a factor that can change or take different values"
         ],
         "answer": 3
       }
@@ -2602,7 +2956,15 @@ const academicCompleteLessons = [
       "Return to the context of an analysis of workplace behaviour and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Research Vocabulary and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research vocabulary."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -2725,10 +3087,32 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about argument vocabulary."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
       {
-        "question": "In the context of Argument Vocabulary, what does \"justify\" most closely mean?",
+        "question": "Write a short response about a service improvement project using at least three target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "In this lesson, what does “justify” mean?",
         "options": [
           "to give reasons or evidence supporting a decision or claim",
           "to limit or modify a statement so that it is more accurate",
@@ -2738,39 +3122,34 @@ const academicCompleteLessons = [
         "answer": 0
       },
       {
-        "question": "In the context of Argument Vocabulary, what does \"qualify\" most closely mean?",
+        "question": "In this lesson, what does “justify” mean? (review 1)",
         "options": [
           "to give reasons or evidence supporting a decision or claim",
-          "a particular way of viewing an issue or situation",
-          "an idea accepted without being fully demonstrated",
-          "to limit or modify a statement so that it is more accurate"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Argument Vocabulary, what does \"perspective\" most closely mean?",
-        "options": [
           "to limit or modify a statement so that it is more accurate",
-          "an idea accepted without being fully demonstrated",
           "a particular way of viewing an issue or situation",
-          "to give reasons or evidence supporting a decision or claim"
+          "an idea accepted without being fully demonstrated"
         ],
-        "answer": 2
+        "answer": 0
       },
       {
-        "question": "In the context of Argument Vocabulary, what does \"assumption\" most closely mean?",
+        "question": "In this lesson, what does “justify” mean? (review 2)",
         "options": [
-          "a particular way of viewing an issue or situation",
-          "an idea accepted without being fully demonstrated",
           "to give reasons or evidence supporting a decision or claim",
-          "to limit or modify a statement so that it is more accurate"
+          "to limit or modify a statement so that it is more accurate",
+          "a particular way of viewing an issue or situation",
+          "an idea accepted without being fully demonstrated"
         ],
-        "answer": 3
+        "answer": 0
       },
       {
-        "question": "Write a short response about a service improvement project using at least three target words accurately.",
-        "options": [],
-        "answer": null
+        "question": "In this lesson, what does “justify” mean? (review 3)",
+        "options": [
+          "to give reasons or evidence supporting a decision or claim",
+          "to limit or modify a statement so that it is more accurate",
+          "a particular way of viewing an issue or situation",
+          "an idea accepted without being fully demonstrated"
+        ],
+        "answer": 0
       }
     ],
     "independentPractice": [
@@ -2787,44 +3166,44 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Argument Vocabulary, what does \"justify\" most closely mean?",
+        "question": "In this lesson, what does “justify” mean?",
         "options": [
+          "an idea accepted without being fully demonstrated",
           "to give reasons or evidence supporting a decision or claim",
           "to limit or modify a statement so that it is more accurate",
-          "a particular way of viewing an issue or situation",
-          "an idea accepted without being fully demonstrated"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Argument Vocabulary, what does \"qualify\" most closely mean?",
-        "options": [
-          "to give reasons or evidence supporting a decision or claim",
-          "a particular way of viewing an issue or situation",
-          "an idea accepted without being fully demonstrated",
-          "to limit or modify a statement so that it is more accurate"
+          "a particular way of viewing an issue or situation"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Argument Vocabulary, what does \"perspective\" most closely mean?",
+        "question": "In this lesson, what does “justify” mean? (review 1)",
         "options": [
-          "to limit or modify a statement so that it is more accurate",
-          "an idea accepted without being fully demonstrated",
-          "a particular way of viewing an issue or situation",
-          "to give reasons or evidence supporting a decision or claim"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Argument Vocabulary, what does \"assumption\" most closely mean?",
-        "options": [
-          "a particular way of viewing an issue or situation",
           "an idea accepted without being fully demonstrated",
           "to give reasons or evidence supporting a decision or claim",
-          "to limit or modify a statement so that it is more accurate"
+          "to limit or modify a statement so that it is more accurate",
+          "a particular way of viewing an issue or situation"
         ],
-        "answer": 3
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “justify” mean? (review 2)",
+        "options": [
+          "an idea accepted without being fully demonstrated",
+          "to give reasons or evidence supporting a decision or claim",
+          "to limit or modify a statement so that it is more accurate",
+          "a particular way of viewing an issue or situation"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “justify” mean? (review 3)",
+        "options": [
+          "an idea accepted without being fully demonstrated",
+          "to give reasons or evidence supporting a decision or claim",
+          "to limit or modify a statement so that it is more accurate",
+          "a particular way of viewing an issue or situation"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -2832,7 +3211,15 @@ const academicCompleteLessons = [
       "Return to the context of a service improvement project and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Argument Vocabulary and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of argument vocabulary."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -2955,52 +3342,69 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about evidence vocabulary."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
-      {
-        "question": "In the context of Evidence Vocabulary, what does \"substantial\" most closely mean?",
-        "options": [
-          "considerable in amount, importance, or strength",
-          "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Evidence Vocabulary, what does \"precise\" most closely mean?",
-        "options": [
-          "considerable in amount, importance, or strength",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
-          "exact and carefully expressed"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Evidence Vocabulary, what does \"evaluate\" most closely mean?",
-        "options": [
-          "exact and carefully expressed",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "considerable in amount, importance, or strength"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Evidence Vocabulary, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
-          "considerable in amount, importance, or strength",
-          "exact and carefully expressed"
-        ],
-        "answer": 3
-      },
       {
         "question": "Write a short response about a recruitment decision using at least three target words accurately.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "In this lesson, what does “substantial” mean?",
+        "options": [
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "considerable in amount, importance, or strength",
+          "exact and carefully expressed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “substantial” mean? (review 1)",
+        "options": [
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "considerable in amount, importance, or strength",
+          "exact and carefully expressed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “substantial” mean? (review 2)",
+        "options": [
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "considerable in amount, importance, or strength",
+          "exact and carefully expressed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “substantial” mean? (review 3)",
+        "options": [
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "considerable in amount, importance, or strength",
+          "exact and carefully expressed"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -3017,42 +3421,42 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Evidence Vocabulary, what does \"substantial\" most closely mean?",
-        "options": [
-          "considerable in amount, importance, or strength",
-          "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Evidence Vocabulary, what does \"precise\" most closely mean?",
-        "options": [
-          "considerable in amount, importance, or strength",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
-          "exact and carefully expressed"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Evidence Vocabulary, what does \"evaluate\" most closely mean?",
+        "question": "In this lesson, what does “substantial” mean?",
         "options": [
           "exact and carefully expressed",
-          "the meaning and use of \"derive\" in the context of derive",
           "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
           "considerable in amount, importance, or strength"
         ],
-        "answer": 2
+        "answer": 3
       },
       {
-        "question": "In the context of Evidence Vocabulary, what does \"derive\" most closely mean?",
+        "question": "In this lesson, what does “substantial” mean? (review 1)",
         "options": [
+          "exact and carefully expressed",
           "the meaning and use of \"evaluate\" in the context of evaluate",
           "the meaning and use of \"derive\" in the context of derive",
-          "considerable in amount, importance, or strength",
-          "exact and carefully expressed"
+          "considerable in amount, importance, or strength"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “substantial” mean? (review 2)",
+        "options": [
+          "exact and carefully expressed",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "considerable in amount, importance, or strength"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “substantial” mean? (review 3)",
+        "options": [
+          "exact and carefully expressed",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "considerable in amount, importance, or strength"
         ],
         "answer": 3
       }
@@ -3062,7 +3466,15 @@ const academicCompleteLessons = [
       "Return to the context of a recruitment decision and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Evidence Vocabulary and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of evidence vocabulary."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -3185,10 +3597,32 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about methodology vocabulary."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
       {
-        "question": "In the context of Methodology Vocabulary, what does \"reliable\" most closely mean?",
+        "question": "Write a short response about a small research study using at least three target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "In this lesson, what does “reliable” mean?",
         "options": [
           "consistently dependable or trustworthy",
           "the extent to which a measure or conclusion is sound",
@@ -3198,39 +3632,34 @@ const academicCompleteLessons = [
         "answer": 0
       },
       {
-        "question": "In the context of Methodology Vocabulary, what does \"validity\" most closely mean?",
+        "question": "In this lesson, what does “reliable” mean? (review 1)",
         "options": [
           "consistently dependable or trustworthy",
-          "to combine ideas or information into a coherent whole",
-          "a testable explanation or prediction",
-          "the extent to which a measure or conclusion is sound"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Methodology Vocabulary, what does \"synthesize\" most closely mean?",
-        "options": [
           "the extent to which a measure or conclusion is sound",
-          "a testable explanation or prediction",
           "to combine ideas or information into a coherent whole",
-          "consistently dependable or trustworthy"
+          "a testable explanation or prediction"
         ],
-        "answer": 2
+        "answer": 0
       },
       {
-        "question": "In the context of Methodology Vocabulary, what does \"hypothesis\" most closely mean?",
+        "question": "In this lesson, what does “reliable” mean? (review 2)",
         "options": [
-          "to combine ideas or information into a coherent whole",
-          "a testable explanation or prediction",
           "consistently dependable or trustworthy",
-          "the extent to which a measure or conclusion is sound"
+          "the extent to which a measure or conclusion is sound",
+          "to combine ideas or information into a coherent whole",
+          "a testable explanation or prediction"
         ],
-        "answer": 3
+        "answer": 0
       },
       {
-        "question": "Write a short response about a small research study using at least three target words accurately.",
-        "options": [],
-        "answer": null
+        "question": "In this lesson, what does “reliable” mean? (review 3)",
+        "options": [
+          "consistently dependable or trustworthy",
+          "the extent to which a measure or conclusion is sound",
+          "to combine ideas or information into a coherent whole",
+          "a testable explanation or prediction"
+        ],
+        "answer": 0
       }
     ],
     "independentPractice": [
@@ -3247,44 +3676,44 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Methodology Vocabulary, what does \"reliable\" most closely mean?",
+        "question": "In this lesson, what does “reliable” mean?",
         "options": [
+          "a testable explanation or prediction",
           "consistently dependable or trustworthy",
           "the extent to which a measure or conclusion is sound",
-          "to combine ideas or information into a coherent whole",
-          "a testable explanation or prediction"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Methodology Vocabulary, what does \"validity\" most closely mean?",
-        "options": [
-          "consistently dependable or trustworthy",
-          "to combine ideas or information into a coherent whole",
-          "a testable explanation or prediction",
-          "the extent to which a measure or conclusion is sound"
+          "to combine ideas or information into a coherent whole"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Methodology Vocabulary, what does \"synthesize\" most closely mean?",
+        "question": "In this lesson, what does “reliable” mean? (review 1)",
         "options": [
-          "the extent to which a measure or conclusion is sound",
-          "a testable explanation or prediction",
-          "to combine ideas or information into a coherent whole",
-          "consistently dependable or trustworthy"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Methodology Vocabulary, what does \"hypothesis\" most closely mean?",
-        "options": [
-          "to combine ideas or information into a coherent whole",
           "a testable explanation or prediction",
           "consistently dependable or trustworthy",
-          "the extent to which a measure or conclusion is sound"
+          "the extent to which a measure or conclusion is sound",
+          "to combine ideas or information into a coherent whole"
         ],
-        "answer": 3
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “reliable” mean? (review 2)",
+        "options": [
+          "a testable explanation or prediction",
+          "consistently dependable or trustworthy",
+          "the extent to which a measure or conclusion is sound",
+          "to combine ideas or information into a coherent whole"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “reliable” mean? (review 3)",
+        "options": [
+          "a testable explanation or prediction",
+          "consistently dependable or trustworthy",
+          "the extent to which a measure or conclusion is sound",
+          "to combine ideas or information into a coherent whole"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -3292,7 +3721,15 @@ const academicCompleteLessons = [
       "Return to the context of a small research study and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Methodology Vocabulary and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of methodology vocabulary."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -3415,52 +3852,69 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about analysis vocabulary."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
-      {
-        "question": "In the context of Analysis Vocabulary, what does \"evaluate\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Analysis Vocabulary, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Analysis Vocabulary, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Analysis Vocabulary, what does \"distinguish\" most closely mean?",
-        "options": [
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 3
-      },
       {
         "question": "Write a short response about a team planning meeting using at least three target words accurately.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "In this lesson, what does “evaluate” mean?",
+        "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “evaluate” mean? (review 1)",
+        "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “evaluate” mean? (review 2)",
+        "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “evaluate” mean? (review 3)",
+        "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -3477,44 +3931,44 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Analysis Vocabulary, what does \"evaluate\" most closely mean?",
+        "question": "In this lesson, what does “evaluate” mean?",
         "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Analysis Vocabulary, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
           "the meaning and use of \"interpret\" in the context of interpret",
           "the meaning and use of \"distinguish\" in the context of distinguish",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
           "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Analysis Vocabulary, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Analysis Vocabulary, what does \"distinguish\" most closely mean?",
+        "question": "In this lesson, what does “evaluate” mean? (review 1)",
         "options": [
           "the meaning and use of \"interpret\" in the context of interpret",
           "the meaning and use of \"distinguish\" in the context of distinguish",
           "the meaning and use of \"evaluate\" in the context of evaluate",
           "the meaning and use of \"derive\" in the context of derive"
         ],
-        "answer": 3
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “evaluate” mean? (review 2)",
+        "options": [
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “evaluate” mean? (review 3)",
+        "options": [
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -3522,7 +3976,15 @@ const academicCompleteLessons = [
       "Return to the context of a team planning meeting and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Analysis Vocabulary and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of analysis vocabulary."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -3645,52 +4107,69 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about evaluation vocabulary."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
-      {
-        "question": "In the context of Evaluation Vocabulary, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Evaluation Vocabulary, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"interpret\" in the context of interpret"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Evaluation Vocabulary, what does \"distinguish\" most closely mean?",
-        "options": [
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Evaluation Vocabulary, what does \"justify\" most closely mean?",
-        "options": [
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret"
-        ],
-        "answer": 3
-      },
       {
         "question": "Write a short response about a professional development programme using at least three target words accurately.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "In this lesson, what does “derive” mean?",
+        "options": [
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "the meaning and use of \"distinguish\" in the context of distinguish"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “derive” mean? (review 1)",
+        "options": [
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "the meaning and use of \"distinguish\" in the context of distinguish"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “derive” mean? (review 2)",
+        "options": [
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "the meaning and use of \"distinguish\" in the context of distinguish"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “derive” mean? (review 3)",
+        "options": [
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "the meaning and use of \"distinguish\" in the context of distinguish"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -3707,44 +4186,44 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Evaluation Vocabulary, what does \"derive\" most closely mean?",
+        "question": "In this lesson, what does “derive” mean?",
         "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Evaluation Vocabulary, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
           "the meaning and use of \"distinguish\" in the context of distinguish",
           "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"derive\" in the context of derive",
           "the meaning and use of \"interpret\" in the context of interpret"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Evaluation Vocabulary, what does \"distinguish\" most closely mean?",
-        "options": [
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"derive\" in the context of derive"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Evaluation Vocabulary, what does \"justify\" most closely mean?",
+        "question": "In this lesson, what does “derive” mean? (review 1)",
         "options": [
           "the meaning and use of \"distinguish\" in the context of distinguish",
           "to give reasons or evidence supporting a decision or claim",
           "the meaning and use of \"derive\" in the context of derive",
           "the meaning and use of \"interpret\" in the context of interpret"
         ],
-        "answer": 3
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “derive” mean? (review 2)",
+        "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In this lesson, what does “derive” mean? (review 3)",
+        "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -3752,7 +4231,15 @@ const academicCompleteLessons = [
       "Return to the context of a professional development programme and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Evaluation Vocabulary and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of evaluation vocabulary."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -3875,52 +4362,69 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about academic reporting verbs."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
-      {
-        "question": "In the context of Academic Reporting Verbs, what does \"hypothesis\" most closely mean?",
-        "options": [
-          "a testable explanation or prediction",
-          "the system of methods used in a study",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Academic Reporting Verbs, what does \"methodology\" most closely mean?",
-        "options": [
-          "a testable explanation or prediction",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Academic Reporting Verbs, what does \"variable\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "the results or observations produced by an investigation",
-          "a factor that can change or take different values",
-          "a testable explanation or prediction"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Academic Reporting Verbs, what does \"findings\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a testable explanation or prediction",
-          "the system of methods used in a study"
-        ],
-        "answer": 3
-      },
       {
         "question": "Write a short response about a student support project using at least three target words accurately.",
         "options": [],
         "answer": null
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean?",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 1)",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 2)",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 3)",
+        "options": [
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a testable explanation or prediction"
+        ],
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -3937,7 +4441,7 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Academic Reporting Verbs, what does \"hypothesis\" most closely mean?",
+        "question": "In this lesson, what does “hypothesis” mean?",
         "options": [
           "a testable explanation or prediction",
           "the system of methods used in a study",
@@ -3947,34 +4451,34 @@ const academicCompleteLessons = [
         "answer": 0
       },
       {
-        "question": "In the context of Academic Reporting Verbs, what does \"methodology\" most closely mean?",
+        "question": "In this lesson, what does “hypothesis” mean? (review 1)",
         "options": [
           "a testable explanation or prediction",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Academic Reporting Verbs, what does \"variable\" most closely mean?",
-        "options": [
           "the system of methods used in a study",
-          "the results or observations produced by an investigation",
           "a factor that can change or take different values",
-          "a testable explanation or prediction"
+          "the results or observations produced by an investigation"
         ],
-        "answer": 2
+        "answer": 0
       },
       {
-        "question": "In the context of Academic Reporting Verbs, what does \"findings\" most closely mean?",
+        "question": "In this lesson, what does “hypothesis” mean? (review 2)",
         "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
           "a testable explanation or prediction",
-          "the system of methods used in a study"
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
         ],
-        "answer": 3
+        "answer": 0
+      },
+      {
+        "question": "In this lesson, what does “hypothesis” mean? (review 3)",
+        "options": [
+          "a testable explanation or prediction",
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation"
+        ],
+        "answer": 0
       }
     ],
     "review": [
@@ -3982,7 +4486,15 @@ const academicCompleteLessons = [
       "Return to the context of a student support project and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Academic Reporting Verbs and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic reporting verbs."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -4105,10 +4617,32 @@ const academicCompleteLessons = [
         "answer": 2
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "context-clues",
+        "prompt": "Infer the meaning of each target word from a sentence about discipline specific vocabulary."
+      },
+      {
+        "type": "collocation",
+        "prompt": "Match target words with natural word partners and explain the combinations."
+      },
+      {
+        "type": "word-choice",
+        "prompt": "Choose between similar words based on meaning, grammar, and formality."
+      },
+      {
+        "type": "production",
+        "prompt": "Write a short paragraph that uses at least three target words naturally."
+      }
+    ],
     "practice": [
       {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"distinguish\" most closely mean?",
+        "question": "Write a short response about a recruitment decision using at least three target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "In this lesson, what does “distinguish” mean?",
         "options": [
           "the meaning and use of \"distinguish\" in the context of distinguish",
           "to give reasons or evidence supporting a decision or claim",
@@ -4118,39 +4652,34 @@ const academicCompleteLessons = [
         "answer": 0
       },
       {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"justify\" most closely mean?",
+        "question": "In this lesson, what does “distinguish” mean? (review 1)",
         "options": [
           "the meaning and use of \"distinguish\" in the context of distinguish",
-          "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength",
-          "to give reasons or evidence supporting a decision or claim"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"relevant\" most closely mean?",
-        "options": [
           "to give reasons or evidence supporting a decision or claim",
-          "considerable in amount, importance, or strength",
           "directly connected with the matter being discussed",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
+          "considerable in amount, importance, or strength"
         ],
-        "answer": 2
+        "answer": 0
       },
       {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"substantial\" most closely mean?",
+        "question": "In this lesson, what does “distinguish” mean? (review 2)",
         "options": [
-          "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength",
           "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim"
+          "to give reasons or evidence supporting a decision or claim",
+          "directly connected with the matter being discussed",
+          "considerable in amount, importance, or strength"
         ],
-        "answer": 3
+        "answer": 0
       },
       {
-        "question": "Write a short response about a recruitment decision using at least three target words accurately.",
-        "options": [],
-        "answer": null
+        "question": "In this lesson, what does “distinguish” mean? (review 3)",
+        "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "to give reasons or evidence supporting a decision or claim",
+          "directly connected with the matter being discussed",
+          "considerable in amount, importance, or strength"
+        ],
+        "answer": 0
       }
     ],
     "independentPractice": [
@@ -4167,44 +4696,44 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"distinguish\" most closely mean?",
+        "question": "In this lesson, what does “distinguish” mean?",
         "options": [
+          "considerable in amount, importance, or strength",
           "the meaning and use of \"distinguish\" in the context of distinguish",
           "to give reasons or evidence supporting a decision or claim",
-          "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"justify\" most closely mean?",
-        "options": [
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength",
-          "to give reasons or evidence supporting a decision or claim"
+          "directly connected with the matter being discussed"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"relevant\" most closely mean?",
+        "question": "In this lesson, what does “distinguish” mean? (review 1)",
         "options": [
-          "to give reasons or evidence supporting a decision or claim",
-          "considerable in amount, importance, or strength",
-          "directly connected with the matter being discussed",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Discipline-Specific Vocabulary, what does \"substantial\" most closely mean?",
-        "options": [
-          "directly connected with the matter being discussed",
           "considerable in amount, importance, or strength",
           "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim"
+          "to give reasons or evidence supporting a decision or claim",
+          "directly connected with the matter being discussed"
         ],
-        "answer": 3
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “distinguish” mean? (review 2)",
+        "options": [
+          "considerable in amount, importance, or strength",
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "to give reasons or evidence supporting a decision or claim",
+          "directly connected with the matter being discussed"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In this lesson, what does “distinguish” mean? (review 3)",
+        "options": [
+          "considerable in amount, importance, or strength",
+          "the meaning and use of \"distinguish\" in the context of distinguish",
+          "to give reasons or evidence supporting a decision or claim",
+          "directly connected with the matter being discussed"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -4212,7 +4741,15 @@ const academicCompleteLessons = [
       "Return to the context of a recruitment decision and explain why each word fits.",
       "Check collocation and register before using a target word independently."
     ],
-    "mastery": "Mastery is demonstrated when the learner can select appropriate vocabulary for Discipline-Specific Vocabulary and use it accurately in a new context.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "vocabulary"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of discipline specific vocabulary."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -4305,18 +4842,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of academic article structure.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about academic article structure in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -4344,6 +4888,16 @@ const academicCompleteLessons = [
           "Readers should accept every claim made by a source.",
           "Context is irrelevant when interpreting evidence.",
           "Only numerical evidence can be meaningful."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "When reading a text about academic article structure, what should you do to support an answer?",
+        "options": [
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure"
         ],
         "answer": 0
       }
@@ -4362,16 +4916,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of academic article structure.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -4400,6 +4944,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about academic article structure, what should you do to support an answer?",
+        "options": [
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -4407,7 +4961,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic article structure."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -4501,18 +5063,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of abstracts.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about abstracts in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -4542,6 +5111,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about abstracts, what should you do to support an answer?",
+        "options": [
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -4558,16 +5137,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of abstracts.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -4596,6 +5165,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about abstracts, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -4603,7 +5182,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of abstracts."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -4697,18 +5284,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of introductions.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about introductions in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -4738,6 +5332,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about introductions, what should you do to support an answer?",
+        "options": [
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -4754,16 +5358,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of introductions.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -4792,6 +5386,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about introductions, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -4799,7 +5403,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of introductions."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -4893,18 +5505,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of literature reviews.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about literature reviews in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -4934,6 +5553,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about literature reviews, what should you do to support an answer?",
+        "options": [
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -4950,16 +5579,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of literature reviews.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -4988,6 +5607,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about literature reviews, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -4995,7 +5624,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of literature reviews."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -5089,18 +5726,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of methodology.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about methodology in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -5130,6 +5774,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about methodology, what should you do to support an answer?",
+        "options": [
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence"
+        ],
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -5146,16 +5800,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of methodology.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -5184,6 +5828,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about methodology, what should you do to support an answer?",
+        "options": [
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure"
+        ],
+        "answer": 0
       }
     ],
     "review": [
@@ -5191,7 +5845,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of methodology."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -5285,18 +5947,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of results.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about results in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -5326,6 +5995,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about results, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -5342,16 +6021,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of results.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -5380,6 +6049,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about results, what should you do to support an answer?",
+        "options": [
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence"
+        ],
+        "answer": 3
       }
     ],
     "review": [
@@ -5387,7 +6066,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of results."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -5481,18 +6168,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of discussion.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about discussion in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -5522,6 +6216,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about discussion, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -5538,16 +6242,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of discussion.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -5576,6 +6270,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about discussion, what should you do to support an answer?",
+        "options": [
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence"
+        ],
+        "answer": 3
       }
     ],
     "review": [
@@ -5583,7 +6287,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of discussion."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -5677,18 +6389,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of conclusion.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about conclusion in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -5718,6 +6437,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about conclusion, what should you do to support an answer?",
+        "options": [
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -5734,16 +6463,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of conclusion.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -5772,6 +6491,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about conclusion, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -5779,7 +6508,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of conclusion."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -5873,18 +6610,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of critical reading.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about critical reading in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -5912,6 +6656,16 @@ const academicCompleteLessons = [
           "Readers should accept every claim made by a source.",
           "Context is irrelevant when interpreting evidence.",
           "Only numerical evidence can be meaningful."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "When reading a text about critical reading, what should you do to support an answer?",
+        "options": [
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure"
         ],
         "answer": 0
       }
@@ -5930,16 +6684,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of critical reading.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -5968,6 +6712,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about critical reading, what should you do to support an answer?",
+        "options": [
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -5975,7 +6729,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of critical reading."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -6069,18 +6831,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of source evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about source evaluation in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -6110,6 +6879,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about source evaluation, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -6126,16 +6905,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of source evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -6164,6 +6933,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about source evaluation, what should you do to support an answer?",
+        "options": [
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence"
+        ],
+        "answer": 3
       }
     ],
     "review": [
@@ -6171,7 +6950,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of source evaluation."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -6265,18 +7052,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of evidence evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about evidence evaluation in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -6306,6 +7100,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about evidence evaluation, what should you do to support an answer?",
+        "options": [
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -6322,16 +7126,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of evidence evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -6360,6 +7154,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about evidence evaluation, what should you do to support an answer?",
+        "options": [
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence"
+        ],
+        "answer": 3
       }
     ],
     "review": [
@@ -6367,7 +7171,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of evidence evaluation."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -6461,18 +7273,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of research synthesis.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
+        "type": "main-idea",
+        "prompt": "Write the main idea of a short text about research synthesis in one sentence."
       },
+      {
+        "type": "evidence",
+        "prompt": "Answer detail questions and identify the sentence that supports each answer."
+      },
+      {
+        "type": "inference",
+        "prompt": "Make one inference and explain which words or details support it."
+      },
+      {
+        "type": "summary",
+        "prompt": "Summarise the text in your own words without adding unsupported information."
+      }
+    ],
+    "practice": [
       {
         "question": "Which statement is best supported by the passage?",
         "options": [
@@ -6500,6 +7319,16 @@ const academicCompleteLessons = [
           "Readers should accept every claim made by a source.",
           "Context is irrelevant when interpreting evidence.",
           "Only numerical evidence can be meaningful."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "When reading a text about research synthesis, what should you do to support an answer?",
+        "options": [
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text",
+          "Ignore the title and paragraph structure"
         ],
         "answer": 0
       }
@@ -6518,16 +7347,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
-        "options": [
-          "How evidence and context affect interpretation of research synthesis.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Which statement is best supported by the passage?",
         "options": [
           "A conclusion should be proportional to the quality and limits of the evidence.",
@@ -6556,6 +7375,16 @@ const academicCompleteLessons = [
           "Only numerical evidence can be meaningful."
         ],
         "answer": 0
+      },
+      {
+        "question": "When reading a text about research synthesis, what should you do to support an answer?",
+        "options": [
+          "Ignore the title and paragraph structure",
+          "Return to the text and identify the relevant evidence",
+          "Choose the longest option without checking",
+          "Use personal opinion instead of the text"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -6563,7 +7392,15 @@ const academicCompleteLessons = [
       "Return to the passage and identify where the writer qualifies a claim.",
       "Explain why the final conclusion is stronger or weaker than the opening claim."
     ],
-    "mastery": "Mastery is demonstrated when the learner can explain the writer's position, cite relevant evidence from the passage, and distinguish explicit information from reasonable inference.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "reading"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research synthesis."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -6656,18 +7493,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse academic lectures carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about academic lectures and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -6697,6 +7541,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about academic lectures, which approach is most effective?",
+        "options": [
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -6713,16 +7567,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse academic lectures carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -6751,6 +7595,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about academic lectures, which approach is most effective?",
+        "options": [
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details"
+        ],
+        "answer": 3
       }
     ],
     "review": [
@@ -6758,7 +7612,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic lectures."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -6852,18 +7714,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse note taking carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about note taking and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -6893,6 +7762,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about note taking, which approach is most effective?",
+        "options": [
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -6909,16 +7788,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse note taking carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -6947,6 +7816,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about note taking, which approach is most effective?",
+        "options": [
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details"
+        ],
+        "answer": 3
       }
     ],
     "review": [
@@ -6954,7 +7833,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of note taking."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -7048,18 +7935,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse research presentations carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about research presentations and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -7089,6 +7983,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about research presentations, which approach is most effective?",
+        "options": [
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen"
+        ],
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -7105,16 +8009,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse research presentations carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -7143,6 +8037,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about research presentations, which approach is most effective?",
+        "options": [
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details"
+        ],
+        "answer": 3
       }
     ],
     "review": [
@@ -7150,7 +8054,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research presentations."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -7244,18 +8156,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse seminars carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about seminars and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -7285,6 +8204,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about seminars, which approach is most effective?",
+        "options": [
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -7301,16 +8230,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse seminars carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -7339,6 +8258,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about seminars, which approach is most effective?",
+        "options": [
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -7346,7 +8275,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of seminars."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -7440,18 +8377,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse academic discussions carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about academic discussions and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -7479,6 +8423,16 @@ const academicCompleteLessons = [
           "Names, dates, and pronunciation.",
           "Grammar, spelling, and punctuation.",
           "Humour, repetition, and background music."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "When listening to a text about academic discussions, which approach is most effective?",
+        "options": [
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message"
         ],
         "answer": 0
       }
@@ -7497,16 +8451,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse academic discussions carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -7535,6 +8479,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about academic discussions, which approach is most effective?",
+        "options": [
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -7542,7 +8496,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic discussions."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -7636,18 +8598,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse conference talks carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about conference talks and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -7677,6 +8646,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about conference talks, which approach is most effective?",
+        "options": [
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”"
+        ],
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -7693,16 +8672,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse conference talks carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -7731,6 +8700,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about conference talks, which approach is most effective?",
+        "options": [
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen"
+        ],
+        "answer": 2
       }
     ],
     "review": [
@@ -7738,7 +8717,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of conference talks."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -7832,18 +8819,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse critical listening carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about critical listening and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -7871,6 +8865,16 @@ const academicCompleteLessons = [
           "Names, dates, and pronunciation.",
           "Grammar, spelling, and punctuation.",
           "Humour, repetition, and background music."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "When listening to a text about critical listening, which approach is most effective?",
+        "options": [
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message"
         ],
         "answer": 0
       }
@@ -7889,16 +8893,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse critical listening carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -7927,6 +8921,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about critical listening, which approach is most effective?",
+        "options": [
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -7934,7 +8938,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of critical listening."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -8028,18 +9040,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse listening for evidence carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about listening for evidence and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -8067,6 +9086,16 @@ const academicCompleteLessons = [
           "Names, dates, and pronunciation.",
           "Grammar, spelling, and punctuation.",
           "Humour, repetition, and background music."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "When listening to a text about listening for evidence, which approach is most effective?",
+        "options": [
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message"
         ],
         "answer": 0
       }
@@ -8085,16 +9114,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse listening for evidence carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -8123,6 +9142,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about listening for evidence, which approach is most effective?",
+        "options": [
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”"
+        ],
+        "answer": 1
       }
     ],
     "review": [
@@ -8130,7 +9159,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of listening for evidence."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -8224,18 +9261,25 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
-    "practice": [
+    "activities": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse listening for arguments carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
+        "type": "gist",
+        "prompt": "Listen to a short text about listening for arguments and state the speaker's purpose."
       },
+      {
+        "type": "detail",
+        "prompt": "Record three key details and check them against the audio or transcript."
+      },
+      {
+        "type": "signposting",
+        "prompt": "Identify words that signal sequence, contrast, reasons, or conclusions."
+      },
+      {
+        "type": "summary",
+        "prompt": "Give a short spoken summary that includes the main point and one supporting detail."
+      }
+    ],
+    "practice": [
       {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
@@ -8265,6 +9309,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about listening for arguments, which approach is most effective?",
+        "options": [
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message",
+          "Listen first for the overall purpose, then listen for supporting details"
+        ],
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -8281,16 +9335,6 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
-        "options": [
-          "To explain how to analyse listening for arguments carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
-        ],
-        "answer": 0
-      },
-      {
         "question": "Why does the speaker mention the example of the team?",
         "options": [
           "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
@@ -8319,6 +9363,16 @@ const academicCompleteLessons = [
           "Humour, repetition, and background music."
         ],
         "answer": 0
+      },
+      {
+        "question": "When listening to a text about listening for arguments, which approach is most effective?",
+        "options": [
+          "Listen first for the overall purpose, then listen for supporting details",
+          "Try to write every word during the first listen",
+          "Ignore signposting words such as “however”",
+          "Decide the answer before hearing the message"
+        ],
+        "answer": 0
       }
     ],
     "review": [
@@ -8326,7 +9380,15 @@ const academicCompleteLessons = [
       "Replay the script and identify qualification language.",
       "Summarise the argument without copying individual sentences."
     ],
-    "mastery": "Mastery is demonstrated when the learner can follow the speaker's argument, identify supporting information, and interpret the speaker's degree of certainty.",
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "listening"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of listening for arguments."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -8420,10 +9482,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about academic discussion and seminar skills with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about academic discussion and seminar skills. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -8452,13 +9531,26 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "Complete a sustained speaking task about academic discussion and seminar skills using the situation: an adult education programme.",
+        "question": "Give a one-minute spoken response about academic discussion and seminar skills. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of academic discussion and seminar skills without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic discussion and seminar skills."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -8554,7 +9646,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about presenting academic arguments with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
         "question": "Respond to the opposing argument without changing the subject.",
@@ -8591,8 +9700,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can sustain a coherent position, support it, respond to opposing views, and adjust the strength of claims appropriately.",
+    "review": [
+      "Explain the main idea of presenting academic arguments without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of presenting academic arguments."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -8684,10 +9806,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about explaining research findings with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about explaining research findings. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -8721,8 +9860,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of explaining research findings without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of explaining research findings."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -8814,10 +9966,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about discussing evidence and sources with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about discussing evidence and sources. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -8851,8 +10020,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of discussing evidence and sources without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of discussing evidence and sources."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -8944,10 +10126,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about evaluating academic claims with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about evaluating academic claims. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -8981,8 +10180,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of evaluating academic claims without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of evaluating academic claims."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9074,10 +10286,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about questioning and challenging ideas with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about questioning and challenging ideas. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -9111,8 +10340,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of questioning and challenging ideas without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of questioning and challenging ideas."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9208,7 +10450,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about academic debate with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
         "question": "Respond to the opposing argument without changing the subject.",
@@ -9245,8 +10504,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can sustain a coherent position, support it, respond to opposing views, and adjust the strength of claims appropriately.",
+    "review": [
+      "Explain the main idea of academic debate without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic debate."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9338,10 +10610,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about participating in seminars with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about participating in seminars. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -9375,8 +10664,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of participating in seminars without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of participating in seminars."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9468,10 +10770,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about leading academic discussions with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about leading academic discussions. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -9505,8 +10824,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of leading academic discussions without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of leading academic discussions."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9598,7 +10930,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about conference presentation skills with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
         "question": "Deliver the middle section of the presentation.",
@@ -9635,8 +10984,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated through a clear, organised presentation in which the speaker guides the audience, supports important claims, and responds appropriately to questions.",
+    "review": [
+      "Explain the main idea of conference presentation skills without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of conference presentation skills."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9728,10 +11090,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about handling questions in academic settings with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about handling questions in academic settings. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -9760,13 +11139,26 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "Complete a sustained speaking task about handling questions in academic settings using the situation: an adult education programme.",
+        "question": "Give a one-minute spoken response about handling questions in academic settings. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of handling questions in academic settings without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of handling questions in academic settings."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9862,7 +11254,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about defending a research position with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
         "question": "Respond to the opposing argument without changing the subject.",
@@ -9899,8 +11308,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can sustain a coherent position, support it, respond to opposing views, and adjust the strength of claims appropriately.",
+    "review": [
+      "Explain the main idea of defending a research position without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of defending a research position."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -9992,10 +11414,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about synthesizing ideas in discussion with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about synthesizing ideas in discussion. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -10029,8 +11468,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of synthesizing ideas in discussion without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of synthesizing ideas in discussion."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10126,7 +11578,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about critical response to academic arguments with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
         "question": "Respond to the opposing argument without changing the subject.",
@@ -10163,8 +11632,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can sustain a coherent position, support it, respond to opposing views, and adjust the strength of claims appropriately.",
+    "review": [
+      "Explain the main idea of critical response to academic arguments without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of critical response to academic arguments."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10256,10 +11738,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Prepare a short response about academic speaking fluency with an opening, two points, and a closing."
+      },
+      {
+        "type": "role-play",
+        "prompt": "Practise a realistic conversation and ask at least one relevant follow-up question."
+      },
+      {
+        "type": "fluency",
+        "prompt": "Repeat the response with fewer notes, using pauses and clear linking phrases."
+      },
+      {
+        "type": "self-review",
+        "prompt": "Record or rehearse your answer, then improve one issue in clarity, grammar, or pronunciation."
+      }
+    ],
     "practice": [
       {
-        "question": "Give a one-minute response on the topic.",
+        "question": "Give a one-minute spoken response about academic speaking fluency. State your main point, add at least two relevant details, and respond to one follow-up question.",
         "options": [],
         "answer": null
       },
@@ -10293,8 +11792,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can produce a clear, sustained response, develop ideas, interact appropriately, and maintain suitable control of language.",
+    "review": [
+      "Explain the main idea of academic speaking fluency without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "speaking"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic speaking fluency."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10335,7 +11847,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply academic writing foundations in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -10356,10 +11868,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about academic writing foundations for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about academic writing foundations for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -10388,13 +11917,26 @@ const academicCompleteLessons = [
     ],
     "test": [
       {
-        "question": "Complete a final writing task about an adult education programme. Produce a coherent, well-supported response appropriate to the formal academic level.",
+        "question": "Write a focused response about academic writing foundations for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of academic writing foundations without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic writing foundations."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10435,7 +11977,7 @@ const academicCompleteLessons = [
       "Explanation: This flexibility reduces a practical barrier that might otherwise prevent continued study.",
       "Link: For this reason, scheduling policy should be considered alongside course content when improving access."
     ],
-    "context": "",
+    "context": "Apply paragraph architecture in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -10456,7 +11998,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about paragraph architecture for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Build a four-sentence paragraph from a topic sentence, support, explanation, and link.",
@@ -10493,8 +12052,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can develop one controlling idea through relevant support, explanation, and logical cohesion.",
+    "review": [
+      "Explain the main idea of paragraph architecture without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of paragraph architecture."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10535,7 +12107,7 @@ const academicCompleteLessons = [
       "Weak: There are many advantages and disadvantages to remote work.",
       "Stronger: Although remote work can increase flexibility, its effectiveness depends on communication systems, workload management, and access to appropriate support."
     ],
-    "context": "",
+    "context": "Apply academic thesis statements in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -10556,7 +12128,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about academic thesis statements for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Revise a broad thesis so that it becomes focused and arguable.",
@@ -10593,8 +12182,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can write a focused, arguable thesis that controls the direction of a larger piece of writing.",
+    "review": [
+      "Explain the main idea of academic thesis statements without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic thesis statements."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10635,7 +12237,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply essay planning in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -10656,10 +12258,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about essay planning for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about essay planning for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -10693,8 +12312,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of essay planning without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of essay planning."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10735,7 +12367,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply essay introductions in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -10756,10 +12388,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about essay introductions for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about essay introductions for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -10793,8 +12442,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of essay introductions without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of essay introductions."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10835,7 +12497,7 @@ const academicCompleteLessons = [
       "Explanation: This flexibility reduces a practical barrier that might otherwise prevent continued study.",
       "Link: For this reason, scheduling policy should be considered alongside course content when improving access."
     ],
-    "context": "",
+    "context": "Apply body paragraph development in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -10856,7 +12518,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about body paragraph development for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Build a four-sentence paragraph from a topic sentence, support, explanation, and link.",
@@ -10893,8 +12572,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can develop one controlling idea through relevant support, explanation, and logical cohesion.",
+    "review": [
+      "Explain the main idea of body paragraph development without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of body paragraph development."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -10935,7 +12627,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply evidence integration in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -10956,10 +12648,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about evidence integration for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about evidence integration for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -10993,8 +12702,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of evidence integration without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of evidence integration."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11035,7 +12757,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply academic conclusions in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11056,10 +12778,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about academic conclusions for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about academic conclusions for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -11093,8 +12832,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of academic conclusions without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic conclusions."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11135,7 +12887,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply argumentative essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11156,10 +12908,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about argumentative essays for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about argumentative essays for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -11193,8 +12962,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of argumentative essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of argumentative essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11235,7 +13017,7 @@ const academicCompleteLessons = [
       "This difference is important because the two models serve learners with different needs.",
       "Overall, the more flexible model is preferable when adequate support is available."
     ],
-    "context": "",
+    "context": "Apply compare and contrast essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11256,7 +13038,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about compare and contrast essays for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Organise three comparison points into a logical sequence.",
@@ -11293,8 +13092,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can organise meaningful similarities and differences and draw a justified conclusion from them.",
+    "review": [
+      "Explain the main idea of compare and contrast essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of compare and contrast essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11335,7 +13147,7 @@ const academicCompleteLessons = [
       "The relationship should not automatically be interpreted as direct causation.",
       "Further evidence is therefore needed before attributing the entire outcome to one factor."
     ],
-    "context": "",
+    "context": "Apply cause and effect essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11356,7 +13168,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about cause and effect essays for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Build a short cause-and-effect chain using three connected stages.",
@@ -11393,8 +13222,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can explain causal relationships carefully and distinguish evidence from unsupported causal claims.",
+    "review": [
+      "Explain the main idea of cause and effect essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of cause and effect essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11435,7 +13277,7 @@ const academicCompleteLessons = [
       "This solution would address the immediate access problem while also supporting independent learning.",
       "Its success, however, would depend on training users to evaluate the quality of online information."
     ],
-    "context": "",
+    "context": "Apply problem solution essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11456,7 +13298,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about problem solution essays for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Compare two possible solutions and select the stronger one.",
@@ -11493,8 +13352,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can analyse a problem, evaluate alternatives, and justify a practical solution.",
+    "review": [
+      "Explain the main idea of problem solution essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of problem solution essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11535,7 +13407,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply critical essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11556,10 +13428,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about critical essays for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about critical essays for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -11593,8 +13482,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of critical essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of critical essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11635,7 +13537,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply analytical essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11656,10 +13558,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about analytical essays for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about analytical essays for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -11693,8 +13612,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of analytical essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of analytical essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11735,7 +13667,7 @@ const academicCompleteLessons = [
       "Weak: There are many advantages and disadvantages to remote work.",
       "Stronger: Although remote work can increase flexibility, its effectiveness depends on communication systems, workload management, and access to appropriate support."
     ],
-    "context": "",
+    "context": "Apply synthesis essays in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11756,7 +13688,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about synthesis essays for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Revise a broad thesis so that it becomes focused and arguable.",
@@ -11793,8 +13742,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can write a focused, arguable thesis that controls the direction of a larger piece of writing.",
+    "review": [
+      "Explain the main idea of synthesis essays without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of synthesis essays."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11835,7 +13797,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply research questions in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11856,10 +13818,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about research questions for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about research questions for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -11893,8 +13872,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of research questions without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research questions."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -11935,7 +13927,7 @@ const academicCompleteLessons = [
       "Method: The study used a questionnaire and follow-up interviews with adult learners.",
       "Discussion: The findings suggest an association, although the design does not establish a simple causal relationship."
     ],
-    "context": "",
+    "context": "Apply research objectives in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -11956,7 +13948,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about research objectives for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Write a short methodology description for a hypothetical study.",
@@ -11993,8 +14002,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can connect research purpose, evidence, interpretation, and limitations in a coherent academic structure.",
+    "review": [
+      "Explain the main idea of research objectives without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research objectives."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12035,7 +14057,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply academic sources in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12056,10 +14078,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about academic sources for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about academic sources for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -12093,8 +14132,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of academic sources without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic sources."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12135,7 +14187,7 @@ const academicCompleteLessons = [
       "Quotation: The author describes feedback as a mechanism for maintaining engagement.",
       "Integration: The finding is significant because it supports the argument that instructional support affects persistence."
     ],
-    "context": "",
+    "context": "Apply paraphrasing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12156,7 +14208,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about paraphrasing for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Write a paraphrase that changes structure and wording while preserving meaning.",
@@ -12193,8 +14262,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can accurately integrate source information while maintaining a clear distinction between source material and personal analysis.",
+    "review": [
+      "Explain the main idea of paraphrasing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of paraphrasing."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12235,7 +14317,7 @@ const academicCompleteLessons = [
       "Quotation: The author describes feedback as a mechanism for maintaining engagement.",
       "Integration: The finding is significant because it supports the argument that instructional support affects persistence."
     ],
-    "context": "",
+    "context": "Apply summarising in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12256,7 +14338,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about summarising for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Write a paraphrase that changes structure and wording while preserving meaning.",
@@ -12293,8 +14392,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can accurately integrate source information while maintaining a clear distinction between source material and personal analysis.",
+    "review": [
+      "Explain the main idea of summarising without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of summarising."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12335,7 +14447,7 @@ const academicCompleteLessons = [
       "Quotation: The author describes feedback as a mechanism for maintaining engagement.",
       "Integration: The finding is significant because it supports the argument that instructional support affects persistence."
     ],
-    "context": "",
+    "context": "Apply quoting in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12356,7 +14468,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about quoting for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Write a paraphrase that changes structure and wording while preserving meaning.",
@@ -12393,8 +14522,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can accurately integrate source information while maintaining a clear distinction between source material and personal analysis.",
+    "review": [
+      "Explain the main idea of quoting without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of quoting."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12435,7 +14577,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply in text citations in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12456,10 +14598,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about in text citations for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about in text citations for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -12493,8 +14652,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of in text citations without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of in text citations."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12535,7 +14707,7 @@ const academicCompleteLessons = [
       "Quotation: The author describes feedback as a mechanism for maintaining engagement.",
       "Integration: The finding is significant because it supports the argument that instructional support affects persistence."
     ],
-    "context": "",
+    "context": "Apply reference lists in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12556,7 +14728,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about reference lists for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Write a paraphrase that changes structure and wording while preserving meaning.",
@@ -12593,8 +14782,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can accurately integrate source information while maintaining a clear distinction between source material and personal analysis.",
+    "review": [
+      "Explain the main idea of reference lists without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of reference lists."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12635,7 +14837,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply apa academic writing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12656,10 +14858,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about apa academic writing for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about apa academic writing for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -12693,8 +14912,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of apa academic writing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of apa academic writing."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12735,7 +14967,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply literature reviews in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12756,10 +14988,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about literature reviews for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about literature reviews for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -12793,8 +15042,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of literature reviews without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of literature reviews."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12835,7 +15097,7 @@ const academicCompleteLessons = [
       "Method: The study used a questionnaire and follow-up interviews with adult learners.",
       "Discussion: The findings suggest an association, although the design does not establish a simple causal relationship."
     ],
-    "context": "",
+    "context": "Apply research proposals in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12856,7 +15118,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about research proposals for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Write a short methodology description for a hypothetical study.",
@@ -12893,8 +15172,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can connect research purpose, evidence, interpretation, and limitations in a coherent academic structure.",
+    "review": [
+      "Explain the main idea of research proposals without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research proposals."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -12935,7 +15227,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply methodology writing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -12956,10 +15248,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about methodology writing for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about methodology writing for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -12993,8 +15302,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of methodology writing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of methodology writing."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -13035,7 +15357,7 @@ const academicCompleteLessons = [
       "Method: The study used a questionnaire and follow-up interviews with adult learners.",
       "Discussion: The findings suggest an association, although the design does not establish a simple causal relationship."
     ],
-    "context": "",
+    "context": "Apply results writing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -13056,7 +15378,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about results writing for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Write a short methodology description for a hypothetical study.",
@@ -13093,8 +15432,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can connect research purpose, evidence, interpretation, and limitations in a coherent academic structure.",
+    "review": [
+      "Explain the main idea of results writing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of results writing."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -13135,7 +15487,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply discussion writing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -13156,10 +15508,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about discussion writing for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about discussion writing for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -13193,8 +15562,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of discussion writing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of discussion writing."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -13235,7 +15617,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply research paper structure in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -13256,10 +15638,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about research paper structure for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about research paper structure for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -13293,8 +15692,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of research paper structure without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research paper structure."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -13335,7 +15747,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply research paper drafting in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -13356,10 +15768,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about research paper drafting for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about research paper drafting for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -13393,8 +15822,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of research paper drafting without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of research paper drafting."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -13435,7 +15877,7 @@ const academicCompleteLessons = [
       "Repetitive: The study found that learners improved. The study found that learners became more confident.",
       "Revised: The study found that learners improved and reported greater confidence."
     ],
-    "context": "",
+    "context": "Apply academic editing in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -13456,7 +15898,24 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about academic editing for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
         "question": "Combine two short sentences to improve cohesion.",
@@ -13493,8 +15952,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently identify and improve problems in clarity, cohesion, precision, grammar, and register.",
+    "review": [
+      "Explain the main idea of academic editing without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of academic editing."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -13535,7 +16007,7 @@ const academicCompleteLessons = [
       "Transitions show how one idea relates to the next.",
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
-    "context": "",
+    "context": "Apply final research paper in a realistic writing situation, paying attention to purpose, audience, and meaning.",
     "vocabulary": [],
     "mistakes": [],
     "commonMistakes": [],
@@ -13556,10 +16028,27 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "activities": [],
+    "activities": [
+      {
+        "type": "planning",
+        "prompt": "Plan a response about final research paper for a clearly identified reader and purpose."
+      },
+      {
+        "type": "drafting",
+        "prompt": "Write a draft with a clear main point and developed support."
+      },
+      {
+        "type": "revision",
+        "prompt": "Improve paragraph unity, logical links, precision, and tone."
+      },
+      {
+        "type": "proofreading",
+        "prompt": "Check grammar, punctuation, spelling, and repeated words before finalising."
+      }
+    ],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a focused response about final research paper for a clearly identified reader. State a main point, develop it with specific support, organise the ideas logically, and proofread the final draft.",
         "options": [],
         "answer": null
       },
@@ -13593,8 +16082,21 @@ const academicCompleteLessons = [
         "answer": null
       }
     ],
-    "review": [],
-    "mastery": "Mastery is demonstrated when the learner can independently produce organised, supported, precise, and appropriately controlled writing.",
+    "review": [
+      "Explain the main idea of final research paper without looking at the lesson.",
+      "Give one correct example and explain why it works.",
+      "Identify one likely mistake and show the correction.",
+      "Complete the final check again and review any incorrect answer."
+    ],
+    "mastery": {
+      "passingScore": 70,
+      "skills": [
+        "writing"
+      ],
+      "criteria": [
+        "Demonstrates accurate and meaningful use of final research paper."
+      ]
+    },
     "nextLesson": null,
     "estimatedTime": 50,
     "duration": 50,
@@ -13605,7 +16107,4 @@ const academicCompleteLessons = [
 
 const wordUpAcademicExisting = window.WORDUP_ACADEMIC_CONTENT || [];
 const wordUpAcademicIds = new Set(wordUpAcademicExisting.map(lesson => lesson.id));
-window.WORDUP_ACADEMIC_CONTENT = [
-    ...wordUpAcademicExisting,
-    ...academicCompleteLessons.filter(lesson => !wordUpAcademicIds.has(lesson.id))
-];
+window.WORDUP_ACADEMIC_CONTENT = [...wordUpAcademicExisting, ...academicCompleteLessons.filter(lesson => !wordUpAcademicIds.has(lesson.id))];

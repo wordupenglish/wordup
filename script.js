@@ -1753,30 +1753,58 @@ function startQuiz(mode){
 currentMode=mode;
 
 const lesson=currentLesson;
+if(!lesson){
+console.error("WordUp Practice: no current lesson.");
+return;
+}
 
-if(lesson.items){
+if(Array.isArray(lesson.items)&&lesson.items.length){
 quizQuestions=buildVocabularyQuestions(lesson);
-}else{
-quizQuestions=lesson.questions.map(q=>({
+}else if(Array.isArray(lesson.questions)){
+quizQuestions=lesson.questions
+.filter(q=>Array.isArray(q)&&q.length>=4&&Array.isArray(q[1]))
+.map(q=>({
 question:q[0],
 options:q[1],
 correctIndex:q[2],
 explanation:q[3]
 }));
+}else{
+quizQuestions=[];
 }
+
+quizQuestions=quizQuestions.filter(q=>
+q &&
+typeof q.question==="string" &&
+q.question.trim().length>0 &&
+Array.isArray(q.options) &&
+q.options.length>=2 &&
+Number.isInteger(Number(q.correctIndex)) &&
+Number(q.correctIndex)>=0 &&
+Number(q.correctIndex)<q.options.length
+);
 
 quizIndex=0;
 quizScore=0;
 selectedAnswer=null;
 answerChecked=false;
 
-document.getElementById("quizBadge").textContent=
-mode==="practice"?"🧠 PRACTICE — NO SCORE":"📝 FINAL TEST — SCORED";
+if(!quizQuestions.length){
+document.getElementById("quizCounter").textContent="0 / 0";
+document.getElementById("quizProgressBar").style.width="0%";
+document.getElementById("quizContent").innerHTML=
+'<div class="empty"><h2>Practice questions unavailable</h2><p>This lesson does not currently contain valid practice questions. Please return to the course or report this problem.</p></div>';
+document.getElementById("quizFeedback").innerHTML="";
+document.getElementById("nextQuestionBtn").disabled=true;
+document.getElementById("nextQuestionBtn").textContent="Practice unavailable";
+showScreen("quiz");
+console.error("WordUp Practice: no valid questions for lesson",lesson.id);
+return;
+}
 
 renderQuiz();
 showScreen("quiz");
 }
-
 function buildVocabularyQuestions(lesson){
 const items=lesson.items;
 const qs=[];

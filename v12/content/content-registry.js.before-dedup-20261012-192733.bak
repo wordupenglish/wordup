@@ -1,0 +1,96 @@
+/*
+=========================================================
+ WORDUP V12.1 CONTENT REGISTRY
+ Dynamic arrays: supports lessons loaded after this script.
+=========================================================
+*/
+
+const WORDUP_CONTENT_LEVEL_KEYS = {
+    foundation: "WORDUP_FOUNDATION_CONTENT",
+    a1: "WORDUP_A1_CONTENT",
+    a2: "WORDUP_A2_CONTENT",
+    b1: "WORDUP_B1_CONTENT",
+    b2: "WORDUP_B2_CONTENT",
+    c1: "WORDUP_C1_CONTENT",
+    c2: "WORDUP_C2_CONTENT",
+    academic: "WORDUP_ACADEMIC_CONTENT"
+};
+
+const WORDUP_CONTENT_REGISTRY = {};
+
+Object.keys(WORDUP_CONTENT_LEVEL_KEYS).forEach(function (level) {
+    Object.defineProperty(WORDUP_CONTENT_REGISTRY, level, {
+        enumerable: true,
+        configurable: false,
+        get: function () {
+            const key = WORDUP_CONTENT_LEVEL_KEYS[level];
+            const content = window[key];
+            return Array.isArray(content) ? content : [];
+        }
+    });
+});
+
+function wordUpGetAllContent() {
+    return Object.keys(WORDUP_CONTENT_LEVEL_KEYS)
+        .flatMap(function (level) {
+            return wordUpGetLevelContent(level);
+        });
+}
+
+function wordUpGetLevelContent(level) {
+    if (!Object.prototype.hasOwnProperty.call(
+        WORDUP_CONTENT_LEVEL_KEYS, level
+    )) {
+        return [];
+    }
+
+    const key = WORDUP_CONTENT_LEVEL_KEYS[level];
+    const content = window[key];
+
+    return Array.isArray(content) ? content : [];
+}
+
+function wordUpGetSkillContent(level, skill) {
+    return wordUpGetLevelContent(level).filter(function (lesson) {
+        return lesson && lesson.skill === skill;
+    });
+}
+
+function wordUpFindLesson(id) {
+    return wordUpGetAllContent().find(function (lesson) {
+        return lesson && lesson.id === id;
+    });
+}
+
+function wordUpContentStatistics() {
+    const all = wordUpGetAllContent();
+    const statistics = {
+        totalLessons: all.length,
+        levels: {},
+        skills: {}
+    };
+
+    all.forEach(function (lesson) {
+        if (!lesson) return;
+
+        const level = lesson.level || "unassigned";
+        const skill = lesson.skill || "unassigned";
+
+        statistics.levels[level] =
+            (statistics.levels[level] || 0) + 1;
+
+        statistics.skills[skill] =
+            (statistics.skills[skill] || 0) + 1;
+    });
+
+    return statistics;
+}
+
+window.WORDUP_CONTENT_REGISTRY = WORDUP_CONTENT_REGISTRY;
+window.wordUpGetAllContent = wordUpGetAllContent;
+window.wordUpGetLevelContent = wordUpGetLevelContent;
+window.wordUpGetSkillContent = wordUpGetSkillContent;
+window.wordUpFindLesson = wordUpFindLesson;
+window.wordUpContentStatistics = wordUpContentStatistics;
+
+console.log("WordUp dynamic content registry loaded.");
