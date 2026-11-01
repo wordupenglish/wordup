@@ -869,13 +869,24 @@
             `;
         }
 
+        if (lesson.guidedPractice?.length) {
+            html += `
+                <h3>Guided practice</h3>
+                <ul class="wu-guided-practice-list">
+                    ${lesson.guidedPractice.map(task => {
+                        const prompt = typeof task === "string" ? task : (task.question || task.prompt || task.text || "Guided task");
+                        return `<li>${speakableLessonText(prompt)}</li>`;
+                    }).join("")}
+                </ul>
+            `;
+        }
         if (lesson.independentPractice?.length) {
             html += `
                 <h3>Independent practice</h3>
                 <div class="wu-independent-practice">
                     ${lesson.independentPractice.map((task, index) => `
                         <section class="wu-independent-task">
-                            <strong>${index + 1}. ${speakableLessonText(task.question || task.prompt || task.text || "Independent task")}</strong>
+                            <strong>${index + 1}. ${speakableLessonText(typeof task === "string" ? task : (task.question || task.prompt || task.text || "Independent task"))}</strong>
                             ${renderWrittenResponse(lesson, "independent", index, "Complete this independent task here...")}
                         </section>
                     `).join("")}
