@@ -5632,7 +5632,8 @@ const b1Lessons = [
     "reading": {
       "title": "A New Learning Center Opens",
       "passage": "A new learning center opened at a university in Kabul on Monday. The center provides students with quiet study rooms, computers, internet access, and academic support. University officials said the center was designed to give students a better place to study and complete their assignments. Several students visited the center on its first day and said they were pleased with the new facilities. The university plans to organize workshops on study skills, research, and academic writing during the semester."
-    }
+    },
+    "readingPassage": "LOCAL UNIVERSITY OPENS NEW LEARNING CENTER\nA local university opened a new learning center on Monday. The center provides quiet study rooms, internet access, and academic support for students. It was created to help learners develop stronger independent study habits. During the first month, the university will offer free workshops on academic writing, time management, and research skills. Several students said they were pleased to have a quiet place to work between classes. The center is located beside the main library and is open from 8 a.m. to 7 p.m. on weekdays."
   },
   {
     "id": "b1-reading-personal-story",
@@ -5815,7 +5816,8 @@ const b1Lessons = [
     "reading": {
       "title": "My First Public Presentation",
       "passage": "Last year, I had to give my first presentation at university. At first, I was extremely nervous because I had never spoken to a large group before. I practiced several times at home and prepared notes to help me remember the main points. When I stood in front of the class, my hands were shaking. However, after the first few minutes, I started to feel more comfortable. My classmates listened carefully and asked useful questions. When the presentation ended, I felt relieved and proud. The experience taught me that preparation can make difficult situations much easier."
-    }
+    },
+    "readingPassage": "MY FIRST CLASS PRESENTATION\nAt first, I was nervous about speaking in front of the class because it was my first presentation to a large group. I prepared by writing short notes, practising at home, and asking a friend to listen. When I began, my voice was quiet, but after a few minutes I became more confident. My classmates listened carefully and asked two questions. By the end of the presentation, I felt proud of myself. I learned that preparation and regular practice can make a difficult speaking task easier."
   },
   {
     "id": "b1-reading-workplace-email",
@@ -5998,7 +6000,8 @@ const b1Lessons = [
     "reading": {
       "title": "Team Meeting Email",
       "passage": "Dear Team, Our monthly meeting will take place on Thursday at 10:00 a.m. in Meeting Room 2. Please review the sales report before the meeting and prepare two questions about the results. If you cannot attend, please inform me by Wednesday afternoon. We will discuss the report first and then plan next month's activities. Thank you, Sara"
-    }
+    },
+    "readingPassage": "Subject: Team Meeting on Thursday\nHello everyone,\nOur weekly team meeting will take place on Thursday at 10:00 a.m. in the main conference room. We will discuss the updated sales report first, then review the project schedule. Please read the report before the meeting and prepare two questions about the figures. If you cannot attend, send me an email before noon on Wednesday so I can share the notes with you.\nBest regards,\nMariam"
   },
   {
     "id": "b1-reading-online-information",
@@ -6183,7 +6186,8 @@ const b1Lessons = [
     "reading": {
       "title": "Student Workshop Information",
       "passage": "Academic Writing Workshop — This free workshop is designed for university students who want to improve their academic writing. The session will take place on 15 October from 2:00 to 4:00 p.m. at the University Library. Students will learn how to organize paragraphs, use evidence, and avoid common citation problems. Places are limited, so students must register before 12 October. The workshop is suitable for students at intermediate and upper-intermediate levels."
-    }
+    },
+    "readingPassage": "ACADEMIC WRITING WORKSHOP\nDate: 15 October\nTime: 2:00–4:00 p.m.\nLocation: University Library, Room 2\nTopics: planning an academic paragraph, using evidence, and checking references.\nThe workshop is suitable for first-year and second-year students who want to improve their university writing. Registration closes on 12 October. Students should register early because places are limited. To register, complete the short form on the university website."
   },
   {
     "id": "b1-reading-reviews",
@@ -6366,7 +6370,8 @@ const b1Lessons = [
     "reading": {
       "title": "A Review of an English Course",
       "passage": "I recently joined a six-week English course and found it useful overall. The teacher explained grammar clearly and gave us many opportunities to speak. I especially enjoyed the group activities because they helped me become more confident. The classroom was comfortable, although the internet connection was sometimes slow. The course was reasonably priced compared with other courses in the area. I would recommend it to learners who want to improve their communication skills."
-    }
+    },
+    "readingPassage": "A REVIEW OF THE ACADEMIC ENGLISH COURSE\nI joined the course because I wanted more speaking practice. The activities were practical, and the group discussions helped me explain my ideas with greater confidence. The classroom was comfortable, but the internet connection was sometimes slow during online tasks. The course fee was reasonable for the amount of practice we received. I would recommend the course to students who want to improve their speaking and learn how to work with other people. Overall, I found it useful and well organised."
   },
   {
     "id": "b1-reading-instructions",
@@ -6550,7 +6555,8 @@ const b1Lessons = [
     "reading": {
       "title": "Submitting an Online Assignment",
       "passage": "First, save your assignment as a PDF and check that your name and student ID are correct. Next, log in to the student portal and open the Assignment section. Select the correct course and upload your file. Before clicking Submit, check that you have selected the correct document. After submission, wait for the confirmation message. If you do not receive a confirmation message, check your internet connection and try again."
-    }
+    },
+    "readingPassage": "HOW TO SUBMIT AN ONLINE ASSIGNMENT\nFirst, finish your document and check that every question has been answered. Save the file in PDF format and give it a clear name. Next, open the course website, choose the correct assignment, and upload your file. Before clicking Submit, check that the uploaded file is the correct version. After submission, wait for the confirmation message and check the submission page. If no confirmation appears, refresh the page and look for the file in your submission history. If you still cannot see it, contact your teacher. If you forget your password, select Reset Password before signing in again."
   },
   {
     "id": "b1-reading-articles",
@@ -6733,7 +6739,8 @@ const b1Lessons = [
     "reading": {
       "title": "Why Regular Reading Helps Language Learners",
       "passage": "Regular reading can help language learners improve in several ways. First, reading exposes learners to new vocabulary in meaningful contexts. Instead of memorizing isolated words, students can see how words are used in real sentences. Reading also helps learners notice grammar patterns naturally. In addition, frequent reading can improve reading speed because learners become familiar with common expressions and sentence structures. Short articles, stories, and news reports can all be useful. The most important point is to choose material that is interesting enough to encourage regular practice."
-    }
+    },
+    "readingPassage": "WHY REGULAR READING HELPS LANGUAGE LEARNERS\nRegular reading can improve vocabulary because readers meet words repeatedly in meaningful contexts. It can also help learners notice grammar patterns and recognise how sentences are connected. For example, students who read short articles, stories, and graded texts regularly may remember new expressions more easily. Reading different types of material can also increase reading speed because learners become familiar with common structures. It is useful to choose texts that are interesting and slightly challenging, rather than texts that are so difficult that every sentence requires a dictionary. Regular practice is more valuable than reading for many hours only once a week."
   },
   {
     "id": "b1-listening-work-conversations",
