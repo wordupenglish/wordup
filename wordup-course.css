@@ -1109,3 +1109,15 @@ body.dark #curriculum button.wu-course-continue {
     color: var(--muted, #667085);
     line-height: 1.55;
 }
+
+.wu-speaking-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 14px 0 4px;
+    line-height: 1.5;
+}
+
+.wu-speaking-check input {
+    margin-top: 4px;
+}
