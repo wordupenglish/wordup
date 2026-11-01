@@ -24,8 +24,12 @@ function wordUpQuestionAudit(question, location) {
         if (new Set(normalized).size !== normalized.length) {
             errors.push(location + ": duplicate answer options");
         }
-        if (!Number.isInteger(Number(answer)) || Number(answer) < 0 || Number(answer) >= options.length) {
-            errors.push(location + ": answer index is missing or outside the options range");
+        const answerText = answer === null || answer === undefined ? "" : String(answer).trim().toLowerCase();
+        const numericIndex = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+        const validIndex = numericIndex && Number(answerText) >= 0 && Number(answerText) < options.length;
+        const validText = options.some(option => String(option).trim().toLowerCase() === answerText);
+        if (!validIndex && !validText) {
+            errors.push(location + ": answer is missing or does not match an option");
         }
     } else if (answer !== null && answer !== undefined) {
         errors.push(location + ": open-response item should not contain an answer index");
