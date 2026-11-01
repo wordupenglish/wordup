@@ -4673,44 +4673,34 @@ const c2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse advanced lectures carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Student participation should be evaluated through engagement and learning evidence, not attendance figures alone.",
+          "Attendance is the only reliable measure of academic achievement.",
+          "Universities should remove discussion from all courses.",
+          "Assignment completion is unrelated to student engagement."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker mention a course in which regular attenders also submitted more assignments?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "a course in which regular attenders also submitted more assignments to illustrate the central issue.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "the relationship does not prove that attendance itself caused stronger performance",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -4727,42 +4717,42 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse advanced lectures carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "attendance records, assignment completion, assessment results, and student interviews",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "motivation and work commitments may influence both attendance and performance",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion.",
+          "the quality of participation matters more than a simple attendance count"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "combine several measures and examine how students apply what they learn",
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
         "answer": 0
       }
@@ -4779,7 +4769,7 @@ const c2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss advanced lectures in relation to a workplace training project. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a workplace training project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss advanced lectures in relation to a workplace training project. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a workplace training project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "Today I want to examine how universities should evaluate student participation. Attendance figures are easy to collect, but they tell us little about the quality of learning. In one course, students who attended regularly also submitted more assignments. It would be tempting to conclude that attendance caused stronger performance. However, the students who attended may already have been more motivated or had fewer work commitments. The lecturer therefore compares attendance with assignment completion, assessment results, and student interviews. The evidence suggests that regular participation can support learning, particularly when sessions include discussion and feedback. Yet attendance alone is not a reliable measure of achievement. A fair evaluation should consider what students do during a class, how they engage with the material, and whether they can apply what they learn afterwards."
   },
   {
     "id": "c2-listening-research-seminars",
@@ -4869,44 +4859,34 @@ const c2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse research seminars carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Feedback is most useful when it is timely, focused, and gives learners an actionable next step.",
+          "The number of comments is the only factor that determines learning.",
+          "All subjects require exactly the same feedback method.",
+          "Students should receive feedback only after a final examination."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker mention a departmental review in which students received one strength and one practical next step?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "a departmental review in which students received one strength and one practical next step to illustrate the central issue.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "the review involved a limited group and one course design",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -4923,42 +4903,42 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse research seminars carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "student progress in a small departmental review and learner reports about using comments",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "the findings may not apply equally across subjects or learner groups",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion.",
+          "more feedback is not necessarily better feedback"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "test focused feedback with different groups and evaluate how learners use it",
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
         "answer": 0
       }
@@ -4975,7 +4955,7 @@ const c2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss research seminars in relation to a survey of adult learners. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a survey of adult learners. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss research seminars in relation to a survey of adult learners. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a survey of adult learners. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "At this seminar, the panel is considering whether frequent feedback automatically improves learning. One lecturer argues that short, regular comments help students correct misunderstandings before they become habits. A second panel member agrees that feedback matters but points out that students often receive more comments than they can use. In a small departmental review, students made greater progress when feedback identified one specific strength and one practical next step. The panel cautions that this review involved only a limited group and one course design. It cannot establish that the same approach will work equally well in every subject. The speakers therefore recommend testing feedback methods with different groups and asking learners whether the comments actually help them revise. Their conclusion is that useful feedback is timely, focused, and actionable; simply increasing its volume is unlikely to be enough."
   },
   {
     "id": "c2-listening-academic-debates",
@@ -5065,44 +5045,34 @@ const c2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse academic debates carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Attendance should be compulsory in every course without exception.",
+          "Students learn best when discussion is removed.",
+          "Absence records prove whether students understand the material.",
+          "Attendance can support learning, but compulsory rules should reflect the purpose of each course."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Why does the speaker mention courses where discussion and collaborative work form part of assessment?",
+        "options": [
+          "courses where discussion and collaborative work form part of assessment to illustrate the central issue.",
+          "To introduce an unrelated topic.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The claim is certain in every context.",
+          "physical presence does not guarantee attention or learning",
+          "No further evidence is needed.",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What does the speaker imply about the alternative explanation?",
-        "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -5119,44 +5089,44 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse academic debates carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "the role of discussion, clarification, collaboration, and course assessment",
+          "An unsupported personal opinion only.",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "a strict attendance rule can disadvantage students with work, caring, or transport responsibilities",
+          "The topic cannot be investigated.",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "a flexible policy may be fairer than a single rule for every course",
+          "No conclusion can be drawn from any part of the discussion."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence.",
+          "identify which course activities require attendance and allow equivalent evidence where appropriate"
         ],
-        "answer": 0
+        "answer": 3
       }
     ],
     "review": [
@@ -5171,7 +5141,7 @@ const c2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss academic debates in relation to a teacher-training workshop. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a teacher-training workshop. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss academic debates in relation to a teacher-training workshop. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a teacher-training workshop. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "The question before the debate is whether universities should make attendance compulsory. Supporters argue that regular attendance gives students access to discussion, immediate clarification, and collaborative work. They point to courses in which participation is built into the assessment. Opponents respond that a strict rule can disadvantage students who work, care for family members, or have unreliable transport. They also argue that physical presence does not guarantee attention. The strongest point on either side is that attendance can create opportunities for learning, but it is not itself proof that learning has taken place. A policy based only on counting absences would therefore be too simple. The debate concludes that institutions should distinguish between sessions where participation is essential and situations where equivalent learning can be demonstrated in another way."
   },
   {
     "id": "c2-listening-professional-meetings",
@@ -5261,44 +5231,34 @@ const c2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse professional meetings carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "The team should examine the whole process before assigning responsibility for a delay.",
+          "The supplier was solely responsible for the entire delay.",
+          "The team decided to cancel the project.",
+          "The internal approval process had no effect on the schedule."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker mention the timeline showing both late supplier delivery and slow internal approval?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "the timeline showing both late supplier delivery and slow internal approval to illustrate the central issue.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "the supplier delay explains only part of the schedule difference",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -5315,42 +5275,42 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse professional meetings carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "the project timeline and the four-day delay in internal approval",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "blaming the supplier alone would ignore the internal approval process",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion.",
+          "more than one factor contributed to the missed deadline"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "confirm deliveries earlier and assign responsibility for monitoring approvals",
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
         "answer": 0
       }
@@ -5367,7 +5327,7 @@ const c2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss professional meetings in relation to a service improvement project. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a service improvement project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss professional meetings in relation to a service improvement project. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a service improvement project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "At the project meeting, the team is reviewing a delay in the delivery schedule. The project lead initially attributes the delay to the supplier, because two components arrived later than expected. However, the operations manager notes that the approval process also took four days longer than planned. The team checks the timeline and discovers that both factors contributed. The supplier delay explains part of the problem, but it does not account for the full difference between the planned and actual dates. The manager proposes two actions: confirm delivery dates earlier and assign one person to monitor internal approvals. The team agrees to review the revised schedule at the next meeting. The discussion shows why teams should examine the complete sequence of events before assigning responsibility. A single explanation may be convenient, but it can hide other causes that need attention."
   },
   {
     "id": "c2-listening-complex-presentations",
@@ -5457,44 +5417,34 @@ const c2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse complex presentations carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Goal-linked feedback may help online learners use advice more effectively.",
+          "The study proves that all online learners need identical feedback.",
+          "The researchers found no difference between the groups.",
+          "The results show that learner motivation has no influence."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker mention a study comparing general comments with feedback tied to learning goals and revision steps?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "a study comparing general comments with feedback tied to learning goals and revision steps to illustrate the central issue.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "the small volunteer sample and lack of random assignment limit causal conclusions",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -5511,42 +5461,42 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse complex presentations carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "revision completion and learner confidence among 120 adults over eight weeks",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "participants came from only two courses and were not randomly assigned",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion.",
+          "the approach is promising but needs testing in a broader sample"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "conduct a larger study across different institutions with a stronger comparison design",
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
         "answer": 0
       }
@@ -5563,7 +5513,7 @@ const c2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss complex presentations in relation to a recruitment decision. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a recruitment decision. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss complex presentations in relation to a recruitment decision. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a recruitment decision. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "In this presentation, I will summarise a small study of structured feedback in online English courses. The researchers followed 120 adult learners over eight weeks. One group received general comments, while the other received feedback linked to specific learning goals and revision steps. The second group submitted more complete revisions and reported greater confidence. These results are encouraging, but they need careful interpretation. The learners were volunteers from two courses, and the study did not randomly assign participants. It is therefore possible that motivation or previous experience contributed to the difference. The findings suggest that goal-linked feedback may help learners act on advice, but they do not prove that the approach will produce the same result in every online programme. A larger study with varied institutions would provide stronger evidence."
   },
   {
     "id": "c2-listening-rapid-academic-speech",
@@ -5653,44 +5603,34 @@ const c2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse rapid academic speech carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Listeners can follow rapid academic speech by tracking signposting and relationships between ideas.",
+          "Listeners should try to transcribe every word before interpreting the argument.",
+          "Fast speech is always unclear, regardless of organisation.",
+          "Contrast markers introduce unrelated information."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker mention phrases such as this is not to suggest that and nevertheless?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "phrases such as this is not to suggest that and nevertheless to illustrate the central issue.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "speed itself is not necessarily the source of difficulty; compressed organisation often is",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -5707,42 +5647,42 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse rapid academic speech carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "the speaker's use of stress, signposting, and contrast markers to show discourse structure",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "focusing on individual words can cause listeners to lose the larger argument",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion.",
+          "understanding discourse relationships can compensate for missing an occasional detail"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "identify the current topic and use the next signpost to reconnect with the argument",
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
         "answer": 0
       }
@@ -5759,7 +5699,7 @@ const c2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss rapid academic speech in relation to an adult education programme. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to an adult education programme. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss rapid academic speech in relation to an adult education programme. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to an adult education programme. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "Let me begin with the broad claim, then qualify it. Faster academic speech is not necessarily less clear; the difficulty often comes from compressed organisation. A speaker may place several linked ideas inside one sentence, reduce familiar expressions, and move quickly from a claim to an exception. Listeners should therefore attend to signposting and stress, not simply to individual words. For instance, the phrase that said, this is not to suggest that, often introduces a limitation rather than a new main argument. Similarly, a contrast marker such as nevertheless can signal that the next point modifies what came before. If you miss a detail, do not abandon the whole argument. Identify the current topic, note the relationship between ideas, and use the next signpost to reconnect. Effective listening combines selective attention with an awareness of discourse structure."
   },
   {
     "id": "c2-speaking-sustaining-sophisticated-arguments",
