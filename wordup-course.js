@@ -812,8 +812,6 @@
         }
 
         if (lesson.rules?.length) {
-
-        if (lesson.rules?.length) {
             html += `
                 <h3>Key rules</h3>
                 <ul>
