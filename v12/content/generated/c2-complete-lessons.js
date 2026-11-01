@@ -7341,7 +7341,7 @@ const c2CompleteLessons = [
     "title": "Advanced Argumentation",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to advanced argumentation, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops advanced argumentation as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong advanced argumentation depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Advanced Argumentation.",
@@ -7456,7 +7456,7 @@ const c2CompleteLessons = [
     "title": "Synthesis",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to synthesis, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops synthesis as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Synthesis.",
@@ -7573,7 +7573,7 @@ const c2CompleteLessons = [
     "title": "Critical Evaluation",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to critical evaluation, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops critical evaluation as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong critical evaluation depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Critical Evaluation.",
@@ -7688,7 +7688,7 @@ const c2CompleteLessons = [
     "title": "Research-Based Writing",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to research-based writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops research-based writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective research-based writing requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Research-Based Writing.",
@@ -7803,7 +7803,7 @@ const c2CompleteLessons = [
     "title": "Disciplinary Writing",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to disciplinary writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops disciplinary writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective disciplinary writing requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Disciplinary Writing.",
@@ -7918,7 +7918,7 @@ const c2CompleteLessons = [
     "title": "Publication Style",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to publication style, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops publication style as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective publication style adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Publication Style.",
@@ -8033,7 +8033,7 @@ const c2CompleteLessons = [
     "title": "Advanced Editing",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to advanced editing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops advanced editing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Editing advanced editing involves more than correcting grammar. The writer checks clarity, cohesion, precision, sentence structure, unnecessary repetition, register, and whether every sentence contributes to the argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Advanced Editing.",
@@ -8150,7 +8150,7 @@ const c2CompleteLessons = [
     "title": "Rhetorical Control",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to rhetorical control, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops rhetorical control as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong rhetorical control depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Rhetorical Control.",
@@ -8265,7 +8265,7 @@ const c2CompleteLessons = [
     "title": "Academic Voice",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to academic voice, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic voice as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective academic voice adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Voice.",
@@ -8380,7 +8380,7 @@ const c2CompleteLessons = [
     "title": "Professional Writing",
     "objective": "By the end of the lesson, the learner can produce a highly proficient piece of writing related to professional writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops professional writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective professional writing adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Professional Writing.",
