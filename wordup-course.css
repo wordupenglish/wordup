@@ -1103,3 +1103,9 @@ body.dark #curriculum button.wu-course-continue {
 .wu-reading-passage p {
     margin: 0;
 }
+
+.wu-speaking-instruction {
+    margin: 10px 0 0;
+    color: var(--muted, #667085);
+    line-height: 1.55;
+}
