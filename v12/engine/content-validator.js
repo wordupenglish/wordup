@@ -8,7 +8,7 @@
 
 function wordUpQuestionAudit(question, location) {
     const errors = [];
-    const prompt = typeof question === "string" ? question : question && (question.question || question.prompt || question.text);
+    const prompt = typeof question === "string" ? question : question && (question.question || question.prompt || question.text || question.instruction);
     const options = question && Array.isArray(question.options) ? question.options : [];
     const answer = question && typeof question === "object" ? (question.answer ?? question.correctAnswer ?? question.correct) : undefined;
 
@@ -20,14 +20,14 @@ function wordUpQuestionAudit(question, location) {
         if (options.length < 2) {
             errors.push(location + ": multiple-choice item needs at least two options");
         }
-        const normalized = options.map(option => String(option).trim().toLowerCase());
+        const normalized = options.map(option => String(option).trim());
         if (new Set(normalized).size !== normalized.length) {
             errors.push(location + ": duplicate answer options");
         }
         const answerText = answer === null || answer === undefined ? "" : String(answer).trim().toLowerCase();
         const numericIndex = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
         const validIndex = numericIndex && Number(answerText) >= 0 && Number(answerText) < options.length;
-        const validText = options.some(option => String(option).trim().toLowerCase() === answerText);
+        const validText = options.some(option => String(option).trim() === String(answer).trim());
         if (!validIndex && !validText) {
             errors.push(location + ": answer is missing or does not match an option");
         }
