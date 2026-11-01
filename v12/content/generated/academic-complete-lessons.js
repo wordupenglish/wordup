@@ -14381,7 +14381,6 @@ const academicCompleteLessons = [
     "media": {},
     "skillContent": {}
   }
-]
 ];
 
 const wordUpAcademicExisting = window.WORDUP_ACADEMIC_CONTENT || [];
