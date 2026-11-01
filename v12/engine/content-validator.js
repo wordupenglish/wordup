@@ -8,9 +8,9 @@
 
 function wordUpQuestionAudit(question, location) {
     const errors = [];
-    const prompt = question && (question.question || question.prompt || question.text);
+    const prompt = typeof question === "string" ? question : question && (question.question || question.prompt || question.text);
     const options = question && Array.isArray(question.options) ? question.options : [];
-    const answer = question && (question.answer ?? question.correctAnswer ?? question.correct);
+    const answer = question && typeof question === "object" ? (question.answer ?? question.correctAnswer ?? question.correct) : undefined;
 
     if (!prompt || !String(prompt).trim()) {
         errors.push(location + ": missing question prompt");
@@ -185,7 +185,7 @@ function wordUpContentQualityReport() {
                     report.malformedAssessmentQuestions += audit.errors.length;
                     report.details.push({ id, section, index, errors: audit.errors });
                 }
-                const prompt = question && (question.question || question.prompt || question.text);
+                const prompt = typeof question === "string" ? question : question && (question.question || question.prompt || question.text);
                 if (prompt) {
                     const normalized = String(prompt).trim().toLowerCase();
                     sectionPrompts.push(normalized);
