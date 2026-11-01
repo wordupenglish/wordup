@@ -109,7 +109,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate advanced clauses accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of advanced clauses?",
@@ -251,7 +262,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate reduced relative clauses accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of reduced relative clauses?",
@@ -408,7 +430,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate participle clauses accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Choose the best reduced form: Because she had reviewed the data, she changed the conclusion.",
@@ -570,7 +603,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate advanced conditionals accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence best demonstrates controlled use of Advanced Conditionals?",
@@ -732,7 +776,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate mixed conditionals accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "The project is still delayed because the team did not plan carefully. Which sentence expresses this meaning?",
@@ -894,7 +949,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate inversion accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Choose the correct sentence.",
@@ -1056,7 +1122,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate cleft sentences accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence gives strongest focus to the evidence?",
@@ -1218,7 +1295,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate emphasis accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence gives strongest focus to the evidence?",
@@ -1380,7 +1468,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate advanced passive accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Choose the correct passive form.",
@@ -1542,7 +1641,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate reported speech accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Direct: â€œWe need more evidence.â€ Reported correctly:",
@@ -1694,7 +1804,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate substitution accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of substitution?",
@@ -1836,7 +1957,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate ellipsis accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of ellipsis?",
@@ -1978,7 +2110,18 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate complex verb patterns accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of complex verb patterns?",
@@ -8195,11 +8338,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Academic Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Give each paragraph one clear controlling idea that supports the overall purpose.",
@@ -8312,11 +8455,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective essay structure gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Essay Structure.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Give each paragraph one clear controlling idea that supports the overall purpose.",
@@ -8427,11 +8570,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Thesis Statements.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "State one central, focused idea rather than a broad topic.",
@@ -8544,11 +8687,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Introduction Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Give each paragraph one clear controlling idea that supports the overall purpose.",
@@ -8661,11 +8804,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Body Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Give each paragraph one clear controlling idea that supports the overall purpose.",
@@ -8778,11 +8921,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Conclusion Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Give each paragraph one clear controlling idea that supports the overall purpose.",
@@ -8895,11 +9038,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Strong argumentative essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Argumentative Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Make the central claim explicit and keep each paragraph connected to it.",
@@ -9010,11 +9153,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Compare-and-contrast writing explains meaningful similarities and differences between two subjects. Strong writing uses a clear basis of comparison rather than simply listing unrelated features.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Compare and Contrast Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Choose criteria that genuinely apply to both subjects.",
@@ -9127,11 +9270,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Cause-and-effect writing distinguishes causes from consequences and explains the relationship between them without confusing correlation, sequence, and causation.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Cause and Effect Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Separate causes from effects and identify intermediate steps in the causal chain.",
@@ -9244,11 +9387,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Problem-solution writing identifies a specific problem, explains why it matters, evaluates possible responses, and proposes a solution supported by clear reasoning.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Problem Solution Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Define the problem specifically and explain who or what is affected.",
@@ -9361,11 +9504,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective opinion essays requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Opinion Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Identify the purpose and audience before drafting.",
@@ -9476,11 +9619,11 @@ const b2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective academic style adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Academic Style.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Choose a level of formality that fits the audience and purpose.",
