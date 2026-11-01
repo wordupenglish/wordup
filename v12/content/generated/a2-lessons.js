@@ -1486,7 +1486,7 @@
         "answer": 0
       },
       {
-        "question": "Which sentence is correct?",
+        "question": "Which question correctly asks about a life experience?",
         "options": [
           "Have you ever been to Kabul?",
           "Have you ever went to Kabul?",
