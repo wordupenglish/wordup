@@ -9580,7 +9580,6 @@ const b2CompleteLessons = [
     "media": {},
     "skillContent": {}
   }
-]
 ];
 
 const wordUpB2Existing = window.WORDUP_B2_CONTENT || [];
