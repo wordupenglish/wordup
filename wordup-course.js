@@ -895,12 +895,13 @@
             html += `
                 <h3>Independent practice</h3>
                 <div class="wu-independent-practice">
-                    ${lesson.independentPractice.map((task, index) => `
-                        <section class="wu-independent-task">
-                            <strong>${index + 1}. ${speakableLessonText(typeof task === "string" ? task : (task.question || task.prompt || task.text || task.instruction || "Independent task"))}</strong>
-                            ${renderWrittenResponse(lesson, "independent", index, "Complete this independent task here...")}
-                        </section>
-                    `).join("")}
+                    ${lesson.independentPractice.map((task, index) => {
+                        const prompt = typeof task === "string" ? task : (task.question || task.prompt || task.text || task.instruction || "Independent task");
+                        const responseField = lesson.skill === "speaking"
+                            ? '<p class="wu-speaking-instruction">Speak your response aloud. If possible, record yourself and review your fluency and pronunciation.</p>'
+                            : renderWrittenResponse(lesson, "independent", index, "Complete this independent task here...");
+                        return `<section class="wu-independent-task"><strong>${index + 1}. ${speakableLessonText(prompt)}</strong>${responseField}</section>`;
+                    }).join("")}
                 </div>
             `;
         }
@@ -976,7 +977,9 @@
                     '<button onclick="wordUpPracticeAnswer(' + index + ',' + i + ',' + JSON.stringify(answer) + ')">' + esc(option) + '</button>'
                 ).join("") + '</div><div class="wu-question-feedback" id="wuPracticeFeedback' + index + '"></div>';
             } else {
-                interaction = '<p class="wu-response-instruction">This is an open-response task. Write your answer below; it is not automatically graded.</p>' +
+                interaction = lesson.skill === "speaking"
+                    ? '<p class="wu-response-instruction">Speak your response aloud. Record yourself if possible, then review clarity, fluency, and pronunciation.</p>'
+                    : '<p class="wu-response-instruction">This is an open-response task. Write your answer below; it is not automatically graded.</p>' +
                     renderWrittenResponse(lesson, "practice", index, "Write your answer or complete the task here...");
             }
             return '<article class="wu-question-card" data-practice-question="' + index + '"><strong>' + (index + 1) + '. ' + prompt + '</strong>' + interaction + '</article>';
