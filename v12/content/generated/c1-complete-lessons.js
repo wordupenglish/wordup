@@ -3961,42 +3961,32 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of research articles.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The study proves that focused feedback always causes higher achievement.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "Focused feedback may help adult learners use advice more effectively, but the findings need confirmation.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage.",
+          "the comparison of revision completion and confidence in 120 adult learners"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "the participants volunteered from only two courses and were not randomly assigned",
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
         "answer": 0
       }
@@ -4015,44 +4005,44 @@ const c1CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of research articles.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The study proves that focused feedback always causes higher achievement.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated.",
+          "the feedback approach is promising but its effect may depend on learner and course characteristics"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The study proves that focused feedback always causes higher achievement.",
+          "Focused feedback may help adult learners use advice more effectively, but the findings need confirmation.",
+          "the comparison of revision completion and confidence in 120 adult learners",
+          "the participants volunteered from only two courses and were not randomly assigned"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "Why Evidence Should Be Ignored",
+          "Research Articles: Evidence, Interpretation, and Limitations",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -4066,7 +4056,8 @@ const c1CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about research articles. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a small research study. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about research articles. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a small research study. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A study of adult learners examined whether weekly feedback improved completion in online courses. The researchers followed 120 participants for eight weeks and compared learners who received general comments with learners whose feedback identified a specific strength and one next step. The second group submitted more complete revisions and reported greater confidence. However, the participants volunteered from only two courses, and the groups were not randomly assigned. The researchers therefore avoided claiming that the feedback method alone caused the difference. They argued that focused comments may help learners act on advice, while noting that motivation and previous experience could also influence the results. The article recommends a larger study across several institutions before the approach is adopted as a universal policy."
   },
   {
     "id": "c1-reading-critical-analysis",
@@ -4157,42 +4148,32 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of critical analysis.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage.",
+          "the before-and-after productivity figures"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
         "answer": 0
       }
@@ -4211,44 +4192,44 @@ const c1CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of critical analysis.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated.",
+          "the training may have contributed, but the effect cannot be separated from other factors"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "Why Evidence Should Be Ignored",
+          "Critical Analysis: Evidence, Interpretation, and Limitations",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -4262,7 +4243,8 @@ const c1CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about critical analysis. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a team planning meeting. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about critical analysis. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a team planning meeting. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "c1-reading-methodology-sections",
@@ -4353,44 +4335,34 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of methodology sections.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The method guarantees that the results apply to every online course.",
+          "The study uses several forms of evidence to explore learners' experiences, while acknowledging limits in its design.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "assignment scores, weekly questionnaires, and follow-up interviews",
+          "A claim that is explicitly rejected in the passage."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically.",
+          "the sample is small, voluntary, and drawn from only two classes"
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -4407,44 +4379,44 @@ const c1CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of methodology sections.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The method guarantees that the results apply to every online course.",
+          "The passage proves that the opposite position is always correct.",
+          "the findings can guide further research but should not be generalised to all online learners",
+          "The writer believes the issue should not be investigated."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The study uses several forms of evidence to explore learners' experiences, while acknowledging limits in its design.",
+          "assignment scores, weekly questionnaires, and follow-up interviews",
+          "the sample is small, voluntary, and drawn from only two classes",
+          "The method guarantees that the results apply to every online course."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which title best represents the passage?",
+        "options": [
+          "Methodology Sections: Evidence, Interpretation, and Limitations",
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What does the writer do when presenting the main position?",
-        "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "review": [
@@ -4458,7 +4430,8 @@ const c1CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about methodology sections. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated an analysis of workplace behaviour. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about methodology sections. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated an analysis of workplace behaviour. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "The researchers investigated how adult learners used feedback in an online course. They recruited volunteers from two classes and collected weekly assignment scores, short questionnaires, and follow-up interviews. Combining these sources allowed the team to compare reported experiences with patterns in submitted work. However, the sample was small and participants chose whether to join the study. The researchers also recognised that learners' previous experience could influence how they responded to feedback. Rather than generalising to all online students, they described the project as an exploratory study and recommended a larger sample with a comparison group. The method provides useful detail, but the design limits the strength of causal conclusions."
   },
   {
     "id": "c1-reading-academic-arguments",
@@ -4549,44 +4522,34 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of academic arguments.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which evidence does the writer use?",
+        "options": [
+          "the before-and-after productivity figures",
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage."
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "The evidence is complete and applies to every situation.",
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What does the writer do when presenting the main position?",
-        "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -4603,44 +4566,44 @@ const c1CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of academic arguments.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "the training may have contributed, but the effect cannot be separated from other factors",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated."
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which statement would go beyond the evidence presented?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "the before-and-after productivity figures",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Academic Arguments: Evidence, Interpretation, and Limitations",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What can reasonably be inferred from the final paragraph?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference.",
+          "To present a claim, examine supporting information, and qualify the conclusion."
         ],
-        "answer": 0
+        "answer": 3
       }
     ],
     "review": [
@@ -4654,7 +4617,8 @@ const c1CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about academic arguments. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a student support project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about academic arguments. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a student support project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "c1-reading-literature-reviews",
@@ -4745,44 +4709,34 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of literature reviews.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "Every study examined exactly the same feedback method and reached an identical conclusion.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful.",
+          "Effective feedback depends on the interaction of timing, specificity, and learner agency."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which evidence does the writer use?",
+        "options": [
+          "the three groups of studies focusing on timing, targeted advice, and learner-led revision",
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage."
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "The evidence is complete and applies to every situation.",
+          "the studies examine related but distinct mechanisms and should not be treated as identical",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What does the writer do when presenting the main position?",
-        "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "independentPractice": [
@@ -4799,44 +4753,44 @@ const c1CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of literature reviews.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "a combined approach may be more useful than relying on one feedback feature alone",
+          "Every study examined exactly the same feedback method and reached an identical conclusion.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated."
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which statement would go beyond the evidence presented?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "Effective feedback depends on the interaction of timing, specificity, and learner agency.",
+          "Every study examined exactly the same feedback method and reached an identical conclusion.",
+          "the three groups of studies focusing on timing, targeted advice, and learner-led revision",
+          "the studies examine related but distinct mechanisms and should not be treated as identical"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Literature Reviews: Evidence, Interpretation, and Limitations",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What can reasonably be inferred from the final paragraph?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference.",
+          "To present a claim, examine supporting information, and qualify the conclusion."
         ],
-        "answer": 0
+        "answer": 3
       }
     ],
     "review": [
@@ -4850,7 +4804,8 @@ const c1CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about literature reviews. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a review of previous research. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about literature reviews. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a review of previous research. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "Research on feedback in adult education points to three recurring themes. One group of studies emphasises timing: comments are more useful when learners can apply them before the next major task. A second group focuses on specificity, finding that targeted advice is easier to act on than general praise. A third examines learner agency and suggests that students benefit when they are asked to interpret feedback and plan revisions themselves. These findings are related, but they do not describe the same mechanism. Timing creates an opportunity, specificity clarifies the action, and learner agency influences whether the advice is used. A useful synthesis therefore connects the themes rather than treating the studies as interchangeable."
   },
   {
     "id": "c1-reading-evidence-analysis",
@@ -4941,42 +4896,32 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of evidence analysis.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage.",
+          "the before-and-after productivity figures"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
         "answer": 0
       }
@@ -4995,44 +4940,44 @@ const c1CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of evidence analysis.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated.",
+          "the training may have contributed, but the effect cannot be separated from other factors"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "Why Evidence Should Be Ignored",
+          "Evidence Analysis: Evidence, Interpretation, and Limitations",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -5046,7 +4991,8 @@ const c1CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about evidence analysis. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a workplace training project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about evidence analysis. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a workplace training project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "c1-reading-source-evaluation",
@@ -5137,42 +5083,32 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of source evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage.",
+          "the before-and-after productivity figures"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
         "answer": 0
       }
@@ -5191,44 +5127,44 @@ const c1CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of source evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated.",
+          "the training may have contributed, but the effect cannot be separated from other factors"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "Why Evidence Should Be Ignored",
+          "Source Evaluation: Evidence, Interpretation, and Limitations",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -5242,7 +5178,8 @@ const c1CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about source evaluation. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a survey of adult learners. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about source evaluation. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a survey of adult learners. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "c1-listening-university-lectures",
