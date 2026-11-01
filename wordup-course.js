@@ -797,6 +797,22 @@
 
         `;
 
+        if (lesson.transcript) {
+            html += `
+                <h3>Listening passage</h3>
+                <p>Listen to the passage first. Then reveal the transcript to check your understanding.</p>
+                <button type="button" class="wu-listen-passage" data-speak="${esc(lesson.transcript)}" onclick="wordUpSpeakTextFromButton(this)">
+                    <span aria-hidden="true">&#9654;</span> Play listening passage
+                </button>
+                <details class="wu-transcript-reveal">
+                    <summary>Reveal transcript</summary>
+                    <p>${esc(lesson.transcript)}</p>
+                </details>
+            `;
+        }
+
+        if (lesson.rules?.length) {
+
         if (lesson.rules?.length) {
             html += `
                 <h3>Key rules</h3>
