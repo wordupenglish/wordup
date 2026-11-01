@@ -989,3 +989,135 @@ body.dark #curriculum button.wu-course-continue {
     border-color: var(--border, #2d3748) !important;
 }
 
+
+/* Written-response tasks: practice, independent work and performance assessments */
+.wu-response-label {
+    display: block;
+    margin: 14px 0 7px;
+    font-weight: 650;
+    color: var(--text, inherit);
+}
+
+.wu-response-input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 150px;
+    padding: 12px 14px;
+    border: 1px solid var(--border, #d8dee8);
+    border-radius: 10px;
+    background: var(--surface, #ffffff);
+    color: var(--text, #172033);
+    font: inherit;
+    line-height: 1.55;
+    resize: vertical;
+}
+
+.wu-response-input:focus {
+    outline: 2px solid var(--primary, #4968d8);
+    outline-offset: 2px;
+}
+
+.wu-response-status {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted, #667085);
+    font-size: 0.82rem;
+}
+
+.wu-response-instruction {
+    margin: 10px 0;
+    color: var(--muted, #667085);
+}
+
+.wu-independent-practice {
+    display: grid;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.wu-independent-task {
+    padding: 14px;
+    border: 1px solid var(--border, #d8dee8);
+    border-radius: 10px;
+}
+
+.wu-independent-task > strong {
+    display: block;
+    line-height: 1.5;
+}
+
+.wu-assessment-rubric {
+    margin: 12px 0;
+    padding-left: 22px;
+    line-height: 1.6;
+}
+
+/* Listening lesson audio and transcript controls */
+.wu-listen-passage {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--border, #d8dee8);
+    border-radius: 9px;
+    background: var(--surface2, #f3f5f8);
+    color: var(--text, #172033);
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.wu-listen-passage:hover {
+    filter: brightness(0.97);
+}
+
+.wu-transcript-reveal {
+    margin: 10px 0 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--border, #d8dee8);
+    border-radius: 9px;
+}
+
+.wu-transcript-reveal summary {
+    cursor: pointer;
+    font-weight: 650;
+}
+
+.wu-transcript-reveal p {
+    line-height: 1.7;
+    margin: 12px 0 2px;
+}
+
+/* Reading passage presentation */
+.wu-reading-passage {
+    margin: 10px 0 16px;
+    padding: 16px 18px;
+    border: 1px solid var(--border, #d8dee8);
+    border-radius: 10px;
+    background: var(--surface2, #f7f8fa);
+    line-height: 1.75;
+}
+
+.wu-reading-passage p {
+    margin: 0;
+}
+
+.wu-speaking-instruction {
+    margin: 10px 0 0;
+    color: var(--muted, #667085);
+    line-height: 1.55;
+}
+
+.wu-speaking-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 14px 0 4px;
+    line-height: 1.5;
+}
+
+.wu-speaking-check input {
+    margin-top: 4px;
+}

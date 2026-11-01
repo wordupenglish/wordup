@@ -18,6 +18,8 @@ const WORDUP_LESSON_SCHEMA = {
     introduction: "",
 
     explanation: "",
+    transcript: "",
+    readingPassage: "",
 
     learningPoints: [],
 

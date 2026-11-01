@@ -797,6 +797,28 @@
 
         `;
 
+        if (lesson.transcript) {
+            html += `
+                <h3>Listening passage</h3>
+                <p>Listen to the passage first. Then reveal the transcript to check your understanding.</p>
+                <button type="button" class="wu-listen-passage" data-speak="${esc(lesson.transcript)}" onclick="wordUpSpeakTextFromButton(this)">
+                    <span aria-hidden="true">&#9654;</span> Play listening passage
+                </button>
+                <details class="wu-transcript-reveal">
+                    <summary>Reveal transcript</summary>
+                    <p>${esc(lesson.transcript)}</p>
+                </details>
+            `;
+        }
+
+        if (lesson.readingPassage) {
+            html += `
+                <h3>Reading passage</h3>
+                <div class="wu-reading-passage">
+                    ${speakableLessonText(lesson.readingPassage)}
+                </div>
+            `;
+        }
         if (lesson.rules?.length) {
             html += `
                 <h3>Key rules</h3>
@@ -847,6 +869,42 @@
             `;
         }
 
+        if (lesson.activities?.length) {
+            html += `
+                <h3>Activities</h3>
+                <ul class="wu-activities-list">
+                    ${lesson.activities.map(activity => {
+                        const prompt = typeof activity === "string" ? activity : (activity.instruction || activity.prompt || activity.question || activity.text || "Learning activity");
+                        return `<li>${speakableLessonText(prompt)}</li>`;
+                    }).join("")}
+                </ul>
+            `;
+        }
+        if (lesson.guidedPractice?.length) {
+            html += `
+                <h3>Guided practice</h3>
+                <ul class="wu-guided-practice-list">
+                    ${lesson.guidedPractice.map(task => {
+                        const prompt = typeof task === "string" ? task : (task.question || task.prompt || task.text || task.instruction || "Guided task");
+                        return `<li>${speakableLessonText(prompt)}</li>`;
+                    }).join("")}
+                </ul>
+            `;
+        }
+        if (lesson.independentPractice?.length) {
+            html += `
+                <h3>Independent practice</h3>
+                <div class="wu-independent-practice">
+                    ${lesson.independentPractice.map((task, index) => {
+                        const prompt = typeof task === "string" ? task : (task.question || task.prompt || task.text || task.instruction || "Independent task");
+                        const responseField = lesson.skill === "speaking"
+                            ? '<p class="wu-speaking-instruction">Speak your response aloud. If possible, record yourself and review your fluency and pronunciation.</p>'
+                            : renderWrittenResponse(lesson, "independent", index, "Complete this independent task here...");
+                        return `<section class="wu-independent-task"><strong>${index + 1}. ${speakableLessonText(prompt)}</strong>${responseField}</section>`;
+                    }).join("")}
+                </div>
+            `;
+        }
         html += `
 
             </article>
@@ -872,164 +930,104 @@
         document.getElementById("wuLessonPanel").innerHTML = html;
     }
 
+    function writtenResponseKey(lessonId, section, index) {
+        return "wordupWrittenResponseV1:" + String(lessonId) + ":" + section + ":" + index;
+    }
+
+    function getWrittenResponse(lessonId, section, index) {
+        try {
+            return window.localStorage.getItem(writtenResponseKey(lessonId, section, index)) || "";
+        } catch (error) {
+            return "";
+        }
+    }
+
+    function saveWrittenResponse(element) {
+        if (!element || !element.dataset || !element.dataset.wuResponseKey) return;
+        try {
+            window.localStorage.setItem(element.dataset.wuResponseKey, element.value || "");
+        } catch (error) {
+            const status = element.parentElement && element.parentElement.querySelector(".wu-response-status");
+            if (status) status.textContent = "Your browser could not save this draft.";
+        }
+    }
+
+    function renderWrittenResponse(lesson, section, index, placeholder) {
+        const key = writtenResponseKey(lesson.id, section, index);
+        const fieldId = "wuResponse" + section + index;
+        return '<label class="wu-response-label" for="' + fieldId + '">Your response</label>' +
+            '<textarea class="wu-response-input" id="' + fieldId + '" data-wu-response-key="' + esc(key) + '" oninput="wordUpSaveWrittenResponse(this)" placeholder="' + esc(placeholder || "Write your response here...") + '">' +
+            esc(getWrittenResponse(lesson.id, section, index)) + '</textarea>' +
+            '<small class="wu-response-status" aria-live="polite">Drafts are saved on this device.</small>';
+    }
     function renderPractice() {
         const lesson = currentLesson;
         const questions = lesson.practice || [];
-
         if (!questions.length) {
-            document.getElementById("wuLessonPanel").innerHTML = `
-                <div class="wu-course-empty">
-                    <h2>No practice questions yet.</h2>
-                    <button class="primary"
-                        onclick="wordUpCourseTab('test')">
-                        Continue to Test \u2192
-                    </button>
-                </div>
-            `;
+            document.getElementById("wuLessonPanel").innerHTML = '<div class="wu-course-empty"><h2>No practice questions yet.</h2><button class="primary" onclick="wordUpCourseTab(\'test\')">Continue to Test \u2192</button></div>';
             return;
         }
-
-        document.getElementById("wuLessonPanel").innerHTML = `
-
-            <div class="wu-practice-header">
-                <span>PRACTICE</span>
-                <strong>${questions.length} questions</strong>
-                <small>Practice is for learning. Your test is scored.</small>
-            </div>
-
-            <div class="wu-question-list">
-
-                ${questions.map((q, index) => {
-
-                    const answer =
-                        q.answer ??
-                        q.correctAnswer ??
-                        q.correct;
-
-                    return `
-                        <article
-                            class="wu-question-card"
-                            data-practice-question="${index}">
-
-                            <strong>
-                                ${index + 1}. ${esc(
-                                    q.question ||
-                                    q.prompt ||
-                                    q.text ||
-                                    "Question"
-                                )}
-                            </strong>
-
-                            <div class="wu-question-options">
-
-                                ${(q.options || []).map((option, i) => `
-                                    <button
-                                        onclick="wordUpPracticeAnswer(
-                                            ${index},
-                                            ${i},
-                                            ${JSON.stringify(answer)}
-                                        )">
-                                        ${esc(option)}
-                                    </button>
-                                `).join("")}
-
-                            </div>
-
-                            <div
-                                class="wu-question-feedback"
-                                id="wuPracticeFeedback${index}">
-                            </div>
-
-                        </article>
-                    `;
-
-                }).join("")}
-
-            </div>
-
-            <div class="wu-learning-actions">
-
-                <button
-                    class="primary"
-                    onclick="wordUpCourseTab('test')">
-                    Take Final Test \u2192
-                </button>
-
-            </div>
-        `;
+        const cards = questions.map((q, index) => {
+            const options = Array.isArray(q.options) ? q.options : [];
+            const answer = q && typeof q === "object" ? (q.answer ?? q.correctAnswer ?? q.correct) : undefined;
+            const prompt = esc(typeof q === "string" ? q : (q.question || q.prompt || q.text || q.instruction || "Practice task"));
+            let interaction = "";
+            if (options.length && answer !== null && answer !== undefined) {
+                interaction = '<div class="wu-question-options">' + options.map((option, i) =>
+                    '<button onclick="wordUpPracticeAnswer(' + index + ',' + i + ',' + JSON.stringify(answer) + ')">' + esc(option) + '</button>'
+                ).join("") + '</div><div class="wu-question-feedback" id="wuPracticeFeedback' + index + '"></div>';
+            } else {
+                interaction = lesson.skill === "speaking"
+                    ? '<p class="wu-response-instruction">Speak your response aloud. Record yourself if possible, then review clarity, fluency, and pronunciation.</p>'
+                    : '<p class="wu-response-instruction">This is an open-response task. Write your answer below; it is not automatically graded.</p>' +
+                    renderWrittenResponse(lesson, "practice", index, "Write your answer or complete the task here...");
+            }
+            return '<article class="wu-question-card" data-practice-question="' + index + '"><strong>' + (index + 1) + '. ' + prompt + '</strong>' + interaction + '</article>';
+        }).join("");
+        document.getElementById("wuLessonPanel").innerHTML =
+            '<div class="wu-practice-header"><span>PRACTICE</span><strong>' + questions.length + ' tasks</strong><small>Choose an answer for multiple-choice questions or write a response for open-ended tasks.</small></div>' +
+            '<div class="wu-question-list">' + cards + '</div>' +
+            '<div class="wu-learning-actions"><button class="primary" onclick="wordUpCourseTab(\'test\')">Continue to Final Assessment \u2192</button></div>';
     }
-
     let testAnswers = {};
 
     function renderTest() {
         const lesson = currentLesson;
         const questions = lesson.test || [];
-
         testAnswers = {};
-
         if (!questions.length) {
-            document.getElementById("wuLessonPanel").innerHTML = `
-                <div class="wu-course-empty">
-                    <h2>No test questions yet.</h2>
-                    <p>This lesson needs assessment content before it can be tested.</p>
-                </div>
-            `;
+            document.getElementById("wuLessonPanel").innerHTML = '<div class="wu-course-empty"><h2>No assessment tasks yet.</h2><p>This lesson needs assessment content.</p></div>';
             return;
         }
-
-        document.getElementById("wuLessonPanel").innerHTML = `
-
-            <div class="wu-test-header">
-                <span>FINAL ASSESSMENT</span>
-                <strong>${questions.length} questions</strong>
-                <small>70% is required to pass.</small>
-            </div>
-
-            <div class="wu-question-list">
-
-                ${questions.map((q, index) => `
-                    <article class="wu-question-card">
-
-                        <strong>
-                            ${index + 1}. ${esc(
-                                q.question ||
-                                q.prompt ||
-                                q.text ||
-                                "Question"
-                            )}
-                        </strong>
-
-                        <div class="wu-question-options">
-
-                            ${(q.options || []).map((option, i) => `
-                                <button
-                                    data-test-question="${index}"
-                                    onclick="wordUpSelectTestAnswer(${index},${i})">
-                                    ${esc(option)}
-                                </button>
-                            `).join("")}
-
-                        </div>
-
-                    </article>
-                `).join("")}
-
-            </div>
-
-            <div class="wu-test-submit">
-
-                <button
-                    class="primary big"
-                    onclick="wordUpSubmitTest()">
-                    Submit Test
-                </button>
-
-            </div>
-
-            <div id="wuTestResult"></div>
-        `;
+        const hasWritten = questions.some(q => {
+            const options = Array.isArray(q.options) ? q.options : [];
+            const answer = q.answer ?? q.correctAnswer ?? q.correct;
+            return !options.length || answer === null || answer === undefined;
+        });
+        const cards = questions.map((q, index) => {
+            const options = Array.isArray(q.options) ? q.options : [];
+            const answer = q.answer ?? q.correctAnswer ?? q.correct;
+            const prompt = esc(typeof q === "string" ? q : (q.question || q.prompt || q.text || q.instruction || "Assessment task"));
+            const written = !options.length || answer === null || answer === undefined;
+            if (written) {
+                const rubric = Array.isArray(q.rubric) ? q.rubric : (Array.isArray(q.criteria) ? q.criteria : []);
+                const rubricHtml = rubric.length ? '<ul class="wu-assessment-rubric">' + rubric.map(item => '<li>' + esc(item) + '</li>').join("") + '</ul>' : '';
+                const responseControl = lesson.skill === "speaking"
+                    ? '<p class="wu-speaking-instruction">Perform this task aloud. Record your response if possible, then review it against the lesson objective and criteria.</p><label class="wu-speaking-check"><input type="checkbox" id="wuSpeakingTask' + index + '"> I completed this speaking task and reviewed my performance.</label>'
+                    : renderWrittenResponse(lesson, "test", index, "Complete the assessment task here...");
+                return '<article class="wu-question-card wu-written-assessment"><strong>' + (index + 1) + '. ' + prompt + '</strong>' + rubricHtml + responseControl + '</article>';
+            }
+            return '<article class="wu-question-card"><strong>' + (index + 1) + '. ' + prompt + '</strong><div class="wu-question-options">' +
+                options.map((option, i) => '<button data-test-question="' + index + '" onclick="wordUpSelectTestAnswer(' + index + ',' + i + ')">' + esc(option) + '</button>').join("") +
+                '</div></article>';
+        }).join("");
+        document.getElementById("wuLessonPanel").innerHTML =
+            '<div class="wu-test-header"><span>FINAL ASSESSMENT</span><strong>' + questions.length + ' tasks</strong><small>' +
+            (hasWritten ? (lesson.skill === "speaking" ? 'Speaking tasks require self-review and are not automatically graded.' : 'Written responses are saved on this device and are not automatically graded.') : '70% is required to pass.') + '</small></div>' +
+            '<div class="wu-question-list">' + cards + '</div>' +
+            '<div class="wu-test-submit"><button class="primary big" onclick="wordUpSubmitTest()">' + (hasWritten ? (lesson.skill === "speaking" ? 'Submit Speaking Self-Assessment' : 'Save Written Assessment') : 'Submit Test') + '</button></div>' +
+            '<div id="wuTestResult" aria-live="polite"></div>';
     }
-
     function practiceAnswer(questionIndex, selectedIndex, answer) {
         const card =
             document.querySelector(
@@ -1045,8 +1043,12 @@
             button.disabled = true;
         });
 
-        const correct =
-            String(selectedIndex) === String(answer);
+        const answerText = String(answer ?? "").trim();
+        const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+        const selectedText = buttons[selectedIndex] ? buttons[selectedIndex].textContent.trim() : "";
+        const correct = numericAnswer
+            ? Number(selectedIndex) === Number(answerText)
+            : selectedText === answerText;
 
         if (buttons[selectedIndex]) {
             buttons[selectedIndex].classList.add(
@@ -1086,129 +1088,84 @@
     function submitTest() {
         const lesson = currentLesson;
         const questions = lesson.test || [];
-
         if (!questions.length) return;
-
-        let correct = 0;
-
-        questions.forEach((q, index) => {
-
-            const answer =
-                q.answer ??
-                q.correctAnswer ??
-                q.correct;
-
-            if (
-                Number(testAnswers[index]) ===
-                Number(answer)
-            ) {
-                correct++;
-            }
+        const writtenQuestions = questions.map((q, index) => ({ q, index })).filter(item => {
+            const options = Array.isArray(item.q.options) ? item.q.options : [];
+            const answer = item.q.answer ?? item.q.correctAnswer ?? item.q.correct;
+            return !options.length || answer === null || answer === undefined;
         });
-
-        const score =
-            Math.round(
-                correct /
-                questions.length *
-                100
-            );
-
-        const passed = score >= 70;
-
-        if (typeof window.wordUpCompleteTest === "function") {
-            window.wordUpCompleteTest(
-                lesson.id,
-                score
-            );
-        }
-
-        if (passed &&
-            typeof window.wordUpCompleteLesson === "function") {
-            window.wordUpCompleteLesson(
-                lesson.id
-            );
-        }
-
-        const result =
-            document.getElementById("wuTestResult");
-
-        result.innerHTML = `
-
-            <div class="
-                wu-test-result
-                ${passed ? "passed" : "failed"}
-            ">
-
-                <div class="wu-result-icon">
-                    ${passed ? "\u{1F389}" : "\u{1F4DA}"}
-                </div>
-
-                <h2>
-                    ${passed ? "Test passed!" : "Keep practicing."}
-                </h2>
-
-                <strong class="wu-result-score">
-                    ${score}%
-                </strong>
-
-                <p>
-                    You answered
-                    <strong>${correct}</strong>
-                    of
-                    <strong>${questions.length}</strong>
-                    correctly.
-                </p>
-
-                ${
-                    passed
-                    ? `
-                        <p>
-                            Excellent. This lesson is now recorded
-                            as completed.
-                        </p>
-                    `
-                    : `
-                        <p>
-                            You need at least 70%.
-                            Review the lesson and try again.
-                        </p>
-                    `
+        const result = document.getElementById("wuTestResult");
+        if (writtenQuestions.length) {
+            const missing = writtenQuestions.filter(item => {
+                if (lesson.skill === "speaking") {
+                    const check = document.getElementById("wuSpeakingTask" + item.index);
+                    return !check || !check.checked;
                 }
-
-                <div class="wu-learning-actions">
-
-                    ${
-                        passed
-                        ? `
-                            <button
-                                class="primary"
-                                onclick="wordUpCourseNextLesson()">
-                                Next Lesson \u2192
-                            </button>
-                        `
-                        : `
-                            <button
-                                class="primary"
-                                onclick="wordUpCourseTab('practice')">
-                                Practice Again
-                            </button>
-                        `
-                    }
-
-                    <button
-                        class="secondary"
-                        onclick="wordUpCourseBack()">
-                        Back to Lessons
-                    </button>
-
-                </div>
-
-            </div>
-        `;
-
+                const field = document.getElementById("wuResponsetest" + item.index);
+                return !field || !field.value.trim();
+            });
+            if (missing.length) {
+                result.innerHTML = '<div class="wu-feedback-bad">Please complete and review every performance task before submitting.</div>';
+                const first = lesson.skill === "speaking"
+                    ? document.getElementById("wuSpeakingTask" + missing[0].index)
+                    : document.getElementById("wuResponsetest" + missing[0].index);
+                if (first) first.focus();
+                return;
+            }
+            const multipleChoice = questions.map((q, index) => ({ q, index })).filter(item => {
+                const options = Array.isArray(item.q.options) ? item.q.options : [];
+                const answer = item.q.answer ?? item.q.correctAnswer ?? item.q.correct;
+                return options.length > 0 && answer !== null && answer !== undefined;
+            });
+            const unanswered = multipleChoice.filter(item => testAnswers[item.index] === undefined);
+            if (unanswered.length) {
+                result.innerHTML = '<div class="wu-feedback-bad">Please answer every multiple-choice question as well.</div>';
+                const firstButton = document.querySelector('[data-test-question="' + unanswered[0].index + '"]');
+                if (firstButton) firstButton.focus();
+                return;
+            }
+            if (lesson.skill !== "speaking") {
+                writtenQuestions.forEach(item => {
+                    const field = document.getElementById("wuResponsetest" + item.index);
+                    if (field) saveWrittenResponse(field);
+                });
+            }
+            const mcqCorrect = multipleChoice.filter(item => {
+                const answer = item.q.answer ?? item.q.correctAnswer ?? item.q.correct;
+                const answerText = String(answer ?? "").trim();
+                const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+                const selectedOption = Array.isArray(item.q.options) ? item.q.options[Number(testAnswers[item.index])] : undefined;
+                return numericAnswer
+                    ? Number(testAnswers[item.index]) === Number(answerText)
+                    : String(selectedOption ?? "").trim() === answerText;
+            }).length;
+            const mcqSummary = multipleChoice.length
+                ? '<p>Multiple-choice section: <strong>' + mcqCorrect + ' / ' + multipleChoice.length + '</strong> correct. This is not an overall assessment score.</p>'
+                : '';
+            const performanceMessage = lesson.skill === "speaking"
+                ? '<p>You confirmed that you completed and reviewed the spoken tasks. Speaking performance has not been scored automatically; use the lesson criteria or ask your teacher for feedback.</p>'
+                : '<p>Your written responses have been saved on this device. The written portion requires human or rubric-based evaluation, so WordUp has not assigned an overall score or marked the lesson as passed.</p><p>Review your work against the lesson objectives and assessment criteria, or share it with your teacher for feedback.</p>';
+            result.innerHTML = '<div class="wu-test-result"><h2>' + (lesson.skill === "speaking" ? 'Speaking self-assessment recorded' : 'Assessment responses saved') + '</h2>' + mcqSummary + performanceMessage + '</div>';
+            return;
+        }
+        let correct = 0;
+        questions.forEach((q, index) => {
+            const answer = q.answer ?? q.correctAnswer ?? q.correct;
+            const answerText = String(answer ?? "").trim();
+            const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+            const selectedOption = Array.isArray(q.options) ? q.options[Number(testAnswers[index])] : undefined;
+            const isCorrect = numericAnswer
+                ? Number(testAnswers[index]) === Number(answerText)
+                : String(selectedOption ?? "").trim().toLowerCase() === answerText.toLowerCase();
+            if (isCorrect) correct++;
+        });
+        const score = Math.round(correct / questions.length * 100);
+        const passed = score >= 70;
+        if (typeof window.wordUpCompleteTest === "function") window.wordUpCompleteTest(lesson.id, score);
+        if (passed && typeof window.wordUpCompleteLesson === "function") window.wordUpCompleteLesson(lesson.id);
+        result.innerHTML = '<div class="wu-test-result ' + (passed ? 'passed' : 'failed') + '"><h2>' + (passed ? 'Test passed!' : 'Keep practicing.') + '</h2><strong class="wu-result-score">' + score + '%</strong><p>You answered <strong>' + correct + '</strong> of <strong>' + questions.length + '</strong> correctly.</p><p>' + (passed ? 'Excellent. This lesson is now recorded as completed.' : 'You need at least 70%. Review the lesson and try again.') + '</p><div class="wu-learning-actions">' + (passed ? '<button class="primary" onclick="wordUpCourseNextLesson()">Next Lesson \u2192</button>' : '<button class="primary" onclick="wordUpCourseTab(\'practice\')">Practice Again</button>') + '<button class="secondary" onclick="wordUpCourseBack()">Back to Lessons</button></div></div>';
         updateStatsSafely();
     }
-
     function completeLesson() {
         if (!currentLesson) return;
 
@@ -1390,6 +1347,8 @@ function openHomeSkill(skill) {
 
     window.wordUpPracticeAnswer =
         practiceAnswer;
+    window.wordUpSaveWrittenResponse =
+        saveWrittenResponse;
 
     window.wordUpSelectTestAnswer =
         selectTestAnswer;

@@ -34,8 +34,25 @@ const b2CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places advanced clauses in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "form",
+        "meaning": "The grammatical structure used to express a particular meaning."
+      },
+      {
+        "word": "function",
+        "meaning": "The communicative purpose a grammatical structure performs in context."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality and style appropriate to a particular audience and situation."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a grammatical structure without checking the intended meaning and context.",
+      "Do not treat a formally possible structure as automatically natural in every register.",
+      "Do not overlook agreement, word order, or verb complementation when revising a complex sentence."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -92,25 +109,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Which sentence demonstrates accurate use of advanced clauses?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Write a sentence using advanced clauses accurately in a meaningful context.",
+        "question": "Write four original sentences that demonstrate advanced clauses accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to advanced clauses and explain the correction.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Advanced Clauses?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Identify the form and function associated with Advanced Clauses.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which error should a learner avoid when using Advanced Clauses?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate advanced clauses accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -159,8 +197,25 @@ const b2CompleteLessons = [
       "The information presented in the report was carefully checked."
     ],
     "context": "The structure is particularly useful when writing concise descriptions of a team planning meeting.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "antecedent",
+        "meaning": "The noun or noun phrase that a relative clause describes."
+      },
+      {
+        "word": "reduced relative clause",
+        "meaning": "A shortened relative clause in which a relative pronoun and sometimes a form of be are omitted."
+      },
+      {
+        "word": "non-finite clause",
+        "meaning": "A clause whose verb is not marked for tense, such as an -ing or participle clause."
+      }
+    ],
+    "mistakes": [
+      "Do not reduce a clause if the result makes the relationship or intended meaning unclear.",
+      "Do not use a present participle when the noun has a passive relationship with the action.",
+      "Do not leave out a required relative pronoun in a clause that cannot be reduced."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -217,30 +272,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate reduced relative clauses accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of reduced relative clauses?",
+        "question": "Which principle should guide the use of Reduced Relative Clauses?",
         "options": [
-          "The report submitted yesterday requires further review.",
-          "The report submitting yesterday requires further review.",
-          "The report was submit yesterday requires further review.",
-          "The report submission yesterday requiring further review."
+          "Choose the structure only by sentence length.",
+          "Identify the relationship between the full clauses before reducing them.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Reduce or combine two clauses while preserving the meaning of reduced relative clauses.",
+        "question": "Which error should a learner avoid when using Reduced Relative Clauses?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not reduce a clause if the result makes the relationship or intended meaning unclear.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate reduced relative clauses accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Explain what information can be removed without changing the intended relationship.",
-        "options": [],
-        "answer": null
-      },
-      {
-        "question": "Write a formal sentence using the target structure.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -289,8 +360,25 @@ const b2CompleteLessons = [
       "The report, published in March, attracted considerable attention."
     ],
     "context": "Participle clauses are used to make formal descriptions and reports more concise in a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "present participle",
+        "meaning": "The -ing form used in a non-finite clause, often for active or simultaneous meaning."
+      },
+      {
+        "word": "past participle",
+        "meaning": "The -ed or irregular participle form commonly used for passive or completed meaning."
+      },
+      {
+        "word": "dangling modifier",
+        "meaning": "A modifier whose understood subject does not match the subject of the main clause."
+      }
+    ],
+    "mistakes": [
+      "Do not use a participle clause when its understood subject differs from the main-clause subject.",
+      "Do not confuse an active -ing meaning with a passive past-participle meaning.",
+      "Do not omit the time or logical relationship when it is needed for clarity."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -357,35 +445,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Choose the best reduced form: Because she had reviewed the data, she changed the conclusion.",
-        "options": [
-          "Having reviewed the data, she changed the conclusion.",
-          "Reviewed the data, having she changed the conclusion.",
-          "Reviewing the data, the conclusion changed her.",
-          "Having reviewing the data, she changed the conclusion."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which sentence has a correctly matched subject?",
-        "options": [
-          "Walking into the meeting, the manager checked the agenda.",
-          "Walking into the meeting, the agenda was checked.",
-          "Walking into the meeting, the chairs were arranged.",
-          "Walking into the meeting, the report was interesting."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Combine two related sentences by using a participle clause.",
+        "question": "Write four original sentences that demonstrate participle clauses accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Write one sentence using a past participle clause to express a passive relationship.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Participle Clauses?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence.",
+          "Use -ing clauses when the understood subject performs the action."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which error should a learner avoid when using Participle Clauses?",
+        "options": [
+          "Do not use a participle clause when its understood subject differs from the main-clause subject.",
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Write three original sentences that demonstrate participle clauses accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -434,8 +533,25 @@ const b2CompleteLessons = [
       "A skilled speaker changes the structure when the intended emphasis changes."
     ],
     "context": "Learners encounter advanced conditionals while discussing a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "protasis",
+        "meaning": "The if-clause or condition in a conditional construction."
+      },
+      {
+        "word": "apodosis",
+        "meaning": "The main clause expressing the result of the condition."
+      },
+      {
+        "word": "counterfactual",
+        "meaning": "A situation presented as contrary to known or assumed facts."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a conditional form by tense alone; consider whether the condition is real, hypothetical, or counterfactual.",
+      "Do not mix time references unless the meaning genuinely requires a mixed conditional.",
+      "Do not use would in the if-clause of a standard conditional without a special pragmatic reason."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -502,35 +618,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Which sentence best demonstrates controlled use of Advanced Conditionals?",
-        "options": [
-          "The revised report presents the information in a logically controlled way.",
-          "The revised report information presents controlled logically.",
-          "The report revised presenting information control.",
-          "The information report is logically presenting revise."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which choice is most appropriate in formal communication involving Advanced Conditionals?",
-        "options": [
-          "The speaker chooses the form according to the intended meaning.",
-          "The speaker chooses any form because the meaning is unchanged.",
-          "The speaker avoids the grammatical structure completely.",
-          "The speaker changes the word order without considering meaning."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Create two original sentences that demonstrate advanced conditionals in a meaningful context.",
+        "question": "Write four original sentences that demonstrate advanced conditionals accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Explain why your grammatical choice is appropriate for the meaning you intended.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Advanced Conditionals?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Identify the grammatical form required by Advanced Conditionals.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which error should a learner avoid when using Advanced Conditionals?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register.",
+          "Do not choose a conditional form by tense alone; consider whether the condition is real, hypothetical, or counterfactual."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Write three original sentences that demonstrate advanced conditionals accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -579,8 +706,25 @@ const b2CompleteLessons = [
       "If he were less cautious, he would have taken the opportunity last year."
     ],
     "context": "The target structure is used to connect past decisions with present consequences and present characteristics with hypothetical past outcomes in a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "protasis",
+        "meaning": "The if-clause or condition in a conditional construction."
+      },
+      {
+        "word": "apodosis",
+        "meaning": "The main clause expressing the result of the condition."
+      },
+      {
+        "word": "counterfactual",
+        "meaning": "A situation presented as contrary to known or assumed facts."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a conditional form by tense alone; consider whether the condition is real, hypothetical, or counterfactual.",
+      "Do not mix time references unless the meaning genuinely requires a mixed conditional.",
+      "Do not use would in the if-clause of a standard conditional without a special pragmatic reason."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -647,35 +791,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "The project is still delayed because the team did not plan carefully. Which sentence expresses this meaning?",
-        "options": [
-          "If the team had planned carefully, the project would not be delayed now.",
-          "If the team plans carefully, the project would not have been delayed.",
-          "If the team planned carefully, the project is not delayed now.",
-          "If the team had planned carefully, the project would not have delayed."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Mina lacks confidence now because she did not receive enough training earlier.",
-        "options": [
-          "If Mina had received more training, she would be more confident now.",
-          "If Mina received more training, she would have been confident now.",
-          "If Mina had received more training, she would have been confident yesterday.",
-          "If Mina receives more training, she would have been confident."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Rewrite a past-to-present situation using a mixed conditional.",
+        "question": "Write four original sentences that demonstrate mixed conditionals accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Rewrite a present-condition-to-past-result situation using a mixed conditional.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Mixed Conditionals?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence.",
+          "Use a past condition with a present result when a past event has a continuing consequence: If + past perfect, would + base verb."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which error should a learner avoid when using Mixed Conditionals?",
+        "options": [
+          "Do not choose a conditional form by tense alone; consider whether the condition is real, hypothetical, or counterfactual.",
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Write three original sentences that demonstrate mixed conditionals accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -724,8 +879,25 @@ const b2CompleteLessons = [
       "Not until the evidence was reviewed did the committee change its position."
     ],
     "context": "Inversion is used to create controlled emphasis in formal discussion of a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "subject–auxiliary inversion",
+        "meaning": "Changing auxiliary and subject order after a fronted negative or restrictive expression."
+      },
+      {
+        "word": "negative adverbial",
+        "meaning": "An expression such as never, rarely, or under no circumstances that triggers inversion when fronted."
+      },
+      {
+        "word": "auxiliary operator",
+        "meaning": "The helping verb that moves before the subject in an inverted clause."
+      }
+    ],
+    "mistakes": [
+      "Do not invert the subject and verb after every fronted adverbial; inversion is required only with particular negative or restrictive expressions.",
+      "Do not use the past form after did; use the base form of the main verb.",
+      "Do not omit the auxiliary when the clause requires one."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -792,35 +964,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Choose the correct sentence.",
-        "options": [
-          "Never have I seen such a detailed analysis.",
-          "Never I have seen such a detailed analysis.",
-          "Never did I saw such a detailed analysis.",
-          "Never have seen I such a detailed analysis."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Choose the correct continuation: Only after the results were checked...",
-        "options": [
-          "did the researchers publish the report.",
-          "the researchers published the report did.",
-          "the researchers did publish the report.",
-          "published did the researchers the report."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Rewrite a normal sentence using negative inversion for emphasis.",
+        "question": "Write four original sentences that demonstrate inversion accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Write a formal sentence beginning with Only after, Never, or Rarely.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Inversion?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "After a negative or restrictive expression placed first, invert the auxiliary and subject.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which error should a learner avoid when using Inversion?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register.",
+          "Do not invert the subject and verb after every fronted adverbial; inversion is required only with particular negative or restrictive expressions."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Write three original sentences that demonstrate inversion accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -869,8 +1052,25 @@ const b2CompleteLessons = [
       "The main issue is not cost but whether the proposal is practical."
     ],
     "context": "Information structure helps speakers and writers control emphasis while discussing a team planning meeting.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "cleft construction",
+        "meaning": "A structure that divides a message into two clauses to give one element special focus."
+      },
+      {
+        "word": "focus constituent",
+        "meaning": "The element highlighted as especially important in a sentence."
+      },
+      {
+        "word": "pseudo-cleft",
+        "meaning": "A construction often beginning with what, where, or why that places focus at the end of the clause."
+      }
+    ],
+    "mistakes": [
+      "Do not use a cleft construction when it creates unnecessary emphasis or an awkward sentence.",
+      "Do not confuse it-clefts with pseudo-clefts; their clause patterns differ.",
+      "Do not separate a focus phrase from the grammatical structure that introduces it."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -937,35 +1137,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Which sentence gives strongest focus to the evidence?",
-        "options": [
-          "It was the evidence that changed the conclusion.",
-          "The evidence changed that was the conclusion.",
-          "The evidence it changed the conclusion was.",
-          "Changed the conclusion was the evidence it."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which sentence uses fronting appropriately?",
-        "options": [
-          "What the team needed was a clearer procedure.",
-          "What the team needed was need a clearer procedure.",
-          "The team what needed was clearer procedure.",
-          "Needed what the team was a clearer procedure."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Rewrite a sentence so that cleft sentences creates a different focus.",
+        "question": "Write four original sentences that demonstrate cleft sentences accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Explain which information your revised sentence foregrounds.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Cleft Sentences?",
+        "options": [
+          "Identify the information the speaker or writer wants to foreground.",
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which error should a learner avoid when using Cleft Sentences?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Do not use a cleft construction when it creates unnecessary emphasis or an awkward sentence.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Write three original sentences that demonstrate cleft sentences accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1014,8 +1225,25 @@ const b2CompleteLessons = [
       "The main issue is not cost but whether the proposal is practical."
     ],
     "context": "Information structure helps speakers and writers control emphasis while discussing a team planning meeting.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "form",
+        "meaning": "The grammatical structure used to express a particular meaning."
+      },
+      {
+        "word": "function",
+        "meaning": "The communicative purpose a grammatical structure performs in context."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality and style appropriate to a particular audience and situation."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a grammatical structure without checking the intended meaning and context.",
+      "Do not treat a formally possible structure as automatically natural in every register.",
+      "Do not overlook agreement, word order, or verb complementation when revising a complex sentence."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1082,35 +1310,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Which sentence gives strongest focus to the evidence?",
-        "options": [
-          "It was the evidence that changed the conclusion.",
-          "The evidence changed that was the conclusion.",
-          "The evidence it changed the conclusion was.",
-          "Changed the conclusion was the evidence it."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which sentence uses fronting appropriately?",
-        "options": [
-          "What the team needed was a clearer procedure.",
-          "What the team needed was need a clearer procedure.",
-          "The team what needed was clearer procedure.",
-          "Needed what the team was a clearer procedure."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Rewrite a sentence so that emphasis creates a different focus.",
+        "question": "Write four original sentences that demonstrate emphasis accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Explain which information your revised sentence foregrounds.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Emphasis?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Identify the information the speaker or writer wants to foreground.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which error should a learner avoid when using Emphasis?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate emphasis accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1159,8 +1398,25 @@ const b2CompleteLessons = [
       "The proposal was rejected after the evidence had been reviewed."
     ],
     "context": "Passive structures are especially useful when describing processes, procedures, and evidence in a team planning meeting.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "agent",
+        "meaning": "The person or thing that performs the action, sometimes introduced by by."
+      },
+      {
+        "word": "patient",
+        "meaning": "The person or thing affected by the action."
+      },
+      {
+        "word": "passive construction",
+        "meaning": "A verb phrase formed with be or get plus a past participle."
+      }
+    ],
+    "mistakes": [
+      "Do not use the passive when the agent and action are both important and an active sentence is clearer.",
+      "Do not omit the auxiliary be from a finite passive construction.",
+      "Do not use the wrong past participle form."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1227,35 +1483,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Choose the correct passive form.",
-        "options": [
-          "The samples were analysed under controlled conditions.",
-          "The samples analysed were under controlled conditions.",
-          "The samples were analyse under controlled conditions.",
-          "The samples have analyse under controlled conditions."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which sentence appropriately backgrounds the agent?",
-        "options": [
-          "The proposal was approved after further review.",
-          "The committee was approved the proposal.",
-          "The proposal approved the committee.",
-          "The committee approved was the proposal."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Transform an active sentence into a passive sentence while preserving its tense.",
+        "question": "Write four original sentences that demonstrate advanced passive accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Write one sentence in which the agent is deliberately omitted because it is not important.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Advanced Passive?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Form the passive with an appropriate form of be plus the past participle.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which error should a learner avoid when using Advanced Passive?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not use the passive when the agent and action are both important and an active sentence is clearer.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate advanced passive accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1304,8 +1571,25 @@ const b2CompleteLessons = [
       "The participant admitted that she had misunderstood the question."
     ],
     "context": "Reported speech is useful when summarising statements from interviews, meetings, and discussions about a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "reporting verb",
+        "meaning": "A verb such as claim, admit, or explain that introduces reported information."
+      },
+      {
+        "word": "backshift",
+        "meaning": "A change to a past verb form when reporting from a later time perspective."
+      },
+      {
+        "word": "deictic expression",
+        "meaning": "A time or place expression whose reference depends on the speaker's context."
+      }
+    ],
+    "mistakes": [
+      "Do not backshift mechanically when the reported information is still true or relevant.",
+      "Do not retain time and place expressions if the reporting context has changed.",
+      "Do not confuse say with tell; tell normally requires an object."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1372,35 +1656,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Direct: â€œWe need more evidence.â€ Reported correctly:",
-        "options": [
-          "The researchers said that they needed more evidence.",
-          "The researchers said that we need more evidence yesterday.",
-          "The researchers said that they need more evidence had.",
-          "The researchers said they needed more evidences."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which reporting verb best fits a statement expressing uncertainty?",
-        "options": [
-          "suggested",
-          "ordered",
-          "denied",
-          "promised"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Report a statement made by a colleague during a discussion.",
+        "question": "Write four original sentences that demonstrate reported speech accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Choose a reporting verb that accurately reflects certainty, doubt, agreement, or disagreement.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Reported Speech?",
+        "options": [
+          "Change pronouns and time references when the reporting context requires it.",
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which error should a learner avoid when using Reported Speech?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Do not backshift mechanically when the reported information is still true or relevant.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Write three original sentences that demonstrate reported speech accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1449,8 +1744,25 @@ const b2CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places substitution in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "form",
+        "meaning": "The grammatical structure used to express a particular meaning."
+      },
+      {
+        "word": "function",
+        "meaning": "The communicative purpose a grammatical structure performs in context."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality and style appropriate to a particular audience and situation."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a grammatical structure without checking the intended meaning and context.",
+      "Do not treat a formally possible structure as automatically natural in every register.",
+      "Do not overlook agreement, word order, or verb complementation when revising a complex sentence."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1507,25 +1819,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Which sentence demonstrates accurate use of substitution?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Write a sentence using substitution accurately in a meaningful context.",
+        "question": "Write four original sentences that demonstrate substitution accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to substitution and explain the correction.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Substitution?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Identify the form and function associated with Substitution.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which error should a learner avoid when using Substitution?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate substitution accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1574,8 +1907,25 @@ const b2CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places ellipsis in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "ellipsis",
+        "meaning": "The omission of recoverable words without loss of the intended meaning."
+      },
+      {
+        "word": "substitution",
+        "meaning": "Replacing a repeated word or phrase with a pro-form such as one, do, or so."
+      },
+      {
+        "word": "antecedent",
+        "meaning": "The earlier expression that supplies the meaning of an omitted or substituted element."
+      }
+    ],
+    "mistakes": [
+      "Do not omit information that the reader or listener cannot recover from context.",
+      "Do not confuse ellipsis with an ungrammatical sentence fragment.",
+      "Do not use a substitute whose reference is ambiguous."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1632,25 +1982,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Which sentence demonstrates accurate use of ellipsis?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Write a sentence using ellipsis accurately in a meaningful context.",
+        "question": "Write four original sentences that demonstrate ellipsis accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to ellipsis and explain the correction.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Ellipsis?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Identify the form and function associated with Ellipsis.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which error should a learner avoid when using Ellipsis?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not omit information that the reader or listener cannot recover from context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate ellipsis accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1699,8 +2070,25 @@ const b2CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places complex verb patterns in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "complementation",
+        "meaning": "The grammatical pattern required after a verb, adjective, or noun."
+      },
+      {
+        "word": "gerund",
+        "meaning": "The -ing form functioning as a noun-like element or verb complement."
+      },
+      {
+        "word": "infinitive complement",
+        "meaning": "A to-infinitive or bare infinitive selected by a particular verb or construction."
+      }
+    ],
+    "mistakes": [
+      "Do not assume that verbs with similar meanings take the same complement pattern.",
+      "Do not add to before a bare infinitive after a modal verb.",
+      "Do not change a gerund to an infinitive without checking whether the meaning changes."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1757,25 +2145,46 @@ const b2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
-    "test": [
+    "independentPractice": [
       {
-        "question": "Which sentence demonstrates accurate use of complex verb patterns?",
-        "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Write a sentence using complex verb patterns accurately in a meaningful context.",
+        "question": "Write four original sentences that demonstrate complex verb patterns accurately. Use different contexts so that the meaning and function of the structure are clear.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to complex verb patterns and explain the correction.",
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
+    "test": [
+      {
+        "question": "Which principle should guide the use of Complex Verb Patterns?",
+        "options": [
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Identify the form and function associated with Complex Verb Patterns.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which error should a learner avoid when using Complex Verb Patterns?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register.",
+          "Do not assume that verbs with similar meanings take the same complement pattern."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Write three original sentences that demonstrate complex verb patterns accurately in different contexts. Identify the target structure in each sentence.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1967,44 +2376,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Academic Word Families, what does \"hypothesis\" most closely mean?",
+        "question": "In the context of Academic Word Families, what does \"implication\" most closely mean?",
         "options": [
           "a testable explanation or prediction",
           "the system of methods used in a study",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Academic Word Families, what does \"methodology\" most closely mean?",
-        "options": [
-          "a testable explanation or prediction",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Academic Word Families, what does \"variable\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "the results or observations produced by an investigation",
-          "a factor that can change or take different values",
-          "a testable explanation or prediction"
+          "a possible meaning, result, or consequence of an idea",
+          "a factor that can change or take different values"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Academic Word Families, what does \"findings\" most closely mean?",
+        "question": "In the context of Academic Word Families, what does \"reliable\" most closely mean?",
         "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
           "a testable explanation or prediction",
-          "the system of methods used in a study"
+          "the system of methods used in a study",
+          "a factor that can change or take different values",
+          "consistently dependable or trustworthy"
         ],
         "answer": 3
+      },
+      {
+        "question": "Write a short paragraph about The vocabulary is practised through an adult education programme. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2197,44 +2596,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Academic Collocations, what does \"methodology\" most closely mean?",
+        "question": "In the context of Academic Collocations, what does \"reliable\" most closely mean?",
         "options": [
           "the system of methods used in a study",
+          "consistently dependable or trustworthy",
           "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Academic Collocations, what does \"variable\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea",
-          "a factor that can change or take different values"
+          "the results or observations produced by an investigation"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Academic Collocations, what does \"findings\" most closely mean?",
+        "question": "In the context of Academic Collocations, what does \"validity\" most closely mean?",
         "options": [
+          "the system of methods used in a study",
           "a factor that can change or take different values",
-          "a possible meaning, result, or consequence of an idea",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
+          "the extent to which a measure or conclusion is sound",
+          "the results or observations produced by an investigation"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Academic Collocations, what does \"implication\" most closely mean?",
-        "options": [
-          "the results or observations produced by an investigation",
-          "a possible meaning, result, or consequence of an idea",
-          "the system of methods used in a study",
-          "a factor that can change or take different values"
-        ],
-        "answer": 3
+        "question": "Write a short paragraph about The vocabulary is practised through a classroom discussion about assessment. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2427,44 +2816,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Formal Register, what does \"justify\" most closely mean?",
+        "question": "In the context of Formal Register, what does \"evaluate\" most closely mean?",
         "options": [
           "to give reasons or evidence supporting a decision or claim",
           "directly connected with the matter being discussed",
           "considerable in amount, importance, or strength",
-          "exact and carefully expressed"
+          "the meaning and use of \"evaluate\" in the context of evaluate"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In the context of Formal Register, what does \"derive\" most closely mean?",
+        "options": [
+          "the meaning and use of \"derive\" in the context of derive",
+          "to give reasons or evidence supporting a decision or claim",
+          "directly connected with the matter being discussed",
+          "considerable in amount, importance, or strength"
         ],
         "answer": 0
       },
       {
-        "question": "In the context of Formal Register, what does \"relevant\" most closely mean?",
-        "options": [
-          "to give reasons or evidence supporting a decision or claim",
-          "considerable in amount, importance, or strength",
-          "exact and carefully expressed",
-          "directly connected with the matter being discussed"
-        ],
-        "answer": 1
+        "question": "Write a short paragraph about The vocabulary is practised through a professional development programme. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
       },
       {
-        "question": "In the context of Formal Register, what does \"substantial\" most closely mean?",
-        "options": [
-          "directly connected with the matter being discussed",
-          "exact and carefully expressed",
-          "considerable in amount, importance, or strength",
-          "to give reasons or evidence supporting a decision or claim"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Formal Register, what does \"precise\" most closely mean?",
-        "options": [
-          "considerable in amount, importance, or strength",
-          "exact and carefully expressed",
-          "to give reasons or evidence supporting a decision or claim",
-          "directly connected with the matter being discussed"
-        ],
-        "answer": 3
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2657,44 +3036,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Nominalisation, what does \"relevant\" most closely mean?",
+        "question": "In the context of Nominalisation, what does \"derive\" most closely mean?",
         "options": [
           "directly connected with the matter being discussed",
           "considerable in amount, importance, or strength",
-          "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Nominalisation, what does \"substantial\" most closely mean?",
-        "options": [
-          "directly connected with the matter being discussed",
-          "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "considerable in amount, importance, or strength"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Nominalisation, what does \"precise\" most closely mean?",
-        "options": [
-          "considerable in amount, importance, or strength",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "exact and carefully expressed",
-          "directly connected with the matter being discussed"
+          "the meaning and use of \"derive\" in the context of derive",
+          "exact and carefully expressed"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Nominalisation, what does \"evaluate\" most closely mean?",
+        "question": "In the context of Nominalisation, what does \"interpret\" most closely mean?",
         "options": [
-          "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
           "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength"
+          "considerable in amount, importance, or strength",
+          "exact and carefully expressed",
+          "the meaning and use of \"interpret\" in the context of interpret"
         ],
         "answer": 3
+      },
+      {
+        "question": "Write a short paragraph about The vocabulary is practised through a service improvement project. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2887,44 +3256,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Precise Vocabulary, what does \"substantial\" most closely mean?",
+        "question": "In the context of Precise Vocabulary, what does \"interpret\" most closely mean?",
         "options": [
           "considerable in amount, importance, or strength",
           "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Precise Vocabulary, what does \"precise\" most closely mean?",
-        "options": [
-          "considerable in amount, importance, or strength",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
-          "exact and carefully expressed"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Precise Vocabulary, what does \"evaluate\" most closely mean?",
-        "options": [
-          "exact and carefully expressed",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "considerable in amount, importance, or strength"
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "the meaning and use of \"evaluate\" in the context of evaluate"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Precise Vocabulary, what does \"derive\" most closely mean?",
+        "question": "In the context of Precise Vocabulary, what does \"distinguish\" most closely mean?",
         "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
           "considerable in amount, importance, or strength",
-          "exact and carefully expressed"
+          "exact and carefully expressed",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"distinguish\" in the context of distinguish"
         ],
         "answer": 3
+      },
+      {
+        "question": "Write a short paragraph about The vocabulary is practised through a recruitment decision. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -3117,44 +3476,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Abstract Vocabulary, what does \"precise\" most closely mean?",
+        "question": "In the context of Abstract Vocabulary, what does \"distinguish\" most closely mean?",
         "options": [
           "exact and carefully expressed",
           "the meaning and use of \"evaluate\" in the context of evaluate",
           "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret"
+          "the meaning and use of \"distinguish\" in the context of distinguish"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In the context of Abstract Vocabulary, what does \"justify\" most closely mean?",
+        "options": [
+          "to give reasons or evidence supporting a decision or claim",
+          "exact and carefully expressed",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive"
         ],
         "answer": 0
       },
       {
-        "question": "In the context of Abstract Vocabulary, what does \"evaluate\" most closely mean?",
-        "options": [
-          "exact and carefully expressed",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
-        ],
-        "answer": 1
+        "question": "Write a short paragraph about The vocabulary is practised through a workplace training project. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
       },
       {
-        "question": "In the context of Abstract Vocabulary, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"derive\" in the context of derive",
-          "exact and carefully expressed"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Abstract Vocabulary, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
-        ],
-        "answer": 3
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -3347,44 +3696,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Discourse Markers, what does \"evaluate\" most closely mean?",
+        "question": "In the context of Discourse Markers, what does \"justify\" most closely mean?",
         "options": [
           "the meaning and use of \"evaluate\" in the context of evaluate",
+          "to give reasons or evidence supporting a decision or claim",
           "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Discourse Markers, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"derive\" in the context of derive"
+          "the meaning and use of \"interpret\" in the context of interpret"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Discourse Markers, what does \"interpret\" most closely mean?",
+        "question": "In the context of Discourse Markers, what does \"relevant\" most closely mean?",
         "options": [
+          "the meaning and use of \"evaluate\" in the context of evaluate",
           "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
+          "directly connected with the matter being discussed",
+          "the meaning and use of \"interpret\" in the context of interpret"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Discourse Markers, what does \"distinguish\" most closely mean?",
-        "options": [
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 3
+        "question": "Write a short paragraph about The vocabulary is practised through a team planning meeting. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -3577,44 +3916,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Argument Vocabulary, what does \"implication\" most closely mean?",
+        "question": "In the context of Argument Vocabulary, what does \"justify\" most closely mean?",
         "options": [
           "a possible meaning, result, or consequence of an idea",
           "a statement presented as true or worth accepting",
           "information used to support or evaluate a claim",
-          "a reason or position that challenges another argument"
+          "to give reasons or evidence supporting a decision or claim"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In the context of Argument Vocabulary, what does \"qualify\" most closely mean?",
+        "options": [
+          "to limit or modify a statement so that it is more accurate",
+          "a possible meaning, result, or consequence of an idea",
+          "a statement presented as true or worth accepting",
+          "information used to support or evaluate a claim"
         ],
         "answer": 0
       },
       {
-        "question": "In the context of Argument Vocabulary, what does \"claim\" most closely mean?",
-        "options": [
-          "a possible meaning, result, or consequence of an idea",
-          "information used to support or evaluate a claim",
-          "a reason or position that challenges another argument",
-          "a statement presented as true or worth accepting"
-        ],
-        "answer": 1
+        "question": "Write a short paragraph about The vocabulary is practised through a professional development programme. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
       },
       {
-        "question": "In the context of Argument Vocabulary, what does \"evidence\" most closely mean?",
-        "options": [
-          "a statement presented as true or worth accepting",
-          "a reason or position that challenges another argument",
-          "information used to support or evaluate a claim",
-          "a possible meaning, result, or consequence of an idea"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Argument Vocabulary, what does \"counterargument\" most closely mean?",
-        "options": [
-          "information used to support or evaluate a claim",
-          "a reason or position that challenges another argument",
-          "a possible meaning, result, or consequence of an idea",
-          "a statement presented as true or worth accepting"
-        ],
-        "answer": 3
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -3807,44 +4136,34 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Research Vocabulary, what does \"hypothesis\" most closely mean?",
+        "question": "In the context of Research Vocabulary, what does \"implication\" most closely mean?",
         "options": [
           "a testable explanation or prediction",
           "the system of methods used in a study",
           "a factor that can change or take different values",
-          "the results or observations produced by an investigation"
+          "a possible meaning, result, or consequence of an idea"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In the context of Research Vocabulary, what does \"reliable\" most closely mean?",
+        "options": [
+          "consistently dependable or trustworthy",
+          "a testable explanation or prediction",
+          "the system of methods used in a study",
+          "a factor that can change or take different values"
         ],
         "answer": 0
       },
       {
-        "question": "In the context of Research Vocabulary, what does \"methodology\" most closely mean?",
-        "options": [
-          "a testable explanation or prediction",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "the system of methods used in a study"
-        ],
-        "answer": 1
+        "question": "Write a short paragraph about The vocabulary is practised through a comparative study. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
       },
       {
-        "question": "In the context of Research Vocabulary, what does \"variable\" most closely mean?",
-        "options": [
-          "the system of methods used in a study",
-          "the results or observations produced by an investigation",
-          "a factor that can change or take different values",
-          "a testable explanation or prediction"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Research Vocabulary, what does \"findings\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation",
-          "a testable explanation or prediction",
-          "the system of methods used in a study"
-        ],
-        "answer": 3
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -3948,42 +4267,32 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of academic articles.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The passage establishes that attendance has no value in any course.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "Attendance can support learning, but a single compulsory rule may not suit every course or learner.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage.",
+          "the different learning activities and practical barriers described by both sides"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "being physically present does not necessarily mean that a student is engaged or learning",
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
         "answer": 0
       }
@@ -4002,44 +4311,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of academic articles.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The passage establishes that attendance has no value in any course.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated.",
+          "course policies should reflect learning outcomes rather than rely only on attendance counts"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The passage establishes that attendance has no value in any course.",
+          "Attendance can support learning, but a single compulsory rule may not suit every course or learner.",
+          "the different learning activities and practical barriers described by both sides",
+          "being physically present does not necessarily mean that a student is engaged or learning"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "Why Evidence Should Be Ignored",
+          "Academic Articles: Evidence, Interpretation, and Limitations",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -4053,7 +4362,8 @@ const b2CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about academic articles. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a practical discussion of an adult education programme. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The text suggests that successful decisions depend on recognising both immediate benefits and longer-term consequences. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The writer compares two approaches, identifies a limitation in each, and uses a specific example to show why context matters. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests. This reading section also asks learners to examine how the writer develops the main idea through supporting details and evidence. Readers should identify important relationships between ideas, distinguish the central claim from secondary information, and use context to interpret unfamiliar language. They should also consider the writer's purpose, recognise qualifications and limitations, and make reasonable inferences from information that is not stated directly. Careful reading requires attention to both individual details and the overall structure of the text. Learners should connect evidence to conclusions, compare different points of view when relevant, and explain their interpretation using specific information from the passage. These strategies help readers understand complex academic material more accurately and prepare them to respond critically to written arguments in unfamiliar contexts."
+    "passage": "The discussion begins with a question about academic articles. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a practical discussion of an adult education programme. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The text suggests that successful decisions depend on recognising both immediate benefits and longer-term consequences. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The writer compares two approaches, identifies a limitation in each, and uses a specific example to show why context matters. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests. This reading section also asks learners to examine how the writer develops the main idea through supporting details and evidence. Readers should identify important relationships between ideas, distinguish the central claim from secondary information, and use context to interpret unfamiliar language. They should also consider the writer's purpose, recognise qualifications and limitations, and make reasonable inferences from information that is not stated directly. Careful reading requires attention to both individual details and the overall structure of the text. Learners should connect evidence to conclusions, compare different points of view when relevant, and explain their interpretation using specific information from the passage. These strategies help readers understand complex academic material more accurately and prepare them to respond critically to written arguments in unfamiliar contexts.",
+    "readingPassage": "Universities are reconsidering whether attendance should be compulsory in every course. Supporters argue that attending classes gives students access to discussion, immediate clarification, and collaborative tasks. Critics respond that a strict rule can disadvantage students who work, care for family members, or face unreliable transport. They also note that physical presence does not guarantee attention. A more useful policy would identify which activities genuinely depend on in-person participation and allow students to demonstrate equivalent learning in other ways where possible. The issue is therefore not whether attendance matters at all, but whether one attendance rule is appropriate for every course and every learner."
   },
   {
     "id": "b2-reading-argumentative-texts",
@@ -4144,44 +4454,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of argumentative texts.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful."
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "the before-and-after productivity figures",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The topic cannot be studied systematically."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -4198,42 +4498,42 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of argumentative texts.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "the training may have contributed, but the effect cannot be separated from other factors",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which statement would go beyond the evidence presented?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim",
+          "Argumentative Texts: Evidence, Interpretation, and Limitations"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What can reasonably be inferred from the final paragraph?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference."
         ],
         "answer": 0
       }
@@ -4249,7 +4549,8 @@ const b2CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about argumentative texts. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a team planning meeting. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about argumentative texts. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a team planning meeting. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "b2-reading-critical-reading",
@@ -4340,44 +4641,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of critical reading.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "the before-and-after productivity figures",
+          "A claim that is explicitly rejected in the passage."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically.",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -4394,44 +4685,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of critical reading.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage proves that the opposite position is always correct.",
+          "the training may have contributed, but the effect cannot be separated from other factors",
+          "The writer believes the issue should not be investigated."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The report proves that the training programme alone produced the full twenty per cent increase."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which title best represents the passage?",
+        "options": [
+          "Critical Reading: Evidence, Interpretation, and Limitations",
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What does the writer do when presenting the main position?",
-        "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "review": [
@@ -4445,7 +4736,8 @@ const b2CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about critical reading. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a professional development programme. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about critical reading. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a professional development programme. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "b2-reading-author-position",
@@ -4536,44 +4828,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of author position.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful."
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "the before-and-after productivity figures",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The topic cannot be studied systematically."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -4590,42 +4872,42 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of author position.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "the training may have contributed, but the effect cannot be separated from other factors",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which statement would go beyond the evidence presented?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim",
+          "Author Position: Evidence, Interpretation, and Limitations"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What can reasonably be inferred from the final paragraph?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference."
         ],
         "answer": 0
       }
@@ -4641,7 +4923,8 @@ const b2CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about author position. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a service improvement project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about author position. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a service improvement project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "b2-reading-evidence-evaluation",
@@ -4732,44 +5015,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of evidence evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful."
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "the before-and-after productivity figures",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The topic cannot be studied systematically."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -4786,42 +5059,42 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of evidence evaluation.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "the training may have contributed, but the effect cannot be separated from other factors",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which statement would go beyond the evidence presented?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim",
+          "Evidence Evaluation: Evidence, Interpretation, and Limitations"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What can reasonably be inferred from the final paragraph?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference."
         ],
         "answer": 0
       }
@@ -4837,7 +5110,8 @@ const b2CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about evidence evaluation. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a recruitment decision. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about evidence evaluation. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns how a small research team investigated a recruitment decision. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The researchers argue that conclusions should be based not only on the size of a result but also on the quality of the evidence and the limitations of the method. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The report compares participant responses, explains the sampling process, and notes that the study cannot establish a simple cause-and-effect relationship. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "b2-reading-bias-and-perspective",
@@ -4928,44 +5202,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of bias and perspective.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "the before-and-after productivity figures",
+          "A claim that is explicitly rejected in the passage."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically.",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -4982,44 +5246,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of bias and perspective.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage proves that the opposite position is always correct.",
+          "the training may have contributed, but the effect cannot be separated from other factors",
+          "The writer believes the issue should not be investigated."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The report proves that the training programme alone produced the full twenty per cent increase."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which title best represents the passage?",
+        "options": [
+          "Bias and Perspective: Evidence, Interpretation, and Limitations",
+          "Why Evidence Should Be Ignored",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To list unrelated facts without connecting them.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What does the writer do when presenting the main position?",
-        "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "review": [
@@ -5033,7 +5297,8 @@ const b2CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about bias and perspective. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a workplace training project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests."
+    "passage": "The discussion begins with a question about bias and perspective. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a public debate concerning a workplace training project. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The writer presents one position, considers an alternative explanation, and then limits the original claim rather than treating the issue as completely settled. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. Several examples are introduced, but the writer distinguishes between examples that illustrate a pattern and evidence that can actually support a general conclusion. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "b2-reading-logical-relationships",
@@ -5124,42 +5389,32 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "What is the passage's central claim?",
         "options": [
-          "How evidence and context affect interpretation of logical relationships.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage discusses the topic but avoids reaching any conclusion.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "The writer argues that no further evidence is ever useful."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which evidence does the writer use?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "An unrelated personal anecdote.",
+          "A prediction without supporting information.",
+          "A claim that is explicitly rejected in the passage.",
+          "the before-and-after productivity figures"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What limitation does the writer acknowledge?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
+          "there is no comparison group and other workplace changes occurred at the same time",
+          "The evidence is complete and applies to every situation.",
+          "No alternative explanation is possible.",
+          "The topic cannot be studied systematically."
         ],
         "answer": 0
       }
@@ -5178,44 +5433,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the main issue discussed in the passage?",
+        "question": "Which inference is best supported by the passage?",
         "options": [
-          "How evidence and context affect interpretation of logical relationships.",
-          "Why all research produces identical conclusions.",
-          "Why the writer rejects evidence completely.",
-          "How to memorise the vocabulary in the passage."
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The passage proves that the opposite position is always correct.",
+          "The writer believes the issue should not be investigated.",
+          "the training may have contributed, but the effect cannot be separated from other factors"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which statement would go beyond the evidence presented?",
+        "options": [
+          "The report proves that the training programme alone produced the full twenty per cent increase.",
+          "The report shows that productivity increased after training, but it does not prove training caused the increase.",
+          "the before-and-after productivity figures",
+          "there is no comparison group and other workplace changes occurred at the same time"
         ],
         "answer": 0
       },
       {
-        "question": "Which statement is best supported by the passage?",
+        "question": "Which title best represents the passage?",
         "options": [
-          "A conclusion should be proportional to the quality and limits of the evidence.",
-          "A single example always proves a general claim.",
-          "An attractive proposal should never be questioned.",
-          "The writer believes additional information is unnecessary."
+          "Why Evidence Should Be Ignored",
+          "Logical Relationships: Evidence, Interpretation, and Limitations",
+          "A Complete Guide to an Unrelated Subject",
+          "Why One Example Proves Every General Claim"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the writer do when presenting the main position?",
+        "question": "What is the writer's main approach?",
         "options": [
-          "The writer considers an alternative before limiting the strength of the conclusion.",
-          "The writer presents only one opinion without qualification.",
-          "The writer avoids using examples.",
-          "The writer changes the subject completely."
+          "To persuade readers to accept an unsupported absolute claim.",
+          "To list unrelated facts without connecting them.",
+          "To present a claim, examine supporting information, and qualify the conclusion.",
+          "To replace analysis with personal preference."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What can reasonably be inferred from the final paragraph?",
-        "options": [
-          "Critical reading involves separating what evidence demonstrates from what it merely suggests.",
-          "Readers should accept every claim made by a source.",
-          "Context is irrelevant when interpreting evidence.",
-          "Only numerical evidence can be meaningful."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -5229,7 +5484,8 @@ const b2CompleteLessons = [
     "duration": 40,
     "media": {},
     "skillContent": {},
-    "passage": "The discussion begins with a question about logical relationships. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a practical discussion of a team planning meeting. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The text suggests that successful decisions depend on recognising both immediate benefits and longer-term consequences. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The writer compares two approaches, identifies a limitation in each, and uses a specific example to show why context matters. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests. This reading section also asks learners to examine how the writer develops the main idea through supporting details and evidence. Readers should identify important relationships between ideas, distinguish the central claim from secondary information, and use context to interpret unfamiliar language. They should also consider the writer's purpose, recognise qualifications and limitations, and make reasonable inferences from information that is not stated directly. Careful reading requires attention to both individual details and the overall structure of the text. Learners should connect evidence to conclusions, compare different points of view when relevant, and explain their interpretation using specific information from the passage. These strategies help readers understand complex academic material more accurately and prepare them to respond critically to written arguments in unfamiliar contexts."
+    "passage": "The discussion begins with a question about logical relationships. Rather than treating the issue as a simple choice, the writer considers how decisions are shaped by evidence, context, and competing priorities. The central example concerns a practical discussion of a team planning meeting. At first, one approach appears attractive because it promises a clear and immediate benefit. However, closer examination reveals that the apparent advantage depends on several assumptions. When those assumptions are changed, the expected result becomes less certain. The text suggests that successful decisions depend on recognising both immediate benefits and longer-term consequences. This is important because a strong interpretation does not simply repeat information from a source. It explains how the information supports a claim and identifies what the evidence cannot establish. The writer compares two approaches, identifies a limitation in each, and uses a specific example to show why context matters. The writer therefore recommends a cautious interpretation. A useful conclusion can still be reached, but it should remain proportional to the evidence available. The final section returns to the original question. It does not reject the proposed approach completely. Instead, it argues that the approach is most useful when its limits are recognised and when additional information is collected before a major decision is made. For readers, the main lesson is methodological as well as linguistic: identify the claim, locate the supporting evidence, examine the assumptions, and distinguish what the text demonstrates from what it merely suggests. This reading section also asks learners to examine how the writer develops the main idea through supporting details and evidence. Readers should identify important relationships between ideas, distinguish the central claim from secondary information, and use context to interpret unfamiliar language. They should also consider the writer's purpose, recognise qualifications and limitations, and make reasonable inferences from information that is not stated directly. Careful reading requires attention to both individual details and the overall structure of the text. Learners should connect evidence to conclusions, compare different points of view when relevant, and explain their interpretation using specific information from the passage. These strategies help readers understand complex academic material more accurately and prepare them to respond critically to written arguments in unfamiliar contexts.",
+    "readingPassage": "A company report states that a new training programme increased productivity by twenty per cent. The figure is based on a comparison of output before and after the programme. Although the change is noteworthy, the report does not include a similar group that did not receive training. During the same period, the company introduced new software and revised its workflow. These changes may also have affected output. The report therefore documents an improvement that occurred after training, but it does not isolate the programme's contribution. A careful reader should distinguish the observed result from the causal explanation and ask what additional evidence would make the claim more convincing."
   },
   {
     "id": "b2-listening-academic-lectures",
@@ -5249,9 +5505,9 @@ const b2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5319,44 +5575,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse academic lectures carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Student participation should be evaluated through engagement and learning evidence, not attendance figures alone.",
+          "Attendance is the only reliable measure of academic achievement.",
+          "Universities should remove discussion from all courses.",
+          "Assignment completion is unrelated to student engagement."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "To illustrate how the example supports the speaker's central point.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "the relationship does not prove that attendance itself caused stronger performance",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -5373,42 +5619,42 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse academic lectures carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "attendance records, assignment completion, assessment results, and student interviews",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "motivation and work commitments may influence both attendance and performance",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion.",
+          "the quality of participation matters more than a simple attendance count"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "combine several measures and examine how students apply what they learn",
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
         "answer": 0
       }
@@ -5425,7 +5671,7 @@ const b2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss academic lectures in relation to an adult education programme. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to an adult education programme. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss academic lectures in relation to an adult education programme. The first point is that the issue is more complicated than it may initially appear. The available evidence points in several directions, so we need to be careful about the strength of our conclusions. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to an adult education programme. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "Today I want to examine how universities should evaluate student participation. Attendance figures are easy to collect, but they tell us little about the quality of learning. In one course, students who attended regularly also submitted more assignments. It would be tempting to conclude that attendance caused stronger performance. However, the students who attended may already have been more motivated or had fewer work commitments. The lecturer therefore compares attendance with assignment completion, assessment results, and student interviews. The evidence suggests that regular participation can support learning, particularly when sessions include discussion and feedback. Yet attendance alone is not a reliable measure of achievement. A fair evaluation should consider what students do during a class, how they engage with the material, and whether they can apply what they learn afterwards."
   },
   {
     "id": "b2-listening-university-discussions",
@@ -5445,9 +5691,9 @@ const b2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5515,44 +5761,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse university discussions carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "The number of comments is the only factor that determines learning.",
+          "Feedback is most useful when it is timely, focused, and gives learners an actionable next step.",
+          "All subjects require exactly the same feedback method.",
+          "Students should receive feedback only after a final examination."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "To prove that the issue has no limitations.",
+          "To illustrate how the example supports the speaker's central point.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "The issue has no alternative explanation.",
+          "the review involved a limited group and one course design"
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 3
       }
     ],
     "independentPractice": [
@@ -5569,44 +5805,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse university discussions carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "A prediction about events that have not happened.",
+          "student progress in a small departmental review and learner reports about using comments",
+          "An unrelated historical anecdote."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What limitation does the speaker acknowledge?",
+        "options": [
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "The speaker refuses to consider other explanations.",
+          "the findings may not apply equally across subjects or learner groups"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which inference is best supported?",
+        "options": [
+          "more feedback is not necessarily better feedback",
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "Accept the first explanation without checking it.",
+          "test focused feedback with different groups and evaluate how learners use it",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
-        "answer": 0
-      },
-      {
-        "question": "What does the speaker imply about the alternative explanation?",
-        "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "review": [
@@ -5621,7 +5857,7 @@ const b2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss university discussions in relation to a team planning meeting. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a team planning meeting. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss university discussions in relation to a team planning meeting. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a team planning meeting. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "At this seminar, the panel is considering whether frequent feedback automatically improves learning. One lecturer argues that short, regular comments help students correct misunderstandings before they become habits. A second panel member agrees that feedback matters but points out that students often receive more comments than they can use. In a small departmental review, students made greater progress when feedback identified one specific strength and one practical next step. The panel cautions that this review involved only a limited group and one course design. It cannot establish that the same approach will work equally well in every subject. The speakers therefore recommend testing feedback methods with different groups and asking learners whether the comments actually help them revise. Their conclusion is that useful feedback is timely, focused, and actionable; simply increasing its volume is unlikely to be enough."
   },
   {
     "id": "b2-listening-presentations",
@@ -5641,9 +5877,9 @@ const b2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5711,44 +5947,34 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse presentations carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Goal-linked feedback may help online learners use advice more effectively.",
+          "The study proves that all online learners need identical feedback.",
+          "The researchers found no difference between the groups.",
+          "The results show that learner motivation has no influence."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "To illustrate how the example supports the speaker's central point.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "the small volunteer sample and lack of random assignment limit causal conclusions",
+          "The issue has no alternative explanation."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "independentPractice": [
@@ -5765,42 +5991,42 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse presentations carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "revision completion and learner confidence among 120 adults over eight weeks",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "What limitation does the speaker acknowledge?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "participants came from only two courses and were not randomly assigned",
+          "The speaker refuses to consider other explanations."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "Which inference is best supported?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "The opposite conclusion is certainly true.",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion.",
+          "the approach is promising but needs testing in a broader sample"
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "conduct a larger study across different institutions with a stronger comparison design",
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "Use a different topic instead of examining the evidence."
         ],
         "answer": 0
       }
@@ -5817,7 +6043,7 @@ const b2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss presentations in relation to a professional development programme. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a professional development programme. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss presentations in relation to a professional development programme. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a professional development programme. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "In this presentation, I will summarise a small study of structured feedback in online English courses. The researchers followed 120 adult learners over eight weeks. One group received general comments, while the other received feedback linked to specific learning goals and revision steps. The second group submitted more complete revisions and reported greater confidence. These results are encouraging, but they need careful interpretation. The learners were volunteers from two courses, and the study did not randomly assign participants. It is therefore possible that motivation or previous experience contributed to the difference. The findings suggest that goal-linked feedback may help learners act on advice, but they do not prove that the approach will produce the same result in every online programme. A larger study with varied institutions would provide stronger evidence."
   },
   {
     "id": "b2-listening-debates",
@@ -5837,9 +6063,9 @@ const b2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5907,42 +6133,32 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse debates carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Attendance should be compulsory in every course without exception.",
+          "Students learn best when discussion is removed.",
+          "Attendance can support learning, but compulsory rules should reflect the purpose of each course.",
+          "Absence records prove whether students understand the material."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence.",
+          "To illustrate how the example supports the speaker's central point."
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "physical presence does not guarantee attention or learning",
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "The issue has no alternative explanation."
         ],
         "answer": 0
       }
@@ -5961,44 +6177,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse debates carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote.",
+          "the role of discussion, clarification, collaboration, and course assessment"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What limitation does the speaker acknowledge?",
+        "options": [
+          "a strict attendance rule can disadvantage students with work, caring, or transport responsibilities",
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "The speaker refuses to consider other explanations."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Which inference is best supported?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The opposite conclusion is certainly true.",
+          "a flexible policy may be fairer than a single rule for every course",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "identify which course activities require attendance and allow equivalent evidence where appropriate",
+          "Use a different topic instead of examining the evidence."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -6013,7 +6229,7 @@ const b2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss debates in relation to a service improvement project. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a service improvement project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss debates in relation to a service improvement project. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a service improvement project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "The question before the debate is whether universities should make attendance compulsory. Supporters argue that regular attendance gives students access to discussion, immediate clarification, and collaborative work. They point to courses in which participation is built into the assessment. Opponents respond that a strict rule can disadvantage students who work, care for family members, or have unreliable transport. They also argue that physical presence does not guarantee attention. The strongest point on either side is that attendance can create opportunities for learning, but it is not itself proof that learning has taken place. A policy based only on counting absences would therefore be too simple. The debate concludes that institutions should distinguish between sessions where participation is essential and situations where equivalent learning can be demonstrated in another way."
   },
   {
     "id": "b2-listening-note-taking",
@@ -6033,9 +6249,9 @@ const b2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -6103,42 +6319,32 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse note taking carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "The best notes reproduce every sentence exactly.",
+          "Personal reactions should be mixed with the lecturer's claims.",
+          "Effective notes capture the structure and key evidence of a lecture rather than every word.",
+          "Abbreviations should be used even when they cannot be understood later."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence.",
+          "To illustrate how the example supports the speaker's central point."
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "abbreviations are useful only when they remain clear during later review",
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "The issue has no alternative explanation."
         ],
         "answer": 0
       }
@@ -6157,44 +6363,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse note taking carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote.",
+          "the lecturer's main points, supporting examples, questions, and the learner's later review"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What limitation does the speaker acknowledge?",
+        "options": [
+          "notes can become misleading if personal reactions are confused with the lecturer's claims",
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "The speaker refuses to consider other explanations."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Which inference is best supported?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The opposite conclusion is certainly true.",
+          "organised notes are more useful for understanding than a verbatim record",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "review the notes soon after class and turn unclear points into questions",
+          "Use a different topic instead of examining the evidence."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -6209,7 +6415,7 @@ const b2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss note taking in relation to a recruitment decision. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a recruitment decision. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss note taking in relation to a recruitment decision. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a recruitment decision. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "When taking notes during a lecture, the aim is not to record every sentence. Instead, listen for the structure of the explanation. A lecturer may signal a main point with phrases such as the central issue is, or may introduce evidence with for example. Record the key idea, the evidence that supports it, and any question you need to investigate later. Leave space to add details after the lecture. Abbreviations can save time, but they should remain understandable when you review them. A useful note system also separates the lecturer's claim from your own reaction. This matters because an opinion you write quickly may later look like part of the lecture. Finally, review the notes soon after class and turn unclear points into questions. Good notes are not a transcript; they are a structured record that helps you understand and remember the argument."
   },
   {
     "id": "b2-listening-listening-for-arguments",
@@ -6229,9 +6435,9 @@ const b2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -6299,42 +6505,32 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "What is the speaker's central point?",
         "options": [
-          "To explain how to analyse listening for arguments carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "Attendance should be compulsory in every course without exception.",
+          "Students learn best when discussion is removed.",
+          "Attendance can support learning, but compulsory rules should reflect the purpose of each course.",
+          "Absence records prove whether students understand the material."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "To introduce an unrelated topic.",
+          "To prove that the issue has no limitations.",
+          "To replace the need for supporting evidence.",
+          "To illustrate how the example supports the speaker's central point."
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What qualification does the speaker make?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
+          "physical presence does not guarantee attention or learning",
+          "The claim is certain in every context.",
+          "No further evidence is needed.",
+          "The issue has no alternative explanation."
         ],
         "answer": 0
       }
@@ -6353,44 +6549,44 @@ const b2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "What is the speaker's main purpose?",
+        "question": "Which evidence does the speaker use?",
         "options": [
-          "To explain how to analyse listening for arguments carefully.",
-          "To entertain the audience with an unrelated story.",
-          "To reject all forms of evidence.",
-          "To provide instructions for memorising vocabulary."
+          "An unsupported personal opinion only.",
+          "A prediction about events that have not happened.",
+          "An unrelated historical anecdote.",
+          "the role of discussion, clarification, collaboration, and course assessment"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What limitation does the speaker acknowledge?",
+        "options": [
+          "a strict attendance rule can disadvantage students with work, caring, or transport responsibilities",
+          "The evidence proves more than the speaker claims.",
+          "The topic cannot be investigated.",
+          "The speaker refuses to consider other explanations."
         ],
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention the example of the team?",
+        "question": "Which inference is best supported?",
         "options": [
-          "To show that an apparently successful approach can depend on conditions that were initially overlooked.",
-          "To prove that the approach always fails.",
-          "To demonstrate that evidence is unnecessary.",
-          "To change the topic to team management."
+          "The opposite conclusion is certainly true.",
+          "a flexible policy may be fairer than a single rule for every course",
+          "The evidence should be ignored entirely.",
+          "No conclusion can be drawn from any part of the discussion."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "What does the speaker imply about the alternative explanation?",
+        "question": "What is the most reasonable next step?",
         "options": [
-          "It is plausible but requires more evidence.",
-          "It has already been completely proven.",
-          "It is impossible.",
-          "It is unrelated to the discussion."
+          "Accept the first explanation without checking it.",
+          "Ignore the limitations and repeat the claim.",
+          "identify which course activities require attendance and allow equivalent evidence where appropriate",
+          "Use a different topic instead of examining the evidence."
         ],
-        "answer": 0
-      },
-      {
-        "question": "Which three things does the speaker explicitly tell listeners to notice?",
-        "options": [
-          "Claims, supporting evidence, and language showing certainty.",
-          "Names, dates, and pronunciation.",
-          "Grammar, spelling, and punctuation.",
-          "Humour, repetition, and background music."
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "review": [
@@ -6405,7 +6601,7 @@ const b2CompleteLessons = [
     "media": {},
     "skillContent": {},
     "script": "Good afternoon. Today I want to discuss listening for arguments in relation to a workplace training project. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a workplace training project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions.",
-    "transcript": "Good afternoon. Today I want to discuss listening for arguments in relation to a workplace training project. The first point is that the issue is more complicated than it may initially appear. People often focus on the immediate result, but a useful decision also requires us to consider context and possible consequences. Let me give you an example. In one recent case, a team adopted a promising approach because it appeared efficient. After several weeks, however, they discovered that the result depended on a condition they had not considered at the beginning. This does not mean that the approach was ineffective. Rather, it shows why we need to ask what the evidence actually demonstrates. A strong interpretation should distinguish between a useful indication and a definite conclusion. There is also another perspective. Some participants argued that the original problem was not the method itself but the way it was implemented. That is a reasonable point, although it would require additional evidence to establish it confidently. So, if you remember only three things from this discussion, remember these: identify the speaker's main claim, listen for evidence or examples that support it, and notice language that limits certainty. Finally, consider how the ideas apply to a workplace training project. The goal is not simply to repeat what you hear. The goal is to understand the relationship between claims, reasons, evidence, and conclusions."
+    "transcript": "The question before the debate is whether universities should make attendance compulsory. Supporters argue that regular attendance gives students access to discussion, immediate clarification, and collaborative work. They point to courses in which participation is built into the assessment. Opponents respond that a strict rule can disadvantage students who work, care for family members, or have unreliable transport. They also argue that physical presence does not guarantee attention. The strongest point on either side is that attendance can create opportunities for learning, but it is not itself proof that learning has taken place. A policy based only on counting absences would therefore be too simple. The debate concludes that institutions should distinguish between sessions where participation is essential and situations where equivalent learning can be demonstrated in another way."
   },
   {
     "id": "b2-speaking-expressing-and-justifying-opinions",
@@ -6425,9 +6621,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that expressing and justifying opinions requires careful attention to context.",
@@ -6555,9 +6751,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that agreeing and disagreeing diplomatically requires careful attention to context.",
@@ -6685,9 +6881,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that discussing advantages and disadvantages requires careful attention to context.",
@@ -6815,9 +7011,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that speculating about possibilities requires careful attention to context.",
@@ -6945,9 +7141,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that explaining causes and consequences requires careful attention to context.",
@@ -7075,9 +7271,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that comparing perspectives requires careful attention to context.",
@@ -7205,9 +7401,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "I see your point, but we also need to consider the longer-term cost.",
@@ -7331,9 +7527,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "Today I will focus on three factors that affect the decision.",
@@ -7461,9 +7657,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that handling questions and follow-up requires careful attention to context.",
@@ -7591,9 +7787,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that storytelling and anecdotes requires careful attention to context.",
@@ -7721,9 +7917,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that discussing social and cultural issues requires careful attention to context.",
@@ -7851,9 +8047,9 @@ const b2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that problem-solving discussions requires careful attention to context.",
@@ -7971,19 +8167,19 @@ const b2CompleteLessons = [
     "title": "Academic Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to academic paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Academic Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Give each paragraph one clear controlling idea that supports the overall purpose.",
+      "Develop points with explanation, evidence, and analysis rather than unsupported generalisations.",
+      "Use transitions to show logical relationships, not merely to decorate the beginning of sentences."
     ],
     "examples": [
       "Topic sentence: Flexible scheduling can improve access to adult education.",
@@ -7998,8 +8194,25 @@ const b2CompleteLessons = [
       "Link: For this reason, scheduling policy should be considered alongside course content when improving access."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "topic sentence",
+        "meaning": "A sentence that states the controlling idea of a paragraph."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The linguistic links that help ideas connect across a text."
+      },
+      {
+        "word": "development",
+        "meaning": "The explanation and support that make a point sufficiently clear."
+      }
+    ],
+    "mistakes": [
+      "Allowing a paragraph to develop several unrelated controlling ideas.",
+      "Including evidence without explaining what it demonstrates.",
+      "Using transitions mechanically when the logical relationship is not clear."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8071,25 +8284,23 @@ const b2CompleteLessons = [
     "title": "Essay Structure",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to essay structure, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Essay Structure is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "introduction": "This lesson develops essay structure as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
+    "explanation": "Effective essay structure gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Essay Structure.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Give each paragraph one clear controlling idea that supports the overall purpose.",
+      "Develop points with explanation, evidence, and analysis rather than unsupported generalisations.",
+      "Use transitions to show logical relationships, not merely to decorate the beginning of sentences."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a team planning meeting.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Topic sentence: Timely feedback helps learners identify specific gaps before they become persistent errors.",
+      "Development: When comments identify both the problem and a practical next step, learners can use them to guide revision."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a team planning meeting.",
@@ -8098,8 +8309,25 @@ const b2CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "topic sentence",
+        "meaning": "A sentence that states the controlling idea of a paragraph."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The linguistic links that help ideas connect across a text."
+      },
+      {
+        "word": "development",
+        "meaning": "The explanation and support that make a point sufficiently clear."
+      }
+    ],
+    "mistakes": [
+      "Allowing a paragraph to develop several unrelated controlling ideas.",
+      "Including evidence without explaining what it demonstrates.",
+      "Using transitions mechanically when the logical relationship is not clear."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8121,36 +8349,36 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Create a logical outline with a clear purpose for each paragraph.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop one paragraph using a controlling idea, explanation, evidence, and analysis.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Revise transitions so that they express the actual relationship between ideas.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 180â€“240 words response about a team planning meeting.",
+        "question": "Draft the relevant section of an academic essay and check paragraph unity and progression.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Use a reverse outline to identify paragraphs that repeat, drift from, or fail to support the central argument.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a team planning meeting. Produce a coherent, well-supported response appropriate to the upper-intermediate level.",
+        "question": "Produce a coherent essay structure with a clear controlling purpose, logically developed paragraphs, relevant support, and effective transitions.",
         "options": [],
         "answer": null
       }
@@ -8171,19 +8399,19 @@ const b2CompleteLessons = [
     "title": "Thesis Statements",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to thesis statements, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops thesis statements as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Thesis Statements.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "State one central, focused idea rather than a broad topic.",
+      "Make the claim or research focus answerable and appropriate to the assignment's scope.",
+      "Ensure that the body of the paper can develop the points promised by the statement."
     ],
     "examples": [
       "Weak: Technology is important in education.",
@@ -8198,8 +8426,25 @@ const b2CompleteLessons = [
       "Stronger: Although remote work can increase flexibility, its effectiveness depends on communication systems, workload management, and access to appropriate support."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "scope",
+        "meaning": "The boundaries that determine what an assignment or study will cover."
+      },
+      {
+        "word": "controlling idea",
+        "meaning": "The central point that guides the organisation of a text."
+      },
+      {
+        "word": "arguability",
+        "meaning": "The quality of being a claim that can be supported and reasonably debated."
+      }
+    ],
+    "mistakes": [
+      "Writing a thesis that merely announces a topic instead of presenting a focused direction.",
+      "Including several unrelated claims in one controlling statement.",
+      "Promising an argument that the body paragraphs do not actually develop."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8271,19 +8516,19 @@ const b2CompleteLessons = [
     "title": "Introduction Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to introduction paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops introduction paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Introduction Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Give each paragraph one clear controlling idea that supports the overall purpose.",
+      "Develop points with explanation, evidence, and analysis rather than unsupported generalisations.",
+      "Use transitions to show logical relationships, not merely to decorate the beginning of sentences."
     ],
     "examples": [
       "Topic sentence: Flexible scheduling can improve access to adult education.",
@@ -8298,8 +8543,25 @@ const b2CompleteLessons = [
       "Link: For this reason, scheduling policy should be considered alongside course content when improving access."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "topic sentence",
+        "meaning": "A sentence that states the controlling idea of a paragraph."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The linguistic links that help ideas connect across a text."
+      },
+      {
+        "word": "development",
+        "meaning": "The explanation and support that make a point sufficiently clear."
+      }
+    ],
+    "mistakes": [
+      "Allowing a paragraph to develop several unrelated controlling ideas.",
+      "Including evidence without explaining what it demonstrates.",
+      "Using transitions mechanically when the logical relationship is not clear."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8371,19 +8633,19 @@ const b2CompleteLessons = [
     "title": "Body Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to body paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops body paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Body Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Give each paragraph one clear controlling idea that supports the overall purpose.",
+      "Develop points with explanation, evidence, and analysis rather than unsupported generalisations.",
+      "Use transitions to show logical relationships, not merely to decorate the beginning of sentences."
     ],
     "examples": [
       "Topic sentence: Flexible scheduling can improve access to adult education.",
@@ -8398,8 +8660,25 @@ const b2CompleteLessons = [
       "Link: For this reason, scheduling policy should be considered alongside course content when improving access."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "topic sentence",
+        "meaning": "A sentence that states the controlling idea of a paragraph."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The linguistic links that help ideas connect across a text."
+      },
+      {
+        "word": "development",
+        "meaning": "The explanation and support that make a point sufficiently clear."
+      }
+    ],
+    "mistakes": [
+      "Allowing a paragraph to develop several unrelated controlling ideas.",
+      "Including evidence without explaining what it demonstrates.",
+      "Using transitions mechanically when the logical relationship is not clear."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8471,19 +8750,19 @@ const b2CompleteLessons = [
     "title": "Conclusion Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to conclusion paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops conclusion paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Conclusion Paragraphs.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Give each paragraph one clear controlling idea that supports the overall purpose.",
+      "Develop points with explanation, evidence, and analysis rather than unsupported generalisations.",
+      "Use transitions to show logical relationships, not merely to decorate the beginning of sentences."
     ],
     "examples": [
       "Topic sentence: Flexible scheduling can improve access to adult education.",
@@ -8498,8 +8777,25 @@ const b2CompleteLessons = [
       "Link: For this reason, scheduling policy should be considered alongside course content when improving access."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "topic sentence",
+        "meaning": "A sentence that states the controlling idea of a paragraph."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The linguistic links that help ideas connect across a text."
+      },
+      {
+        "word": "development",
+        "meaning": "The explanation and support that make a point sufficiently clear."
+      }
+    ],
+    "mistakes": [
+      "Allowing a paragraph to develop several unrelated controlling ideas.",
+      "Including evidence without explaining what it demonstrates.",
+      "Using transitions mechanically when the logical relationship is not clear."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8571,25 +8867,23 @@ const b2CompleteLessons = [
     "title": "Argumentative Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to argumentative essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Argumentative Essays is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "introduction": "This lesson develops argumentative essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
+    "explanation": "Strong argumentative essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Argumentative Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make the central claim explicit and keep each paragraph connected to it.",
+      "Use evidence that is relevant and credible, then explain how it supports the claim.",
+      "Represent opposing views accurately before qualifying or rebutting them."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a team planning meeting.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Claim: Flexible deadlines can support learners facing genuine access barriers.",
+      "Reasoning: A limited extension policy can preserve standards while allowing students to manage documented disruptions; however, clear limits are needed to maintain fairness."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a team planning meeting.",
@@ -8598,8 +8892,25 @@ const b2CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "claim",
+        "meaning": "A position or conclusion that the writer seeks to establish."
+      },
+      {
+        "word": "warrant",
+        "meaning": "The reasoning that explains why evidence supports a claim."
+      },
+      {
+        "word": "counterargument",
+        "meaning": "A reasoned alternative position that challenges or qualifies the main claim."
+      }
+    ],
+    "mistakes": [
+      "Presenting a claim without explaining the reasoning that connects it to the evidence.",
+      "Ignoring a serious counterargument or representing it unfairly.",
+      "Using examples that are interesting but do not support the central claim."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8621,36 +8932,36 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a claim and identify the evidence needed to support it.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop a counterargument that a reasonable reader might raise.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Write a rebuttal that responds to the reasoning rather than attacking the person who holds the view.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 180â€“240 words response about a team planning meeting.",
+        "question": "Draft an argument with a clear claim, evidence, counterargument, and reasoned response.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Review each paragraph to ensure that evidence is analysed rather than simply inserted.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a team planning meeting. Produce a coherent, well-supported response appropriate to the upper-intermediate level.",
+        "question": "Write a developed argumentative essays that presents a defensible claim, evaluates relevant evidence, addresses a substantial alternative view, and reaches a proportionate conclusion.",
         "options": [],
         "answer": null
       }
@@ -8671,19 +8982,19 @@ const b2CompleteLessons = [
     "title": "Compare and Contrast Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to compare and contrast essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops compare and contrast essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Compare-and-contrast writing explains meaningful similarities and differences between two subjects. Strong writing uses a clear basis of comparison rather than simply listing unrelated features.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Compare and Contrast Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Choose criteria that genuinely apply to both subjects.",
+      "Organise the discussion consistently, either point by point or by subject, and avoid switching without purpose.",
+      "Explain the significance of each comparison instead of merely identifying a similarity or difference."
     ],
     "examples": [
       "Both approaches increase flexibility, but they differ considerably in how much independent planning they require.",
@@ -8698,8 +9009,25 @@ const b2CompleteLessons = [
       "Overall, the more flexible model is preferable when adequate support is available."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "criterion",
+        "meaning": "A standard used to compare or evaluate subjects."
+      },
+      {
+        "word": "point-by-point organisation",
+        "meaning": "An arrangement that compares subjects under one criterion at a time."
+      },
+      {
+        "word": "comparative claim",
+        "meaning": "A statement explaining a meaningful similarity or difference."
+      }
+    ],
+    "mistakes": [
+      "Comparing the subjects using different or inconsistent criteria.",
+      "Listing similarities and differences without explaining their significance.",
+      "Giving one subject much more evidence or attention than the other."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8771,19 +9099,19 @@ const b2CompleteLessons = [
     "title": "Cause and Effect Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to cause and effect essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops cause and effect essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Cause-and-effect writing distinguishes causes from consequences and explains the relationship between them without confusing correlation, sequence, and causation.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Cause and Effect Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Separate causes from effects and identify intermediate steps in the causal chain.",
+      "Support causal claims with evidence or a clear explanation of the mechanism.",
+      "Use cautious language when the evidence shows association rather than direct causation."
     ],
     "examples": [
       "Limited access to study materials can reduce opportunities for independent practice.",
@@ -8798,8 +9126,25 @@ const b2CompleteLessons = [
       "Further evidence is therefore needed before attributing the entire outcome to one factor."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "causal mechanism",
+        "meaning": "The process through which one factor may produce or influence an outcome."
+      },
+      {
+        "word": "contributing factor",
+        "meaning": "A condition that helps explain an outcome without necessarily causing it alone."
+      },
+      {
+        "word": "correlation",
+        "meaning": "A statistical relationship that does not by itself establish causation."
+      }
+    ],
+    "mistakes": [
+      "Treating correlation as proof that one factor caused another.",
+      "Skipping intermediate steps in a causal explanation.",
+      "Using absolute causal language when the evidence supports only a possibility or association."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8871,19 +9216,19 @@ const b2CompleteLessons = [
     "title": "Problem Solution Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to problem solution essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops problem solution essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Problem-solution writing identifies a specific problem, explains why it matters, evaluates possible responses, and proposes a solution supported by clear reasoning.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Problem Solution Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Define the problem specifically and explain who or what is affected.",
+      "Evaluate alternatives using consistent criteria such as cost, feasibility, impact, and sustainability.",
+      "Justify the recommended solution and acknowledge its limitations."
     ],
     "examples": [
       "The main difficulty is not lack of interest but limited access to reliable study materials.",
@@ -8898,8 +9243,25 @@ const b2CompleteLessons = [
       "Its success, however, would depend on training users to evaluate the quality of online information."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "feasibility",
+        "meaning": "The extent to which a proposed solution can realistically be implemented."
+      },
+      {
+        "word": "evaluation criterion",
+        "meaning": "A standard used to judge the strengths of possible solutions."
+      },
+      {
+        "word": "trade-off",
+        "meaning": "A disadvantage accepted in order to gain another benefit."
+      }
+    ],
+    "mistakes": [
+      "Describing a problem too broadly to evaluate possible responses.",
+      "Recommending a solution without comparing alternatives or considering feasibility.",
+      "Ignoring costs, limitations, or the people affected by the proposal."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8971,25 +9333,23 @@ const b2CompleteLessons = [
     "title": "Opinion Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to opinion essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Opinion Essays is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "introduction": "This lesson develops opinion essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
+    "explanation": "Effective opinion essays requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Opinion Essays.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the purpose and audience before drafting.",
+      "Develop each main point with a reason, example, or relevant evidence.",
+      "Revise the final text for organisation, cohesion, precision, and grammatical accuracy."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a workplace training project.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Unclear: The issue is important and there are many reasons.",
+      "Clearer: The issue deserves attention because limited access to reliable materials can restrict independent study."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a workplace training project.",
@@ -8998,8 +9358,25 @@ const b2CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "audience",
+        "meaning": "The readers for whom a text is written."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The links that make ideas connect logically."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality appropriate to the purpose."
+      }
+    ],
+    "mistakes": [
+      "Drafting before clarifying the purpose and intended audience.",
+      "Supporting a broad statement with a vague or unrelated example.",
+      "Revising for grammar without checking organisation and meaning."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -9021,36 +9398,36 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "State the purpose of the text in one precise sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop one main point with an explanation and a specific example.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Revise one sentence to improve precision and logical connection.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 180â€“240 words response about a workplace training project.",
+        "question": "Write a focused response about opinion essays for a clearly identified audience.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Revise the response for organisation, support, cohesion, vocabulary, and grammar.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a workplace training project. Produce a coherent, well-supported response appropriate to the upper-intermediate level.",
+        "question": "Write a coherent academic response demonstrating effective opinion essays. Support the main points and use language appropriate to the intended audience.",
         "options": [],
         "answer": null
       }
@@ -9071,25 +9448,23 @@ const b2CompleteLessons = [
     "title": "Academic Style",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to academic style, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Academic Style is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "introduction": "This lesson develops academic style as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
+    "explanation": "Effective academic style adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Academic Style.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Choose a level of formality that fits the audience and purpose.",
+      "Prefer precise verbs and clear sentence structures to inflated or unnecessarily complex wording.",
+      "Maintain a consistent stance and avoid unsupported certainty or conversational language where it is inappropriate."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a classroom discussion about assessment.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Informal: A lot of people think the plan is really good.",
+      "More formal: Many participants regard the proposal as beneficial, although its long-term effects remain uncertain."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a classroom discussion about assessment.",
@@ -9098,8 +9473,25 @@ const b2CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "register",
+        "meaning": "The level of formality and style suited to a context."
+      },
+      {
+        "word": "stance",
+        "meaning": "The writer's position or attitude toward the subject."
+      },
+      {
+        "word": "concision",
+        "meaning": "The quality of expressing ideas without unnecessary wording."
+      }
+    ],
+    "mistakes": [
+      "Using informal or inflated wording that does not fit the audience or genre.",
+      "Changing the writer's stance without a clear reason.",
+      "Choosing complex sentence structures that reduce clarity."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -9121,36 +9513,36 @@ const b2CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Revise informal wording for an appropriate academic or professional register.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Replace an inflated phrase with a concise and precise alternative.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Check whether the writer's stance is consistent and appropriately qualified.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 180â€“240 words response about a classroom discussion about assessment.",
+        "question": "Revise a short passage for audience, register, precision, and consistency of voice.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Explain how your language choices support the purpose of the text.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a classroom discussion about assessment. Produce a coherent, well-supported response appropriate to the upper-intermediate level.",
+        "question": "Produce a polished academic style that demonstrates appropriate register, precise vocabulary, coherent stance, and controlled sentence structure.",
         "options": [],
         "answer": null
       }
