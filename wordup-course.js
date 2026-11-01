@@ -869,6 +869,17 @@
             `;
         }
 
+        if (lesson.activities?.length) {
+            html += `
+                <h3>Activities</h3>
+                <ul class="wu-activities-list">
+                    ${lesson.activities.map(activity => {
+                        const prompt = typeof activity === "string" ? activity : (activity.instruction || activity.prompt || activity.question || activity.text || "Learning activity");
+                        return `<li>${speakableLessonText(prompt)}</li>`;
+                    }).join("")}
+                </ul>
+            `;
+        }
         if (lesson.guidedPractice?.length) {
             html += `
                 <h3>Guided practice</h3>
