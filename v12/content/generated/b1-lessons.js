@@ -6919,7 +6919,8 @@ const b1Lessons = [
       "Listen for deadlines and time expressions.",
       "Notice requests and offers of help.",
       "Listen for the final decision or agreed action."
-    ]
+    ],
+    "transcript": "Maya: Have you finished the report for tomorrow's meeting? Omar: Almost. The introduction and results are ready, but I still need to check the figures in the final table. Maya: Would you like me to review it? Omar: That would help. Could you check the final table while I finish the conclusion? Maya: Of course. I'll compare the figures with the original notes and send you my comments this afternoon."
   },
   {
     "id": "b1-listening-travel-situations",
@@ -7105,7 +7106,8 @@ const b1Lessons = [
       "Pay attention to locations and directions.",
       "Repeat important information mentally.",
       "Distinguish between a question and the answer to it."
-    ]
+    ],
+    "transcript": "Receptionist: Good afternoon. Welcome to the hotel. How long will you be staying with us? Guest: Three nights. I have a reservation under the name Rahimi. Receptionist: Thank you. Would you prefer a room facing the street or the garden? Guest: A room facing the garden, please. I'd prefer somewhere quiet. Receptionist: Certainly. Your room is on the second floor, and breakfast is served from seven until ten."
   },
   {
     "id": "b1-listening-interviews",
@@ -7291,7 +7293,8 @@ const b1Lessons = [
       "Listen for reasons introduced by because, so, or since.",
       "Notice examples that support an opinion.",
       "Distinguish facts from personal opinions."
-    ]
+    ],
+    "transcript": "Interviewer: What helped you become more confident when speaking English? Nadia: My university teacher encouraged me to speak in every lesson and not worry too much about small mistakes. Interviewer: What is the most challenging part of your current job? Nadia: Planning lessons takes a lot of time, especially when I prepare different activities for students with different needs. Interviewer: How do you manage that? Nadia: I prepare the main materials early and adapt them before each class."
   },
   {
     "id": "b1-listening-phone-calls",
@@ -7477,7 +7480,8 @@ const b1Lessons = [
       "Listen carefully for changed times or dates.",
       "Write down messages using keywords.",
       "Listen for polite requests such as could you and can you."
-    ]
+    ],
+    "transcript": "Receptionist: Good morning, Green Valley Training Centre. How can I help you? Caller: Good morning. Could I speak to Mr Karim, please? Receptionist: Certainly. May I ask who's calling? Caller: This is Farid from the language department. I'm calling about the workshop. Receptionist: The time has changed. It will now begin at eleven o'clock instead of ten. Caller: Thank you for letting me know. I'll pass the message on to the other participants."
   },
   {
     "id": "b1-listening-announcements",
@@ -7663,7 +7667,8 @@ const b1Lessons = [
       "Write down numbers, dates, and times immediately.",
       "Pay attention to locations and instructions.",
       "Listen for deadlines and important final details."
-    ]
+    ],
+    "transcript": "Attention, students. The English test scheduled for Thursday will take place in Room 204, not Room 202. Please arrive fifteen minutes before the start time and bring your student identification card. Dictionaries and mobile phones are not permitted during the test. If you have a question about your seating arrangement, speak to the examination assistant outside the room before the test begins."
   },
   {
     "id": "b1-listening-short-talks",
@@ -7849,7 +7854,8 @@ const b1Lessons = [
       "Listen for first, second, finally, and similar signposts.",
       "Separate examples from the speaker's main claims.",
       "Listen carefully to the conclusion."
-    ]
+    ],
+    "transcript": "Today I want to talk about the benefits of regular reading. Reading for a short time every day can improve vocabulary, strengthen concentration, and help learners become familiar with different sentence patterns. One useful strategy is to meet new words several times in context. When learners see a word in different articles, stories, and conversations, they begin to understand how it is used. It is also helpful to keep a vocabulary notebook and review it regularly. Reading once may introduce a word, but repeated encounters make it easier to remember."
   },
   {
     "id": "b1-speaking-experiences",
