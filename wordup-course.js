@@ -1067,11 +1067,27 @@
                 if (first) first.focus();
                 return;
             }
+            const multipleChoice = questions.map((q, index) => ({ q, index })).filter(item => {
+                const options = Array.isArray(item.q.options) ? item.q.options : [];
+                const answer = item.q.answer ?? item.q.correctAnswer ?? item.q.correct;
+                return options.length > 0 && answer !== null && answer !== undefined;
+            });
+            const unanswered = multipleChoice.filter(item => testAnswers[item.index] === undefined);
+            if (unanswered.length) {
+                result.innerHTML = '<div class="wu-feedback-bad">Please answer every multiple-choice question as well.</div>';
+                const firstButton = document.querySelector('[data-test-question="' + unanswered[0].index + '"]');
+                if (firstButton) firstButton.focus();
+                return;
+            }
             writtenQuestions.forEach(item => {
                 const field = document.getElementById("wuResponsetest" + item.index);
                 if (field) saveWrittenResponse(field);
             });
-            result.innerHTML = '<div class="wu-test-result"><h2>Written assessment saved</h2><p>Your responses have been saved on this device. This task requires human or rubric-based evaluation, so WordUp has not assigned an automatic score or marked it as passed.</p><p>Review your work against the lesson objectives and assessment criteria, or share it with your teacher for feedback.</p></div>';
+            const mcqCorrect = multipleChoice.filter(item => Number(testAnswers[item.index]) === Number(item.q.answer ?? item.q.correctAnswer ?? item.q.correct)).length;
+            const mcqSummary = multipleChoice.length
+                ? '<p>Multiple-choice section: <strong>' + mcqCorrect + ' / ' + multipleChoice.length + '</strong> correct. This is not an overall assessment score.</p>'
+                : '';
+            result.innerHTML = '<div class="wu-test-result"><h2>Assessment responses saved</h2>' + mcqSummary + '<p>Your written responses have been saved on this device. The written portion requires human or rubric-based evaluation, so WordUp has not assigned an overall score or marked the lesson as passed.</p><p>Review your work against the lesson objectives and assessment criteria, or share it with your teacher for feedback.</p></div>';
             return;
         }
         let correct = 0;
