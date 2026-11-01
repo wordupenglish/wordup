@@ -7089,10 +7089,10 @@ const academicCompleteLessons = [
         "answer": 0
       },
       {
-        "question": "Why does the speaker mention a course in which regular attenders also submitted more assignments?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
           "To introduce an unrelated topic.",
-          "a course in which regular attenders also submitted more assignments to illustrate the central issue.",
+          "To illustrate how the example supports the speaker's central point.",
           "To prove that the issue has no limitations.",
           "To replace the need for supporting evidence."
         ],
@@ -7275,12 +7275,12 @@ const academicCompleteLessons = [
         "answer": 2
       },
       {
-        "question": "Why does the speaker mention the lecturer's signposting phrases that distinguish main points from examples?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
           "To replace the need for supporting evidence.",
-          "the lecturer's signposting phrases that distinguish main points from examples to illustrate the central issue."
+          "To illustrate how the example supports the speaker's central point."
         ],
         "answer": 3
       },
@@ -7461,11 +7461,11 @@ const academicCompleteLessons = [
         "answer": 1
       },
       {
-        "question": "Why does the speaker mention a study comparing general comments with feedback tied to learning goals and revision steps?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
-          "a study comparing general comments with feedback tied to learning goals and revision steps to illustrate the central issue.",
+          "To illustrate how the example supports the speaker's central point.",
           "To replace the need for supporting evidence."
         ],
         "answer": 2
@@ -7647,9 +7647,9 @@ const academicCompleteLessons = [
         "answer": 3
       },
       {
-        "question": "Why does the speaker mention a departmental review in which students received one strength and one practical next step?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "a departmental review in which students received one strength and one practical next step to illustrate the central issue.",
+          "To illustrate how the example supports the speaker's central point.",
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
           "To replace the need for supporting evidence."
@@ -7833,9 +7833,9 @@ const academicCompleteLessons = [
         "answer": 3
       },
       {
-        "question": "Why does the speaker mention a departmental review in which students received one strength and one practical next step?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "a departmental review in which students received one strength and one practical next step to illustrate the central issue.",
+          "To illustrate how the example supports the speaker's central point.",
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
           "To replace the need for supporting evidence."
@@ -8019,9 +8019,9 @@ const academicCompleteLessons = [
         "answer": 3
       },
       {
-        "question": "Why does the speaker mention a study comparing general comments with feedback tied to learning goals and revision steps?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
-          "a study comparing general comments with feedback tied to learning goals and revision steps to illustrate the central issue.",
+          "To illustrate how the example supports the speaker's central point.",
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
           "To replace the need for supporting evidence."
@@ -8205,11 +8205,11 @@ const academicCompleteLessons = [
         "answer": 1
       },
       {
-        "question": "Why does the speaker mention the report's comparison of output before and after training?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
-          "the report's comparison of output before and after training to illustrate the central issue.",
+          "To illustrate how the example supports the speaker's central point.",
           "To replace the need for supporting evidence."
         ],
         "answer": 2
@@ -8391,11 +8391,11 @@ const academicCompleteLessons = [
         "answer": 1
       },
       {
-        "question": "Why does the speaker mention the report's comparison of output before and after training?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
-          "the report's comparison of output before and after training to illustrate the central issue.",
+          "To illustrate how the example supports the speaker's central point.",
           "To replace the need for supporting evidence."
         ],
         "answer": 2
@@ -8577,12 +8577,12 @@ const academicCompleteLessons = [
         "answer": 2
       },
       {
-        "question": "Why does the speaker mention courses where discussion and collaborative work form part of assessment?",
+        "question": "Why does the speaker use the example described in the passage?",
         "options": [
           "To introduce an unrelated topic.",
           "To prove that the issue has no limitations.",
           "To replace the need for supporting evidence.",
-          "courses where discussion and collaborative work form part of assessment to illustrate the central issue."
+          "To illustrate how the example supports the speaker's central point."
         ],
         "answer": 3
       },
