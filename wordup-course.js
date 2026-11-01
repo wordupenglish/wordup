@@ -811,6 +811,14 @@
             `;
         }
 
+        if (lesson.readingPassage) {
+            html += `
+                <h3>Reading passage</h3>
+                <div class="wu-reading-passage">
+                    ${speakableLessonText(lesson.readingPassage)}
+                </div>
+            `;
+        }
         if (lesson.rules?.length) {
             html += `
                 <h3>Key rules</h3>
