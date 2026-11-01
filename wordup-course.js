@@ -896,9 +896,9 @@
 
     function renderWrittenResponse(lesson, section, index, placeholder) {
         const key = writtenResponseKey(lesson.id, section, index);
-        return '<label class="wu-response-label" for="wuResponse' + section + index + '">Your response</label>' +
-            '<textarea class="wu-response-input" id="wuResponse' + section + index + '" data-wu-response-key="' + esc(key) + '"
-            + ' oninput="wordUpSaveWrittenResponse(this)" placeholder="' + esc(placeholder || "Write your response here...") + '">' +
+        const fieldId = "wuResponse" + section + index;
+        return '<label class="wu-response-label" for="' + fieldId + '">Your response</label>' +
+            '<textarea class="wu-response-input" id="' + fieldId + '" data-wu-response-key="' + esc(key) + '" oninput="wordUpSaveWrittenResponse(this)" placeholder="' + esc(placeholder || "Write your response here...") + '">' +
             esc(getWrittenResponse(lesson.id, section, index)) + '</textarea>' +
             '<small class="wu-response-status" aria-live="polite">Drafts are saved on this device.</small>';
     }
