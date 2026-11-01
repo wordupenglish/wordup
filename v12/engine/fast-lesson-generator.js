@@ -79,7 +79,7 @@
     function buildLesson(definition, index, allDefinitions) {
         const next = allDefinitions[index + 1];
 
-        const examples = definition.examples || [
+        const examples = definition.examples || definition.examplesInContext || [
             `This is an example of ${definition.topic.toLowerCase()}.`,
             `We use this language in everyday communication.`,
             `The example shows how the target language works.`,
