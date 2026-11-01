@@ -847,6 +847,19 @@
             `;
         }
 
+        if (lesson.independentPractice?.length) {
+            html += `
+                <h3>Independent practice</h3>
+                <div class="wu-independent-practice">
+                    ${lesson.independentPractice.map((task, index) => `
+                        <section class="wu-independent-task">
+                            <strong>${index + 1}. ${speakableLessonText(task.question || task.prompt || task.text || "Independent task")}</strong>
+                            ${renderWrittenResponse(lesson, "independent", index, "Complete this independent task here...")}
+                        </section>
+                    `).join("")}
+                </div>
+            `;
+        }
         html += `
 
             </article>
