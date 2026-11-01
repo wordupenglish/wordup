@@ -10729,7 +10729,7 @@ const academicCompleteLessons = [
     "title": "Academic Writing Foundations",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to academic writing foundations, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic writing foundations as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective academic writing foundations requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Writing Foundations.",
@@ -10844,7 +10844,7 @@ const academicCompleteLessons = [
     "title": "Paragraph Architecture",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to paragraph architecture, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops paragraph architecture as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Paragraph Architecture.",
@@ -10961,7 +10961,7 @@ const academicCompleteLessons = [
     "title": "Academic Thesis Statements",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to academic thesis statements, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic thesis statements as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Thesis Statements.",
@@ -11078,7 +11078,7 @@ const academicCompleteLessons = [
     "title": "Essay Planning",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to essay planning, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops essay planning as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective essay planning gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Essay Planning.",
@@ -11193,7 +11193,7 @@ const academicCompleteLessons = [
     "title": "Essay Introductions",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to essay introductions, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops essay introductions as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective essay introductions gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Essay Introductions.",
@@ -11308,7 +11308,7 @@ const academicCompleteLessons = [
     "title": "Body Paragraph Development",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to body paragraph development, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops body paragraph development as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Body Paragraph Development.",
@@ -11425,7 +11425,7 @@ const academicCompleteLessons = [
     "title": "Evidence Integration",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to evidence integration, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops evidence integration as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective evidence integration requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Evidence Integration.",
@@ -11540,7 +11540,7 @@ const academicCompleteLessons = [
     "title": "Academic Conclusions",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to academic conclusions, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic conclusions as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective academic conclusions gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Conclusions.",
@@ -11655,7 +11655,7 @@ const academicCompleteLessons = [
     "title": "Argumentative Essays",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to argumentative essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops argumentative essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong argumentative essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Argumentative Essays.",
@@ -11770,7 +11770,7 @@ const academicCompleteLessons = [
     "title": "Compare and Contrast Essays",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to compare and contrast essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops compare and contrast essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Compare-and-contrast writing explains meaningful similarities and differences between two subjects. Strong writing uses a clear basis of comparison rather than simply listing unrelated features.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Compare and Contrast Essays.",
@@ -11887,7 +11887,7 @@ const academicCompleteLessons = [
     "title": "Cause and Effect Essays",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to cause and effect essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops cause and effect essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Cause-and-effect writing distinguishes causes from consequences and explains the relationship between them without confusing correlation, sequence, and causation.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Cause and Effect Essays.",
@@ -12004,7 +12004,7 @@ const academicCompleteLessons = [
     "title": "Problem Solution Essays",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to problem solution essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops problem solution essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Problem-solution writing identifies a specific problem, explains why it matters, evaluates possible responses, and proposes a solution supported by clear reasoning.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Problem Solution Essays.",
@@ -12121,7 +12121,7 @@ const academicCompleteLessons = [
     "title": "Critical Essays",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to critical essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops critical essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong critical essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Critical Essays.",
@@ -12236,7 +12236,7 @@ const academicCompleteLessons = [
     "title": "Analytical Essays",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to analytical essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops analytical essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong analytical essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Analytical Essays.",
@@ -12351,7 +12351,7 @@ const academicCompleteLessons = [
     "title": "Synthesis Essays",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to synthesis essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops synthesis essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Synthesis Essays.",
@@ -12468,7 +12468,7 @@ const academicCompleteLessons = [
     "title": "Research Questions",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to research questions, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops research questions as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "A strong research questions gives an assignment a clear intellectual direction. It narrows the subject, identifies the question or position being developed, and signals the scope of the discussion. Its wording should be specific enough to guide the paper but flexible enough to accommodate evidence and analysis.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Research Questions.",
@@ -12583,7 +12583,7 @@ const academicCompleteLessons = [
     "title": "Research Objectives",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to research objectives, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops research objectives as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Research Objectives is taught as part of evidence-based research writing. Learners must connect research questions, evidence, method, findings, interpretation, and limitations rather than treating each section as an isolated writing exercise.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Research Objectives.",
@@ -12700,7 +12700,7 @@ const academicCompleteLessons = [
     "title": "Academic Sources",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to academic sources, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic sources as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Academic source use requires accurate representation of another writer's ideas and a clear distinction between source material and the writer's own analysis. The writer selects an appropriate method of integration, attributes the source, and explains how the evidence supports the current argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Sources.",
@@ -12815,7 +12815,7 @@ const academicCompleteLessons = [
     "title": "Paraphrasing",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to paraphrasing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops paraphrasing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Paraphrasing requires writers to incorporate information from sources without losing ownership of their argument. The writer must accurately represent the source, distinguish quotation from paraphrase and summary, and maintain consistent citation practice.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Paraphrasing.",
@@ -12932,7 +12932,7 @@ const academicCompleteLessons = [
     "title": "Summarising",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to summarising, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops summarising as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Summarising requires writers to incorporate information from sources without losing ownership of their argument. The writer must accurately represent the source, distinguish quotation from paraphrase and summary, and maintain consistent citation practice.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Summarising.",
@@ -13049,7 +13049,7 @@ const academicCompleteLessons = [
     "title": "Quoting",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to quoting, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops quoting as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Quoting requires writers to incorporate information from sources without losing ownership of their argument. The writer must accurately represent the source, distinguish quotation from paraphrase and summary, and maintain consistent citation practice.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Quoting.",
@@ -13166,7 +13166,7 @@ const academicCompleteLessons = [
     "title": "In-Text Citations",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to in-text citations, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops in-text citations as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Academic source use requires accurate representation of another writer's ideas and a clear distinction between source material and the writer's own analysis. The writer selects an appropriate method of integration, attributes the source, and explains how the evidence supports the current argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of In-Text Citations.",
@@ -13281,7 +13281,7 @@ const academicCompleteLessons = [
     "title": "Reference Lists",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to reference lists, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops reference lists as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Reference Lists requires writers to incorporate information from sources without losing ownership of their argument. The writer must accurately represent the source, distinguish quotation from paraphrase and summary, and maintain consistent citation practice.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Reference Lists.",
@@ -13398,7 +13398,7 @@ const academicCompleteLessons = [
     "title": "APA Academic Writing",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to apa academic writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops apa academic writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Academic source use requires accurate representation of another writer's ideas and a clear distinction between source material and the writer's own analysis. The writer selects an appropriate method of integration, attributes the source, and explains how the evidence supports the current argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of APA Academic Writing.",
@@ -13513,7 +13513,7 @@ const academicCompleteLessons = [
     "title": "Literature Reviews",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to literature reviews, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops literature reviews as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective literature reviews connects the purpose of a study with its evidence and the logic of its research design. Each section has a distinct function, but the research question, method, findings, interpretation, and limitations must remain aligned.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Literature Reviews.",
@@ -13628,7 +13628,7 @@ const academicCompleteLessons = [
     "title": "Research Proposals",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to research proposals, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops research proposals as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Research Proposals is taught as part of evidence-based research writing. Learners must connect research questions, evidence, method, findings, interpretation, and limitations rather than treating each section as an isolated writing exercise.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Research Proposals.",
@@ -13745,7 +13745,7 @@ const academicCompleteLessons = [
     "title": "Methodology Writing",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to methodology writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops methodology writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective methodology writing connects the purpose of a study with its evidence and the logic of its research design. Each section has a distinct function, but the research question, method, findings, interpretation, and limitations must remain aligned.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Methodology Writing.",
@@ -13860,7 +13860,7 @@ const academicCompleteLessons = [
     "title": "Results Writing",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to results writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops results writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Results Writing is taught as part of evidence-based research writing. Learners must connect research questions, evidence, method, findings, interpretation, and limitations rather than treating each section as an isolated writing exercise.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Results Writing.",
@@ -13977,7 +13977,7 @@ const academicCompleteLessons = [
     "title": "Discussion Writing",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to discussion writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops discussion writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective discussion writing connects the purpose of a study with its evidence and the logic of its research design. Each section has a distinct function, but the research question, method, findings, interpretation, and limitations must remain aligned.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Discussion Writing.",
@@ -14092,7 +14092,7 @@ const academicCompleteLessons = [
     "title": "Research Paper Structure",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to research paper structure, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops research paper structure as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective research paper structure connects the purpose of a study with its evidence and the logic of its research design. Each section has a distinct function, but the research question, method, findings, interpretation, and limitations must remain aligned.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Research Paper Structure.",
@@ -14207,7 +14207,7 @@ const academicCompleteLessons = [
     "title": "Research Paper Drafting",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to research paper drafting, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops research paper drafting as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective research paper drafting connects the purpose of a study with its evidence and the logic of its research design. Each section has a distinct function, but the research question, method, findings, interpretation, and limitations must remain aligned.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Research Paper Drafting.",
@@ -14322,7 +14322,7 @@ const academicCompleteLessons = [
     "title": "Academic Editing",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to academic editing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic editing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Editing academic editing involves more than correcting grammar. The writer checks clarity, cohesion, precision, sentence structure, unnecessary repetition, register, and whether every sentence contributes to the argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Editing.",
@@ -14439,7 +14439,7 @@ const academicCompleteLessons = [
     "title": "Final Research Paper",
     "objective": "By the end of the lesson, the learner can produce a formal academic piece of writing related to final research paper, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops final research paper as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective final research paper connects the purpose of a study with its evidence and the logic of its research design. Each section has a distinct function, but the research question, method, findings, interpretation, and limitations must remain aligned.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Final Research Paper.",
