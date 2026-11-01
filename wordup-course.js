@@ -874,7 +874,7 @@
                 <h3>Guided practice</h3>
                 <ul class="wu-guided-practice-list">
                     ${lesson.guidedPractice.map(task => {
-                        const prompt = typeof task === "string" ? task : (task.question || task.prompt || task.text || "Guided task");
+                        const prompt = typeof task === "string" ? task : (task.question || task.prompt || task.text || task.instruction || "Guided task");
                         return `<li>${speakableLessonText(prompt)}</li>`;
                     }).join("")}
                 </ul>
@@ -886,7 +886,7 @@
                 <div class="wu-independent-practice">
                     ${lesson.independentPractice.map((task, index) => `
                         <section class="wu-independent-task">
-                            <strong>${index + 1}. ${speakableLessonText(typeof task === "string" ? task : (task.question || task.prompt || task.text || "Independent task"))}</strong>
+                            <strong>${index + 1}. ${speakableLessonText(typeof task === "string" ? task : (task.question || task.prompt || task.text || task.instruction || "Independent task"))}</strong>
                             ${renderWrittenResponse(lesson, "independent", index, "Complete this independent task here...")}
                         </section>
                     `).join("")}
@@ -957,8 +957,8 @@
         }
         const cards = questions.map((q, index) => {
             const options = Array.isArray(q.options) ? q.options : [];
-            const answer = q.answer ?? q.correctAnswer ?? q.correct;
-            const prompt = esc(q.question || q.prompt || q.text || "Practice task");
+            const answer = q && typeof q === "object" ? (q.answer ?? q.correctAnswer ?? q.correct) : undefined;
+            const prompt = esc(typeof q === "string" ? q : (q.question || q.prompt || q.text || q.instruction || "Practice task"));
             let interaction = "";
             if (options.length && answer !== null && answer !== undefined) {
                 interaction = '<div class="wu-question-options">' + options.map((option, i) =>
@@ -993,7 +993,7 @@
         const cards = questions.map((q, index) => {
             const options = Array.isArray(q.options) ? q.options : [];
             const answer = q.answer ?? q.correctAnswer ?? q.correct;
-            const prompt = esc(q.question || q.prompt || q.text || "Assessment task");
+            const prompt = esc(typeof q === "string" ? q : (q.question || q.prompt || q.text || q.instruction || "Assessment task"));
             const written = !options.length || answer === null || answer === undefined;
             if (written) {
                 const rubric = Array.isArray(q.rubric) ? q.rubric : (Array.isArray(q.criteria) ? q.criteria : []);
@@ -1029,10 +1029,10 @@
 
         const answerText = String(answer ?? "").trim();
         const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
-        const selectedText = buttons[selectedIndex] ? buttons[selectedIndex].textContent.trim().toLowerCase() : "";
+        const selectedText = buttons[selectedIndex] ? buttons[selectedIndex].textContent.trim() : "";
         const correct = numericAnswer
             ? Number(selectedIndex) === Number(answerText)
-            : selectedText === answerText.toLowerCase();
+            : selectedText === answerText;
 
         if (buttons[selectedIndex]) {
             buttons[selectedIndex].classList.add(
@@ -1113,7 +1113,7 @@
                 const selectedOption = Array.isArray(item.q.options) ? item.q.options[Number(testAnswers[item.index])] : undefined;
                 return numericAnswer
                     ? Number(testAnswers[item.index]) === Number(answerText)
-                    : String(selectedOption ?? "").trim().toLowerCase() === answerText.toLowerCase();
+                    : String(selectedOption ?? "").trim() === answerText;
             }).length;
             const mcqSummary = multipleChoice.length
                 ? '<p>Multiple-choice section: <strong>' + mcqCorrect + ' / ' + multipleChoice.length + '</strong> correct. This is not an overall assessment score.</p>'
