@@ -4603,9 +4603,9 @@ const c2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -4799,9 +4799,9 @@ const c2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -4995,9 +4995,9 @@ const c2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5191,9 +5191,9 @@ const c2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5387,9 +5387,9 @@ const c2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5583,9 +5583,9 @@ const c2CompleteLessons = [
       "Summarise the spoken argument"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the speaker's purpose and central claim before focusing on individual details.",
+      "Distinguish the speaker's main claims from supporting evidence, examples, qualifications, and opposing views.",
+      "Use signposting, context, tone, and changes in emphasis to interpret the speaker's stance and the relationship between ideas."
     ],
     "examples": [
       "The speaker introduces a main claim before developing supporting details.",
@@ -5779,9 +5779,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "My position is that the proposal is useful, although its implementation needs careful planning.",
@@ -5913,9 +5913,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that evaluating complex and conflicting claims requires careful attention to context.",
@@ -6043,9 +6043,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that expressing nuance and precision requires careful attention to context.",
@@ -6173,9 +6173,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that advanced persuasion requires careful attention to context.",
@@ -6303,9 +6303,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that strategic use of register requires careful attention to context.",
@@ -6433,9 +6433,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "My position is that the proposal is useful, although its implementation needs careful planning.",
@@ -6567,9 +6567,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "My position is that the proposal is useful, although its implementation needs careful planning.",
@@ -6701,9 +6701,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that impromptu speaking requires careful attention to context.",
@@ -6831,9 +6831,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "Today I will focus on three factors that affect the decision.",
@@ -6961,9 +6961,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that interpreting implicit and figurative meaning requires careful attention to context.",
@@ -7091,9 +7091,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that facilitating expert discussions requires careful attention to context.",
@@ -7221,9 +7221,9 @@ const c2CompleteLessons = [
       "Develop and conclude a sustained response"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make your communicative purpose or position clear early in the contribution.",
+      "Develop each main point with a relevant reason, example, or explanation, and use signposting to guide the listener.",
+      "Adapt register, pace, and level of detail to the audience, and respond directly to what other participants say."
     ],
     "examples": [
       "One important point is that speaking with precision and flexibility requires careful attention to context.",
