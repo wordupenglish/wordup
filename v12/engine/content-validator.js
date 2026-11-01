@@ -155,6 +155,7 @@ function wordUpContentQualityReport() {
         malformedAssessmentQuestions: 0,
         lessonsWithGenericWording: 0,
         repeatedPrompts: 0,
+        lessonsWithCrossSectionPromptReuse: 0,
         details: []
     };
     const ids = new Set();
@@ -172,8 +173,11 @@ function wordUpContentQualityReport() {
         if (!Array.isArray(lesson.mistakes) || !lesson.mistakes.length) report.lessonsWithoutMistakes++;
         if (!Array.isArray(lesson.independentPractice) || !lesson.independentPractice.length) report.lessonsWithoutIndependentPractice++;
 
-        const prompts = [];
+        const promptSections = new Map();
+        let repeatedWithinSection = false;
+        let reusedAcrossSections = false;
         ["guidedPractice", "activities", "practice", "independentPractice", "test"].forEach(section => {
+            const sectionPrompts = [];
             (Array.isArray(lesson[section]) ? lesson[section] : []).forEach((question, index) => {
                 const audit = wordUpQuestionAudit(question, section + "[" + index + "]");
                 if (audit.openResponse) report.openResponseQuestions++;
@@ -182,11 +186,18 @@ function wordUpContentQualityReport() {
                     report.details.push({ id, section, index, errors: audit.errors });
                 }
                 const prompt = question && (question.question || question.prompt || question.text);
-                if (prompt) prompts.push(String(prompt).trim().toLowerCase());
+                if (prompt) {
+                    const normalized = String(prompt).trim().toLowerCase();
+                    sectionPrompts.push(normalized);
+                    if (promptSections.has(normalized) && promptSections.get(normalized) !== section) reusedAcrossSections = true;
+                    else if (!promptSections.has(normalized)) promptSections.set(normalized, section);
+                }
             });
+            if (new Set(sectionPrompts).size !== sectionPrompts.length) repeatedWithinSection = true;
         });
 
-        if (new Set(prompts).size !== prompts.length) report.repeatedPrompts++;
+        if (repeatedWithinSection) report.repeatedPrompts++;
+        if (reusedAcrossSections) report.lessonsWithCrossSectionPromptReuse++;
 
         const validation = wordUpValidateLesson(lesson);
         if (validation.warnings.some(warning => warning.includes("generic"))) {
