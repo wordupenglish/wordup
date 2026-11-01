@@ -1052,3 +1052,40 @@ body.dark #curriculum button.wu-course-continue {
     padding-left: 22px;
     line-height: 1.6;
 }
+
+/* Listening lesson audio and transcript controls */
+.wu-listen-passage {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--border, #d8dee8);
+    border-radius: 9px;
+    background: var(--surface2, #f3f5f8);
+    color: var(--text, #172033);
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.wu-listen-passage:hover {
+    filter: brightness(0.97);
+}
+
+.wu-transcript-reveal {
+    margin: 10px 0 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--border, #d8dee8);
+    border-radius: 9px;
+}
+
+.wu-transcript-reveal summary {
+    cursor: pointer;
+    font-weight: 650;
+}
+
+.wu-transcript-reveal p {
+    line-height: 1.7;
+    margin: 12px 0 2px;
+}
