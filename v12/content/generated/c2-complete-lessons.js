@@ -109,7 +109,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate mastery of clause structures accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of mastery of clause structures?",
@@ -251,7 +262,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate rhetorical grammar accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of rhetorical grammar?",
@@ -403,7 +425,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate information structure accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence gives strongest focus to the evidence?",
@@ -565,7 +598,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate advanced modality accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence expresses cautious interpretation?",
@@ -717,7 +761,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate register accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of register?",
@@ -859,7 +914,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate stylistic variation accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of stylistic variation?",
@@ -1001,7 +1067,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate ellipsis accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of ellipsis?",
@@ -1143,7 +1220,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate parallelism accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of parallelism?",
@@ -1285,7 +1373,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate complex coordination accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of complex coordination?",
@@ -1427,7 +1526,18 @@ const c2CompleteLessons = [
         "answer": null
       }
     ],
-    "independentPractice": [],
+    "independentPractice": [
+      {
+        "question": "Write four original sentences that demonstrate sentence-level editing accurately. Use different contexts so that the meaning and function of the structure are clear.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two of your sentences, identify the grammatical form and function, and explain why the structure is appropriate in each context.",
+        "options": [],
+        "answer": null
+      }
+    ],
     "test": [
       {
         "question": "Which sentence demonstrates accurate use of sentence-level editing?",
@@ -7234,11 +7344,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Strong advanced argumentation depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Advanced Argumentation.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Make the central claim explicit and keep each paragraph connected to it.",
@@ -7349,11 +7459,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Synthesis.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Identify the purpose and audience before drafting.",
@@ -7466,11 +7576,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Strong critical evaluation depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Critical Evaluation.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Make the central claim explicit and keep each paragraph connected to it.",
@@ -7581,11 +7691,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective research-based writing requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Research-Based Writing.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Identify the purpose and audience before drafting.",
@@ -7696,11 +7806,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective disciplinary writing requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Disciplinary Writing.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Identify the purpose and audience before drafting.",
@@ -7811,11 +7921,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective publication style adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Publication Style.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Choose a level of formality that fits the audience and purpose.",
@@ -7926,11 +8036,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Editing advanced editing involves more than correcting grammar. The writer checks clarity, cohesion, precision, sentence structure, unnecessary repetition, register, and whether every sentence contributes to the argument.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Advanced Editing.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Revise ideas and organisation before concentrating on surface-level proofreading.",
@@ -8043,11 +8153,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Strong rhetorical control depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Rhetorical Control.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Make the central claim explicit and keep each paragraph connected to it.",
@@ -8158,11 +8268,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective academic voice adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Academic Voice.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Choose a level of formality that fits the audience and purpose.",
@@ -8273,11 +8383,11 @@ const c2CompleteLessons = [
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
     "explanation": "Effective professional writing adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
-      "Plan before drafting",
-      "Develop ideas with relevant support",
-      "Maintain logical cohesion",
-      "Use precise vocabulary and appropriate register",
-      "Revise and edit independently"
+      "Identify the purpose, scope, and audience of Professional Writing.",
+      "Organise the content around a clear controlling purpose.",
+      "Develop each main point with relevant evidence, examples, or reasoning.",
+      "Select language and structure appropriate to the genre and register.",
+      "Revise the final text for coherence, precision, and grammatical accuracy."
     ],
     "rules": [
       "Choose a level of formality that fits the audience and purpose.",
