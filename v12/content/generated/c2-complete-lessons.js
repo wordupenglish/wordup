@@ -123,22 +123,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of mastery of clause structures?",
+        "question": "Which principle should guide the use of Mastery of Clause Structures?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Choose the structure only by sentence length.",
+          "Identify the form and function associated with Mastery of Clause Structures.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Write a sentence using mastery of clause structures accurately in a meaningful context.",
+        "question": "Which error should a learner avoid when using Mastery of Clause Structures?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate mastery of clause structures accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to mastery of clause structures and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -276,22 +286,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of rhetorical grammar?",
+        "question": "Which principle should guide the use of Rhetorical Grammar?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence.",
+          "Identify the form and function associated with Rhetorical Grammar."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which error should a learner avoid when using Rhetorical Grammar?",
+        "options": [
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
         ],
         "answer": 0
       },
       {
-        "question": "Write a sentence using rhetorical grammar accurately in a meaningful context.",
+        "question": "Write three original sentences that demonstrate rhetorical grammar accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to rhetorical grammar and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -439,32 +459,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence gives strongest focus to the evidence?",
+        "question": "Which principle should guide the use of Information Structure?",
         "options": [
-          "It was the evidence that changed the conclusion.",
-          "The evidence changed that was the conclusion.",
-          "The evidence it changed the conclusion was.",
-          "Changed the conclusion was the evidence it."
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Identify the information the speaker or writer wants to foreground.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which sentence uses fronting appropriately?",
+        "question": "Which error should a learner avoid when using Information Structure?",
         "options": [
-          "What the team needed was a clearer procedure.",
-          "What the team needed was need a clearer procedure.",
-          "The team what needed was clearer procedure.",
-          "Needed what the team was a clearer procedure."
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register.",
+          "Do not front an element if the resulting word order is unnatural or unclear."
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Rewrite a sentence so that information structure creates a different focus.",
+        "question": "Write three original sentences that demonstrate information structure accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Explain which information your revised sentence foregrounds.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -612,32 +632,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence expresses cautious interpretation?",
+        "question": "Which principle should guide the use of Advanced Modality?",
         "options": [
-          "The results may indicate a change in behaviour.",
-          "The results prove every participant changed.",
-          "The results definitely cause the behaviour.",
-          "The results cannot possibly relate to behaviour."
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Match modal strength to the evidence available.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "question": "Which modal expression is strongest?",
+        "question": "Which error should a learner avoid when using Advanced Modality?",
         "options": [
-          "must",
-          "might",
-          "could",
-          "may"
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register.",
+          "Do not treat all modal verbs as interchangeable; their meanings and levels of commitment differ."
         ],
-        "answer": 0
+        "answer": 3
       },
       {
-        "question": "Rewrite an overly certain claim so that its strength matches limited evidence.",
+        "question": "Write three original sentences that demonstrate advanced modality accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Write one cautious academic claim using a modal or hedging expression.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -775,22 +795,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of register?",
+        "question": "Which principle should guide the use of Register?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Choose the structure only by sentence length.",
+          "Identify the form and function associated with Register.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Write a sentence using register accurately in a meaningful context.",
+        "question": "Which error should a learner avoid when using Register?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate register accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to register and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -928,22 +958,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of stylistic variation?",
+        "question": "Which principle should guide the use of Stylistic Variation?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Identify the form and function associated with Stylistic Variation.",
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
         "answer": 0
       },
       {
-        "question": "Write a sentence using stylistic variation accurately in a meaningful context.",
+        "question": "Which error should a learner avoid when using Stylistic Variation?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Write three original sentences that demonstrate stylistic variation accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to stylistic variation and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1081,22 +1121,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of ellipsis?",
+        "question": "Which principle should guide the use of Ellipsis?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Choose the structure only by sentence length.",
+          "Identify the form and function associated with Ellipsis.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Write a sentence using ellipsis accurately in a meaningful context.",
+        "question": "Which error should a learner avoid when using Ellipsis?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not omit information that the reader or listener cannot recover from context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate ellipsis accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to ellipsis and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1234,22 +1284,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of parallelism?",
+        "question": "Which principle should guide the use of Parallelism?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Identify the form and function associated with Parallelism.",
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
         "answer": 0
       },
       {
-        "question": "Write a sentence using parallelism accurately in a meaningful context.",
+        "question": "Which error should a learner avoid when using Parallelism?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Do not mix an infinitive, gerund, and finite clause in a series without a grammatical reason.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Write three original sentences that demonstrate parallelism accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to parallelism and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1387,22 +1447,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of complex coordination?",
+        "question": "Which principle should guide the use of Complex Coordination?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Choose the structure only by sentence length.",
+          "Identify the form and function associated with Complex Coordination.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence."
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "question": "Write a sentence using complex coordination accurately in a meaningful context.",
+        "question": "Which error should a learner avoid when using Complex Coordination?",
+        "options": [
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Adapting the structure to the audience and register."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Write three original sentences that demonstrate complex coordination accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to complex coordination and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1540,22 +1610,32 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "Which sentence demonstrates accurate use of sentence-level editing?",
+        "question": "Which principle should guide the use of Sentence-Level Editing?",
         "options": [
-          "The revised sentence communicates the intended meaning clearly.",
-          "The revised sentence communicating the intended meaning clearly.",
-          "The revised sentence communicate the intended meaning.",
-          "The revised sentence communicated meaning clearlying."
+          "Choose the structure only by sentence length.",
+          "Use the same form regardless of meaning or register.",
+          "Ignore the relationship between the target structure and the rest of the sentence.",
+          "Identify the form and function associated with Sentence-Level Editing."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which error should a learner avoid when using Sentence-Level Editing?",
+        "options": [
+          "Do not choose a grammatical structure without checking the intended meaning and context.",
+          "Checking the intended meaning before choosing a form.",
+          "Reviewing agreement and word order before submitting a sentence.",
+          "Adapting the structure to the audience and register."
         ],
         "answer": 0
       },
       {
-        "question": "Write a sentence using sentence-level editing accurately in a meaningful context.",
+        "question": "Write three original sentences that demonstrate sentence-level editing accurately in different contexts. Identify the target structure in each sentence.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Correct a sentence containing an error related to sentence-level editing and explain the correction.",
+        "question": "Explain how the grammatical choices in your examples affect meaning, emphasis, or register. Include one common error and show how to correct it.",
         "options": [],
         "answer": null
       }
@@ -1747,44 +1827,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Near-Native Precision, what does \"interpret\" most closely mean?",
+        "question": "In the context of Near-Native Precision, what does \"substantial\" most closely mean?",
         "options": [
           "the meaning and use of \"interpret\" in the context of interpret",
+          "considerable in amount, importance, or strength",
           "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim",
-          "directly connected with the matter being discussed"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Near-Native Precision, what does \"distinguish\" most closely mean?",
-        "options": [
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "to give reasons or evidence supporting a decision or claim",
-          "directly connected with the matter being discussed",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
+          "to give reasons or evidence supporting a decision or claim"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Near-Native Precision, what does \"justify\" most closely mean?",
+        "question": "In the context of Near-Native Precision, what does \"precise\" most closely mean?",
         "options": [
+          "the meaning and use of \"interpret\" in the context of interpret",
           "the meaning and use of \"distinguish\" in the context of distinguish",
-          "directly connected with the matter being discussed",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"interpret\" in the context of interpret"
+          "exact and carefully expressed",
+          "to give reasons or evidence supporting a decision or claim"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Near-Native Precision, what does \"relevant\" most closely mean?",
-        "options": [
-          "to give reasons or evidence supporting a decision or claim",
-          "directly connected with the matter being discussed",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
-        ],
-        "answer": 3
+        "question": "Write a short paragraph about The vocabulary is practised through a workplace training project. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -1977,44 +2047,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Idiomatic Language, what does \"distinguish\" most closely mean?",
+        "question": "In the context of Idiomatic Language, what does \"precise\" most closely mean?",
         "options": [
           "the meaning and use of \"distinguish\" in the context of distinguish",
           "to give reasons or evidence supporting a decision or claim",
-          "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Idiomatic Language, what does \"justify\" most closely mean?",
-        "options": [
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength",
-          "to give reasons or evidence supporting a decision or claim"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Idiomatic Language, what does \"relevant\" most closely mean?",
-        "options": [
-          "to give reasons or evidence supporting a decision or claim",
-          "considerable in amount, importance, or strength",
-          "directly connected with the matter being discussed",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
+          "exact and carefully expressed",
+          "directly connected with the matter being discussed"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Idiomatic Language, what does \"substantial\" most closely mean?",
+        "question": "In the context of Idiomatic Language, what does \"evaluate\" most closely mean?",
         "options": [
-          "directly connected with the matter being discussed",
-          "considerable in amount, importance, or strength",
           "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim"
+          "to give reasons or evidence supporting a decision or claim",
+          "directly connected with the matter being discussed",
+          "the meaning and use of \"evaluate\" in the context of evaluate"
         ],
         "answer": 3
+      },
+      {
+        "question": "Write a short paragraph about The vocabulary is practised through a team planning meeting. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2207,44 +2267,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Academic Nuance, what does \"variable\" most closely mean?",
+        "question": "In the context of Academic Nuance, what does \"validity\" most closely mean?",
         "options": [
           "a factor that can change or take different values",
           "the results or observations produced by an investigation",
           "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy"
+          "the extent to which a measure or conclusion is sound"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "In the context of Academic Nuance, what does \"synthesize\" most closely mean?",
+        "options": [
+          "to combine ideas or information into a coherent whole",
+          "a factor that can change or take different values",
+          "the results or observations produced by an investigation",
+          "a possible meaning, result, or consequence of an idea"
         ],
         "answer": 0
       },
       {
-        "question": "In the context of Academic Nuance, what does \"findings\" most closely mean?",
-        "options": [
-          "a factor that can change or take different values",
-          "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 1
+        "question": "Write a short paragraph about The vocabulary is practised through a teacher-training workshop. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
       },
       {
-        "question": "In the context of Academic Nuance, what does \"implication\" most closely mean?",
-        "options": [
-          "the results or observations produced by an investigation",
-          "consistently dependable or trustworthy",
-          "a possible meaning, result, or consequence of an idea",
-          "a factor that can change or take different values"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "In the context of Academic Nuance, what does \"reliable\" most closely mean?",
-        "options": [
-          "a possible meaning, result, or consequence of an idea",
-          "consistently dependable or trustworthy",
-          "a factor that can change or take different values",
-          "the results or observations produced by an investigation"
-        ],
-        "answer": 3
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2437,44 +2487,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Professional Register, what does \"adapt\" most closely mean?",
+        "question": "In the context of Professional Register, what does \"sustainable\" most closely mean?",
         "options": [
           "to change in response to new conditions",
+          "able to continue without causing unacceptable long-term damage",
           "to help produce a result or development",
-          "a result that follows from an action or situation",
-          "a new plan or action intended to solve a problem or create improvement"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Professional Register, what does \"contribute\" most closely mean?",
-        "options": [
-          "to change in response to new conditions",
-          "a result that follows from an action or situation",
-          "a new plan or action intended to solve a problem or create improvement",
-          "to help produce a result or development"
+          "a result that follows from an action or situation"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Professional Register, what does \"consequence\" most closely mean?",
+        "question": "In the context of Professional Register, what does \"impact\" most closely mean?",
         "options": [
+          "to change in response to new conditions",
           "to help produce a result or development",
-          "a new plan or action intended to solve a problem or create improvement",
-          "a result that follows from an action or situation",
-          "to change in response to new conditions"
+          "a significant effect or influence",
+          "a result that follows from an action or situation"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Professional Register, what does \"initiative\" most closely mean?",
-        "options": [
-          "a result that follows from an action or situation",
-          "a new plan or action intended to solve a problem or create improvement",
-          "to change in response to new conditions",
-          "to help produce a result or development"
-        ],
-        "answer": 3
+        "question": "Write a short paragraph about The vocabulary is practised through a service improvement project. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2667,44 +2707,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Rhetorical Vocabulary, what does \"elaborate\" most closely mean?",
+        "question": "In the context of Rhetorical Vocabulary, what does \"coherent\" most closely mean?",
         "options": [
           "to develop an idea with additional detail",
+          "logical, connected, and easy to follow",
           "to combine something with another part into a functioning whole",
-          "to improve something by changing or reorganising it",
-          "to combine ideas or information into a coherent whole"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Rhetorical Vocabulary, what does \"integrate\" most closely mean?",
-        "options": [
-          "to develop an idea with additional detail",
-          "to improve something by changing or reorganising it",
-          "to combine ideas or information into a coherent whole",
-          "to combine something with another part into a functioning whole"
+          "to improve something by changing or reorganising it"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Rhetorical Vocabulary, what does \"revise\" most closely mean?",
+        "question": "In the context of Rhetorical Vocabulary, what does \"precise\" most closely mean?",
         "options": [
+          "to develop an idea with additional detail",
           "to combine something with another part into a functioning whole",
-          "to combine ideas or information into a coherent whole",
-          "to improve something by changing or reorganising it",
-          "to develop an idea with additional detail"
+          "exact and carefully expressed",
+          "to improve something by changing or reorganising it"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Rhetorical Vocabulary, what does \"synthesize\" most closely mean?",
-        "options": [
-          "to improve something by changing or reorganising it",
-          "to combine ideas or information into a coherent whole",
-          "to develop an idea with additional detail",
-          "to combine something with another part into a functioning whole"
-        ],
-        "answer": 3
+        "question": "Write a short paragraph about The vocabulary is practised through a recruitment decision. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -2897,44 +2927,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Disciplinary Terminology, what does \"precise\" most closely mean?",
+        "question": "In the context of Disciplinary Terminology, what does \"distinguish\" most closely mean?",
         "options": [
+          "the meaning and use of \"distinguish\" in the context of distinguish",
           "exact and carefully expressed",
           "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret"
+          "the meaning and use of \"derive\" in the context of derive"
         ],
         "answer": 0
       },
       {
-        "question": "In the context of Disciplinary Terminology, what does \"evaluate\" most closely mean?",
+        "question": "In the context of Disciplinary Terminology, what does \"justify\" most closely mean?",
         "options": [
           "exact and carefully expressed",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"evaluate\" in the context of evaluate",
+          "the meaning and use of \"derive\" in the context of derive"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Disciplinary Terminology, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"derive\" in the context of derive",
-          "exact and carefully expressed"
-        ],
-        "answer": 2
+        "question": "Write a short paragraph about The vocabulary is practised through a workplace training project. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
       },
       {
-        "question": "In the context of Disciplinary Terminology, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "exact and carefully expressed",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
-        ],
-        "answer": 3
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -3127,44 +3147,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Semantic Precision, what does \"evaluate\" most closely mean?",
+        "question": "In the context of Semantic Precision, what does \"justify\" most closely mean?",
         "options": [
           "the meaning and use of \"evaluate\" in the context of evaluate",
           "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Semantic Precision, what does \"derive\" most closely mean?",
-        "options": [
-          "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"derive\" in the context of derive"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "In the context of Semantic Precision, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"evaluate\" in the context of evaluate"
+          "to give reasons or evidence supporting a decision or claim",
+          "the meaning and use of \"interpret\" in the context of interpret"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Semantic Precision, what does \"distinguish\" most closely mean?",
+        "question": "In the context of Semantic Precision, what does \"relevant\" most closely mean?",
         "options": [
-          "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
           "the meaning and use of \"evaluate\" in the context of evaluate",
-          "the meaning and use of \"derive\" in the context of derive"
+          "the meaning and use of \"derive\" in the context of derive",
+          "the meaning and use of \"interpret\" in the context of interpret",
+          "directly connected with the matter being discussed"
         ],
         "answer": 3
+      },
+      {
+        "question": "Write a short paragraph about The vocabulary is practised through a team planning meeting. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
@@ -3357,44 +3367,34 @@ const c2CompleteLessons = [
     ],
     "test": [
       {
-        "question": "In the context of Advanced Collocations, what does \"derive\" most closely mean?",
+        "question": "In the context of Advanced Collocations, what does \"relevant\" most closely mean?",
         "options": [
           "the meaning and use of \"derive\" in the context of derive",
+          "directly connected with the matter being discussed",
           "the meaning and use of \"interpret\" in the context of interpret",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "In the context of Advanced Collocations, what does \"interpret\" most closely mean?",
-        "options": [
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"interpret\" in the context of interpret"
+          "the meaning and use of \"distinguish\" in the context of distinguish"
         ],
         "answer": 1
       },
       {
-        "question": "In the context of Advanced Collocations, what does \"distinguish\" most closely mean?",
+        "question": "In the context of Advanced Collocations, what does \"substantial\" most closely mean?",
         "options": [
+          "the meaning and use of \"derive\" in the context of derive",
           "the meaning and use of \"interpret\" in the context of interpret",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "the meaning and use of \"derive\" in the context of derive"
+          "considerable in amount, importance, or strength",
+          "the meaning and use of \"distinguish\" in the context of distinguish"
         ],
         "answer": 2
       },
       {
-        "question": "In the context of Advanced Collocations, what does \"justify\" most closely mean?",
-        "options": [
-          "the meaning and use of \"distinguish\" in the context of distinguish",
-          "to give reasons or evidence supporting a decision or claim",
-          "the meaning and use of \"derive\" in the context of derive",
-          "the meaning and use of \"interpret\" in the context of interpret"
-        ],
-        "answer": 3
+        "question": "Write a short paragraph about The vocabulary is practised through a professional development programme. using at least four of the target words accurately.",
+        "options": [],
+        "answer": null
+      },
+      {
+        "question": "Choose two target words and explain how their meanings, word forms, or typical collocations differ. Give an original example of each.",
+        "options": [],
+        "answer": null
       }
     ],
     "review": [
