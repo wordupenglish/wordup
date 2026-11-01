@@ -8335,7 +8335,7 @@ const b2CompleteLessons = [
     "title": "Academic Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to academic paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Paragraphs.",
@@ -8452,7 +8452,7 @@ const b2CompleteLessons = [
     "title": "Essay Structure",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to essay structure, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops essay structure as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective essay structure gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Essay Structure.",
@@ -8567,7 +8567,7 @@ const b2CompleteLessons = [
     "title": "Thesis Statements",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to thesis statements, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops thesis statements as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Thesis Statements.",
@@ -8684,7 +8684,7 @@ const b2CompleteLessons = [
     "title": "Introduction Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to introduction paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops introduction paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Introduction Paragraphs.",
@@ -8801,7 +8801,7 @@ const b2CompleteLessons = [
     "title": "Body Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to body paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops body paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Body Paragraphs.",
@@ -8918,7 +8918,7 @@ const b2CompleteLessons = [
     "title": "Conclusion Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to conclusion paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops conclusion paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Conclusion Paragraphs.",
@@ -9035,7 +9035,7 @@ const b2CompleteLessons = [
     "title": "Argumentative Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to argumentative essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops argumentative essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong argumentative essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Argumentative Essays.",
@@ -9150,7 +9150,7 @@ const b2CompleteLessons = [
     "title": "Compare and Contrast Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to compare and contrast essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops compare and contrast essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Compare-and-contrast writing explains meaningful similarities and differences between two subjects. Strong writing uses a clear basis of comparison rather than simply listing unrelated features.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Compare and Contrast Essays.",
@@ -9267,7 +9267,7 @@ const b2CompleteLessons = [
     "title": "Cause and Effect Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to cause and effect essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops cause and effect essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Cause-and-effect writing distinguishes causes from consequences and explains the relationship between them without confusing correlation, sequence, and causation.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Cause and Effect Essays.",
@@ -9384,7 +9384,7 @@ const b2CompleteLessons = [
     "title": "Problem Solution Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to problem solution essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops problem solution essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Problem-solution writing identifies a specific problem, explains why it matters, evaluates possible responses, and proposes a solution supported by clear reasoning.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Problem Solution Essays.",
@@ -9501,7 +9501,7 @@ const b2CompleteLessons = [
     "title": "Opinion Essays",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to opinion essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops opinion essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective opinion essays requires a clear purpose, a logical sequence of ideas, and support that is relevant to the reader's needs. The writer plans the content, develops each point, and revises the draft for accuracy, coherence, and appropriate style.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Opinion Essays.",
@@ -9616,7 +9616,7 @@ const b2CompleteLessons = [
     "title": "Academic Style",
     "objective": "By the end of the lesson, the learner can produce a upper-intermediate piece of writing related to academic style, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops academic style as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective academic style adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Academic Style.",
