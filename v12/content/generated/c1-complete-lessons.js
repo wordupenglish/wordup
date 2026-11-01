@@ -7992,7 +7992,7 @@ const c1CompleteLessons = [
     "title": "Advanced Academic Paragraphs",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to advanced academic paragraphs, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops advanced academic paragraphs as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "An effective academic paragraph develops one controlling idea. A topic sentence introduces the point, supporting evidence or examples develop it, explanation shows why the support matters, and the final sentence connects the discussion to the larger argument.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Advanced Academic Paragraphs.",
@@ -8109,7 +8109,7 @@ const c1CompleteLessons = [
     "title": "Sophisticated Introductions",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to sophisticated introductions, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops sophisticated introductions as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective sophisticated introductions gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Sophisticated Introductions.",
@@ -8224,7 +8224,7 @@ const c1CompleteLessons = [
     "title": "Argument Development",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to argument development, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops argument development as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong argument development depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Argument Development.",
@@ -8339,7 +8339,7 @@ const c1CompleteLessons = [
     "title": "Counterarguments",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to counterarguments, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops counterarguments as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong counterarguments depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Counterarguments.",
@@ -8454,7 +8454,7 @@ const c1CompleteLessons = [
     "title": "Refutation",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to refutation, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops refutation as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong refutation depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Refutation.",
@@ -8569,7 +8569,7 @@ const c1CompleteLessons = [
     "title": "Critical Essays",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to critical essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops critical essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong critical essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Critical Essays.",
@@ -8684,7 +8684,7 @@ const c1CompleteLessons = [
     "title": "Analytical Essays",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to analytical essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops analytical essays as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Strong analytical essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Analytical Essays.",
@@ -8799,7 +8799,7 @@ const c1CompleteLessons = [
     "title": "Synthesis Writing",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to synthesis writing, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops synthesis writing as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "A strong thesis statement presents a focused position or controlling idea. It should answer the central question of the assignment and give the reader a clear sense of the argument that the paper will develop.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Synthesis Writing.",
@@ -8916,7 +8916,7 @@ const c1CompleteLessons = [
     "title": "Formal Academic Style",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to formal academic style, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops formal academic style as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective formal academic style adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Formal Academic Style.",
@@ -9031,7 +9031,7 @@ const c1CompleteLessons = [
     "title": "Editing Academic Prose",
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to editing academic prose, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
-    "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
+    "introduction": "This lesson develops editing academic prose as a practical academic writing skill. You will examine a focused model, practise the decisions that shape an effective text, and produce your own response.",
     "explanation": "Effective editing academic prose is a deliberate review of meaning as well as correctness. The writer checks whether ideas are logically connected, wording is precise, sentences are readable, and the style is appropriate for the intended audience.",
     "learningPoints": [
       "Identify the purpose, scope, and audience of Editing Academic Prose.",
