@@ -8377,7 +8377,6 @@ const c2CompleteLessons = [
     "media": {},
     "skillContent": {}
   }
-]
 ];
 
 const wordUpC2Existing = window.WORDUP_C2_CONTENT || [];
