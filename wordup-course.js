@@ -1027,8 +1027,12 @@
             button.disabled = true;
         });
 
-        const correct =
-            String(selectedIndex) === String(answer);
+        const answerText = String(answer ?? "").trim();
+        const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+        const selectedText = buttons[selectedIndex] ? buttons[selectedIndex].textContent.trim().toLowerCase() : "";
+        const correct = numericAnswer
+            ? Number(selectedIndex) === Number(answerText)
+            : selectedText === answerText.toLowerCase();
 
         if (buttons[selectedIndex]) {
             buttons[selectedIndex].classList.add(
@@ -1102,7 +1106,15 @@
                 const field = document.getElementById("wuResponsetest" + item.index);
                 if (field) saveWrittenResponse(field);
             });
-            const mcqCorrect = multipleChoice.filter(item => Number(testAnswers[item.index]) === Number(item.q.answer ?? item.q.correctAnswer ?? item.q.correct)).length;
+            const mcqCorrect = multipleChoice.filter(item => {
+                const answer = item.q.answer ?? item.q.correctAnswer ?? item.q.correct;
+                const answerText = String(answer ?? "").trim();
+                const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+                const selectedOption = Array.isArray(item.q.options) ? item.q.options[Number(testAnswers[item.index])] : undefined;
+                return numericAnswer
+                    ? Number(testAnswers[item.index]) === Number(answerText)
+                    : String(selectedOption ?? "").trim().toLowerCase() === answerText.toLowerCase();
+            }).length;
             const mcqSummary = multipleChoice.length
                 ? '<p>Multiple-choice section: <strong>' + mcqCorrect + ' / ' + multipleChoice.length + '</strong> correct. This is not an overall assessment score.</p>'
                 : '';
@@ -1112,7 +1124,13 @@
         let correct = 0;
         questions.forEach((q, index) => {
             const answer = q.answer ?? q.correctAnswer ?? q.correct;
-            if (Number(testAnswers[index]) === Number(answer)) correct++;
+            const answerText = String(answer ?? "").trim();
+            const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+            const selectedOption = Array.isArray(q.options) ? q.options[Number(testAnswers[index])] : undefined;
+            const isCorrect = numericAnswer
+                ? Number(testAnswers[index]) === Number(answerText)
+                : String(selectedOption ?? "").trim().toLowerCase() === answerText.toLowerCase();
+            if (isCorrect) correct++;
         });
         const score = Math.round(correct / questions.length * 100);
         const passed = score >= 70;
