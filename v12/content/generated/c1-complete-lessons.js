@@ -34,8 +34,25 @@ const c1CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places advanced clause structures in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "form",
+        "meaning": "The grammatical structure used to express a particular meaning."
+      },
+      {
+        "word": "function",
+        "meaning": "The communicative purpose a grammatical structure performs in context."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality and style appropriate to a particular audience and situation."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a grammatical structure without checking the intended meaning and context.",
+      "Do not treat a formally possible structure as automatically natural in every register.",
+      "Do not overlook agreement, word order, or verb complementation when revising a complex sentence."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -159,8 +176,25 @@ const c1CompleteLessons = [
       "Not until the evidence was reviewed did the committee change its position."
     ],
     "context": "Inversion is used to create controlled emphasis in formal discussion of a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "subject–auxiliary inversion",
+        "meaning": "Changing auxiliary and subject order after a fronted negative or restrictive expression."
+      },
+      {
+        "word": "negative adverbial",
+        "meaning": "An expression such as never, rarely, or under no circumstances that triggers inversion when fronted."
+      },
+      {
+        "word": "auxiliary operator",
+        "meaning": "The helping verb that moves before the subject in an inverted clause."
+      }
+    ],
+    "mistakes": [
+      "Do not invert the subject and verb after every fronted adverbial; inversion is required only with particular negative or restrictive expressions.",
+      "Do not use the past form after did; use the base form of the main verb.",
+      "Do not omit the auxiliary when the clause requires one."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -304,8 +338,25 @@ const c1CompleteLessons = [
       "The main issue is not cost but whether the proposal is practical."
     ],
     "context": "Information structure helps speakers and writers control emphasis while discussing a team planning meeting.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "fronting",
+        "meaning": "Placing an element before its usual position to organise information or create focus."
+      },
+      {
+        "word": "theme",
+        "meaning": "The starting point of a clause, often what the sentence is about."
+      },
+      {
+        "word": "rheme",
+        "meaning": "The part of a clause that develops or adds information about the theme."
+      }
+    ],
+    "mistakes": [
+      "Do not front an element if the resulting word order is unnatural or unclear.",
+      "Do not confuse fronting with inversion; fronting does not always require subject–auxiliary inversion.",
+      "Do not ignore the information flow from one sentence to the next."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -449,8 +500,25 @@ const c1CompleteLessons = [
       "The main issue is not cost but whether the proposal is practical."
     ],
     "context": "Information structure helps speakers and writers control emphasis while discussing a team planning meeting.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "cleft construction",
+        "meaning": "A structure that divides a message into two clauses to give one element special focus."
+      },
+      {
+        "word": "focus constituent",
+        "meaning": "The element highlighted as especially important in a sentence."
+      },
+      {
+        "word": "pseudo-cleft",
+        "meaning": "A construction often beginning with what, where, or why that places focus at the end of the clause."
+      }
+    ],
+    "mistakes": [
+      "Do not use a cleft construction when it creates unnecessary emphasis or an awkward sentence.",
+      "Do not confuse it-clefts with pseudo-clefts; their clause patterns differ.",
+      "Do not separate a focus phrase from the grammatical structure that introduces it."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -594,8 +662,25 @@ const c1CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places subordination in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "form",
+        "meaning": "The grammatical structure used to express a particular meaning."
+      },
+      {
+        "word": "function",
+        "meaning": "The communicative purpose a grammatical structure performs in context."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality and style appropriate to a particular audience and situation."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a grammatical structure without checking the intended meaning and context.",
+      "Do not treat a formally possible structure as automatically natural in every register.",
+      "Do not overlook agreement, word order, or verb complementation when revising a complex sentence."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -719,8 +804,25 @@ const c1CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places coordination in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "form",
+        "meaning": "The grammatical structure used to express a particular meaning."
+      },
+      {
+        "word": "function",
+        "meaning": "The communicative purpose a grammatical structure performs in context."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality and style appropriate to a particular audience and situation."
+      }
+    ],
+    "mistakes": [
+      "Do not choose a grammatical structure without checking the intended meaning and context.",
+      "Do not treat a formally possible structure as automatically natural in every register.",
+      "Do not overlook agreement, word order, or verb complementation when revising a complex sentence."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -844,8 +946,25 @@ const c1CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places ellipsis in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "ellipsis",
+        "meaning": "The omission of recoverable words without loss of the intended meaning."
+      },
+      {
+        "word": "substitution",
+        "meaning": "Replacing a repeated word or phrase with a pro-form such as one, do, or so."
+      },
+      {
+        "word": "antecedent",
+        "meaning": "The earlier expression that supplies the meaning of an omitted or substituted element."
+      }
+    ],
+    "mistakes": [
+      "Do not omit information that the reader or listener cannot recover from context.",
+      "Do not confuse ellipsis with an ungrammatical sentence fragment.",
+      "Do not use a substitute whose reference is ambiguous."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -969,8 +1088,25 @@ const c1CompleteLessons = [
       "The policy could reduce costs, although further evaluation is required."
     ],
     "context": "Modal language is especially important when making careful claims about a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "epistemic modality",
+        "meaning": "Language expressing a judgement about likelihood, certainty, or possibility."
+      },
+      {
+        "word": "deontic modality",
+        "meaning": "Language expressing obligation, permission, or prohibition."
+      },
+      {
+        "word": "modal remoteness",
+        "meaning": "A modal form used to signal distance from the speaker's immediate reality or commitment."
+      }
+    ],
+    "mistakes": [
+      "Do not treat all modal verbs as interchangeable; their meanings and levels of commitment differ.",
+      "Do not use must when the intended meaning is only a weak possibility.",
+      "Do not ignore how register changes the force of a modal expression."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1114,8 +1250,25 @@ const c1CompleteLessons = [
       "The policy could reduce costs, although further evaluation is required."
     ],
     "context": "Modal language is especially important when making careful claims about a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "hedging",
+        "meaning": "Language that limits the strength or scope of a claim."
+      },
+      {
+        "word": "epistemic stance",
+        "meaning": "The writer's expressed degree of confidence in a proposition."
+      },
+      {
+        "word": "qualification",
+        "meaning": "A phrase that narrows a claim or identifies the conditions under which it applies."
+      }
+    ],
+    "mistakes": [
+      "Do not hedge a statement so heavily that its central claim becomes unclear.",
+      "Do not present a tentative interpretation as an established fact.",
+      "Do not use may, might, and must without considering the degree of certainty each expresses."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1259,8 +1412,25 @@ const c1CompleteLessons = [
       "In formal writing, the structure can improve precision when used appropriately."
     ],
     "context": "The lesson places complex verb patterns in situations involving a workplace training project.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "complementation",
+        "meaning": "The grammatical pattern required after a verb, adjective, or noun."
+      },
+      {
+        "word": "gerund",
+        "meaning": "The -ing form functioning as a noun-like element or verb complement."
+      },
+      {
+        "word": "infinitive complement",
+        "meaning": "A to-infinitive or bare infinitive selected by a particular verb or construction."
+      }
+    ],
+    "mistakes": [
+      "Do not assume that verbs with similar meanings take the same complement pattern.",
+      "Do not add to before a bare infinitive after a modal verb.",
+      "Do not change a gerund to an infinitive without checking whether the meaning changes."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -1384,8 +1554,25 @@ const c1CompleteLessons = [
       "The main issue is not cost but whether the proposal is practical."
     ],
     "context": "Information structure helps speakers and writers control emphasis while discussing a team planning meeting.",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "fronting",
+        "meaning": "Placing an element before its usual position to organise information or create focus."
+      },
+      {
+        "word": "theme",
+        "meaning": "The starting point of a clause, often what the sentence is about."
+      },
+      {
+        "word": "rheme",
+        "meaning": "The part of a clause that develops or adds information about the theme."
+      }
+    ],
+    "mistakes": [
+      "Do not front an element if the resulting word order is unnatural or unclear.",
+      "Do not confuse fronting with inversion; fronting does not always require subject–auxiliary inversion.",
+      "Do not ignore the information flow from one sentence to the next."
+    ],
     "commonMistakes": [],
     "guidedPractice": [],
     "activities": [
@@ -7694,9 +7881,9 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Give each paragraph one clear controlling idea that supports the overall purpose.",
+      "Develop points with explanation, evidence, and analysis rather than unsupported generalisations.",
+      "Use transitions to show logical relationships, not merely to decorate the beginning of sentences."
     ],
     "examples": [
       "Topic sentence: Flexible scheduling can improve access to adult education.",
@@ -7711,8 +7898,25 @@ const c1CompleteLessons = [
       "Link: For this reason, scheduling policy should be considered alongside course content when improving access."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "topic sentence",
+        "meaning": "A sentence that states the controlling idea of a paragraph."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The linguistic links that help ideas connect across a text."
+      },
+      {
+        "word": "development",
+        "meaning": "The explanation and support that make a point sufficiently clear."
+      }
+    ],
+    "mistakes": [
+      "Allowing a paragraph to develop several unrelated controlling ideas.",
+      "Including evidence without explaining what it demonstrates.",
+      "Using transitions mechanically when the logical relationship is not clear."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -7785,7 +7989,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to sophisticated introductions, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Sophisticated Introductions is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Effective sophisticated introductions gives the reader a clear route through the argument. Each section has a distinct purpose, paragraphs develop one controlling idea, and transitions show how the reasoning progresses from one point to the next.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -7794,15 +7998,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Give each paragraph one clear controlling idea that supports the overall purpose.",
+      "Develop points with explanation, evidence, and analysis rather than unsupported generalisations.",
+      "Use transitions to show logical relationships, not merely to decorate the beginning of sentences."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a team planning meeting.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Topic sentence: Timely feedback helps learners identify specific gaps before they become persistent errors.",
+      "Development: When comments identify both the problem and a practical next step, learners can use them to guide revision."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a team planning meeting.",
@@ -7811,8 +8013,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "topic sentence",
+        "meaning": "A sentence that states the controlling idea of a paragraph."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The linguistic links that help ideas connect across a text."
+      },
+      {
+        "word": "development",
+        "meaning": "The explanation and support that make a point sufficiently clear."
+      }
+    ],
+    "mistakes": [
+      "Allowing a paragraph to develop several unrelated controlling ideas.",
+      "Including evidence without explaining what it demonstrates.",
+      "Using transitions mechanically when the logical relationship is not clear."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -7834,36 +8053,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Create a logical outline with a clear purpose for each paragraph.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop one paragraph using a controlling idea, explanation, evidence, and analysis.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Revise transitions so that they express the actual relationship between ideas.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a team planning meeting.",
+        "question": "Draft the relevant section of an academic essay and check paragraph unity and progression.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Use a reverse outline to identify paragraphs that repeat, drift from, or fail to support the central argument.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a team planning meeting. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Produce a coherent sophisticated introductions with a clear controlling purpose, logically developed paragraphs, relevant support, and effective transitions.",
         "options": [],
         "answer": null
       }
@@ -7885,7 +8104,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to argument development, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Argument Development is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Strong argument development depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -7894,15 +8113,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make the central claim explicit and keep each paragraph connected to it.",
+      "Use evidence that is relevant and credible, then explain how it supports the claim.",
+      "Represent opposing views accurately before qualifying or rebutting them."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a professional development programme.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Claim: Flexible deadlines can support learners facing genuine access barriers.",
+      "Reasoning: A limited extension policy can preserve standards while allowing students to manage documented disruptions; however, clear limits are needed to maintain fairness."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a professional development programme.",
@@ -7911,8 +8128,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "claim",
+        "meaning": "A position or conclusion that the writer seeks to establish."
+      },
+      {
+        "word": "warrant",
+        "meaning": "The reasoning that explains why evidence supports a claim."
+      },
+      {
+        "word": "counterargument",
+        "meaning": "A reasoned alternative position that challenges or qualifies the main claim."
+      }
+    ],
+    "mistakes": [
+      "Presenting a claim without explaining the reasoning that connects it to the evidence.",
+      "Ignoring a serious counterargument or representing it unfairly.",
+      "Using examples that are interesting but do not support the central claim."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -7934,36 +8168,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a claim and identify the evidence needed to support it.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop a counterargument that a reasonable reader might raise.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Write a rebuttal that responds to the reasoning rather than attacking the person who holds the view.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a professional development programme.",
+        "question": "Draft an argument with a clear claim, evidence, counterargument, and reasoned response.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Review each paragraph to ensure that evidence is analysed rather than simply inserted.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a professional development programme. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Write a developed argument development that presents a defensible claim, evaluates relevant evidence, addresses a substantial alternative view, and reaches a proportionate conclusion.",
         "options": [],
         "answer": null
       }
@@ -7985,7 +8219,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to counterarguments, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Counterarguments is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Strong counterarguments depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -7994,15 +8228,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make the central claim explicit and keep each paragraph connected to it.",
+      "Use evidence that is relevant and credible, then explain how it supports the claim.",
+      "Represent opposing views accurately before qualifying or rebutting them."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a service improvement project.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Claim: Flexible deadlines can support learners facing genuine access barriers.",
+      "Reasoning: A limited extension policy can preserve standards while allowing students to manage documented disruptions; however, clear limits are needed to maintain fairness."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a service improvement project.",
@@ -8011,8 +8243,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "claim",
+        "meaning": "A position or conclusion that the writer seeks to establish."
+      },
+      {
+        "word": "warrant",
+        "meaning": "The reasoning that explains why evidence supports a claim."
+      },
+      {
+        "word": "counterargument",
+        "meaning": "A reasoned alternative position that challenges or qualifies the main claim."
+      }
+    ],
+    "mistakes": [
+      "Presenting a claim without explaining the reasoning that connects it to the evidence.",
+      "Ignoring a serious counterargument or representing it unfairly.",
+      "Using examples that are interesting but do not support the central claim."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8034,36 +8283,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a claim and identify the evidence needed to support it.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop a counterargument that a reasonable reader might raise.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Write a rebuttal that responds to the reasoning rather than attacking the person who holds the view.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a service improvement project.",
+        "question": "Draft an argument with a clear claim, evidence, counterargument, and reasoned response.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Review each paragraph to ensure that evidence is analysed rather than simply inserted.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a service improvement project. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Write a developed counterarguments that presents a defensible claim, evaluates relevant evidence, addresses a substantial alternative view, and reaches a proportionate conclusion.",
         "options": [],
         "answer": null
       }
@@ -8085,7 +8334,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to refutation, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Refutation is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Strong refutation depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -8094,15 +8343,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make the central claim explicit and keep each paragraph connected to it.",
+      "Use evidence that is relevant and credible, then explain how it supports the claim.",
+      "Represent opposing views accurately before qualifying or rebutting them."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a recruitment decision.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Claim: Flexible deadlines can support learners facing genuine access barriers.",
+      "Reasoning: A limited extension policy can preserve standards while allowing students to manage documented disruptions; however, clear limits are needed to maintain fairness."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a recruitment decision.",
@@ -8111,8 +8358,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "claim",
+        "meaning": "A position or conclusion that the writer seeks to establish."
+      },
+      {
+        "word": "warrant",
+        "meaning": "The reasoning that explains why evidence supports a claim."
+      },
+      {
+        "word": "counterargument",
+        "meaning": "A reasoned alternative position that challenges or qualifies the main claim."
+      }
+    ],
+    "mistakes": [
+      "Presenting a claim without explaining the reasoning that connects it to the evidence.",
+      "Ignoring a serious counterargument or representing it unfairly.",
+      "Using examples that are interesting but do not support the central claim."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8134,36 +8398,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a claim and identify the evidence needed to support it.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop a counterargument that a reasonable reader might raise.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Write a rebuttal that responds to the reasoning rather than attacking the person who holds the view.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a recruitment decision.",
+        "question": "Draft an argument with a clear claim, evidence, counterargument, and reasoned response.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Review each paragraph to ensure that evidence is analysed rather than simply inserted.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a recruitment decision. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Write a developed refutation that presents a defensible claim, evaluates relevant evidence, addresses a substantial alternative view, and reaches a proportionate conclusion.",
         "options": [],
         "answer": null
       }
@@ -8185,7 +8449,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to critical essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Critical Essays is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Strong critical essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -8194,15 +8458,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make the central claim explicit and keep each paragraph connected to it.",
+      "Use evidence that is relevant and credible, then explain how it supports the claim.",
+      "Represent opposing views accurately before qualifying or rebutting them."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a workplace training project.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Claim: Flexible deadlines can support learners facing genuine access barriers.",
+      "Reasoning: A limited extension policy can preserve standards while allowing students to manage documented disruptions; however, clear limits are needed to maintain fairness."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a workplace training project.",
@@ -8211,8 +8473,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "claim",
+        "meaning": "A position or conclusion that the writer seeks to establish."
+      },
+      {
+        "word": "warrant",
+        "meaning": "The reasoning that explains why evidence supports a claim."
+      },
+      {
+        "word": "counterargument",
+        "meaning": "A reasoned alternative position that challenges or qualifies the main claim."
+      }
+    ],
+    "mistakes": [
+      "Presenting a claim without explaining the reasoning that connects it to the evidence.",
+      "Ignoring a serious counterargument or representing it unfairly.",
+      "Using examples that are interesting but do not support the central claim."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8234,36 +8513,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a claim and identify the evidence needed to support it.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop a counterargument that a reasonable reader might raise.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Write a rebuttal that responds to the reasoning rather than attacking the person who holds the view.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a workplace training project.",
+        "question": "Draft an argument with a clear claim, evidence, counterargument, and reasoned response.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Review each paragraph to ensure that evidence is analysed rather than simply inserted.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a workplace training project. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Write a developed critical essays that presents a defensible claim, evaluates relevant evidence, addresses a substantial alternative view, and reaches a proportionate conclusion.",
         "options": [],
         "answer": null
       }
@@ -8285,7 +8564,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to analytical essays, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Analytical Essays is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Strong analytical essays depends on a clear claim, relevant evidence, and reasoning that explains the connection between them. A convincing writer considers alternative interpretations, responds fairly to opposing positions, and limits conclusions to what the evidence supports.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -8294,15 +8573,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Make the central claim explicit and keep each paragraph connected to it.",
+      "Use evidence that is relevant and credible, then explain how it supports the claim.",
+      "Represent opposing views accurately before qualifying or rebutting them."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a team planning meeting.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Claim: Flexible deadlines can support learners facing genuine access barriers.",
+      "Reasoning: A limited extension policy can preserve standards while allowing students to manage documented disruptions; however, clear limits are needed to maintain fairness."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a team planning meeting.",
@@ -8311,8 +8588,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "claim",
+        "meaning": "A position or conclusion that the writer seeks to establish."
+      },
+      {
+        "word": "warrant",
+        "meaning": "The reasoning that explains why evidence supports a claim."
+      },
+      {
+        "word": "counterargument",
+        "meaning": "A reasoned alternative position that challenges or qualifies the main claim."
+      }
+    ],
+    "mistakes": [
+      "Presenting a claim without explaining the reasoning that connects it to the evidence.",
+      "Ignoring a serious counterargument or representing it unfairly.",
+      "Using examples that are interesting but do not support the central claim."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8334,36 +8628,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Write a claim and identify the evidence needed to support it.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Develop a counterargument that a reasonable reader might raise.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Write a rebuttal that responds to the reasoning rather than attacking the person who holds the view.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a team planning meeting.",
+        "question": "Draft an argument with a clear claim, evidence, counterargument, and reasoned response.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Review each paragraph to ensure that evidence is analysed rather than simply inserted.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a team planning meeting. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Write a developed analytical essays that presents a defensible claim, evaluates relevant evidence, addresses a substantial alternative view, and reaches a proportionate conclusion.",
         "options": [],
         "answer": null
       }
@@ -8394,9 +8688,9 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Identify the purpose and audience before drafting.",
+      "Develop each main point with a reason, example, or relevant evidence.",
+      "Revise the final text for organisation, cohesion, precision, and grammatical accuracy."
     ],
     "examples": [
       "Weak: Technology is important in education.",
@@ -8411,8 +8705,25 @@ const c1CompleteLessons = [
       "Stronger: Although remote work can increase flexibility, its effectiveness depends on communication systems, workload management, and access to appropriate support."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "audience",
+        "meaning": "The readers for whom a text is written."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The links that make ideas connect logically."
+      },
+      {
+        "word": "register",
+        "meaning": "The level of formality appropriate to the purpose."
+      }
+    ],
+    "mistakes": [
+      "Drafting before clarifying the purpose and intended audience.",
+      "Supporting a broad statement with a vague or unrelated example.",
+      "Revising for grammar without checking organisation and meaning."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8485,7 +8796,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to formal academic style, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Formal Academic Style is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Effective formal academic style adapts language to audience, purpose, and genre. The writer maintains a consistent stance, chooses precise vocabulary, controls formality, and uses complex language only when it improves meaning.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -8494,15 +8805,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Choose a level of formality that fits the audience and purpose.",
+      "Prefer precise verbs and clear sentence structures to inflated or unnecessarily complex wording.",
+      "Maintain a consistent stance and avoid unsupported certainty or conversational language where it is inappropriate."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a student support project.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Informal: A lot of people think the plan is really good.",
+      "More formal: Many participants regard the proposal as beneficial, although its long-term effects remain uncertain."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a student support project.",
@@ -8511,8 +8820,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "register",
+        "meaning": "The level of formality and style suited to a context."
+      },
+      {
+        "word": "stance",
+        "meaning": "The writer's position or attitude toward the subject."
+      },
+      {
+        "word": "concision",
+        "meaning": "The quality of expressing ideas without unnecessary wording."
+      }
+    ],
+    "mistakes": [
+      "Using informal or inflated wording that does not fit the audience or genre.",
+      "Changing the writer's stance without a clear reason.",
+      "Choosing complex sentence structures that reduce clarity."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8534,36 +8860,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Revise informal wording for an appropriate academic or professional register.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Replace an inflated phrase with a concise and precise alternative.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Check whether the writer's stance is consistent and appropriately qualified.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a student support project.",
+        "question": "Revise a short passage for audience, register, precision, and consistency of voice.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Explain how your language choices support the purpose of the text.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a student support project. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Produce a polished formal academic style that demonstrates appropriate register, precise vocabulary, coherent stance, and controlled sentence structure.",
         "options": [],
         "answer": null
       }
@@ -8585,7 +8911,7 @@ const c1CompleteLessons = [
     "objective": "By the end of the lesson, the learner can produce a advanced piece of writing related to editing academic prose, using appropriate organisation, support, language, and revision strategies.",
     "prerequisites": [],
     "introduction": "This writing lesson moves from planning and modelling to guided drafting, independent production, and revision.",
-    "explanation": "Editing Academic Prose is developed through a practical writing sequence: planning, modelling, drafting, revising, and editing. The learner must make deliberate choices about organisation, evidence, language, and audience.",
+    "explanation": "Effective editing academic prose is a deliberate review of meaning as well as correctness. The writer checks whether ideas are logically connected, wording is precise, sentences are readable, and the style is appropriate for the intended audience.",
     "learningPoints": [
       "Plan before drafting",
       "Develop ideas with relevant support",
@@ -8594,15 +8920,13 @@ const c1CompleteLessons = [
       "Revise and edit independently"
     ],
     "rules": [
-      "Identify the main learning principle presented in this lesson.",
-      "Apply the target skill accurately in a meaningful context.",
-      "Use evidence, context, or language features to support your answer."
+      "Revise ideas and organisation before concentrating on surface-level proofreading.",
+      "Remove repetition and replace vague wording with precise language.",
+      "Check sentence structure, agreement, punctuation, and consistency after revising the argument."
     ],
     "examples": [
-      "A focused opening establishes the purpose of writing about a language-learning programme.",
-      "Each main point is supported by a relevant reason, example, or piece of evidence.",
-      "Transitions show how one idea relates to the next.",
-      "The conclusion draws together the argument without introducing an unrelated new point."
+      "Before: The results were very good and showed many positive things.",
+      "After: The results indicate improved task completion and greater confidence among participants."
     ],
     "examplesInContext": [
       "A focused opening establishes the purpose of writing about a language-learning programme.",
@@ -8611,8 +8935,25 @@ const c1CompleteLessons = [
       "The conclusion draws together the argument without introducing an unrelated new point."
     ],
     "context": "",
-    "vocabulary": [],
-    "mistakes": [],
+    "vocabulary": [
+      {
+        "word": "concision",
+        "meaning": "Expressing an idea clearly without unnecessary words."
+      },
+      {
+        "word": "cohesion",
+        "meaning": "The logical and linguistic connection between sentences and ideas."
+      },
+      {
+        "word": "precision",
+        "meaning": "The use of wording that communicates the intended meaning accurately."
+      }
+    ],
+    "mistakes": [
+      "Correcting grammar while leaving unclear reasoning or weak organisation unchanged.",
+      "Replacing precise language with unnecessarily complicated wording.",
+      "Removing repetition without checking whether an important idea has been lost."
+    ],
     "commonMistakes": [],
     "guidedPractice": [
       {
@@ -8634,36 +8975,36 @@ const c1CompleteLessons = [
     "activities": [],
     "practice": [
       {
-        "question": "Draft one developed paragraph.",
+        "question": "Identify one vague or repetitive sentence and revise it for precision.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise one sentence to make the relationship between ideas clearer.",
+        "question": "Combine or divide sentences to improve readability without changing the intended meaning.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Edit your draft for precision and appropriate register.",
+        "question": "Proofread a paragraph for agreement, punctuation, and consistent terminology.",
         "options": [],
         "answer": null
       }
     ],
     "independentPractice": [
       {
-        "question": "Write a 250â€“320 words response about a language-learning programme.",
+        "question": "Edit a complete paragraph and record the three most important revisions.",
         "options": [],
         "answer": null
       },
       {
-        "question": "Revise the response after checking organisation, support, cohesion, vocabulary, and grammar.",
+        "question": "Explain how each revision improves clarity, cohesion, accuracy, or register.",
         "options": [],
         "answer": null
       }
     ],
     "test": [
       {
-        "question": "Complete a final writing task about a language-learning programme. Produce a coherent, well-supported response appropriate to the advanced level.",
+        "question": "Edit a short academic passage on editing academic prose. Improve clarity, cohesion, precision, and grammatical control, then explain the effect of your most important changes.",
         "options": [],
         "answer": null
       }
@@ -8676,6 +9017,7 @@ const c1CompleteLessons = [
     "media": {},
     "skillContent": {}
   }
+]
 ];
 
 const wordUpC1Existing = window.WORDUP_C1_CONTENT || [];
