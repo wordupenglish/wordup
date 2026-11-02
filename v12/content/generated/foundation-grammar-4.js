@@ -165,7 +165,7 @@ activities:[
 practice:[
 {question:"Choose the correct question.",options:["Where you live?","Where do you live?","Where does you live?","Where living you?"],answer:1},
 {question:"Which question word asks about a person?",options:["Where","When","Who","Why"],answer:2},
-{question:"Choose the correct question.",options:["Does she work here?","Do she work here?","Does she works here?","She does work here?"],answer:0}
+{question:"Which option correctly forms a question with does and she?",options:["Does she work here?","Do she work here?","Does she works here?","She does work here?"],answer:0}
 ],
 independentPractice:[
 "Write five yes/no questions.",
@@ -175,7 +175,7 @@ independentPractice:[
 test:[
 {question:"Choose the correct question.",options:["What is your name?","What your name is?","What does your name?","What are your name?"],answer:0},
 {question:"Choose the correct question for asking about a place.",options:["When do you live?","Where do you live?","Why do you live?","Who do you live?"],answer:1},
-{question:"Choose the correct question.",options:["Does he speaks English?","Do he speak English?","Does he speak English?","He does speak English?"],answer:2}
+{question:"Which question correctly uses does with the base form of the main verb?",options:["Does he speaks English?","Do he speak English?","Does he speak English?","He does speak English?"],answer:2}
 ],
 review:[
 "Questions ask for information or confirmation.",
@@ -260,7 +260,7 @@ activities:[
 ],
 practice:[
 {question:"Choose the correct sentence.",options:["He don't work here.","He doesn't work here.","He doesn't works here.","He not work here."],answer:1},
-{question:"Choose the correct sentence.",options:["I am not tired.","I not am tired.","I do not am tired.","I doesn't tired."],answer:0},
+{question:"Which sentence correctly places not after the verb be?",options:["I am not tired.","I not am tired.","I do not am tired.","I doesn't tired."],answer:0},
 {question:"Choose the correct form.",options:["She doesn't likes tea.","She don't like tea.","She doesn't like tea.","She not like tea."],answer:2}
 ],
 independentPractice:[
@@ -271,7 +271,7 @@ independentPractice:[
 ],
 test:[
 {question:"Choose the correct sentence.",options:["They isn't ready.","They aren't ready.","They don't ready.","They not are ready."],answer:1},
-{question:"Choose the correct sentence.",options:["He doesn't works here.","He don't work here.","He doesn't work here.","He not work here."],answer:2},
+{question:"Which sentence uses doesn't with the base form of the main verb?",options:["He doesn't works here.","He don't work here.","He doesn't work here.","He not work here."],answer:2},
 {question:"What follows 'does not'?",options:["A past verb","The base form of the verb","A verb with -s","Only an adjective"],answer:1}
 ],
 review:[
