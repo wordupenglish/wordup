@@ -28,7 +28,7 @@ function wordUpCreateQuestion(type, question, options, answer, explanation = "")
 }
 
 function wordUpNormalizeAnswer(value) {
-    return String(value ?? "").trim().replace(/\\s+/g, " ").toLocaleLowerCase();
+    return String(value ?? "").trim().replace(/\s+/g, " ").toLocaleLowerCase();
 }
 
 function wordUpCheckQuestion(question, submittedAnswer) {
