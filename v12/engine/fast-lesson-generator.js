@@ -22,10 +22,64 @@
         };
     }
 
+    function taskText(task) {
+        if (typeof task === "string") return task;
+        return task && (task.prompt || task.instruction || task.question || task.text) || "";
+    }
+
+    function defaultContext(definition) {
+        const topic = definition.topic.toLowerCase();
+        const contexts = {
+            grammar: "Use " + topic + " when speaking and writing about real situations. Pay attention to the intended meaning, the surrounding words, and the time or relationship expressed by the sentence.",
+            vocabulary: "Use the words in " + topic + " in meaningful sentences and familiar situations. Notice their meanings, word forms, and the words that commonly appear with them.",
+            reading: "Use " + topic + " to identify purpose, key information, and supporting details. Read for the overall message first, then return to the text to confirm specific information.",
+            listening: "Use " + topic + " to practise understanding the main message and important details. Listen for context, speaker purpose, and key information such as names, places, times, and actions.",
+            speaking: "Use " + topic + " in everyday conversations. Organise your message, choose language that fits the situation, and speak clearly enough for the listener to follow.",
+            writing: "Use " + topic + " when writing for a clear purpose and audience. Organise your ideas, connect supporting details, and review the text for accuracy and clarity."
+        };
+        return contexts[definition.skill] || "Apply " + topic + " in a realistic communication task.";
+    }
+
+    function defaultMistakes(definition) {
+        const topic = definition.topic.toLowerCase();
+        const bySkill = {
+            grammar: ["Choosing a form without checking the intended meaning or time reference in " + topic + ".", "Leaving out a required auxiliary, verb form, or word-order element.", "Using the structure in a context where it does not express the intended meaning."],
+            vocabulary: ["Choosing a word because it looks familiar without checking its exact meaning.", "Using a word with an unnatural collocation or incorrect word form.", "Confusing two related words that have different uses in context."],
+            reading: ["Focusing on individual words and missing the overall purpose of the text.", "Treating one supporting detail as if it were the main idea.", "Making an inference that is not supported by information in the text."],
+            listening: ["Focusing on every word and missing the speaker's main message.", "Confusing details such as names, places, times, or quantities.", "Ignoring context or speaker purpose when interpreting a response."],
+            speaking: ["Giving information without organising it into a clear message.", "Choosing a phrase that does not fit the relationship or situation.", "Speaking too quickly or unclearly for the listener to follow the key information."],
+            writing: ["Writing before deciding the purpose and main idea.", "Using linking words without showing the correct relationship between ideas.", "Finishing without checking sentence structure, spelling, and punctuation."]
+        };
+        return bySkill[definition.skill] || ["Using " + topic + " without considering the purpose.", "Ignoring the context in which the language is used.", "Submitting work without checking meaning and accuracy."];
+    }
+
+    function defaultGuidedPractice(definition, activities) {
+        const tasks = (activities || []).map(taskText).filter(Boolean);
+        return [
+            ...tasks.slice(0, 3),
+            "Compare your responses with the lesson rules and examples.",
+            "Correct one response and explain why the revised version is more accurate."
+        ];
+    }
+
+    function defaultIndependentPractice(definition, activities) {
+        const topic = definition.topic.toLowerCase();
+        const tasks = (activities || []).map(taskText).filter(Boolean);
+        const first = tasks[tasks.length - 1] || "Apply the target skill in a new situation.";
+        const skillTask = {
+            grammar: "Create five original sentences using " + topic + " in different contexts, then explain one important grammar choice.",
+            vocabulary: "Write a short paragraph using at least five target words accurately and underline the collocations.",
+            reading: "Read a new " + topic + " text. Identify its purpose, main idea, and two details that support it.",
+            listening: "Listen to a new " + topic + " recording. Note the main message and at least three key details.",
+            speaking: "Give a one-minute spoken response about " + topic + ". Record it if possible and review clarity and fluency.",
+            writing: "Write a short " + topic + " text for a clear audience and purpose. Revise it for organisation and accuracy."
+        };
+        return [first, skillTask[definition.skill] || "Apply the target skill independently.", "Review your work and identify one improvement for your next attempt."];
+    }
     function buildLesson(definition, index, allDefinitions) {
         const next = allDefinitions[index + 1];
 
-        const examples = definition.examples || [
+        const examples = definition.examples || definition.examplesInContext || [
             `This is an example of ${definition.topic.toLowerCase()}.`,
             `We use this language in everyday communication.`,
             `The example shows how the target language works.`,
@@ -76,6 +130,11 @@
                 prompt: "Use the target language in a realistic everyday situation."
             }
         ];
+
+        const mistakes = definition.mistakes || defaultMistakes(definition);
+        const guidedPractice = definition.guidedPractice || defaultGuidedPractice(definition, activities);
+        const independentPractice = definition.independentPractice || defaultIndependentPractice(definition, activities);
+        const context = definition.context || defaultContext(definition);
 
         const practice = definition.practice || [
             makeMCQ(
@@ -171,7 +230,9 @@
 
             explanation:
                 definition.explanation ||
-                `In this lesson, you will learn the main ideas, patterns, and practical uses of ${definition.topic.toLowerCase()}.`,
+                (definition.keyPoint
+                    ? definition.keyPoint + " " + definition.objective
+                    : definition.objective + " This lesson focuses on the language choices and practical decisions needed to use " + definition.topic.toLowerCase() + " accurately."),
 
             learningPoints:
                 definition.learningPoints || [
@@ -190,40 +251,18 @@
                     `Context: ${example}`
                 ),
 
-            context:
-                definition.context ||
-                "This language is useful in everyday communication, education, work, and real-life situations.",
+            context,
 
             vocabulary,
-            mistakes:
-                definition.mistakes || [
-                    "Using the wrong structure.",
-                    "Ignoring the meaning of the sentence.",
-                    "Forgetting basic grammar or punctuation.",
-                    "Copying examples without understanding them."
-                ],
+            mistakes,
 
-            guidedPractice:
-                definition.guidedPractice || [
-                    "Review the explanation.",
-                    "Study the examples.",
-                    "Complete the guided activities.",
-                    "Check your answers.",
-                    "Try the task again without looking at the example."
-                ],
+            guidedPractice,
 
             activities,
 
             practice,
 
-            independentPractice:
-                definition.independentPractice || [
-                    `Create your own examples using ${definition.topic.toLowerCase()}.`,
-                    "Complete the task without looking at the lesson examples.",
-                    "Read your answers and check their meaning.",
-                    "Correct your mistakes.",
-                    "Create one new example from a real-life situation."
-                ],
+            independentPractice,
 
             test,
 
@@ -247,6 +286,8 @@
             estimatedTime: definition.estimatedTime || 40,
             duration: definition.duration || definition.estimatedTime || 40,
 
+            transcript: definition.transcript || "",
+            readingPassage: definition.readingPassage || "",
             media: definition.media || {},
             skillContent: definition.skillContent || {}
         };

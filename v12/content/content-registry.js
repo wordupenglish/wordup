@@ -27,6 +27,38 @@ const WORDUP_CONTENT_REGISTRY = {
 
 };
 
+/*
+ * Ensure every registered lesson has a meaningful independent task.
+ * Older curriculum records predate this field, so add a skill-specific task
+ * without replacing any authored practice supplied by the lesson.
+ */
+function wordUpEnsureIndependentPractice(lesson) {
+    if (!lesson || (Array.isArray(lesson.independentPractice) && lesson.independentPractice.length)) {
+        return lesson;
+    }
+
+    const topic = String(lesson.topic || lesson.title || "the lesson topic").trim();
+    const objective = String(lesson.objective || "use the target skill accurately").trim();
+    const tasks = {
+        grammar: "Write five original sentences that use " + topic + " accurately. Include different sentence patterns where appropriate, then explain one important grammar choice.",
+        vocabulary: "Write a short paragraph using at least five words from this lesson's vocabulary. Highlight the collocations and explain how the context supports each meaning.",
+        reading: "Read a new text related to " + topic + ". Identify its main idea, two supporting details, and one inference supported by evidence from the text.",
+        listening: "Listen to a short recording related to " + topic + " without reading a transcript first. Summarise the main message, record three details, then check your understanding.",
+        speaking: "Give a one- to two-minute spoken response about " + topic + ". Record it if possible, review clarity and fluency, and identify one improvement.",
+        writing: "Write a focused paragraph that demonstrates this objective: " + objective + " Revise it for organisation, supporting detail, grammar, and clarity."
+    };
+
+    lesson.independentPractice = [
+        tasks[lesson.skill] || "Apply " + topic + " independently in a realistic situation. Explain your choices and review your work for accuracy."
+    ];
+    return lesson;
+}
+
+Object.keys(WORDUP_CONTENT_REGISTRY).forEach(level => {
+    WORDUP_CONTENT_REGISTRY[level] = WORDUP_CONTENT_REGISTRY[level].map(wordUpEnsureIndependentPractice);
+});
+
+window.wordUpEnsureIndependentPractice = wordUpEnsureIndependentPractice;
 
 function wordUpGetAllContent(){
 

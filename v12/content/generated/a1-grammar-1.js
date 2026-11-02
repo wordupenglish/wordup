@@ -75,7 +75,7 @@ practice:[
 {question:"Choose the correct sentence.",options:["I is a student.","I am a student.","I are a student.","I be a student."],answer:1},
 {question:"Choose the correct form: 'She ___ a teacher.'",options:["am","are","is","be"],answer:2},
 {question:"Choose the correct form: 'They ___ at home.'",options:["is","am","are","be"],answer:2},
-{question:"Choose the correct sentence.",options:["We is ready.","We am ready.","We are ready.","We be ready."],answer:2}
+{question:"Which sentence matches a plural subject with are?",options:["We is ready.","We am ready.","We are ready.","We be ready."],answer:2}
 ],
 independentPractice:[
 "Write five sentences about yourself using I am.",
@@ -87,7 +87,7 @@ independentPractice:[
 test:[
 {question:"Which form of be goes with I?",options:["is","are","am","be"],answer:2},
 {question:"Which sentence is correct?",options:["He are tired.","He am tired.","He is tired.","He be tired."],answer:2},
-{question:"Which sentence is correct?",options:["They is students.","They are students.","They am students.","They be students."],answer:1},
+{question:"Which sentence correctly uses is with he?",options:["They is students.","They are students.","They am students.","They be students."],answer:1},
 {question:"Which sentence correctly describes a plural noun?",options:["The books is new.","The books am new.","The books are new.","The books be new."],answer:2}
 ],
 review:[
@@ -280,7 +280,7 @@ practice:[
 {question:"Choose the correct sentence.",options:["I has a book.","I have a book.","I having a book.","I is a book."],answer:1},
 {question:"Choose the correct form: 'She ___ a sister.'",options:["have","has","having","is"],answer:1},
 {question:"Choose the correct form: 'They ___ two cars.'",options:["has","is","have","having"],answer:2},
-{question:"Choose the correct sentence.",options:["He have a phone.","He has a phone.","He having a phone.","He are a phone."],answer:1}
+{question:"Which sentence uses have correctly with I?",options:["He have a phone.","He has a phone.","He having a phone.","He are a phone."],answer:1}
 ],
 independentPractice:[
 "Write five sentences about things you have.",
@@ -292,7 +292,7 @@ independentPractice:[
 test:[
 {question:"Which subject normally uses has?",options:["I","We","They","She"],answer:3},
 {question:"Which sentence is correct?",options:["He have a car.","He has a car.","He having a car.","He are a car."],answer:1},
-{question:"Which sentence is correct?",options:["We has a class.","We have a class.","We is a class.","We having a class."],answer:1},
+{question:"Which sentence uses has correctly with he?",options:["We has a class.","We have a class.","We is a class.","We having a class."],answer:1},
 {question:"What can have and has commonly express?",options:["Possession","Only past time","Only questions","Only locations"],answer:0}
 ],
 review:[
@@ -390,7 +390,7 @@ independentPractice:[
 test:[
 {question:"Which form is used with one chair?",options:["There are","There is","There have","There am"],answer:1},
 {question:"Which sentence is correct?",options:["There is five books.","There are five books.","There am five books.","There has five books."],answer:1},
-{question:"Which sentence is correct?",options:["There is a computer on the desk.","There are a computer on the desk.","There have a computer on the desk.","There am a computer on the desk."],answer:0},
+{question:"Which sentence correctly uses there are with a plural noun?",options:["There is a computer on the desk.","There are a computer on the desk.","There have a computer on the desk.","There am a computer on the desk."],answer:0},
 {question:"What is the main purpose of there is/there are?",options:["To describe what exists or is present","To describe only past events","To form possessive nouns","To ask someone's age"],answer:0}
 ],
 review:[

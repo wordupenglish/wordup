@@ -21,6 +21,8 @@ class WordUpLesson {
         this.prerequisites = data.prerequisites || [];
         this.introduction = data.introduction || "";
         this.explanation = data.explanation || "";
+        this.transcript = data.transcript || "";
+        this.readingPassage = data.readingPassage || "";
 
         /* Teaching content */
         this.learningPoints = data.learningPoints || [];

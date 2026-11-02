@@ -87,7 +87,7 @@ independentPractice:[
 test:[
 {question:"Which subject normally takes -s in the present simple?",options:["I","You","We","She"],answer:3},
 {question:"Which sentence is correct?",options:["He study English.","He studies English.","He studying English.","He studied English every day."],answer:1},
-{question:"Which sentence is correct?",options:["They works here.","They work here.","They working here.","They worked here every day."],answer:1},
+{question:"Which sentence correctly uses -s with he?",options:["They works here.","They work here.","They working here.","They worked here every day."],answer:1},
 {question:"What is the present simple commonly used for?",options:["Regular routines and facts","Only future plans","Only actions happening now","Only past events"],answer:0}
 ],
 review:[
@@ -190,7 +190,7 @@ independentPractice:[
 test:[
 {question:"Which auxiliary is used with she?",options:["do","does","are","am"],answer:1},
 {question:"Which question is correct?",options:["Does he work here?","Does he works here?","Do he works here?","Is he work here?"],answer:0},
-{question:"Which question is correct?",options:["Do they live here?","Does they live here?","Do they lives here?","Are they live here?"],answer:0},
+{question:"Which question correctly uses does with he?",options:["Do they live here?","Does they live here?","Do they lives here?","Are they live here?"],answer:0},
 {question:"What form follows does?",options:["The -ing form","The past form","The base form","The plural form"],answer:2}
 ],
 review:[
@@ -293,7 +293,7 @@ independentPractice:[
 test:[
 {question:"Which form is used with she?",options:["don't","doesn't","aren't","isn't"],answer:1},
 {question:"Which sentence is correct?",options:["I doesn't study at night.","I don't study at night.","I don't studies at night.","I not study at night."],answer:1},
-{question:"Which sentence is correct?",options:["They doesn't work here.","They don't work here.","They don't works here.","They aren't work here."],answer:1},
+{question:"Which sentence correctly uses don't with I?",options:["They doesn't work here.","They don't work here.","They don't works here.","They aren't work here."],answer:1},
 {question:"Why does 'works' become 'work' in 'She doesn't work'?",options:["Because the sentence is past","Because does carries the third-person marking","Because work is plural","Because the subject changes"],answer:1}
 ],
 review:[
@@ -396,7 +396,7 @@ independentPractice:[
 ],
 test:[
 {question:"Which sentence is correct?",options:["He can drives.","He can drive.","He cans drive.","He can to drive."],answer:1},
-{question:"Which sentence is correct?",options:["They can play football.","They can plays football.","They cans play football.","They can to play football."],answer:0},
+{question:"Which sentence uses can with he and the base verb?",options:["They can play football.","They can plays football.","They cans play football.","They can to play football."],answer:0},
 {question:"What does 'Can you help me?' express?",options:["A request","A past event","A negative statement","A possession"],answer:0},
 {question:"Does can change to cans with he or she?",options:["Yes","No","Only in questions","Only in negative sentences"],answer:1}
 ],

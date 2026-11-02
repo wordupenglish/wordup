@@ -25,7 +25,10 @@
     if (!prompt) return null;
      if (/which topic is the focus of this lesson/i.test(String(prompt))) return null;
     const opts=Array.isArray(q.options)?q.options:[];
-    const answer=Number(q.answer ?? q.correctAnswer ?? q.correct);
+    const rawAnswer=q.answer ?? q.correctAnswer ?? q.correct;
+    const answerText=String(rawAnswer ?? '').trim();
+    const numericAnswer=answerText!=='' && String(Number(answerText))===answerText && Number.isInteger(Number(answerText));
+    const answer=numericAnswer ? Number(answerText) : opts.findIndex(option=>normalize(option)===normalize(answerText));
     if (opts.length>=2 && Number.isInteger(answer) && answer>=0 && answer<opts.length) return {type:'choice',skill,lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt,options:opts.map(String),answer,explanation:q.explanation||q.feedback||''};
     return null;
   }
@@ -34,7 +37,15 @@
     let qs=[];
     lessons.forEach(lesson=>{
       const skill=pickSkill(lesson);
-      [...(lesson.test||[]),...(lesson.practice||[])].forEach((q,i)=>{const v=questionFrom(q,lesson,skill,i);if(v)qs.push(v);});
+      // The final/level exam draws from assessment items, not formative practice.
+       const practicePrompts=new Set((lesson.practice||[]).map(item=>normalize(
+         typeof item==='string' ? item : item && (item.question||item.prompt||item.text) || ''
+       )).filter(Boolean));
+       (lesson.test||[]).forEach((q,i)=>{
+         const prompt=typeof q==='string' ? q : q && (q.question||q.prompt||q.text) || '';
+         if(practicePrompts.has(normalize(prompt))) return;
+         const v=questionFrom(q,lesson,skill,i);if(v)qs.push(v);
+       });
       // Generate dictation only from clean words and complete sentences.
       if (skill === 'listening' || skill === 'writing') {
         (lesson.vocabulary || []).slice(0, 3).forEach(v => {
@@ -78,17 +89,21 @@
       }
       if(skill==='speaking'){
         const phrase=(lesson.examples||[]).find(x=>typeof x==='string'&&x.trim());
-        if(phrase) qs.push({type:'speech',skill,lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:'Say this sentence aloud as clearly as you can.',answer:phrase.trim(),audio:phrase.trim()});
+        const speechTarget=phrase ? phrase.trim() : String(lesson.topic||lesson.objective||'').trim();
+        if(speechTarget) qs.push({type:'speech',skill,lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:phrase?'Say this sample sentence aloud as clearly as you can.':'Give a clear spoken response about '+(lesson.topic||'the lesson topic')+'.',answer:speechTarget,audio:speechTarget});
       }
     });
     // Deduplicate identical prompts within skill/lesson and balance across skills.
-    const seen=new Set(); qs=qs.filter(q=>{const k=q.skill+'|'+q.lessonId+'|'+q.type+'|'+q.prompt+'|'+(q.answer||'');if(seen.has(k))return false;seen.add(k);return true;});
+    const seen=new Set(); qs=qs.filter(q=>{const k=q.skill+'|'+q.type+'|'+normalize(q.prompt)+'|'+normalize(q.answer||'');if(seen.has(k))return false;seen.add(k);return true;});
     const seed=hash((mode+'|'+(level||'all')+'|'+new Date().toISOString().slice(0,10)));
     const grouped={}; SKILLS.forEach(s=>grouped[s]=shuffle(qs.filter(q=>q.skill===s),seed+hash(s)));
     const balanced=[]; let max=Math.max(0,...SKILLS.map(s=>grouped[s].length));
     for(let i=0;i<max;i++) SKILLS.forEach(s=>{if(grouped[s][i])balanced.push(grouped[s][i]);});
     const count=mode==='master'?Math.min(60,balanced.length):mode==='placement'?Math.min(30,balanced.length):Math.min(30,balanced.length);
-    return shuffle(balanced,seed^0xA53C9E1).slice(0,count);
+    // Select from the round-robin balanced list before shuffling. Shuffling
+    // the entire pool first could push a rare skill (especially speaking)
+    // outside the exam's first 30/60 questions.
+    return shuffle(balanced.slice(0,count),seed^0xA53C9E1);
   }
   function openExam(mode, level) {
     const questions=buildQuestions(mode,level);
@@ -117,7 +132,7 @@
     const title=state.mode==='master'?'Master Exam':state.mode==='placement'?'Test My Level':`${levelName(state.level)} Exam`;
     root.innerHTML=`<section class="wue-view">${header(title,'Your progress is built one question at a time. Breathe, focus, and trust the work you have done.')}
       <div class="wue-motivation"><p>✨ You do not need to be perfect — just give every question your honest best.</p><p>💪 Every challenge is a chance to discover how much you have learned and what to improve next.</p><p>🌱 Stay calm, believe in your effort, and keep moving forward. You can do this!</p></div>
-      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>Questions cover Vocabulary, Grammar, Reading, Listening, Speaking, and Writing where lesson content is available.</li><li>Listening and writing tasks may play audio only. Type what you hear. Speaking tasks may ask for microphone access.</li><li>Do not switch tabs, copy questions, or use outside help. Repeated focus changes may submit the exam.</li><li>Your attempt and results are saved on this device. Browser-based exams cannot completely prevent cheating.</li></ul>
+      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>Questions cover Vocabulary, Grammar, Reading, Listening, Speaking, and Writing where lesson content is available.</li><li>Listening and writing tasks may play audio only. Type what you hear. Speaking tasks may ask for microphone access.</li><li>Complete the exam independently and avoid outside help. This is an honor-based assessment.</li><li>Your attempt and results are saved on this device. A browser-based exam cannot reliably prevent switching tabs or outside assistance.</li></ul>
       <label class="wue-confirm"><input id="wueRulesCheck" type="checkbox"><span>I have read the rules and agree to complete this exam honestly.</span></label>
       <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamCancel()">Not now</button><button id="wueBegin" class="wue-primary" disabled onclick="wordUpExamBegin()">I agree — Begin exam</button></div></div></section>`;
     $('#wueRulesCheck',root).addEventListener('change',e=>$('#wueBegin',root).disabled=!e.target.checked);
@@ -150,8 +165,11 @@
       <div class="wue-panel"><h3>Answer review</h3><p class="wue-muted">Review correct answers and use the lesson links in your own course to study again.</p><div class="wue-review">${review.map((r,i)=>`<details class="wue-review-item"><summary><span>${r.ok?'✅':'📘'} ${i+1}. ${esc(r.q.skill)} — ${r.ok?'Correct':'Review this'}</span></summary><p><strong>Question:</strong> ${esc(r.q.prompt)}</p><p><strong>Your answer:</strong> ${esc(r.q.type==='choice'?(r.answer===undefined?'Not answered':r.q.options[Number(r.answer)]||r.answer):r.answer||'Not answered')}</p><p><strong>Correct answer:</strong> ${esc(r.q.type==='choice'?r.q.options[r.q.answer]:r.q.answer)}</p><p><strong>Lesson:</strong> ${esc(r.q.lessonTitle)}</p></details>`).join('')}</div></div>
       <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamHistory()">View attempt history</button><button class="wue-primary" onclick="wordUpExamHome()">Back to course</button></div></section>`;}
   function cleanupTimer(){if(timer){clearInterval(timer);timer=null;}}
-  function installGuards(){document.addEventListener('visibilitychange',onVisibility);window.addEventListener('blur',onBlur);document.addEventListener('contextmenu',blockContext);document.addEventListener('copy',blockCopy);document.addEventListener('cut',blockCopy);document.addEventListener('paste',blockCopy);}
-  function removeGuards(){document.removeEventListener('visibilitychange',onVisibility);window.removeEventListener('blur',onBlur);document.removeEventListener('contextmenu',blockContext);document.removeEventListener('copy',blockCopy);document.removeEventListener('cut',blockCopy);document.removeEventListener('paste',blockCopy);}
+  // Avoid false-positive submissions when users switch windows, grant
+  // microphone permission, or use accessibility tools. Browser exams are
+  // honor-based; client-side focus guards cannot provide secure proctoring.
+  function installGuards(){}
+  function removeGuards(){}
   function onVisibility(){if(document.hidden)violation();}function onBlur(){if(state&&!state.finished&&state.started)violation();}function violation(){if(!state||state.finished)return;state.violations++;const f=$('#wueFeedback');if(f)f.textContent=`Focus warning ${state.violations}: please stay on the exam page.`;if(state.violations>=3)finish(false);}function blockContext(e){if(state&&!state.finished)e.preventDefault();}function blockCopy(e){if(state&&!state.finished)e.preventDefault();}
   function cancel(){cleanupTimer();removeGuards();if(state&&state.started&&!state.finished)saveAttempt({id:state.attemptId,mode:state.mode,level:state.level||null,date:new Date(state.started).toISOString(),status:'abandoned',abandonedAt:new Date().toISOString(),answers:state.answers,focusWarnings:state.violations});state=null;const examView=document.getElementById('wordup-exam-overlay');if(examView)examView.remove();if(window.wordUpOpenCourse)window.wordUpOpenCourse();}
   function home(){cleanupTimer();removeGuards();if(state&&state.started&&!state.finished)saveAttempt({id:state.attemptId,mode:state.mode,level:state.level||null,date:new Date(state.started).toISOString(),status:'abandoned',abandonedAt:new Date().toISOString(),answers:state.answers,focusWarnings:state.violations});state=null;const examView=document.getElementById('wordup-exam-overlay');if(examView)examView.remove();if(window.wordUpOpenCourse)window.wordUpOpenCourse();}
@@ -168,7 +186,7 @@
   function hookCourse(){const oldTab=window.wordUpCourseTab;if(typeof oldTab==='function'&&!oldTab.__wueWrapped){const tabFn=function(tab){return oldTab(tab==='test'?'practice':tab);};tabFn.__wueWrapped=true;window.wordUpCourseTab=tabFn;}const oldLevel=window.wordUpOpenCourseLevel;if(typeof oldLevel==='function'&&!oldLevel.__wueWrapped){const fn=function(level){oldLevel(level);setTimeout(()=>{const content=$('#wuCourseContent');if(content)content.dataset.wueLevel=level;injectCards();},30);};fn.__wueWrapped=true;window.wordUpOpenCourseLevel=fn;}
     const oldCourse=window.wordUpOpenCourse;if(typeof oldCourse==='function'&&!oldCourse.__wueWrapped){const fn=function(){oldCourse();setTimeout(injectCards,40);};fn.__wueWrapped=true;window.wordUpOpenCourse=fn;}
     const target=$('#wuCourseContent');if(target&&!observer){observer=new MutationObserver(()=>{patchPlacement();injectCards();});observer.observe(target,{childList:true,subtree:true});}patchPlacement();injectCards();}
-  window.wordUpExamBegin=begin;window.wordUpExamChoose=choose;window.wordUpExamNext=next;window.wordUpExamPlayAudio=playAudio;window.wordUpExamMic=mic;window.wordUpExamCancel=cancel;window.wordUpExamHome=home;window.wordUpExamHistory=history;
+  window.wordUpExamBegin=begin;window.wordUpExamChoose=choose;window.wordUpExamNext=next;window.wordUpExamPlayAudio=playAudio;window.wordUpExamMic=mic;window.wordUpExamCancel=cancel;window.wordUpExamHome=home;window.wordUpExamHistory=history;window.wordUpBuildExamQuestions=buildQuestions;window.wordUpExamQuestionFrom=questionFrom;
   document.addEventListener('click',function(e){
     const button=e.target instanceof Element
       ? e.target.closest('#wordup-v10-placement-launch, button[onclick="startPlacement()"]')

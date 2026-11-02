@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v27-comprehensive-exams-20261012";
+const CACHE_NAME = "wordup-v30-release-audit-20261102";
 
 const CORE_ASSETS = [
     "./",

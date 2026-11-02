@@ -247,7 +247,7 @@ activities:[
 ],
 practice:[
 {question:"Choose the correct phrase.",options:["a apple","an apple","the apple only","an book"],answer:1},
-{question:"Choose the correct phrase.",options:["a book","an book","a apple","an teacher"],answer:0},
+{question:"Which phrase correctly uses a before a consonant sound?",options:["a book","an book","a apple","an teacher"],answer:0},
 {question:"Which article is commonly used for a specific identified noun?",options:["a","an","the","no article"],answer:2}
 ],
 independentPractice:[

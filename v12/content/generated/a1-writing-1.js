@@ -168,7 +168,7 @@ practice:[
 {question:"Which sentence is correct?",options:["My father is a teacher.","My father are a teacher.","My father am a teacher.","My father teacher are."],answer:0},
 {question:"Which possessive word is correct for a male person's name?",options:["His","Her","Their","Its"],answer:0},
 {question:"Which pronoun can replace 'my parents'?",options:["They","He","She","It"],answer:0},
-{question:"Which sentence is correct?",options:["Her name is Maryam.","His name is Maryam.","She name is Maryam.","Her name are Maryam."],answer:0}
+{question:"Which sentence correctly introduces a female family member?",options:["Her name is Maryam.","His name is Maryam.","She name is Maryam.","Her name are Maryam."],answer:0}
 ],
 independentPractice:[
 "Write an eight-sentence family description.",
