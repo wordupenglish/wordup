@@ -211,7 +211,7 @@ test("level and master exams have enough distinct assessment questions across av
     const report = {};
     for (const level of levels) {
         const questions = sandbox.wordUpBuildExamQuestions("level", level);
-        report[level] = questions.length;
+        report[level] = { count: questions.length, skills: [...new Set(questions.map(x => x.skill))] };
         assert.ok(questions.length >= 5, level + " must have at least five usable final-exam questions");
         const availableSkills = new Set(sandbox.wordUpGetAllContent().filter(x => x.level === level).map(x => x.skill));
         const examSkills = new Set(questions.map(x => x.skill));
@@ -239,5 +239,5 @@ test("lesson practice continues to the next lesson rather than opening a per-les
     assert.match(course, /wordUpCourseContinueNextLesson/);
     assert.match(course, /Next Lesson/);
     assert.doesNotMatch(course, /Continue to Final Assessment/);
-    assert.match(course, /SKILLS\\.filter\\(skill => getLessons\\(level, skill\\)\\.length > 0\\)/);
+    assert.ok(course.includes("SKILLS.filter(skill => getLessons(level, skill).length > 0)"));
 });
