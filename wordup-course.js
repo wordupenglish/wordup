@@ -1142,7 +1142,7 @@
                 const selectedOption = Array.isArray(item.q.options) ? item.q.options[Number(testAnswers[item.index])] : undefined;
                 return numericAnswer
                     ? Number(testAnswers[item.index]) === Number(answerText)
-                    : String(selectedOption ?? "").trim() === answerText;
+                    : String(selectedOption ?? "").trim().toLocaleLowerCase() === answerText.toLocaleLowerCase();
             }).length;
             const mcqSummary = multipleChoice.length
                 ? '<p>Multiple-choice section: <strong>' + mcqCorrect + ' / ' + multipleChoice.length + '</strong> correct. This is not an overall assessment score.</p>'
