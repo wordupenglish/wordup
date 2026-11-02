@@ -181,3 +181,63 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
     assert.equal(audit.lessonsWithoutIndependentPractice, 0, "every lesson must include independent practice");
     assert.equal(audit.repeatedPrompts, 0, "a lesson must not repeat the same prompt within a section");
 });
+
+
+test("level and master exams have enough distinct assessment questions across available skills", () => {
+    const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
+    const scriptPaths = [...index.matchAll(/<script\\s+src=["'](\\.\\/v12\\/[^"'?]+)(?:\\?[^"']*)?["']/g)]
+        .map(match => match[1])
+        .filter(src =>
+            src === "./v12/engine/content-model.js" ||
+            src === "./v12/engine/fast-lesson-generator.js" ||
+            src.startsWith("./v12/content/") ||
+            src === "./v12/engine/content-validator.js"
+        );
+    const sandbox = {
+        console: { log() {}, warn() {}, error() {} },
+        document: { readyState: "loading", addEventListener() {} },
+        localStorage: { getItem() { return null; }, setItem() {} }
+    };
+    sandbox.window = sandbox;
+    vm.createContext(sandbox);
+    for (const src of scriptPaths) {
+        const file = path.join(root, src.replace(/^\\.\\//, ""));
+        vm.runInContext(fs.readFileSync(file, "utf8"), sandbox, { filename: src });
+    }
+    vm.runInContext(fs.readFileSync(path.join(root, "wordup-exams.js"), "utf8"), sandbox, { filename: "wordup-exams.js" });
+
+    assert.equal(typeof sandbox.wordUpBuildExamQuestions, "function", "exam question builder should be available");
+    const levels = ["foundation", "a1", "a2", "b1", "b2", "c1", "c2", "academic"];
+    const report = {};
+    for (const level of levels) {
+        const questions = sandbox.wordUpBuildExamQuestions("level", level);
+        report[level] = questions.length;
+        assert.ok(questions.length >= 5, level + " must have at least five usable final-exam questions");
+        const availableSkills = new Set(sandbox.wordUpGetAllContent().filter(x => x.level === level).map(x => x.skill));
+        const examSkills = new Set(questions.map(x => x.skill));
+        for (const skill of availableSkills) {
+            assert.ok(examSkills.has(skill), level + " exam must represent available skill: " + skill);
+        }
+    }
+    const master = sandbox.wordUpBuildExamQuestions("master");
+    const placement = sandbox.wordUpBuildExamQuestions("placement");
+    console.log("Exam question availability:", JSON.stringify({ levels: report, master: master.length, placement: placement.length }));
+    assert.ok(master.length >= 60, "master exam must have at least 60 usable questions");
+    assert.ok(placement.length >= 30, "placement exam must have at least 30 usable questions");
+
+    const textAnswer = sandbox.wordUpExamQuestionFrom(
+        { question: "Choose the second option", options: ["First", "Second"], answer: " second " },
+        { id: "test-text-key", topic: "Text answer key" },
+        "grammar",
+        0
+    );
+    assert.equal(textAnswer.answer, 1, "text answer keys must be normalized to the correct option index");
+});
+
+test("lesson practice continues to the next lesson rather than opening a per-lesson final assessment", () => {
+    const course = fs.readFileSync(path.join(root, "wordup-course.js"), "utf8");
+    assert.match(course, /wordUpCourseContinueNextLesson/);
+    assert.match(course, /Next Lesson/);
+    assert.doesNotMatch(course, /Continue to Final Assessment/);
+    assert.match(course, /SKILLS\\.filter\\(skill => getLessons\\(level, skill\\)\\.length > 0\\)/);
+});
