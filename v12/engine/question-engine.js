@@ -1,11 +1,11 @@
-﻿/*
+/*
 =========================================================
- WORDUP V12.1 QUESTION ENGINE
+ WORDUP V12.2 QUESTION ENGINE
+ Consistent answer checking for indexed and text MCQs.
 =========================================================
 */
 
 const WORDUP_QUESTION_TYPES = [
-
     "multiple-choice",
     "sentence-completion",
     "error-correction",
@@ -15,97 +15,61 @@ const WORDUP_QUESTION_TYPES = [
     "grammar",
     "vocabulary",
     "writing"
-
 ];
 
-
-function wordUpCreateQuestion(
-    type,
-    question,
-    options,
-    answer,
-    explanation = ""
-){
-
+function wordUpCreateQuestion(type, question, options, answer, explanation = "") {
     return {
-
         type,
-
         question,
-
-        options: options || [],
-
+        options: Array.isArray(options) ? options : [],
         answer,
-
         explanation
-
     };
-
 }
 
-
-function wordUpCheckQuestion(
-    question,
-    answer
-){
-
-    return (
-        String(answer).toLowerCase().trim() ===
-        String(question.answer).toLowerCase().trim()
-    );
-
+function wordUpNormalizeAnswer(value) {
+    return String(value ?? "").trim().replace(/\\s+/g, " ").toLocaleLowerCase();
 }
 
-
-function wordUpScoreQuestions(
-    questions,
-    answers
-){
-
-    if(!questions.length){
-        return 0;
+function wordUpCheckQuestion(question, submittedAnswer) {
+    if (!question || submittedAnswer === undefined || submittedAnswer === null || String(submittedAnswer).trim() === "") {
+        return false;
     }
 
-    let correct = 0;
+    const options = Array.isArray(question.options) ? question.options : [];
+    const expected = question.answer ?? question.correctAnswer ?? question.correct;
+    if (expected === undefined || expected === null) return false;
 
-    questions.forEach(
-        (question,index)=>{
+    const expectedText = String(expected).trim();
+    const expectedIsIndex = expectedText !== "" &&
+        String(Number(expectedText)) === expectedText &&
+        Number.isInteger(Number(expectedText));
 
-            if(
-                wordUpCheckQuestion(
-                    question,
-                    answers[index]
-                )
-            ){
+    if (options.length) {
+        const expectedOption = expectedIsIndex ? options[Number(expectedText)] : expected;
+        const submittedText = String(submittedAnswer).trim();
+        const submittedIsIndex = String(Number(submittedText)) === submittedText &&
+            Number.isInteger(Number(submittedText));
+        const submittedOption = submittedIsIndex ? options[Number(submittedText)] : submittedAnswer;
+        if (expectedOption === undefined || submittedOption === undefined) return false;
+        return wordUpNormalizeAnswer(expectedOption) === wordUpNormalizeAnswer(submittedOption);
+    }
 
-                correct++;
-
-            }
-
-        }
-    );
-
-    return Math.round(
-        (correct / questions.length) * 100
-    );
-
+    return wordUpNormalizeAnswer(submittedAnswer) === wordUpNormalizeAnswer(expected);
 }
 
+function wordUpScoreQuestions(questions, answers) {
+    if (!Array.isArray(questions) || !questions.length || !answers) return 0;
+    let correct = 0;
+    questions.forEach((question, index) => {
+        if (wordUpCheckQuestion(question, answers[index])) correct++;
+    });
+    return Math.round((correct / questions.length) * 100);
+}
 
-window.WORDUP_QUESTION_TYPES =
-    WORDUP_QUESTION_TYPES;
+window.WORDUP_QUESTION_TYPES = WORDUP_QUESTION_TYPES;
+window.wordUpCreateQuestion = wordUpCreateQuestion;
+window.wordUpCheckQuestion = wordUpCheckQuestion;
+window.wordUpScoreQuestions = wordUpScoreQuestions;
 
-window.wordUpCreateQuestion =
-    wordUpCreateQuestion;
-
-window.wordUpCheckQuestion =
-    wordUpCheckQuestion;
-
-window.wordUpScoreQuestions =
-    wordUpScoreQuestions;
-
-
-console.log(
-    "WordUp V12.1 Question Engine loaded."
-);
-
+console.log("WordUp V12.2 Question Engine loaded.");
