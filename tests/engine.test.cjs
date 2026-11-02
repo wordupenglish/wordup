@@ -162,6 +162,12 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
         malformedAssessmentQuestions: audit.malformedAssessmentQuestions,
         lessonsWithGenericWording: audit.lessonsWithGenericWording,
         repeatedPrompts: audit.repeatedPrompts,
+        lessonsWithRepeatedPrompts: lessons.filter(lesson => ["guidedPractice", "activities", "practice", "independentPractice", "test"].some(section => {
+            const prompts = (Array.isArray(lesson[section]) ? lesson[section] : []).map(item =>
+                typeof item === "string" ? item : item && (item.question || item.prompt || item.text)
+            ).filter(Boolean).map(value => String(value).trim().toLowerCase());
+            return new Set(prompts).size !== prompts.length;
+        })).map(lesson => lesson.id),
         lessonsWithCrossSectionPromptReuse: audit.lessonsWithCrossSectionPromptReuse
     }));
     assert.equal(audit.duplicateIds.length, 0, "curriculum must not contain duplicate IDs");
