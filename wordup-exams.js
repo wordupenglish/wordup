@@ -93,7 +93,10 @@
     const balanced=[]; let max=Math.max(0,...SKILLS.map(s=>grouped[s].length));
     for(let i=0;i<max;i++) SKILLS.forEach(s=>{if(grouped[s][i])balanced.push(grouped[s][i]);});
     const count=mode==='master'?Math.min(60,balanced.length):mode==='placement'?Math.min(30,balanced.length):Math.min(30,balanced.length);
-    return shuffle(balanced,seed^0xA53C9E1).slice(0,count);
+    // Select from the round-robin balanced list before shuffling. Shuffling
+    // the entire pool first could push a rare skill (especially speaking)
+    // outside the exam's first 30/60 questions.
+    return shuffle(balanced.slice(0,count),seed^0xA53C9E1);
   }
   function openExam(mode, level) {
     const questions=buildQuestions(mode,level);
