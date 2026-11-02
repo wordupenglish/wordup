@@ -23,3 +23,4 @@ jobs:
           node --check v12/engine/progress-engine.js
           node --check v12/engine/question-engine.js
           node --check wordup-course.js
+          find . -name '*.js' -not -path './.git/*' -print0 | xargs -0 -n1 node --check
