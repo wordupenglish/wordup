@@ -148,6 +148,18 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
     assert.equal(new Set(ids).size, ids.length, "lesson IDs must be unique");
 
     const audit = sandbox.wordUpContentQualityReport();
+    console.log("Curriculum quality snapshot:", JSON.stringify({
+        totalLessons: audit.totalLessons,
+        levels: audit.levels,
+        lessonsWithoutVocabulary: audit.lessonsWithoutVocabulary,
+        lessonsWithoutMistakes: audit.lessonsWithoutMistakes,
+        lessonsWithoutIndependentPractice: audit.lessonsWithoutIndependentPractice,
+        openResponseQuestions: audit.openResponseQuestions,
+        malformedAssessmentQuestions: audit.malformedAssessmentQuestions,
+        lessonsWithGenericWording: audit.lessonsWithGenericWording,
+        repeatedPrompts: audit.repeatedPrompts,
+        lessonsWithCrossSectionPromptReuse: audit.lessonsWithCrossSectionPromptReuse
+    }));
     assert.equal(audit.duplicateIds.length, 0, "curriculum must not contain duplicate IDs");
     assert.equal(audit.malformedAssessmentQuestions, 0, "assessment questions must have valid answer keys");
 });
