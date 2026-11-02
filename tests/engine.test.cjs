@@ -143,6 +143,9 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
     assert.equal(typeof sandbox.wordUpGetAllContent, "function", "content registry should load");
     const lessons = sandbox.wordUpGetAllContent();
     assert.ok(lessons.length > 300, "the full curriculum should be registered");
+    const a1Lessons = lessons.filter(lesson => lesson.level === "a1");
+    assert.ok(a1Lessons.length >= 14, "A1 grammar and listening bundles must all be registered");
+    assert.ok(a1Lessons.some(lesson => lesson.skill === "listening" && lesson.transcript), "A1 listening lessons must include transcripts");
     const ids = lessons.map(lesson => lesson.id);
     assert.ok(ids.every(Boolean), "every lesson should have an ID");
     assert.equal(new Set(ids).size, ids.length, "lesson IDs must be unique");
