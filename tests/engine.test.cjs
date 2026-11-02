@@ -237,8 +237,7 @@ test("level and master exams have enough distinct assessment questions across av
         for (const skill of availableSkills) {
             assert.ok(examSkills.has(skill), level + " exam must represent available skill: " + skill);
         }
-        const normalizeExamPrompt = value => String(value || "").toLowerCase().normalize("NFKD")
-            .replace(/[\\u0300-\\u036f]/g, "").replace(/[^a-z0-9' ]/g, " ").replace(/\\s+/g, " ").trim();
+        const normalizeExamPrompt = value => String(value || "").trim().toLowerCase();
         for (const question of questions) {
             const lesson = levelLessons.find(item => item.id === question.lessonId);
             if (!lesson || question.type !== "choice") continue;
