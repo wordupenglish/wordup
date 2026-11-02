@@ -974,7 +974,7 @@
             let interaction = "";
             if (options.length && answer !== null && answer !== undefined) {
                 interaction = '<div class="wu-question-options">' + options.map((option, i) =>
-                    '<button onclick="wordUpPracticeAnswer(' + index + ',' + i + ',' + JSON.stringify(answer) + ')">' + esc(option) + '</button>'
+                    '<button type="button" onclick="wordUpPracticeAnswer(' + index + ',' + i + ')">' + esc(option) + '</button>'
                 ).join("") + '</div><div class="wu-question-feedback" id="wuPracticeFeedback' + index + '"></div>';
             } else {
                 interaction = lesson.skill === "speaking"
@@ -1028,13 +1028,18 @@
             '<div class="wu-test-submit"><button class="primary big" onclick="wordUpSubmitTest()">' + (hasWritten ? (lesson.skill === "speaking" ? 'Submit Speaking Self-Assessment' : 'Save Written Assessment') : 'Submit Test') + '</button></div>' +
             '<div id="wuTestResult" aria-live="polite"></div>';
     }
-    function practiceAnswer(questionIndex, selectedIndex, answer) {
+    function practiceAnswer(questionIndex, selectedIndex) {
         const card =
             document.querySelector(
                 `[data-practice-question="${questionIndex}"]`
             );
 
-        if (!card) return;
+        if (!card || !currentLesson) return;
+        const question = (currentLesson.practice || [])[questionIndex];
+        const answer = question && typeof question === "object"
+            ? (question.answer ?? question.correctAnswer ?? question.correct)
+            : undefined;
+        if (answer === undefined || answer === null) return;
 
         const buttons =
             card.querySelectorAll("button");
@@ -1048,7 +1053,7 @@
         const selectedText = buttons[selectedIndex] ? buttons[selectedIndex].textContent.trim() : "";
         const correct = numericAnswer
             ? Number(selectedIndex) === Number(answerText)
-            : selectedText === answerText;
+            : selectedText.trim().toLocaleLowerCase() === answerText.toLocaleLowerCase();
 
         if (buttons[selectedIndex]) {
             buttons[selectedIndex].classList.add(
