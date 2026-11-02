@@ -1050,9 +1050,13 @@
 
         const answerText = String(answer ?? "").trim();
         const numericAnswer = answerText !== "" && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
+        const options = Array.isArray(question.options) ? question.options : [];
+        const correctIndex = numericAnswer
+            ? Number(answerText)
+            : options.findIndex(option => String(option).trim().toLocaleLowerCase() === answerText.toLocaleLowerCase());
         const selectedText = buttons[selectedIndex] ? buttons[selectedIndex].textContent.trim() : "";
         const correct = numericAnswer
-            ? Number(selectedIndex) === Number(answerText)
+            ? Number(selectedIndex) === correctIndex
             : selectedText.trim().toLocaleLowerCase() === answerText.toLocaleLowerCase();
 
         if (buttons[selectedIndex]) {
@@ -1061,8 +1065,8 @@
             );
         }
 
-        if (!correct && buttons[Number(answer)]) {
-            buttons[Number(answer)].classList.add("correct");
+        if (!correct && correctIndex >= 0 && buttons[correctIndex]) {
+            buttons[correctIndex].classList.add("correct");
         }
 
         const feedback =
