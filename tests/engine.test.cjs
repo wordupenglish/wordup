@@ -179,4 +179,5 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
     assert.equal(audit.duplicateIds.length, 0, "curriculum must not contain duplicate IDs");
     assert.equal(audit.malformedAssessmentQuestions, 0, "assessment questions must have valid answer keys");
     assert.equal(audit.lessonsWithoutIndependentPractice, 0, "every lesson must include independent practice");
+    assert.equal(audit.repeatedPrompts, 0, "a lesson must not repeat the same prompt within a section");
 });
