@@ -82,7 +82,8 @@
       }
       if(skill==='speaking'){
         const phrase=(lesson.examples||[]).find(x=>typeof x==='string'&&x.trim());
-        if(phrase) qs.push({type:'speech',skill,lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:'Say this sentence aloud as clearly as you can.',answer:phrase.trim(),audio:phrase.trim()});
+        const speechTarget=phrase ? phrase.trim() : String(lesson.topic||lesson.objective||'').trim();
+        if(speechTarget) qs.push({type:'speech',skill,lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:phrase?'Say this sample sentence aloud as clearly as you can.':'Give a clear spoken response about '+(lesson.topic||'the lesson topic')+'.',answer:speechTarget,audio:speechTarget});
       }
     });
     // Deduplicate identical prompts within skill/lesson and balance across skills.
