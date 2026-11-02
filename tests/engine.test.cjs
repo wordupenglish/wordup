@@ -144,8 +144,12 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
     const lessons = sandbox.wordUpGetAllContent();
     assert.ok(lessons.length > 300, "the full curriculum should be registered");
     const a1Lessons = lessons.filter(lesson => lesson.level === "a1");
-    assert.ok(a1Lessons.length >= 14, "A1 grammar and listening bundles must all be registered");
+    assert.ok(a1Lessons.length > 20, "A1 reading, vocabulary, writing, grammar, listening, and speaking bundles must all be registered");
     assert.ok(a1Lessons.some(lesson => lesson.skill === "listening" && lesson.transcript), "A1 listening lessons must include transcripts");
+    const a1Skills = new Set(a1Lessons.map(lesson => lesson.skill));
+    for (const skill of ["writing", "grammar", "vocabulary", "reading", "listening", "speaking"]) {
+        assert.ok(a1Skills.has(skill), "A1 must register " + skill + " lessons");
+    }
     const ids = lessons.map(lesson => lesson.id);
     assert.ok(ids.every(Boolean), "every lesson should have an ID");
     assert.equal(new Set(ids).size, ids.length, "lesson IDs must be unique");
@@ -209,7 +213,13 @@ test("level and master exams have enough distinct assessment questions across av
     assert.equal(typeof sandbox.wordUpBuildExamQuestions, "function", "exam question builder should be available");
     const levels = ["foundation", "a1", "a2", "b1", "b2", "c1", "c2", "academic"];
     const report = {};
+    const allSkills = ["writing", "grammar", "vocabulary", "reading", "listening", "speaking"];
     for (const level of levels) {
+        const levelLessons = sandbox.wordUpGetAllContent().filter(x => x.level === level);
+        const registeredSkills = new Set(levelLessons.map(x => x.skill));
+        for (const skill of allSkills) {
+            assert.ok(registeredSkills.has(skill), level + " curriculum must include " + skill);
+        }
         const questions = sandbox.wordUpBuildExamQuestions("level", level);
         report[level] = { count: questions.length, skills: [...new Set(questions.map(x => x.skill))] };
         assert.ok(questions.length >= 5, level + " must have at least five usable final-exam questions");
