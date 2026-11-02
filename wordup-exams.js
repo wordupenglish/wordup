@@ -87,7 +87,7 @@
       }
     });
     // Deduplicate identical prompts within skill/lesson and balance across skills.
-    const seen=new Set(); qs=qs.filter(q=>{const k=q.skill+'|'+q.lessonId+'|'+q.type+'|'+q.prompt+'|'+(q.answer||'');if(seen.has(k))return false;seen.add(k);return true;});
+    const seen=new Set(); qs=qs.filter(q=>{const k=q.skill+'|'+q.type+'|'+normalize(q.prompt)+'|'+normalize(q.answer||'');if(seen.has(k))return false;seen.add(k);return true;});
     const seed=hash((mode+'|'+(level||'all')+'|'+new Date().toISOString().slice(0,10)));
     const grouped={}; SKILLS.forEach(s=>grouped[s]=shuffle(qs.filter(q=>q.skill===s),seed+hash(s)));
     const balanced=[]; let max=Math.max(0,...SKILLS.map(s=>grouped[s].length));
