@@ -118,3 +118,36 @@ test("question score is calculated consistently", () => {
     assert.equal(api.wordUpScoreQuestions(questions, [0, "D"]), 100);
     assert.equal(api.wordUpScoreQuestions(questions, [1, "C"]), 0);
 });
+
+test("curriculum content registry has unique lesson IDs and valid assessment keys", () => {
+    const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
+    const scriptPaths = [...index.matchAll(/<script\\s+src=["'](\\.\\/v12\\/[^"'?]+)(?:\\?[^"']*)?["']/g)]
+        .map(match => match[1])
+        .filter(src =>
+            src === "./v12/engine/content-model.js" ||
+            src === "./v12/engine/fast-lesson-generator.js" ||
+            src.startsWith("./v12/content/") ||
+            src === "./v12/engine/content-validator.js"
+        );
+
+    const sandbox = { console: { log() {}, warn() {}, error() {} } };
+    sandbox.window = sandbox;
+    vm.createContext(sandbox);
+
+    for (const src of scriptPaths) {
+        const file = path.join(root, src.replace(/^\\.\\//, ""));
+        const source = fs.readFileSync(file, "utf8");
+        vm.runInContext(source, sandbox, { filename: src });
+    }
+
+    assert.equal(typeof sandbox.wordUpGetAllContent, "function", "content registry should load");
+    const lessons = sandbox.wordUpGetAllContent();
+    assert.ok(lessons.length > 300, "the full curriculum should be registered");
+    const ids = lessons.map(lesson => lesson.id);
+    assert.ok(ids.every(Boolean), "every lesson should have an ID");
+    assert.equal(new Set(ids).size, ids.length, "lesson IDs must be unique");
+
+    const audit = sandbox.wordUpContentQualityReport();
+    assert.equal(audit.duplicateIds.length, 0, "curriculum must not contain duplicate IDs");
+    assert.equal(audit.malformedAssessmentQuestions, 0, "assessment questions must have valid answer keys");
+});
