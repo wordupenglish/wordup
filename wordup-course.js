@@ -501,7 +501,7 @@
 
             <div class="wu-skill-grid">
 
-                ${SKILLS.map(skill => {
+                ${SKILLS.filter(skill => getLessons(level, skill).length > 0).map(skill => {
 
                     const skillLessons =
                         getLessons(level, skill);
@@ -993,7 +993,7 @@
         document.getElementById("wuLessonPanel").innerHTML =
             '<div class="wu-practice-header"><span>PRACTICE</span><strong>' + questions.length + ' tasks</strong><small>Choose an answer for multiple-choice questions or write a response for open-ended tasks.</small></div>' +
             '<div class="wu-question-list">' + cards + '</div>' +
-            '<div class="wu-learning-actions"><button class="primary" onclick="wordUpCourseTab(\'test\')">Continue to Final Assessment \u2192</button></div>';
+            '<div class="wu-learning-actions"><button class="primary" onclick="wordUpCourseContinueNextLesson()">Next Lesson \\u2192</button></div>';
     }
     let testAnswers = {};
 
@@ -1221,6 +1221,14 @@
         }
     }
 
+    function continueToNextLesson() {
+        if (!currentLesson) return;
+        // Moving on records completion once; duplicate completion cannot award
+        // duplicate XP because the progress engine is idempotent.
+        completeLesson();
+        nextLesson();
+    }
+
     function updateStatsSafely() {
         if (typeof window.updateStats === "function") {
             try {
@@ -1382,6 +1390,9 @@ function openHomeSkill(skill) {
 
     window.wordUpCourseNextLesson =
         nextLesson;
+
+    window.wordUpCourseContinueNextLesson =
+        continueToNextLesson;
 
     /*
        Connect existing Home skill cards to V12 Course.
