@@ -121,7 +121,7 @@ test("question score is calculated consistently", () => {
 
 test("curriculum content registry has unique lesson IDs and valid assessment keys", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    const scriptPaths = [...index.matchAll(/<script\\s+src=["'](\\.\\/v12\\/[^"'?]+)(?:\\?[^"']*)?["']/g)]
+    const scriptPaths = [...index.matchAll(/<script\s+src=["'](\.\/v12\/[^"'?]+)(?:\?[^"']*)?["']/g)]
         .map(match => match[1])
         .filter(src =>
             src === "./v12/engine/content-model.js" ||
@@ -135,7 +135,7 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
     vm.createContext(sandbox);
 
     for (const src of scriptPaths) {
-        const file = path.join(root, src.replace(/^\\.\\//, ""));
+        const file = path.join(root, src.replace(/^\.\//, ""));
         const source = fs.readFileSync(file, "utf8");
         vm.runInContext(source, sandbox, { filename: src });
     }
