@@ -565,7 +565,7 @@
         renderShell();
 
         document.getElementById("wuCourseTitle").textContent =
-            `${LEVEL_NAMES[level]} \u00B7 ${SKILL_NAMES[skill]}`;
+            `${LEVEL_NAMES[level] || level || "English"} \u00B7 ${SKILL_NAMES[skill] || skill || "Lessons"}`;
 
         document.getElementById("wuCourseSubtitle").textContent =
             "Choose a lesson and follow the learning sequence.";
@@ -660,6 +660,12 @@
 
         currentView = "lesson";
         currentLesson = lesson;
+
+        // Preserve the lesson's actual location so Back always returns to
+        // the correct level and skill, even when the lesson was opened
+        // through a shortcut or a restored navigation state.
+        currentLevel = lesson.level;
+        currentSkill = lesson.skill;
 
         renderShell();
 
@@ -1231,10 +1237,16 @@
     function courseBack() {
 
         if (currentView === "lesson") {
-            renderSkill(
-                currentLevel,
-                currentSkill
-            );
+            const lessonLevel = currentLesson?.level || currentLevel;
+            const lessonSkill = currentLesson?.skill || currentSkill;
+
+            if (lessonLevel && lessonSkill) {
+                renderSkill(lessonLevel, lessonSkill);
+            } else if (lessonLevel) {
+                renderLevel(lessonLevel);
+            } else {
+                renderLevels();
+            }
             return;
         }
 
