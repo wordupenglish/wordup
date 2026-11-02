@@ -38,7 +38,14 @@
     lessons.forEach(lesson=>{
       const skill=pickSkill(lesson);
       // The final/level exam draws from assessment items, not formative practice.
-       (lesson.test||[]).forEach((q,i)=>{const v=questionFrom(q,lesson,skill,i);if(v)qs.push(v);});
+       const practicePrompts=new Set((lesson.practice||[]).map(item=>normalize(
+         typeof item==='string' ? item : item && (item.question||item.prompt||item.text) || ''
+       )).filter(Boolean));
+       (lesson.test||[]).forEach((q,i)=>{
+         const prompt=typeof q==='string' ? q : q && (q.question||q.prompt||q.text) || '';
+         if(practicePrompts.has(normalize(prompt))) return;
+         const v=questionFrom(q,lesson,skill,i);if(v)qs.push(v);
+       });
       // Generate dictation only from clean words and complete sentences.
       if (skill === 'listening' || skill === 'writing') {
         (lesson.vocabulary || []).slice(0, 3).forEach(v => {
