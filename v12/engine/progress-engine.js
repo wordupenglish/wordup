@@ -1,204 +1,137 @@
-﻿/*
+/*
 =========================================================
- WORDUP V12.1 PROGRESS ENGINE
+ WORDUP V12.2 PROGRESS ENGINE
+ Idempotent rewards, reliable daily streaks, safe storage.
 =========================================================
 */
 
-const WORDUP_PROGRESS_KEY =
-    "wordup_v12_progress";
+const WORDUP_PROGRESS_KEY = "wordup_v12_progress";
 
-function wordUpGetProgress(){
+function wordUpLocalDateKey(date = new Date()) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return year + "-" + month + "-" + day;
+}
 
-    try{
+function wordUpNormalizeProgress(data = {}) {
+    return {
+        ...data,
+        lessons: data.lessons && typeof data.lessons === "object" ? data.lessons : {},
+        tests: data.tests && typeof data.tests === "object" ? data.tests : {},
+        scores: data.scores && typeof data.scores === "object" ? data.scores : {},
+        xp: Number.isFinite(Number(data.xp)) ? Math.max(0, Number(data.xp)) : 0,
+        streak: Number.isFinite(Number(data.streak)) ? Math.max(0, Number(data.streak)) : 0,
+        mistakes: Array.isArray(data.mistakes) ? data.mistakes : [],
+        lastActiveDate: typeof data.lastActiveDate === "string" ? data.lastActiveDate : ""
+    };
+}
 
-        const saved =
-            localStorage.getItem(
-                WORDUP_PROGRESS_KEY
-            );
+function wordUpGetProgress() {
+    try {
+        const saved = localStorage.getItem(WORDUP_PROGRESS_KEY);
+        return wordUpNormalizeProgress(saved ? JSON.parse(saved) : {});
+    } catch (error) {
+        console.error("Progress loading error:", error);
+        return wordUpNormalizeProgress();
+    }
+}
 
-        if(saved){
+function wordUpSaveProgress(progress) {
+    try {
+        localStorage.setItem(WORDUP_PROGRESS_KEY, JSON.stringify(wordUpNormalizeProgress(progress)));
+        return true;
+    } catch (error) {
+        console.error("Progress saving error:", error);
+        return false;
+    }
+}
 
-            const data =
-                JSON.parse(saved);
-
-            return {
-
-                lessons:
-                    data.lessons || {},
-
-                tests:
-                    data.tests || {},
-
-                scores:
-                    data.scores || {},
-
-                xp:
-                    data.xp || 0,
-
-                streak:
-                    data.streak || 0,
-
-                mistakes:
-                    data.mistakes || []
-
-            };
-
+function wordUpRecordLearningActivity(progress) {
+    const today = wordUpLocalDateKey();
+    const previous = progress.lastActiveDate;
+    if (previous !== today) {
+        if (previous) {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            progress.streak = previous === wordUpLocalDateKey(yesterday)
+                ? Math.max(1, Number(progress.streak) || 0) + 1
+                : 1;
+        } else {
+            progress.streak = Math.max(1, Number(progress.streak) || 0);
         }
+        progress.lastActiveDate = today;
+    }
+}
 
-    }catch(error){
+function wordUpCompleteLesson(id) {
+    if (!id) return wordUpGetProgress();
+    const progress = wordUpGetProgress();
+    const alreadyCompleted = Boolean(progress.lessons[id] && progress.lessons[id].completed);
 
-        console.error(
-            "Progress loading error:",
-            error
-        );
-
+    if (!alreadyCompleted) {
+        progress.lessons[id] = { completed: true, completedAt: new Date().toISOString() };
+        progress.xp += 10;
     }
 
-    return {
-
-        lessons: {},
-
-        tests: {},
-
-        scores: {},
-
-        xp: 0,
-
-        streak: 0,
-
-        mistakes: []
-
-    };
-
-}
-
-
-function wordUpSaveProgress(progress){
-
-    localStorage.setItem(
-        WORDUP_PROGRESS_KEY,
-        JSON.stringify(progress)
-    );
-
-}
-
-
-function wordUpCompleteLesson(id){
-
-    const progress =
-        wordUpGetProgress();
-
-    progress.lessons[id] = {
-
-        completed: true,
-
-        completedAt:
-            new Date().toISOString()
-
-    };
-
-    progress.xp += 10;
-
+    wordUpRecordLearningActivity(progress);
     wordUpSaveProgress(progress);
-
     return progress;
-
 }
 
+function wordUpCompleteTest(id, score) {
+    if (!id || !Number.isFinite(Number(score))) return wordUpGetProgress();
+    const numericScore = Math.max(0, Math.min(100, Math.round(Number(score))));
+    const progress = wordUpGetProgress();
+    const previous = progress.tests[id] || {};
+    const firstAttempt = !previous.attempted;
+    const firstPass = numericScore >= 70 && !previous.passed;
 
-function wordUpCompleteTest(
-    id,
-    score
-){
-
-    const progress =
-        wordUpGetProgress();
+    if (firstAttempt) progress.xp += 10;
+    if (firstPass) progress.xp += 20;
 
     progress.tests[id] = {
-
+        ...previous,
+        attempted: true,
         completed: true,
-
-        completedAt:
-            new Date().toISOString(),
-
-        score
-
+        passed: Boolean(previous.passed || numericScore >= 70),
+        completedAt: new Date().toISOString(),
+        score: numericScore,
+        attempts: Math.max(0, Number(previous.attempts) || 0) + 1
     };
-
-    progress.scores[id] =
-        score;
-
-    progress.xp +=
-        score >= 70 ? 30 : 10;
-
-    wordUpSaveProgress(progress);
-
-    return progress;
-
-}
-
-
-function wordUpRecordMistake(
-    lessonId,
-    question,
-    answer
-){
-
-    const progress =
-        wordUpGetProgress();
-
-    progress.mistakes.push({
-
-        lessonId,
-
-        question,
-
-        answer,
-
-        createdAt:
-            new Date().toISOString()
-
-    });
-
-    wordUpSaveProgress(progress);
-
-    return progress;
-
-}
-
-
-function wordUpGetCompletedLessons(){
-
-    const progress =
-        wordUpGetProgress();
-
-    return Object.keys(
-        progress.lessons
+    progress.scores[id] = Math.max(
+        Number.isFinite(Number(progress.scores[id])) ? Number(progress.scores[id]) : 0,
+        numericScore
     );
 
+    wordUpRecordLearningActivity(progress);
+    wordUpSaveProgress(progress);
+    return progress;
 }
 
+function wordUpRecordMistake(lessonId, question, answer) {
+    const progress = wordUpGetProgress();
+    progress.mistakes.push({
+        lessonId: lessonId || "",
+        question: question || "",
+        answer: answer ?? "",
+        createdAt: new Date().toISOString()
+    });
+    wordUpRecordLearningActivity(progress);
+    wordUpSaveProgress(progress);
+    return progress;
+}
 
-window.wordUpGetProgress =
-    wordUpGetProgress;
+function wordUpGetCompletedLessons() {
+    const progress = wordUpGetProgress();
+    return Object.keys(progress.lessons).filter(id => progress.lessons[id] && progress.lessons[id].completed);
+}
 
-window.wordUpSaveProgress =
-    wordUpSaveProgress;
+window.wordUpGetProgress = wordUpGetProgress;
+window.wordUpSaveProgress = wordUpSaveProgress;
+window.wordUpCompleteLesson = wordUpCompleteLesson;
+window.wordUpCompleteTest = wordUpCompleteTest;
+window.wordUpRecordMistake = wordUpRecordMistake;
+window.wordUpGetCompletedLessons = wordUpGetCompletedLessons;
 
-window.wordUpCompleteLesson =
-    wordUpCompleteLesson;
-
-window.wordUpCompleteTest =
-    wordUpCompleteTest;
-
-window.wordUpRecordMistake =
-    wordUpRecordMistake;
-
-window.wordUpGetCompletedLessons =
-    wordUpGetCompletedLessons;
-
-
-console.log(
-    "WordUp V12.1 Progress Engine loaded."
-);
-
+console.log("WordUp V12.2 Progress Engine loaded.");
