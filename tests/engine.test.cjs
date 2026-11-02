@@ -185,7 +185,7 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
 
 test("level and master exams have enough distinct assessment questions across available skills", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    const scriptPaths = [...index.matchAll(/<script\\s+src=["'](\\.\\/v12\\/[^"'?]+)(?:\\?[^"']*)?["']/g)]
+    const scriptPaths = [...index.matchAll(/<script\s+src=["'](\.\/v12\/[^"'?]+)(?:\?[^"']*)?["']/g)]
         .map(match => match[1])
         .filter(src =>
             src === "./v12/engine/content-model.js" ||
@@ -201,7 +201,7 @@ test("level and master exams have enough distinct assessment questions across av
     sandbox.window = sandbox;
     vm.createContext(sandbox);
     for (const src of scriptPaths) {
-        const file = path.join(root, src.replace(/^\\.\\//, ""));
+        const file = path.join(root, src.replace(/^\.\//, ""));
         vm.runInContext(fs.readFileSync(file, "utf8"), sandbox, { filename: src });
     }
     vm.runInContext(fs.readFileSync(path.join(root, "wordup-exams.js"), "utf8"), sandbox, { filename: "wordup-exams.js" });
