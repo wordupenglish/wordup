@@ -84,8 +84,10 @@ function wordUpCompleteTest(id, score) {
     const numericScore = Math.max(0, Math.min(100, Math.round(Number(score))));
     const progress = wordUpGetProgress();
     const previous = progress.tests[id] || {};
-    const firstAttempt = !previous.attempted;
-    const firstPass = numericScore >= 70 && !previous.passed;
+    const firstAttempt = !previous.attempted && !previous.completed;
+    const previousBest = Number(previous.score);
+    const hadPassedBefore = Boolean(previous.passed) || (Number.isFinite(previousBest) && previousBest >= 70);
+    const firstPass = numericScore >= 70 && !hadPassedBefore;
 
     if (firstAttempt) progress.xp += 10;
     if (firstPass) progress.xp += 20;
