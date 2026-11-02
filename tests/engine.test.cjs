@@ -178,7 +178,16 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
             });
             return duplicates.length ? [{ id: lesson.id, section, duplicates }] : [];
         })),
-        lessonsWithCrossSectionPromptReuse: audit.lessonsWithCrossSectionPromptReuse
+        lessonsWithCrossSectionPromptReuse: audit.lessonsWithCrossSectionPromptReuse,
+        practiceTestPromptReuse: lessons.flatMap(lesson => {
+            const practicePrompts = new Set((Array.isArray(lesson.practice) ? lesson.practice : []).map(item =>
+                String(typeof item === "string" ? item : item && (item.question || item.prompt || item.text) || "").trim().toLowerCase()
+            ).filter(Boolean));
+            return (Array.isArray(lesson.test) ? lesson.test : []).flatMap(item => {
+                const prompt = String(typeof item === "string" ? item : item && (item.question || item.prompt || item.text) || "").trim();
+                return prompt && practicePrompts.has(prompt.toLowerCase()) ? [{ id: lesson.id, prompt }] : [];
+            });
+        }).slice(0, 30)
     }));
     assert.equal(audit.duplicateIds.length, 0, "curriculum must not contain duplicate IDs");
     assert.equal(audit.malformedAssessmentQuestions, 0, "assessment questions must have valid answer keys");
