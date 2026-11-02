@@ -237,6 +237,17 @@ test("level and master exams have enough distinct assessment questions across av
         for (const skill of availableSkills) {
             assert.ok(examSkills.has(skill), level + " exam must represent available skill: " + skill);
         }
+        const normalizeExamPrompt = value => String(value || "").toLowerCase().normalize("NFKD")
+            .replace(/[\\u0300-\\u036f]/g, "").replace(/[^a-z0-9' ]/g, " ").replace(/\\s+/g, " ").trim();
+        for (const question of questions) {
+            const lesson = levelLessons.find(item => item.id === question.lessonId);
+            if (!lesson || question.type !== "choice") continue;
+            const practicePrompts = new Set((lesson.practice || []).map(item =>
+                normalizeExamPrompt(typeof item === "string" ? item : item && (item.question || item.prompt || item.text))
+            ));
+            assert.ok(!practicePrompts.has(normalizeExamPrompt(question.prompt)),
+                level + " final exam must not repeat a practice prompt: " + question.prompt);
+        }
     }
     const master = sandbox.wordUpBuildExamQuestions("master");
     const placement = sandbox.wordUpBuildExamQuestions("placement");
