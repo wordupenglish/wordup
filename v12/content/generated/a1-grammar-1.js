@@ -390,7 +390,7 @@ independentPractice:[
 test:[
 {question:"Which form is used with one chair?",options:["There are","There is","There have","There am"],answer:1},
 {question:"Which sentence is correct?",options:["There is five books.","There are five books.","There am five books.","There has five books."],answer:1},
-{question:"Which sentence is correct?",options:["There is a computer on the desk.","There are a computer on the desk.","There have a computer on the desk.","There am a computer on the desk."],answer:0},
+{question:"Which sentence correctly uses there are with a plural noun?",options:["There is a computer on the desk.","There are a computer on the desk.","There have a computer on the desk.","There am a computer on the desk."],answer:0},
 {question:"What is the main purpose of there is/there are?",options:["To describe what exists or is present","To describe only past events","To form possessive nouns","To ask someone's age"],answer:0}
 ],
 review:[
