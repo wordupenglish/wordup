@@ -154,6 +154,7 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
         lessonsWithoutVocabulary: audit.lessonsWithoutVocabulary,
         lessonsWithoutMistakes: audit.lessonsWithoutMistakes,
         lessonsWithoutIndependentPractice: audit.lessonsWithoutIndependentPractice,
+        lessonsMissingIndependentPractice: lessons.filter(lesson => !Array.isArray(lesson.independentPractice) || !lesson.independentPractice.length).map(lesson => lesson.id),
         openResponseQuestions: audit.openResponseQuestions,
         malformedAssessmentQuestions: audit.malformedAssessmentQuestions,
         lessonsWithGenericWording: audit.lessonsWithGenericWording,
