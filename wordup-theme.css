@@ -1,0 +1,160 @@
+/* WordUp comfort theme: softened light mode and calm high-contrast dark mode. */
+:root{
+  color-scheme:light;
+  --bg:#e9e8df;
+  --surface:#f0efe7;
+  --surface2:#e4e3d9;
+  --card:#f4f2e9;
+  --text:#293633;
+  --muted:#66736e;
+  --primary:#527f76;
+  --primary2:#416c64;
+  --accent:#527f76;
+  --border:#d2d2c7;
+  --shadow:0 10px 28px rgba(43,54,48,.07);
+  --wu-bg:#e9e8df;
+  --wu-surface:#e2e2d8;
+  --wu-card:#f3f1e8;
+  --wu-text:#293633;
+  --wu-muted:#66736e;
+  --wu-primary:#527f76;
+  --wu-border:#d0d1c6;
+  --wu-shadow:0 10px 26px rgba(43,54,48,.07);
+  --wu-game-ink:#293633;
+  --wu-game-muted:#66736e;
+  --wu-game-violet:#527f76;
+  --wu-game-cyan:#7eaaa0;
+  --wu-game-gold:#c39b5c;
+  --wu-game-line:rgba(68,91,81,.17);
+}
+body{background:radial-gradient(ellipse at 12% 0%,rgba(93,139,125,.07),transparent 34%),#e9e8df!important;color:var(--text)!important;}
+body.dark{
+  color-scheme:dark;
+  --bg:#171e23;
+  --surface:#20282e;
+  --surface2:#29343a;
+  --card:#232d33;
+  --text:#e5e9e5;
+  --muted:#aab6b0;
+  --primary:#91b7ac;
+  --primary2:#a7c9bf;
+  --accent:#91b7ac;
+  --border:#38464a;
+  --shadow:0 12px 30px rgba(0,0,0,.22);
+  --wu-bg:#171e23;
+  --wu-surface:#29343a;
+  --wu-card:#232d33;
+  --wu-text:#e5e9e5;
+  --wu-muted:#aab6b0;
+  --wu-primary:#91b7ac;
+  --wu-border:#38464a;
+  --wu-shadow:0 12px 30px rgba(0,0,0,.22);
+  --wu-game-ink:#e5e9e5;
+  --wu-game-muted:#aab6b0;
+  --wu-game-violet:#a4c8bd;
+  --wu-game-cyan:#80aaa0;
+  --wu-game-gold:#d6b77e;
+  --wu-game-line:rgba(190,211,202,.14);
+  background:radial-gradient(ellipse at 12% 0%,rgba(105,153,139,.10),transparent 34%),#171e23!important;
+}
+body.dark .wu-main-nav{background:rgba(32,40,46,.96)!important;border-color:var(--border)!important;}
+.wu-main-nav{background:rgba(240,239,231,.96)!important;border-color:var(--border)!important;}
+body.dark .wu-stat-card,body.dark .wu-panel,body.dark .wu-action-card,body.dark .wu-quick-links button,
+body.dark .wu-game-section,body.dark .wu-game-stat-row article,body.dark .wu-profile-trophy{
+  background:var(--card)!important;border-color:var(--border)!important;color:var(--text)!important;
+}
+.wu-stat-card,.wu-panel,.wu-action-card,.wu-quick-links button,.wu-game-section,.wu-game-stat-row article,.wu-profile-trophy{
+  background:var(--card)!important;border-color:var(--border)!important;color:var(--text)!important;
+}
+.wu-game-hero,.wu-game-dashboard-hero{
+  background:linear-gradient(115deg,#3d625b 0%,#527f76 56%,#648b82 100%)!important;
+  box-shadow:0 16px 38px rgba(51,87,77,.17)!important;
+}
+body.dark .wu-game-hero,body.dark .wu-game-dashboard-hero{
+  background:linear-gradient(115deg,#263b39 0%,#35564f 56%,#3e625b 100%)!important;
+  box-shadow:0 16px 38px rgba(0,0,0,.24)!important;
+}
+.wu-game-cta button{background:#e7eee7!important;color:#31564e!important;}
+body.dark .wu-game-cta button{background:#d8e7df!important;color:#263d38!important;}
+.wu-game-next{background:linear-gradient(100deg,#527f76,#648f85)!important;color:#fff!important;}
+body.dark .wu-game-next{background:linear-gradient(100deg,#3e625b,#527f76)!important;}
+.wu-game-kicker,.wu-game-chip,.wu-game-skill-head b,.wu-game-level>b{color:var(--primary)!important;}
+.wu-game-chip{background:rgba(82,127,118,.12)!important;}
+.wu-game-meter span{background:linear-gradient(90deg,#527f76,#83aaa0)!important;}
+body.dark .wu-game-meter span{background:linear-gradient(90deg,#719e92,#a5c9be)!important;}
+.wu-game-level.is-current{background:rgba(82,127,118,.09)!important;border-color:var(--primary)!important;}
+.wu-game-skill{background:rgba(82,127,118,.045)!important;border-color:var(--border)!important;}
+body.dark .wu-game-skill{background:rgba(145,183,172,.06)!important;}
+.wu-profile-avatar{background:linear-gradient(135deg,#527f76,#83aaa0)!important;}
+#curriculum{background:var(--bg)!important;color:var(--text)!important;}
+#curriculum .wu-course-overview,#curriculum .wu-course-level-summary>div,
+#curriculum .wu-course-stat,#curriculum .wu-course-overview-progress,
+#curriculum .wu-course-continue,#curriculum button.wu-course-continue,
+#curriculum .wu-course-level-card,#curriculum .wu-course-lesson-card,
+#curriculum .wu-skill-course-card,#curriculum .wu-level-card,
+#curriculum .wu-learning-card,#curriculum .wu-question-card,
+#curriculum .wu-course-panel,#curriculum .wu-course-section{
+  background:var(--card)!important;background-color:var(--card)!important;
+  color:var(--text)!important;border-color:var(--border)!important;
+  box-shadow:var(--shadow)!important;
+}
+#curriculum .wu-course-continue-main,#curriculum .wu-course-continue-main *{background:transparent!important;color:inherit!important;}
+#curriculum .wu-course-level-card:hover,#curriculum .wu-course-continue:hover,
+#curriculum .wu-course-lesson-card:hover,#curriculum .wu-skill-course-card:hover{
+  background:var(--surface2)!important;border-color:var(--primary)!important;
+}
+#curriculum .wu-course-header h1,#curriculum .wu-course-overview-main h2,
+#curriculum .wu-course-section-heading h2,#curriculum .wu-course-level-heading strong,
+#curriculum .wu-course-lesson-card strong,#curriculum .wu-skill-course-card strong{color:var(--text)!important;}
+#curriculum .wu-course-header p,#curriculum .wu-course-section-heading p,
+#curriculum .wu-course-level-meta,#curriculum .wu-course-level-percent,
+#curriculum .wu-course-lesson-card small,#curriculum .wu-skill-course-card small{color:var(--muted)!important;}
+#curriculum .wu-course-level-number,#curriculum .wu-course-level-progress,
+#curriculum .wu-lesson-tabs{background:var(--surface2)!important;}
+#curriculum .wu-lesson-tabs button{color:var(--text)!important;}
+#curriculum .wu-lesson-tabs button.active{background:var(--primary)!important;color:#fff!important;}
+.wue-overlay{background:var(--bg)!important;color:var(--text)!important;}
+.wue-panel,.wue-motivation,.wue-result-hero{background:var(--card)!important;border-color:var(--border)!important;color:var(--text)!important;}
+.wue-option,.wue-secondary,.wue-input{background:var(--surface)!important;color:var(--text)!important;border-color:var(--border)!important;}
+.wue-option.is-selected{background:rgba(82,127,118,.16)!important;border-color:var(--primary)!important;}
+.wue-primary{background:var(--primary)!important;color:#fff!important;}
+.wue-progress{background:var(--surface2)!important;}
+.wue-progress>span{background:var(--primary)!important;}
+.wue-passage{margin:16px 0 20px;padding:18px 20px;border-left:4px solid var(--primary);border-radius:12px;background:var(--surface)!important;color:var(--text)!important;}
+.wue-passage h4{margin:0 0 10px;font-size:1rem;color:var(--primary)!important;}
+.wue-passage p,.wue-review-passage p{margin:0;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;}
+.wue-speech-target{margin:16px 0;padding:16px 18px;border-radius:12px;background:var(--surface)!important;border-left:4px solid var(--primary);font-size:1.08rem;line-height:1.7;color:var(--text)!important;}
+.wue-review-passage{padding:12px 14px;margin:12px 0;border-radius:10px;background:var(--surface)!important;}
+.wue-speech-actions span{color:var(--muted)!important;}
+input,textarea,select{color:var(--text);}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
+
+/* Theme coverage for profile, navigation, and high-specificity dark course rules. */
+.wu-profile-card,.wu-profile-stats,.wu-profile-stats>div,.wu-action-card,
+.wu-panel,.wu-stat-card,.wu-continue-card,.wu-quick-links button{
+  background:var(--card)!important;color:var(--text)!important;border-color:var(--border)!important;
+}
+body.dark .wu-profile-card,body.dark .wu-profile-stats,body.dark .wu-profile-stats>div,
+body.dark .wu-action-card,body.dark .wu-panel,body.dark .wu-stat-card,
+body.dark .wu-continue-card,body.dark .wu-quick-links button{
+  background:var(--card)!important;color:var(--text)!important;border-color:var(--border)!important;
+}
+body.dark #curriculum .wu-course-level-card,
+body.dark #curriculum .wu-course-continue,
+body.dark #curriculum button.wu-course-continue,
+body.dark #curriculum .wu-course-lesson-card,
+body.dark #curriculum .wu-skill-course-card,
+body.dark #curriculum .wu-level-card{
+  background:var(--card)!important;background-color:var(--card)!important;
+  color:var(--text)!important;border-color:var(--border)!important;
+}
+body.dark #curriculum .wu-course-level-card:hover,
+body.dark #curriculum .wu-course-continue:hover,
+body.dark #curriculum .wu-course-lesson-card:hover,
+body.dark #curriculum .wu-skill-course-card:hover{
+  background:var(--surface2)!important;
+}
+body.dark #curriculum .wu-course-continue-main,
+body.dark #curriculum .wu-course-continue-main *{
+  background:transparent!important;color:inherit!important;
+}
