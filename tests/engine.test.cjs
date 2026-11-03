@@ -122,8 +122,12 @@ test("question score is calculated consistently", () => {
 test("curriculum content registry has unique lesson IDs and valid assessment keys", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
     const scriptPaths = index.split('<script src="./v12/').slice(1)
-        .map(part => "./v12/" + part.split('"')[0].split('?')[0]);
-        const sandbox = { console: { log() {}, warn() {}, error() {} } };
+        .map(part => "./v12/" + part.split('"')[0].split('?')[0])
+        .filter(src => src === "./v12/engine/content-model.js" ||
+            src === "./v12/engine/fast-lesson-generator.js" ||
+            src.startsWith("./v12/content/") ||
+            src === "./v12/engine/content-validator.js");
+    const sandbox = { console: { log() {}, warn() {}, error() {} } };
     sandbox.window = sandbox;
     vm.createContext(sandbox);
 
