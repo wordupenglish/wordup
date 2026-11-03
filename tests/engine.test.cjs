@@ -121,16 +121,9 @@ test("question score is calculated consistently", () => {
 
 test("curriculum content registry has unique lesson IDs and valid assessment keys", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    const scriptPaths = [...index.matchAll(/<script\s+src=["'](\.\/v12\/[^"'?]+)(?:\?[^"']*)?["']/g)]
-        .map(match => match[1])
-        .filter(src =>
-            src === "./v12/engine/content-model.js" ||
-            src === "./v12/engine/fast-lesson-generator.js" ||
-            src.startsWith("./v12/content/") ||
-            src === "./v12/engine/content-validator.js"
-        );
-
-    const sandbox = { console: { log() {}, warn() {}, error() {} } };
+    const scriptPaths = index.split('<script src="./v12/').slice(1)
+        .map(part => "./v12/" + part.split('"')[0].split('?')[0]);
+        const sandbox = { console: { log() {}, warn() {}, error() {} } };
     sandbox.window = sandbox;
     vm.createContext(sandbox);
 
@@ -198,15 +191,9 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
 
 test("level and master exams have enough distinct assessment questions across available skills", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    const scriptPaths = [...index.matchAll(/<script\s+src=["'](\.\/v12\/[^"'?]+)(?:\?[^"']*)?["']/g)]
-        .map(match => match[1])
-        .filter(src =>
-            src === "./v12/engine/content-model.js" ||
-            src === "./v12/engine/fast-lesson-generator.js" ||
-            src.startsWith("./v12/content/") ||
-            src === "./v12/engine/content-validator.js"
-        );
-    const sandbox = {
+    const scriptPaths = index.split('<script src="./v12/').slice(1)
+        .map(part => "./v12/" + part.split('"')[0].split('?')[0]);
+        const sandbox = {
         console: { log() {}, warn() {}, error() {} },
         document: { readyState: "loading", addEventListener() {} },
         localStorage: { getItem() { return null; }, setItem() {} }
@@ -274,13 +261,9 @@ test("lesson practice continues to the next lesson rather than opening a per-les
 
 test("reading exam questions always include the actual passage", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    const scriptPaths = [...index.matchAll(/<script\\s+src=["'](\\.\\/v12\\/[^"']+)(?:\\?[^"']*)?["']/g)]
-        .map(match => match[1])
-        .filter(src => src === "./v12/engine/content-model.js" ||
-            src === "./v12/engine/fast-lesson-generator.js" ||
-            src.startsWith("./v12/content/") ||
-            src === "./v12/engine/content-validator.js");
-    const sandbox = {
+    const scriptPaths = index.split('<script src="./v12/').slice(1)
+        .map(part => "./v12/" + part.split('"')[0].split('?')[0]);
+        const sandbox = {
         console: { log() {}, warn() {}, error() {} },
         document: { readyState: "loading", addEventListener() {} },
         localStorage: { getItem() { return null; }, setItem() {} }
@@ -288,7 +271,7 @@ test("reading exam questions always include the actual passage", () => {
     sandbox.window = sandbox;
     vm.createContext(sandbox);
     for (const src of scriptPaths) {
-        vm.runInContext(fs.readFileSync(path.join(root, src.replace(/^\\.\\//, "")), "utf8"), sandbox, { filename: src });
+        vm.runInContext(fs.readFileSync(path.join(root, src.slice(2)), "utf8"), sandbox, { filename: src });
     }
     vm.runInContext(fs.readFileSync(path.join(root, "wordup-exams.js"), "utf8"), sandbox, { filename: "wordup-exams.js" });
     for (const level of ["foundation", "a1", "a2", "b1", "b2", "c1", "c2", "academic"]) {
@@ -302,13 +285,9 @@ test("reading exam questions always include the actual passage", () => {
 
 test("listening choice questions have audio and placeholder distractors are excluded", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    const scriptPaths = [...index.matchAll(/<script\\s+src=["'](\\.\\/v12\\/[^"']+)(?:\\?[^"']*)?["']/g)]
-        .map(match => match[1])
-        .filter(src => src === "./v12/engine/content-model.js" ||
-            src === "./v12/engine/fast-lesson-generator.js" ||
-            src.startsWith("./v12/content/") ||
-            src === "./v12/engine/content-validator.js");
-    const sandbox = {
+    const scriptPaths = index.split('<script src="./v12/').slice(1)
+        .map(part => "./v12/" + part.split('"')[0].split('?')[0]);
+        const sandbox = {
         console: { log() {}, warn() {}, error() {} },
         document: { readyState: "loading", addEventListener() {} },
         localStorage: { getItem() { return null; }, setItem() {} }
@@ -334,13 +313,9 @@ test("listening choice questions have audio and placeholder distractors are excl
 
 test("speaking tasks show a real target or a complete oral-response instruction and are not auto-scored", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    const scriptPaths = [...index.matchAll(/<script\\s+src=["'](\\.\\/v12\\/[^"']+)(?:\\?[^"']*)?["']/g)]
-        .map(match => match[1])
-        .filter(src => src === "./v12/engine/content-model.js" ||
-            src === "./v12/engine/fast-lesson-generator.js" ||
-            src.startsWith("./v12/content/") ||
-            src === "./v12/engine/content-validator.js");
-    const sandbox = {
+    const scriptPaths = index.split('<script src="./v12/').slice(1)
+        .map(part => "./v12/" + part.split('"')[0].split('?')[0]);
+        const sandbox = {
         console: { log() {}, warn() {}, error() {} },
         document: { readyState: "loading", addEventListener() {} },
         localStorage: { getItem() { return null; }, setItem() {} }
@@ -366,6 +341,6 @@ test("speaking tasks show a real target or a complete oral-response instruction 
 
 test("index loads the comfort palette after all existing visual styles", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    assert.match(index, /wordup-theme\\.css\\?v=20261103-comfort-theme/);
-    assert.match(index, /wordup-exams\\.js\\?v=20261103-passage-oral/);
+    assert.ok(index.includes("wordup-theme.css?v=20261103-comfort-theme"));
+    assert.ok(index.includes("wordup-exams.js?v=20261103-passage-oral"));
 });
