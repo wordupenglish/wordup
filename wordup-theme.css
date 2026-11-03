@@ -128,3 +128,33 @@ body.dark .wu-game-skill{background:rgba(145,183,172,.06)!important;}
 .wue-speech-actions span{color:var(--muted)!important;}
 input,textarea,select{color:var(--text);}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
+
+/* Theme coverage for profile, navigation, and high-specificity dark course rules. */
+.wu-profile-card,.wu-profile-stats,.wu-profile-stats>div,.wu-action-card,
+.wu-panel,.wu-stat-card,.wu-continue-card,.wu-quick-links button{
+  background:var(--card)!important;color:var(--text)!important;border-color:var(--border)!important;
+}
+body.dark .wu-profile-card,body.dark .wu-profile-stats,body.dark .wu-profile-stats>div,
+body.dark .wu-action-card,body.dark .wu-panel,body.dark .wu-stat-card,
+body.dark .wu-continue-card,body.dark .wu-quick-links button{
+  background:var(--card)!important;color:var(--text)!important;border-color:var(--border)!important;
+}
+body.dark #curriculum .wu-course-level-card,
+body.dark #curriculum .wu-course-continue,
+body.dark #curriculum button.wu-course-continue,
+body.dark #curriculum .wu-course-lesson-card,
+body.dark #curriculum .wu-skill-course-card,
+body.dark #curriculum .wu-level-card{
+  background:var(--card)!important;background-color:var(--card)!important;
+  color:var(--text)!important;border-color:var(--border)!important;
+}
+body.dark #curriculum .wu-course-level-card:hover,
+body.dark #curriculum .wu-course-continue:hover,
+body.dark #curriculum .wu-course-lesson-card:hover,
+body.dark #curriculum .wu-skill-course-card:hover{
+  background:var(--surface2)!important;
+}
+body.dark #curriculum .wu-course-continue-main,
+body.dark #curriculum .wu-course-continue-main *{
+  background:transparent!important;color:inherit!important;
+}
