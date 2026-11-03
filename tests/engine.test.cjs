@@ -128,7 +128,7 @@ test("curriculum content registry has unique lesson IDs and valid assessment key
     vm.createContext(sandbox);
 
     for (const src of scriptPaths) {
-        const file = path.join(root, src.replace(/^\.\//, ""));
+        const file = path.join(root, src.slice(2);
         const source = fs.readFileSync(file, "utf8");
         vm.runInContext(source, sandbox, { filename: src });
     }
@@ -201,7 +201,7 @@ test("level and master exams have enough distinct assessment questions across av
     sandbox.window = sandbox;
     vm.createContext(sandbox);
     for (const src of scriptPaths) {
-        const file = path.join(root, src.replace(/^\.\//, ""));
+        const file = path.join(root, src.slice(2);
         vm.runInContext(fs.readFileSync(file, "utf8"), sandbox, { filename: src });
     }
     vm.runInContext(fs.readFileSync(path.join(root, "wordup-exams.js"), "utf8"), sandbox, { filename: "wordup-exams.js" });
@@ -295,7 +295,7 @@ test("listening choice questions have audio and placeholder distractors are excl
     sandbox.window = sandbox;
     vm.createContext(sandbox);
     for (const src of scriptPaths) {
-        vm.runInContext(fs.readFileSync(path.join(root, src.replace(/^\\.\\//, "")), "utf8"), sandbox, { filename: src });
+        vm.runInContext(fs.readFileSync(path.join(root, src.slice(2);
     }
     vm.runInContext(fs.readFileSync(path.join(root, "wordup-exams.js"), "utf8"), sandbox, { filename: "wordup-exams.js" });
     const questions = sandbox.wordUpBuildExamQuestions("master");
@@ -323,7 +323,7 @@ test("speaking tasks show a real target or a complete oral-response instruction 
     sandbox.window = sandbox;
     vm.createContext(sandbox);
     for (const src of scriptPaths) {
-        vm.runInContext(fs.readFileSync(path.join(root, src.replace(/^\\.\\//, "")), "utf8"), sandbox, { filename: src });
+        vm.runInContext(fs.readFileSync(path.join(root, src.slice(2);
     }
     vm.runInContext(fs.readFileSync(path.join(root, "wordup-exams.js"), "utf8"), sandbox, { filename: "wordup-exams.js" });
     const questions = sandbox.wordUpBuildExamQuestions("master").filter(q => q.type === "speech");
