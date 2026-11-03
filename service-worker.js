@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v33-restore-previous-theme-20261103";
+const CACHE_NAME = "wordup-v34-soft-course-background-20261103";
 
 const CORE_ASSETS = [
     "./",
