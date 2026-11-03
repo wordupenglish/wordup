@@ -1,11 +1,15 @@
-const CACHE_NAME = "wordup-v30-release-audit-20261102";
+const CACHE_NAME = "wordup-v31-gamified-dashboard-20261103";
 
 const CORE_ASSETS = [
     "./",
     "./index.html",
     "./style.css",
     "./script.js",
-    "./manifest.json"
+    "./manifest.json",
+    "./wordup-gamification.css",
+    "./wordup-gamification.js",
+    "./wordup-course.js",
+    "./wordup-exams.js"
 ];
 
 self.addEventListener("install", event => {

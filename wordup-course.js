@@ -923,11 +923,9 @@
                     Start Practice \u2192
                 </button>
 
-                <button
-                    class="secondary"
-                    onclick="wordUpCourseCompleteLesson()">
-                    \u2713 Mark Lesson Complete
-                </button>
+                ${isLessonComplete(lesson.id)
+                    ? `<button type="button" class="secondary wu-complete-button" disabled>\u2713 Lesson Completed</button>`
+                    : `<button type="button" class="secondary wu-complete-button" onclick="wordUpCourseCompleteLesson()">\u2713 Mark Lesson Complete · +10 XP</button>`}
 
             </div>
 
@@ -1182,17 +1180,41 @@
         updateStatsSafely();
     }
     function completeLesson() {
-        if (!currentLesson) return;
+        if (!currentLesson) return false;
 
-        if (typeof window.wordUpCompleteLesson === "function") {
-            window.wordUpCompleteLesson(
-                currentLesson.id
-            );
+        if (isLessonComplete(currentLesson.id)) {
+            renderLessonTabs();
+            return true;
         }
 
-        renderLessonTabs();
+        if (typeof window.wordUpCompleteLesson !== "function" ||
+            typeof window.wordUpGetProgress !== "function") {
+            console.error("WordUp progress engine is unavailable.");
+            window.alert("Your progress engine is not ready. Please refresh the page and try again.");
+            return false;
+        }
 
-        updateStatsSafely();
+        try {
+            window.wordUpCompleteLesson(currentLesson.id);
+            const savedProgress = window.wordUpGetProgress();
+            const saved = !!(savedProgress.lessons &&
+                savedProgress.lessons[currentLesson.id] &&
+                savedProgress.lessons[currentLesson.id].completed);
+
+            if (!saved) {
+                window.alert("WordUp could not confirm that this lesson was saved. Check your browser storage and try again.");
+                return false;
+            }
+
+            renderLessonTabs();
+            updateStatsSafely();
+            window.dispatchEvent(new CustomEvent("wordup:progress"));
+            return true;
+        } catch (error) {
+            console.error("Lesson completion failed:", error);
+            window.alert("We couldn't save this lesson. Please try again.");
+            return false;
+        }
     }
 
     function nextLesson() {
