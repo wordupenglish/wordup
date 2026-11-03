@@ -172,7 +172,7 @@
     const count = mode === 'master' ? Math.min(60, balanced.length) : Math.min(30, balanced.length);
     return shuffle(balanced.slice(0, count), seed ^ 0xA53C9E1);
   }
-  function openExam  function openExam(mode, level) {
+  function openExam(mode, level) {
     const questions=buildQuestions(mode,level);
     if(questions.length<5){alert('This exam needs at least five available questions. More lesson assessment content must be added first.');return;}
     cleanupTimer(); state={mode,level:level||null,questions,answers:{},index:0,started:0,violations:0,finished:false,attemptId:'WU-'+Date.now().toString(36).toUpperCase()};
@@ -214,7 +214,7 @@
     utterance.rate = .82;
     window.speechSynthesis.speak(utterance);
   }
-  function renderQuestion  function renderQuestion() {
+  function renderQuestion() {
     if (!state || state.finished) return;
     if (recognition) { try { recognition.abort(); } catch (_) {} recognition = null; }
     const q = state.questions[state.index], root = rootBox();
@@ -238,7 +238,7 @@
       </div></section>`;
     if (q.type === 'dictation') setTimeout(() => { const input = $('#wueTyped'); if (input) input.focus(); }, 50);
   }
-  function choose(  function choose(i) { if(!state||state.finished)return; const q=state.questions[state.index]; if(q.type!=='choice')return;state.answers[state.index]=i;document.querySelectorAll('[data-wue-option]').forEach((b,j)=>{b.classList.toggle('is-selected',j===i);b.setAttribute('aria-pressed',String(j===i));});$('#wueNext').disabled=false; }
+  function choose(i) { if(!state||state.finished)return; const q=state.questions[state.index]; if(q.type!=='choice')return;state.answers[state.index]=i;document.querySelectorAll('[data-wue-option]').forEach((b,j)=>{b.classList.toggle('is-selected',j===i);b.setAttribute('aria-pressed',String(j===i));});$('#wueNext').disabled=false; }
   function playAudio(){if(state&&state.questions[state.index])speak(state.questions[state.index].audio||state.questions[state.index].answer);}
   function mic() {
     if (!state || state.finished) return;
@@ -385,7 +385,7 @@
     saveAttempt(record);
     renderResults(record, review, timedOut);
   }
-  function renderResults  function renderResults(record, review, timedOut) {
+  function renderResults(record, review, timedOut) {
     const root = rootBox();
     if (!root) return;
     const weak = Object.entries(record.perSkill).map(([skill, value]) => ({
@@ -399,7 +399,7 @@
       <div class="wue-panel"><h3>Answer review</h3><p class="wue-muted">Reading passages are included with their questions. Speaking transcripts are shown as submitted and are not scored automatically.</p><div class="wue-review">${review.map((item, i) => `<details class="wue-review-item"><summary><span>${item.q.type === 'speech' ? '🎙️' : item.ok ? '✅' : '📘'} ${i + 1}. ${esc(item.q.skill)} — ${item.q.type === 'speech' ? 'Submitted · Not auto-graded' : item.ok ? 'Correct' : 'Review this'}</span></summary>${item.q.passage ? `<div class="wue-review-passage"><strong>Passage:</strong><p>${esc(item.q.passage)}</p></div>` : ''}<p><strong>Question:</strong> ${esc(item.q.prompt)}</p><p><strong>Your answer:</strong> ${esc(item.q.type === 'choice' ? (item.answer === undefined ? 'Not answered' : item.q.options[Number(item.answer)] || item.answer) : item.answer || 'Not answered')}</p>${item.q.type === 'speech' ? '<p><strong>Assessment:</strong> This spoken response was not automatically graded.</p>' : `<p><strong>Correct answer:</strong> ${esc(item.q.type === 'choice' ? item.q.options[item.q.answer] : item.q.answer)}</p>`}${item.q.lessonTitle ? `<p><strong>Lesson:</strong> ${esc(item.q.lessonTitle)}</p>` : ''}</details>`).join('')}</div></div>
       <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamHistory()">View attempt history</button><button class="wue-primary" onclick="wordUpExamHome()">Back to course</button></div></section>`;
   }
-  function cleanupTimer  function cleanupTimer(){if(timer){clearInterval(timer);timer=null;}}
+  function cleanupTimer(){if(timer){clearInterval(timer);timer=null;}}
   // Avoid false-positive submissions when users switch windows, grant
   // microphone permission, or use accessibility tools. Browser exams are
   // honor-based; client-side focus guards cannot provide secure proctoring.
