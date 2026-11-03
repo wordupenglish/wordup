@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v32-exam-quality-comfort-theme-20261103";
+const CACHE_NAME = "wordup-v33-restore-previous-theme-20261103";
 
 const CORE_ASSETS = [
     "./",
@@ -11,7 +11,6 @@ const CORE_ASSETS = [
     "./wordup-course.js",
     "./wordup-exams.js",
     "./wordup-exams.css",
-    "./wordup-theme.css"
 ];
 
 self.addEventListener("install", event => {
