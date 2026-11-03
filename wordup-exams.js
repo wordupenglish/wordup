@@ -21,11 +21,17 @@
   function pickSkill(lesson) { const s=String(lesson.skill||'').toLowerCase(); return SKILLS.includes(s)?s:'grammar'; }
   function readingText(lesson) {
     const reading = lesson.reading && typeof lesson.reading === 'object' ? lesson.reading : {};
-    return String(lesson.readingPassage || reading.passage || reading.text || '').trim();
+    const primary = String(lesson.readingPassage || reading.passage || reading.text || '').trim();
+    if (primary) return primary;
+    const examples = Array.isArray(lesson.examples) ? lesson.examples : [];
+    return examples.filter(value => typeof value === 'string' && value.trim()).join('\n').trim();
   }
   function listeningText(lesson) {
     const listening = lesson.listening && typeof lesson.listening === 'object' ? lesson.listening : {};
-    return String(lesson.transcript || listening.transcript || listening.text || '').trim();
+    const primary = String(lesson.transcript || listening.transcript || listening.text || '').trim();
+    if (primary) return primary;
+    const examples = Array.isArray(lesson.examples) ? lesson.examples : [];
+    return examples.filter(value => typeof value === 'string' && value.trim()).join(' ').trim();
   }
   function hasPlaceholderDistractor(options) {
     const bad = [
