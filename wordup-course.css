@@ -1121,3 +1121,14 @@ body.dark #curriculum button.wu-course-continue {
 .wu-speaking-check input {
     margin-top: 4px;
 }
+
+
+/* Keep the Course screen visually consistent with the rest of WordUp. */
+#curriculum {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+body.dark #curriculum {
+    background: transparent !important;
+    background-color: transparent !important;
+}
