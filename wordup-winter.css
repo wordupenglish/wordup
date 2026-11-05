@@ -1,0 +1,214 @@
+/* WordUp — Winter theme
+   Keeps the original WordUp layout and restores its clean visual structure,
+   with a calm winter palette and readable contrast in both theme modes. */
+:root{
+  --bg:#edf4f8;
+  --surface:#ffffff;
+  --surface2:#e4eef4;
+  --card:#ffffff;
+  --text:#1c2d3d;
+  --muted:#617486;
+  --primary:#4d91b8;
+  --primary2:#326f96;
+  --success:#23845f;
+  --danger:#c64c59;
+  --border:#d4e1e9;
+  --shadow:0 12px 32px rgba(31,63,83,.09);
+  --winter-ice:#dcecf4;
+  --winter-blue:#4d91b8;
+  --winter-deep:#203c52;
+  --winter-pine:#477c70;
+  --winter-snow:#fbfdff;
+}
+body{
+  background:
+    radial-gradient(ellipse at 12% 0%,rgba(255,255,255,.9),transparent 36%),
+    linear-gradient(180deg,#edf4f8 0%,#f5f8fa 48%,#eaf2f6 100%)!important;
+  color:var(--text);
+}
+body.dark{
+  --bg:#101b27;
+  --surface:#192837;
+  --surface2:#223648;
+  --card:#192837;
+  --text:#edf5fa;
+  --muted:#b2c3cf;
+  --primary:#83bad8;
+  --primary2:#5d9fc4;
+  --border:#31495b;
+  --shadow:0 14px 36px rgba(0,0,0,.25);
+  background:
+    radial-gradient(ellipse at 12% 0%,rgba(90,133,158,.13),transparent 38%),
+    linear-gradient(180deg,#101b27 0%,#142332 55%,#101b27 100%)!important;
+}
+html{background:var(--bg)!important}
+#app{background:transparent!important;color:var(--text)}
+.wu-main-nav,.topbar{
+  background:rgba(251,253,255,.94)!important;
+  color:#203c52!important;
+  border-bottom:1px solid var(--border)!important;
+  box-shadow:0 5px 22px rgba(31,63,83,.07)!important;
+  backdrop-filter:blur(12px);
+}
+body.dark .wu-main-nav,body.dark .topbar{
+  background:rgba(25,40,55,.95)!important;
+  color:#edf5fa!important;
+  border-color:var(--border)!important;
+}
+.wu-nav-logo,.wu-nav-link,.wu-nav-theme,.wu-nav-xp,.brand,.icon-btn,.profile-btn{
+  color:var(--text)!important;
+}
+.wu-nav-logo-mark,.brand-mark{
+  background:linear-gradient(145deg,#83bad8,#4d91b8)!important;
+  color:#10283a!important;
+}
+.wu-nav-link.active,.wu-nav-link:hover{color:var(--primary2)!important}
+.wu-nav-xp,.wu-nav-theme,.icon-btn,.profile-btn{
+  background:var(--surface2)!important;
+  border:1px solid var(--border)!important;
+}
+.wu-welcome h1,.screen-head h1,.wu-course-header h1,
+.wu-course-section-heading h2,.wu-section-title,.section-title h2{
+  color:var(--winter-deep)!important;
+}
+body.dark :is(.wu-welcome h1,.screen-head h1,.wu-course-header h1,
+.wu-course-section-heading h2,.wu-section-title,.section-title h2){
+  color:var(--text)!important;
+}
+.wu-welcome h1 span:last-child,.wu-section-label,.wu-course-kicker{
+  color:var(--primary2)!important;
+}
+.wu-welcome p,.screen-head p,.wu-home-header p{color:var(--muted)!important}
+.wu-continue-card,.wu-game-hero,.wu-game-dashboard-hero{
+  background:linear-gradient(125deg,#203c52 0%,#315b73 58%,#477c86 100%)!important;
+  color:#f7fbfe!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  box-shadow:0 16px 38px rgba(32,60,82,.18)!important;
+}
+.wu-continue-card :is(h1,h2,h3,h4,p,span,small,strong),
+.wu-game-hero :is(h1,h2,h3,h4,p,span,small,strong),
+.wu-game-dashboard-hero :is(h1,h2,h3,h4,p,span,small,strong){
+  color:#f7fbfe!important;
+}
+.wu-progress-fill,.wu-skill-track>div,.wu-game-meter span,
+.wu-course-progress span,.lesson-progress div,.quiz-progress div,
+.progress-line div{background:linear-gradient(90deg,#83bad8,#477c86)!important}
+.wu-progress-track,.wu-skill-track,.wu-game-meter,
+.wu-course-progress,.lesson-progress,.quiz-progress,.progress-line{
+  background:rgba(113,157,181,.2)!important;
+}
+:where(.wu-stat-card,.wu-panel,.wu-action-card,.wu-quick-links button,
+.wu-game-section,.wu-game-stat-row article,.wu-course-overview,
+.wu-course-stat,.wu-course-level-summary>div,.wu-level-card,
+.wu-skill-course-card,.wu-course-lesson-card,.wu-learning-card,
+.wu-question-card,.wu-test-result,.wu-practice-header,.wu-test-header,
+.lesson-content,.quiz-question,.stat-card,.progress-card,.review-card,
+.teach-card,.result-box,.modal-box,.feedback-card,.admin-card,
+.admin-action,.admin-note,.wu-profile-card,.wu-profile-stats>div,
+.wu-profile-trophy,.wu-course-overview-progress,.wu-course-continue,
+.wu-course-level-card,.wu-course-skill-card,.wu-course-lesson-item,
+.wu-course-empty){
+  background:var(--surface)!important;
+  color:var(--text)!important;
+  border:1px solid var(--border)!important;
+  box-shadow:var(--shadow)!important;
+}
+:where(.wu-stat-card,.wu-panel,.wu-action-card,.wu-quick-links button,
+.wu-game-section,.wu-course-overview,.wu-level-card,.wu-skill-course-card,
+.wu-course-lesson-card,.wu-learning-card,.lesson-content,.quiz-question,
+.result-box,.modal-box,.feedback-card,.admin-card,.wu-profile-card)
+:where(h1,h2,h3,h4,h5,p,span,small,strong,label,li){
+  color:var(--text);
+}
+.wu-stat-label,.wu-stat-card small,.wu-panel p,.wu-action-card p,
+.wu-quick-links small,.wu-game-stat-row small,.wu-course-stat span,
+.wu-course-level-summary span,.wu-level-main small,
+.wu-skill-course-card small,.wu-course-lesson-card small,
+.wu-learning-card p,.wu-learning-card li,.wu-profile-card span{
+  color:var(--muted)!important;
+}
+.wu-stat-icon,.wu-action-symbol,.wu-game-skill-icon,
+.wu-game-level-num,.wu-level-number,.wu-lesson-index{
+  background:var(--winter-ice)!important;
+  color:#326f96!important;
+}
+body.dark :is(.wu-stat-icon,.wu-action-symbol,.wu-game-skill-icon,
+.wu-game-level-num,.wu-level-number,.wu-lesson-index){
+  background:#29475b!important;color:#b9def0!important;
+}
+.wu-primary-action,.wu-game-cta button,.wu-game-next,.primary,
+.primary-btn,.test-btn,.wu-course-continue{
+  background:linear-gradient(135deg,#5b9fc5,#3e7fa6)!important;
+  color:#fff!important;
+  border:1px solid #4d91b8!important;
+  font-weight:750!important;
+}
+.wu-primary-action:hover,.wu-game-cta button:hover,.wu-game-next:hover,
+.primary:hover,.primary-btn:hover,.test-btn:hover{
+  background:#326f96!important;color:#fff!important;
+}
+.wu-secondary-action,.secondary,.secondary-btn,.back-btn,
+.level-tab,.level-tabs button,.lesson-actions button,
+.wu-lesson-tabs button,.wu-text-button,.wu-quick-links button{
+  border-color:var(--border)!important;
+}
+.wu-text-button,.wu-level-arrow,.lesson-number,.activity-top span,
+.quiz-top span,.ipa,.status.learned{color:var(--primary2)!important}
+.level-tab,.level-tabs button,.back-btn,.secondary,.lesson-actions button,
+.wu-lesson-tabs button,.wu-question-options button,.option,
+.teach-card,.example{
+  background:var(--surface2)!important;color:var(--text)!important;
+}
+.level-tab.active,.level-tabs button.active,.wu-lesson-tabs button.active,
+.option.selected,.wu-question-options button.selected{
+  background:#d7eaf4!important;border-color:#75aeca!important;color:#20435b!important;
+}
+body.dark .level-tab.active,body.dark .level-tabs button.active,
+body.dark .wu-lesson-tabs button.active,body.dark .option.selected,
+body.dark .wu-question-options button.selected{
+  background:#31566e!important;border-color:#83bad8!important;color:#f2f9fd!important;
+}
+.wu-question-options button,.option,.wu-course-lesson-card,
+.wu-level-card,.wu-skill-course-card{border-color:var(--border)!important}
+.wu-question-options button:hover,.option:hover,.wu-level-card:hover,
+.wu-skill-course-card:hover,.wu-course-lesson-card:hover{
+  border-color:var(--primary)!important;
+}
+.wu-action-primary{background:linear-gradient(135deg,rgba(131,186,216,.2),rgba(71,124,134,.08))!important}
+.wu-panel-badge,.wu-game-chip,.wu-game-badge.earned,
+.wu-complete-badge,.status.pass{
+  background:rgba(71,124,112,.13)!important;color:#326b5b!important;
+}
+body.dark .wu-panel-badge,body.dark .wu-game-chip,
+body.dark .wu-game-badge.earned,body.dark .wu-complete-badge,
+body.dark .status.pass{background:rgba(105,177,151,.17)!important;color:#a9dfca!important}
+.wu-profile-avatar{background:linear-gradient(145deg,#83bad8,#477c86)!important;color:#10283a!important}
+input,textarea,select{
+  background:var(--surface)!important;color:var(--text)!important;
+  border:1px solid var(--border)!important;
+}
+input::placeholder,textarea::placeholder{color:var(--muted)!important;opacity:.85}
+footer,#app>footer{
+  color:var(--muted)!important;border-top:1px solid var(--border)!important;
+}
+.feedback-home-button{background:var(--winter-deep)!important;color:#f7fbfe!important}
+.option.correct,.wu-question-options button.correct,.feedback.good,.wu-feedback-good{
+  background:#e3f3ec!important;border-color:#8fc6ad!important;color:#205f48!important;
+}
+.option.wrong,.wu-question-options button.wrong,.feedback.bad,.wu-feedback-bad{
+  background:#f9e8eb!important;border-color:#e3a5ae!important;color:#913c4b!important;
+}
+body.dark .option.correct,body.dark .wu-question-options button.correct,
+body.dark .feedback.good,body.dark .wu-feedback-good{
+  background:#1d4238!important;color:#b4e6d0!important;border-color:#477c70!important;
+}
+body.dark .option.wrong,body.dark .wu-question-options button.wrong,
+body.dark .feedback.bad,body.dark .wu-feedback-bad{
+  background:#492c35!important;color:#ffd0d6!important;border-color:#a85c6b!important;
+}
+::selection{background:#b9dbea;color:#203c52}
+:focus-visible{outline:3px solid #6ba6c8!important;outline-offset:3px}
+@media(max-width:700px){
+  .wu-main-nav{background:var(--surface)!important}
+  body.dark .wu-main-nav{background:var(--surface)!important}
+}
