@@ -220,3 +220,104 @@ input,textarea,select{
 @media(max-width:700px){
   .wu-main-nav{background:var(--wu-navy-deep)!important;}
 }
+
+
+/* LIGHT MODE READABILITY FIX — warm light canvas, dark readable text. */
+@media (prefers-color-scheme: light){
+  body:not(.dark),html:not(.dark){
+    background:var(--wu-cream)!important;
+    color:var(--wu-navy)!important;
+  }
+}
+body:not(.dark){
+  --bg:var(--wu-cream);
+  --surface:var(--wu-cream-soft);
+  --surface2:#ebe3d4;
+  --card:var(--wu-cream-soft);
+  --text:var(--wu-navy);
+  --muted:#59657b;
+  --border:rgba(23,36,63,.16);
+  background:var(--wu-cream)!important;
+  color:var(--wu-navy)!important;
+}
+body:not(.dark) #app,
+body:not(.dark) #app main,
+body:not(.dark) .screen,
+body:not(.dark) .screen.active{
+  background:var(--wu-cream)!important;
+  color:var(--wu-navy)!important;
+}
+body:not(.dark) #app :is(h1,h2,h3,h4,h5,h6,p,span,label,small,strong,li,dt,dd,legend){
+  color:var(--wu-navy);
+}
+body:not(.dark) #app :is(.muted,.subtitle,.description,.hint,.helper-text,.wu-muted,.wu-stat-label,.wu-stat-card small,.wu-panel p,.wu-action-card p,.wu-quick-links small,.wu-game-stat-row small,.wu-course-stat span,.wu-course-level-summary span,.wu-level-main small,.wu-skill-course-card small,.wu-course-lesson-card small,.wu-learning-card p,.wu-learning-card li,.wu-profile-card span){
+  color:#59657b!important;
+}
+body:not(.dark) .wu-welcome h1,
+body:not(.dark) .screen-head h1,
+body:not(.dark) .wu-course-header h1,
+body:not(.dark) .wu-course-section-heading h2,
+body:not(.dark) .wu-section-title,
+body:not(.dark) .section-title h2{
+  color:var(--wu-navy)!important;
+}
+body:not(.dark) .wu-welcome p,
+body:not(.dark) .screen-head p,
+body:not(.dark) .wu-home-header p{
+  color:#59657b!important;
+}
+body:not(.dark) .wu-main-nav,
+body:not(.dark) .topbar,
+body:not(.dark) footer,
+body:not(.dark) #app>footer{
+  background:var(--wu-navy-deep)!important;
+  color:var(--wu-cream)!important;
+}
+body:not(.dark) .wu-main-nav :is(*),
+body:not(.dark) .topbar :is(*),
+body:not(.dark) footer :is(*),
+body:not(.dark) #app>footer :is(*){
+  color:var(--wu-cream)!important;
+}
+body:not(.dark) .wu-main-nav .wu-nav-link.active,
+body:not(.dark) .wu-main-nav .wu-nav-link:hover{
+  color:var(--wu-coral)!important;
+}
+body:not(.dark) .wu-continue-card,
+body:not(.dark) .wu-game-hero,
+body:not(.dark) .wu-game-dashboard-hero{
+  background:linear-gradient(120deg,var(--wu-navy-deep),var(--wu-navy-soft))!important;
+  color:var(--wu-cream)!important;
+}
+body:not(.dark) .wu-continue-card :is(h1,h2,h3,h4,p,span,small,strong),
+body:not(.dark) .wu-game-hero :is(h1,h2,h3,h4,p,span,small,strong),
+body:not(.dark) .wu-game-dashboard-hero :is(h1,h2,h3,h4,p,span,small,strong){
+  color:var(--wu-cream)!important;
+}
+body:not(.dark) .wu-continue-card .wu-coral,
+body:not(.dark) .wu-game-hero .wu-coral{
+  color:var(--wu-coral)!important;
+}
+body:not(.dark) :is(.wu-stat-card,.wu-panel,.wu-action-card,.wu-quick-links button,.wu-game-section,.wu-game-stat-row article,.wu-course-overview,.wu-course-stat,.wu-course-level-summary>div,.wu-level-card,.wu-skill-course-card,.wu-course-lesson-card,.wu-learning-card,.wu-question-card,.wu-test-result,.wu-practice-header,.wu-test-header,.lesson-content,.quiz-question,.stat-card,.progress-card,.review-card,.teach-card,.result-box,.modal-box,.feedback-card,.admin-card,.admin-action,.admin-note,.wu-profile-card,.wu-profile-stats>div,.wu-profile-trophy,.wu-course-overview-progress,.wu-course-continue,.wu-course-level-card,.wu-course-skill-card,.wu-course-lesson-item,.wu-course-empty){
+  background:var(--wu-cream-soft)!important;
+  color:var(--wu-navy)!important;
+}
+body:not(.dark) :is(.wu-stat-card,.wu-panel,.wu-action-card,.wu-game-section,.wu-course-overview,.wu-level-card,.wu-skill-course-card,.wu-course-lesson-card,.wu-learning-card,.lesson-content,.quiz-question,.result-box,.modal-box,.feedback-card,.admin-card,.wu-profile-card) :is(h1,h2,h3,h4,h5,p,span,small,strong,label,li){
+  color:var(--wu-navy)!important;
+}
+body:not(.dark) :is(input,textarea,select){
+  background:var(--wu-cream-soft)!important;
+  color:var(--wu-navy)!important;
+}
+body:not(.dark) :is(.level-tab,.level-tabs button,.back-btn,.secondary,.secondary-btn,.lesson-actions button,.wu-lesson-tabs button,.wu-question-options button,.option){
+  background:var(--wu-cream-soft)!important;
+  color:var(--wu-navy)!important;
+}
+body:not(.dark) :is(.level-tab.active,.level-tabs button.active,.wu-lesson-tabs button.active,.option.selected,.wu-question-options button.selected){
+  background:var(--wu-coral)!important;
+  color:var(--wu-navy-deep)!important;
+}
+body:not(.dark) .feedback-home-button{
+  background:var(--wu-navy-soft)!important;
+  color:var(--wu-cream)!important;
+}
