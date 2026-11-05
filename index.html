@@ -8,6 +8,7 @@
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./assets/icon.svg">
 <link rel="stylesheet" href="./style.css?v=20261102-spacing-audit">
+<link rel="stylesheet" href="./wordup-notifications.css?v=20261105-push">
 <title>WordUp English</title>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MJ67Q7N69"></script>
@@ -121,6 +122,16 @@
 
     </div>
 
+
+    <section class="wu-notification-card" aria-labelledby="wuPushTitle">
+        <div class="wu-notification-copy">
+            <span class="wu-notification-eyebrow">STAY ON TRACK</span>
+            <h2 id="wuPushTitle">A little reminder can keep your progress moving.</h2>
+            <p id="wuPushDescription">Allow WordUp notifications to receive new learning reminders and encouragement.</p>
+            <p id="wuPushStatus" class="wu-push-status" role="status" aria-live="polite">Notifications are optional. You can change this in your browser settings.</p>
+        </div>
+        <button type="button" class="wu-push-enable" id="wuPushEnable" onclick="wordUpEnableNotifications()">Enable notifications</button>
+    </section>
 
     <!-- CONTINUE LEARNING -->
     <section class="wu-continue-card">
@@ -676,6 +687,22 @@
     </div>
 
 
+    <section class="wu-push-admin" aria-labelledby="wuPushAdminTitle">
+        <div>
+            <span class="wu-notification-eyebrow">LEARNER ENGAGEMENT</span>
+            <h2 id="wuPushAdminTitle">Send a learning reminder</h2>
+            <p>Send a message to learners who have subscribed to WordUp notifications.</p>
+        </div>
+        <label for="wuPushAdminTitleInput">Notification title</label>
+        <input id="wuPushAdminTitleInput" type="text" maxlength="60" value="Your English Journey Is Waiting!">
+        <label for="wuPushAdminMessage">Message</label>
+        <textarea id="wuPushAdminMessage" rows="4" maxlength="180">A few minutes of practice today can make a real difference. Open WordUp, complete a lesson, and keep growing. Your future fluent self will thank you!</textarea>
+        <label for="wuPushAdminToken">Private sending token</label>
+        <input id="wuPushAdminToken" type="password" autocomplete="off" placeholder="Paste your private push-admin token">
+        <button type="button" id="wuPushSend" onclick="wordUpSendPushBroadcast()">Send to subscribed learners</button>
+        <p id="wuPushAdminStatus" role="status" aria-live="polite">Push delivery becomes available after the setup steps in PUSH-NOTIFICATIONS.md are completed.</p>
+    </section>
+
     <div class="admin-note">
     <h3>&#x1F4CC; Analytics</h3>
     <p>
@@ -965,6 +992,7 @@
 <link rel="stylesheet" href="./wordup-gamification.css?v=20261103-game-ui">
 <script src="./wordup-gamification.js?v=20261103-game-ui"></script>
 <link rel="stylesheet" href="./wordup-winter.css?v=20261105-winter-theme">
+<script src="./wordup-notifications.js?v=20261105-push"></script>
 </body>
 </html>
 
