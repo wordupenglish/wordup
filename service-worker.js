@@ -1,4 +1,9 @@
-importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
+try {
+    importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
+} catch (error) {
+    // Keep WordUp offline caching available if the push SDK CDN is unavailable.
+    console.warn("OneSignal worker SDK could not be loaded:", error);
+}
 
 const CACHE_NAME = "wordup-v38-push-20261105";
 const CORE_ASSETS = ["./","./index.html","./style.css","./script.js","./manifest.json","./wordup-gamification.css","./wordup-winter.css","./wordup-notifications.css","./wordup-notifications.js","./wordup-gamification.js","./wordup-course.js","./wordup-exams.js","./wordup-exams.css"];
