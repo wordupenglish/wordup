@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v36-light-contrast-fix-20261105";
+const CACHE_NAME = "wordup-v37-winter-theme-20261105";
 
 const CORE_ASSETS = [
     "./",
@@ -7,7 +7,7 @@ const CORE_ASSETS = [
     "./script.js",
     "./manifest.json",
     "./wordup-gamification.css",
-    "./wordup-palette.css",
+    "./wordup-winter.css",
     "./wordup-gamification.js",
     "./wordup-course.js",
     "./wordup-exams.js",
