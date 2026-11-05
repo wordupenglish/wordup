@@ -1,4 +1,4 @@
-const CACHE_NAME = "wordup-v35-navy-cream-coral-20261105";
+const CACHE_NAME = "wordup-v36-light-contrast-fix-20261105";
 
 const CORE_ASSETS = [
     "./",
