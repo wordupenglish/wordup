@@ -3,21 +3,76 @@
 "use strict";
 
 const CACHE_PREFIX = "wordup-";
-const CACHE_NAME = "wordup-v39-offline-safe-20261110";
+const CACHE_NAME = "wordup-v40-full-curriculum-offline-20261110";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./style.css",
-  "./script.js",
   "./manifest.json",
-  "./wordup-gamification.css",
-  "./wordup-winter.css",
+  "./assets/icon.svg",
+  "./style.css",
   "./wordup-notifications.css",
-  "./wordup-notifications.js",
-  "./wordup-gamification.js",
+  "./wordup-course.css",
+  "./wordup-exams.css",
+  "./script.js",
+  "./v12/engine/content-model.js",
+  "./v12/engine/fast-lesson-generator.js",
+  "./v12/content/lesson-schema.js",
+  "./v12/engine/question-engine.js",
+  "./v12/content/levels/foundation.js",
+  "./v12/content/generated/foundation-lessons.js",
+  "./v12/content/generated/foundation-writing-2.js",
+  "./v12/content/generated/foundation-writing-3.js",
+  "./v12/content/generated/foundation-writing-4.js",
+  "./v12/content/generated/foundation-grammar-1.js",
+  "./v12/content/generated/foundation-grammar-2.js",
+  "./v12/content/generated/foundation-grammar-3.js",
+  "./v12/content/generated/foundation-grammar-4.js",
+  "./v12/content/generated/foundation-vocabulary-1.js",
+  "./v12/content/generated/foundation-vocabulary-2.js",
+  "./v12/content/generated/foundation-vocabulary-3.js",
+  "./v12/content/generated/foundation-vocabulary-4.js",
+  "./v12/content/generated/foundation-reading-1.js",
+  "./v12/content/generated/foundation-reading-2.js",
+  "./v12/content/generated/foundation-listening-1.js",
+  "./v12/content/generated/foundation-listening-2.js",
+  "./v12/content/levels/a1.js",
+  "./v12/content/generated/a1-grammar-1.js",
+  "./v12/content/generated/a1-grammar-2.js",
+  "./v12/content/generated/a1-listening-1.js",
+  "./v12/content/generated/a1-listening-2.js",
+  "./v12/content/generated/a1-reading-1.js",
+  "./v12/content/generated/a1-reading-2.js",
+  "./v12/content/generated/a1-vocabulary-1.js",
+  "./v12/content/generated/a1-vocabulary-2.js",
+  "./v12/content/generated/a1-vocabulary-3.js",
+  "./v12/content/generated/a1-writing-1.js",
+  "./v12/content/levels/a2.js",
+  "./v12/content/levels/b1.js",
+  "./v12/content/generated/b1-lessons.js",
+  "./v12/content/levels/b2.js",
+  "./v12/content/levels/c1.js",
+  "./v12/content/levels/c2.js",
+  "./v12/content/levels/academic.js",
+  "./v12/content/generated/b2-complete-lessons.js",
+  "./v12/content/generated/c1-complete-lessons.js",
+  "./v12/content/generated/c2-complete-lessons.js",
+  "./v12/content/generated/academic-complete-lessons.js",
+  "./v12/curriculum/master-map.js",
+  "./v12/content/generated/a2-lessons.js",
+  "./v12/content/generated/a1-speaking-1.js",
+  "./v12/content/generated/foundation-speaking-1.js",
+  "./v12/content/generated/a2-speaking-1.js",
+  "./v12/content/content-registry.js",
+  "./v12/engine/progress-engine.js",
+  "./v12/engine/curriculum-expansion.js",
+  "./v12/engine/content-validator.js",
+  "./v12/engine/v12-runtime.js",
   "./wordup-course.js",
   "./wordup-exams.js",
-  "./wordup-exams.css"
+  "./wordup-gamification.css",
+  "./wordup-gamification.js",
+  "./wordup-winter.css",
+  "./wordup-notifications.js"
 ];
 
 self.addEventListener("install", event => {
@@ -61,7 +116,7 @@ self.addEventListener("fetch", event => {
         }
         return response;
       } catch (error) {
-        const cachedPage = await caches.match(request);
+        const cachedPage = await caches.match(request, { ignoreSearch: true });
         if (cachedPage) return cachedPage;
         const homePage = await caches.match("./index.html");
         return homePage || Response.error();
