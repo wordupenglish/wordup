@@ -1,11 +1,11 @@
-name: WordUp engine tests
+name: WordUp engine and offline tests
 
 on:
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened, edited]
   push:
-    branches: [main, quality/wordup-audit-2026-11-01]
+    branches: [main, quality/wordup-audit-2026-11-01, fix/offline-cache-and-release-qa-2026-11-10]
 
 jobs:
   engine-tests:
@@ -17,11 +17,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Run engine tests
-        run: node --test tests/engine.test.cjs
-      - name: Check changed engine scripts
+      - name: Run engine and offline regression tests
+        run: node --test tests/*.test.cjs
+      - name: Check JavaScript syntax
         run: |
-          node --check v12/engine/progress-engine.js
-          node --check v12/engine/question-engine.js
-          node --check wordup-course.js
           find . -name '*.js' -not -path './.git/*' -print0 | xargs -0 -n1 node --check
