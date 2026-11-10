@@ -5,9 +5,9 @@ const path = require("node:path");
 const vm = require("node:vm");
 
 const source = fs.readFileSync(path.join(__dirname, "..", "script.js"), "utf8");
-const dateHelpers = source.match(/function wordUpLegacyLocalDateKey[\\s\\S]*?(?=function save\\()/)?.[0];
-const saveFunction = source.match(/function save\\(\\)\\s*\\{[\\s\\S]*?\\n\\}/)?.[0];
-const streakFunction = source.match(/function updateStreak\\(\\)\\s*\\{[\\s\\S]*?\\n\\}/)?.[0];
+const dateHelpers = source.match(/function wordUpLegacyLocalDateKey[\s\S]*?(?=function save\()/)?.[0];
+const saveFunction = source.match(/function save\(\)\s*\{[\s\S]*?\n\}/)?.[0];
+const streakFunction = source.match(/function updateStreak\(\)\s*\{[\s\S]*?\n\}/)?.[0];
 
 assert.ok(dateHelpers && saveFunction && streakFunction, "legacy progress helpers should be present");
 
@@ -35,7 +35,7 @@ test("streaks advance using local calendar dates rather than UTC dates", () => {
     getDate() { return 10; }
   }
   const sandbox = { Date: LocalDate, state: { streak: 3, lastStudy: "2026-11-09" } };
-  vm.runInNewContext(dateHelpers + "\\n" + streakFunction, sandbox);
+  vm.runInNewContext(dateHelpers + "\n" + streakFunction, sandbox);
   sandbox.updateStreak();
   assert.equal(sandbox.state.streak, 4);
   assert.equal(sandbox.state.lastStudy, "2026-11-10");
@@ -49,7 +49,7 @@ test("a backwards device-clock change does not erase a streak", () => {
     getDate() { return 9; }
   }
   const sandbox = { Date: LocalDate, state: { streak: 5, lastStudy: "2026-11-10" } };
-  vm.runInNewContext(dateHelpers + "\\n" + streakFunction, sandbox);
+  vm.runInNewContext(dateHelpers + "\n" + streakFunction, sandbox);
   sandbox.updateStreak();
   assert.equal(sandbox.state.streak, 5);
   assert.equal(sandbox.state.lastStudy, "2026-11-10");
