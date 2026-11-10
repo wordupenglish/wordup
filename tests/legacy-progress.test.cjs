@@ -6,8 +6,8 @@ const vm = require("node:vm");
 
 const source = fs.readFileSync(path.join(__dirname, "..", "script.js"), "utf8");
 const dateHelpers = source.match(/function wordUpLegacyLocalDateKey[\s\S]*?(?=function save\()/)?.[0];
-const saveFunction = source.match(/function save\(\)\s*\{[\s\S]*?\n\}/)?.[0];
-const streakFunction = source.match(/function updateStreak\(\)\s*\{[\s\S]*?\n\}/)?.[0];
+const saveFunction = source.match(/function save\(\)\s*\{[\s\S]*?\nreturn false;\n\}\n\}/)?.[0];
+const streakFunction = source.match(/function updateStreak\(\)\s*\{[\s\S]*?\nstate\.lastStudy=today;\n\}/)?.[0];
 
 assert.ok(dateHelpers && saveFunction && streakFunction, "legacy progress helpers should be present");
 
