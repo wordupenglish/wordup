@@ -1,9 +1,10 @@
-/* WordUp offline-first service worker.
+/* WordUp offline-first service worker with OneSignal Web Push support.
    Keep navigation fallbacks separate from scripts, styles, and other assets. */
+importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
 "use strict";
 
 const CACHE_PREFIX = "wordup-";
-const CACHE_NAME = "wordup-v41-local-progress-safety-20261110";
+const CACHE_NAME = "wordup-v42-onesignal-web-push-20261110";
 const CORE_ASSETS = [
   "./",
   "./index.html",
