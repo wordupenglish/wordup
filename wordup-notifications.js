@@ -22,7 +22,7 @@
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     window.OneSignalDeferred.push(async function (OneSignal) {
       try {
-        await OneSignal.init({ appId: CONFIG.oneSignalAppId, serviceWorkerPath: "./service-worker.js", serviceWorkerParam: { scope: "/wordup/" }, notifyButton: { enable: false } });
+        await OneSignal.init({ appId: CONFIG.oneSignalAppId, serviceWorkerPath: "wordup/service-worker.js", serviceWorkerParam: { scope: "/wordup/" }, notifyButton: { enable: false } });
         OneSignalRef = OneSignal; ready = true; await refresh();
       } catch (e) { console.error("WordUp push initialization:", e); status("Notifications could not start. Refresh the page and try again later."); setButton("Try again later", true); }
     });
