@@ -3,7 +3,7 @@
 "use strict";
 
 const CACHE_PREFIX = "wordup-";
-const CACHE_NAME = "wordup-v40-full-curriculum-offline-20261110";
+const CACHE_NAME = "wordup-v41-local-progress-safety-20261110";
 const CORE_ASSETS = [
   "./",
   "./index.html",
