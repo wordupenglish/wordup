@@ -1,7 +1,7 @@
 /* WordUp browser push. Keep provider secrets out of this public file. */
 (() => {
   "use strict";
-  const CONFIG = { oneSignalAppId: "ADD_ONESIGNAL_APP_ID", pushWorkerUrl: "ADD_CLOUDFLARE_WORKER_URL" };
+  const CONFIG = { oneSignalAppId: "6b3897fc-6317-4768-85e4-c104893b3660", pushWorkerUrl: "https://wordup-push.suliman-7surkhrody.workers.dev" };
   const configured = () => CONFIG.oneSignalAppId !== "ADD_ONESIGNAL_APP_ID" && /^[-a-f0-9]{30,40}$/i.test(CONFIG.oneSignalAppId);
   let ready = false, OneSignalRef = null;
   const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
