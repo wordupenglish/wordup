@@ -29,3 +29,17 @@ test("pre-cache failures do not prevent the worker from installing", () => {
   assert.match(source, /cache\.add\(asset\)\.catch/);
   assert.match(source, /await\s+self\.skipWaiting\(\)/);
 });
+
+test("the offline shell pre-caches every local asset referenced by the app", () => {
+  const index = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+  const localAssets = [...index.matchAll(/(?:src|href)=["'](\.\/[^"'?#]+)(?:\?[^"']*)?["']/g)]
+    .map(match => match[1])
+    .filter(asset => asset !== "./" && !asset.includes("google"));
+  for (const asset of new Set(localAssets)) {
+    assert.ok(source.includes('"' + asset + '"'), "offline cache is missing " + asset);
+  }
+});
+
+test("pre-cached assets match versioned URLs with cache-busting query strings", () => {
+  assert.match(source, /caches\.match\(request,\s*\{\s*ignoreSearch:\s*true\s*\}\)/);
+});
