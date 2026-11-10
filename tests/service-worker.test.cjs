@@ -8,7 +8,9 @@ const source = fs.readFileSync(path.join(__dirname, "..", "service-worker.js"), 
 test("offline navigation fallback is restricted to document navigations", () => {
   assert.match(source, /request\.mode\s*===\s*"navigate"/);
   assert.match(source, /caches\.match\("\.\/index\.html"\)/);
-  assert.match(source, /if\s*\(request\.mode\s*===\s*"navigate"\)[\s\S]*?return;[\s\S]*?event\.respondWith/);
+  const navigationHandler = source.split('if (request.mode === "navigate")')[1]?.split("// Static assets are cache-first.")[0] || "";
+  assert.match(navigationHandler, /event\.respondWith/);
+  assert.match(navigationHandler, /caches\.match\("\.\/index\.html"\)/);
 });
 
 test("failed static asset requests never fall back to the homepage HTML", () => {
