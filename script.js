@@ -861,7 +861,7 @@ return year + "-" + month + "-" + day;
 }
 
 function wordUpLegacyCalendarDayNumber(dateKey){
-const match = /^(\\d{4})-(\\d{2})-(\\d{2})$/.exec(String(dateKey || ""));
+const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(dateKey || ""));
 if(!match) return NaN;
 return Math.floor(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])) / 86400000);
 }
