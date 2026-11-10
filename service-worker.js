@@ -128,7 +128,7 @@ self.addEventListener("fetch", event => {
   // Static assets are cache-first. Never return index.html for a missing
   // JavaScript, CSS, JSON, image, or font request.
   event.respondWith((async () => {
-    const cached = await caches.match(request);
+    const cached = await caches.match(request, { ignoreSearch: true });
     if (cached) return cached;
 
     try {
