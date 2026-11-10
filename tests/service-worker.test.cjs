@@ -41,5 +41,6 @@ test("the offline shell pre-caches every local asset referenced by the app", () 
 });
 
 test("pre-cached assets match versioned URLs with cache-busting query strings", () => {
-  assert.match(source, /caches\.match\(request,\s*\{\s*ignoreSearch:\s*true\s*\}\)/);
+  const ignoreSearchLookups = [...source.matchAll(/caches\.match\(request,\s*\{\s*ignoreSearch:\s*true\s*\}\)/g)];
+  assert.equal(ignoreSearchLookups.length, 2, "both navigation and static asset lookups should ignore cache-busting query strings");
 });
