@@ -343,8 +343,11 @@ test("speaking tasks show a real target or a complete oral-response instruction 
     assert.deepEqual({ correct: score.correct, total: score.total, score: score.score }, { correct: 2, total: 2, score: 100 });
 });
 
-test("index loads the comfort palette after all existing visual styles", () => {
+test("index loads the current winter palette after the existing visual styles", () => {
     const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-    assert.ok(index.includes("wordup-theme.css?v=20261103-comfort-theme"));
+    const gamificationStyles = index.indexOf("wordup-gamification.css");
+    const winterStyles = index.indexOf("wordup-winter.css?v=20261105-winter-theme");
+    assert.ok(gamificationStyles >= 0, "gamification styles should be loaded");
+    assert.ok(winterStyles > gamificationStyles, "the current winter palette should load after the existing visual styles");
     assert.ok(index.includes("wordup-exams.js?v=20261103-passage-oral"));
 });
