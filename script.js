@@ -852,23 +852,51 @@ let placementChecked=false;
 // STORAGE
 // ============================================================
 
+function wordUpLegacyLocalDateKey(date){
+const value = date instanceof Date ? date : new Date();
+const year = value.getFullYear();
+const month = String(value.getMonth() + 1).padStart(2, "0");
+const day = String(value.getDate()).padStart(2, "0");
+return year + "-" + month + "-" + day;
+}
+
+function wordUpLegacyCalendarDayNumber(dateKey){
+const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(dateKey || ""));
+if(!match) return NaN;
+return Math.floor(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])) / 86400000);
+}
+
 function save(){
+try{
 localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
 updateStats();
+return true;
+}catch(error){
+console.error("WordUp could not save local progress:", error);
+try{ updateStats(); }catch(renderError){ console.error("WordUp stats refresh failed:", renderError); }
+return false;
+}
 }
 
 function updateStreak(){
-const today=new Date().toISOString().slice(0,10);
+const today=wordUpLegacyLocalDateKey(new Date());
 
 if(state.lastStudy===today)return;
 
 if(state.lastStudy){
-const old=new Date(state.lastStudy);
-const now=new Date(today);
-const diff=Math.round((now-old)/86400000);
+const previousDay = wordUpLegacyCalendarDayNumber(state.lastStudy);
+const currentDay = wordUpLegacyCalendarDayNumber(today);
+const diff = currentDay - previousDay;
 
-if(diff===1) state.streak++;
-else if(diff>1) state.streak=1;
+if(!Number.isFinite(previousDay)){
+state.streak=1;
+}else if(diff<=0){
+return;
+}else if(diff===1){
+state.streak++;
+}else{
+state.streak=1;
+}
 }else{
 state.streak=1;
 }
