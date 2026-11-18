@@ -84,55 +84,68 @@
   function buildPlacementQuestions() {
     const lessons = allLessons();
     const pools = Object.fromEntries(PLACEMENT_BANDS.map(level => [level, []]));
+    const recentPrompts = new Set();
+    attempts().filter(item => item && item.mode === 'placement').slice(-2).forEach(item => {
+      (item.review || []).forEach(entry => {
+        if (entry && entry.question) recentPrompts.add(normalize(entry.question));
+      });
+    });
+
     lessons.forEach(lesson => {
       const level = String(lesson.level || '').toLowerCase().trim();
       if (!pools[level]) return;
       const skill = pickSkill(lesson);
       if (skill === 'speaking') return;
-      const practicePrompts = new Set((lesson.practice || []).map(item => normalize(
-        typeof item === 'string' ? item : item && (item.question || item.prompt || item.text) || ''
-      )).filter(Boolean));
-      (lesson.test || []).forEach((q, i) => {
+
+      // Use both authored assessment and practice items. The question bank
+      // contains many more validated items in practice than in test arrays.
+      const source = []
+        .concat(Array.isArray(lesson.test) ? lesson.test : [])
+        .concat(Array.isArray(lesson.practice) ? lesson.practice : []);
+      const seenInLesson = new Set();
+      source.forEach((q, i) => {
         const prompt = typeof q === 'string' ? q : q && (q.question || q.prompt || q.text) || '';
-        if (practicePrompts.has(normalize(prompt))) return;
+        const promptKey = normalize(prompt);
+        if (!promptKey || seenInLesson.has(promptKey)) return;
+        seenInLesson.add(promptKey);
         const item = questionFrom(q, lesson, skill, i);
-        // Placement uses objectively scored questions only. It never pretends
-        // that a transcript, pronunciation, or dictated sentence is a writing score.
+        // Only objectively marked questions are used for placement.
         if (!item || item.type !== 'choice') return;
         item.level = level;
+        item.questionKey = hash(level + '|' + (lesson.id || '') + '|' + promptKey);
         pools[level].push(item);
       });
-      // Listening dictation is retained as a narrow listening sub-skill.
-      if (skill === 'listening') {
-        (lesson.vocabulary || []).slice(0, 3).forEach(v => {
-          const word = typeof v === 'string' ? v : v && (v.word || v.term);
-          if (typeof word !== 'string') return;
-          const clean = word.trim();
-          if (clean && clean.split(/\\s+/).length <= 6 && !/[\\/\\\\→←:]/.test(clean)) {
-            pools[level].push({
-              type:'dictation', skill:'listening', level, lessonId:lesson.id,
-              lessonTitle:lesson.topic || lesson.title || lesson.id,
-              prompt:'Listen carefully and type the word or phrase you hear.',
-              answer:clean, audio:clean
-            });
-          }
-        });
-      }
     });
 
-    const seed = hash('placement|' + new Date().toISOString().slice(0,10));
+    // A fresh random seed is generated for every attempt, not once per day.
+    const seed = hash(Date.now() + '|' + Math.random() + '|' + Math.random());
+    const targets = Object.fromEntries(PLACEMENT_BANDS.map(level => [level, 6]));
+    const extraStart = seed % PLACEMENT_BANDS.length;
+    for (let i = 0; i < 3; i++) {
+      const level = PLACEMENT_BANDS[(extraStart + i) % PLACEMENT_BANDS.length];
+      targets[level]++;
+    }
+
     const selected = [];
     const coverage = [];
     PLACEMENT_BANDS.forEach((level, bandIndex) => {
       const candidates = pools[level];
+      const fresh = candidates.filter(q => !recentPrompts.has(normalize(q.prompt)));
+      // Prefer unseen questions from the last two attempts. If the bank is
+      // too small, reuse is allowed rather than making the assessment fail.
+      const usable = fresh.length >= targets[level] ? fresh : candidates;
       const bySkill = {};
-      SKILLS.forEach(skill => bySkill[skill] = shuffle(candidates.filter(q => q.skill === skill), seed + hash(level + skill)));
+      SKILLS.forEach(skill => {
+        bySkill[skill] = shuffle(usable.filter(q => q.skill === skill),
+          seed + hash(level + '|' + skill));
+      });
+
       const band = [];
       let cursor = 0;
-      while (band.length < PLACEMENT_TARGET_PER_BAND && band.length < candidates.length) {
+      while (band.length < targets[level]) {
         let added = false;
         SKILLS.forEach(skill => {
-          if (band.length >= PLACEMENT_TARGET_PER_BAND) return;
+          if (band.length >= targets[level]) return;
           if (bySkill[skill][cursor]) {
             band.push(bySkill[skill][cursor]);
             added = true;
@@ -141,10 +154,16 @@
         if (!added) break;
         cursor++;
       }
-      coverage.push({level, available:candidates.length, selected:band.length});
-      // Do not silently award a level when its evidence base is too small.
-      if (band.length < 4) return;
-      shuffle(band, seed + bandIndex).forEach(q => selected.push(q));
+      coverage.push({level, available:candidates.length, fresh:fresh.length,
+        selected:band.length, required:targets[level]});
+      shuffle(band, seed + bandIndex).forEach(q => {
+        // Randomize answer positions as well as question selection/order.
+        const options = q.options.map((option, index) => ({option, index}));
+        const randomized = shuffle(options, seed + hash(q.prompt + '|' + bandIndex));
+        q.options = randomized.map(item => item.option);
+        q.answer = randomized.findIndex(item => item.index === q.answer);
+        selected.push(q);
+      });
     });
     selected.coverage = coverage;
     return selected;
@@ -204,15 +223,15 @@
     const questions=buildQuestions(mode,level);
     if(mode==='placement'){
       const coverage=questions.coverage||[];
-      const missing=coverage.filter(x=>x.selected<4);
+      const missing=coverage.filter(x=>x.selected<x.required);
       if(missing.length){
         alert('The placement test is temporarily unavailable because the question bank lacks enough validated questions at every level. Missing: '+missing.map(x=>levelName(x.level)+' ('+x.selected+'/4)').join(', ')+'. Please contact WordUp support rather than receiving an unreliable result.');
         return;
       }
-      if(questions.length<28){alert('The placement test needs at least 28 validated questions across Foundation–C2. The current question bank is not sufficient for a reliable assessment.');return;}
+      if(questions.length!==45){alert('The placement test needs 45 validated questions, with at least six from every level. The current question bank is not sufficient for a reliable assessment. Please contact WordUp support.');return;}
     } else if(questions.length<5){alert('This exam needs at least five available questions. More lesson assessment content must be added first.');return;}
     cleanupTimer(); state={mode,level:level||null,questions,answers:{},index:0,started:0,violations:0,finished:false,attemptId:'WU-'+Date.now().toString(36).toUpperCase()};
-    remaining=(mode==='master'?45:mode==='placement'?35:25)*60;
+    remaining=(mode==='master'?45:mode==='placement'?30:25)*60;
     renderRules();
   }
   function rootBox() {
@@ -233,9 +252,9 @@
   function renderRules() {
     const root=rootBox(); if(!root)return;
     const title=state.mode==='master'?'Master Exam':state.mode==='placement'?'Progressive English Placement Assessment':`${levelName(state.level)} Exam`;
-    root.innerHTML=`<section class="wue-view">${header(title,state.mode==='placement'?'Questions progress from Foundation to C2. The result is based on demonstrated performance at each level.':'Your progress is built one question at a time. Breathe, focus, and trust the work you have done.')}
+    root.innerHTML=`<section class="wue-view">${header(title,state.mode==='placement'?'45 questions in 30 minutes. Questions progress from Foundation to C2, with fresh question selection on each attempt.':'Your progress is built one question at a time. Breathe, focus, and trust the work you have done.')}
       <div class="wue-motivation"><p>✨ You do not need to be perfect — just give every question your honest best.</p><p>💪 Every challenge is a chance to discover how much you have learned and what to improve next.</p><p>🌱 Stay calm, believe in your effort, and keep moving forward. You can do this!</p></div>
-      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>Placement questions increase in difficulty from Foundation through C2. Your result is based on level-by-level evidence, not one overall percentage.</li><li>Speaking and extended writing are not automatically graded in this version; they are not used to inflate or lower your placement level.</li><li>Listening questions may use your browser's English voice. Audio quality can vary by device; you may replay it.</li><li>Complete the exam independently and avoid outside help. This is an honor-based assessment.</li><li>Your attempt and results are saved on this device. A browser-based exam cannot reliably prevent switching tabs or outside assistance.</li></ul>
+      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>This 45-question placement test lasts 30 minutes. Questions increase in difficulty from Foundation through C2, and the question set and answer positions are randomized for each attempt.</li><li>Speaking and extended writing are not automatically graded in this version; they are not used to inflate or lower your placement level.</li><li>Listening questions may use your browser's English voice. Audio quality can vary by device; you may replay it.</li><li>Complete the exam independently and avoid outside help. This is an honor-based assessment.</li><li>Your attempt and results are saved on this device. A browser-based exam cannot reliably prevent switching tabs or outside assistance.</li></ul>
       <label class="wue-confirm"><input id="wueRulesCheck" type="checkbox"><span>I have read the rules and agree to complete this exam honestly.</span></label>
       <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamCancel()">Not now</button><button id="wueBegin" class="wue-primary" disabled onclick="wordUpExamBegin()">I agree — Begin exam</button></div></div></section>`;
     $('#wueRulesCheck',root).addEventListener('change',e=>$('#wueBegin',root).disabled=!e.target.checked);
