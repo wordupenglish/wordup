@@ -760,14 +760,34 @@
             return;
         }
 
-        // Remove URL and slash notation before sending text to speech.
+        // Clean lesson notation before sending text to the browser's voice engine.
+        // IPA is useful on screen, but raw slash notation and symbol runs sound broken aloud.
         const spokenText = String(rawText)
             .replace(/https?:\/\/\S+/gi, " ")
-            .replace(/\/+/g, " ")
+            .replace(/\/([^/\n]{1,12})\//g, "$1 sound")
+            .replace(/\/{2,}/g, " ")
+            .replace(/[ʃ]/g, "sh")
+            .replace(/[ʒ]/g, "zh")
+            .replace(/tʃ/g, "ch")
+            .replace(/dʒ/g, "j")
+            .replace(/iː/g, "ee")
+            .replace(/uː/g, "oo")
+            .replace(/ɑː|ɒ/g, "ah")
+            .replace(/ɔː/g, "aw")
+            .replace(/əː|ɜː/g, "er")
+            .replace(/eɪ/g, "ay")
+            .replace(/aɪ/g, "eye")
+            .replace(/ɔɪ/g, "oy")
+            .replace(/aʊ/g, "ow")
+            .replace(/oʊ/g, "oh")
+            .replace(/[{}<>*_#|\\[\\]~^=]+/g, " ")
+            .replace(/\b(?:lorem ipsum|blah(?:\s+blah)+|placeholder text)\b/gi, " ")
+            .replace(/\s+([,.!?;:])/g, "$1")
+            .replace(/([,.!?;:]){2,}/g, "$1")
             .replace(/\s+/g, " ")
             .trim();
 
-        if (!spokenText) return;
+        if (!spokenText || !/[A-Za-z]{2,}/.test(spokenText)) return;
 
         window.speechSynthesis.cancel();
         const utterance = new window.SpeechSynthesisUtterance(spokenText);
