@@ -201,9 +201,17 @@
   }
   function openExam(mode, level) {
     const questions=buildQuestions(mode,level);
-    if(questions.length<5){alert('This exam needs at least five available questions. More lesson assessment content must be added first.');return;}
+    if(mode==='placement'){
+      const coverage=questions.coverage||[];
+      const missing=coverage.filter(x=>x.selected<4);
+      if(missing.length){
+        alert('The placement test is temporarily unavailable because the question bank lacks enough validated questions at every level. Missing: '+missing.map(x=>levelName(x.level)+' ('+x.selected+'/4)').join(', ')+'. Please contact WordUp support rather than receiving an unreliable result.');
+        return;
+      }
+      if(questions.length<28){alert('The placement test needs at least 28 validated questions across Foundation–C2. The current question bank is not sufficient for a reliable assessment.');return;}
+    } else if(questions.length<5){alert('This exam needs at least five available questions. More lesson assessment content must be added first.');return;}
     cleanupTimer(); state={mode,level:level||null,questions,answers:{},index:0,started:0,violations:0,finished:false,attemptId:'WU-'+Date.now().toString(36).toUpperCase()};
-    remaining=(mode==='master'?45:mode==='placement'?15:25)*60;
+    remaining=(mode==='master'?45:mode==='placement'?35:25)*60;
     renderRules();
   }
   function rootBox() {
