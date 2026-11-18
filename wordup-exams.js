@@ -79,110 +79,159 @@
     }
     return item;
   }
-  function buildQuestions(mode, level) {
-    const lessons = allLessons().filter(l => mode === 'master' || mode === 'placement' || l.level === level);
-    let qs = [];
+  const PLACEMENT_BANDS = ['foundation','a1','a2','b1','b2','c1','c2'];
+  const PLACEMENT_TARGET_PER_BAND = 6;
+  function buildPlacementQuestions() {
+    const lessons = allLessons();
+    const pools = Object.fromEntries(PLACEMENT_BANDS.map(level => [level, []]));
+    const recentPrompts = new Set();
+    attempts().filter(item => item && item.mode === 'placement').slice(-2).forEach(item => {
+      (item.review || []).forEach(entry => {
+        if (entry && entry.question) recentPrompts.add(normalize(entry.question));
+      });
+    });
 
+    lessons.forEach(lesson => {
+      const level = String(lesson.level || '').toLowerCase().trim();
+      if (!pools[level]) return;
+      const skill = pickSkill(lesson);
+      if (skill === 'speaking') return;
+
+      // Use both authored assessment and practice items. The question bank
+      // contains many more validated items in practice than in test arrays.
+      const source = []
+        .concat(Array.isArray(lesson.test) ? lesson.test : [])
+        .concat(Array.isArray(lesson.practice) ? lesson.practice : []);
+      const seenInLesson = new Set();
+      source.forEach((q, i) => {
+        const prompt = typeof q === 'string' ? q : q && (q.question || q.prompt || q.text) || '';
+        const promptKey = normalize(prompt);
+        if (!promptKey || seenInLesson.has(promptKey)) return;
+        seenInLesson.add(promptKey);
+        const item = questionFrom(q, lesson, skill, i);
+        // Only objectively marked questions are used for placement.
+        if (!item || item.type !== 'choice') return;
+        item.level = level;
+        item.questionKey = hash(level + '|' + (lesson.id || '') + '|' + promptKey);
+        pools[level].push(item);
+      });
+    });
+
+    // A fresh random seed is generated for every attempt, not once per day.
+    const seed = hash(Date.now() + '|' + Math.random() + '|' + Math.random());
+    const targets = Object.fromEntries(PLACEMENT_BANDS.map(level => [level, 6]));
+    const extraStart = seed % PLACEMENT_BANDS.length;
+    for (let i = 0; i < 3; i++) {
+      const level = PLACEMENT_BANDS[(extraStart + i) % PLACEMENT_BANDS.length];
+      targets[level]++;
+    }
+
+    const selected = [];
+    const coverage = [];
+    PLACEMENT_BANDS.forEach((level, bandIndex) => {
+      const candidates = pools[level];
+      const fresh = candidates.filter(q => !recentPrompts.has(normalize(q.prompt)));
+      // Prefer unseen questions from the last two attempts. If the bank is
+      // too small, reuse is allowed rather than making the assessment fail.
+      const usable = fresh.length >= targets[level] ? fresh : candidates;
+      const bySkill = {};
+      SKILLS.forEach(skill => {
+        bySkill[skill] = shuffle(usable.filter(q => q.skill === skill),
+          seed + hash(level + '|' + skill));
+      });
+
+      const band = [];
+      let cursor = 0;
+      while (band.length < targets[level]) {
+        let added = false;
+        SKILLS.forEach(skill => {
+          if (band.length >= targets[level]) return;
+          if (bySkill[skill][cursor]) {
+            band.push(bySkill[skill][cursor]);
+            added = true;
+          }
+        });
+        if (!added) break;
+        cursor++;
+      }
+      coverage.push({level, available:candidates.length, fresh:fresh.length,
+        selected:band.length, required:targets[level]});
+      shuffle(band, seed + bandIndex).forEach(q => {
+        // Randomize answer positions as well as question selection/order.
+        const options = q.options.map((option, index) => ({option, index}));
+        const randomized = shuffle(options, seed + hash(q.prompt + '|' + bandIndex));
+        q.options = randomized.map(item => item.option);
+        q.answer = randomized.findIndex(item => item.index === q.answer);
+        selected.push(q);
+      });
+    });
+    selected.coverage = coverage;
+    return selected;
+  }
+  function buildQuestions(mode, level) {
+    if (mode === 'placement') return buildPlacementQuestions();
+    const lessons = allLessons().filter(l => mode === 'master' || l.level === level);
+    let qs = [];
     lessons.forEach(lesson => {
       const skill = pickSkill(lesson);
       const practicePrompts = new Set((lesson.practice || []).map(item => normalize(
         typeof item === 'string' ? item : item && (item.question || item.prompt || item.text) || ''
       )).filter(Boolean));
-
       (lesson.test || []).forEach((q, i) => {
         const prompt = typeof q === 'string' ? q : q && (q.question || q.prompt || q.text) || '';
         if (practicePrompts.has(normalize(prompt))) return;
         const item = questionFrom(q, lesson, skill, i);
-        if (item) qs.push(item);
+        if (item) { item.level = String(lesson.level || '').toLowerCase(); qs.push(item); }
       });
-
       if (skill === 'listening') {
         (lesson.vocabulary || []).slice(0, 3).forEach(v => {
           const word = typeof v === 'string' ? v : v && (v.word || v.term);
           if (typeof word !== 'string') return;
           const clean = word.trim();
-          if (clean && clean.split(/\s+/).length <= 6 && !/[\/\\→←:]/.test(clean)) {
-            qs.push({
-              type: 'dictation', skill: 'listening', lessonId: lesson.id,
-              lessonTitle: lesson.topic || lesson.title || lesson.id,
-              prompt: 'Listen carefully and type the word or phrase you hear.',
-              answer: clean, audio: clean
-            });
+          if (clean && clean.split(/\\s+/).length <= 6 && !/[\\/\\\\→←:]/.test(clean)) {
+            qs.push({type:'dictation',skill:'listening',lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:'Listen carefully and type the word or phrase you hear.',answer:clean,audio:clean});
           }
         });
       }
-
-      if (skill === 'writing') {
+      if (skill === 'writing' && mode !== 'placement') {
         (lesson.examples || []).forEach(example => {
           if (typeof example !== 'string') return;
-          const sentence = example.trim().replace(/\s+/g, ' ');
+          const sentence = example.trim().replace(/\\s+/g, ' ');
           const words = sentence.match(/[A-Za-z]+(?:['’-][A-Za-z]+)*/g) || [];
-          if (words.length >= 5 && words.length <= 20 &&
-              /[.!?]["')\]]*$/.test(sentence) &&
-              !/[:\/\\→←]/.test(sentence)) {
-            qs.push({
-              type: 'dictation', skill: 'writing', lessonId: lesson.id,
-              lessonTitle: lesson.topic || lesson.title || lesson.id,
-              prompt: 'Listen and type the complete sentence. The sentence will not appear on screen.',
-              answer: sentence, audio: sentence
-            });
+          if (words.length >= 5 && words.length <= 20 && /[.!?]["')\\]]*$/.test(sentence) && !/[:\\/\\\\→←]/.test(sentence)) {
+            qs.push({type:'dictation',skill:'writing',lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:'Listen and type the complete sentence. The sentence will not appear on screen.',answer:sentence,audio:sentence});
           }
         });
       }
-
-      if (skill === 'speaking') {
-        const candidates = []
-          .concat(Array.isArray(lesson.examples) ? lesson.examples : [])
-          .concat(Array.isArray(lesson.examplesInContext) ? lesson.examplesInContext : []);
-        const target = candidates.find(value => {
-          if (typeof value !== 'string') return false;
-          const text = value.trim();
-          const words = text.match(/[A-Za-z]+(?:['’-][A-Za-z]+)*/g) || [];
-          return words.length >= 4 && words.length <= 18 &&
-            /[.!?]["')\]]*$/.test(text) &&
-            !/[:\/\\→←]/.test(text) &&
-            !/^(question|answer|example|objective|research question|method|discussion)\s*:/i.test(text);
-        });
+      if (skill === 'speaking' && mode !== 'placement') {
+        const candidates = [].concat(Array.isArray(lesson.examples)?lesson.examples:[],Array.isArray(lesson.examplesInContext)?lesson.examplesInContext:[]);
+        const target = candidates.find(value => typeof value==='string' && value.trim().split(/\\s+/).length>=4 && value.trim().split(/\\s+/).length<=18 && /[.!?]["')\\]]*$/.test(value.trim()) && !/[:\\/\\\\→←]/.test(value.trim()));
         const topic = String(lesson.topic || lesson.objective || 'a familiar topic').trim();
-        qs.push({
-          type: 'speech',
-          skill: 'speaking',
-          lessonId: lesson.id,
-          lessonTitle: lesson.topic || lesson.title || lesson.id,
-          prompt: target
-            ? 'Read this sentence aloud clearly and naturally.'
-            : 'Speak for 30–45 seconds about ' + topic + '. Give a clear explanation and at least one relevant example.',
-          target: target ? target.trim() : '',
-          answer: null
-        });
+        qs.push({type:'speech',skill:'speaking',lessonId:lesson.id,lessonTitle:lesson.topic||lesson.title||lesson.id,prompt:target?'Read this sentence aloud clearly and naturally.':'Speak for 30–45 seconds about '+topic+'. Give a clear explanation and at least one relevant example.',target:target?target.trim():'',answer:null});
       }
     });
-
     const seen = new Set();
-    qs = qs.filter(q => {
-      const key = q.skill + '|' + q.type + '|' + normalize(q.prompt) + '|' +
-        normalize(q.passage || q.audio || q.target || q.answer || '');
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
-
-    const seed = hash(mode + '|' + (level || 'all') + '|' + new Date().toISOString().slice(0, 10));
-    const grouped = {};
-    SKILLS.forEach(skill => grouped[skill] = shuffle(qs.filter(q => q.skill === skill), seed + hash(skill)));
-    const balanced = [];
-    const max = Math.max(0, ...SKILLS.map(skill => grouped[skill].length));
-    for (let i = 0; i < max; i++) SKILLS.forEach(skill => {
-      if (grouped[skill][i]) balanced.push(grouped[skill][i]);
-    });
-    const count = mode === 'master' ? Math.min(60, balanced.length) : Math.min(30, balanced.length);
-    return shuffle(balanced.slice(0, count), seed ^ 0xA53C9E1);
+    qs = qs.filter(q => { const key=q.skill+'|'+q.type+'|'+normalize(q.prompt)+'|'+normalize(q.passage||q.audio||q.target||q.answer||''); if(seen.has(key))return false;seen.add(key);return true; });
+    const seed=hash(mode+'|'+(level||'all')+'|'+new Date().toISOString().slice(0,10));
+    const grouped={};SKILLS.forEach(skill=>grouped[skill]=shuffle(qs.filter(q=>q.skill===skill),seed+hash(skill)));
+    const balanced=[];const max=Math.max(0,...SKILLS.map(skill=>grouped[skill].length));
+    for(let i=0;i<max;i++)SKILLS.forEach(skill=>{if(grouped[skill][i])balanced.push(grouped[skill][i]);});
+    const count=mode==='master'?Math.min(60,balanced.length):Math.min(30,balanced.length);
+    return shuffle(balanced.slice(0,count),seed^0xA53C9E1);
   }
   function openExam(mode, level) {
     const questions=buildQuestions(mode,level);
-    if(questions.length<5){alert('This exam needs at least five available questions. More lesson assessment content must be added first.');return;}
+    if(mode==='placement'){
+      const coverage=questions.coverage||[];
+      const missing=coverage.filter(x=>x.selected<x.required);
+      if(missing.length){
+        alert('The placement test is temporarily unavailable because the question bank lacks enough validated questions at every level. Missing: '+missing.map(x=>levelName(x.level)+' ('+x.selected+'/'+x.required+')').join(', ')+'. Please contact WordUp support rather than receiving an unreliable result.');
+        return;
+      }
+      if(questions.length!==45){alert('The placement test needs 45 validated questions, with at least six from every level. The current question bank is not sufficient for a reliable assessment. Please contact WordUp support.');return;}
+    } else if(questions.length<5){alert('This exam needs at least five available questions. More lesson assessment content must be added first.');return;}
     cleanupTimer(); state={mode,level:level||null,questions,answers:{},index:0,started:0,violations:0,finished:false,attemptId:'WU-'+Date.now().toString(36).toUpperCase()};
-    remaining=(mode==='master'?45:mode==='placement'?15:25)*60;
+    remaining=(mode==='master'?45:mode==='placement'?30:25)*60;
     renderRules();
   }
   function rootBox() {
@@ -202,10 +251,10 @@
   function header(title, subtitle) { return `<div class="wue-header"><span class="wue-kicker">WORDUP ASSESSMENT</span><h2>${esc(title)}</h2><p>${esc(subtitle||'Take your time, focus, and show what you have learned.')}</p></div>`; }
   function renderRules() {
     const root=rootBox(); if(!root)return;
-    const title=state.mode==='master'?'Master Exam':state.mode==='placement'?'Test My Level':`${levelName(state.level)} Exam`;
-    root.innerHTML=`<section class="wue-view">${header(title,'Your progress is built one question at a time. Breathe, focus, and trust the work you have done.')}
+    const title=state.mode==='master'?'Master Exam':state.mode==='placement'?'Progressive English Placement Assessment':`${levelName(state.level)} Exam`;
+    root.innerHTML=`<section class="wue-view">${header(title,state.mode==='placement'?'45 questions in 30 minutes. Questions progress from Foundation to C2, with fresh question selection on each attempt.':'Your progress is built one question at a time. Breathe, focus, and trust the work you have done.')}
       <div class="wue-motivation"><p>✨ You do not need to be perfect — just give every question your honest best.</p><p>💪 Every challenge is a chance to discover how much you have learned and what to improve next.</p><p>🌱 Stay calm, believe in your effort, and keep moving forward. You can do this!</p></div>
-      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>Questions cover Vocabulary, Grammar, Reading, Listening, Speaking, and Writing where lesson content is available.</li><li>Listening and writing tasks may play audio only. Type what you hear. Speaking tasks may ask for microphone access.</li><li>Complete the exam independently and avoid outside help. This is an honor-based assessment.</li><li>Your attempt and results are saved on this device. A browser-based exam cannot reliably prevent switching tabs or outside assistance.</li></ul>
+      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>This 45-question placement test lasts 30 minutes. Questions increase in difficulty from Foundation through C2, and the question set and answer positions are randomized for each attempt.</li><li>Speaking and extended writing are not automatically graded in this version; they are not used to inflate or lower your placement level.</li><li>Listening questions may use your browser's English voice. Audio quality can vary by device; you may replay it.</li><li>Complete the exam independently and avoid outside help. This is an honor-based assessment.</li><li>Your attempt and results are saved on this device. A browser-based exam cannot reliably prevent switching tabs or outside assistance.</li></ul>
       <label class="wue-confirm"><input id="wueRulesCheck" type="checkbox"><span>I have read the rules and agree to complete this exam honestly.</span></label>
       <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamCancel()">Not now</button><button id="wueBegin" class="wue-primary" disabled onclick="wordUpExamBegin()">I agree — Begin exam</button></div></div></section>`;
     $('#wueRulesCheck',root).addEventListener('change',e=>$('#wueBegin',root).disabled=!e.target.checked);
@@ -231,7 +280,7 @@
       <div class="wue-exam-bar"><span>Question ${state.index + 1} of ${state.questions.length}</span><span id="wueTimer" aria-live="polite">${String(Math.floor(remaining / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')}</span></div>
       <div class="wue-progress"><span style="width:${state.index / state.questions.length * 100}%"></span></div>
       <div class="wue-panel wue-question">
-        <div class="wue-tags"><span>${ICONS[q.skill] || '📝'} ${esc(q.skill)}</span><span>${esc(isSpeech ? 'Speaking task' : q.type === 'dictation' ? 'Audio typing' : q.skill === 'reading' ? 'Reading comprehension' : q.skill === 'listening' ? 'Listening comprehension' : 'Question')}</span></div>
+        <div class="wue-tags"><span>${ICONS[q.skill] || '📝'} ${esc(q.skill)}</span><span>${esc(q.level ? levelName(q.level) : isSpeech ? 'Speaking task' : q.type === 'dictation' ? 'Audio typing' : q.skill === 'reading' ? 'Reading comprehension' : q.skill === 'listening' ? 'Listening comprehension' : 'Question')}</span></div>
         ${q.passage ? `<section class="wue-passage"><h4>${esc(q.passageTitle || 'Reading passage')}</h4><p>${esc(q.passage)}</p></section>` : ''}
         <h3>${esc(q.prompt)}</h3>
         ${q.target ? `<blockquote class="wue-speech-target">${esc(q.target)}</blockquote>` : ''}
@@ -336,60 +385,45 @@
   }
   function finish(timedOut) {
     if (!state || state.finished) return;
-    state.finished = true;
-    cleanupTimer();
-    removeGuards();
-    if (recognition) { try { recognition.stop(); } catch (_) {} recognition = null; }
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-
-    const questions = state.questions;
-    const scored = scoreQuestions(questions, state.answers);
-    const perSkill = {};
-    const review = questions.map((q, i) => {
-      const answer = state.answers[i];
-      const ok = isCorrect(q, answer);
-      if (q.type !== 'speech') {
-        if (!perSkill[q.skill]) perSkill[q.skill] = { total: 0, correct: 0, lessons: {} };
-        perSkill[q.skill].total++;
-        if (ok) perSkill[q.skill].correct++;
-        const key = q.lessonId || 'general';
-        if (!perSkill[q.skill].lessons[key]) perSkill[q.skill].lessons[key] = { title: q.lessonTitle || key, total: 0, correct: 0 };
-        perSkill[q.skill].lessons[key].total++;
-        if (ok) perSkill[q.skill].lessons[key].correct++;
+    state.finished=true;cleanupTimer();removeGuards();
+    if(recognition){try{recognition.stop();}catch(_){}recognition=null;}
+    if('speechSynthesis' in window)window.speechSynthesis.cancel();
+    const questions=state.questions,scored=scoreQuestions(questions,state.answers),perSkill={};
+    const review=questions.map((q,i)=>{
+      const answer=state.answers[i],ok=isCorrect(q,answer);
+      if(q.type!=='speech'){
+        if(!perSkill[q.skill])perSkill[q.skill]={total:0,correct:0,lessons:{}};
+        perSkill[q.skill].total++;if(ok)perSkill[q.skill].correct++;
+        const key=q.lessonId||'general';
+        if(!perSkill[q.skill].lessons[key])perSkill[q.skill].lessons[key]={title:q.lessonTitle||key,total:0,correct:0};
+        perSkill[q.skill].lessons[key].total++;if(ok)perSkill[q.skill].lessons[key].correct++;
       }
-      return { q, answer, ok };
+      return {q,answer,ok};
     });
-    const score = scored.score, passed = scored.total > 0 && score >= 70;
-    const record = {
-      id: state.attemptId, mode: state.mode, level: state.level || null,
-      date: new Date().toISOString(),
-      durationSeconds: Math.round((Date.now() - state.started) / 1000),
-      timedOut: !!timedOut, focusWarnings: state.violations,
-      score, correct: scored.correct, total: scored.total,
-      questionCount: questions.length,
-      oralTasks: questions.filter(q => q.type === 'speech').length,
-      passed, perSkill,
-      review: review.map(item => ({
-        skill: item.q.skill, lessonId: item.q.lessonId,
-        question: item.q.prompt, passage: item.q.passage || '',
-        answer: item.answer,
-        correctAnswer: item.q.type === 'choice' ? item.q.options[item.q.answer] : item.q.type === 'speech' ? 'Oral response — not automatically graded' : item.q.answer,
-        isCorrect: item.ok, type: item.q.type
-      }))
-    };
-    if (state.mode === 'placement') {
-      const l = score >= 95 ? 'academic' : score >= 90 ? 'c2' : score >= 85 ? 'c1' : score >= 75 ? 'b2' : score >= 65 ? 'b1' : score >= 50 ? 'a2' : score >= 35 ? 'a1' : 'foundation';
-      record.recommendedLevel = l;
-      try {
-        localStorage.setItem('wordUpV10PlacementResult', JSON.stringify({
-          level: l, overallLevel: l, score, total: scored.total,
-          correct: scored.correct, date: record.date, source: 'WordUp comprehensive exam'
-        }));
-        localStorage.setItem('wordUpCurrentLevel', l);
-      } catch (_) {}
+    const score=scored.score;
+    const record={id:state.attemptId,mode:state.mode,level:state.level||null,date:new Date().toISOString(),
+      durationSeconds:Math.round((Date.now()-state.started)/1000),timedOut:!!timedOut,focusWarnings:state.violations,
+      score,correct:scored.correct,total:scored.total,questionCount:questions.length,
+      oralTasks:questions.filter(q=>q.type==='speech').length,passed:state.mode==='placement'?null:(scored.total>0&&score>=70),perSkill};
+    if(state.mode==='placement'){
+      const bandResults=PLACEMENT_BANDS.map(level=>{
+        const bandQs=questions.filter(q=>q.level===level),correct=bandQs.filter(q=>isCorrect(q,state.answers[questions.indexOf(q)])).length;
+        return {level,total:bandQs.length,correct,percentage:bandQs.length?Math.round(correct/bandQs.length*100):0,met:bandQs.length>=4&&correct/bandQs.length>=0.67};
+      });
+      let highest=-1;
+      for(let i=0;i<bandResults.length;i++){if(bandResults[i].met)highest=i;else break;}
+      const l=PLACEMENT_BANDS[Math.max(0,highest)];
+      record.recommendedLevel=timedOut?null:l;record.placementBands=bandResults;
+      record.assessmentComplete=!timedOut;
+      record.assessmentType='provisional_progressive_placement';
+      record.assessmentNote='Estimated level from objective questions in the available WordUp question bank. Speaking and extended writing were not automatically assessed. This is not a certified CEFR examination.';
+      if(!timedOut){try{
+        localStorage.setItem('wordUpV10PlacementResult',JSON.stringify({level:l,overallLevel:l,score,correct:scored.correct,total:scored.total,date:record.date,source:'WordUp progressive placement v2',placementBands:bandResults,assessmentType:record.assessmentType}));
+        localStorage.setItem('wordUpCurrentLevel',l);
+      }catch(_){}}
     }
-    saveAttempt(record);
-    renderResults(record, review, timedOut);
+    record.review=review.map(item=>({skill:item.q.skill,level:item.q.level||'',lessonId:item.q.lessonId,question:item.q.prompt,passage:item.q.passage||'',answer:item.answer,correctAnswer:item.q.type==='choice'?item.q.options[item.q.answer]:item.q.type==='speech'?'Oral response — not automatically graded':item.q.answer,isCorrect:item.ok,type:item.q.type}));
+    saveAttempt(record);renderResults(record,review,timedOut);
   }
   function renderResults(record, review, timedOut) {
     const root = rootBox();
@@ -400,7 +434,7 @@
     const recommended = weak.filter(item => item.pct < 80);
     const title = record.mode === 'master' ? 'Master Exam Results' : record.mode === 'placement' ? 'Your Level Assessment' : `${levelName(record.level)} Exam Results`;
     root.innerHTML = `<section class="wue-view">${header(title, timedOut ? 'Time is up. Your answers have been saved.' : 'Your attempt is saved on this device.')}
-      <div class="wue-result-hero"><div class="wue-result-score">${record.score}%</div><h3>${record.passed ? 'Well done — you passed!' : 'Keep going. Every attempt helps you improve.'}</h3><p>${record.correct} correct out of ${record.total} automatically scored questions</p>${record.oralTasks ? `<p>${record.oralTasks} speaking task(s) were submitted separately and were not automatically graded.</p>` : ''}${timedOut ? '<p>Time expired.</p>' : ''}${record.mode === 'placement' ? `<p>Suggested starting point: <strong>${esc(levelName(record.recommendedLevel))}</strong></p>` : ''}</div>
+      <div class="wue-result-hero"><div class="wue-result-score">${record.score}%</div><h3>${record.mode==='placement'?'Assessment complete — this is your estimated starting level.':record.passed?'Well done — you passed!':'Keep going. Every attempt helps you improve.'}</h3><p>${record.correct} correct out of ${record.total} automatically scored questions</p>${record.oralTasks ? `<p>${record.oralTasks} speaking task(s) were submitted separately and were not automatically graded.</p>` : ''}${timedOut ? '<p>Time expired.</p>' : ''}${record.mode === 'placement' ? `<p>Suggested starting point: <strong>${record.assessmentComplete?esc(levelName(record.recommendedLevel)):'Not assigned — please retake the assessment'}</strong></p><p class=\"wue-muted\">${record.assessmentComplete?'Provisional estimate from objectively scored questions. Speaking and extended writing were not assessed. This is not a certified CEFR result.':'The time limit expired before all levels were assessed. No placement level has been saved; please retake the test.'}</p><div class=\"wue-skill-results\"><h3>Performance by level</h3>${(record.placementBands||[]).map(b=>`<div><span>${esc(levelName(b.level))}</span><strong>${b.correct}/${b.total} (${b.percentage}%)</strong><div class=\"wue-progress\"><span style=\"width:${b.percentage}%\"></span></div></div>`).join('')}</div>` : ''}</div>
       <div class="wue-panel"><h3>Skill breakdown</h3><div class="wue-skill-results">${weak.map(item => `<div><span>${ICONS[item.skill] || '📝'} ${esc(item.skill)}</span><strong>${item.pct}%</strong><div class="wue-progress"><span style="width:${item.pct}%"></span></div></div>`).join('')}</div><h3>What to work on next</h3>${recommended.length ? `<ul>${recommended.map(item => `<li><strong>${esc(item.skill)}</strong> (${item.pct}%): review ${Object.values(item.lessons).filter(lesson => lesson.correct < lesson.total).map(lesson => esc(lesson.title)).slice(0, 5).join(', ') || 'lessons in this skill'}.</li>`).join('')}</ul>` : 'Great balance across your scored skills. Keep reviewing lessons to retain your progress.'}</div>
       <div class="wue-panel"><h3>Answer review</h3><p class="wue-muted">Reading passages are included with their questions. Speaking transcripts are shown as submitted and are not scored automatically.</p><div class="wue-review">${review.map((item, i) => `<details class="wue-review-item"><summary><span>${item.q.type === 'speech' ? '🎙️' : item.ok ? '✅' : '📘'} ${i + 1}. ${esc(item.q.skill)} — ${item.q.type === 'speech' ? 'Submitted · Not auto-graded' : item.ok ? 'Correct' : 'Review this'}</span></summary>${item.q.passage ? `<div class="wue-review-passage"><strong>Passage:</strong><p>${esc(item.q.passage)}</p></div>` : ''}<p><strong>Question:</strong> ${esc(item.q.prompt)}</p><p><strong>Your answer:</strong> ${esc(item.q.type === 'choice' ? (item.answer === undefined ? 'Not answered' : item.q.options[Number(item.answer)] || item.answer) : item.answer || 'Not answered')}</p>${item.q.type === 'speech' ? '<p><strong>Assessment:</strong> This spoken response was not automatically graded.</p>' : `<p><strong>Correct answer:</strong> ${esc(item.q.type === 'choice' ? item.q.options[item.q.answer] : item.q.answer)}</p>`}${item.q.lessonTitle ? `<p><strong>Lesson:</strong> ${esc(item.q.lessonTitle)}</p>` : ''}</details>`).join('')}</div></div>
       <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamHistory()">View attempt history</button><button class="wue-primary" onclick="wordUpExamHome()">Back to course</button></div></section>`;
