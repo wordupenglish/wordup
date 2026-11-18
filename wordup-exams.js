@@ -225,7 +225,7 @@
       const coverage=questions.coverage||[];
       const missing=coverage.filter(x=>x.selected<x.required);
       if(missing.length){
-        alert('The placement test is temporarily unavailable because the question bank lacks enough validated questions at every level. Missing: '+missing.map(x=>levelName(x.level)+' ('+x.selected+'/4)').join(', ')+'. Please contact WordUp support rather than receiving an unreliable result.');
+        alert('The placement test is temporarily unavailable because the question bank lacks enough validated questions at every level. Missing: '+missing.map(x=>levelName(x.level)+' ('+x.selected+'/'+x.required+')').join(', ')+'. Please contact WordUp support rather than receiving an unreliable result.');
         return;
       }
       if(questions.length!==45){alert('The placement test needs 45 validated questions, with at least six from every level. The current question bank is not sufficient for a reliable assessment. Please contact WordUp support.');return;}
