@@ -4,7 +4,7 @@ importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
 "use strict";
 
 const CACHE_PREFIX = "wordup-";
-const CACHE_NAME = "wordup-v44-listening-speech-cleanup-20261118";
+const CACHE_NAME = "wordup-v45-placement-question-quality-20261118";
 const CORE_ASSETS = [
   "./",
   "./index.html",

@@ -21,17 +21,31 @@
   function pickSkill(lesson) { const s=String(lesson.skill||'').toLowerCase(); return SKILLS.includes(s)?s:'grammar'; }
   function readingText(lesson) {
     const reading = lesson.reading && typeof lesson.reading === 'object' ? lesson.reading : {};
-    const primary = String(lesson.readingPassage || reading.passage || reading.text || '').trim();
-    if (primary) return primary;
-    const examples = Array.isArray(lesson.examples) ? lesson.examples : [];
-    return examples.filter(value => typeof value === 'string' && value.trim()).join('\n').trim();
+    return String(lesson.readingPassage || reading.passage || reading.text || '').trim();
   }
   function listeningText(lesson) {
     const listening = lesson.listening && typeof lesson.listening === 'object' ? lesson.listening : {};
-    const primary = String(lesson.transcript || listening.transcript || listening.text || '').trim();
-    if (primary) return primary;
-    const examples = Array.isArray(lesson.examples) ? lesson.examples : [];
-    return examples.filter(value => typeof value === 'string' && value.trim()).join(' ').trim();
+    return String(lesson.transcript || listening.transcript || listening.text || '').trim();
+  }
+  function cleanSpeechText(value) {
+    return String(value || '')
+      .replace(/https?:\/\/\S+/gi, ' ')
+      .replace(/\/{2,}/g, ' ')
+      .replace(/\/[^/\n]{1,18}\//g, ' ')
+      .replace(/[ˈˌːʃʒθðŋæɑɒɔəɜɪʊʌɛɡɹɾʔ]/g, ' ')
+      .replace(/\bblah(?:\s+blah)*\b/gi, ' ')
+      .replace(/\b(?:lorem ipsum|placeholder text|insert text here)\b/gi, ' ')
+      .replace(/[{}<>*_#|\\[\\]~^=]+/g, ' ')
+      .replace(/\s+([,.!?;:])/g, '$1')
+      .replace(/([,.!?;:]){2,}/g, '$1')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  function hasBadAssessmentText(value) {
+    return /(?:blah(?:\s*[/\\]+\s*|\s+)blah|lorem ipsum|placeholder|insert text here|\/{3,}|\.{4,})/i.test(String(value || ''));
+  }
+  function isPhonicsOnlyPrompt(prompt) {
+    return /\b(?:letter name|alphabet|phonetic|phoneme|pronunciation|pronounce|beginning sound|initial sound|which word begins? with|what sound does)\b/i.test(String(prompt || ''));
   }
   function hasPlaceholderDistractor(options) {
     const bad = [
@@ -49,9 +63,12 @@
   function questionFrom(q, lesson, skill, idx) {
     if (!q || typeof q !== 'object') return null;
     const prompt = q.question || q.prompt || q.text;
-    if (!prompt || /which topic is the focus of this lesson/i.test(String(prompt))) return null;
+    if (!prompt || /which topic is the focus of this lesson/i.test(String(prompt)) || hasBadAssessmentText(prompt)) return null;
     const opts = Array.isArray(q.options) ? q.options.map(String) : [];
-    if (opts.length < 2 || hasPlaceholderDistractor(opts)) return null;
+    const normalizedOptions = opts.map(normalize);
+    if (opts.length < 2 || new Set(normalizedOptions).size !== opts.length ||
+        opts.some(option => !option.trim() || hasBadAssessmentText(option)) ||
+        hasPlaceholderDistractor(opts)) return null;
     const rawAnswer = q.answer ?? q.correctAnswer ?? q.correct;
     const answerText = String(rawAnswer ?? '').trim();
     const numericAnswer = answerText !== '' && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
@@ -74,8 +91,10 @@
       item.passageTitle = lesson.reading && lesson.reading.title || lesson.topic || 'Reading passage';
     }
     if (skill === 'listening') {
-      item.audio = listeningText(lesson);
-      if (!item.audio) return null;
+      item.audio = cleanSpeechText(listeningText(lesson));
+      // Listening needs an authored transcript, not examples or isolated phonetic sounds.
+      if (item.audio.split(/\s+/).length < 8 || !/[.!?]/.test(item.audio) ||
+          hasBadAssessmentText(item.audio)) return null;
     }
     return item;
   }
@@ -95,7 +114,8 @@
       const level = String(lesson.level || '').toLowerCase().trim();
       if (!pools[level]) return;
       const skill = pickSkill(lesson);
-      if (skill === 'speaking') return;
+      // Placement scores reading, vocabulary and grammar until reviewed listening material exists.
+      if (skill === 'speaking' || skill === 'listening') return;
 
       // Use both authored assessment and practice items. The question bank
       // contains many more validated items in practice than in test arrays.
@@ -108,8 +128,9 @@
         const promptKey = normalize(prompt);
         if (!promptKey || seenInLesson.has(promptKey)) return;
         seenInLesson.add(promptKey);
+        if (isPhonicsOnlyPrompt(prompt)) return;
         const item = questionFrom(q, lesson, skill, i);
-        // Only objectively marked questions are used for placement.
+        // Only objectively marked, level-appropriate questions are used for placement.
         if (!item || item.type !== 'choice') return;
         item.level = level;
         item.questionKey = hash(level + '|' + (lesson.id || '') + '|' + promptKey);
@@ -254,7 +275,7 @@
     const title=state.mode==='master'?'Master Exam':state.mode==='placement'?'Progressive English Placement Assessment':`${levelName(state.level)} Exam`;
     root.innerHTML=`<section class="wue-view">${header(title,state.mode==='placement'?'45 questions in 30 minutes. Questions progress from Foundation to C2, with fresh question selection on each attempt.':'Your progress is built one question at a time. Breathe, focus, and trust the work you have done.')}
       <div class="wue-motivation"><p>✨ You do not need to be perfect — just give every question your honest best.</p><p>💪 Every challenge is a chance to discover how much you have learned and what to improve next.</p><p>🌱 Stay calm, believe in your effort, and keep moving forward. You can do this!</p></div>
-      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>This 45-question placement test lasts 30 minutes. Questions increase in difficulty from Foundation through C2, and the question set and answer positions are randomized for each attempt.</li><li>Speaking and extended writing are not automatically graded in this version; they are not used to inflate or lower your placement level.</li><li>Listening questions may use your browser's English voice. Audio quality can vary by device; you may replay it.</li><li>Complete the exam independently and avoid outside help. This is an honor-based assessment.</li><li>Your attempt and results are saved on this device. A browser-based exam cannot reliably prevent switching tabs or outside assistance.</li></ul>
+      <div class="wue-panel"><h3>Before you begin</h3><ul><li>Time limit: <strong>${Math.floor(remaining/60)} minutes</strong>. The exam submits when time runs out.</li><li>Answer each question before moving on. You cannot skip unanswered questions or return to earlier questions.</li><li>This 45-question placement test lasts 30 minutes. Questions increase in difficulty from Foundation through C2, and the question set and answer positions are randomized for each attempt.</li><li>Speaking and extended writing are not automatically graded in this version; they are not used to inflate or lower your placement level.</li><li>This placement test currently measures grammar, vocabulary and reading. Listening and speaking are not scored until validated audio and speaking assessment tasks are available.</li><li>Complete the exam independently and avoid outside help. This is an honor-based assessment.</li><li>Your attempt and results are saved on this device. A browser-based exam cannot reliably prevent switching tabs or outside assistance.</li></ul>
       <label class="wue-confirm"><input id="wueRulesCheck" type="checkbox"><span>I have read the rules and agree to complete this exam honestly.</span></label>
       <div class="wue-actions"><button class="wue-secondary" onclick="wordUpExamCancel()">Not now</button><button id="wueBegin" class="wue-primary" disabled onclick="wordUpExamBegin()">I agree — Begin exam</button></div></div></section>`;
     $('#wueRulesCheck',root).addEventListener('change',e=>$('#wueBegin',root).disabled=!e.target.checked);
@@ -263,10 +284,12 @@
   function speak(text) {
     if (recognition) { try { recognition.abort(); } catch (_) {} recognition = null; }
     if (!('speechSynthesis' in window)) { alert('Audio playback is not supported in this browser.'); return; }
+    const spoken = cleanSpeechText(text);
+    if (!spoken || !/[A-Za-z]{2,}/.test(spoken)) return;
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(String(text));
+    const utterance = new SpeechSynthesisUtterance(spoken);
     utterance.lang = 'en-US';
-    utterance.rate = .82;
+    utterance.rate = .88;
     window.speechSynthesis.speak(utterance);
   }
   function renderQuestion() {
@@ -276,7 +299,7 @@
     if (!q || !root) return;
     const isSpeech = q.type === 'speech';
     const isListeningChoice = q.type === 'choice' && q.skill === 'listening';
-    root.innerHTML = `<section class="wue-view">${header(state.mode === 'master' ? 'Master Exam' : state.mode === 'placement' ? 'Test My Level' : `${levelName(state.level)} Exam`, 'Read or listen carefully. One question at a time.')}
+    root.innerHTML = `<section class="wue-view">${header(state.mode === 'master' ? 'Master Exam' : state.mode === 'placement' ? 'Test My Level' : `${levelName(state.level)} Exam`, 'Read each question carefully. One question at a time.')}
       <div class="wue-exam-bar"><span>Question ${state.index + 1} of ${state.questions.length}</span><span id="wueTimer" aria-live="polite">${String(Math.floor(remaining / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')}</span></div>
       <div class="wue-progress"><span style="width:${state.index / state.questions.length * 100}%"></span></div>
       <div class="wue-panel wue-question">
@@ -285,7 +308,7 @@
         <h3>${esc(q.prompt)}</h3>
         ${q.target ? `<blockquote class="wue-speech-target">${esc(q.target)}</blockquote>` : ''}
         ${isListeningChoice ? `<div class="wue-audio"><button class="wue-secondary" onclick="wordUpExamPlayAudio()">🔊 Play listening audio</button><span class="wue-muted">Listen before choosing your answer. The transcript is hidden.</span></div>` : ''}
-        ${q.type === 'choice' ? `<div class="wue-options">${q.options.map((o, i) => `<button class="wue-option" data-wue-option="${i}" onclick="wordUpExamChoose(${i})">${esc(o)}</button>`).join('')}</div>` : ''}
+        ${q.type === 'choice' ? `<div class="wue-options">${q.options.map((o, i) => `<button class="wue-option" data-wue-option="${i}" onclick="wordUpExamChoose(${i})"><span class="wue-option-letter">${String.fromCharCode(65 + i)}</span><span>${esc(o)}</span></button>`).join('')}</div>` : ''}
         ${q.type === 'dictation' ? `<div class="wue-audio"><button class="wue-secondary" onclick="wordUpExamPlayAudio()">🔊 Play audio</button><p>Audio only — the answer is not shown.</p></div><input id="wueTyped" class="wue-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type what you hear" aria-label="Type the spoken answer">` : ''}
         ${isSpeech ? `<div class="wue-speech-actions"><button class="wue-secondary" onclick="wordUpExamMic()">🎙️ Start microphone</button><span id="wueSpeechStatus" aria-live="polite">Press Start microphone, allow access if asked, then speak.</span></div><textarea id="wueSpeechText" class="wue-input" rows="3" placeholder="Your recognized words will appear here. You may also type your response." aria-label="Speaking response transcript"></textarea><p class="wue-muted">This oral response is recorded as a transcript and is not automatically graded for pronunciation or accent.</p>` : ''}
         <div class="wue-actions"><button class="wue-primary" id="wueNext" onclick="wordUpExamNext()" ${q.type === 'choice' ? 'disabled' : ''}>${state.index === state.questions.length - 1 ? 'Finish exam' : 'Submit & continue →'}</button></div>
