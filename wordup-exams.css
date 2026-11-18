@@ -22,3 +22,5 @@
 @media (max-width: 600px) {
     .wue-overlay { padding: 14px; }
 }
+/* Clear separation and letter labels for assessment answer choices. */
+.wue-option{display:flex;align-items:center;gap:12px;min-height:48px;line-height:1.45;white-space:normal;overflow-wrap:anywhere}.wue-option-letter{display:inline-grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:8px;background:rgba(128,128,128,.14);font-size:.82rem;font-weight:800}
