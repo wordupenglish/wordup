@@ -42,7 +42,7 @@
       .trim();
   }
   function hasBadAssessmentText(value) {
-    return /(?:blah\s*blah|lorem ipsum|placeholder|insert text here|\/{3,}|\.{4,})/i.test(String(value || ''));
+    return /(?:blah(?:\s*[/\\]+\s*|\s+)blah|lorem ipsum|placeholder|insert text here|\/{3,}|\.{4,})/i.test(String(value || ''));
   }
   function isPhonicsOnlyPrompt(prompt) {
     return /\b(?:letter name|alphabet|phonetic|phoneme|pronunciation|pronounce|beginning sound|initial sound|which word begins? with|what sound does)\b/i.test(String(prompt || ''));
