@@ -21,17 +21,31 @@
   function pickSkill(lesson) { const s=String(lesson.skill||'').toLowerCase(); return SKILLS.includes(s)?s:'grammar'; }
   function readingText(lesson) {
     const reading = lesson.reading && typeof lesson.reading === 'object' ? lesson.reading : {};
-    const primary = String(lesson.readingPassage || reading.passage || reading.text || '').trim();
-    if (primary) return primary;
-    const examples = Array.isArray(lesson.examples) ? lesson.examples : [];
-    return examples.filter(value => typeof value === 'string' && value.trim()).join('\n').trim();
+    return String(lesson.readingPassage || reading.passage || reading.text || '').trim();
   }
   function listeningText(lesson) {
     const listening = lesson.listening && typeof lesson.listening === 'object' ? lesson.listening : {};
-    const primary = String(lesson.transcript || listening.transcript || listening.text || '').trim();
-    if (primary) return primary;
-    const examples = Array.isArray(lesson.examples) ? lesson.examples : [];
-    return examples.filter(value => typeof value === 'string' && value.trim()).join(' ').trim();
+    return String(lesson.transcript || listening.transcript || listening.text || '').trim();
+  }
+  function cleanSpeechText(value) {
+    return String(value || '')
+      .replace(/https?:\/\/\S+/gi, ' ')
+      .replace(/\/{2,}/g, ' ')
+      .replace(/\/[^/\n]{1,18}\//g, ' ')
+      .replace(/[ˈˌːʃʒθðŋæɑɒɔəɜɪʊʌɛɡɹɾʔ]/g, ' ')
+      .replace(/\bblah(?:\s+blah)*\b/gi, ' ')
+      .replace(/\b(?:lorem ipsum|placeholder text|insert text here)\b/gi, ' ')
+      .replace(/[{}<>*_#|\\[\\]~^=]+/g, ' ')
+      .replace(/\s+([,.!?;:])/g, '$1')
+      .replace(/([,.!?;:]){2,}/g, '$1')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  function hasBadAssessmentText(value) {
+    return /(?:blah\s*blah|lorem ipsum|placeholder|insert text here|\/{3,}|\.{4,})/i.test(String(value || ''));
+  }
+  function isPhonicsOnlyPrompt(prompt) {
+    return /\b(?:letter name|alphabet|phonetic|phoneme|pronunciation|pronounce|beginning sound|initial sound|which word begins? with|what sound does)\b/i.test(String(prompt || ''));
   }
   function hasPlaceholderDistractor(options) {
     const bad = [
@@ -49,9 +63,12 @@
   function questionFrom(q, lesson, skill, idx) {
     if (!q || typeof q !== 'object') return null;
     const prompt = q.question || q.prompt || q.text;
-    if (!prompt || /which topic is the focus of this lesson/i.test(String(prompt))) return null;
+    if (!prompt || /which topic is the focus of this lesson/i.test(String(prompt)) || hasBadAssessmentText(prompt)) return null;
     const opts = Array.isArray(q.options) ? q.options.map(String) : [];
-    if (opts.length < 2 || hasPlaceholderDistractor(opts)) return null;
+    const normalizedOptions = opts.map(normalize);
+    if (opts.length < 2 || new Set(normalizedOptions).size !== opts.length ||
+        opts.some(option => !option.trim() || hasBadAssessmentText(option)) ||
+        hasPlaceholderDistractor(opts)) return null;
     const rawAnswer = q.answer ?? q.correctAnswer ?? q.correct;
     const answerText = String(rawAnswer ?? '').trim();
     const numericAnswer = answerText !== '' && String(Number(answerText)) === answerText && Number.isInteger(Number(answerText));
@@ -74,8 +91,10 @@
       item.passageTitle = lesson.reading && lesson.reading.title || lesson.topic || 'Reading passage';
     }
     if (skill === 'listening') {
-      item.audio = listeningText(lesson);
-      if (!item.audio) return null;
+      item.audio = cleanSpeechText(listeningText(lesson));
+      // Listening needs an authored transcript, not examples or isolated phonetic sounds.
+      if (item.audio.split(/\s+/).length < 8 || !/[.!?]/.test(item.audio) ||
+          hasBadAssessmentText(item.audio)) return null;
     }
     return item;
   }
@@ -95,7 +114,8 @@
       const level = String(lesson.level || '').toLowerCase().trim();
       if (!pools[level]) return;
       const skill = pickSkill(lesson);
-      if (skill === 'speaking') return;
+      // Placement scores reading, vocabulary and grammar until reviewed listening material exists.
+      if (skill === 'speaking' || skill === 'listening') return;
 
       // Use both authored assessment and practice items. The question bank
       // contains many more validated items in practice than in test arrays.
@@ -108,8 +128,9 @@
         const promptKey = normalize(prompt);
         if (!promptKey || seenInLesson.has(promptKey)) return;
         seenInLesson.add(promptKey);
+        if (isPhonicsOnlyPrompt(prompt)) return;
         const item = questionFrom(q, lesson, skill, i);
-        // Only objectively marked questions are used for placement.
+        // Only objectively marked, level-appropriate questions are used for placement.
         if (!item || item.type !== 'choice') return;
         item.level = level;
         item.questionKey = hash(level + '|' + (lesson.id || '') + '|' + promptKey);
@@ -263,10 +284,12 @@
   function speak(text) {
     if (recognition) { try { recognition.abort(); } catch (_) {} recognition = null; }
     if (!('speechSynthesis' in window)) { alert('Audio playback is not supported in this browser.'); return; }
+    const spoken = cleanSpeechText(text);
+    if (!spoken || !/[A-Za-z]{2,}/.test(spoken)) return;
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(String(text));
+    const utterance = new SpeechSynthesisUtterance(spoken);
     utterance.lang = 'en-US';
-    utterance.rate = .82;
+    utterance.rate = .88;
     window.speechSynthesis.speak(utterance);
   }
   function renderQuestion() {
